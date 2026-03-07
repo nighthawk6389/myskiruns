@@ -2,7 +2,9 @@ import { useState, useMemo, useCallback } from 'react';
 import type { Trail } from '../../types';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_COLORS } from '../../types';
 import { peaks, getTrailsByPeak } from '../../data/trails';
+import { trailPaths } from '../../data/trailPaths';
 import { TrailHotspot } from './TrailHotspot';
+import { TrailPolyline } from './TrailPolyline';
 import styles from './ImageMap.module.css';
 
 interface ImageMapProps {
@@ -131,6 +133,23 @@ export function ImageMap({
               preserveAspectRatio="none"
             >
               {allTrails.map((trail) => {
+                const pathSegments = trailPaths[trail.id];
+
+                if (pathSegments) {
+                  return (
+                    <TrailPolyline
+                      key={trail.id}
+                      trail={trail}
+                      segments={pathSegments}
+                      isSkied={skiedTrails.has(trail.id)}
+                      isHovered={hoveredTrail === trail.id}
+                      isVisible={filteredTrailIds.has(trail.id)}
+                      onClick={() => onToggleTrail(trail.id)}
+                      onHover={onHoverTrail}
+                    />
+                  );
+                }
+
                 const pos = hotspotPositions.get(trail.id);
                 if (!pos) return null;
                 return (
