@@ -1,0 +1,88 @@
+.filterBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  gap: 4px;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.filterBtn:hover {
+  border-color: var(--text-muted);
+}
+
+.filterBtn.active {
+  border-color: currentColor;
+}
+
+.filterBtn.green.active {
+  color: var(--green);
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.filterBtn.blue.active {
+  color: var(--blue);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.filterBtn.black.active {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.filterBtn.doubleBlack.active {
+  color: var(--red);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.separator {
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+  margin: 0 4px;
+}
+
+.modeBtn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.modeBtn:hover {
+  border-color: var(--text-muted);
+}
+
+.modeBtn.active {
+  color: var(--gold);
+  background: rgba(251, 191, 36, 0.1);
+  border-color: var(--gold);
+}
+
+.icon {
+  font-size: 10px;
+}
