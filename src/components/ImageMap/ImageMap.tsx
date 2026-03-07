@@ -76,7 +76,7 @@ export function ImageMap({
   const [imageError, setImageError] = useState(false);
   const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
 
-  const hotspotPositions = useMemo(generateHotspotPositions, []);
+  const hotspotPositions = useMemo(() => generateHotspotPositions(), []);
 
   const allTrails = useMemo(() => {
     const result: Trail[] = [];
