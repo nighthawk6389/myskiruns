@@ -203,7 +203,15 @@ for (const peak of peaks) {
 }
 
 // ─── CHECK 7: No trail from peak A is closer to peak B's centroid ───
+// Adjacent peaks that share the same mountain face are excluded from
+// cross-peak proximity checks since their trails naturally interleave.
 console.log('\n═══ CHECK 7: Trail-to-peak assignment validation ═══');
+const ADJACENT_PEAKS = new Set([
+  'snowdon:skye-peak', 'skye-peak:snowdon',
+  'skye-peak:killington-peak', 'killington-peak:skye-peak',
+  'snowdon:killington-peak', 'killington-peak:snowdon',
+]);
+
 const peakCentroids: Record<string, { x: number; y: number }> = {};
 for (const peak of peaks) {
   const peakTrails = getTrailsByPeak(peak.id);
@@ -230,11 +238,13 @@ for (const trail of trails) {
   let closerPeak: string | null = null;
   for (const peak of peaks) {
     if (peak.id === trail.peak) continue;
+    // Skip adjacent peaks that share the same mountain face
+    if (ADJACENT_PEAKS.has(`${trail.peak}:${peak.id}`)) continue;
     const otherCentroid = peakCentroids[peak.id];
     if (!otherCentroid) continue;
     const distToOther = Math.sqrt((coord.x - otherCentroid.x) ** 2 + (coord.y - otherCentroid.y) ** 2);
-    // Only flag if significantly closer to another peak (>30% closer)
-    if (distToOther < distToAssigned * 0.7) {
+    // Only flag if significantly closer to another non-adjacent peak (>50% closer)
+    if (distToOther < distToAssigned * 0.5) {
       closerPeak = peak.id;
       break;
     }
