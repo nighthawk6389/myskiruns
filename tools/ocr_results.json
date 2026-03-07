@@ -1,0 +1,3561 @@
+{
+  "known_trails": [
+    "Snowshed",
+    "Sunrise",
+    "Ramshead",
+    "Snowdon",
+    "Skye Peak",
+    "Killington Peak",
+    "Bear Mountain",
+    "Snowshed",
+    "Yodeler",
+    "Idler",
+    "Snow Play",
+    "Crossover",
+    "Sun Dog",
+    "Rendezvous",
+    "Bear Cub",
+    "Bear View",
+    "Sunrise Connector",
+    "Easy Street",
+    "Swirl",
+    "Treezy",
+    "Squeeze Play",
+    "Ramshead Run",
+    "Ramshead Liftline",
+    "Header",
+    "Vagabond",
+    "Caper",
+    "Timberline",
+    "Start Park",
+    "Great Northern",
+    "Bunny Buster",
+    "Chute",
+    "Conclusion",
+    "Upper FIS",
+    "Mountain Run",
+    "Mountain Training Station",
+    "Snowdon Liftline",
+    "Upper Snowdon",
+    "Lower Snowdon",
+    "Bittersweet",
+    "Sass",
+    "Northstar",
+    "Royal Flush",
+    "Upper Northbrook",
+    "Lower Northbrook",
+    "Snowdon Glades",
+    "Skyelark",
+    "Upper Skyelark",
+    "Skyeburst",
+    "Upper Skyeburst",
+    "Skye Hawk",
+    "Skyebits",
+    "Cruise Control",
+    "Mouse Trap",
+    "Somewhere",
+    "Breakaway",
+    "Touch Down",
+    "Twister",
+    "Catwalk",
+    "Upper Catwalk",
+    "Great Eastern",
+    "Home Stretch",
+    "Lower Home Stretch",
+    "Juggernaut",
+    "Vertigo",
+    "Upper Vertigo",
+    "Ovation",
+    "Panic Button",
+    "Dream Maker",
+    "Dream Maker Headwall",
+    "Highline",
+    "Pipe Dream",
+    "Valley Plunge",
+    "Field Goal",
+    "Roundabout",
+    "Roundabout Glade",
+    "Tin Man",
+    "Skye Peak Liftline",
+    "Great Bear",
+    "Upper Great Bear",
+    "Woodward Peace Park",
+    "Superstar",
+    "Cascade",
+    "Downdraft",
+    "Double Dipper",
+    "Big Dipper Glade",
+    "Flume",
+    "Escapade",
+    "East Fall",
+    "Upper East Fall",
+    "Rime",
+    "Reason",
+    "Julio",
+    "High Road",
+    "North Way",
+    "Great Eastern (K.P.)",
+    "FIS",
+    "Lower FIS",
+    "Solitude",
+    "K-1 Gondola Run",
+    "Anarchy",
+    "Upper Canyon",
+    "Lower Canyon",
+    "Old Superstar",
+    "Killington Liftline",
+    "Superstar Glade",
+    "Header",
+    "Mouse Run",
+    "Low Road",
+    "The Mall",
+    "Outer Limits",
+    "Wildfire",
+    "Bear Claw",
+    "Growler",
+    "Centerpiece",
+    "Spacewalk",
+    "Bear Trax",
+    "Falls Brook",
+    "Skyeburst",
+    "Bear Mountain Liftline",
+    "The Stash",
+    "Lower Wildfire",
+    "Bear Run"
+  ],
+  "detected_words": {
+    "none": [
+      {
+        "text": "acy",
+        "conf": 48,
+        "x_pct": 56.2,
+        "y_pct": 10.0
+      },
+      {
+        "text": "ATWALKS",
+        "conf": 39,
+        "x_pct": 58.6,
+        "y_pct": 11.1
+      },
+      {
+        "text": "pei",
+        "conf": 31,
+        "x_pct": 83.7,
+        "y_pct": 15.4
+      },
+      {
+        "text": "EIS.",
+        "conf": 48,
+        "x_pct": 54.4,
+        "y_pct": 16.2
+      },
+      {
+        "text": "RUN",
+        "conf": 43,
+        "x_pct": 65.4,
+        "y_pct": 15.9
+      },
+      {
+        "text": "by)",
+        "conf": 33,
+        "x_pct": 46.9,
+        "y_pct": 17.5
+      },
+      {
+        "text": "<)>",
+        "conf": 61,
+        "x_pct": 51.8,
+        "y_pct": 17.5
+      },
+      {
+        "text": "OMERUN",
+        "conf": 46,
+        "x_pct": 54.9,
+        "y_pct": 18.9
+      },
+      {
+        "text": "MOUNTAIN",
+        "conf": 85,
+        "x_pct": 81.3,
+        "y_pct": 20.6
+      },
+      {
+        "text": "e020",
+        "conf": 45,
+        "x_pct": 22.7,
+        "y_pct": 21.1
+      },
+      {
+        "text": "ore",
+        "conf": 57,
+        "x_pct": 46.3,
+        "y_pct": 20.6
+      },
+      {
+        "text": "3,592",
+        "conf": 94,
+        "x_pct": 79.8,
+        "y_pct": 21.3
+      },
+      {
+        "text": "SASSAERAS",
+        "conf": 77,
+        "x_pct": 30.4,
+        "y_pct": 21.7
+      },
+      {
+        "text": "ni!",
+        "conf": 48,
+        "x_pct": 2.9,
+        "y_pct": 22.6
+      },
+      {
+        "text": "Yo,",
+        "conf": 58,
+        "x_pct": 55.7,
+        "y_pct": 22.4
+      },
+      {
+        "text": "ISO.",
+        "conf": 62,
+        "x_pct": 67.9,
+        "y_pct": 22.3
+      },
+      {
+        "text": "P0100",
+        "conf": 40,
+        "x_pct": 75.3,
+        "y_pct": 21.9
+      },
+      {
+        "text": "00)",
+        "conf": 48,
+        "x_pct": 76.6,
+        "y_pct": 21.9
+      },
+      {
+        "text": "\u2018At",
+        "conf": 46,
+        "x_pct": 2.8,
+        "y_pct": 23.4
+      },
+      {
+        "text": "UTHIRIDGE|",
+        "conf": 63,
+        "x_pct": 48.0,
+        "y_pct": 24.9
+      },
+      {
+        "text": "NPS",
+        "conf": 52,
+        "x_pct": 72.9,
+        "y_pct": 24.4
+      },
+      {
+        "text": "CAs",
+        "conf": 42,
+        "x_pct": 55.1,
+        "y_pct": 25.1
+      },
+      {
+        "text": "ier",
+        "conf": 41,
+        "x_pct": 4.2,
+        "y_pct": 25.9
+      },
+      {
+        "text": "pire",
+        "conf": 60,
+        "x_pct": 37.4,
+        "y_pct": 26.0
+      },
+      {
+        "text": "nent",
+        "conf": 30,
+        "x_pct": 38.4,
+        "y_pct": 25.1
+      },
+      {
+        "text": "SKYEWALK!",
+        "conf": 30,
+        "x_pct": 43.2,
+        "y_pct": 26.7
+      },
+      {
+        "text": "INIVIS\\WALKG",
+        "conf": 59,
+        "x_pct": 49.4,
+        "y_pct": 26.4
+      },
+      {
+        "text": "nee",
+        "conf": 36,
+        "x_pct": 44.2,
+        "y_pct": 27.2
+      },
+      {
+        "text": "\u2018Sent",
+        "conf": 39,
+        "x_pct": 70.7,
+        "y_pct": 27.2
+      },
+      {
+        "text": "oll",
+        "conf": 41,
+        "x_pct": 87.4,
+        "y_pct": 27.1
+      },
+      {
+        "text": "sil",
+        "conf": 30,
+        "x_pct": 88.6,
+        "y_pct": 27.1
+      },
+      {
+        "text": "4ROUNDABO",
+        "conf": 91,
+        "x_pct": 35.5,
+        "y_pct": 27.8
+      },
+      {
+        "text": "See",
+        "conf": 34,
+        "x_pct": 43.9,
+        "y_pct": 27.9
+      },
+      {
+        "text": "aly",
+        "conf": 31,
+        "x_pct": 2.6,
+        "y_pct": 28.3
+      },
+      {
+        "text": "ROUND)",
+        "conf": 75,
+        "x_pct": 34.1,
+        "y_pct": 29.8
+      },
+      {
+        "text": "SKYE",
+        "conf": 96,
+        "x_pct": 41.4,
+        "y_pct": 30.2
+      },
+      {
+        "text": "PEAK",
+        "conf": 95,
+        "x_pct": 42.2,
+        "y_pct": 30.2
+      },
+      {
+        "text": "BEAR",
+        "conf": 37,
+        "x_pct": 29.4,
+        "y_pct": 29.6
+      },
+      {
+        "text": "CUR",
+        "conf": 35,
+        "x_pct": 30.5,
+        "y_pct": 30.1
+      },
+      {
+        "text": "3,80",
+        "conf": 87,
+        "x_pct": 41.4,
+        "y_pct": 30.8
+      },
+      {
+        "text": "TRO)",
+        "conf": 38,
+        "x_pct": 55.0,
+        "y_pct": 31.1
+      },
+      {
+        "text": "RIDGEVIEW,",
+        "conf": 94,
+        "x_pct": 28.9,
+        "y_pct": 31.6
+      },
+      {
+        "text": "sul",
+        "conf": 38,
+        "x_pct": 31.7,
+        "y_pct": 31.5
+      },
+      {
+        "text": "ine",
+        "conf": 58,
+        "x_pct": 13.8,
+        "y_pct": 33.2
+      },
+      {
+        "text": "fae",
+        "conf": 38,
+        "x_pct": 26.8,
+        "y_pct": 33.5
+      },
+      {
+        "text": "age",
+        "conf": 33,
+        "x_pct": 37.4,
+        "y_pct": 33.0
+      },
+      {
+        "text": "pits",
+        "conf": 37,
+        "x_pct": 22.9,
+        "y_pct": 34.8
+      },
+      {
+        "text": "sai",
+        "conf": 48,
+        "x_pct": 41.0,
+        "y_pct": 34.7
+      },
+      {
+        "text": "IKE:",
+        "conf": 41,
+        "x_pct": 70.9,
+        "y_pct": 33.3
+      },
+      {
+        "text": "wit",
+        "conf": 39,
+        "x_pct": 85.9,
+        "y_pct": 34.6
+      },
+      {
+        "text": "TRAP.",
+        "conf": 49,
+        "x_pct": 72.9,
+        "y_pct": 35.1
+      },
+      {
+        "text": "len",
+        "conf": 46,
+        "x_pct": 13.6,
+        "y_pct": 36.5
+      },
+      {
+        "text": "eon",
+        "conf": 42,
+        "x_pct": 37.8,
+        "y_pct": 35.7
+      },
+      {
+        "text": "MON",
+        "conf": 30,
+        "x_pct": 53.2,
+        "y_pct": 35.1
+      },
+      {
+        "text": "itis",
+        "conf": 44,
+        "x_pct": 85.8,
+        "y_pct": 37.2
+      },
+      {
+        "text": "\u2018bh",
+        "conf": 47,
+        "x_pct": 9.1,
+        "y_pct": 36.9
+      },
+      {
+        "text": "wag",
+        "conf": 53,
+        "x_pct": 47.4,
+        "y_pct": 37.2
+      },
+      {
+        "text": "Re,",
+        "conf": 32,
+        "x_pct": 51.2,
+        "y_pct": 37.9
+      },
+      {
+        "text": "Alo}",
+        "conf": 30,
+        "x_pct": 49.6,
+        "y_pct": 38.2
+      },
+      {
+        "text": "ACY",
+        "conf": 68,
+        "x_pct": 72.0,
+        "y_pct": 38.0
+      },
+      {
+        "text": "Hit",
+        "conf": 33,
+        "x_pct": 74.8,
+        "y_pct": 38.7
+      },
+      {
+        "text": "isa",
+        "conf": 47,
+        "x_pct": 19.2,
+        "y_pct": 39.2
+      },
+      {
+        "text": "RS;",
+        "conf": 37,
+        "x_pct": 49.6,
+        "y_pct": 40.0
+      },
+      {
+        "text": "ale",
+        "conf": 43,
+        "x_pct": 79.9,
+        "y_pct": 38.8
+      },
+      {
+        "text": "Weep",
+        "conf": 40,
+        "x_pct": 50.1,
+        "y_pct": 40.3
+      },
+      {
+        "text": "AG;",
+        "conf": 40,
+        "x_pct": 82.8,
+        "y_pct": 40.2
+      },
+      {
+        "text": "Bor",
+        "conf": 32,
+        "x_pct": 82.5,
+        "y_pct": 40.8
+      },
+      {
+        "text": "eit",
+        "conf": 45,
+        "x_pct": 22.4,
+        "y_pct": 42.6
+      },
+      {
+        "text": "tat",
+        "conf": 33,
+        "x_pct": 16.4,
+        "y_pct": 43.5
+      },
+      {
+        "text": "Sry",
+        "conf": 57,
+        "x_pct": 55.4,
+        "y_pct": 42.6
+      },
+      {
+        "text": "ROARING",
+        "conf": 94,
+        "x_pct": 60.4,
+        "y_pct": 43.4
+      },
+      {
+        "text": "10K",
+        "conf": 65,
+        "x_pct": 61.9,
+        "y_pct": 43.4
+      },
+      {
+        "text": "Gren",
+        "conf": 39,
+        "x_pct": 68.6,
+        "y_pct": 42.9
+      },
+      {
+        "text": "EASY",
+        "conf": 92,
+        "x_pct": 86.5,
+        "y_pct": 43.0
+      },
+      {
+        "text": "STREET",
+        "conf": 95,
+        "x_pct": 87.5,
+        "y_pct": 42.8
+      },
+      {
+        "text": "20990,",
+        "conf": 35,
+        "x_pct": 90.8,
+        "y_pct": 42.5
+      },
+      {
+        "text": "UN!",
+        "conf": 70,
+        "x_pct": 6.3,
+        "y_pct": 43.8
+      },
+      {
+        "text": "Tate",
+        "conf": 41,
+        "x_pct": 26.2,
+        "y_pct": 43.9
+      },
+      {
+        "text": "hg,",
+        "conf": 37,
+        "x_pct": 54.7,
+        "y_pct": 43.4
+      },
+      {
+        "text": "UMBRELLA",
+        "conf": 89,
+        "x_pct": 60.4,
+        "y_pct": 43.9
+      },
+      {
+        "text": "ANY",
+        "conf": 47,
+        "x_pct": 82.5,
+        "y_pct": 43.7
+      },
+      {
+        "text": "09:",
+        "conf": 50,
+        "x_pct": 86.9,
+        "y_pct": 44.2
+      },
+      {
+        "text": "oot",
+        "conf": 32,
+        "x_pct": 7.7,
+        "y_pct": 44.6
+      },
+      {
+        "text": "BEAR)",
+        "conf": 70,
+        "x_pct": 9.0,
+        "y_pct": 44.3
+      },
+      {
+        "text": "Exe}",
+        "conf": 32,
+        "x_pct": 52.3,
+        "y_pct": 44.6
+      },
+      {
+        "text": "IEW;",
+        "conf": 52,
+        "x_pct": 9.1,
+        "y_pct": 44.9
+      },
+      {
+        "text": "NOY",
+        "conf": 30,
+        "x_pct": 5.9,
+        "y_pct": 45.4
+      },
+      {
+        "text": "SWEET:",
+        "conf": 58,
+        "x_pct": 57.0,
+        "y_pct": 46.4
+      },
+      {
+        "text": "iss",
+        "conf": 39,
+        "x_pct": 61.9,
+        "y_pct": 46.2
+      },
+      {
+        "text": "ipl",
+        "conf": 44,
+        "x_pct": 17.1,
+        "y_pct": 47.5
+      },
+      {
+        "text": "Mal",
+        "conf": 43,
+        "x_pct": 20.4,
+        "y_pct": 47.3
+      },
+      {
+        "text": "poe",
+        "conf": 37,
+        "x_pct": 32.5,
+        "y_pct": 47.7
+      },
+      {
+        "text": "pets",
+        "conf": 49,
+        "x_pct": 36.4,
+        "y_pct": 46.6
+      },
+      {
+        "text": "nO}",
+        "conf": 50,
+        "x_pct": 55.1,
+        "y_pct": 47.0
+      },
+      {
+        "text": "ali",
+        "conf": 54,
+        "x_pct": 78.4,
+        "y_pct": 47.2
+      },
+      {
+        "text": "fe,",
+        "conf": 36,
+        "x_pct": 62.0,
+        "y_pct": 47.0
+      },
+      {
+        "text": "iil",
+        "conf": 48,
+        "x_pct": 64.3,
+        "y_pct": 47.4
+      },
+      {
+        "text": "att",
+        "conf": 49,
+        "x_pct": 26.5,
+        "y_pct": 49.3
+      },
+      {
+        "text": "eae",
+        "conf": 39,
+        "x_pct": 70.0,
+        "y_pct": 50.3
+      },
+      {
+        "text": "ete",
+        "conf": 32,
+        "x_pct": 52.5,
+        "y_pct": 51.3
+      },
+      {
+        "text": "ay,",
+        "conf": 71,
+        "x_pct": 77.3,
+        "y_pct": 51.2
+      },
+      {
+        "text": "\u2018SPI",
+        "conf": 69,
+        "x_pct": 18.7,
+        "y_pct": 51.8
+      },
+      {
+        "text": "nee",
+        "conf": 59,
+        "x_pct": 19.2,
+        "y_pct": 51.5
+      },
+      {
+        "text": "yak",
+        "conf": 46,
+        "x_pct": 50.7,
+        "y_pct": 53.1
+      },
+      {
+        "text": "WS,",
+        "conf": 49,
+        "x_pct": 5.1,
+        "y_pct": 54.1
+      },
+      {
+        "text": "ROK",
+        "conf": 34,
+        "x_pct": 83.6,
+        "y_pct": 54.7
+      },
+      {
+        "text": "RST",
+        "conf": 78,
+        "x_pct": 28.5,
+        "y_pct": 54.8
+      },
+      {
+        "text": "LEDGEWOOD",
+        "conf": 91,
+        "x_pct": 55.7,
+        "y_pct": 55.4
+      },
+      {
+        "text": "Bons",
+        "conf": 42,
+        "x_pct": 59.3,
+        "y_pct": 53.0
+      },
+      {
+        "text": "\u201cOne",
+        "conf": 58,
+        "x_pct": 61.5,
+        "y_pct": 55.1
+      },
+      {
+        "text": "itt",
+        "conf": 44,
+        "x_pct": 83.0,
+        "y_pct": 56.2
+      },
+      {
+        "text": "Its",
+        "conf": 53,
+        "x_pct": 83.9,
+        "y_pct": 55.6
+      },
+      {
+        "text": "lag",
+        "conf": 30,
+        "x_pct": 10.1,
+        "y_pct": 55.7
+      },
+      {
+        "text": "wat",
+        "conf": 61,
+        "x_pct": 27.9,
+        "y_pct": 56.5
+      },
+      {
+        "text": "NORTHBROOK",
+        "conf": 82,
+        "x_pct": 50.5,
+        "y_pct": 56.1
+      },
+      {
+        "text": "\u2018PROGRES!",
+        "conf": 79,
+        "x_pct": 78.6,
+        "y_pct": 56.9
+      },
+      {
+        "text": "108",
+        "conf": 52,
+        "x_pct": 79.7,
+        "y_pct": 56.8
+      },
+      {
+        "text": "HED",
+        "conf": 72,
+        "x_pct": 41.8,
+        "y_pct": 57.2
+      },
+      {
+        "text": "Wo,",
+        "conf": 40,
+        "x_pct": 62.2,
+        "y_pct": 57.7
+      },
+      {
+        "text": "\"one",
+        "conf": 36,
+        "x_pct": 65.6,
+        "y_pct": 56.9
+      },
+      {
+        "text": "keg",
+        "conf": 47,
+        "x_pct": 69.5,
+        "y_pct": 57.7
+      },
+      {
+        "text": "jpn",
+        "conf": 33,
+        "x_pct": 5.7,
+        "y_pct": 58.0
+      },
+      {
+        "text": "Gane,",
+        "conf": 50,
+        "x_pct": 80.9,
+        "y_pct": 58.5
+      },
+      {
+        "text": "Wie",
+        "conf": 35,
+        "x_pct": 6.5,
+        "y_pct": 61.0
+      },
+      {
+        "text": "SUN",
+        "conf": 77,
+        "x_pct": 5.0,
+        "y_pct": 61.2
+      },
+      {
+        "text": "BAR",
+        "conf": 89,
+        "x_pct": 6.2,
+        "y_pct": 61.7
+      },
+      {
+        "text": "co),",
+        "conf": 32,
+        "x_pct": 60.9,
+        "y_pct": 61.7
+      },
+      {
+        "text": "Lae",
+        "conf": 35,
+        "x_pct": 30.8,
+        "y_pct": 63.1
+      },
+      {
+        "text": "chi",
+        "conf": 43,
+        "x_pct": 85.5,
+        "y_pct": 63.2
+      },
+      {
+        "text": "Bai",
+        "conf": 39,
+        "x_pct": 5.3,
+        "y_pct": 64.3
+      },
+      {
+        "text": "ARES",
+        "conf": 41,
+        "x_pct": 39.6,
+        "y_pct": 63.9
+      },
+      {
+        "text": "JAMAICAN",
+        "conf": 91,
+        "x_pct": 46.5,
+        "y_pct": 64.4
+      },
+      {
+        "text": "Lon",
+        "conf": 52,
+        "x_pct": 65.3,
+        "y_pct": 64.2
+      },
+      {
+        "text": "GRILL",
+        "conf": 89,
+        "x_pct": 46.5,
+        "y_pct": 65.1
+      },
+      {
+        "text": "tise",
+        "conf": 43,
+        "x_pct": 85.4,
+        "y_pct": 65.3
+      },
+      {
+        "text": "pati",
+        "conf": 41,
+        "x_pct": 45.7,
+        "y_pct": 66.0
+      },
+      {
+        "text": "Res",
+        "conf": 49,
+        "x_pct": 43.0,
+        "y_pct": 68.3
+      },
+      {
+        "text": "ang",
+        "conf": 48,
+        "x_pct": 15.5,
+        "y_pct": 68.9
+      },
+      {
+        "text": "gna",
+        "conf": 30,
+        "x_pct": 22.5,
+        "y_pct": 69.4
+      },
+      {
+        "text": "ae.",
+        "conf": 43,
+        "x_pct": 41.2,
+        "y_pct": 68.8
+      },
+      {
+        "text": "try",
+        "conf": 45,
+        "x_pct": 68.4,
+        "y_pct": 69.2
+      },
+      {
+        "text": "KILLINGTON",
+        "conf": 94,
+        "x_pct": 67.8,
+        "y_pct": 70.5
+      },
+      {
+        "text": "GRAND",
+        "conf": 96,
+        "x_pct": 69.5,
+        "y_pct": 70.5
+      },
+      {
+        "text": "HOTEL",
+        "conf": 95,
+        "x_pct": 70.6,
+        "y_pct": 70.5
+      },
+      {
+        "text": "are",
+        "conf": 58,
+        "x_pct": 20.6,
+        "y_pct": 70.6
+      },
+      {
+        "text": "FALL",
+        "conf": 79,
+        "x_pct": 58.3,
+        "y_pct": 70.3
+      },
+      {
+        "text": "UNE",
+        "conf": 63,
+        "x_pct": 59.2,
+        "y_pct": 70.7
+      },
+      {
+        "text": "PRESTON\u2019S",
+        "conf": 90,
+        "x_pct": 68.1,
+        "y_pct": 71.0
+      },
+      {
+        "text": "RESTAURANT",
+        "conf": 96,
+        "x_pct": 69.7,
+        "y_pct": 71.0
+      },
+      {
+        "text": "gee",
+        "conf": 32,
+        "x_pct": 11.7,
+        "y_pct": 72.7
+      },
+      {
+        "text": "KILLINGTON",
+        "conf": 96,
+        "x_pct": 74.3,
+        "y_pct": 73.0
+      },
+      {
+        "text": "res",
+        "conf": 74,
+        "x_pct": 74.5,
+        "y_pct": 73.7
+      },
+      {
+        "text": "eth",
+        "conf": 35,
+        "x_pct": 22.0,
+        "y_pct": 74.3
+      },
+      {
+        "text": "og.",
+        "conf": 43,
+        "x_pct": 92.1,
+        "y_pct": 74.4
+      },
+      {
+        "text": "\u2018Me",
+        "conf": 41,
+        "x_pct": 45.9,
+        "y_pct": 75.4
+      },
+      {
+        "text": "MOUNTAIN",
+        "conf": 88,
+        "x_pct": 14.5,
+        "y_pct": 76.1
+      },
+      {
+        "text": "Ronn",
+        "conf": 48,
+        "x_pct": 16.6,
+        "y_pct": 75.6
+      },
+      {
+        "text": "eth.",
+        "conf": 45,
+        "x_pct": 22.0,
+        "y_pct": 78.0
+      },
+      {
+        "text": "iat",
+        "conf": 43,
+        "x_pct": 33.8,
+        "y_pct": 78.1
+      },
+      {
+        "text": "in:",
+        "conf": 42,
+        "x_pct": 78.8,
+        "y_pct": 77.8
+      },
+      {
+        "text": "FIE|",
+        "conf": 48,
+        "x_pct": 29.3,
+        "y_pct": 79.8
+      },
+      {
+        "text": "Goal!",
+        "conf": 47,
+        "x_pct": 30.4,
+        "y_pct": 79.9
+      },
+      {
+        "text": "Hee",
+        "conf": 39,
+        "x_pct": 90.2,
+        "y_pct": 80.0
+      },
+      {
+        "text": "OME,",
+        "conf": 49,
+        "x_pct": 22.7,
+        "y_pct": 81.0
+      },
+      {
+        "text": "het",
+        "conf": 32,
+        "x_pct": 38.9,
+        "y_pct": 81.7
+      },
+      {
+        "text": "ney",
+        "conf": 30,
+        "x_pct": 44.1,
+        "y_pct": 82.9
+      },
+      {
+        "text": "Wy:",
+        "conf": 35,
+        "x_pct": 83.4,
+        "y_pct": 83.3
+      },
+      {
+        "text": "Ss.",
+        "conf": 36,
+        "x_pct": 43.6,
+        "y_pct": 84.1
+      },
+      {
+        "text": "\u201caE",
+        "conf": 30,
+        "x_pct": 24.1,
+        "y_pct": 84.9
+      },
+      {
+        "text": "zit",
+        "conf": 32,
+        "x_pct": 33.6,
+        "y_pct": 84.6
+      },
+      {
+        "text": "jee",
+        "conf": 57,
+        "x_pct": 34.8,
+        "y_pct": 84.4
+      },
+      {
+        "text": "init",
+        "conf": 33,
+        "x_pct": 52.3,
+        "y_pct": 86.1
+      },
+      {
+        "text": "\u201ctee",
+        "conf": 56,
+        "x_pct": 17.0,
+        "y_pct": 86.8
+      },
+      {
+        "text": "\u2018ae",
+        "conf": 31,
+        "x_pct": 3.2,
+        "y_pct": 87.2
+      },
+      {
+        "text": "sat",
+        "conf": 30,
+        "x_pct": 47.2,
+        "y_pct": 88.0
+      },
+      {
+        "text": "Mah",
+        "conf": 32,
+        "x_pct": 67.0,
+        "y_pct": 88.8
+      },
+      {
+        "text": "cones",
+        "conf": 42,
+        "x_pct": 69.5,
+        "y_pct": 90.1
+      },
+      {
+        "text": "\u201csc",
+        "conf": 43,
+        "x_pct": 99.1,
+        "y_pct": 91.1
+      },
+      {
+        "text": "Cal",
+        "conf": 32,
+        "x_pct": 67.5,
+        "y_pct": 91.0
+      },
+      {
+        "text": "tii",
+        "conf": 62,
+        "x_pct": 93.0,
+        "y_pct": 92.3
+      },
+      {
+        "text": "sens",
+        "conf": 58,
+        "x_pct": 27.7,
+        "y_pct": 93.0
+      },
+      {
+        "text": "thy",
+        "conf": 45,
+        "x_pct": 30.1,
+        "y_pct": 93.6
+      },
+      {
+        "text": "\u201cet",
+        "conf": 45,
+        "x_pct": 26.0,
+        "y_pct": 94.5
+      },
+      {
+        "text": "OS:",
+        "conf": 39,
+        "x_pct": 31.8,
+        "y_pct": 94.5
+      },
+      {
+        "text": "sua",
+        "conf": 30,
+        "x_pct": 78.1,
+        "y_pct": 94.6
+      },
+      {
+        "text": "sal",
+        "conf": 30,
+        "x_pct": 91.8,
+        "y_pct": 96.7
+      },
+      {
+        "text": "ROUTE",
+        "conf": 50,
+        "x_pct": 34.2,
+        "y_pct": 97.6
+      },
+      {
+        "text": "iy.",
+        "conf": 37,
+        "x_pct": 16.1,
+        "y_pct": 99.4
+      },
+      {
+        "text": "aes",
+        "conf": 31,
+        "x_pct": 59.7,
+        "y_pct": 98.7
+      }
+    ],
+    "gray": [
+      {
+        "text": "mee",
+        "conf": 37,
+        "x_pct": 32.7,
+        "y_pct": 2.4
+      },
+      {
+        "text": "PEAK",
+        "conf": 94,
+        "x_pct": 55.0,
+        "y_pct": 8.1
+      },
+      {
+        "text": "LODGE",
+        "conf": 96,
+        "x_pct": 55.8,
+        "y_pct": 8.1
+      },
+      {
+        "text": "1's",
+        "conf": 47,
+        "x_pct": 68.0,
+        "y_pct": 14.7
+      },
+      {
+        "text": "ree",
+        "conf": 41,
+        "x_pct": 74.0,
+        "y_pct": 14.8
+      },
+      {
+        "text": "\u201cae",
+        "conf": 35,
+        "x_pct": 33.3,
+        "y_pct": 14.6
+      },
+      {
+        "text": "spe",
+        "conf": 31,
+        "x_pct": 33.9,
+        "y_pct": 15.6
+      },
+      {
+        "text": "fee,",
+        "conf": 35,
+        "x_pct": 66.1,
+        "y_pct": 15.5
+      },
+      {
+        "text": "Fil}",
+        "conf": 41,
+        "x_pct": 20.8,
+        "y_pct": 17.5
+      },
+      {
+        "text": "eat",
+        "conf": 49,
+        "x_pct": 19.8,
+        "y_pct": 18.0
+      },
+      {
+        "text": "\u2018Yas",
+        "conf": 40,
+        "x_pct": 98.0,
+        "y_pct": 18.0
+      },
+      {
+        "text": "Ty!",
+        "conf": 34,
+        "x_pct": 7.4,
+        "y_pct": 20.2
+      },
+      {
+        "text": "een",
+        "conf": 32,
+        "x_pct": 69.7,
+        "y_pct": 20.0
+      },
+      {
+        "text": "ors",
+        "conf": 55,
+        "x_pct": 74.5,
+        "y_pct": 20.1
+      },
+      {
+        "text": "im)",
+        "conf": 34,
+        "x_pct": 6.5,
+        "y_pct": 20.5
+      },
+      {
+        "text": "SNOWDON",
+        "conf": 83,
+        "x_pct": 79.8,
+        "y_pct": 20.2
+      },
+      {
+        "text": "MOUNTAIN",
+        "conf": 84,
+        "x_pct": 81.3,
+        "y_pct": 20.1
+      },
+      {
+        "text": "amet",
+        "conf": 51,
+        "x_pct": 86.2,
+        "y_pct": 20.5
+      },
+      {
+        "text": "ets",
+        "conf": 33,
+        "x_pct": 6.5,
+        "y_pct": 22.7
+      },
+      {
+        "text": "20)",
+        "conf": 76,
+        "x_pct": 63.0,
+        "y_pct": 23.4
+      },
+      {
+        "text": "CAs",
+        "conf": 41,
+        "x_pct": 55.1,
+        "y_pct": 25.1
+      },
+      {
+        "text": "{fa",
+        "conf": 34,
+        "x_pct": 3.1,
+        "y_pct": 26.1
+      },
+      {
+        "text": "hel",
+        "conf": 33,
+        "x_pct": 80.4,
+        "y_pct": 26.7
+      },
+      {
+        "text": "\u2018il",
+        "conf": 50,
+        "x_pct": 2.3,
+        "y_pct": 27.5
+      },
+      {
+        "text": "apa",
+        "conf": 38,
+        "x_pct": 44.2,
+        "y_pct": 27.2
+      },
+      {
+        "text": "Gd)",
+        "conf": 38,
+        "x_pct": 32.5,
+        "y_pct": 28.1
+      },
+      {
+        "text": "if}",
+        "conf": 66,
+        "x_pct": 94.2,
+        "y_pct": 28.0
+      },
+      {
+        "text": "siya",
+        "conf": 42,
+        "x_pct": 2.3,
+        "y_pct": 28.0
+      },
+      {
+        "text": "BEAR",
+        "conf": 96,
+        "x_pct": 25.6,
+        "y_pct": 28.8
+      },
+      {
+        "text": "MOUNTAIN",
+        "conf": 96,
+        "x_pct": 26.4,
+        "y_pct": 28.8
+      },
+      {
+        "text": "Mia",
+        "conf": 35,
+        "x_pct": 37.9,
+        "y_pct": 27.6
+      },
+      {
+        "text": "3,262\u00b0",
+        "conf": 51,
+        "x_pct": 25.6,
+        "y_pct": 29.4
+      },
+      {
+        "text": "SKYE",
+        "conf": 95,
+        "x_pct": 41.4,
+        "y_pct": 30.2
+      },
+      {
+        "text": "PEAK",
+        "conf": 95,
+        "x_pct": 42.2,
+        "y_pct": 30.3
+      },
+      {
+        "text": "TEA",
+        "conf": 57,
+        "x_pct": 93.3,
+        "y_pct": 30.3
+      },
+      {
+        "text": "3,800'",
+        "conf": 72,
+        "x_pct": 41.4,
+        "y_pct": 30.8
+      },
+      {
+        "text": "wel",
+        "conf": 40,
+        "x_pct": 96.6,
+        "y_pct": 30.8
+      },
+      {
+        "text": "iso",
+        "conf": 56,
+        "x_pct": 55.0,
+        "y_pct": 31.1
+      },
+      {
+        "text": "Vig",
+        "conf": 42,
+        "x_pct": 72.8,
+        "y_pct": 29.4
+      },
+      {
+        "text": "eo?",
+        "conf": 42,
+        "x_pct": 12.1,
+        "y_pct": 31.9
+      },
+      {
+        "text": "rit",
+        "conf": 40,
+        "x_pct": 55.1,
+        "y_pct": 32.1
+      },
+      {
+        "text": "TTS",
+        "conf": 30,
+        "x_pct": 32.0,
+        "y_pct": 32.3
+      },
+      {
+        "text": "ere",
+        "conf": 31,
+        "x_pct": 34.8,
+        "y_pct": 33.4
+      },
+      {
+        "text": "Avie",
+        "conf": 35,
+        "x_pct": 68.5,
+        "y_pct": 32.9
+      },
+      {
+        "text": "in}",
+        "conf": 44,
+        "x_pct": 12.0,
+        "y_pct": 34.3
+      },
+      {
+        "text": "Re,",
+        "conf": 30,
+        "x_pct": 51.2,
+        "y_pct": 37.9
+      },
+      {
+        "text": "Wy,",
+        "conf": 35,
+        "x_pct": 49.9,
+        "y_pct": 38.4
+      },
+      {
+        "text": "Nye",
+        "conf": 46,
+        "x_pct": 7.1,
+        "y_pct": 39.4
+      },
+      {
+        "text": "a4,",
+        "conf": 49,
+        "x_pct": 40.4,
+        "y_pct": 39.0
+      },
+      {
+        "text": "iar",
+        "conf": 43,
+        "x_pct": 2.5,
+        "y_pct": 40.6
+      },
+      {
+        "text": "ol}",
+        "conf": 57,
+        "x_pct": 27.7,
+        "y_pct": 40.1
+      },
+      {
+        "text": "va?",
+        "conf": 66,
+        "x_pct": 1.5,
+        "y_pct": 41.4
+      },
+      {
+        "text": "ih!",
+        "conf": 45,
+        "x_pct": 4.8,
+        "y_pct": 41.4
+      },
+      {
+        "text": "Bor",
+        "conf": 33,
+        "x_pct": 82.5,
+        "y_pct": 40.8
+      },
+      {
+        "text": "ILUNGTON",
+        "conf": 40,
+        "x_pct": 65.4,
+        "y_pct": 41.9
+      },
+      {
+        "text": "pou",
+        "conf": 42,
+        "x_pct": 76.6,
+        "y_pct": 43.0
+      },
+      {
+        "text": "ROARING",
+        "conf": 95,
+        "x_pct": 60.4,
+        "y_pct": 43.4
+      },
+      {
+        "text": "BROOK",
+        "conf": 95,
+        "x_pct": 61.4,
+        "y_pct": 43.4
+      },
+      {
+        "text": "Veg",
+        "conf": 37,
+        "x_pct": 18.6,
+        "y_pct": 43.5
+      },
+      {
+        "text": "UMBRELLA",
+        "conf": 84,
+        "x_pct": 60.4,
+        "y_pct": 43.9
+      },
+      {
+        "text": "BAR",
+        "conf": 95,
+        "x_pct": 61.6,
+        "y_pct": 43.9
+      },
+      {
+        "text": "20\u00b0",
+        "conf": 46,
+        "x_pct": 86.9,
+        "y_pct": 44.2
+      },
+      {
+        "text": "atk",
+        "conf": 36,
+        "x_pct": 2.8,
+        "y_pct": 45.2
+      },
+      {
+        "text": "Hie",
+        "conf": 34,
+        "x_pct": 28.1,
+        "y_pct": 44.9
+      },
+      {
+        "text": "eit",
+        "conf": 43,
+        "x_pct": 88.5,
+        "y_pct": 45.4
+      },
+      {
+        "text": "K-1",
+        "conf": 92,
+        "x_pct": 63.8,
+        "y_pct": 46.1
+      },
+      {
+        "text": "LODGE",
+        "conf": 95,
+        "x_pct": 64.4,
+        "y_pct": 46.1
+      },
+      {
+        "text": "fit",
+        "conf": 55,
+        "x_pct": 68.6,
+        "y_pct": 45.7
+      },
+      {
+        "text": "Rear",
+        "conf": 35,
+        "x_pct": 88.3,
+        "y_pct": 45.9
+      },
+      {
+        "text": "\u2018TOPRIDGE",
+        "conf": 35,
+        "x_pct": 7.9,
+        "y_pct": 47.0
+      },
+      {
+        "text": "2,500\"",
+        "conf": 57,
+        "x_pct": 63.8,
+        "y_pct": 46.7
+      },
+      {
+        "text": "HOMES",
+        "conf": 87,
+        "x_pct": 7.9,
+        "y_pct": 47.4
+      },
+      {
+        "text": "yin",
+        "conf": 42,
+        "x_pct": 17.1,
+        "y_pct": 47.5
+      },
+      {
+        "text": "Boe",
+        "conf": 37,
+        "x_pct": 39.3,
+        "y_pct": 49.0
+      },
+      {
+        "text": "AOS",
+        "conf": 44,
+        "x_pct": 39.4,
+        "y_pct": 48.5
+      },
+      {
+        "text": "\u2018an",
+        "conf": 65,
+        "x_pct": 76.3,
+        "y_pct": 48.1
+      },
+      {
+        "text": "att",
+        "conf": 55,
+        "x_pct": 26.5,
+        "y_pct": 49.3
+      },
+      {
+        "text": "he!",
+        "conf": 53,
+        "x_pct": 91.6,
+        "y_pct": 49.6
+      },
+      {
+        "text": "oe:",
+        "conf": 30,
+        "x_pct": 2.7,
+        "y_pct": 50.7
+      },
+      {
+        "text": "uty",
+        "conf": 39,
+        "x_pct": 15.4,
+        "y_pct": 51.4
+      },
+      {
+        "text": "\u2018ad",
+        "conf": 30,
+        "x_pct": 62.1,
+        "y_pct": 50.5
+      },
+      {
+        "text": "NOOD",
+        "conf": 91,
+        "x_pct": 54.2,
+        "y_pct": 51.4
+      },
+      {
+        "text": "val",
+        "conf": 41,
+        "x_pct": 78.3,
+        "y_pct": 52.5
+      },
+      {
+        "text": "Pia",
+        "conf": 43,
+        "x_pct": 73.8,
+        "y_pct": 52.3
+      },
+      {
+        "text": "pak",
+        "conf": 49,
+        "x_pct": 50.7,
+        "y_pct": 53.1
+      },
+      {
+        "text": "eR:",
+        "conf": 41,
+        "x_pct": 70.1,
+        "y_pct": 53.3
+      },
+      {
+        "text": "IW)",
+        "conf": 33,
+        "x_pct": 84.3,
+        "y_pct": 54.6
+      },
+      {
+        "text": "Os:",
+        "conf": 35,
+        "x_pct": 42.2,
+        "y_pct": 55.0
+      },
+      {
+        "text": "EDGEWOOD",
+        "conf": 35,
+        "x_pct": 55.7,
+        "y_pct": 54.9
+      },
+      {
+        "text": "YurT",
+        "conf": 63,
+        "x_pct": 55.7,
+        "y_pct": 56.1
+      },
+      {
+        "text": "itt",
+        "conf": 49,
+        "x_pct": 83.0,
+        "y_pct": 56.2
+      },
+      {
+        "text": "Its",
+        "conf": 55,
+        "x_pct": 83.9,
+        "y_pct": 55.6
+      },
+      {
+        "text": "Ree",
+        "conf": 32,
+        "x_pct": 71.9,
+        "y_pct": 56.4
+      },
+      {
+        "text": "KILLINGTON",
+        "conf": 96,
+        "x_pct": 72.8,
+        "y_pct": 57.9
+      },
+      {
+        "text": "MEDICAL",
+        "conf": 81,
+        "x_pct": 72.8,
+        "y_pct": 58.4
+      },
+      {
+        "text": "CLINIC",
+        "conf": 95,
+        "x_pct": 73.8,
+        "y_pct": 58.4
+      },
+      {
+        "text": "Ge)",
+        "conf": 36,
+        "x_pct": 76.4,
+        "y_pct": 57.8
+      },
+      {
+        "text": "\u201cfe",
+        "conf": 57,
+        "x_pct": 85.6,
+        "y_pct": 58.1
+      },
+      {
+        "text": "ASE",
+        "conf": 36,
+        "x_pct": 34.5,
+        "y_pct": 59.1
+      },
+      {
+        "text": "Wares",
+        "conf": 45,
+        "x_pct": 74.9,
+        "y_pct": 59.5
+      },
+      {
+        "text": "\u2018eh",
+        "conf": 64,
+        "x_pct": 1.3,
+        "y_pct": 60.1
+      },
+      {
+        "text": "aie",
+        "conf": 32,
+        "x_pct": 93.7,
+        "y_pct": 59.9
+      },
+      {
+        "text": "RS)",
+        "conf": 59,
+        "x_pct": 13.2,
+        "y_pct": 59.9
+      },
+      {
+        "text": "BEAR",
+        "conf": 96,
+        "x_pct": 20.7,
+        "y_pct": 60.4
+      },
+      {
+        "text": "MOUNTAIN",
+        "conf": 96,
+        "x_pct": 21.5,
+        "y_pct": 59.9
+      },
+      {
+        "text": "RAMSHEAD",
+        "conf": 88,
+        "x_pct": 75.6,
+        "y_pct": 60.5
+      },
+      {
+        "text": "2,120'",
+        "conf": 61,
+        "x_pct": 20.7,
+        "y_pct": 61.0
+      },
+      {
+        "text": "rile",
+        "conf": 45,
+        "x_pct": 91.4,
+        "y_pct": 61.6
+      },
+      {
+        "text": "SUNRISE",
+        "conf": 96,
+        "x_pct": 5.0,
+        "y_pct": 61.2
+      },
+      {
+        "text": "BAR",
+        "conf": 92,
+        "x_pct": 6.2,
+        "y_pct": 61.7
+      },
+      {
+        "text": "JERK",
+        "conf": 92,
+        "x_pct": 45.7,
+        "y_pct": 64.4
+      },
+      {
+        "text": "JAMAICAN",
+        "conf": 92,
+        "x_pct": 46.5,
+        "y_pct": 64.4
+      },
+      {
+        "text": "MTN.",
+        "conf": 67,
+        "x_pct": 45.7,
+        "y_pct": 65.1
+      },
+      {
+        "text": "GRILL",
+        "conf": 94,
+        "x_pct": 46.5,
+        "y_pct": 65.1
+      },
+      {
+        "text": "SNOWSHED",
+        "conf": 47,
+        "x_pct": 68.0,
+        "y_pct": 65.6
+      },
+      {
+        "text": "snowsHeD",
+        "conf": 59,
+        "x_pct": 71.7,
+        "y_pct": 65.2
+      },
+      {
+        "text": "fit",
+        "conf": 62,
+        "x_pct": 80.1,
+        "y_pct": 65.1
+      },
+      {
+        "text": "ball",
+        "conf": 40,
+        "x_pct": 45.4,
+        "y_pct": 66.1
+      },
+      {
+        "text": "UMBRELLA",
+        "conf": 78,
+        "x_pct": 68.0,
+        "y_pct": 66.1
+      },
+      {
+        "text": "BAR",
+        "conf": 96,
+        "x_pct": 69.2,
+        "y_pct": 66.1
+      },
+      {
+        "text": "ipa",
+        "conf": 46,
+        "x_pct": 74.1,
+        "y_pct": 64.3
+      },
+      {
+        "text": "TRAIL",
+        "conf": 95,
+        "x_pct": 63.3,
+        "y_pct": 67.7
+      },
+      {
+        "text": "CREEK",
+        "conf": 89,
+        "x_pct": 64.0,
+        "y_pct": 67.7
+      },
+      {
+        "text": "[Ft",
+        "conf": 32,
+        "x_pct": 71.1,
+        "y_pct": 67.1
+      },
+      {
+        "text": "Touran",
+        "conf": 45,
+        "x_pct": 79.4,
+        "y_pct": 66.7
+      },
+      {
+        "text": "GREEN",
+        "conf": 88,
+        "x_pct": 80.7,
+        "y_pct": 67.2
+      },
+      {
+        "text": "\u2018CONDOS",
+        "conf": 81,
+        "x_pct": 79.5,
+        "y_pct": 67.7
+      },
+      {
+        "text": "CONDOS",
+        "conf": 60,
+        "x_pct": 63.3,
+        "y_pct": 68.2
+      },
+      {
+        "text": "High",
+        "conf": 31,
+        "x_pct": 77.6,
+        "y_pct": 68.5
+      },
+      {
+        "text": "ity",
+        "conf": 73,
+        "x_pct": 68.4,
+        "y_pct": 69.2
+      },
+      {
+        "text": "PINNACLE",
+        "conf": 85,
+        "x_pct": 81.7,
+        "y_pct": 69.6
+      },
+      {
+        "text": "CONDOS",
+        "conf": 66,
+        "x_pct": 81.7,
+        "y_pct": 70.1
+      },
+      {
+        "text": "Dok,",
+        "conf": 54,
+        "x_pct": 85.9,
+        "y_pct": 69.9
+      },
+      {
+        "text": "yer",
+        "conf": 39,
+        "x_pct": 19.0,
+        "y_pct": 70.5
+      },
+      {
+        "text": "KILLINGTON",
+        "conf": 96,
+        "x_pct": 67.8,
+        "y_pct": 70.5
+      },
+      {
+        "text": "GRAND",
+        "conf": 96,
+        "x_pct": 69.5,
+        "y_pct": 70.5
+      },
+      {
+        "text": "HOTEL",
+        "conf": 96,
+        "x_pct": 70.6,
+        "y_pct": 70.5
+      },
+      {
+        "text": "mad",
+        "conf": 34,
+        "x_pct": 79.0,
+        "y_pct": 70.6
+      },
+      {
+        "text": "PRESTON\u2019S",
+        "conf": 90,
+        "x_pct": 68.1,
+        "y_pct": 71.0
+      },
+      {
+        "text": "RESTAURANT",
+        "conf": 96,
+        "x_pct": 69.7,
+        "y_pct": 71.0
+      },
+      {
+        "text": "THE",
+        "conf": 90,
+        "x_pct": 73.4,
+        "y_pct": 71.7
+      },
+      {
+        "text": "CLUBHOUSE",
+        "conf": 92,
+        "x_pct": 73.9,
+        "y_pct": 71.6
+      },
+      {
+        "text": "ite",
+        "conf": 37,
+        "x_pct": 9.3,
+        "y_pct": 71.8
+      },
+      {
+        "text": "WHIFFLETREE",
+        "conf": 47,
+        "x_pct": 65.6,
+        "y_pct": 72.2
+      },
+      {
+        "text": "CONDOS",
+        "conf": 71,
+        "x_pct": 65.6,
+        "y_pct": 72.7
+      },
+      {
+        "text": "KILLINGTON",
+        "conf": 96,
+        "x_pct": 74.3,
+        "y_pct": 73.0
+      },
+      {
+        "text": "TUBING",
+        "conf": 96,
+        "x_pct": 76.0,
+        "y_pct": 73.0
+      },
+      {
+        "text": "PARK",
+        "conf": 78,
+        "x_pct": 77.1,
+        "y_pct": 73.0
+      },
+      {
+        "text": "ray",
+        "conf": 49,
+        "x_pct": 87.7,
+        "y_pct": 73.5
+      },
+      {
+        "text": "feat",
+        "conf": 39,
+        "x_pct": 29.0,
+        "y_pct": 73.8
+      },
+      {
+        "text": "Presented",
+        "conf": 93,
+        "x_pct": 74.3,
+        "y_pct": 73.6
+      },
+      {
+        "text": "ily",
+        "conf": 37,
+        "x_pct": 94.5,
+        "y_pct": 73.7
+      },
+      {
+        "text": "\u2018iy",
+        "conf": 43,
+        "x_pct": 94.1,
+        "y_pct": 76.2
+      },
+      {
+        "text": "EAST",
+        "conf": 89,
+        "x_pct": 13.4,
+        "y_pct": 76.3
+      },
+      {
+        "text": "ROAD",
+        "conf": 89,
+        "x_pct": 16.6,
+        "y_pct": 76.3
+      },
+      {
+        "text": "ine",
+        "conf": 37,
+        "x_pct": 8.2,
+        "y_pct": 79.5
+      },
+      {
+        "text": "\u2018ite",
+        "conf": 30,
+        "x_pct": 57.1,
+        "y_pct": 79.5
+      },
+      {
+        "text": "hel",
+        "conf": 30,
+        "x_pct": 19.7,
+        "y_pct": 80.1
+      },
+      {
+        "text": "mee",
+        "conf": 30,
+        "x_pct": 91.8,
+        "y_pct": 79.4
+      },
+      {
+        "text": "00\u00b0",
+        "conf": 35,
+        "x_pct": 22.0,
+        "y_pct": 80.3
+      },
+      {
+        "text": "m=O.",
+        "conf": 37,
+        "x_pct": 26.7,
+        "y_pct": 80.0
+      },
+      {
+        "text": "HOME,",
+        "conf": 83,
+        "x_pct": 22.4,
+        "y_pct": 81.0
+      },
+      {
+        "text": "Pie",
+        "conf": 52,
+        "x_pct": 88.0,
+        "y_pct": 80.7
+      },
+      {
+        "text": "ret",
+        "conf": 35,
+        "x_pct": 38.9,
+        "y_pct": 82.0
+      },
+      {
+        "text": "Shieh",
+        "conf": 31,
+        "x_pct": 27.7,
+        "y_pct": 84.6
+      },
+      {
+        "text": "zit",
+        "conf": 34,
+        "x_pct": 33.6,
+        "y_pct": 84.6
+      },
+      {
+        "text": "oe\"",
+        "conf": 42,
+        "x_pct": 34.5,
+        "y_pct": 84.4
+      },
+      {
+        "text": "he,",
+        "conf": 33,
+        "x_pct": 22.6,
+        "y_pct": 85.9
+      },
+      {
+        "text": "pee",
+        "conf": 31,
+        "x_pct": 96.9,
+        "y_pct": 85.5
+      },
+      {
+        "text": "Ayes",
+        "conf": 43,
+        "x_pct": 69.2,
+        "y_pct": 86.5
+      },
+      {
+        "text": "vii)",
+        "conf": 34,
+        "x_pct": 66.9,
+        "y_pct": 87.3
+      },
+      {
+        "text": "cas",
+        "conf": 48,
+        "x_pct": 38.0,
+        "y_pct": 86.8
+      },
+      {
+        "text": "SAS",
+        "conf": 33,
+        "x_pct": 68.2,
+        "y_pct": 88.1
+      },
+      {
+        "text": "ee,",
+        "conf": 41,
+        "x_pct": 56.2,
+        "y_pct": 87.9
+      },
+      {
+        "text": "HD)",
+        "conf": 43,
+        "x_pct": 30.6,
+        "y_pct": 89.5
+      },
+      {
+        "text": "GOA",
+        "conf": 52,
+        "x_pct": 32.2,
+        "y_pct": 89.6
+      },
+      {
+        "text": "Swe",
+        "conf": 48,
+        "x_pct": 34.5,
+        "y_pct": 90.5
+      },
+      {
+        "text": "Cll",
+        "conf": 46,
+        "x_pct": 67.5,
+        "y_pct": 91.0
+      },
+      {
+        "text": "ain",
+        "conf": 32,
+        "x_pct": 68.3,
+        "y_pct": 90.9
+      },
+      {
+        "text": "\u2018sy",
+        "conf": 48,
+        "x_pct": 99.1,
+        "y_pct": 91.1
+      },
+      {
+        "text": "Stee",
+        "conf": 33,
+        "x_pct": 19.6,
+        "y_pct": 91.6
+      },
+      {
+        "text": "SKYE:",
+        "conf": 62,
+        "x_pct": 27.7,
+        "y_pct": 94.0
+      },
+      {
+        "text": "1,161",
+        "conf": 61,
+        "x_pct": 27.7,
+        "y_pct": 94.6
+      },
+      {
+        "text": "par",
+        "conf": 31,
+        "x_pct": 82.7,
+        "y_pct": 95.5
+      },
+      {
+        "text": "U.S.",
+        "conf": 76,
+        "x_pct": 33.2,
+        "y_pct": 97.3
+      },
+      {
+        "text": "fiat]",
+        "conf": 41,
+        "x_pct": 25.1,
+        "y_pct": 97.8
+      },
+      {
+        "text": "ROUTE",
+        "conf": 96,
+        "x_pct": 34.2,
+        "y_pct": 97.5
+      },
+      {
+        "text": "iis",
+        "conf": 61,
+        "x_pct": 13.6,
+        "y_pct": 99.6
+      }
+    ],
+    "adaptive": [
+      {
+        "text": "PEAK",
+        "conf": 82,
+        "x_pct": 56.5,
+        "y_pct": 6.0
+      },
+      {
+        "text": "ANT",
+        "conf": 38,
+        "x_pct": 57.8,
+        "y_pct": 11.6
+      },
+      {
+        "text": "Roi",
+        "conf": 32,
+        "x_pct": 50.8,
+        "y_pct": 12.1
+      },
+      {
+        "text": "bf)",
+        "conf": 42,
+        "x_pct": 48.3,
+        "y_pct": 14.8
+      },
+      {
+        "text": "ool:",
+        "conf": 37,
+        "x_pct": 56.0,
+        "y_pct": 14.6
+      },
+      {
+        "text": "Sat",
+        "conf": 41,
+        "x_pct": 68.4,
+        "y_pct": 14.5
+      },
+      {
+        "text": "rit",
+        "conf": 39,
+        "x_pct": 33.6,
+        "y_pct": 16.4
+      },
+      {
+        "text": "cet",
+        "conf": 44,
+        "x_pct": 58.6,
+        "y_pct": 16.2
+      },
+      {
+        "text": "afi",
+        "conf": 41,
+        "x_pct": 59.3,
+        "y_pct": 17.3
+      },
+      {
+        "text": "sin)",
+        "conf": 43,
+        "x_pct": 46.0,
+        "y_pct": 17.9
+      },
+      {
+        "text": "IHOMERUN:",
+        "conf": 48,
+        "x_pct": 54.9,
+        "y_pct": 19.3
+      },
+      {
+        "text": "orn",
+        "conf": 33,
+        "x_pct": 67.8,
+        "y_pct": 18.6
+      },
+      {
+        "text": "te,",
+        "conf": 30,
+        "x_pct": 63.2,
+        "y_pct": 19.7
+      },
+      {
+        "text": "Yen",
+        "conf": 33,
+        "x_pct": 70.3,
+        "y_pct": 19.7
+      },
+      {
+        "text": "(is",
+        "conf": 66,
+        "x_pct": 43.0,
+        "y_pct": 20.7
+      },
+      {
+        "text": "sith",
+        "conf": 35,
+        "x_pct": 67.8,
+        "y_pct": 20.9
+      },
+      {
+        "text": "Sores",
+        "conf": 33,
+        "x_pct": 38.9,
+        "y_pct": 22.2
+      },
+      {
+        "text": "SUN",
+        "conf": 43,
+        "x_pct": 64.3,
+        "y_pct": 20.7
+      },
+      {
+        "text": "ee:",
+        "conf": 33,
+        "x_pct": 19.6,
+        "y_pct": 22.7
+      },
+      {
+        "text": "sit",
+        "conf": 30,
+        "x_pct": 52.0,
+        "y_pct": 22.8
+      },
+      {
+        "text": "KACEIN",
+        "conf": 40,
+        "x_pct": 72.4,
+        "y_pct": 23.0
+      },
+      {
+        "text": "\u2018+!",
+        "conf": 49,
+        "x_pct": 78.4,
+        "y_pct": 22.1
+      },
+      {
+        "text": "Lies",
+        "conf": 33,
+        "x_pct": 44.6,
+        "y_pct": 24.1
+      },
+      {
+        "text": "eae",
+        "conf": 40,
+        "x_pct": 67.8,
+        "y_pct": 23.7
+      },
+      {
+        "text": "SOUTHIRIDGE",
+        "conf": 68,
+        "x_pct": 47.6,
+        "y_pct": 24.7
+      },
+      {
+        "text": "Vis",
+        "conf": 56,
+        "x_pct": 59.1,
+        "y_pct": 24.0
+      },
+      {
+        "text": "alk",
+        "conf": 61,
+        "x_pct": 83.8,
+        "y_pct": 23.8
+      },
+      {
+        "text": "yer",
+        "conf": 37,
+        "x_pct": 88.0,
+        "y_pct": 25.1
+      },
+      {
+        "text": "epee",
+        "conf": 36,
+        "x_pct": 36.0,
+        "y_pct": 25.6
+      },
+      {
+        "text": "SKYEW,",
+        "conf": 54,
+        "x_pct": 43.2,
+        "y_pct": 26.7
+      },
+      {
+        "text": "ial",
+        "conf": 32,
+        "x_pct": 27.7,
+        "y_pct": 27.2
+      },
+      {
+        "text": "eons",
+        "conf": 33,
+        "x_pct": 36.1,
+        "y_pct": 27.0
+      },
+      {
+        "text": "Nie",
+        "conf": 56,
+        "x_pct": 1.8,
+        "y_pct": 27.2
+      },
+      {
+        "text": "INDABOUT",
+        "conf": 32,
+        "x_pct": 36.5,
+        "y_pct": 27.8
+      },
+      {
+        "text": "wal",
+        "conf": 48,
+        "x_pct": 42.5,
+        "y_pct": 27.5
+      },
+      {
+        "text": "Rel",
+        "conf": 55,
+        "x_pct": 50.0,
+        "y_pct": 28.3
+      },
+      {
+        "text": "Pf,",
+        "conf": 45,
+        "x_pct": 74.5,
+        "y_pct": 28.3
+      },
+      {
+        "text": "EAR",
+        "conf": 79,
+        "x_pct": 25.8,
+        "y_pct": 28.8
+      },
+      {
+        "text": "MOUNTAIN",
+        "conf": 95,
+        "x_pct": 26.4,
+        "y_pct": 28.8
+      },
+      {
+        "text": "pee",
+        "conf": 43,
+        "x_pct": 26.9,
+        "y_pct": 30.6
+      },
+      {
+        "text": "CUB",
+        "conf": 89,
+        "x_pct": 30.4,
+        "y_pct": 30.4
+      },
+      {
+        "text": "REE!",
+        "conf": 54,
+        "x_pct": 95.0,
+        "y_pct": 30.2
+      },
+      {
+        "text": "AY,",
+        "conf": 40,
+        "x_pct": 51.4,
+        "y_pct": 30.8
+      },
+      {
+        "text": "WAY",
+        "conf": 43,
+        "x_pct": 34.5,
+        "y_pct": 30.9
+      },
+      {
+        "text": "ees",
+        "conf": 35,
+        "x_pct": 39.1,
+        "y_pct": 31.8
+      },
+      {
+        "text": "WAY",
+        "conf": 34,
+        "x_pct": 41.4,
+        "y_pct": 32.4
+      },
+      {
+        "text": "ft,",
+        "conf": 51,
+        "x_pct": 56.1,
+        "y_pct": 32.3
+      },
+      {
+        "text": "420)",
+        "conf": 39,
+        "x_pct": 79.8,
+        "y_pct": 31.7
+      },
+      {
+        "text": "ete",
+        "conf": 34,
+        "x_pct": 92.9,
+        "y_pct": 31.4
+      },
+      {
+        "text": "Vike,",
+        "conf": 42,
+        "x_pct": 53.8,
+        "y_pct": 33.1
+      },
+      {
+        "text": "aii",
+        "conf": 33,
+        "x_pct": 26.8,
+        "y_pct": 33.8
+      },
+      {
+        "text": "the,",
+        "conf": 46,
+        "x_pct": 54.6,
+        "y_pct": 33.8
+      },
+      {
+        "text": "ier",
+        "conf": 42,
+        "x_pct": 78.7,
+        "y_pct": 33.7
+      },
+      {
+        "text": "ris",
+        "conf": 34,
+        "x_pct": 80.5,
+        "y_pct": 33.6
+      },
+      {
+        "text": "PAIR",
+        "conf": 31,
+        "x_pct": 72.6,
+        "y_pct": 35.0
+      },
+      {
+        "text": "atl",
+        "conf": 31,
+        "x_pct": 83.4,
+        "y_pct": 35.3
+      },
+      {
+        "text": "tat",
+        "conf": 39,
+        "x_pct": 9.0,
+        "y_pct": 36.0
+      },
+      {
+        "text": "Sx,",
+        "conf": 62,
+        "x_pct": 54.3,
+        "y_pct": 36.3
+      },
+      {
+        "text": "ont",
+        "conf": 52,
+        "x_pct": 67.1,
+        "y_pct": 35.4
+      },
+      {
+        "text": "tits",
+        "conf": 54,
+        "x_pct": 24.3,
+        "y_pct": 38.5
+      },
+      {
+        "text": "ine",
+        "conf": 42,
+        "x_pct": 37.4,
+        "y_pct": 38.4
+      },
+      {
+        "text": "Bite",
+        "conf": 53,
+        "x_pct": 48.6,
+        "y_pct": 38.8
+      },
+      {
+        "text": "os,",
+        "conf": 48,
+        "x_pct": 76.8,
+        "y_pct": 38.6
+      },
+      {
+        "text": "Ab,",
+        "conf": 40,
+        "x_pct": 96.8,
+        "y_pct": 38.6
+      },
+      {
+        "text": "bay",
+        "conf": 30,
+        "x_pct": 44.8,
+        "y_pct": 38.5
+      },
+      {
+        "text": "Agi",
+        "conf": 35,
+        "x_pct": 46.7,
+        "y_pct": 40.2
+      },
+      {
+        "text": "gant",
+        "conf": 38,
+        "x_pct": 75.4,
+        "y_pct": 39.9
+      },
+      {
+        "text": "LNG",
+        "conf": 34,
+        "x_pct": 82.8,
+        "y_pct": 40.2
+      },
+      {
+        "text": "one",
+        "conf": 31,
+        "x_pct": 12.9,
+        "y_pct": 40.5
+      },
+      {
+        "text": "ING",
+        "conf": 38,
+        "x_pct": 60.1,
+        "y_pct": 40.9
+      },
+      {
+        "text": "ASG",
+        "conf": 66,
+        "x_pct": 83.7,
+        "y_pct": 41.6
+      },
+      {
+        "text": "ROARING",
+        "conf": 88,
+        "x_pct": 60.3,
+        "y_pct": 43.4
+      },
+      {
+        "text": "EASY",
+        "conf": 33,
+        "x_pct": 86.5,
+        "y_pct": 43.0
+      },
+      {
+        "text": "STR",
+        "conf": 93,
+        "x_pct": 87.5,
+        "y_pct": 42.9
+      },
+      {
+        "text": "Shi",
+        "conf": 60,
+        "x_pct": 54.4,
+        "y_pct": 43.2
+      },
+      {
+        "text": "tees",
+        "conf": 44,
+        "x_pct": 55.6,
+        "y_pct": 42.6
+      },
+      {
+        "text": "ai}",
+        "conf": 33,
+        "x_pct": 94.5,
+        "y_pct": 44.5
+      },
+      {
+        "text": "VIEW:",
+        "conf": 87,
+        "x_pct": 8.9,
+        "y_pct": 44.9
+      },
+      {
+        "text": "OED",
+        "conf": 32,
+        "x_pct": 53.1,
+        "y_pct": 44.3
+      },
+      {
+        "text": "tel",
+        "conf": 39,
+        "x_pct": 53.3,
+        "y_pct": 45.4
+      },
+      {
+        "text": "its",
+        "conf": 37,
+        "x_pct": 42.7,
+        "y_pct": 45.6
+      },
+      {
+        "text": "iii",
+        "conf": 44,
+        "x_pct": 95.4,
+        "y_pct": 48.3
+      },
+      {
+        "text": "\u201c10'S;",
+        "conf": 51,
+        "x_pct": 63.0,
+        "y_pct": 48.6
+      },
+      {
+        "text": "pte",
+        "conf": 41,
+        "x_pct": 75.5,
+        "y_pct": 48.9
+      },
+      {
+        "text": "Dios",
+        "conf": 42,
+        "x_pct": 58.7,
+        "y_pct": 50.0
+      },
+      {
+        "text": "\u2018ag",
+        "conf": 38,
+        "x_pct": 71.5,
+        "y_pct": 50.0
+      },
+      {
+        "text": "Weal",
+        "conf": 41,
+        "x_pct": 28.1,
+        "y_pct": 50.8
+      },
+      {
+        "text": "aiid",
+        "conf": 35,
+        "x_pct": 47.1,
+        "y_pct": 51.7
+      },
+      {
+        "text": "ay,",
+        "conf": 42,
+        "x_pct": 52.6,
+        "y_pct": 51.8
+      },
+      {
+        "text": "ALE/PARKIN,",
+        "conf": 48,
+        "x_pct": 71.0,
+        "y_pct": 52.2
+      },
+      {
+        "text": "eae",
+        "conf": 37,
+        "x_pct": 38.9,
+        "y_pct": 52.4
+      },
+      {
+        "text": "Lo\u2019",
+        "conf": 48,
+        "x_pct": 72.8,
+        "y_pct": 53.1
+      },
+      {
+        "text": "ape",
+        "conf": 31,
+        "x_pct": 30.7,
+        "y_pct": 53.6
+      },
+      {
+        "text": "NHN",
+        "conf": 37,
+        "x_pct": 26.6,
+        "y_pct": 54.8
+      },
+      {
+        "text": "csi",
+        "conf": 41,
+        "x_pct": 27.2,
+        "y_pct": 55.4
+      },
+      {
+        "text": "ire",
+        "conf": 39,
+        "x_pct": 31.3,
+        "y_pct": 54.9
+      },
+      {
+        "text": "eat",
+        "conf": 31,
+        "x_pct": 42.5,
+        "y_pct": 54.3
+      },
+      {
+        "text": "LEDGEWOOD",
+        "conf": 85,
+        "x_pct": 55.7,
+        "y_pct": 55.4
+      },
+      {
+        "text": "iit",
+        "conf": 42,
+        "x_pct": 31.9,
+        "y_pct": 56.6
+      },
+      {
+        "text": "hie",
+        "conf": 35,
+        "x_pct": 37.0,
+        "y_pct": 55.9
+      },
+      {
+        "text": "2,5)",
+        "conf": 61,
+        "x_pct": 40.1,
+        "y_pct": 56.2
+      },
+      {
+        "text": "NOR\u2019",
+        "conf": 80,
+        "x_pct": 50.5,
+        "y_pct": 56.4
+      },
+      {
+        "text": "ROOK",
+        "conf": 89,
+        "x_pct": 52.1,
+        "y_pct": 56.2
+      },
+      {
+        "text": "Cae",
+        "conf": 50,
+        "x_pct": 78.8,
+        "y_pct": 55.4
+      },
+      {
+        "text": "ene",
+        "conf": 36,
+        "x_pct": 83.8,
+        "y_pct": 55.4
+      },
+      {
+        "text": "HOS",
+        "conf": 50,
+        "x_pct": 35.5,
+        "y_pct": 56.2
+      },
+      {
+        "text": "Sag",
+        "conf": 50,
+        "x_pct": 40.4,
+        "y_pct": 57.0
+      },
+      {
+        "text": "Te,",
+        "conf": 43,
+        "x_pct": 44.5,
+        "y_pct": 57.0
+      },
+      {
+        "text": "RAIL",
+        "conf": 68,
+        "x_pct": 50.8,
+        "y_pct": 57.0
+      },
+      {
+        "text": "PROGR",
+        "conf": 46,
+        "x_pct": 78.3,
+        "y_pct": 57.0
+      },
+      {
+        "text": "BASE",
+        "conf": 53,
+        "x_pct": 17.2,
+        "y_pct": 58.0
+      },
+      {
+        "text": "CAM",
+        "conf": 53,
+        "x_pct": 18.2,
+        "y_pct": 58.0
+      },
+      {
+        "text": "es:",
+        "conf": 44,
+        "x_pct": 62.6,
+        "y_pct": 58.0
+      },
+      {
+        "text": "\u2018Beg",
+        "conf": 32,
+        "x_pct": 67.3,
+        "y_pct": 58.3
+      },
+      {
+        "text": "Je,",
+        "conf": 52,
+        "x_pct": 69.1,
+        "y_pct": 57.9
+      },
+      {
+        "text": "MIDI",
+        "conf": 56,
+        "x_pct": 72.8,
+        "y_pct": 58.3
+      },
+      {
+        "text": "SOO",
+        "conf": 30,
+        "x_pct": 78.4,
+        "y_pct": 57.5
+      },
+      {
+        "text": "aes",
+        "conf": 38,
+        "x_pct": 45.6,
+        "y_pct": 58.8
+      },
+      {
+        "text": "BEAR",
+        "conf": 83,
+        "x_pct": 20.7,
+        "y_pct": 60.4
+      },
+      {
+        "text": "MOUNT:",
+        "conf": 68,
+        "x_pct": 21.8,
+        "y_pct": 60.4
+      },
+      {
+        "text": "SUNRI",
+        "conf": 30,
+        "x_pct": 9.5,
+        "y_pct": 60.8
+      },
+      {
+        "text": "NRISE",
+        "conf": 50,
+        "x_pct": 5.3,
+        "y_pct": 61.7
+      },
+      {
+        "text": "BAR",
+        "conf": 92,
+        "x_pct": 6.2,
+        "y_pct": 61.7
+      },
+      {
+        "text": "GRILI",
+        "conf": 38,
+        "x_pct": 7.2,
+        "y_pct": 61.7
+      },
+      {
+        "text": "NEN",
+        "conf": 42,
+        "x_pct": 60.8,
+        "y_pct": 62.1
+      },
+      {
+        "text": "alte",
+        "conf": 32,
+        "x_pct": 23.0,
+        "y_pct": 64.4
+      },
+      {
+        "text": "wits",
+        "conf": 35,
+        "x_pct": 26.2,
+        "y_pct": 63.6
+      },
+      {
+        "text": "EARLY:",
+        "conf": 67,
+        "x_pct": 27.9,
+        "y_pct": 64.2
+      },
+      {
+        "text": "JAMAL",
+        "conf": 33,
+        "x_pct": 46.6,
+        "y_pct": 64.4
+      },
+      {
+        "text": "ire",
+        "conf": 53,
+        "x_pct": 46.7,
+        "y_pct": 63.6
+      },
+      {
+        "text": "iy)",
+        "conf": 51,
+        "x_pct": 50.8,
+        "y_pct": 65.0
+      },
+      {
+        "text": "aah",
+        "conf": 46,
+        "x_pct": 26.8,
+        "y_pct": 65.5
+      },
+      {
+        "text": "ifs",
+        "conf": 32,
+        "x_pct": 31.2,
+        "y_pct": 66.4
+      },
+      {
+        "text": "uli",
+        "conf": 67,
+        "x_pct": 56.8,
+        "y_pct": 66.0
+      },
+      {
+        "text": "Qik:",
+        "conf": 32,
+        "x_pct": 20.5,
+        "y_pct": 68.2
+      },
+      {
+        "text": "iti",
+        "conf": 44,
+        "x_pct": 55.2,
+        "y_pct": 69.2
+      },
+      {
+        "text": "Rad",
+        "conf": 36,
+        "x_pct": 40.6,
+        "y_pct": 70.2
+      },
+      {
+        "text": "ea)",
+        "conf": 37,
+        "x_pct": 60.7,
+        "y_pct": 68.3
+      },
+      {
+        "text": "bit",
+        "conf": 42,
+        "x_pct": 66.6,
+        "y_pct": 69.9
+      },
+      {
+        "text": "con",
+        "conf": 78,
+        "x_pct": 81.7,
+        "y_pct": 70.1
+      },
+      {
+        "text": "ose)",
+        "conf": 44,
+        "x_pct": 83.9,
+        "y_pct": 69.4
+      },
+      {
+        "text": "nit",
+        "conf": 43,
+        "x_pct": 46.2,
+        "y_pct": 69.0
+      },
+      {
+        "text": "Fatt",
+        "conf": 51,
+        "x_pct": 58.3,
+        "y_pct": 70.3
+      },
+      {
+        "text": "{KILUNGTON",
+        "conf": 31,
+        "x_pct": 67.7,
+        "y_pct": 70.4
+      },
+      {
+        "text": "GRAND",
+        "conf": 86,
+        "x_pct": 69.5,
+        "y_pct": 70.5
+      },
+      {
+        "text": "HOTEL!",
+        "conf": 90,
+        "x_pct": 70.6,
+        "y_pct": 70.5
+      },
+      {
+        "text": "Hoos",
+        "conf": 31,
+        "x_pct": 60.9,
+        "y_pct": 72.6
+      },
+      {
+        "text": "TUBING",
+        "conf": 87,
+        "x_pct": 75.9,
+        "y_pct": 73.0
+      },
+      {
+        "text": "PARK",
+        "conf": 91,
+        "x_pct": 77.1,
+        "y_pct": 73.0
+      },
+      {
+        "text": "iat",
+        "conf": 36,
+        "x_pct": 36.1,
+        "y_pct": 73.4
+      },
+      {
+        "text": "bubly",
+        "conf": 86,
+        "x_pct": 76.3,
+        "y_pct": 73.2
+      },
+      {
+        "text": "Malas",
+        "conf": 32,
+        "x_pct": 77.1,
+        "y_pct": 73.2
+      },
+      {
+        "text": "iis",
+        "conf": 41,
+        "x_pct": 24.2,
+        "y_pct": 74.3
+      },
+      {
+        "text": "{73",
+        "conf": 50,
+        "x_pct": 66.6,
+        "y_pct": 76.2
+      },
+      {
+        "text": "Eat",
+        "conf": 35,
+        "x_pct": 19.8,
+        "y_pct": 77.3
+      },
+      {
+        "text": "HO!",
+        "conf": 43,
+        "x_pct": 22.4,
+        "y_pct": 81.2
+      },
+      {
+        "text": "iy.",
+        "conf": 30,
+        "x_pct": 30.4,
+        "y_pct": 82.2
+      },
+      {
+        "text": "Shs",
+        "conf": 35,
+        "x_pct": 12.5,
+        "y_pct": 84.8
+      },
+      {
+        "text": "macs",
+        "conf": 35,
+        "x_pct": 54.8,
+        "y_pct": 84.9
+      },
+      {
+        "text": "SIE",
+        "conf": 76,
+        "x_pct": 30.2,
+        "y_pct": 85.1
+      },
+      {
+        "text": "Cae",
+        "conf": 36,
+        "x_pct": 31.3,
+        "y_pct": 85.2
+      },
+      {
+        "text": "Sit)",
+        "conf": 37,
+        "x_pct": 29.9,
+        "y_pct": 87.3
+      },
+      {
+        "text": "ssi",
+        "conf": 48,
+        "x_pct": 68.6,
+        "y_pct": 86.6
+      },
+      {
+        "text": "hae",
+        "conf": 30,
+        "x_pct": 3.1,
+        "y_pct": 89.0
+      },
+      {
+        "text": "SOS",
+        "conf": 42,
+        "x_pct": 27.8,
+        "y_pct": 89.8
+      },
+      {
+        "text": "HAGHRIDGE",
+        "conf": 37,
+        "x_pct": 68.2,
+        "y_pct": 90.1
+      },
+      {
+        "text": "CONDOS",
+        "conf": 80,
+        "x_pct": 69.5,
+        "y_pct": 90.1
+      },
+      {
+        "text": "isi)",
+        "conf": 36,
+        "x_pct": 21.7,
+        "y_pct": 91.1
+      },
+      {
+        "text": "gig",
+        "conf": 43,
+        "x_pct": 27.1,
+        "y_pct": 94.0
+      },
+      {
+        "text": "SKYES!",
+        "conf": 63,
+        "x_pct": 27.7,
+        "y_pct": 94.0
+      },
+      {
+        "text": "1,160\"",
+        "conf": 69,
+        "x_pct": 27.7,
+        "y_pct": 94.6
+      }
+    ]
+  },
+  "trail_matches": {
+    "none": [
+      {
+        "trail_name": "Skye Peak",
+        "detected_text": "SKYE PEAK",
+        "conf": 95,
+        "x": 1894,
+        "y": 817,
+        "w": 66,
+        "h": 12,
+        "cx": 42.1,
+        "cy": 30.4
+      },
+      {
+        "trail_name": "Easy Street",
+        "detected_text": "EASY STREET",
+        "conf": 92,
+        "x": 3953,
+        "y": 1157,
+        "w": 112,
+        "h": 22,
+        "cx": 87.7,
+        "cy": 43.2
+      }
+    ],
+    "gray": [
+      {
+        "trail_name": "Snowshed",
+        "detected_text": "SNOWSHED",
+        "conf": 47,
+        "x": 3107,
+        "y": 1774,
+        "w": 53,
+        "h": 9,
+        "cx": 68.5,
+        "cy": 65.8
+      },
+      {
+        "trail_name": "Snowshed",
+        "detected_text": "snowsHeD",
+        "conf": 59,
+        "x": 3276,
+        "y": 1764,
+        "w": 68,
+        "h": 11,
+        "cx": 72.4,
+        "cy": 65.4
+      },
+      {
+        "trail_name": "Sunrise",
+        "detected_text": "SUNRISE",
+        "conf": 96,
+        "x": 228,
+        "y": 1654,
+        "w": 51,
+        "h": 26,
+        "cx": 5.5,
+        "cy": 61.6
+      },
+      {
+        "trail_name": "Ramshead",
+        "detected_text": "RAMSHEAD",
+        "conf": 88,
+        "x": 3455,
+        "y": 1635,
+        "w": 69,
+        "h": 20,
+        "cx": 76.3,
+        "cy": 60.8
+      },
+      {
+        "trail_name": "Snowdon",
+        "detected_text": "SNOWDON",
+        "conf": 83,
+        "x": 3647,
+        "y": 545,
+        "w": 64,
+        "h": 34,
+        "cx": 80.5,
+        "cy": 20.8
+      },
+      {
+        "trail_name": "Skye Peak",
+        "detected_text": "SKYE PEAK",
+        "conf": 95,
+        "x": 1894,
+        "y": 817,
+        "w": 66,
+        "h": 12,
+        "cx": 42.1,
+        "cy": 30.4
+      },
+      {
+        "trail_name": "Bear Mountain",
+        "detected_text": "BEAR MOUNTAIN",
+        "conf": 96,
+        "x": 1171,
+        "y": 778,
+        "w": 105,
+        "h": 11,
+        "cx": 26.8,
+        "cy": 29.0
+      },
+      {
+        "trail_name": "Bear Mountain",
+        "detected_text": "BEAR MOUNTAIN",
+        "conf": 96,
+        "x": 948,
+        "y": 1620,
+        "w": 104,
+        "h": 24,
+        "cx": 21.9,
+        "cy": 60.4
+      },
+      {
+        "trail_name": "Snowshed",
+        "detected_text": "SNOWSHED",
+        "conf": 47,
+        "x": 3107,
+        "y": 1774,
+        "w": 53,
+        "h": 9,
+        "cx": 68.5,
+        "cy": 65.8
+      },
+      {
+        "trail_name": "Snowshed",
+        "detected_text": "snowsHeD",
+        "conf": 59,
+        "x": 3276,
+        "y": 1764,
+        "w": 68,
+        "h": 11,
+        "cx": 72.4,
+        "cy": 65.4
+      }
+    ],
+    "adaptive": []
+  }
+}
