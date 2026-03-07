@@ -1,0 +1,4078 @@
+{
+  "yodeler": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "S\n\niC\n\n\n\n\n\nme\n\nZE",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "S\n\nia\n\n\n\n\n\nme\n\nJEr",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Pe\n\n\n\nLe ee\n\n\n\nZN\n\nA",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "yey\n\n\n\nLae\n\ns\n\nZN\n\nA",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Somewhere",
+      "detected": "S\n\nia\n\n\n\n\n\nme\n\nJEr",
+      "score": 0.37037037037037035,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": -150.5,
+    "expected_name": "Yodeler"
+  },
+  "idler": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "oy aTzik\n\nWL\n\nve\n\n\n\n\n\nte\n\ncS ty\n\nle \n\ni \n\nis\n\n\n\nDO Fe\n\n\n\nac\n\noA\n\nsoanns\n\nPEs \n\nLan\n\neles \n\nbuf\n\nek c\n\none\n\nee\n\noi\n\nane\n\n\n\n\n\ne\n\nEs\n\nVi\n\nANNAN\n\n\n\ni",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "yas\n\nWL\n\nwe\n\n\n\n\n\nto\n\ncS ty\n\nle \n\ni \n\ni\n\n\n\nDO Fe\n\nWW\n\nac\n\noA\n\nSoanns\n\nPEs \n\nLan\n\nees \n\nba\n\nBi eee\n\non\n\nee\n\noi\n\nane\n\n\n\n\n\na\n\nEe\n\nVt\n\nTVW",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "as\n\n\n\n\n\nte\n\n\n\nS-\n\n\n\nPn\n\nz\n\na\n\n \n\ne\n\nso\n\n\n\n\n\ns\n\n a Nns\n\new\n\nzz\n\n \n\nak\n\nee\n\nac\n\ne\n\n\n\nLEIP F\n\nbot sr\n\na\n\n\n\n \n\nos\n\nbed\n\n\n\nse\n\nput\n\ntS\n\n\n\ngee\n\nBe\n\nZY\n\nix\n\nae\n\nSe\n\n\n\n\n\nI\n\non\n\n\n\nOe\n\nos\n\na\n\n\n\neo\n\n\n\n \n\nVal \n\nWN",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "as\n\n\n\n\n\nte\n\n\n\nS-\n\nto\n\nPS\n\nz\n\na\n\n \n\ne\n\nso\n\n\n\ne\n\ns\n\n a Nns\n\new\n\nzz\n\n  \n\nak\n\nee\n\nac\n\nCo\n\neo\n\nELE TPT F\n\npot sr\n\na\n\n\n\n \n\noe\n\n\n\ns\n\nse\n\npnt\n\ntS\n\n\n\nSee\n\nBe\n\nZF\n\nix\n\noe\n\n\n\n\n\n\n\n\n\non\n\n\n\nOe\n\nse\n\na\n\nae\n\neo\n\na\n\n\n\nWit\n\nNY",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Skye Peak Liftline",
+      "detected": "yas\n\nWL\n\nwe\n\n\n\n\n\nto\n\ncS ty\n\nle \n\ni \n\ni\n\n\n\nDO Fe\n\nWW\n\nac\n\noA\n\nSoanns\n\nPEs \n\nLan\n\nees \n\nba\n\nBi eee\n\non\n\nee\n\noi\n\nane\n\n\n\n\n\na\n\nEe\n\nVt\n\nTVW",
+      "score": 0.1456953642384106,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 97.8,
+    "expected_name": "Idler"
+  },
+  "snow-play": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "UN\n\nA\n\nwa\n\nSe\n\nFAN\n\ni",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Uy\n\nA\n\nwa\n\ney\n\nFAN\n\nN",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "te\n\nA\n\na\n\nSt Bete A\n\nF\n\n\n\nAm",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "te\n\nA\n\nDS\n\na a A\n\nF\n\n\n\nam",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Great Bear",
+      "detected": "te\n\nA\n\na\n\nSt Bete A\n\nF\n\n\n\nAm",
+      "score": 0.3684210526315789,
+      "method": "scaled",
+      "psm": 11
+    },
+    "angle": 112.3,
+    "expected_name": "Snow Play"
+  },
+  "snowshed-crossover": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SA\n\nSS\n\n\n\niS",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SFA\n\nSS\n\nee\n\niS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "we\n\nSS\n\n\n\n\n\nesse\n\nV\n\nSS\n\nijy",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "ee\n\nSS\n\nY\n\n\n\nesse\n\ni\n\nSS\n\nijy",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sass",
+      "detected": "SA\n\nSS\n\n\n\niS",
+      "score": 0.5,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 61.8,
+    "expected_name": "Crossover"
+  },
+  "sun-dog": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "GF\n\nBe\n\naS\n\nGY",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "G\n\nBe\n\neS\n\nYi",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SEE\n\nRRS\n\n\n\nexe\n\nMj\n\n\n\nBS\n\n\n\nx\n\na\n\nsad\n\nAG\n\nth o\n\nose\n\negy\n\nioe\n\neS\n\n\n\na\n\noF",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "SEE\n\nRRS\n\n\n\nexe\n\nM\n\n\n\nBf\n\nS\n\nx\n\na\n\nSad\n\nAG\n\nst o\n\nores\n\neae\n\nioe\n\nae\n\n\n\na\n\noF",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Breakaway",
+      "detected": "GF\n\nBe\n\naS\n\nGY",
+      "score": 0.34782608695652173,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": -141.8,
+    "expected_name": "Sun Dog"
+  },
+  "rendezvous": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "es\n\nf",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "es\n\nZ",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "is",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "is",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sunrise",
+      "detected": "is",
+      "score": 1.0,
+      "method": "scaled",
+      "psm": 11
+    },
+    "angle": 90.0,
+    "expected_name": "Rendezvous"
+  },
+  "bear-cub": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "LAA\n\nLB\n\nAN\n\nSs\n\nBo\n\n\n\nof\n\nA\n\na\n\nLs\n\nFA\n\nBo\n\naE",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "LAA\n\nLB\n\nN\n\nSs\n\nBo\n\n\n\nof\n\na\n\na\n\nLs\n\nFA\n\nBo\n\naE \n\nS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nDo\n\nOt\n\nss\n\nper \n\n et\n\nes\n\nZA\n\nA\n\ntox\n\noT\n\nota\n\ne-\n\neS\n\nCot\n\nP\n\nLes ng\n\nZo\n\nae\n\nLa tS\n\nA\n\n-\n\nPak\n\nA\n\nik\n\nLs\n\nbt ey\n\na\n\ns\n\n\n\n\n\nARE Se\n\nAs\n\nhp \n\nwe Pe\n\nBZA\n\nA",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "ra\n\nGAA\n\net\n\nBY\n\nper \n\n et\n\nes\n\nZA\n\nA\n\ntox\n\nSZ\n\nota\n\ne-\n\neS\n\nCot\n\nP\n\nBes ny\n\nZe\n\nee\n\nLao tS\n\na\n\n-\n\nPak\n\nA\n\nik\n\nLs\n\nbt ey\n\na\n\n oe\n\n\n\nte\n\nARE Se\n\nAZ\n\ntp \n\nwe Pe\n\nBZA\n\nA",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Killington Liftline",
+      "detected": "LAA\n\nLB\n\nAN\n\nSs\n\nBo\n\n\n\nof\n\nA\n\na\n\nLs\n\nFA\n\nBo\n\naE",
+      "score": 0.21212121212121213,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 110.5,
+    "expected_name": "Bear Cub"
+  },
+  "bear-view": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "WXk\n\nA\n\nete\n\nZY\n\noe\n\nFZ",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "WYXk\n\nZ\n\nefe\n\nZY\n\noe\n\nFA\n\nA",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "GL\n\nW\n\nTH\n\nLx\n\nBs\n\nBe gd\n\nRey\n\nLEZ\n\nKs\n\nBF og\n\n\n\nCe\n\n\n\nae\n\nB\n\n\n\n\n\nZip\n\nGe\n\nes\n\nZz",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "LAE\n\nWW\n\nH\n\nLx\n\ns\n\nMee gtd\n\nRey\n\nLEZ\n\nKa\n\nBP og\n\n\n\nCae\n\n\n\nae\n\nZs\n\n\n\nY\n\nZZ\n\nee\n\nes\n\nZz",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Treezy",
+      "detected": "WXk\n\nA\n\nete\n\nZY\n\noe\n\nFZ",
+      "score": 0.27586206896551724,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 117.4,
+    "expected_name": "Bear View"
+  },
+  "sunrise-connector": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SS\n\nLif\n\nMY\n\nCr\n\nYf\n\nVii",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nLif\n\nMl\n\nCrs\n\nUf\n\nVii",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "I\n\nmgt\n\n of\n\nx\n\nts\n\n\n\ngr\n\nWf\n\nPus\n\nSS\n\nmee\n\nI\n\neo\n\nCB\n\na\n\n\n\nYon\n\n asta \n\nPhen\n\n\n\nMh fee\n\ni Bs\n\nNhs\n\nyh\n\nes\n\nhe\n\nZs\n\nbic ts WA\n\n\n\nUf\n\niff\n\niff\n\nSct ade",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "I\n\nte i\n\n of\n\nx\n\nhe\n\n\n\ney\n\nWf\n\nPus\n\nSe\n\nmee\n\nI\n\neo\n\nCth\n\nat\n\n\n\nYon\n\n asta \n\nbrn\n\no\n\nMh fee\n\n Bs\n\nNhs\n\nyh\n\nes\n\nhe\n\nZs\n\nbic ts WA\n\n\n\nUf\n\nif\n\niff\n\nSi nclt ae",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Snowdon Liftline",
+      "detected": "SS\n\nLif\n\nMl\n\nCrs\n\nUf\n\nVii",
+      "score": 0.2926829268292683,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 158.0,
+    "expected_name": "Sunrise Connector"
+  },
+  "outer-limits": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Way\n\n\n\n\n\no\n\na\n\nee eS\n\nFi\n\nFur\n\nae\n\nEE",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Way\n\n\n\n\n\no\n\nse\n\neS\n\nA\n\nFer\n\nae\n\nEE",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ff\n\nN WL\n\not\n\nae\n\nRE\n\n\n\nO\n\nNy\n\n\n\noe\n\ntgiae\n\ns\n\nBer\n\naS\n\nwit",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Lf \n\nN UL\n\not\n\nee\n\nRE\n\n\n\nO\n\nwy\n\nS\n\n\n\ngit\n\ns\n\nBer\n\n\n\nswt",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Lower Wildfire",
+      "detected": "Way\n\n\n\n\n\no\n\na\n\nee eS\n\nFi\n\nFur\n\nae\n\nEE",
+      "score": 0.27450980392156865,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 100.4,
+    "expected_name": "Outer Limits"
+  },
+  "wildfire": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "RY\n\no\n\nEee\n\nNOWSHED\n\n\n\nY\n\n\n\nes\n\nby\n\nKN",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "RY\n\no\n\nEee\n\nNOWSHED\n\n\n\nt\n\n\n\nes\n\nMy\n\nKN",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "VEY\n\nWA\n\nSs OWSHED\n\noO\n\nRC RcxO\n\nhg\n\nwe\n\naS\n\nB\n\npps",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "VEY\n\nWA \n\nSs OWSHED\n\noO\n\nSes DES\n\n\n\nwe\n\naS\n\nB\n\npps",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Snowshed",
+      "detected": "RY\n\no\n\nEee\n\nNOWSHED\n\n\n\nY\n\n\n\nes\n\nby\n\nKN",
+      "score": 0.30434782608695654,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 47.2,
+    "expected_name": "Wildfire"
+  },
+  "bear-claw": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SW'W\n\nSOM\n\nSS\n\nxD\n\nrey\n\ng\n\n\n\n\n\n\n\nS\n\nEN\n\nY\n\nSs",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "YWWH\n\nSOM\n\nS\n\nxD\n\nrey\n\n\n\nA\n\n\n\n\n\nS\n\nEEN\n\nY\n\nSs",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SNe\n\nYY\n\nXG\n\nRY\n\nXe\n\nOrs\n\nSs\n\nSSS\n\n\n\na \n\nCw\n\nEAR CTS\n\nC il\n\neT LL ey\n\nS\n\nSe\n\nReet\n\nOC aia\n\nWf",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Ne\n\nYY\n\nXG\n\nRY\n\nXe\n\nOrs\n\nay\n\nSS\n\n\n\na \n\nCw\n\nEAR OTS\n\nC al\n\nexe LL ey\n\nS\n\nSe\n\nReet\n\nOC aia\n\nWf",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Lower Home Stretch",
+      "detected": "YWWH\n\nSOM\n\nS\n\nxD\n\nrey\n\n\n\nA\n\n\n\n\n\nS\n\nEEN\n\nY\n\nSs",
+      "score": 0.2222222222222222,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 60.8,
+    "expected_name": "Bear Claw"
+  },
+  "growler": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "S\n\nSLF\n\nYK",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "S\n\nS LZ\n\nYK",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Tf\n\nVi\n\nNIA\n\nf\n\nee A PAA\n\nAY\n\nYj\n\noe\n\nW\n\nPe\n\n\n\n\n\nbl iil",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Tf\n\nVi\n\nNIA\n\nf\n\nAe A LA\n\nAY\n\nVy\n\noe\n\noe\n\nP\n\n\n\n\n\nbil l",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Snow Play",
+      "detected": "S\n\nS LZ\n\nYK",
+      "score": 0.4,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 141.6,
+    "expected_name": "Growler"
+  },
+  "centerpiece": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "s\n\nERS\n\n\n\nem\n\n\n\nAS\n\n\n\nO\n\nBd\n\nE\n\nrad\n\ns\n\n\n\nLaer",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "s\n\nERS\n\n\n\nem\n\n\n\nAS\n\n\n\nO\n\nBd\n\nDRA\n\nrad\n\ns\n\n\n\nLaer",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ee\n\naa\n\nNAA\n\n\n\n\n\nAY\n\nG\n\nS\n\nO\n\nLZ\n\n\n\n\n\nSe\n\nIr a\n\nRS\n\ne\n\n\n\no-\n\nO\n\n\n\nAi\n\nPat",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Re\n\naa\n\nYY\n\n\n\n\n\nAY\n\nSG\n\n\n\nO\n\nOG\n\nae\n\n\n\nSe\n\nor\n\nTRS\n\ne\n\n\n\n\n\nO\n\n\n\nAi\n\nPat",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Superstar Glade",
+      "detected": "s\n\nERS\n\n\n\nem\n\n\n\nAS\n\n\n\nO\n\nBd\n\nE\n\nrad\n\ns\n\n\n\nLaer",
+      "score": 0.29508196721311475,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 103.2,
+    "expected_name": "Centerpiece"
+  },
+  "spacewalk": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Way Noe\n\n\n\nSs\n\new uvig\n\n\n\nAl",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Way Noe\n\n\n\nis\n\nenw uvig\n\n Ze\n\nAl",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "UPAR\n\nas\n\nee\n\neemOW uvig\n\n\n\n Ser\n\nAq\n\nri",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "UPAR\n\na\n\neet\n\neemOW uvag\n\n\n\n Ser\n\nAq",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Mouse Trap",
+      "detected": "UPAR\n\na\n\neet\n\neemOW uvag\n\n\n\n Ser\n\nAq",
+      "score": 0.30434782608695654,
+      "method": "scaled_inv",
+      "psm": 11
+    },
+    "angle": 103.5,
+    "expected_name": "Spacewalk"
+  },
+  "bear-trax": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "S\n\nSS\n\nY\n\nSo\n\nje\n\nty\n\ntp",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nY\n\nSo\n\njj\n\nty\n\ntp",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "th\n\nHh\n\nBg\n\ngr\n\nO\n\nXa\n\nbz\n\niy\n\nZi\n\nUy\n\n Yn\n\nrit\n\nPy tye\n\nGe\n\nty\n\nt",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "By\n\nHh\n\nBg\n\ngr\n\nO\n\nxa\n\nbz\n\niy\n\nZ\n\nts\n\nUy\n\n Yn\n\nit\n\nFi ye\n\nVy\n\nty\n\nt",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Start Park",
+      "detected": "SS\n\nY\n\nSo\n\njj\n\nty\n\ntp",
+      "score": 0.25806451612903225,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 127.9,
+    "expected_name": "Bear Trax"
+  },
+  "falls-brook": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "iG\n\nW\n\nBee\n\n\n\n\n\nae\n\nee Tg\n\nAK sal\n\nZ\n\n\n\nSon\n\nCIEL\n\neA\n\nZ\n\noF\n\neZ\n\nGA\n\nOy\n\n AN",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "iG\n\n\n\nee\n\n\n\n\n\nSMe\n\nie Tg\n\nAK Coal\n\nZB\n\nZA\n\nSon\n\nGILT\n\neA\n\nZ\n\noF\n\neZ\n\nGA\n\nOy\n\nLZ",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Wie A\n\nWY\n\nBe ti\n\n\n\n\n\n\n\na\n\nZY\n\nES\n\neae\n\ny\n\nMan\n\nBP \n\n\n\nAB A\n\nI\n\nZA\n\noM\n\nFe\n\nLA\n\nAMS\n\nNaar \n\nZ\n\nea\n\n\n\nLe\n\nmo\n\nx \n\nms\n\no\n\np\n\nOED\n\n\n\n\n\na",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Wie A\n\nWS\n\nBe ti\n\n\n\n\n\n\n\nur\n\nZY\n\nES\n\neee\n\ny\n\nAlan\n\nBP \n\n\n\nAB A\n\nBA\n\nZA\n\nMh\n\neK\n\nLA\n\nAMS\n\nNaar \n\nZ\n\nea\n\n S\n\nOke\n\ns\n\nx \n\nms\n\no\n\np\n\nDED\n\n\n\n\n\na",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Dream Maker Headwall",
+      "detected": "iG\n\nW\n\nBee\n\n\n\n\n\nae\n\nee Tg\n\nAK sal\n\nZ\n\n\n\nSon\n\nCIEL\n\neA\n\nZ\n\noF\n\neZ\n\nGA\n\nOy\n\n AN",
+      "score": 0.18556701030927836,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 116.0,
+    "expected_name": "Falls Brook"
+  },
+  "skye-burst-bear": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "ZH\n\n\n\nVij\n\na s\n\nZ\n\nYj\n\ng",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "ZH\n\n\n\nVij\n\nfs\n\nZ\n\nYs\n\nLg",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ter\n\n\n\nf\n\nD\n\n\n\nVy\n\nthe\n\nee\n\nLe\n\nVitae A\n\n\n\ngn\n\nYi\n\nea\n\ntj\n\nY\n\nws\n\nies\n\nat \n\n ret\n\nYj\n\n \n\ni\n\na\n\nYA\n\nes",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "ter\n\nB\n\nf\n\nDZ\n\n\n\nVy\n\nUt oe\n\nee\n\nAte\n\nAe oe\n\n\n\ngn\n\nYi\n\nea\n\ntj\n\nY\n\nws\n\noe\n\nbat \n\n ret\n\nYj\n\n \n\ni\n\na\n\nYA\n\noS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Valley Plunge",
+      "detected": "ZH\n\n\n\nVij\n\na s\n\nZ\n\nYj\n\ng",
+      "score": 0.21621621621621623,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 126.2,
+    "expected_name": "Skyeburst"
+  },
+  "bear-mountain-liftline": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "GA\n\n\n\nG\n\n \n\nso",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "GA\n\n\n\nG\n\n \n\naso",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "NS",
+        "method": "scaled",
+        "psm": 7
+      },
+      {
+        "text": "ANN\n\nZA\n\n\n\neee\n\nGj\n\nPe\n\n \n\np\n\nSNIIL \n\nZ\n\nNie\n\n \n\nJAY\n\ni \n\nZ\n\nani YA\n\ntz\n\nKe\n\nRees\n\n\n\nreso",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "NS",
+        "method": "scaled_inv",
+        "psm": 7
+      },
+      {
+        "text": "ANN\n\nZA\n\n\n\neee\n\nYe\n\nDe\n\n \n\np\n\nSNL\n\nZ\n\nNe\n\n HV \n\nJA\n\ni \n\nZ\n\nani YA\n\n\n\nik\n\nRe ie\n\n\n\nyon",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sunrise",
+      "detected": "NS",
+      "score": 0.4444444444444444,
+      "method": "scaled",
+      "psm": 7
+    },
+    "angle": 123.3,
+    "expected_name": "Bear Mountain Liftline"
+  },
+  "the-stash": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "RK",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "Sa\n\nV\n\ny\n\nLim\n\nY\n\nY fy\n\nlf\n\nS",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "aK",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "Sa\n\nUW\n\ny\n\nie\n\nY\n\nff\n\nhf\n\nS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ms",
+        "method": "scaled",
+        "psm": 7
+      },
+      {
+        "text": "SM \n\nI\n\ny\n\nYj\n\nff\n\nYy\n\nS",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "ms",
+        "method": "scaled_inv",
+        "psm": 7
+      },
+      {
+        "text": "MM \n\nI\n\ny\n\nyf\n\nf\n\n\n\nS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Upper Skyelark",
+      "detected": "RK",
+      "score": 1.0,
+      "method": "enhanced",
+      "psm": 7
+    },
+    "angle": 147.5,
+    "expected_name": "The Stash"
+  },
+  "lower-wildfire": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "SS",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "Y\n\nYj\n\nY pps\n\nSSAA NVIa\n\ng",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SS",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "Y\n\nYj\n\nY pps\n\nSSA NVI\n\ng",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "WY\n\nY\n\ntin Dye\n\n\n\nY\n\nSSUdx NVIy\n\nV Gj",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "WY\n\nY\n\ntin Dye\n\n\n\nY\n\nSSaNdxa NVIy\n\nV Gj",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Crossover",
+      "detected": "SS",
+      "score": 1.0,
+      "method": "enhanced",
+      "psm": 7
+    },
+    "angle": 133.6,
+    "expected_name": "Lower Wildfire"
+  },
+  "bear-run": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Go\n\nZG\n\nYy\n\nYj",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Go\n\nZG\n\nYy\n\nYj",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Yh\n\n\n\nE\n\nVe\n\nG\n\nike\n\nYs\n\nWE\n\n\n\nYj\n\nst\n\nCo\n\n\n\n\n\nUY\n\nY",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Yh\n\n\n\nE\n\nVe\n\nG\n\nike\n\nYs\n\nWE\n\n\n\nYj\n\nst\n\nof\n\n\n\n\n\nUY\n\nUY",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Treezy",
+      "detected": "Go\n\nZG\n\nYy\n\nYj",
+      "score": 0.2,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 130.7,
+    "expected_name": "Bear Run"
+  },
+  "skyelark": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "a\n\n VERTIGO\n\nMm\n\nLl\n\ni\n\nac\n\nINIT HOI\n\n  en\n\n\n\n\n\nMS vioanog\n\nNaX dinsziys\n\nacc\n\nI\n\n\n\nh\n\ntn\n\ni",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "a\n\n VERTIGO\n\nMm\n\nLl\n\ni\n\niat\n\nSINT HOI\n\n en\n\n\n\n\n\nM vioqnos\n\nNax dinsziys\n\nae\n\nI\n\n\n\neh\n\nun\n\ni",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "en ee VERTICY\n\ni\n\nee\n\nI\n\n\n\n \n\n\n\n NI\n\nae\n\nmee Si\n\nHOLS\n\nvnp Sauer ag\n\n\n\n \n\n S Voguos\n\nae\n\nIU dinsarys\n\ntha\n\nI\n\n\n\nyy it",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "en VERTICY\n\nul\n\nSs\n\nI\n\ni Ee\n\n \n\n\n\n N\n\nSe\n\nmee sis\n\nHOLS\n\nvnp Sauer ag\n\n\n\n \n\n S Voguos\n\nae\n\nIUK dinsaays\n\net\n\ni\n\n\n\niT\n\nZ",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Vertigo",
+      "detected": "a\n\n VERTIGO\n\nMm\n\nLl\n\ni\n\nac\n\nINIT HOI\n\n  en\n\n\n\n\n\nMS vioanog\n\nNaX dinsziys\n\nacc\n\nI\n\n\n\nh\n\ntn\n\ni",
+      "score": 0.8,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 82.1,
+    "expected_name": "Skyelark"
+  },
+  "upper-skyelark": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "XS\n\nG\n\nS\n\nZ\n\ny\n\ni\n\nA\n\nY\n\nY\n\nBAN",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "C\n\nS\n\nZ\n\ny\n\n\n\nA\n\nY\n\nY\n\nTEX",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "S\n\nG\n\nY\n\n\n\nsy\n\nbu\n\ney\n\nis\n\n\n\nYW\n\nY\n\nLs Sine\n\nDy\n\nPAG\n\nZ\n\nXp\n\nY\n\nCT us\n\nYe\n\nme\n\nY\n\nCAN",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "S\n\nC\n\nY\n\n\n\nsy\n\nru\n\ney\n\nis\n\n\n\nYW\n\n\n\nLA ine\n\na\n\nPAG\n\nZ\n\nXp\n\nY\n\nCT ues\n\nYe\n\nme\n\nY\n\nCAN",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Cascade",
+      "detected": "C\n\nS\n\nZ\n\ny\n\n\n\nA\n\nY\n\nY\n\nTEX",
+      "score": 0.24242424242424243,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 129.3,
+    "expected_name": "Upper Skyelark"
+  },
+  "skyeburst": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "so",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "aD\n\nS\n\nXe\n\nmy\n\nioe\n\n\n\na\n\n\n\nsles",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "My\n\nS\n\nle\n\nmy\n\nioe\n\n\n\na\n\n\n\ndios",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SS \n\neS\n\n\n\nTp\n\n\n\n\n\nss\n\n\n\n\n\nOD\n\n\n\noe\n\nQS\n\nxa\n\n\n\nti\n\n\n\n\n\n\n\nJ\n\n-",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nPe\n\n\n\nBe\n\n\n\n\n\nss\n\n\n\na\n\nOL\n\n\n\noe\n\n\n\nxa\n\n\n\n- i\n\n\n\nss\n\n\n\nSs\n\nso",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Solitude",
+      "detected": "so",
+      "score": 1.0,
+      "method": "enhanced",
+      "psm": 7
+    },
+    "angle": 101.7,
+    "expected_name": "Skyeburst"
+  },
+  "upper-skyeburst": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "et\n\nis Gg\n\nyd\n\nKo\n\nCA\n\n\n\niy\n\n Ke\n\nLe\n\nA\n\nS\n\noe\n\n\n\nsy\n\nLBn\n\nOu\n\nF\n\nC",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "is Gg\n\ni\n\nOe\n\nA\n\n\n\niy\n\neX\n\n ANO\n\nA\n\n\n\noe\n\n\n\nsy\n\nLBAa\n\nOu\n\nFa\n\nC",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "us eg\n\nwey\n\n\n\nZZ\n\nay\n\nZa\n\n a\n\nay\n\nB ALNO\n\nEZ\n\nws\n\nCae\n\na\n\nBBB\n\nOH\n\nBO\n\nLZ\n\nFe\n\n ws\n\ney",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "es eg\n\nwy\n\n\n\n\n\nay\n\nx\n\n a\n\nay\n\nWE To\n\nEZ\n\nTS\n\nCe\n\na\n\nBE\n\nOH\n\nBVO\n\nLZ\n\nFe\n\n ws\n\ney",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Cruise Control",
+      "detected": "is Gg\n\ni\n\nOe\n\nA\n\n\n\niy\n\neX\n\n ANO\n\nA\n\n\n\noe\n\n\n\nsy\n\nLBAa\n\nOu\n\nFa\n\nC",
+      "score": 0.18181818181818182,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 109.0,
+    "expected_name": "Upper Skyeburst"
+  },
+  "skye-hawk": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SS\n\nS\n\nAl\n\nm\n\n\n\nsing Wvuq ges\n\na\n\n\n\n\n\nff\n\nfj\n\nMf\n\nUff\n\nj",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nS\n\nAl\n\nro\n\n\n\nsing Wvuq zs\n\ni\n\n\n\n\n\nfi\n\nfj\n\nMf\n\nUff\n\njf",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nOy\n\nAd\n\n\n\nJ\n\n nua sas\n\ni\n\na HLNOS\n\n\n\nY\n\nLC K",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nOy\n\nAd\n\n\n\nJ\n\n nvau sas\n\nZs\n\na HLNOS\n\n\n\nY\n\ni TK",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Mountain Training Station",
+      "detected": "SS\n\nOy\n\nAd\n\n\n\nJ\n\n nua sas\n\ni\n\na HLNOS\n\n\n\nY\n\nLC K",
+      "score": 0.2465753424657534,
+      "method": "scaled",
+      "psm": 11
+    },
+    "angle": 155.5,
+    "expected_name": "Skye Hawk"
+  },
+  "skyebits": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "z\n\nors\n\nOb\n\nrata\n\n\n\n\n\n\n\nie \n\nBy\n\nYee\n\nSa\n\nOty\n\noe\n\nse\n\nentge\n\nave\n\npee tl\n\naye ve VERTIGO\n\nAr",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "z\n\niO\n\nOb\n\nOX\n\n\n\n\n\n\n\nie \n\nBy\n\nYee\n\nSa\n\nOty\n\noe\n\nse\n\nenege\n\nave\n\npet\n\nay ve VERTIGO\n\nAr",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "F\n\nOS a\n\nOo\n\nOnt\n\nOG\n\nod\n\nPES Oe\n\nc re\n\nSo\n\nbe hd\n\now\n\nBo\n\nvo\n\nYo\n\n\n\n\n\na\n\n ae\n\n\n\nPE\n\nFa\n\not\n\npee\n\nSe\n\nAE\n\n\n\nCae\n\nsex VERTIGO\n\ni\n\n ii",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "a F\n\nOS a\n\noe\n\nOnta\n\nOG\n\nmod\n\nPES Oe\n\nc re\n\nS\n\nbe hd\n\now\n\nBo\n\nvo\n\nYo\n\n\n\n\n\na\n\n ae\n\n\n\n\n\nFa\n\not\n\npee\n\nSe\n\nAE\n\n\n\nCa\n\ngee VERTIGO\n\nii\n\n il",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Vertigo",
+      "detected": "z\n\nors\n\nOb\n\nrata\n\n\n\n\n\n\n\nie \n\nBy\n\nYee\n\nSa\n\nOty\n\noe\n\nse\n\nentge\n\nave\n\npee tl\n\naye ve VERTIGO\n\nAr",
+      "score": 0.8,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 94.8,
+    "expected_name": "Skyebits"
+  },
+  "cruise-control": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "AS\n\nme\n\nZ\n\nZ\n\nmF\n\nZe\n\na\n\nQh\n\nAN",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "AS\n\nme\n\nFy\n\nZ\n\nmF\n\nZZ\n\nal\n\nQh\n\nAN\n\nC",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "NI\n\no\n\n\n\nSZ\n\nes\n\n\n\nCG\n\nKE\n\nA\n\noe\n\ntr\n\nZi\n\nVr\n\nee oe\n\nFF Wigs\n\ntLe\n\nPSs\n\nZy\n\nMH Lun\n\nttjjjp\n\nooN\n\nA",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "NIMS\n\nPY\n\n\n\nSZ\n\nte\n\n\n\nCG\n\nKE\n\nA\n\noe\n\nty\n\nZi\n\nVr\n\nSint\n\nFOF Giga\n\nMoe\n\nPSs\n\nZy\n\nMH Lun\n\nttjjjp\n\nooN\n\nA",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Dream Maker Headwall",
+      "detected": "AS\n\nme\n\nZ\n\nZ\n\nmF\n\nZe\n\na\n\nQh\n\nAN",
+      "score": 0.23529411764705882,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 124.2,
+    "expected_name": "Cruise Control"
+  },
+  "mouse-trap": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "AN\n\nWY\n\nyr\n\nfe\n\nY\n\nSY\n\nYj",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "AN\n\nA\n\nyr\n\nfe\n\nY\n\n F\n\nYj",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Litiy\n\nAVMHLYON\n\nHt\n\nA\n\nLiege\n\nSusy\n\n t shy\n\n\n\nZZrzwis\n\nW\n\nY\n\nSG\n\nFags\n\nbes\n\ngo\n\nY\n\nGZ\n\nVy",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "hitig\n\nAVMHLYON\n\nHu\n\nGy\n\nLiege\n\nSusy\n\n C shy\n\nA\n\nZZrzwis\n\n\n\nY\n\nSG\n\nFei\n\nbe\n\ngo\n\nY\n\nGZ\n\nVy",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Anarchy",
+      "detected": "AN\n\nA\n\nyr\n\nfe\n\nY\n\n F\n\nYj",
+      "score": 0.25806451612903225,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 129.4,
+    "expected_name": "Mouse Trap"
+  },
+  "somewhere": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "a\n\n\n\noN\n\nCGA\n\nBZ\n\nSs\n\n  So\n\n\n\nJF\n\nfe\n\nK\n\nSF\n\nBAA\n\nes\n\nCA\n\nwns\n\nSEE\n\nS\n\nAs\n\nAA\n\nm",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "a\n\n\n\noN\n\nCGA\n\nZ\n\nSs\n\n  So\n\n\n\nJF\n\nfe\n\nS\n\nSs\n\nAA\n\nOA\n\nCA\n\nwns\n\nSEE\n\nS\n\nAes\n\nAA\n\nm",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "aw\n\n\n\nZA\n\nBay\n\nye\n\nGY\n\nWy\n\nVb at\n\nZ\n\nee\n\nOp\n\nEZ te\n\nY\n\nzy\n\nZ\n\nRe\n\n \n\no\n\nve\n\na\n\nBo\n\n\n\ngE\n\noe\n\nHic\n\n y\n\n\n\nRee\n\n\n\nSy \n\nme \n\nB\n\nN",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "aw\n\n\n\nZA\n\nBay\n\na\n\nGH\n\nWy\n\nVb at\n\nZ\n\nee\n\nOp\n\nEZ te\n\nY\n\nzy\n\nLZ\n\nRe\n\nO\n\no\n\nve\n\n\n\nBo\n\n\n\ngE\n\nA\n\nHic\n\n \n\n\n\nRee\n\n\n\nSy \n\nOS\n\nB\n\nA",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Bear Mountain Liftline",
+      "detected": "a\n\n\n\noN\n\nCGA\n\nZ\n\nSs\n\n  So\n\n\n\nJF\n\nfe\n\nS\n\nSs\n\nAA\n\nOA\n\nCA\n\nwns\n\nSEE\n\nS\n\nAes\n\nAA\n\nm",
+      "score": 0.13861386138613863,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 110.6,
+    "expected_name": "Somewhere"
+  },
+  "breakaway": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "S\n\neet\n\nic e\n\ne\n\nry",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "S\n\neat\n\nx  e\n\ne\n\nry",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "S\n\nne\n\n\n\n\n\nq",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "S\n\nTomes\n\nere\n\n\n\nq",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Somewhere",
+      "detected": "S\n\nTomes\n\nere\n\n\n\nq",
+      "score": 0.5185185185185185,
+      "method": "scaled_inv",
+      "psm": 11
+    },
+    "angle": 89.3,
+    "expected_name": "Breakaway"
+  },
+  "touch-down": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "y\n\ny\n\nbys\n\nOR\n\nSs\n\n\n\n\n\nne",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "y\n\nyy\n\nbys\n\nOR\n\nSs\n\n\n\n\n\nry ae",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Tf\n\nAo\n\nx\n\n\n\n\n\n\n\nZe\n\n\n\n Par\n\noe\n\nSS\n\n\n\nWT fr\n\nSe",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Wf\n\nAo\n\nOx\n\n\n\n\n\n\n\n\n\n\n\n Fae\n\noe\n\nSS\n\n\n\nWT fr\n\nSe",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Superstar Glade",
+      "detected": "y\n\nyy\n\nbys\n\nOR\n\nSs\n\n\n\n\n\nry ae",
+      "score": 0.3181818181818182,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 75.4,
+    "expected_name": "Touch Down"
+  },
+  "twister": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "a\n\nVets\n\neI\n\noo\n\na\n\nise\n\n\n\na\n\n\n\n aas\n\nSe\n\nanes\n\nfm cuHunney\n\n aa \n\nea",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "a\n\nVetoes\n\ney\n\nst\n\na\n\nise\n\ne\n\na\n\n\n\n aas\n\nSe\n\nanes\n\nfm cuHunney\n\n aa an\n\nE",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "La LARS\n\noe\n\n ie\n\n tor\n\n lms\n\nSige \n\nae\n\n AS\n\n e\n\nwm cuunnes\n\nawike\n\n\n\n \n\ni",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "La LARS\n\noe\n\n ie\n\ni\n\n tor\n\n me\n\nSige \n\nae\n\n AS\n\n e\n\nwm cuunnes\n\nawike\n\n\n\n \n\ni",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sunrise Connector",
+      "detected": "a\n\nVets\n\neI\n\noo\n\na\n\nise\n\n\n\na\n\n\n\n aas\n\nSe\n\nanes\n\nfm cuHunney\n\n aa \n\nea",
+      "score": 0.20930232558139536,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 98.3,
+    "expected_name": "Twister"
+  },
+  "catwalk": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "hd\n\nmy\n\nar\n\n\n\nj\n\nWj\n\nMj\n\nVhigigsss",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "hd\n\nmy\n\nar\n\n\n\nj\n\nWj\n\nWi\n\nhig",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ey\n\nAp\n\ndal\n\n\n\nSNS \n\nadd\n\nLLU\n\nby\n\neT Ih\n\n\n\nWi\n\nWij\n\nVi\n\nMelon\n\n tile",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "ey\n\nAp\n\ndad\n\n\n\nSHS K\n\ncad\n\nALU\n\nby\n\npret Ih\n\n\n\nWi\n\nWij\n\nVi\n\nMelNon\n\n tithe",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Mountain Training Station",
+      "detected": "hd\n\nmy\n\nar\n\n\n\nj\n\nWj\n\nWi\n\nhig",
+      "score": 0.22641509433962265,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 158.4,
+    "expected_name": "Catwalk"
+  },
+  "upper-catwalk": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Se\n\noon\n\nOZ\n\nA\n\nNA\n\noS\n\n\n\nas\n\neto",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Se\n\na\n\nEZ\n\nA\n\nCMEZ\n\nSS\n\n\n\nas\n\nete",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ye\n\n\n\n\n\nA\n\nos\n\n \n\nLAA\n\nse\n\nXe\n\nrs\n\noy\n\na\n\nee\n\na",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "es\n\n\n\n\n\nMa\n\nMs\n\npe \n\nLAA\n\nFf\n\nXe\n\nes\n\noy\n\na\n\nee\n\na",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sunrise Connector",
+      "detected": "Se\n\noon\n\nOZ\n\nA\n\nNA\n\noS\n\n\n\nas\n\neto",
+      "score": 0.32,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 115.0,
+    "expected_name": "Upper Catwalk"
+  },
+  "great-eastern": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "SAC",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "SN\n\nSZ\n\nNS\n\n\n\nORS\n\n\n\nSe '\n\n\n\nYj\n\nBSN\n\nANG\n\nNS\n\nSX",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SA",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "AAS\n\nSY\n\nNS\n\n\n\nORS\n\n\n\nSe '\n\n\n\nYj\n\nBSN\n\nANG\n\nNS\n\nSS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "NAA\n\nMy\n\ni\n\nyy\n\nee\n\nBos\n\nLOW ROAD a\n\nAS\n\nBD\n\nON\n\neS LOR\n\nOS\n\nME Sty\n\nWS\n\n PS\n\nSe x\n\nSAY \n\nli",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "NAA\n\nMy\n\ni\n\nYy\n\nee\n\nPos\n\nLOW ROAD a\n\nS\n\nDs\n\nCRY\n\nes LORS\n\nOS\n\nME Sty\n\nWS\n\n PS\n\nSe x\n\nSAY \n\nli",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sass",
+      "detected": "SA",
+      "score": 1.0,
+      "method": "inverted",
+      "psm": 7
+    },
+    "angle": 52.2,
+    "expected_name": "Great Eastern"
+  },
+  "home-stretch": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "By\n\ng\n\nWy\n\nS\n\nG\n\nVighs\n\ntof\n\nphi LP\n\nYj\n\nY \n\nYe fey\n\nBe\n\nee\n\n\n\nY\n\nUY\n\nIBN\n\nN",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Gy\n\ng\n\nVY\n\nS\n\nG\n\nVeghs\n\n of\n\nPi LP\n\nij\n\nYj\n\nY fey\n\nBe\n\nee\n\n\n\nY\n\nYy\n\nIBN\n\nWN",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "MY\n\ny\n\nVLE\n\nVf\n\nA\n\nMA\n\nS\n\nBoe\n\nFPR\n\nWe\n\n\n\nmS\n\nY\n\nee\n\n\n\nWis\n\nNy\n\nKe\n\nAe\n\nY\n\nmM\n\nTofa bs\n\na\n\na\n\n\n\nVY\n\nQ\n\nSN",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "MY\n\ny\n\nVLE\n\nVp\n\nA\n\nWMA\n\nS\n\nLee\n\nFPR\n\nWe\n\n\n\nmS\n\nY\n\nse\n\n\n\nWes\n\nNy\n\nKe\n\nAe\n\nY\n\nmM\n\nJef bs\n\na\n\na\n\n\n\nVf\n\nYY\n\nQ\n\nSN",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Skye Peak Liftline",
+      "detected": "Gy\n\ng\n\nVY\n\nS\n\nG\n\nVeghs\n\n of\n\nPi LP\n\nij\n\nYj\n\nY fey\n\nBe\n\nee\n\n\n\nY\n\nYy\n\nIBN\n\nWN",
+      "score": 0.1935483870967742,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 137.0,
+    "expected_name": "Home Stretch"
+  },
+  "lower-home-stretch": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "W\n\nN\n\nF\n\nBiker\n\nigo\n\nRint\n\nFp\n\nPie's\n\nLis\n\nx",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "W\n\n\n\nA\n\nBiker\n\nig\n\nRiad\n\nFp\n\nfiw \n\nLis\n\nW",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "J\n\nat\n\nsar\n\nFa\n\na me\n\neen ane\n\nSe\n\nBX\n\nae\n\nA\n\nay\n\nes\n\na\n\nLZ\n\nis\n\nBa\n\neS\n\nBab Fae\n\n\n\nFo\n\nBs",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Zz\n\na\n\nsar\n\na\n\na ae\n\nSee ane\n\nSe\n\nBR\n\naN\n\nA\n\nSy\n\n\n\na\n\nee\n\ni\n\nBa\n\neS\n\nBab Fae\n\n-\n\nFs\n\nLs",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Dream Maker Headwall",
+      "detected": "W\n\n\n\nA\n\nBiker\n\nig\n\nRiad\n\nFp\n\nfiw \n\nLis\n\nW",
+      "score": 0.26229508196721313,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 114.6,
+    "expected_name": "Lower Home Stretch"
+  },
+  "juggernaut": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "No SHV\n\nY\n\niS\n\nYY\n\nEX",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "No SHV\n\nY\n\nSS\n\nYY\n\nEX",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "WS\n\nA\n\nYj\n\nKg\n\noye\n\nj\n\nBa\n\nLOW ROAD sais\n\nN\n\nS\n\nle\n\nwie\n\neS\n\na\n\n\n\nen\n\nDESA\n\nTee\n\nSAYS\n\nSN",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "WS\n\nA\n\nVY\n\nKg\n\nove\n\nj\n\nBe\n\nLOW ROAD sais\n\nN\n\nS\n\nle\n\neS\n\neS\n\na\n\n\n\nke\n\nDES\n\nee\n\nSAYS\n\nS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Low Road",
+      "detected": "WS\n\nA\n\nYj\n\nKg\n\noye\n\nj\n\nBa\n\nLOW ROAD sais\n\nN\n\nS\n\nle\n\nwie\n\neS\n\na\n\n\n\nen\n\nDESA\n\nTee\n\nSAYS\n\nSN",
+      "score": 0.8,
+      "method": "scaled",
+      "psm": 11
+    },
+    "angle": 52.2,
+    "expected_name": "Juggernaut"
+  },
+  "vertigo": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "i hs\n\nVERTIGO \n\nAS\n\nPE\n\n\n\nStn\n\nRe\n\nhy\n\nNIT teu \n\nNY\n\nN\n\nTaovls'\n\nore ey ee",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "a hs\n\nVERTIGO \n\nAS\n\nPE\n\n\n\nStn\n\nRe\n\nhy\n\nNIT hea \n\noN\n\nN\n\nTaovls'\n\nale ec ei vale  N",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "a Sars \n\nKe VERTIGO  \n\nte\n\nALS\n\nve\n\nae\n\nFic\n\nBNO HOLUS\n\nSs\n\nith\n\nNy\n\naN\n\n VIS'\n\nSIE ee eh",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "a Ss\n\nKe VERTIGO  \n\na\n\nALS\n\nve\n\nae\n\nFic\n\nBNO HOLUS\n\n\n\nTitty\n\nNy\n\naN\n\n VIS '\n\nSI ee eh",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Vertigo",
+      "detected": "i hs\n\nVERTIGO \n\nAS\n\nPE\n\n\n\nStn\n\nRe\n\nhy\n\nNIT teu \n\nNY\n\nN\n\nTaovls'\n\nore ey ee",
+      "score": 0.8,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 93.9,
+    "expected_name": "Vertigo"
+  },
+  "upper-vertigo": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "us",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "-\n\nYe\n\nEr\n\nft x\n\nEs ee\n\nSes  WI\n\n S\n\nbe\n\n\n\neS\n\n-AV\n\ni\n\na\n\nyb\n\nS",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "us",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "a\n\nYe\n\nEr\n\nft x\n\nEs ee\n\nSes  IH\n\n S\n\nbe\n\n\n\neS\n\n-AV\n\ni\n\na\n\nyb\n\nS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ead\n\ni\n\n\n\nalee\n\n\n\no-\n\na\n\n\n\n\n\n  NIH\n\n- a\n\n \n\nSe\n\nYo\n\n\n\n\n\nAN\n\nil \n\nBZ\n\n\n\ni",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "i\n\n wu \n\ni\n\n\n\nalee\n\n\n\no-\n\na\n\n\n\n\n\n  NIH\n\n-\n\n \n\nSe\n\nYo\n\n\n\na\n\n \n\nil \n\nBZ\n\n\n\ni",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Conclusion",
+      "detected": "us",
+      "score": 1.0,
+      "method": "enhanced",
+      "psm": 7
+    },
+    "angle": 91.7,
+    "expected_name": "Upper Vertigo"
+  },
+  "ovation": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Soe\n\nrat\n\nea\n\nPee\n\nay\n\nSiar\n\nLL\n\nNg\n\n Sae-\n\nm A S\n\nScwiwicien wel",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "So\n\nrat\n\nee\n\nPde\n\na\n\node\n\nLL\n\nNg\n\n Sae-\n\nm A S\n\ncw wire eae",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "et \n\nor Nast\n\nVEX\n\nG'\n\nEs \n\nmy\n\nr No\n\nLf\n\nIN\n\n A \n\nSHINE Ym eet",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "eet \n\n\n\nVEX\n\nG'\n\nEs \n\nmets\n\nr No\n\nLf\n\nIN\n\n A \n\nSHINE Ym et",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Bear Mountain Liftline",
+      "detected": "et \n\nor Nast\n\nVEX\n\nG'\n\nEs \n\nmy\n\nr No\n\nLf\n\nIN\n\n A \n\nSHINE Ym eet",
+      "score": 0.25882352941176473,
+      "method": "scaled",
+      "psm": 11
+    },
+    "angle": 95.3,
+    "expected_name": "Ovation"
+  },
+  "panic-button": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "a\n\nSm\n\n\n\nUI\n\nlh\n\nMw \n\nil\n\n\n\nSI\n\ney\n\nOe\n\nRF\n\nOD\n\nC\n\nse CON\n\no\n\nNS\n\n\n\nse\n\nPA\n\n\n\n- cw a\n\nEA\n\nse\n\nte\n\nSs\n\nMya\n\nZs\n\n\n\nx\n\nBie\n\nor\n\nOSs\n\n\n\n\n\nCot\n\ncs\n\nas\n\nLs LEYS\n\n\n\nSa\n\nSou\n\n\n\na\n\nec\n\n\n\nas\n\nSa\n\ntie\n\na\n\n\n\n\n\n\n\nep\n\nnef\n\nRS\n\nfe \n\nDe \n\nte\n\nLe\n\neS\n\ntis\n\nTe\n\na\n\nNe\n\nge\n\nA\n\n\n\niy\n\nOe\n\ntay One\n\neg\n\n\n\nLG\n\nOo\n\nSung\n\n\n\n\n\nbp\n\nAy\n\na\n\nba\n\ni\n\nbig\n\noO\n\n\n\n- S\n\nws\n\nes\n\na\n\ne\n\nSAE\n\n\n\n iff\n\nwi VT\n\nil",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "a\n\nKS\n\n\n\nUNI\n\nul\n\nMM \n\nUL\n\n\n\nSS\n\niy\n\nOe\n\nRF\n\nOD\n\nC\n\nse CON\n\no\n\neS\n\n\n\nse\n\nbs\n\n\n\n- cw a\n\nEA\n\nns\n\nts\n\n\n\nMy is\n\nZs\n\n\n\nx\n\nBie\n\ner\n\nOsos\n\n\n\n\n\nCot\n\nrs\n\nas\n\nLs LEYS\n\n\n\n\n\nSou\n\ns\n\na\n\nec\n\n\n\nms\n\nSa\n\ntie\n\nfat\n\ne\n\ny\n\n\n\nBp\n\nnef\n\nRS\n\neal\n\nBe \n\ney\n\nLe\n\neS\n\ntis\n\nZe\n\naK\n\nEEN\n\nee\n\nA\n\n\n\niy\n\nOe\n\ntay One\n\nbeg\n\n\n\nLG\n\nOo\n\nsung\n\n\n\n\n\nop\n\nAy\n\na\n\nba\n\ni\n\ntig\n\no\n\neS\n\n- S\n\nwo\n\nes\n\naed\n\ne\n\nSAE\n\n\n\n iff\n\niy\n\nil",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "a i \n\nI\n\n\n\n\n\nae\n\ntl \n\nly\n\n\n\nts\n\neo\n\nQe\n\n\n\n\n\nPitas \n\nAS\n\nik\n\n \n\nSAY ore\n\nSe\n\no\n\na\n\n\n\nec\n\noo\n\nts\n\nyor\n\nwee Es\n\ns\n\n\n\ncw\n\nZY\n\n-\n\nCC See\n\nTe\n\n\n\nJ\n\nwet\n\nas\n\nAS\n\n'\n\nAn\n\n\n\nae\n\n\n\n\n\nw \n\n\n\nC\n\nPra\n\nPRD\n\nae\n\nWs\n\nine\n\nCHa\n\n\n\n\n\nBet\n\ne\n\noe\n\n \n\n\n\n\n\n\n\nA\n\nae\n\n\n\nbe\n\nae\n\nSs\n\ned\n\n\n\nae\n\nec\n\n it\n\nC\n\n\n\nar\n\n\n\nA\n\n\n\nye\n\nfom\n\n\n\niy\n\n\n\nPs\n\n\n\ni\n\noa ae\n\n\n\n\n\nSe\n\n\n\nS \n\ner\n\nENS\n\ni\n\n\n\nVex\n\noye\n\n\n\n A\n\ns\n\n\n\nga\n\na\n\nS\n\noO\n\nsh\n\nex\n\nAy Yrs\n\nisan\n\nPere\n\nwo\n\noA\n\nrs\n\n\n\nye\n\n\n\nar\n\nANS\n\ni\n\nwe\n\nm\n\neae\n\nD\n\nxe\n\n\n\nook\n\nes\n\nKS\n\nSs\n\nfot\n\ner\n\ni\n\nhe\n\nea\n\nes\n\neS\n\n\n\n\n\n al\n\n\n\na\n\nFRALES\n\nWe\n\nak\n\nSe\n\nC\n\n\n\n ii\n\ni \n\na\n\nWl",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "a i \n\nI\n\n\n\n\n\nae\n\ntl \n\nI\n\n\n\nts\n\ne\n\n\n\n\n\n\n\nPitas \n\nAS\n\nwrk\n\n\n\nSAY ore\n\nSe\n\no\n\na\n\n\n\nec\n\noo\n\nts\n\nyor\n\nwe E\n\ns\n\n\n\ncw\n\nZY\n\na\n\nCC Se\n\nTe\n\n\n\nJ\n\nww at\n\nas\n\nAS\n\n\n\nZa\n\n\n\nae\n\n\n\n\n\nw \n\n\n\nC\n\nie\n\nPRD\n\nee\n\nWs\n\nae\n\nCHa\n\na\n\n\n\nPee\n\ne\n\ney\n\n \n\n\n\n\n\n\n\nA\n\nae\n\n\n\nSs\n\nae\n\nBo\n\n\n\nK\n\neS\n\nec\n\n ill\n\nSs\n\n\n\nar\n\n\n\nA\n\n\n\nye\n\nfom\n\n\n\niy\n\n\n\nze\n\n\n\n\n\noa ae\n\n\n\ns\n\noH\n\n\n\noS \n\nre\n\nENS\n\nne\n\n\n\nVex\n\noye\n\n\n\n A\n\ns\n\n\n\nga\n\na\n\naN\n\noO\n\naS\n\nex\n\nAy Yrs\n\n isan\n\nbth\n\n\n\nBe\n\nrs\n\n\n\nye\n\n\n\nar\n\nANS\n\ni\n\nDee\n\nm\n\neae\n\n\n\nxe\n\n\n\nOo\n\n\n\nKS\n\nSs\n\nfst\n\ne\n\ni\n\nfe\n\nSe\n\nes\n\neS\n\n\n\n\n\n al\n\n\n\na\n\nFROZE\n\nWe\n\nake\n\nSe\n\nor\n\nC\n\n\n\nBy\n\ni \n\na\n\nil",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sunrise Connector",
+      "detected": "a\n\nSm\n\n\n\nUI\n\nlh\n\nMw \n\nil\n\n\n\nSI\n\ney\n\nOe\n\nRF\n\nOD\n\nC\n\nse CON\n\no\n\nNS\n\n\n\nse\n\nPA\n\n\n\n- cw a\n\nEA\n\nse\n\nte\n\nSs\n\nMya\n\nZs\n\n\n\nx\n\nBie\n\nor\n\nOSs\n\n\n\n\n\nCot\n\ncs\n\nas\n\nLs LEYS\n\n\n\nSa\n\nSou\n\n\n\na\n\nec\n\n\n\nas\n\nSa\n\ntie\n\na\n\n\n\n\n\n\n\nep\n\nnef\n\nRS\n\nfe \n\nDe \n\nte\n\nLe\n\neS\n\ntis\n\nTe\n\na\n\nNe\n\nge\n\nA\n\n\n\niy\n\nOe\n\ntay One\n\neg\n\n\n\nLG\n\nOo\n\nSung\n\n\n\n\n\nbp\n\nAy\n\na\n\nba\n\ni\n\nbig\n\noO\n\n\n\n- S\n\nws\n\nes\n\na\n\ne\n\nSAE\n\n\n\n iff\n\nwi VT\n\nil",
+      "score": 0.07731958762886598,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 87.2,
+    "expected_name": "Panic Button"
+  },
+  "dream-maker": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "es\n\nNOLIN OINYd \n\nEW\n\nCS \n\na\n\nons\n\ny\n\nanny\n\nom\n\n\n\n\n\nby Pb\n\nee\n\na\n\nay KS\n\nEE\n\na\n\ni\n\nA\n\nbse\n\ni\n\nae\n\nAb\n\nLQ\n\nYon\n\nXo\n\nA\n\nS\n\nBe\n\naf\n\nSAA\n\nSe\n\n\n\n\n\ney\n\nFae\n\nee",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Ls ee\n\nNOLIN OINYd \n\nan\n\nCS \n\na\n\noN\n\nSy\n\nanny\n\nom\n\n\n\n\n\nby Pb\n\nse\n\na\n\ntay KS\n\nEE\n\na\n\ni\n\ncA\n\nbe\n\nan\n\nae\n\nAb\n\nLQ\n\nYon\n\nXo\n\nA\n\nS\n\nBe a\n\naf\n\nSEA\n\nSe\n\n\n\n\n\nFa\n\nme",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "AOA\n\nNOLiNg one\n\nN\n\nps we\n\ny\n\noy Be\n\n\n\nty  \n\nye\n\n\n\n\n\na CHUNG\n\ni\n\naePES\n\neae\n\n\n\nAke\n\nwes\n\nb\n\n\n\n- io \n\n-\n\nas\n\n \n\nthot\n\no \n\nPal\n\nPA \n\noe\n\nde\n\nos\n\nee\n\n-  F\n\nyy\n\n\n\nown\n\na\n\nSs ee \n\nis\n\n\n\noo\n\nvite\n\noe\n\nie\n\nSe\n\neo\n\nAb\n\nad\n\nre\n\nYo\n\nvy\n\nBik\n\nSy\n\nee\n\n\n\nrd\n\n\n\na\n\na\n\n\n\nxa\n\nSs\n\nue\n\noy\n\n\n\npoe\n\nSS\n\net\n\nys\n\nD\n\nI\n\naD\n\na\n\nMo\n\np\n\naS\n\n\n\nYo \n\na\n\nPs\n\nEE\n\n\n\nww\n\nPepe\n\niy\n\n\n\n\n\n\n\nDPS\n\no AZZE\n\n Y",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "N\n\nAOA\n\nNOLINg one\n\nN\n\ni we\n\niy\n\na\n\n\n\ncy  \n\n\n\n\n\n\n\noa CHUNG\n\naS\n\naePES\n\neae\n\n\n\nAke\n\nwes\n\nb\n\nr\n\n io \n\n-\n\nSy\n\n \n\nhot\n\n-\n\nPal\n\nPY \n\noa\n\ndo\n\nos\n\nee\n\noe F\n\nyy\n\n\n\na\n\na\n\naa cA S\n\nc\n\n\n\noO\n\nvite\n\noe\n\ni\n\nSe\n\ns\n\nAb\n\nad\n\nrs\n\nYo\n\na\n\nMik\n\nSy\n\nee\n\n\n\nrd\n\nNZ\n\na\n\na\n\n\n\nxe at\n\nSs\n\nue\n\noe\n\n\n\npo\n\nSS\n\net\n\nys\n\nD\n\nI\n\na\n\na\n\nao\n\n\n\nZS\n\n\n\nYo \n\n\n\nPs\n\nEE\n\n\n\nyw\n\nPepe\n\niy\n\n\n\n\n\n\n\nDPS\n\nS ZE",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Mountain Training Station",
+      "detected": "es\n\nNOLIN OINYd \n\nEW\n\nCS \n\na\n\nons\n\ny\n\nanny\n\nom\n\n\n\n\n\nby Pb\n\nee\n\na\n\nay KS\n\nEE\n\na\n\ni\n\nA\n\nbse\n\ni\n\nae\n\nAb\n\nLQ\n\nYon\n\nXo\n\nA\n\nS\n\nBe\n\naf\n\nSAA\n\nSe\n\n\n\n\n\ney\n\nFae\n\nee",
+      "score": 0.12359550561797752,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 105.4,
+    "expected_name": "Dream Maker"
+  },
+  "dream-maker-headwall": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "aS\n\naod\n\n\n\ne\n\nS\n\nY\n\nSS\n\nZ\n\n\n\nOSSOVER\n\nOWSHED\n\ni\n\nSN",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "aS\n\naod\n\nS\n\nSe\n\nSS\n\nY\n\nSS\n\n\n\n\n\nOSSOVER\n\nOWSHED\n\ni\n\nSN",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\n\n\nXQ\n\n\n\nY\n\nAS\n\naM\n\n\n\nN\n\nS\n\nSe\n\niy\n\nS\n\nRO\n\nSSOVER\n\na\n\na\n\nty\n\n\n\nLAW\n\nTS",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "SY\n\n\n\nXQ\n\n\n\nY\n\nAS\n\nO\n\n\n\nN\n\nS\n\nSe\n\niy\n\nS\n\nRO\n\nSSOVER\n\na\n\na\n\nty\n\n\n\nLAW\n\nTS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Snowshed",
+      "detected": "aS\n\naod\n\n\n\ne\n\nS\n\nY\n\nSS\n\nZ\n\n\n\nOSSOVER\n\nOWSHED\n\ni\n\nSN",
+      "score": 0.23728813559322035,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 48.4,
+    "expected_name": "Dream Maker Headwall"
+  },
+  "highline": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Lg tl\n\nmoe\n\nay\n\na\n\nfe\n\noe\n\nhin",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Lg Bl\n\nmee\n\nay\n\na\n\nfe\n\nne\n\nhin",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "N\n\nwid\n\nLe aa\n\n\n\ndIHSIANS\n\nay\n\nQ \n\nWAX\n\na\n\nty Lf\n\nno\n\nta\n\nan\n\nOne\n\nny",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "N\n\nwid\n\nLe aa\n\n\n\ndIHSIANS\n\nVY\n\nQ \n\nNA\n\na a\n\nty Lf\n\nano\n\nfa\n\nan\n\nye\n\nery",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Killington Liftline",
+      "detected": "Lg tl\n\nmoe\n\nay\n\na\n\nfe\n\noe\n\nhin",
+      "score": 0.2857142857142857,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 93.8,
+    "expected_name": "Highline"
+  },
+  "pipe-dream": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SY\n\nse\n\nS\n\nPS\n\nS\n\nS\n\nOxi \n\nx\n\ny\n\nSS\n\nS",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nse\n\nS\n\n\n\nS\n\nS\n\nOxi \n\nx\n\ny \n\nSS\n\nS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Ss\n\naN\n\nxe\n\naS\n\nS\n\nSS\n\nS\n\n\n\nSty\n\n\n\nS\n\nOks\n\nlo fe\n\nS\n\nY \n\nSS",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Ss\n\naS\n\ng\n\naS\n\nS\n\nSS\n\nS\n\n\n\nSt\n\nS\n\nSS\n\nOns\n\niat\n\nS\n\nY \n\nSSS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Skye Peak Liftline",
+      "detected": "SY\n\nse\n\nS\n\nPS\n\nS\n\nS\n\nOxi \n\nx\n\ny\n\nSS\n\nS",
+      "score": 0.17857142857142858,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 63.4,
+    "expected_name": "Pipe Dream"
+  },
+  "valley-plunge": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SZ \n\nY\n\n\n\nYW\n\nRe\n\nS",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "NEY\n\nY\n\n\n\nYW\n\nRee\n\nS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\n\n\nag\n\nn\n\nSym\n\nvs\n\n haw\n\nY\n\nl\n\nyj\n\nVie\n\n\n\nAe\n\nithe \n\n\n\njj\n\nS",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\n\n\nNag\n\nSym\n\nvs\n\n ha\n\nU\n\nl\n\nij\n\nVie\n\nsg\n\nae\n\nithe SS\n\n\n\njj\n\nS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Easy Street",
+      "detected": "NEY\n\nY\n\n\n\nYW\n\nRee\n\nS",
+      "score": 0.3225806451612903,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 148.9,
+    "expected_name": "Valley Plunge"
+  },
+  "field-goal": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "OO\n\n\n\nJ\n\nSas\n\n\n\nfe\n\nDi\n\nea\n\nZ\n\nZa\n\nome\n\nNESS\n\nee\n\naN\n\nYQ\n\nLZ\n\nLZ\n\nAY",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "On\n\n\n\nJ\n\nSas\n\n\n\nfz\n\nD\n\nPy\n\nZ\n\nZa\n\nBi\n\nNESS\n\nee\n\nSy\n\npz\n\nLZ\n\nGZ\n\nAY",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Ae\n\n\n\naS\n\n\n\nMs\n\nYy\n\nAZZ\n\neb oe\n\n \n\n\n\nae\n\nLE\n\n\n\nJ\n\nGA\n\nof\n\n\n\nae\n\n Ka\n\n\n\nBe\n\nZ\n\nYa\n\neS L\n\nie\n\na\n\nD\n\nZZ\n\nEZ\n\nee",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "A ee\n\n\n\naS\n\n\n\nes\n\ny\n\nAZZ\n\neb oe\n\n \n\n\n\nBei\n\nLE\n\n\n\nJZ\n\nCf\n\nSeo\n\n\n\nve\n\n Kaa\n\na\n\nee\n\nZ\n\nZe\n\nSL\n\nie\n\nD\n\nZZ\n\nEZ\n\noa",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Dream Maker Headwall",
+      "detected": "OO\n\n\n\nJ\n\nSas\n\n\n\nfe\n\nDi\n\nea\n\nZ\n\nZa\n\nome\n\nNESS\n\nee\n\naN\n\nYQ\n\nLZ\n\nLZ\n\nAY",
+      "score": 0.20454545454545456,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 119.0,
+    "expected_name": "Field Goal"
+  },
+  "roundabout": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "iN\n\n\n\n\n\nwae\n\n\n\n\n\n\n\nSRE\n\na\n\nHn\n\nta\n\n\n\nSa\n\nwu\n\nTees\n\n\n\ni",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "iM\n\n\n\n\n\nwae\n\n\n\n\n\n\n\nSR\n\na\n\nHn\n\nta\n\n\n\na\n\nwu\n\nTees\n\n\n\ni",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "U\n\n\n\ni\n\nSs\n\n \n\noyrn\n\no'\n\ns\n\noO \n\n\n\n-\n\n-\n\na\n\n\n\n\n\ncoos\n\n\n\na\n\nae\n\n\n\nb as\n\n\n\noe\n\na\n\nis\n\nAEE\n\n\n\n i\n\nOT\n\ngt\n\nAmy\n\nSaeat\n\nee\n\nPr\n\n\n\nth I",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "U\n\n\n\ni\n\nSs\n\n\n\noyrn\n\no'\n\ns\n\n\n\n\n\ni\n\n\n\na\n\n\n\n\n\ncoo\n\n\n\n\n\nSe\n\n\n\nbe as\n\n\n\nom\n\nze\n\nis\n\nKEY\n\n\n\n\n\nTS\n\nmgt\n\nem\n\nSaat\n\nee\n\nPP\n\n\n\nth",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Great Eastern",
+      "detected": "iN\n\n\n\n\n\nwae\n\n\n\n\n\n\n\nSRE\n\na\n\nHn\n\nta\n\n\n\nSa\n\nwu\n\nTees\n\n\n\ni",
+      "score": 0.23880597014925373,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 97.4,
+    "expected_name": "Roundabout"
+  },
+  "roundabout-glade": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Rx",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "SS\n\nda \n\nres\n\n\n\nG\n\nona \n\nOx\n\n Sg\n\nY\n\nZe\n\n Prone\n\nVf\n\nYY\n\nYy",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nda \n\nres\n\n\n\n\n\nioe \n\nOx\n\nWe\n\nY\n\nZe\n\n PRowS\n\nVf\n\nYY\n\nYy",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Wf\n\nSp\n\nLs\n\n\n\naD\n\n\n\n \n\n\n\nzi\n\np\n\n Avi\n\n ioaiy\n\nTS\n\nx eae\n\noie\n\n\n\n ae\n\nOe\n\na Pegs \n\naoe\n\ntf\n\nBt gis\n\npa\n\nft ae\n\nSaif\n\nYy\n\nYj\n\nYi",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Wf\n\nSe\n\nLs\n\n\n\nPe\n\n\n\n \n\n\n\nzi\n\nap\n\nPT avi\n\n ioaiy\n\nTS\n\n\n\nx eae\n\niE\n\n\n\n ae\n\nOey\n\na Dege \n\neS\n\nh\n\nbet leis\n\npa De\n\nFt a\n\nSaif\n\nYY\n\nYj\n\nYi",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Bear Trax",
+      "detected": "Rx",
+      "score": 0.36363636363636365,
+      "method": "enhanced",
+      "psm": 7
+    },
+    "angle": 142.0,
+    "expected_name": "Roundabout Glade"
+  },
+  "tin-man": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "wee\n\nNOLLNG jy pee\n\nm \n\nn\n\n\n\nmcuunt\n\n\n\nte\n\n\n\nSS\n\nS oF",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "we\n\nNOLLNG jy ee\n\nm A\n\nn\n\n ee\n\nmcuuNt\n\n\n\nte\n\n\n\nSS\n\nSOF",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Nz\n\nNOLLNG  gee\n\n A\n\na Fue\n\nU\n\nsa WHE\n\n\n\non Ay",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Iz\n\nNOLLNG y gee\n\n A\n\na Fue\n\nLU\n\nTis\n\n\n\non Ay",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Killington Peak",
+      "detected": "Iz\n\nNOLLNG y gee\n\n A\n\na Fue\n\nLU\n\nTis\n\n\n\non Ay",
+      "score": 0.3333333333333333,
+      "method": "scaled_inv",
+      "psm": 11
+    },
+    "angle": 99.8,
+    "expected_name": "Tin Man"
+  },
+  "skye-peak-liftline": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Y\n\nco\n\nY\n\nMe SN C\n\n\n\n sy",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Yj\n\nco\n\nY\n\nMe SN sO\n\n\n\nt  fy",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "A\n\nYF\n\nY\n\na\n\nAZ\n\nG\n\nGo Rit\n\nP yeep\n\n\n\nY\n\nVf\n\nQo",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "A\n\nYF\n\nYj\n\nee\n\naE\n\nG\n\nGo Rit\n\nP yeep\n\n\n\nY\n\nVf\n\nQ",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Home Stretch",
+      "detected": "Y\n\nco\n\nY\n\nMe SN C\n\n\n\n sy",
+      "score": 0.3333333333333333,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 138.0,
+    "expected_name": "Skye Peak Liftline"
+  },
+  "great-bear": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "WY \n\n\n\nA\n\n\n\nCs\n\nioe\n\nOe\n\nA\n\nte\n\nEe\n\nre\n\nIvOu\n\nWZ\n\nEen \n\nOH\n\nA",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "WW o\n\n\n\nA\n\n\n\nOa\n\nioe\n\nOe\n\nA\n\nt\n\nA\n\nee\n\nIvOu\n\n\n\nEen \n\nOH\n\nA",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "eel\n\n\n\nNII\n\nOe\n\nZA\n\n\n\nic\n\nOs\n\nt\n\ni\n\nSS\n\nSoe\n\nSYA\n\nFe E\n\nOH\n\nA",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "hee\n\n\n\nANIS\n\nOe\n\nZA\n\n\n\nnos\n\nOs\n\nt\n\ni\n\nSS\n\nSoe\n\nSYA\n\nFea \n\nOH\n\nA",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Great Eastern (K.P.)",
+      "detected": "WY \n\n\n\nA\n\n\n\nCs\n\nioe\n\nOe\n\nA\n\nte\n\nEe\n\nre\n\nIvOu\n\nWZ\n\nEen \n\nOH\n\nA",
+      "score": 0.19753086419753085,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 110.2,
+    "expected_name": "Great Bear"
+  },
+  "upper-great-bear": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "av\n\nPs\n\nng\n\n\n\na\n\nIN\n\ni\n\n\n\n\n\niS",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "av\n\nPs\n\nng\n\n\n\na\n\nIN\n\naS\n\n\n\n\n\niS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Ih\n\n  Ny\n\ney\n\n\n\nssf \n\nO Ny\n\nin S\n\na\n\n\n\nes",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Jy\n\n  Ny\n\ney\n\n\n\nss \n\nO \n\nin S\n\nae\n\ni\n\nes\n\n\n\noe",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Bear Mountain Liftline",
+      "detected": "av\n\nPs\n\nng\n\n\n\na\n\nIN\n\ni\n\n\n\n\n\niS",
+      "score": 0.2692307692307692,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 68.3,
+    "expected_name": "Upper Great Bear"
+  },
+  "woodward-peace-park": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "tM\n\nM ys\n\nae\n\n\n\nON\n\nLO\n\nWS\n\n\n\n\n\nSS\n\n\n\nii",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "ee \n\nMins\n\nae\n\n\n\nON\n\nLOS\n\nWS\n\nSS\n\n\n\nSS\n\n\n\nii",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "a U\n\nMSr ys\n\n a\n\nPes\n\nae\n\n\n\nsy\n\n\n\nSS\n\nty\n\nOx\n\nDR\n\nSo\n\n\n\nAy\n\n\n\nff\n\nPry",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "oe U\n\nMSI ys\n\n HEF\n\nPe\n\nae\n\n\n\nsy\n\n\n\nSS\n\n\n\n-\n\nDR\n\nSo\n\n\n\nAy\n\n\n\nVj\n\nPry",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Killington Liftline",
+      "detected": "ee \n\nMins\n\nae\n\n\n\nON\n\nLOS\n\nWS\n\nSS\n\n\n\nSS\n\n\n\nii",
+      "score": 0.2222222222222222,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 74.1,
+    "expected_name": "Woodward Peace Park"
+  },
+  "superstar": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "U\n\nuU\n\nI\n\nor\n\neZ\n\ni CASCADE\n\nf\n\nee\n\n\n\nxs\n\n\n\ne\n\n\n\nii\n\ni\n\nMi\n\nJ\n\ni ys\n\nLb \n\nL",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "U\n\nuD\n\ni\n\nor\n\neZ\n\ni CASCADE\n\nf\n\nee\n\n\n\nxs\n\n\n\ne\n\n\n\nii\n\ni\n\nMii\n\n\n\nit ys",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "fs\n\npy\n\n\n\nxg\n\na\n\nbe SC\n\nHi\n\n \n\n\n\n\n\ns\n\nS\n\nwee LT\n\n\n\nOe\n\ni\n\nNee\n\nBo\n\nar\n\nwe\n\nSma\n\nee\n\now\n\n\n\n\n\nie\n\neC\n\nbie \n\ni\n\ne\n\nA\n\nSCADE\n\na\n\n Sy\n\nWe\n\n\n\nie\n\npos\n\na\n\nae\n\nO\n\nooh\n\nhome\n\naS\n\nAV\n\ni\n\nh\n\nQs\n\nXe\n\n\n\nx\n\nOo \n\nmiNy\n\n  \n\na SO\n\na\n\n\n\noe \n\nCats\n\n\n\n\n\nry\n\nx\n\nVip\n\n\n\n \n\nSE\n\npo\n\nii\n\nIN\n\n\n\ni\n\na\n\nft\n\nf",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "py\n\n\n\nNg\n\na\n\nbe SC\n\nHi\n\n \n\nx\n\n\n\ns\n\nS\n\nwee LT\n\n\n\nOe\n\ni\n\nNee\n\nSo\n\nay\n\nwe\n\nsaa\n\ns\n\now\n\n\n\n\n\nik\n\neC\n\nbie \n\ni\n\ne\n\nA\n\nSCADE\n\na\n\n iy\n\nWe\n\n\n\nie\n\npos\n\na\n\noo\n\nO\n\nooh\n\nhome\n\nws\n\nAV\n\n\n\nh\n\nQs\n\nXe\n\na\n\nx\n\nOo \n\nmi\n\n \n\n Ory\n\na\n\n\n\nos \n\nNe\n\nwy\n\n\n\nyy\n\nx\n\nVp\n\n\n\n \n\nSK\n\npo\n\nii\n\nIM\n\n\n\ni\n\na\n\nft\n\nJ",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Cascade",
+      "detected": "U\n\nuU\n\nI\n\nor\n\neZ\n\ni CASCADE\n\nf\n\nee\n\n\n\nxs\n\n\n\ne\n\n\n\nii\n\ni\n\nMi\n\nJ\n\ni ys\n\nLb \n\nL",
+      "score": 0.8,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 78.3,
+    "expected_name": "Superstar"
+  },
+  "cascade": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SS \n\nSF\n\nVA eos\n\nSs\n\nISS\n\nee\n\n\n\nNes",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SS \n\nSF\n\nTae eos\n\n Se\n\nISS\n\nede\n\n\n\ni\n\nNes",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SSS\n\n\n\n\n\n \n\na\n\na\n\nOs\n\nees\n\noN\n\nPa\n\nie \n\nSSS\n\nWigs",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nel\n\n\n\n s\n\na\n\nwe\n\nsO\n\nPes\n\noN\n\nee\n\nie \n\nASS\n\ni",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Skye Peak Liftline",
+      "detected": "SS \n\nSF\n\nTae eos\n\n Se\n\nISS\n\nede\n\n\n\ni\n\nNes",
+      "score": 0.3050847457627119,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 70.1,
+    "expected_name": "Cascade"
+  },
+  "downdraft": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Qe  \n\no\n\nee\n\nEn\n\nay\n\nSOx\n\n\n\nES\n\nZe\n\n\n\nPREMETE\n\nom\n\nE\n\ns\n\n\n\n\n\nsue Bes\n\nel\n\n\n\n\n\nSE",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "De\n\no\n\nae\n\nFn\n\nay\n\nSOx\n\n\n\nSEAR\n\nZe\n\n\n\nPREMETE\n\nom\n\n \n\ns\n\n\n\n\n\nuae Bes\n\nel\n\n\n\nes\n\nSS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "et \n\npe\n\nie\n\n\n\n\n\nas\n\nOMS\n\n\n\nSR\n\n\n\nN\n\nwy\n\ni\n\n\n\n\n\nis\n\nie Des\n\nS\n\ns\n\n\n\n\n\n\n\nEE \n\nri",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "et \n\npe\n\ne\n\n\n\n\n\nas\n\nXS\n\nRe\n\nWR\n\n\n\n\n\nwy\n\ni\n\n\n\n\n\nis\n\neR Des\n\n\n\n\n\n\n\nSZ\n\n\n\nee\n\nri",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Great Eastern (K.P.)",
+      "detected": "et \n\npe\n\ne\n\n\n\n\n\nas\n\nXS\n\nRe\n\nWR\n\n\n\n\n\nwy\n\ni\n\n\n\n\n\nis\n\neR Des\n\n\n\n\n\n\n\nSZ\n\n\n\nee\n\nri",
+      "score": 0.18556701030927836,
+      "method": "scaled_inv",
+      "psm": 11
+    },
+    "angle": 102.3,
+    "expected_name": "Downdraft"
+  },
+  "double-dipper": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "S\n\nASS\n\nnlf\n\nSNS\n\nNe\n\nSRS\n\nsxe\n\n\n\nSs\n\nWj\n\n\n\nae\n\nHPAD \n\nOVAL iy\n\nS\n\nEN\n\nS\n\niS\n\nPs\n\na\n\nee\n\nSSS\n\nS\n\n\n\nee\n\n\n\nws\n\nSs\n\n\n\neines ce\n\nKE\n\nPOS\n\ncS\n\nxt\n\ny\n\noe\n\naS S\n\nOVA\n\nwe\n\nWY\n\nSS",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "QK\n\nSS\n\nnlf\n\nSS\n\nVhs\n\nSRS\n\nyu\n\n\n\nSs\n\nWj\n\n\n\nyo\n\nHPAD \n\nOVAL oy\n\nS\n\nEN\n\nS\n\niS\n\nPs\n\na\n\nee\n\nSASS\n\nS\n\n\n\noes\n\n\n\nws\n\nSs\n\n\n\neines eS\n\nKYEYU\n\nPOS\n\ncS\n\nxt\n\ny\n\noe\n\naS S\n\nOVA\n\nwe\n\nY\n\nSS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SSss\n\nSN\n\ninl\n\nSS\n\nAas\n\nROS\n\nes\n\n\n\nSRS Na\n\niow\n\nLS\n\nee\n\n\n\nSES\n\nSs\n\nack\n\nAS\n\nWw\n\nBe rros fs xe\n\nHPAD  Wee\n\n\n\ns\n\nNs\n\nay\n\nSS \n\n\n\nCe\n\n\n\na\n\nNf\n\nSSS\n\nS\n\nSS\n\nSS\n\ny\n\nWaders\n\nenw\n\nLn\n\nY\n\nSe\n\ny\n\nDs\n\n\n\noe\n\nas\n\nBS\n\nOVA Se\n\nSa\n\nWY\n\nSS",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "SSss\n\nSs\n\ninl\n\nSS\n\nSS\n\nras\n\nOS\n\n\n\nY\n\nSRS Y\n\niow\n\n\n\neo\n\n\n\nSES\n\neS\n\notek\n\nAS\n\n\n\nBe rros fs xe\n\nHPAD  We\n\nWoe\n\nSX\n\nNs\n\nay\n\nSS \n\n\n\nCE\n\n\n\n \n\nNf\n\nSS\n\nS\n\nSS\n\nSS\n\nyy\n\n\n\nenw\n\nLn\n\nY\n\nSe\n\ny\n\nDs\n\n\n\noe\n\net\n\nBS\n\nWOR SS\n\n\n\nYY\n\nSS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sass",
+      "detected": "QK\n\nSS\n\nnlf\n\nSS\n\nVhs\n\nSRS\n\nyu\n\n\n\nSs\n\nWj\n\n\n\nyo\n\nHPAD \n\nOVAL oy\n\nS\n\nEN\n\nS\n\niS\n\nPs\n\na\n\nee\n\nSASS\n\nS\n\n\n\noes\n\n\n\nws\n\nSs\n\n\n\neines eS\n\nKYEYU\n\nPOS\n\ncS\n\nxt\n\ny\n\noe\n\naS S\n\nOVA\n\nwe\n\nY\n\nSS",
+      "score": 0.8,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 54.9,
+    "expected_name": "Double Dipper"
+  },
+  "big-dipper-glade": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "WY\n\nme QU\n\naN\n\nG\n\nm Wha\n\np\n\nxX\n\nmN\n\nyy\n\nVV\n\nV\n\nUN",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "WY\n\nme QC\n\naN\n\nG\n\nm Whee\n\nZ\n\n\n\nm\n\nyy\n\nVV\n\nVy \n\nUN",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "YY \n\nPe\n\nMf\n\nLMA SA\n\n\n\nte ot\n\nWy\n\nT\n\nLs ODay ne\n\nA\n\ni\n\nY\n\neee\n\n\n\nby we\n\nLI\n\n\n\n\n\nG\n\n\n\nen\n\nthe \n\nShy\n\n\n\n om\n\nox\n\nO\n\nMy fp",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "YZ\n\nPe\n\nMy\n\nLAY SA\n\ny\n\nte of\n\nPry\n\n\n\nLs ODay ne\n\nA\n\ni\n\nY\n\nee\n\n\n\nby Ne\n\nih\n\n\n\n\n\nG\n\nY\n\nen\n\nhe \n\nSy\n\n\n\n cm\n\nwok\n\nO\n\nTY Yh",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Lower Canyon",
+      "detected": "WY\n\nme QC\n\naN\n\nG\n\nm Whee\n\nZ\n\n\n\nm\n\nyy\n\nVV\n\nVy \n\nUN",
+      "score": 0.26229508196721313,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 134.4,
+    "expected_name": "Big Dipper Glade"
+  },
+  "flume": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "NS\n\n\n\nZY\n\n\n\n\n\npe\n\nyf\n\nZa\n\nJy\n\nTy\n\nLins\n\nR",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "NS\n\n\n\nZY\n\n\n\n\n\np\n\noy Z\n\nZa\n\nJX\n\nTy\n\nCZ \n\nR",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "OA\n\nis Bae\n\nOY\n\n\n\nby ae\n\n VS\n\n\n\nxs\n\nbey\n\n \n\nvw \n\n \n\nOx\n\nXS\n\n\n\nS\n\no'r\n\ntT\n\nCHO\n\nGe\n\nZ\n\n\n\nDy\n\nth\n\nSB\n\neis\n\n\n\nths\n\nXK\n\nAo\n\naos\n\nSy\n\nLJP\n\nO\n\nCy\n\nZin",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "GA\n\nis Ba\n\n\n\n\n\nby ae\n\n SS\n\noe\n\nxs\n\nb\n\n \n\nve \n\n \n\nOx\n\nXS\n\n\n\nS\n\no'r\n\ntT\n\nCHO\n\nGe\n\nZ\n\n\n\nDy\n\nty\n\nSB\n\neis\n\nA\n\nths\n\nXK\n\nAo\n\naos\n\nSy\n\nLJP\n\nO\n\nCy\n\nZin",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Skye Peak Liftline",
+      "detected": "NS\n\n\n\nZY\n\n\n\n\n\npe\n\nyf\n\nZa\n\nJy\n\nTy\n\nLins\n\nR",
+      "score": 0.3050847457627119,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 125.9,
+    "expected_name": "Flume"
+  },
+  "escapade": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "NR",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "a\n\nx\n\nIne \n\nSs\n\n\n\nE\n\nae\n\nSUING\n\n \n\nw",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "NR",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "a\n\n\n\nIne O\n\nSs\n\n\n\na\n\nGe\n\nSUING\n\n \n\nwat\n\nee",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "aia\n\n\n\noe \n\n\n\na\n\nA\n\n ae\n\nae\n\n\n\n\n\naS\n\nA\n\neo\n\nOEE\n\nby \n\n\n\nSica\n\n a",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "aia\n\nFe\n\nLo \n\n\n\nBG\n\nA\n\n eae\n\nieee\n\n\n\n\n\n S\n\nA\n\ne\n\nOEE\n\neen\n\nBre\n\nSica\n\n oa w",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sunrise",
+      "detected": "NR",
+      "score": 1.0,
+      "method": "enhanced",
+      "psm": 7
+    },
+    "angle": 93.5,
+    "expected_name": "Escapade"
+  },
+  "east-fall": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "WY\n\nS\n\nKG\n\nwre\n\no se\n\nNOR see\n\ny\n\nD\n\nSs \n\nYG\n\n\n\n ny\n\n\n\na\n\nSe\n\nY\n\nae\n\n\n\nYt bor",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "S\n\nKG\n\nwre\n\no se\n\nNOR see\n\ny\n\nD\n\nSs \n\nYG\n\n\n\n ny\n\n\n\nps\n\noe\n\nYj\n\nae\n\n\n\nYt bo",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SF s\n\n\n\n hs\n\nOs\n\n\n\n\n\nS\n\na Lm \n\nOx\n\nXS\n\nBs\n\nshe\n\nys\n\nAS\n\ni al\n\niF\n\ny\n\n\n\nYrs\n\nSy\n\nte\n\nS his\n\nOP\n\nY\n\ni\n\nLas\n\n\n\n ay\n\n\n\ntA\n\nCAG\n\n Pdf\n\n\n\nNe\n\n\n\nby\n\nY\n\nPOEL\n\noy\n\n\n\nLe Ney\n\n\n\nON\n\nGs\n\nby\n\nbp\n\nNN\n\nMAN",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "SF Be\n\n\n\n hs\n\nOs\n\n\n\n\n\nS\n\na Lm \n\nOx\n\n\n\nBs\n\nshe\n\nys\n\nASS\n\ner ae\n\niF\n\ny\n\n\n\nYrs\n\nSy\n\nke\n\nF his\n\nOP\n\nC\n\nie\n\nLas\n\n\n\n ay\n\n\n\ntA\n\nCAG\n\n Pdf\n\nS\n\nNe\n\n\n\nby\n\nY\n\nPORES\n\noy\n\n\n\nLe MGs\n\n\n\nON\n\nws\n\nby \n\nbp\n\nA\n\nQQ",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Great Northern",
+      "detected": "S\n\nKG\n\nwre\n\no se\n\nNOR see\n\ny\n\nD\n\nSs \n\nYG\n\n\n\n ny\n\n\n\nps\n\noe\n\nYj\n\nae\n\n\n\nYt bo",
+      "score": 0.20454545454545456,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 131.3,
+    "expected_name": "East Fall"
+  },
+  "upper-east-fall": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SS\n\nSSS\n\nly\n\nSY\n\nL",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "S\n\nSSS\n\nly\n\nSY\n\nA",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SSS\n\noly\n\nSS\n\nSSS\n\nS\n\nSOS\n\n POWERS\n\nINE soe WORTH E\n\nm See\n\n REAS\n\nSS\n\nVY SS",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "SSSs\n\naly\n\nSS\n\nSS\n\nS\n\nSOS\n\n POWERS\n\nINE sofeo WORTH E\n\nm Sep\n\n REAS\n\nSS\n\nVY RS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sass",
+      "detected": "S\n\nSSS\n\nly\n\nSY\n\nA",
+      "score": 0.2857142857142857,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 62.3,
+    "expected_name": "Upper East Fall"
+  },
+  "rime": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SL\n\n\n\nRSS\n\nKet\n\nol\n\np FD ay\n\nWY jj",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SL\n\n\n\nRSS\n\nKe\n\noa\n\np si ay\n\nWY jj",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ths\n\nte\n\nSS did\n\nWr\n\nL\n\nYj\n\nP fy\n\n\n\na\n\nAe Avy\n\n\n\na\n\nBI\n\nSnr \n\nHig\n\nLEM\n\navno'\n\nwf\n\nSD\n\nSaw Hin\n\nVise\n\nPM\n\nap Ons\n\nP\n\nme\n\n\n\nlj\n\nYf\n\nYi\n\nYipes",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "ths\n\nWx\n\nSS did\n\nxe\n\nL\n\nYj\n\nSP\n\no\n\nXS\n\nAe Avy\n\ny\n\nre\n\nBas\n\nSnr \n\nHig\n\nPLEM\n\navno'\n\nwf\n\nSD\n\nSaw Hin\n\nVise\n\nPM\n\nip Os\n\nP\n\nme\n\n\n\nlj\n\nY\n\n\n\nYipes",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Skye Hawk",
+      "detected": "SL\n\n\n\nRSS\n\nKet\n\nol\n\np FD ay\n\nWY jj",
+      "score": 0.27906976744186046,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 147.6,
+    "expected_name": "Rime"
+  },
+  "reason": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "-s\n\nWS\n\nS BIG\n\nSs \n\n eg pouBlL\n\na\n\niy\n\nig\n\n-\n\nSa\n\n\n\nne\n\nMi\n\nee",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "-s\n\n\n\nWS\n\n BIG\n\nSs \n\n eg pouBlL\n\nPs\n\nAy\n\nig\n\n\n\nSe\n\n\n\nTe\n\ni\n\nee",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ek\n\nI\n\n\n\n\n\nay\n\nsik\n\nFOG\n\na\n\nae\n\nOY\n\nIG\n\nREASON\n\noN\n\nR ta\n\n \n\nSn DOUBL\n\nPi S Bea EEE\n\nss\n\nCoug\n\nae\n\na\n\n\n\nof\n\nH\n\nYt\n\nS",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "eis\n\nI\n\nSS\n\n\n\nay\n\nsii\n\nFOG\n\nr\n\na\n\nOY\n\nIG\n\nREASON\n\noA\n\neR ta\n\n \n\nSn DOUBL\n\na S Bea EEE\n\nss\n\nCog\n\nae\n\na\n\n\n\nof\n\ni\n\nWW\n\nS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Reason",
+      "detected": "ek\n\nI\n\n\n\n\n\nay\n\nsik\n\nFOG\n\na\n\nae\n\nOY\n\nIG\n\nREASON\n\noN\n\nR ta\n\n \n\nSn DOUBL\n\nPi S Bea EEE\n\nss\n\nCoug\n\nae\n\na\n\n\n\nof\n\nH\n\nYt\n\nS",
+      "score": 0.8,
+      "method": "scaled",
+      "psm": 11
+    },
+    "angle": 77.6,
+    "expected_name": "Reason"
+  },
+  "julio": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SS\n\n\n\nSS\n\n\n\nlf\n\noF\n\nss\n\n\n\nbj\n\naS\n\nSS\n\naS\n\nSyren i\n\nae\n\nSS\n\nSS\n\ne\n\nee\n\nSSA",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\n\n\nSS\n\n\n\nlf\n\noF\n\nss\n\n\n\ntj\n\naS\n\nS\n\naS\n\nSe i\n\nae\n\nSS\n\nSS\n\ne\n\nee\n\nSA",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nPLL\n\nta\n\nYf\n\na\n\nFy\n\n\n\n\n\nse\n\n\n\nae\n\n\n\n\n\n\n\nSS pERsT ak sh\n\n\n\nSA\n\ne\n\noy\n\nof\n\nSs\n\noe",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nPLL\n\nta\n\nLf\n\nha\n\nFy\n\n\n\n\n\nse\n\n\n\nae\n\n\n\nSS\n\n\n\nSS pERst is sh\n\ns\n\nSA\n\n\n\noy\n\nx\n\nSs\n\noe",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Skye Peak Liftline",
+      "detected": "SS\n\nPLL\n\nta\n\nYf\n\na\n\nFy\n\n\n\n\n\nse\n\n\n\nae\n\n\n\n\n\n\n\nSS pERsT ak sh\n\n\n\nSA\n\ne\n\noy\n\nof\n\nSs\n\noe",
+      "score": 0.19801980198019803,
+      "method": "scaled",
+      "psm": 11
+    },
+    "angle": 63.9,
+    "expected_name": "Julio"
+  },
+  "high-road": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Lf\n\n\n\nae\n\nI\n\ncg\n\ny\n\nso\n\nlf\n\nSSS\n\n\n\nOy\n\nSy\n\nno\n\n\n\neee\n\ney\n\nOk\n\naw\n\na\n\nSg\n\n\n\nKo\n\nSs\n\nSx\n\neC\n\n\n\nSS\n\no\n\neS\n\na\n\na oe\n\nod\n\nle\n\nSW\n\nS\n\nBs\n\neS\n\nesas\n\nxy\n\n\n\nSa\n\nKe\n\nTAI\n\n\n\n\n\nSS\n\nSy\n\nte\n\nDWALL\n\n \n\nSF\n\nSf\n\n\n\nrs",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Lf\n\n\n\naR\n\na\n\n\n\nV\n\nso\n\nlf\n\n\n\n\n\nSy\n\nSy\n\na\n\n\n\nee\n\ney\n\nOk\n\naw\n\na\n\nSg\n\n\n\nKo\n\nSs\n\nSx\n\n\n\n\n\nSS\n\no\n\n\n\n\n\na\n\nod\n\ni\n\nSW\n\nS\n\nBs\n\neS\n\nsree\n\nxy\n\n\n\nSa\n\nKe\n\nTAI\n\n\n\n\n\nSS\n\nie\n\nte\n\nDWALL\n\n \n\nSi\n\nSif\n\n\n\nrs",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "f\n\nwes\n\nCl\n\n\n\n\n\nO\n\n\n\noy\n\noo\n\n\n\nOu\n\n\n\noes\n\nays\n\nse\n\nwe\n\nS\n\nSe\n\nG\n\n\n\n\n\nCe\n\njy\n\nwe\n\nKZ\n\nor\n\nPY\n\nOS\n\npo\n\noy\n\n\n\ncts\n\nas\n\nOF\n\nes\n\n\n\na\n\n a\n\nS\n\ni Eas\n\n oe\n\nOy\n\neK\n\nxo\n\n\n\nph\n\nO\n\nP\n\nwe\n\nae\n\n\n\nme\n\nSTAI\n\nS\n\nS\n\nate et\n\nov\n\nS\n\na\n\nVER\n\nTIGO\n\na ia\n\na\n\n ot\n\nHEADWAL\n\nL\n\nSee\n\n\n\nay\n\ny\n\nhi\n\n \n\n  ma BS",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "f\n\nwea\n\nCal\n\n\n\n\n\nNO\n\n\n\noy\n\noo\n\n\n\nOu\n\n\n\noes\n\nays\n\nse\n\nwe\n\nS\n\nSe\n\nG\n\n\n\n\n\nCe\n\njy\n\nwe\n\nwe\n\nee\n\nPY\n\noS\n\npo\n\noy\n\nbea\n\nQO\n\nso\n\nGz\n\nJes\n\n\n\nte\n\n a\n\nS\n\n Es\n\n oe\n\nOy\n\n\n\nxo\n\n\n\nph\n\nO\n\nxy\n\nPy\n\n\n\n\n\nme\n\nSTAI\n\n\n\nS\n\nate et\n\nav\n\nS\n\na\n\nVER\n\nTIGO\n\na ia\n\na\n\n st\n\nHEADWAL\n\nL\n\nSen\n\n\n\nay\n\ny\n\nhi\n\n \n\n  ma BS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Dream Maker Headwall",
+      "detected": "Lf\n\n\n\naR\n\na\n\n\n\nV\n\nso\n\nlf\n\n\n\n\n\nSy\n\nSy\n\na\n\n\n\nee\n\ney\n\nOk\n\naw\n\na\n\nSg\n\n\n\nKo\n\nSs\n\nSx\n\n\n\n\n\nSS\n\no\n\n\n\n\n\na\n\nod\n\ni\n\nSW\n\nS\n\nBs\n\neS\n\nsree\n\nxy\n\n\n\nSa\n\nKe\n\nTAI\n\n\n\n\n\nSS\n\nie\n\nte\n\nDWALL\n\n \n\nSi\n\nSif\n\n\n\nrs",
+      "score": 0.11764705882352941,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 71.2,
+    "expected_name": "High Road"
+  },
+  "north-way": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "acs",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "als\n\nEa\n\nof\n\nVe\n\nea RS\n\nGn\n\nS\n\naN\n\n\n\nNest\n\ne",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "acs",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "als\n\nVes\n\nof\n\nEWP\n\nea RS\n\nGon\n\nSs\n\naN\n\nFe\n\nNe\n\ne",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "hs\n\nc\n\n\n\nWAS\n\nR\n\naw\n\nQi\n\nbe\n\ned \n\nZz\n\nx\n\non \n\nue\n\n\n\na\n\n\n\n\n\non\n\ni\n\nYN\n\n \n\n a",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "hs\n\nc\n\n\n\nWAS\n\n\n\noft\n\nQi\n\nbe\n\n\n\nZz\n\nx\n\non \n\noe\n\nX\n\naa\n\n\n\n\n\non\n\ni\n\nYN\n\n \n\n er",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sass",
+      "detected": "acs",
+      "score": 0.5714285714285714,
+      "method": "enhanced",
+      "psm": 7
+    },
+    "angle": 89.8,
+    "expected_name": "North Way"
+  },
+  "great-eastern-kp": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "NY\n\nN\n\nAY\n\nYi\n\nN\n\nSS\n\nWS  Z\n\nAS\n\nNS\n\noO\n\nN\n\n\n\n noe\n\ncS\n\ncS\n\nos\n\n\n\nN\n\n\n\nOrs\n\n\n\nJz\n\nae\n\nEm\n\nfas\n\nNX\n\nNN\n\nTid isy \n\nY\n\nTp\n\nevnd  Huon\n\nom\n\noeRS\n\nAS\n\nNITYIMOg\n\nMS\n\nIe\n\nSS\n\no\n\neo\n\ne\n\nX\n\nAs\n\nNOeQ\n\n\n\nss\n\n\n\noF\n\neh\n\nAY\n\nOY\n\nSS\n\nWS\n\n\n\nWX\n\nCS\n\n\n\nNN\n\nSS\n\n\n\n\n\n\n\nwey\n\n\n\nyee\n\neS\n\n\n\n\n\nBe cic\n\nep\n\nVd\n\nSS\n\nYe\n\n\n\nSt",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nN\n\nAY\n\nYi\n\nN\n\nYS\n\nWS  yy\n\nS\n\nNS\n\noO\n\nN\n\n\n\n noe\n\nCS\n\ncS\n\nOs\n\n\n\nS\n\n\n\nOn\n\n\n\nJz\n\nxe\n\nEs\n\nfas\n\nNX\n\nAS\n\nTid isy \n\nZ\n\nTapp\n\nevnd  Huon\n\nome\n\nery\n\nAS\n\nNITYIMOg\n\nOS\n\nOey\n\nwe\n\no\n\nac\n\n\n\nAN\n\nAs\n\nNOeQ\n\n\n\nrs\n\n\n\noP WS\n\new\n\nAY\n\nNY\n\nSh\n\nWS\n\n\n\nAX\n\nCS\n\n\n\nNN\n\nSS\n\n\n\n\n\n\n\nwet\n\n\n\nye\n\neS\n\n\n\n\n\nBe cic\n\n\n\nVd\n\nSS\n\nY\n\n\n\nSt",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "IM\n\nNMOq a\n\n\n\n\n\nY\n\n\n\nwae\n\no\n\nsi\n\n\n\nWN\n\n Noe\n\n\n\nOe\n\nrs\n\n\n\n\n\nte\n\nTile\n\n Sir\n\nOK\n\n\n\nSry \n\nCYND  HiwoN\n\nCS\n\neer\n\nN\n\n\n\nVRE\n\nRAN\n\nxX\n\nSe\n\nMy \n\noe\n\neo\n\np\n\nNoe\n\ner\n\n \n\nOSS\n\ny\n\n a\n\nWs\n\nAg\n\nDM\n\nSS\n\nhk\n\n\n\nLAX\n\nS\n\nas\n\nS\n\n\n\nAN\n\n\n\naS\n\nSAY\n\nSe\n\nLAS\n\nx\n\neS\n\nrere\n\nKa\n\nWY\n\nRc\n\nat\n\ne\n\na\n\n\n\n-\n\neae\n\nea\n\n\n\nst\n\nFE\n\nSS\n\nPag\n\nx\n\nS\n\nYS\n\nas\n\n\n\nSo\n\n\n\nes\n\nSe\n\nYe\n\nfy\n\nVY\n\nft\n\nWN\n\nS",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "IM\n\nNMOq fi\n\n\n\n\n\nY\n\n\n\nwaPyy\n\no\n\nse\n\n\n\nWN\n\n Noo\n\n\n\nOe\n\nrs\n\n\n\n\n\nwg\n\nTile\n\n \n\nOK\n\n\n\nSy \n\nSLDEES TPIT ET\n\nCRS\n\neerVr\n\nN\n\n\n\nVRE\n\nRAN\n\nxX\n\neS\n\nMy \n\noe\n\neo\n\nOy\n\nNoe\n\ner\n\n \n\nOSS\n\ny\n\naa\n\nWs\n\nAg\n\nDM\n\nSS\n\n\n\n\n\nLAX\n\nS\n\nas\n\nSs\n\nx\n\nSN\n\n\n\nS\n\nSAY\n\nAx\n\nLAD\n\nBS\n\nSas\n\nnee\n\nKa\n\nWY\n\nwr\n\nat\n\n\n\na\n\na\n\noe\n\noa\n\na\n\n\n\nst\n\nFES\n\nS\n\nPg\n\nx\n\n\n\nYS\n\nas\n\n\n\nSo\n\n\n\nas\n\nSe\n\n\n\nfy\n\nVY\n\n\n\nAN\n\nS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Woodward Peace Park",
+      "detected": "NY\n\nN\n\nAY\n\nYi\n\nN\n\nSS\n\nWS  Z\n\nAS\n\nNS\n\noO\n\nN\n\n\n\n noe\n\ncS\n\ncS\n\nos\n\n\n\nN\n\n\n\nOrs\n\n\n\nJz\n\nae\n\nEm\n\nfas\n\nNX\n\nNN\n\nTid isy \n\nY\n\nTp\n\nevnd  Huon\n\nom\n\noeRS\n\nAS\n\nNITYIMOg\n\nMS\n\nIe\n\nSS\n\no\n\neo\n\ne\n\nX\n\nAs\n\nNOeQ\n\n\n\nss\n\n\n\noF\n\neh\n\nAY\n\nOY\n\nSS\n\nWS\n\n\n\nWX\n\nCS\n\n\n\nNN\n\nSS\n\n\n\n\n\n\n\nwey\n\n\n\nyee\n\neS\n\n\n\n\n\nBe cic\n\nep\n\nVd\n\nSS\n\nYe\n\n\n\nSt",
+      "score": 0.08227848101265822,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": -136.6,
+    "expected_name": "Great Eastern (K.P.)"
+  },
+  "fis": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "es\n\nWf\n\ney\n\ncS\n\n Wy\n\nGZ\n\nJ\n\ndiely\n\nee is iy\n\n\n\nY fj\n\nyp\n\nYjyiiyjys",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "es\n\nWf\n\nley\n\ncS\n\n Wy\n\nGZ\n\nJ\n\ndiely\n\nee is iy\n\n\n\nYY\n\nYj\n\nYY iiyjys",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "bn\n\nS\n\nyaLiaHs\n\nLa\n\na\n\nSy\n\nYj\n\n Wyy\n\nH - \n\non\n\ndid\n\n\n\nfoal '\n\nee\n\nY\n\nyy\n\nU pie\n\nS",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "by\n\nS\n\nPERGED ES\n\nLa\n\na\n\nSY\n\nYj\n\n Wyy\n\nH  \n\n on\n\ndid\n\n\n\nfoal '\n\noe\n\nY\n\nY jy\n\nU pie\n\nS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Upper East Fall",
+      "detected": "by\n\nS\n\nPERGED ES\n\nLa\n\na\n\nSY\n\nYj\n\n Wyy\n\nH  \n\n on\n\ndid\n\n\n\nfoal '\n\noe\n\nY\n\nY jy\n\nU pie\n\nS",
+      "score": 0.2,
+      "method": "scaled_inv",
+      "psm": 11
+    },
+    "angle": 145.2,
+    "expected_name": "FIS"
+  },
+  "lower-fis": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "ga\n\nFA\n\n\n\nNW\n\nBo\n\nRe\n\nZe x\n\nfs\n\nBm ic\n\niS\n\na\n\nQa\n\n\n\nZ\n\nZ\n\nSS\n\na\n\nZA\n\n\n\nv",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "ga\n\nFa\n\n\n\nWW\n\nBo\n\nRe\n\nZe x\n\nfs\n\ngm ic\n\niS\n\nOa\n\nRi\n\n\n\nZ\n\nZ\n\ntex\n\na\n\nZA \n\n\n\nVv",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ga\n\nAA AZ\n\nSy\n\naz\n\n\n\na Os\n\nsee Fi\n\nZa\n\nSD\n\nAP akc\n\nzg\n\nCie\n\n\n\nef\n\nZe\n\nDS\n\nAA\n\ns\n\nSy\n\nS\n\nTAA\n\nCZ",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "oe\n\nAA ZA\n\nSy\n\nkz\n\n\n\nOs\n\nee Fie\n\nLZ\n\nSi D\n\nAP dic\n\nas\n\nCie\n\n\n\new\n\nZe\n\nDS\n\nG\n\ns\n\nSy\n\n\n\nEEE\n\nCZ\n\nmY",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Dream Maker Headwall",
+      "detected": "ga\n\nFa\n\n\n\nWW\n\nBo\n\nRe\n\nZe x\n\nfs\n\ngm ic\n\niS\n\nOa\n\nRi\n\n\n\nZ\n\nZ\n\ntex\n\na\n\nZA \n\n\n\nVv",
+      "score": 0.1875,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 110.4,
+    "expected_name": "Lower FIS"
+  },
+  "solitude": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "Ss\n\nae\n\nSS\n\naa\n\ney\n\nBO\n\n\n\n\n\niia\n\nri",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Ss\n\nae\n\n\n\naa\n\neS\n\nAO\n\n-\n\nS\n\niia\n\neo",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "a \n\na\n\nee\n\nSS\n\nOo\n\nCake\n\n\n\na\n\nsie\n\na\n\nwa\n\n\n\neo\n\nitz\n\nex",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "et",
+        "method": "scaled_inv",
+        "psm": 7
+      },
+      {
+        "text": "ee\n\nSS\n\nOu\n\noN\n\n\n\na\n\nsie\n\n\n\nwa\n\n\n\neo\n\nitz\n\nex",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Home Stretch",
+      "detected": "et",
+      "score": 1.0,
+      "method": "scaled_inv",
+      "psm": 7
+    },
+    "angle": 75.7,
+    "expected_name": "Solitude"
+  },
+  "k1-gondola-run": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "Z a",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "eo\n\nas\n\nwy\n\n\n\nco\n\na\n\n\n\ni \n\n\n\nEASON\n\nHF DOU \n\niri\n\niim",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Z a",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "a\n\nEats\n\nOy\n\n\n\nco\n\na\n\n\n\ni i\n\n\n\nEASON\n\nEF DOU \n\ni ri\n\niim",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ze",
+        "method": "scaled",
+        "psm": 7
+      },
+      {
+        "text": "S\n\na\n\nU\n\n\n\nS\n\ne\n\nBe\n\n\n\nAp\n\nWy\n\n\n\nONS\n\na\n\na\n\nOY\n\nTS REASOSS\n\noa\n\n pek\n\nif\n\niin\n\niy",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "es",
+        "method": "scaled_inv",
+        "psm": 7
+      },
+      {
+        "text": "S\n\na\n\nU\n\n\n\nS\n\ne\n\nBo\n\n\n\nAp\n\nWy\n\nOo\n\nONS\n\nat\n\na\n\nOY\n\nTS REASOMS\n\naoa\n\n peX\n\ni\n\nin\n\niy",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Squeeze Play",
+      "detected": "ze",
+      "score": 1.0,
+      "method": "scaled",
+      "psm": 7
+    },
+    "angle": 76.8,
+    "expected_name": "K-1 Gondola Run"
+  },
+  "anarchy": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "YZz\n\nRt\n\n\n\ni ZB\n\nA\n\nse\n\nSx\n\nNE\n\nat\n\nNSEA\n\nSe Y\n\n\n\nEZ\n\n\n\n\n\noe\n\nCS\n\nAA\n\nAWN",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "YSZz\n\nRte\n\n\n\nare\n\nA\n\neg\n\nSx\n\nNE\n\nat\n\nNSEA\n\nSe Y\n\n\n\nEZ\n\n\n\n\n\noe\n\nCS\n\nGAA\n\nAWN",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "y \n\na\n\nA\n\n\n\ni \n\neis\n\nam\n\n\n\nsal\n\n\n\nee\n\nBA\n\nk\n\n\n\nA\n\n\n\nif\n\nSg\n\naay\n\nNON J\n\nSt\n\nFat\n\n   \n\n al\n\nis ee\n\nWS\n\nSs\n\nbw\n\nses\n\nZa\n\n\n\nTG\n\nhe\n\nee A\n\n\n\nee\n\na\n\n\n\nFm",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "y \n\nNN\n\nA\n\n\n\ni \n\neis\n\nam\n\n\n\nsal\n\n\n\nae\n\nEA\n\nk\n\n\n\nA\n\n\n\nif\n\nSg\n\na\n\nNON  J\n\nSt\n\nFg\n\nq   \n\ntee ae\n\nis ee\n\nWS\n\nSs\n\nbw\n\nsos\n\nZa\n\n\n\ni\n\nhe\n\nee\n\n ee\n\nee\n\nas\n\n\n\nFm",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Great Eastern",
+      "detected": "YZz\n\nRt\n\n\n\ni ZB\n\nA\n\nse\n\nSx\n\nNE\n\nat\n\nNSEA\n\nSe Y\n\n\n\nEZ\n\n\n\n\n\noe\n\nCS\n\nAA\n\nAWN",
+      "score": 0.20930232558139536,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 111.1,
+    "expected_name": "Anarchy"
+  },
+  "upper-canyon": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "yi\n\na\n\nCoe\n\nKe\n\n\n\non\n\noe\n\nON QUAD\n\nS\n\nnd",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SS",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "yi\n\na\n\nCoe\n\nKe\n\n\n\non\n\no\n\nON QUAD\n\nS\n\nAnd",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "id\n\n\n\n\n\nSs\n\na\n\ni\n\n\n\no\n\nMay ON QUAD\n\n\n\nAn",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Md\n\n\n\n\n\nSs\n\na\n\n \n\nS\n\no\n\nMy ON QUAD\n\n\n\nfx",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Crossover",
+      "detected": "SS",
+      "score": 1.0,
+      "method": "inverted",
+      "psm": 7
+    },
+    "angle": 78.7,
+    "expected_name": "Upper Canyon"
+  },
+  "lower-canyon": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "ae\n\nfie\n\n\n\nHe\n\nJF\n\n\n\nZ",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "ase\n\nfie\n\nelt\n\nHa",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ex\n\nae\n\n\n\ne\n\n\n\nH\n\nion\n\nl",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "ex\n\n \n\n\n\ne\n\n\n\nH\n\nion\n\ni",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Field Goal",
+      "detected": "ase\n\nfie\n\nelt\n\nHa",
+      "score": 0.37037037037037035,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 84.5,
+    "expected_name": "Lower Canyon"
+  },
+  "old-superstar": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SS ee l\n\nom\n\n \n\n\n\nPe",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Se l\n\nam\n\n \n\n\n\nAy",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Ef \n\nJas\n\nri",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Ef \n\nmS\n\nri",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Squeeze Play",
+      "detected": "Se l\n\nam\n\n \n\n\n\nAy",
+      "score": 0.41379310344827586,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 75.3,
+    "expected_name": "Old Superstar"
+  },
+  "killington-liftline": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "AZ\n\nA\n\n\n\nFA",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "AZ\n\nwe\n\n\n\nFa",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "we",
+        "method": "scaled",
+        "psm": 7
+      },
+      {
+        "text": "We\n\nSY\n\nSE\n\n\n\n\n\nBX",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "we",
+        "method": "scaled_inv",
+        "psm": 7
+      },
+      {
+        "text": "We\n\nSY\n\nSE\n\n\n\n\n\nBX",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Lower Northbrook",
+      "detected": "we",
+      "score": 1.0,
+      "method": "scaled",
+      "psm": 7
+    },
+    "angle": -151.8,
+    "expected_name": "Killington Liftline"
+  },
+  "superstar-glade": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "iG\n\nCG\n\ny\n\na \n\n\n\nEET\n\nC\n\nYj\n\nY\n\nww\n\nie\n\nREE\n\n\n\nVj\n\nVy N\n\nAs",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "iG\n\nGA\n\ny\n\na \n\n\n\nEET\n\nC\n\nY\n\nY\n\nBS\n\nRe\n\nREE\n\n\n\nVj\n\nVY N\n\nA",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Y\n\ney\n\nFas ARS A\n\nYe\n\nAgo\n\n \n\nY\n\nSS\n\nDa a\n\n\n\nep\n\nifa\n\nS\n\na Nan\n\nfo\n\nYj\n\n\n\n ys\n\n\n\n\n\n\n\nLG\n\nGG\n\nby i\n\nie\n\n\n\nY\n\n\n\nkee\n\ntA\n\na \n\nDr\n\nYs\n\nSa\n\nI",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Y\n\ney\n\nFas ARS A\n\nYe\n\nAgo\n\n \n\nY\n\nSS\n\nDap a\n\n\n\nLG\n\niia\n\nS\n\nBN an\n\nfo\n\nYj\n\n\n\n ys\n\n\n\n\n\n\n\nLF\n\nGG\n\nby ni\n\n\n\n\n\nMj\n\n\n\nkee\n\nAh\n\na \n\nAle\n\nY\n\nSa\n\nA",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Easy Street",
+      "detected": "iG\n\nGA\n\ny\n\na \n\n\n\nEET\n\nC\n\nY\n\nY\n\nBS\n\nRe\n\nREE\n\n\n\nVj\n\nVY N\n\nA",
+      "score": 0.17647058823529413,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 133.3,
+    "expected_name": "Superstar Glade"
+  },
+  "header-kp": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "tas",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "ee me\n\n ier\n\nZ\n\nbE\n\nae\n\nlj",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "as",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "ee DU\n\n ir\n\nZ\n\nE\n\nae\n\ni",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "a\n\ni\n\n ha\n\n\n\nos\n\ndU\n\n\n\n\n\nNS\n\na\n\nmAs\n\nEASE\n\na\n\na\n\nas \n\nOe\n\nCas\n\n\n\nun\n\nA\n\n\n\nir\n\nW iy\n\nne",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "a\n\nil\n\n ha\n\n\n\nos\n\nAU\n\n\n\na\n\naK\n\na\n\nek\n\nEASS\n\n \n\na\n\nas \n\nOe\n\nCaS\n\n\n\nun\n\nA\n\n\n\nir\n\nWl vi\n\nnn Oo",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "The Stash",
+      "detected": "tas",
+      "score": 1.0,
+      "method": "enhanced",
+      "psm": 7
+    },
+    "angle": 82.7,
+    "expected_name": "Header"
+  },
+  "mouse-run": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "A\n\n\n\nAa\n\neae ON\n\n\n\n\n\na\n\nSte a\n\nSs\n\nEA\n\n\n\n\n\nSa",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "A\n\n\n\nAa\n\nFae ON\n\n\n\n\n\na\n\nSie a\n\nSs\n\nEE\n\n\n\n\n\nSa",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "AN\n\n OWE\n\n\n\n\n\nON \n\nae\n\nSar\n\nol\n\ni\n\nJdyvs\n\n\n\n \n\nPye\n\nEE\n\n\n\nsa",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "LAN\n\n ON\n\nS\n\n\n\noe \n\nane\n\nSee\n\nol\n\ni\n\nJd\n\n\n\n \n\nPye\n\nEE\n\n\n\nsa",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Woodward Peace Park",
+      "detected": "AN\n\n OWE\n\n\n\n\n\nON \n\nae\n\nSar\n\nol\n\ni\n\nJdyvs\n\n\n\n \n\nPye\n\nEE\n\n\n\nsa",
+      "score": 0.25316455696202533,
+      "method": "scaled",
+      "psm": 11
+    },
+    "angle": 102.5,
+    "expected_name": "Mouse Run"
+  },
+  "low-road": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Sub\n\nY\n\nG\n\nNG",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "ub\n\nY\n\nY\n\nNG",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Y\n\n\n\n\n\nFP\n\nSV\n\n\n\n\n\n\n\nIH\n\nogian\n\nG\n\nLe\n\n N\n\nLET BA \n\nPons\n\na\n\nZ\n\nToo\n\ni",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Y\n\n\n\n\n\nFP\n\nSV\n\n\n\n\n\n\n\nJH\n\nogian\n\nG\n\nZe\n\n N\n\nLET BA \n\nPons\n\na\n\nZ\n\na\n\nLo",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sun Dog",
+      "detected": "ub\n\nY\n\nY\n\nNG",
+      "score": 0.3157894736842105,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 129.3,
+    "expected_name": "Low Road"
+  },
+  "the-mall": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "U\n\nY fu\n\n\n\npee\n\n\n\nS\n\nLO\n\n\n\n OMe\n\nOV",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "U\n\nY fz\n\n\n\npele\n\n\n\nS\n\nDE\n\n\n\n OMe\n\nOS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "N\n\n\n\n a\n\n\n\nSy\n\n\n\nAS\n\nk\n\n\n\na\n\n\n\n\n\nSis\n\nWS\n\nbs a ME\n\nfat te\n\nty\n\nEe\n\neA\n\nZe\n\noe\n\n\n\ne\n\nI\n\naa\n\n Cee\n\nASD",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "N\n\n\n\n a\n\n\n\nSy\n\n\n\nAS\n\nh\n\n\n\na\n\n\n\n\n\nSis\n\nWS\n\nbs a ME TS\n\nfalc te\n\nty\n\nEe\n\nPe\n\nZe\n\nre\n\n\n\ne\n\nI\n\na\n\n Cee\n\nAD",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Field Goal",
+      "detected": "U\n\nY fz\n\n\n\npele\n\n\n\nS\n\nDE\n\n\n\n OMe\n\nOS",
+      "score": 0.2608695652173913,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 128.9,
+    "expected_name": "The Mall"
+  },
+  "great-northern": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "a\n\n\n\nmm\n\n eek S\n\n\n\n\n\n\n\nee\n\nas\n\n ye\n\n\n\nMN\n\nON\n\nNing\n\nSe\n\noo\n\nBY\n\nwo\n\n\n\nAo\n\na\n\npres\n\n\n\n\n\nCe\n\nOP\n\nOKs\n\nce\n\nES \n\nS\n\n\n\n\n\nPe\n\nYN\n\nee\n\ne\n\nal",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "a\n\n\n\nmi\n\n eR e\n\n\n\n\n\nc\n\nee\n\nas\n\n ye\n\n\n\nMN\n\nLeys\n\nNing\n\nee\n\noo\n\nBY\n\nwo\n\n\n\nAo\n\na\n\npres\n\n\n\n\n\nCe\n\nOP\n\nOKs\n\nce\n\nc \n\nJ\n\nSS\n\n\n\n\n\nPS\n\naN\n\nee\n\ne\n\nal",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Se",
+        "method": "scaled",
+        "psm": 7
+      },
+      {
+        "text": "A Oe\n\n\n\nS eae \n\nx OAR\n\nNe\n\nGRE\n\naie\n\nCY\n\n\n\n\n\n\n\nB  Msn\n\nOK\n\nMp\n\nwea\n\noMine\n\no\n\nys\n\n\n\nmy\n\nRo\n\nwo\n\nZea\n\npres\n\n\n\nee\n\nyy\n\n \n\n iS\n\n'\n\ni\n\n\n\n\n\n\n\nRay\n\niy\n\n-\n\nrae",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Se",
+        "method": "scaled_inv",
+        "psm": 7
+      },
+      {
+        "text": "Oe\n\n\n\nS eae \n\nmq OAR\n\nSS \n\nGRE\n\nalte\n\n\n\n\n\nwe\n\n\n\nict vs Msn\n\nOK\n\nMp\n\nwe\n\nong\n\no\n\nps\n\n\n\nmy\n\nRo\n\nwo\n\nZea\n\npres\n\n\n\no\n\nyy\n\n -\n\n SS\n\n'\n\ni\n\n\n\n\n\n\n\nRay\n\ney\n\n\n\nrae",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sunrise",
+      "detected": "Se",
+      "score": 1.0,
+      "method": "scaled",
+      "psm": 7
+    },
+    "angle": 94.4,
+    "expected_name": "Great Northern"
+  },
+  "bunny-buster": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "yy\n\nXS\n\nA\n\ns\n\nSS\n\n\n\n\n\n\n\nee\n\n\n\nN\n\nOry\n\n\n\n\n\nwe\n\n\n\nEe\n\niC We\n\na\n\nWas\n\nPoy\n\nKoy\n\n\n\nyy\n\nes Sy\n\nSie\n\nYj\n\nCrear\n\nAS",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "yy\n\nXS\n\nLe\n\ns\n\nS\n\n\n\n\n\n\n\nee\n\n\n\nN\n\nOry\n\nm\n\n\n\nwe\n\n\n\nEe\n\nIC We\n\na\n\nas\n\nPoy\n\nKoy\n\n\n\njy\n\nCes Sy\n\nie\n\nYj\n\nCrear\n\nAS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "NY\n\nAN\n\nfy\n\nW\n\n\n\nFe\n\nx\n\nWN\n\nKY\n\nwy\n\n\n\nwt\n\naN\n\nSS\n\noe\n\nre\n\nx\n\na\n\n\n\nSS\n\nN\n\nSS\n\nhy\n\na\n\nase\n\nee\n\nES\n\n\n\naN\n\nSS\n\nYS\n\nN\n\nyy\n\nAY\n\nSO\n\nen\n\n\n\noS\n\nSAY Caleg seas\n\noes\n\n\n\n\n\n\n\n\n\noe\n\nUNC\n\nh\n\nLE Ss\n\nRice\n\n\n\nof\n\nrT\n\nay\n\n\n\nSea\n\nCS\n\na\n\n\n\n\n\nSy\n\nOy\n\nJo\n\n Y\n\nCes\n\nwre\n\nCP an\n\nYj\n\nA",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "NY\n\nAN\n\nfff\n\nW\n\ne\n\nrs\n\nx\n\nWN\n\nKY\n\nSas\n\n\n\nwt\n\naN\n\nSS\n\noe\n\nre\n\n\n\na\n\n\n\nSS\n\nN\n\n\n\nhy\n\na\n\nase\n\nee\n\nES\n\nK\n\naN\n\nSI\n\nYS\n\nN\n\nyw\n\n\n\nSO\n\n\n\n\n\nSS\n\nSAY Catania aaes\n\noes\n\n\n\n\n\n\n\n\n\noe\n\nUNC\n\n DV\n\nLB Ss\n\nRice\n\n\n\nof\n\nrT\n\nay\n\n\n\nSea\n\nCS\n\na\n\n\n\n\n\nSy\n\nOy\n\nJo\n\nZs Y\n\nCes\n\nwre\n\nCP ae\n\nYj\n\nA",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Lower Wildfire",
+      "detected": "yy\n\nXS\n\nLe\n\ns\n\nS\n\n\n\n\n\n\n\nee\n\n\n\nN\n\nOry\n\nm\n\n\n\nwe\n\n\n\nEe\n\nIC We\n\na\n\nas\n\nPoy\n\nKoy\n\n\n\njy\n\nCes Sy\n\nie\n\nYj\n\nCrear\n\nAS",
+      "score": 0.14754098360655737,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 45.4,
+    "expected_name": "Bunny Buster"
+  },
+  "chute": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "i\n\noat\n\n\n\nSs\n\nOt \n\nF athe\n\ne i\n\nrs\n\nWY\n\nNNN\n\nEBD\n\nBY\n\nAAA\n\na",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "ont\n\n\n\nSs\n\nOt \n\nF ete\n\ne a ee\n\nLs\n\nLy\n\nNNN\n\nory\n\nA\n\nAA\n\na",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Wz\n\ni\n\n\n\nar \n\nal\n\n OW\n\na\n\nA\n\nZ\n\nth \n\nBs\n\nAE\n\nZZ\n\n\n\nEE\n\nNN\n\n\n\nEE\n\nJS\n\n\n\ni \n\nFz",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Wz\n\n\n\n\n\nar \n\nal\n\n \n\na\n\nA\n\nZ\n\nth \n\nB\n\nAE\n\nZZ\n\n\n\nEE\n\nNN\n\ne\n\nEE\n\nJS\n\n\n\nio \n\nGz",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Bittersweet",
+      "detected": "i\n\noat\n\n\n\nSs\n\nOt \n\nF athe\n\ne i\n\nrs\n\nWY\n\nNNN\n\nEBD\n\nBY\n\nAAA\n\na",
+      "score": 0.22535211267605634,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 107.4,
+    "expected_name": "Chute"
+  },
+  "conclusion": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Ne\n\nWee\n\n\n\ny\n\neo\n\n\n\nae\n\noo\n\n\n\nAP CLUON\n\nSVEER\n\na\n\noy\n\nsaX XIS NOUMONS\n\n NHD\n\nSNH\n\nEy\n\nSN ANNNg\n\nby B ie\n\nOy\n\nGZ\n\nae\n\noy\n\nPee\n\nNay\n\nNa\n\nLIN\n\naky\n\nNOW\n\npe\n\nNN\n\nijp-\n\n\n\nee\n\nhe\n\nSSc No\n\na\n\nPSE\n\nSMONG\n\n\n\ni\n\n\n\nes\n\nsera\n\nZz\n\nNp\n\nthy\n\n\n\n uy\n\nAKI\n\n\n\nPe \n\nZYA\n\n Sf\n\nla\n\nSake\n\n\n\n\n\ni\n\n\n\nTy\n\nNoy\n\nTZ",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Ne\n\nWe\n\n\n\ny\n\neo\n\n\n\nte\n\noo\n\n\n\nAP CLUON\n\nSVEER\n\na\n\noy\n\naX X NOOMONS\n\nND\n\nJLNH'\n\nSEY\n\nSN ANNNg\n\nby  ie\n\n\n\nGZ\n\nae\n\noy\n\nPee\n\nNay\n\nNa\n\nLIN\n\nakY\n\nNOW\n\npe\n\nNN\n\nGt\n\n\n\net\n\nhe\n\nSSc No\n\nas\n\ner\n\nSMoN\n\n\n\noo\n\n\n\nes\n\nsera\n\nZz\n\nNp\n\nthy\n\n\n\n uj\n\nAKI\n\n\n\nre \n\nZY\n\n Sf\n\nla\n\nSake\n\n\n\n\n\ni\n\n\n\nTy\n\nNow\n\nTZ\n\n\n\n\n\n\n\nXY",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "We\n\ny\n\nLE\n\n\n\nee\n\nALON\n\nTERRY\n\n Os\n\nPigs\n\nP\n\nox\n\nfee\n\nXa XIs NOOMONS\n\nacne erees\n\n o SLAHS\n\n nHO\n\n\n\n Yisng ANNNg\n\n PA we Sno\n\nONES\n\naN\n\nNas\n\nNay\n\nNO\n\no ah\n\nNy hy\n\na \n\n\n\nBs\n\n VE\n\n mt No\n\nwe\n\nLage \n\nBOs\n\nZe\n\nes\n\noa\n\nDery\n\nLZzj\n\nOy\n\ngs\n\nZz\n\nPa\n\nV hy a ate\n\nee guy\n\n\n\nAca\n\neu\n\n\n\ntafe\n\nBee\n\nOns\n\nSs\n\nNG\n\nCS\n\nU\n\nee\n\n sh\n\nNoy\n\nMarn",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "We\n\ny\n\nLE\n\n\n\nee\n\nAHN\n\nTERRY\n\n Os\n\nPigs\n\nee\n\nox\n\nWe ca\n\ndXa XIs NOOMONS\n\nnee e rene\n\n o SLNHS\n\n nHO\n\n\n\n Yisng ANNNg\n\n PZ we Sno\n\nONES\n\naN\n\nNas\n\nNay\n\nUfo\n\no wh\n\nNN hy\n\na \n\n\n\nBs\n\n VE\n\n  No\n\nwe\n\nLage \n\nBOs\n\niz\n\nes\n\noa\n\nZerg\n\nLZzj\n\nOy\n\ngs\n\nZp\n\ni\n\nV hy Fei\n\noe sy\n\n\n\nAca\n\neu\n\n\n\ntafe\n\nBee\n\nOns\n\nSs\n\nNG\n\nCaS\n\nUF\n\nee\n\nk\n\nNoy\n\nZ van",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Mountain Training Station",
+      "detected": "We\n\ny\n\nLE\n\n\n\nee\n\nALON\n\nTERRY\n\n Os\n\nPigs\n\nP\n\nox\n\nfee\n\nXa XIs NOOMONS\n\nacne erees\n\n o SLAHS\n\n nHO\n\n\n\n Yisng ANNNg\n\n PA we Sno\n\nONES\n\naN\n\nNas\n\nNay\n\nNO\n\no ah\n\nNy hy\n\na \n\n\n\nBs\n\n VE\n\n mt No\n\nwe\n\nLage \n\nBOs\n\nZe\n\nes\n\noa\n\nDery\n\nLZzj\n\nOy\n\ngs\n\nZz\n\nPa\n\nV hy a ate\n\nee guy\n\n\n\nAca\n\neu\n\n\n\ntafe\n\nBee\n\nOns\n\nSs\n\nNG\n\nCS\n\nU\n\nee\n\n sh\n\nNoy\n\nMarn",
+      "score": 0.09195402298850575,
+      "method": "scaled",
+      "psm": 11
+    },
+    "angle": 119.1,
+    "expected_name": "Conclusion"
+  },
+  "upper-fis": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "ee\n\nXi\n\n \n\nect sar\n\nZ\n\nVa\n\n\n\nAY\n\nA\n\nA",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "ee\n\n\n\nIOY \n\nect ar\n\nZ\n\nVo\n\n\n\nAY\n\nA\n\nAY",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "eee\n\n\n\nN we\n\nIIOYs \n\n\n\nete\n\n\n\nye\n\nSAA\n\nat",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "eee\n\n\n\nN te\n\nIIOYs \n\n\n\nete\n\n\n\ny\n\nEAA\n\naa",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Centerpiece",
+      "detected": "eee\n\n\n\nN te\n\nIIOYs \n\n\n\nete\n\n\n\ny\n\nEAA\n\naa",
+      "score": 0.27450980392156865,
+      "method": "scaled_inv",
+      "psm": 11
+    },
+    "angle": -156.7,
+    "expected_name": "Upper FIS"
+  },
+  "mountain-run": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SSA\n\nRIDE \n\n Fy\n\nYell\n\nO\n\n\n\n\n\nv\n\n\n\ni als a",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SHA\n\nRIDE \n\n FY\n\nYell\n\nO\n\n\n\nrE\n\nv\n\n\n\nI als a",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "os \n\nvs\n\n\n\n\n\nRIDE \n\n\n\n\n\nv\n\niS\n\na\n\n\n\na\n\no\n\n \n\n\n\nSs fa\n\no\n\n\n\na\n\nA\n\ni\n\niN",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "os \n\nHy\n\n\n\n\n\nRIDE \n\n\n\n\n\nv\n\niS\n\n\n\na\n\no\n\n \n\n\n\nSef\n\n\n\no\n\nga\n\nA\n\ni\n\niN",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sunrise Connector",
+      "detected": "SHA\n\nRIDE \n\n FY\n\nYell\n\nO\n\n\n\nrE\n\nv\n\n\n\nI als a",
+      "score": 0.26229508196721313,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 82.7,
+    "expected_name": "Mountain Run"
+  },
+  "mountain-training": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "YY\n\nWr\n\nCea\n\n\n\nOS\n\nY\n\nQe\n\nSW",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "YY\n\nWr\n\nCea\n\n\n\nWIS\n\nY\n\nQe\n\nSS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "UY\n\n\n\n\n\noe\n\nJRE\n\n\n\nae\n\nsy\n\n\n\nex\n\nLae\n\nSs\n\nKoos\n\nSue\n\nPN\n\nos\n\nen \n\nBa\n\nsnows\n\neee\n\nlf\n\nade\n\nSen S\n\nN\n\nP\n\nSS\n\n x\n\nSA\n\nKS\n\n\n\n\n\n\n\nY\n\nFWA\n\nWS",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "P\n\nY\n\nN\n\n\n\nee\n\nFRE\n\n\n\nat\n\nsy\n\n\n\nA\n\nLae\n\nSS\n\nKOOs\n\nSue\n\nPN\n\noe\n\nen \n\nEx\n\ngrows\n\nSee\n\nff\n\nade\n\nSen \n\nN\n\noy\n\nSS\n\ny Ci\n\nSA\n\nKS\n\n\n\n\n\n\n\nY\n\nFWA\n\nWS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Breakaway",
+      "detected": "YY\n\nWr\n\nCea\n\n\n\nWIS\n\nY\n\nQe\n\nSS",
+      "score": 0.2631578947368421,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 46.0,
+    "expected_name": "Mountain Training Station"
+  },
+  "snowdon-liftline": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "bs \n\npias\n\nSs\n\n\n\nYt itttte\n\nZi",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "pieces\n\nSs\n\n\n\nYt tttte\n\nZe",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Se\n\npA\n\nISA\n\nZ\n\n\n\nexons\n\nAN\n\nie\n\n\n\nae\n\neh x\n\nGna SSttayy\n\nWISwyy\n\nELIT\n\nis\n\ngb ps\n\nY\n\nnt\n\nwe\n\na\n\nos\n\nAS\n\nBn\n\nOE\n\nYA\n\np",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Se\n\ntA\n\nIA\n\nZ\n\n\n\nexons\n\nANY\n\naie\n\n\n\naG\n\neh K\n\nGyno SSttayy\n\nWswyy\n\nELIT\n\nve\n\ngb pe\n\nY\n\nint\n\nwe\n\n\n\n\n\nAS\n\nBs\n\nOE\n\nYA\n\np",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Panic Button",
+      "detected": "pieces\n\nSs\n\n\n\nYt tttte\n\nZe",
+      "score": 0.3157894736842105,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 123.9,
+    "expected_name": "Snowdon Liftline"
+  },
+  "upper-snowdon": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "S\n\n\n\na\n\nran\n\nbeh\n\nery\n\nou\n\n\n\nRo\n\nect\n\nme\n\n\n\n\n\nSS\n\n\n\nay\n\nGE\n\nait\n\nJ\n\nshots\n\nRe ie\n\nmy\n\n\n\n\n\nita",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "A\n\nran\n\n\n\nery\n\nou\n\na\n\nRo\n\nect\n\noe\n\n\n\n\n\nSF\n\n\n\nay\n\nGE\n\nait\n\nJ\n\nshots\n\nRe\n\nmy\n\n\n\n\n\nita",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ll\n\nO\n\nS\n\n\n\nAP\n\n\n\n\n\na\n\nais\n\nAUS SS\n\npa\n\nas\n\nSs\n\nor\n\ncs\n\nSe\n\n\n\n\n\n\n\nke\n\na\n\n\n\n\n\n NO\n\n\n\nmate\n\no-\n\nat\n\n\n\nere\n\nbey \n\n\n\nask\n\nDGE\n\nSte\n\n\n\noo\n\nWN\n\nye\n\naie\n\n\n\n\n\nSr\n\n\n\n\n\nah",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "v \n\nl\n\nO\n\nS\n\ni\n\nA\n\n\n\n\n\na\n\nais\n\nAUS Se\n\npa\n\nPars\n\n-\n\nor\n\ncs\n\nSe\n\n\n\n\n\n\n\nke\n\nae\n\n\n\n\n\n NS\n\ni\n\nnat\n\no-\n\nat\n\n\n\nere\n\nbey \n\n\n\nak\n\nDGE\n\nSte\n\n\n\n\n\nWN\n\ncs\n\nee\n\n\n\n\n\nSr\n\n\n\n\n\nah",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Lower Home Stretch",
+      "detected": "S\n\n\n\na\n\nran\n\nbeh\n\nery\n\nou\n\n\n\nRo\n\nect\n\nme\n\n\n\n\n\nSS\n\n\n\nay\n\nGE\n\nait\n\nJ\n\nshots\n\nRe ie\n\nmy\n\n\n\n\n\nita",
+      "score": 0.18018018018018017,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 80.5,
+    "expected_name": "Upper Snowdon"
+  },
+  "lower-snowdon": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "W\n\nZ\n\nCees\n\nPP ini\n\nWS\n\neax\n\nEy Ke\n\nZL\n\n i\n\nieee\n\nZZ",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Z\n\nCones\n\nPF ini\n\nWS\n\neax\n\nEy Ke\n\nZL\n\n i\n\nieee\n\nZZ",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "a\n\nb\n\nSh pe\n\nTINH\n\nHs\n\net\n\nA\n\n \n\nFA\n\n\n\nZAD\n\nmn",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "a\n\n\n\nSh pe\n\nTINH\n\nHs\n\net\n\nA\n\n \n\nFA\n\n\n\nAZ\n\ntt",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Superstar Glade",
+      "detected": "a\n\nb\n\nSh pe\n\nTINH\n\nHs\n\net\n\nA\n\n \n\nFA\n\n\n\nZAD\n\nmn",
+      "score": 0.26229508196721313,
+      "method": "scaled",
+      "psm": 11
+    },
+    "angle": 109.0,
+    "expected_name": "Lower Snowdon"
+  },
+  "bittersweet": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "COZ\n\nBN es\n\nSe\n\ng\n\naLNHS\n\nZG\n\nLSN ANNNG\n\na A\n\nZe\n\nTf\n\nLZ\n\ntp\n\npo \n\nAN",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "COZ\n\nBN es\n\neS\n\ng\n\naLNHD\n\nZG\n\naLSN ANNNG\n\na A\n\nZe\n\nZ\n\n\n\ntp\n\npoy",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "A\n\nZe\n\n \n\n\n\n\n\nSe\n\nY\n\nAN\n\nat\n\nZw\n\nRoy\n\na\n\n\n\ns\n\ns\n\ng\n\nSaas\n\nLZ\n\nMj\n\nA ps\n\n hep\n\nP es\n\n\n\nZZ\n\ngs \n\nYZ\n\nCj \n\nA Ae\n\nA",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "A\n\nZZ\n\n\n\n\n\n\n\nSe\n\nyy\n\nAN\n\nat\n\nZw\n\nAy\n\na\n\n\n\ns\n\n\n\ng\n\nSaas\n\nLZ\n\nMj\n\nfoe\n\nPF ep\n\nP es\n\n\n\nZZ\n\ngs \n\nYZ\n\nCj \n\nA A\n\nWY",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Mountain Training Station",
+      "detected": "COZ\n\nBN es\n\nSe\n\ng\n\naLNHS\n\nZG\n\nLSN ANNNG\n\na A\n\nZe\n\nTf\n\nLZ\n\ntp\n\npo \n\nAN",
+      "score": 0.23404255319148937,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 123.2,
+    "expected_name": "Bittersweet"
+  },
+  "sass": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "be ae\n\naS\n\nbd aT\n\nBS ec\n\nRay\n\nS\n\nKO\n\n\n\nSAY",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "bee\n\naS\n\nbed en \n\nBc\n\nRoy\n\nS\n\nKO\n\n\n\nFi",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "ik",
+        "method": "scaled",
+        "psm": 7
+      },
+      {
+        "text": "ou\n\nso\n\noun\n\nAe\n\nrr ae oe Jin\n\nn\n\n\n\nie\n\n\n\n\n\n\n\nMy\n\nue\n\nEE\n\nae\n\namy\n\nIES\n\nwl\n\nRe\n\nA",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "ik",
+        "method": "scaled_inv",
+        "psm": 7
+      },
+      {
+        "text": "ou\n\nso\n\noun\n\nAe\n\nrr ae oe Jin\n\n\n\n\n\nie\n\nEB\n\n\n\n\n\nMe\n\nue\n\nEE\n\nae\n\nIM\n\nIES\n\nwl\n\nRe\n\nA",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "FIS",
+      "detected": "ik",
+      "score": 0.4,
+      "method": "scaled",
+      "psm": 7
+    },
+    "angle": 104.0,
+    "expected_name": "Sass"
+  },
+  "northstar": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "S\n\nAES\n\nis\n\nSo\n\n\n\nSEE\n\na\n\nVacs\n\nFn  inis\n\nSo\n\n\n\n\n\nSa",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "S\n\n\n\n\n\nis\n\nSo\n\n\n\noF\n\na\n\nVices\n\nPe  inis\n\nso\n\n\n\n\n\nSa",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "rw\n\nZa\n\nye\n\nae Za\n\nise\n\nEf \n\nSe\n\n-\n\nre\n\no\n\noe\n\nPo \n\nNHS\n\n\n\nSS\n\n\n\na\n\ncS\n\nJeans\n\n\n\nay\n\nAn hy\n\n\n\nSr\n\nVi",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "r\n\nZa\n\nye\n\nne Za\n\nAG\n\nEf ha\n\nSe\n\n\n\nre\n\nSa\n\noe \n\n RT\n\nAHO\n\ns\n\nSS\n\n\n\ntas\n\ncS\n\nJes as\n\n\n\n\n\nAn hy\n\n\n\nSr\n\nVi",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Mountain Training Station",
+      "detected": "S\n\nAES\n\nis\n\nSo\n\n\n\nSEE\n\na\n\nVacs\n\nFn  inis\n\nSo\n\n\n\n\n\nSa",
+      "score": 0.23376623376623376,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 108.4,
+    "expected_name": "Northstar"
+  },
+  "royal-flush": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Witz\n\nFi \n\n\n\nSe\n\nPeer\n\nBZ\n\n oe\n\nZo\n\n  \n\nFe \n\nD  Ze\n\nNay\n\nSN aN\n\no\n\nZZ\n\nAMX",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Witz\n\nFi \n\n\n\nSe\n\nPee\n\nBZ\n\n e\n\nZo\n\n-\n\nAa \n\nD  Zo\n\niS Nay\n\nSN \n\ney\n\nZZ\n\naN",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "N\n\n\n\nig\n\ngen\n\nZia\n\nwe\n\n\n\na SENT\n\nBE\n\n Y\n\nZA\n\nLa\n\nNn\n\nISNG\n\nan\n\n y \n\nThe\n\nSe\n\ni\n\nwt oi",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "N\n\n\n\nig\n\ngen\n\nDia\n\nwe\n\n\n\na SENT\n\nBE\n\n Y\n\nZ\n\nLn\n\nNn\n\nISG\n\nan\n\n  \n\nThe\n\nS\n\n \n\ny oi",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Squeeze Play",
+      "detected": "Witz\n\nFi \n\n\n\nSe\n\nPeer\n\nBZ\n\n oe\n\nZo\n\n  \n\nFe \n\nD  Ze\n\nNay\n\nSN aN\n\no\n\nZZ\n\nAMX",
+      "score": 0.18604651162790697,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 116.5,
+    "expected_name": "Royal Flush"
+  },
+  "upper-northbrook": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Wi\n\npow  NUH Lao\n\nS ANNng\n\nOS\n\nIsMONOo\n\nan G\n\nbrs wey\n\ntl NOaMoNs\n\nY\n\nY\n\ntis \n\nY\n\n tN",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Cj\n\npow  NUH Lao\n\nS ANNng\n\neS\n\nISMIONOD\n\n \n\nThre wey\n\ntl NOaMoNs\n\nY\n\nY\n\ntis \n\nY\n\nf AN",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Ah\n\n\n\nNOw\n\nN\n\nthee\n\ngt\n\nYn\n\nPy\n\nISNTONOD\n\nZ\n\ndiay Noamo\n\nay\n\noy\n\n\n\nT\n\n sewn",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Ah i\n\n\n\nNow\n\nN\n\nthee\n\nea\n\nYsn\n\nPy\n\nISNTONOD\n\nZ\n\ndiay Noamo\n\nay\n\noy\n\ni\n\nNf\n\n dwN",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Outer Limits",
+      "detected": "Cj\n\npow  NUH Lao\n\nS ANNng\n\neS\n\nISMIONOD\n\n \n\nThre wey\n\ntl NOaMoNs\n\nY\n\nY\n\ntis \n\nY\n\nf AN",
+      "score": 0.18556701030927836,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 135.0,
+    "expected_name": "Upper Northbrook"
+  },
+  "lower-northbrook": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Y \n\n\n\nZ\n\nG-N",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SZ\n\n\n\nZ\n\nG-N",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "A WRZ\n\n\n\nog aansinons\n\nFS\n\nOL Nava e\n\navs\n\nCN",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "A WR\n\n\n\nog aansinons\n\nFi\n\nOL Nava e\n\navs\n\nCN",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Mountain Training Station",
+      "detected": "A WR\n\n\n\nog aansinons\n\nFi\n\nOL Nava e\n\navs\n\nCN",
+      "score": 0.2608695652173913,
+      "method": "scaled_inv",
+      "psm": 11
+    },
+    "angle": -144.6,
+    "expected_name": "Lower Northbrook"
+  },
+  "snowdon-glades": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "SF\n\nSS\n\na ag\n\n\n\nAr\n\nSak",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "SF\n\nSS\n\nme ag\n\n\n\nAr\n\nyank",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "MONS\n\n\n\nNiors\n\nSo\n\nYQ",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "MONS\n\n\n\nViors\n\nSe\n\nYQ",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Conclusion",
+      "detected": "MONS\n\n\n\nNiors\n\nSo\n\nYQ",
+      "score": 0.3225806451612903,
+      "method": "scaled",
+      "psm": 11
+    },
+    "angle": -140.0,
+    "expected_name": "Snowdon Glades"
+  },
+  "easy-street": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "Zod",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "Ugud\n\nNid Ty\n\neee\n\nMY\n\nI",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Zed",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "Ufgud\n\nNid Ty\n\neee\n\nM\n\nI",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Mp\n\nMy fj\n\nV\n\nYY\n\n\n\nLY\n\nfy\n\n\n\nPe\n\nfi\n\nNidjy\n\naye\n\n\n\n\n\nPs\n\nj\n\nrags\n\nhd Fy\n\nig\n\nWe\n\n \n\npe S\n\nI Dime",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Mp\n\nMy fj\n\nV\n\nYY\n\n\n\nLY\n\nfy\n\n\n\nPa\n\nfi\n\nNidjy\n\naye\n\n\n\n\n\nPs\n\nY\n\nTia gh\n\nhd Fy\n\nigs\n\nWe\n\n \n\npe S\n\nI Dime",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Header",
+      "detected": "Zed",
+      "score": 0.4444444444444444,
+      "method": "inverted",
+      "psm": 7
+    },
+    "angle": 145.6,
+    "expected_name": "Easy Street"
+  },
+  "swirl": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "NS\n\n\n\nVAN SS",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "NS\n\n\n\nA eN",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "AA\n\n\n\nRRO\n\nSs VSS\n\nY\n\nSANS\n\nNSS\n\nVas\n\n\n\n ce \n\npKCRE\n\nSN\n\nON es\n\nWee\n\nSN\n\nLW\n\ny\n\nESS",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "GK AQA\n\n\n\nPEAS\n\nSs RSS\n\nY\n\nSANS\n\nNSS\n\nVee\n\nSs\n\n ce Y\n\nKORE\n\n\n\noN es\n\nWee\n\nSN\n\nWy\n\nUy\n\nNS",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Sass",
+      "detected": "NS\n\n\n\nVAN SS",
+      "score": 0.5,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 50.8,
+    "expected_name": "Swirl"
+  },
+  "treezy": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "ys",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "A\n\ni\n\nyy\n\ne\n\nTF gr",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "zs",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "A\n\nU\n\nfp\n\ni\n\nTF gr",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Ze\n\nGo\n\n\n\nwa\n\n\n\nS\n\nSag\n\n\n\nZe\n\nAZL\n\n\n\n\n\nAy ies\n\nYj\n\nEi\n\ni\n\ntj\n\n\n\neo",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Ze\n\nGo\n\n\n\nas\n\n\n\nS\n\nSig\n\n\n\nZe\n\nAZL\n\n\n\n \n\nAy ia\n\nYj\n\nEi\n\ngi\n\nMj\n\n\n\nY gyal",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "FIS",
+      "detected": "ys",
+      "score": 0.4,
+      "method": "enhanced",
+      "psm": 7
+    },
+    "angle": 128.0,
+    "expected_name": "Treezy"
+  },
+  "squeeze-play": {
+    "status": "matched",
+    "texts": [
+      {
+        "text": "oS",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "S\n\nse \n\nene OMNES T\n\nlal\n\n\n\nyf\n\npe",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "oe",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "S\n\nsf\n\nene OMI ERT\n\ngee\n\n\n\nyf\n\npe",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "all\n\nMy\n\nS\n\n\n\nfi\n\nbad\n\n\n\nj\n\nee",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "al\n\nMi\n\nSS\n\n\n\nfi\n\nbd\n\n\n\nj\n\nee",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Crossover",
+      "detected": "oS",
+      "score": 1.0,
+      "method": "enhanced",
+      "psm": 7
+    },
+    "angle": 155.1,
+    "expected_name": "Squeeze Play"
+  },
+  "ramshead-run": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "WSS\n\nY\n\nUj\n\nY\n\nEe\n\nBAN\n\ny\n\nLg es\n\nCie\n\nhes\n\nGZ\n\nVi\n\nVi y bay\n\n\n\nA\n\nVY\n\nYy\n\nGE",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "NS\n\nY\n\nUj\n\nY\n\ni\n\nBAN\n\ny\n\nLg Oe\n\nCie\n\nhes\n\ng\n\nVi\n\nVi y bay\n\n\n\nM\n\nVo\n\nVy\n\nGE",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nV\n\nYu\n\n BLN\n\ngy \n\nLY\n\nPi\n\nBoas\n\nDB\n\nae\n\nUf\n\nAG\n\nY\n\nTheta\n\nd Ha",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "SS\n\nY\n\nYu\n\n BLN\n\ngy \n\nWY\n\nPig N\n\nBoas\n\nDB\n\nae\n\nCh\n\nAG\n\nVy\n\npg\n\nd Ha",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Easy Street",
+      "detected": "SS\n\nV\n\nYu\n\n BLN\n\ngy \n\nLY\n\nPi\n\nBoas\n\nDB\n\nae\n\nUf\n\nAG\n\nY\n\nTheta\n\nd Ha",
+      "score": 0.18181818181818182,
+      "method": "scaled",
+      "psm": 11
+    },
+    "angle": 134.4,
+    "expected_name": "Ramshead Run"
+  },
+  "ramshead-liftline": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "ves",
+        "method": "enhanced",
+        "psm": 7
+      },
+      {
+        "text": "AA\n\naer\n\neZ\n\ngo\n\nwe\n\na\n\nie\n\nKy\n\nmy\n\nERT\n\ng a\n\nea\n\nL\n\nees\n\nSy\n\nZn\n\nBAA\n\nEET\n\nSay\n\nMors\n\n\n\n\n\nZB\n\nee\n\nZz\n\nee\n\na\n\n\n\ncS\n\nUl\n\n\n\nota\n\nSe\n\nte\n\nauLuon\n\nor\n\nLEE\n\n a\n\na\n\nZz\n\na\n\nZa\n\ney",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "ves",
+        "method": "inverted",
+        "psm": 7
+      },
+      {
+        "text": "ZA\n\ner\n\neZ\n\ngo\n\nWw\n\neo\n\nie\n\nKy\n\nmy\n\nERT\n\ng \n\nea\n\nFAA\n\neee\n\nSy\n\nZn\n\nBAA\n\n\n\nSay\n\nMors\n\nae\n\n\n\nAs\n\nrai\n\nZz\n\nBS ee\n\na\n\n\n\nCS\n\nUl\n\ncs\n\nota\n\nSe\n\ntee\n\naeLuon\n\not\n\nLER\n\n a\n\na\n\nZz\n\nJa\n\nZa\n\ney\n\nN",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "oC\n\n\n\no\n\nem\n\nPe\n\nae\n\na\n\nht aes\n\nFF Ss oP\n\ni\n\nZ\n\nS\n\nwi\n\nKo\n\n\n\ni\n\nALA\n\nvy\n\n Tae\n\nERT\n\n\n\nr a\n\ntng\n\na\n\nigs\n\nS\n\nBin\n\nz\n\nwe\n\nruse\n\nTA\n\nOx\n\nAv\n\nLh\n\ntary\n\nyy\n\nae\n\nra\n\n\n\nS\n\npo\n\nE\n\nIn\n\nOs\n\n\n\nA\n\n\n\nAe\n\ny\n\noo\n\n eR\n\nAXZ\n\ney\n\nZB\n\nSs\n\nie \n\nee\n\nLa\n\nfi ET agh\n\nAN\n\n\n\nwh\n\nod \n\n tt\n\n\n\nsd\n\n-\n\nopp eee\n\nOe\n\nBEL\n\nSa\n\nI\n\nNe a\n\nag oats\n\nBee\n\nat\n\nete LYON\n\noy\n\noe\n\na\n\nMER\n\noe\n\nY vy\n\nCe\n\nae\n\n\n\nee\n\n\n\nNOGMONS\n\n\n\nBy\n\n\n\na  se",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "oC\n\n\n\n a\n\nem\n\nPes\n\nRe\n\na\n\ni aes\n\nFF Si\n\ni\n\neZ\n\nS\n\nwi\n\nKo\n\na\n\ni\n\nALA\n\nvy\n\nLa\n\nERT\n\nhe\n\nr a\n\ntng\n\na\n\nigs\n\nVS\n\nFon\n\nz\n\n\n\nruse\n\nTA\n\nOr\n\nAv\n\nLh\n\ntary\n\nyy\n\nabu\n\nrae\n\n\n\nS\n\npe\n\nE\n\nIn\n\nOs\n\n\n\nA\n\n\n\nSi\n\ny\n\noo\n\nR\n\nAY\n\nWey\n\nZB\n\nSs\n\nio \n\nBee\n\noe\n\nfi ET agh\n\nAN\n\n al\n\nwh\n\nod iy\n\nta\n\nA\n\nue\n\n\n\neg FL\n\noe\n\noe\n\nSa\n\nBae\n\nNex a\n\nog oats\n\nee\n\nat\n\nte LYON\n\noy\n\n\n\na\n\nLEED\n\ner\n\nY vy\n\nCe\n\nae\n\na\n\nee\n\n\n\nNOGMONS\n\n\n\nBy\n\n\n\na  se",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Reason",
+      "detected": "ves",
+      "score": 0.4444444444444444,
+      "method": "enhanced",
+      "psm": 7
+    },
+    "angle": 114.5,
+    "expected_name": "Ramshead Liftline"
+  },
+  "header": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "iH\n\n\n\naN\n\n\n\nS\n\n\n\nSS\n\nP\n\nS\n\n\n\nay\n\n\n\nme\n\nBORN Sr\n\ney\n\n\n\nLy\n\npi",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "iH\n\n\n\naN\n\n\n\nLS\n\n\n\nSS\n\n\n\nS\n\noO\n\nay\n\n\n\nme\n\nBORN Sr\n\ney\n\n\n\nLy\n\nIbi",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "S\n\n\n\no\n\noe \n\n A\n\nRN\n\nhail\n\ne\n\nSS\n\na\n\nae\n\na\n\nzo\n\nae\n\nSS\n\ne \n\n\n\nxB\n\naS\n\n\n\nx\n\neh\n\ne\n\nEy\n\nS\n\nOo\n\nae\n\nSR\n\nis\n\nTH\n\nRY\n\nSTAp\n\n\n\nsa\n\n\n\noe\n\nS\n\nVf\n\npix",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "o\n\noe\n\n \n\nDs\n\nhad\n\ne\n\nSS\n\na\n\nae\n\na\n\n\n\nSr\n\nSS\n\n \n\nA\n\nSs\n\naS\n\n\n\ns\n\neh\n\ne\n\nEy\n\noe\n\nOo\n\nee\n\nSRS\n\nis\n\nTH\n\nRY\n\nSTAp\n\n\n\naS\n\n\n\noe\n\nS\n\nVf\n\npix",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Home Stretch",
+      "detected": "iH\n\n\n\naN\n\n\n\nLS\n\n\n\nSS\n\n\n\nS\n\noO\n\nay\n\n\n\nme\n\nBORN Sr\n\ney\n\n\n\nLy\n\nIbi",
+      "score": 0.21333333333333335,
+      "method": "inverted",
+      "psm": 11
+    },
+    "angle": 66.8,
+    "expected_name": "Header"
+  },
+  "vagabond": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "GA\n\nsis\n\nZyz\n\n\n\nww\n\nLij\n\nYQ",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "ZA\n\nsis\n\nZyz\n\n\n\now\n\nQZ\n\nYF",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "NN\n\nOr\n\nofl\n\nees\n\nGZ\n\nne\n\nZs\n\nEA\n\nMe\n\nLZ",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "NN\n\nOr\n\nofl\n\naes\n\nGZ\n\nne\n\nZs\n\nEs\n\nhe",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Lower Home Stretch",
+      "detected": "NN\n\nOr\n\nofl\n\naes\n\nGZ\n\nne\n\nZs\n\nEs\n\nhe",
+      "score": 0.25925925925925924,
+      "method": "scaled_inv",
+      "psm": 11
+    },
+    "angle": 118.7,
+    "expected_name": "Vagabond"
+  },
+  "caper": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "ot\n\nS",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "ot\n\nS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "a\n\na\n\n\n\nmee\n\ni\n\n\n\nos\n\nC\n\n\n\n\n\nSt",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "B\n\na\n\nSee\n\nmee\n\ni\n\naes\n\nos\n\nCZ\n\n\n\n\n\nSi",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Northstar",
+      "detected": "ot\n\nS",
+      "score": 0.42857142857142855,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 90.0,
+    "expected_name": "Caper"
+  },
+  "timberline": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "NO\n\n\n\nwie\n\nL\n\nWf\n\nYY aS",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "Wo\n\n\n\nwie\n\nL\n\nWf\n\nYY aS",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Uy\n\nVf\n\nSS\n\ner\n\nANIdpy\n\nOP \n\n\n\nUe oe\n\nMe\n\nSN\n\nY",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "Uy\n\nVf\n\nSS\n\ner\n\nANidp\n\nPP \n\ne\n\nWe oe\n\nMe\n\nS\n\nY",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Snow Play",
+      "detected": "NO\n\n\n\nwie\n\nL\n\nWf\n\nYY aS",
+      "score": 0.3125,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 147.0,
+    "expected_name": "Timberline"
+  },
+  "start-park": {
+    "status": "unmatched",
+    "texts": [
+      {
+        "text": "a\n\n\n\ncea\n\n\n\n\n\nara\n\ns\n\n\n\n\n\n\n\n\n\nSS\n\n\n\na\n\nat\n\nae\n\nPues\n\n\n\na\n\nie\n\nSS\n\n Om\n\nA ONIN\n\nGets\n\n\n\nEse\n\n\n\n\n\nXS\n\n\n\nva\n\n\n\nee \n\nae",
+        "method": "enhanced",
+        "psm": 11
+      },
+      {
+        "text": "a\n\n\n\ncea\n\n\n\n\n\nara\n\ns\n\n\n\n\n\n\n\n\n\nSS\n\n\n\na\n\ntS\n\nae\n\nPng\n\n\n\na\n\nPe\n\nSS\n\n Om\n\nA ONIN\n\nGets\n\n\n\nEse\n\n\n\n\n\naS\n\n\n\nve\n\ns\n\nee \n\na",
+        "method": "inverted",
+        "psm": 11
+      },
+      {
+        "text": "Sem\n\n\n\nUL\n\nPes\n\na\n\n\n\nI\n\naN\n\n\n\n\n\na\n\nSe\n\n ae\n\na\n\n\n\n\n\n\n\n\n\n ram\n\nWw\n\nWw S\n\n\n\n\n\n \n\n\n\na\n\nten\n\n\n\n Soe\n\nag\n\n\n\nwe Sie \n\nHou \n\nte\n\nx\n\nm\n\nmos acd\n\nsf\n\n\n\nMle On\n\nNib\n\nMen\n\nIs\n\n\n\n\n\n\n\n\n\nS\n\n\n\n\n\na\n\n\n\nmis\n\nTi\n\nGe",
+        "method": "scaled",
+        "psm": 11
+      },
+      {
+        "text": "on\n\n\n\nLU\n\nres\n\nee\n\n\n\nIK\n\naN\n\n\n\n\n\na\n\nSs\n\n\n\na\n\n\n\n\n\n\n\n\n\n rane\n\nWw\n\nWS\n\n\n\n\n\n \n\n\n\n\n\nten\n\n\n\n ee oe\n\nag\n\n\n\n SL \n\nHou \n\nte\n\nx\n\nM\n\nmo Pac\n\naf\n\n\n\nMle ont\n\nNib\n\nMen\n\nIs\n\n\n\n\n\n\n\n\n\niS\n\n\n\n\n\nte\n\n\n\nwis\n\nTi\n\nGe",
+        "method": "scaled_inv",
+        "psm": 11
+      }
+    ],
+    "match": {
+      "name": "Mountain Training Station",
+      "detected": "a\n\n\n\ncea\n\n\n\n\n\nara\n\ns\n\n\n\n\n\n\n\n\n\nSS\n\n\n\na\n\nat\n\nae\n\nPues\n\n\n\na\n\nie\n\nSS\n\n Om\n\nA ONIN\n\nGets\n\n\n\nEse\n\n\n\n\n\nXS\n\n\n\nva\n\n\n\nee \n\nae",
+      "score": 0.14285714285714285,
+      "method": "enhanced",
+      "psm": 11
+    },
+    "angle": 88.3,
+    "expected_name": "Start Park"
+  }
+}

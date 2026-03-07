@@ -1,0 +1,4404 @@
+{
+  "snowshed": [
+    {
+      "num": 1,
+      "current_trail_id": "idler",
+      "current_name": "Idler",
+      "difficulty": "green",
+      "center_x": 6.3,
+      "center_y": 63.5,
+      "top_y": 62.0,
+      "bot_y": 65.0,
+      "left_x": 6.0,
+      "right_x": 6.5,
+      "points": [
+        [
+          6.5,
+          62.0
+        ],
+        [
+          6.3,
+          63.5
+        ],
+        [
+          6.0,
+          65.0
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "current_trail_id": "snow-play",
+      "current_name": "Snow Play",
+      "difficulty": "green",
+      "center_x": 6.9,
+      "center_y": 65.5,
+      "top_y": 65.0,
+      "bot_y": 66.0,
+      "left_x": 6.8,
+      "right_x": 7.0,
+      "points": [
+        [
+          7.0,
+          65.0
+        ],
+        [
+          6.8,
+          66.0
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "current_trail_id": "snowshed-crossover",
+      "current_name": "Crossover",
+      "difficulty": "green",
+      "center_x": 6.5,
+      "center_y": 63.0,
+      "top_y": 63.0,
+      "bot_y": 63.0,
+      "left_x": 5.5,
+      "right_x": 7.5,
+      "points": [
+        [
+          5.5,
+          63.0
+        ],
+        [
+          6.5,
+          63.0
+        ],
+        [
+          7.5,
+          63.0
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "current_trail_id": "yodeler",
+      "current_name": "Yodeler",
+      "difficulty": "green",
+      "center_x": 7.8,
+      "center_y": 63.5,
+      "top_y": 62.0,
+      "bot_y": 65.0,
+      "left_x": 7.5,
+      "right_x": 8.0,
+      "points": [
+        [
+          8.0,
+          62.0
+        ],
+        [
+          7.8,
+          63.5
+        ],
+        [
+          7.5,
+          65.0
+        ]
+      ]
+    }
+  ],
+  "sunrise": [
+    {
+      "num": 1,
+      "current_trail_id": "bear-cub",
+      "current_name": "Bear Cub",
+      "difficulty": "green",
+      "center_x": 10.9,
+      "center_y": 39.9,
+      "top_y": 37.6,
+      "bot_y": 42.3,
+      "left_x": 9.9,
+      "right_x": 12.9,
+      "points": [
+        [
+          12.9,
+          37.6
+        ],
+        [
+          12.9,
+          37.8
+        ],
+        [
+          11.1,
+          38.5
+        ],
+        [
+          10.2,
+          39.2
+        ],
+        [
+          9.9,
+          39.8
+        ],
+        [
+          9.9,
+          40.5
+        ],
+        [
+          10.4,
+          41.6
+        ],
+        [
+          10.4,
+          42.0
+        ],
+        [
+          10.1,
+          42.3
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "current_trail_id": "bear-view",
+      "current_name": "Bear View",
+      "difficulty": "blue",
+      "center_x": 11.2,
+      "center_y": 39.9,
+      "top_y": 38.7,
+      "bot_y": 41.4,
+      "left_x": 10.5,
+      "right_x": 12.3,
+      "points": [
+        [
+          12.3,
+          38.7
+        ],
+        [
+          11.6,
+          38.9
+        ],
+        [
+          10.5,
+          39.8
+        ],
+        [
+          10.5,
+          40.5
+        ],
+        [
+          11.3,
+          41.4
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "current_trail_id": "rendezvous",
+      "current_name": "Rendezvous",
+      "difficulty": "green",
+      "center_x": 12.9,
+      "center_y": 59.4,
+      "top_y": 57.4,
+      "bot_y": 62.7,
+      "left_x": 11.7,
+      "right_x": 14.0,
+      "points": [
+        [
+          14.0,
+          57.4
+        ],
+        [
+          14.0,
+          57.8
+        ],
+        [
+          13.4,
+          58.0
+        ],
+        [
+          12.9,
+          58.5
+        ],
+        [
+          12.6,
+          59.1
+        ],
+        [
+          11.9,
+          62.2
+        ],
+        [
+          11.7,
+          62.7
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "current_trail_id": "sun-dog",
+      "current_name": "Sun Dog",
+      "difficulty": "green",
+      "center_x": 5.0,
+      "center_y": 49.6,
+      "top_y": 42.9,
+      "bot_y": 61.8,
+      "left_x": 3.2,
+      "right_x": 7.2,
+      "points": [
+        [
+          7.2,
+          42.9
+        ],
+        [
+          7.2,
+          43.2
+        ],
+        [
+          4.8,
+          44.0
+        ],
+        [
+          3.8,
+          46.3
+        ],
+        [
+          4.1,
+          48.0
+        ],
+        [
+          5.7,
+          49.4
+        ],
+        [
+          5.9,
+          50.0
+        ],
+        [
+          3.2,
+          60.5
+        ],
+        [
+          3.3,
+          61.8
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "current_trail_id": "sunrise-connector",
+      "current_name": "Sunrise Connector",
+      "difficulty": "green",
+      "center_x": 11.0,
+      "center_y": 39.1,
+      "top_y": 37.8,
+      "bot_y": 41.4,
+      "left_x": 9.9,
+      "right_x": 12.0,
+      "points": [
+        [
+          12.0,
+          37.8
+        ],
+        [
+          12.0,
+          38.1
+        ],
+        [
+          10.5,
+          38.7
+        ],
+        [
+          9.9,
+          39.6
+        ],
+        [
+          10.4,
+          41.4
+        ]
+      ]
+    }
+  ],
+  "bear-mountain": [
+    {
+      "num": 1,
+      "current_trail_id": "bear-claw",
+      "current_name": "Bear Claw",
+      "difficulty": "blue",
+      "center_x": 32.2,
+      "center_y": 46.6,
+      "top_y": 38.9,
+      "bot_y": 53.8,
+      "left_x": 30.1,
+      "right_x": 33.1,
+      "points": [
+        [
+          31.7,
+          38.9
+        ],
+        [
+          32.3,
+          41.6
+        ],
+        [
+          33.1,
+          43.2
+        ],
+        [
+          33.0,
+          44.5
+        ],
+        [
+          32.1,
+          46.0
+        ],
+        [
+          32.1,
+          47.4
+        ],
+        [
+          32.9,
+          51.6
+        ],
+        [
+          32.2,
+          52.7
+        ],
+        [
+          30.1,
+          53.8
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "current_trail_id": "bear-mountain-liftline",
+      "current_name": "Bear Mountain Liftline",
+      "difficulty": "black",
+      "center_x": 31.6,
+      "center_y": 66.2,
+      "top_y": 65.8,
+      "bot_y": 66.7,
+      "left_x": 30.9,
+      "right_x": 32.3,
+      "points": [
+        [
+          32.3,
+          65.8
+        ],
+        [
+          30.9,
+          66.7
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "current_trail_id": "bear-run",
+      "current_name": "Bear Run",
+      "difficulty": "blue",
+      "center_x": 26.9,
+      "center_y": 20.0,
+      "top_y": 18.1,
+      "bot_y": 21.6,
+      "left_x": 25.1,
+      "right_x": 28.1,
+      "points": [
+        [
+          28.1,
+          18.1
+        ],
+        [
+          28.0,
+          18.8
+        ],
+        [
+          25.1,
+          20.3
+        ],
+        [
+          25.8,
+          21.0
+        ],
+        [
+          27.4,
+          21.6
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "current_trail_id": "bear-trax",
+      "current_name": "Bear Trax",
+      "difficulty": "blue",
+      "center_x": 36.7,
+      "center_y": 66.8,
+      "top_y": 62.7,
+      "bot_y": 70.7,
+      "left_x": 34.2,
+      "right_x": 38.3,
+      "points": [
+        [
+          37.8,
+          62.7
+        ],
+        [
+          38.3,
+          64.2
+        ],
+        [
+          38.3,
+          65.1
+        ],
+        [
+          37.9,
+          66.0
+        ],
+        [
+          36.8,
+          67.6
+        ],
+        [
+          36.4,
+          68.0
+        ],
+        [
+          35.8,
+          68.2
+        ],
+        [
+          35.2,
+          68.9
+        ],
+        [
+          34.2,
+          70.7
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "current_trail_id": "centerpiece",
+      "current_name": "Centerpiece",
+      "difficulty": "double-black",
+      "center_x": 23.3,
+      "center_y": 52.2,
+      "top_y": 50.9,
+      "bot_y": 53.4,
+      "left_x": 23.0,
+      "right_x": 23.6,
+      "points": [
+        [
+          23.6,
+          50.9
+        ],
+        [
+          23.0,
+          53.4
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "current_trail_id": "falls-brook",
+      "current_name": "Falls Brook",
+      "difficulty": "blue",
+      "center_x": 33.0,
+      "center_y": 54.0,
+      "top_y": 50.9,
+      "bot_y": 57.4,
+      "left_x": 30.9,
+      "right_x": 34.1,
+      "points": [
+        [
+          34.1,
+          50.9
+        ],
+        [
+          33.8,
+          51.4
+        ],
+        [
+          34.0,
+          51.6
+        ],
+        [
+          33.9,
+          53.8
+        ],
+        [
+          33.6,
+          54.5
+        ],
+        [
+          31.8,
+          55.8
+        ],
+        [
+          31.6,
+          56.7
+        ],
+        [
+          30.9,
+          57.4
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "current_trail_id": "growler",
+      "current_name": "Growler",
+      "difficulty": "double-black",
+      "center_x": 35.8,
+      "center_y": 58.5,
+      "top_y": 51.6,
+      "bot_y": 63.8,
+      "left_x": 34.7,
+      "right_x": 37.5,
+      "points": [
+        [
+          37.5,
+          51.6
+        ],
+        [
+          36.6,
+          53.6
+        ],
+        [
+          36.7,
+          56.2
+        ],
+        [
+          35.2,
+          57.8
+        ],
+        [
+          34.7,
+          58.7
+        ],
+        [
+          36.0,
+          60.5
+        ],
+        [
+          35.7,
+          61.4
+        ],
+        [
+          34.8,
+          62.5
+        ],
+        [
+          35.0,
+          63.8
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "current_trail_id": "lower-wildfire",
+      "current_name": "Lower Wildfire",
+      "difficulty": "blue",
+      "center_x": 38.0,
+      "center_y": 55.0,
+      "top_y": 52.9,
+      "bot_y": 56.7,
+      "left_x": 37.6,
+      "right_x": 38.6,
+      "points": [
+        [
+          37.6,
+          52.9
+        ],
+        [
+          37.7,
+          54.3
+        ],
+        [
+          38.2,
+          56.0
+        ],
+        [
+          38.6,
+          56.7
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "current_trail_id": "outer-limits",
+      "current_name": "Outer Limits",
+      "difficulty": "double-black",
+      "center_x": 36.3,
+      "center_y": 48.9,
+      "top_y": 33.2,
+      "bot_y": 60.7,
+      "left_x": 32.7,
+      "right_x": 39.6,
+      "points": [
+        [
+          33.8,
+          33.2
+        ],
+        [
+          32.7,
+          35.2
+        ],
+        [
+          39.6,
+          45.2
+        ],
+        [
+          39.6,
+          47.4
+        ],
+        [
+          36.9,
+          54.0
+        ],
+        [
+          37.1,
+          56.5
+        ],
+        [
+          34.9,
+          59.1
+        ],
+        [
+          35.6,
+          60.7
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "current_trail_id": "skye-burst-bear",
+      "current_name": "Skyeburst",
+      "difficulty": "blue",
+      "center_x": 14.1,
+      "center_y": 30.6,
+      "top_y": 27.8,
+      "bot_y": 33.2,
+      "left_x": 12.0,
+      "right_x": 16.3,
+      "points": [
+        [
+          16.3,
+          27.8
+        ],
+        [
+          16.1,
+          28.3
+        ],
+        [
+          15.4,
+          29.0
+        ],
+        [
+          12.9,
+          30.5
+        ],
+        [
+          12.9,
+          31.0
+        ],
+        [
+          13.8,
+          31.6
+        ],
+        [
+          13.5,
+          32.1
+        ],
+        [
+          13.6,
+          32.3
+        ],
+        [
+          12.0,
+          33.2
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "current_trail_id": "spacewalk",
+      "current_name": "Spacewalk",
+      "difficulty": "double-black",
+      "center_x": 27.6,
+      "center_y": 51.3,
+      "top_y": 48.7,
+      "bot_y": 52.7,
+      "left_x": 26.6,
+      "right_x": 29.3,
+      "points": [
+        [
+          29.3,
+          48.7
+        ],
+        [
+          26.9,
+          52.5
+        ],
+        [
+          26.6,
+          52.7
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "current_trail_id": "the-stash",
+      "current_name": "The Stash",
+      "difficulty": "black",
+      "center_x": 34.8,
+      "center_y": 43.7,
+      "top_y": 42.5,
+      "bot_y": 44.5,
+      "left_x": 33.7,
+      "right_x": 36.2,
+      "points": [
+        [
+          36.2,
+          42.5
+        ],
+        [
+          35.6,
+          43.2
+        ],
+        [
+          34.5,
+          43.8
+        ],
+        [
+          34.2,
+          44.3
+        ],
+        [
+          33.7,
+          44.5
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "current_trail_id": "wildfire",
+      "current_name": "Wildfire",
+      "difficulty": "black",
+      "center_x": 26.4,
+      "center_y": 35.7,
+      "top_y": 32.1,
+      "bot_y": 39.2,
+      "left_x": 25.7,
+      "right_x": 27.0,
+      "points": [
+        [
+          27.0,
+          32.1
+        ],
+        [
+          25.7,
+          39.2
+        ]
+      ]
+    }
+  ],
+  "skye-peak": [
+    {
+      "num": 1,
+      "current_trail_id": "breakaway",
+      "current_name": "Breakaway",
+      "difficulty": "blue",
+      "center_x": 42.6,
+      "center_y": 56.2,
+      "top_y": 55.8,
+      "bot_y": 56.5,
+      "left_x": 42.5,
+      "right_x": 42.7,
+      "points": [
+        [
+          42.5,
+          55.8
+        ],
+        [
+          42.7,
+          56.5
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "current_trail_id": "catwalk",
+      "current_name": "Catwalk",
+      "difficulty": "blue",
+      "center_x": 39.3,
+      "center_y": 33.3,
+      "top_y": 32.3,
+      "bot_y": 34.3,
+      "left_x": 38.3,
+      "right_x": 40.5,
+      "points": [
+        [
+          40.5,
+          32.3
+        ],
+        [
+          40.2,
+          32.5
+        ],
+        [
+          40.1,
+          32.7
+        ],
+        [
+          39.3,
+          33.2
+        ],
+        [
+          39.1,
+          33.4
+        ],
+        [
+          38.9,
+          33.6
+        ],
+        [
+          38.7,
+          33.8
+        ],
+        [
+          38.5,
+          34.1
+        ],
+        [
+          38.3,
+          34.3
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "current_trail_id": "cruise-control",
+      "current_name": "Cruise Control",
+      "difficulty": "blue",
+      "center_x": 43.2,
+      "center_y": 24.3,
+      "top_y": 21.4,
+      "bot_y": 26.7,
+      "left_x": 41.5,
+      "right_x": 46.1,
+      "points": [
+        [
+          46.1,
+          21.4
+        ],
+        [
+          44.7,
+          22.5
+        ],
+        [
+          43.5,
+          23.9
+        ],
+        [
+          42.0,
+          24.5
+        ],
+        [
+          42.5,
+          24.7
+        ],
+        [
+          42.4,
+          26.5
+        ],
+        [
+          41.5,
+          26.7
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "current_trail_id": "dream-maker",
+      "current_name": "Dream Maker",
+      "difficulty": "black",
+      "center_x": 39.4,
+      "center_y": 29.5,
+      "top_y": 27.2,
+      "bot_y": 32.1,
+      "left_x": 37.9,
+      "right_x": 41.4,
+      "points": [
+        [
+          41.4,
+          27.2
+        ],
+        [
+          40.6,
+          28.1
+        ],
+        [
+          39.9,
+          28.5
+        ],
+        [
+          39.9,
+          28.7
+        ],
+        [
+          39.2,
+          29.6
+        ],
+        [
+          38.8,
+          29.8
+        ],
+        [
+          38.8,
+          30.1
+        ],
+        [
+          37.9,
+          31.6
+        ],
+        [
+          38.0,
+          32.1
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "current_trail_id": "dream-maker-headwall",
+      "current_name": "Dream Maker Headwall",
+      "difficulty": "double-black",
+      "center_x": 47.4,
+      "center_y": 48.2,
+      "top_y": 46.7,
+      "bot_y": 49.6,
+      "left_x": 47.3,
+      "right_x": 47.5,
+      "points": [
+        [
+          47.5,
+          46.7
+        ],
+        [
+          47.3,
+          49.6
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "current_trail_id": "field-goal",
+      "current_name": "Field Goal",
+      "difficulty": "blue",
+      "center_x": 51.2,
+      "center_y": 55.6,
+      "top_y": 54.9,
+      "bot_y": 56.2,
+      "left_x": 51.1,
+      "right_x": 51.4,
+      "points": [
+        [
+          51.4,
+          54.9
+        ],
+        [
+          51.3,
+          55.1
+        ],
+        [
+          51.3,
+          55.4
+        ],
+        [
+          51.3,
+          55.6
+        ],
+        [
+          51.2,
+          55.8
+        ],
+        [
+          51.1,
+          56.0
+        ],
+        [
+          51.1,
+          56.2
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "current_trail_id": "great-bear",
+      "current_name": "Great Bear",
+      "difficulty": "blue",
+      "center_x": 53.4,
+      "center_y": 53.1,
+      "top_y": 52.5,
+      "bot_y": 53.8,
+      "left_x": 52.5,
+      "right_x": 54.2,
+      "points": [
+        [
+          52.5,
+          52.5
+        ],
+        [
+          52.8,
+          52.7
+        ],
+        [
+          53.1,
+          52.9
+        ],
+        [
+          53.4,
+          53.1
+        ],
+        [
+          53.9,
+          53.4
+        ],
+        [
+          54.1,
+          53.6
+        ],
+        [
+          54.2,
+          53.8
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "current_trail_id": "great-eastern",
+      "current_name": "Great Eastern",
+      "difficulty": "green",
+      "center_x": 49.7,
+      "center_y": 59.9,
+      "top_y": 57.6,
+      "bot_y": 62.9,
+      "left_x": 48.1,
+      "right_x": 51.2,
+      "points": [
+        [
+          51.2,
+          57.6
+        ],
+        [
+          51.2,
+          58.0
+        ],
+        [
+          50.3,
+          58.2
+        ],
+        [
+          50.3,
+          58.5
+        ],
+        [
+          49.7,
+          59.1
+        ],
+        [
+          49.2,
+          60.7
+        ],
+        [
+          48.6,
+          61.8
+        ],
+        [
+          48.5,
+          62.5
+        ],
+        [
+          48.1,
+          62.9
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "current_trail_id": "highline",
+      "current_name": "Highline",
+      "difficulty": "black",
+      "center_x": 44.6,
+      "center_y": 61.4,
+      "top_y": 58.7,
+      "bot_y": 62.9,
+      "left_x": 44.3,
+      "right_x": 44.8,
+      "points": [
+        [
+          44.8,
+          58.7
+        ],
+        [
+          44.8,
+          62.7
+        ],
+        [
+          44.3,
+          62.9
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "current_trail_id": "home-stretch",
+      "current_name": "Home Stretch",
+      "difficulty": "green",
+      "center_x": 42.0,
+      "center_y": 66.5,
+      "top_y": 64.9,
+      "bot_y": 68.7,
+      "left_x": 39.9,
+      "right_x": 43.8,
+      "points": [
+        [
+          43.8,
+          64.9
+        ],
+        [
+          43.8,
+          65.1
+        ],
+        [
+          42.4,
+          66.0
+        ],
+        [
+          41.9,
+          66.5
+        ],
+        [
+          41.9,
+          66.7
+        ],
+        [
+          40.6,
+          67.8
+        ],
+        [
+          39.9,
+          68.7
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "current_trail_id": "juggernaut",
+      "current_name": "Juggernaut",
+      "difficulty": "green",
+      "center_x": 41.4,
+      "center_y": 16.5,
+      "top_y": 15.6,
+      "bot_y": 17.4,
+      "left_x": 39.0,
+      "right_x": 43.5,
+      "points": [
+        [
+          43.5,
+          15.6
+        ],
+        [
+          43.2,
+          15.9
+        ],
+        [
+          42.6,
+          16.1
+        ],
+        [
+          42.0,
+          16.3
+        ],
+        [
+          41.4,
+          16.5
+        ],
+        [
+          40.8,
+          16.8
+        ],
+        [
+          40.2,
+          17.0
+        ],
+        [
+          39.6,
+          17.2
+        ],
+        [
+          39.0,
+          17.4
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "current_trail_id": "lower-home-stretch",
+      "current_name": "Lower Home Stretch",
+      "difficulty": "green",
+      "center_x": 44.2,
+      "center_y": 15.4,
+      "top_y": 15.0,
+      "bot_y": 15.9,
+      "left_x": 43.5,
+      "right_x": 44.9,
+      "points": [
+        [
+          44.9,
+          15.0
+        ],
+        [
+          43.5,
+          15.9
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "current_trail_id": "mouse-trap",
+      "current_name": "Mouse Trap",
+      "difficulty": "blue",
+      "center_x": 36.1,
+      "center_y": 41.2,
+      "top_y": 39.6,
+      "bot_y": 43.2,
+      "left_x": 34.6,
+      "right_x": 37.6,
+      "points": [
+        [
+          37.6,
+          39.6
+        ],
+        [
+          36.1,
+          40.9
+        ],
+        [
+          34.6,
+          43.2
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "current_trail_id": "ovation",
+      "current_name": "Ovation",
+      "difficulty": "double-black",
+      "center_x": 51.7,
+      "center_y": 51.8,
+      "top_y": 48.7,
+      "bot_y": 54.9,
+      "left_x": 50.9,
+      "right_x": 52.5,
+      "points": [
+        [
+          52.5,
+          48.7
+        ],
+        [
+          52.3,
+          50.0
+        ],
+        [
+          51.1,
+          53.8
+        ],
+        [
+          50.9,
+          54.9
+        ]
+      ]
+    },
+    {
+      "num": 15,
+      "current_trail_id": "panic-button",
+      "current_name": "Panic Button",
+      "difficulty": "black",
+      "center_x": 39.8,
+      "center_y": 29.5,
+      "top_y": 25.9,
+      "bot_y": 33.0,
+      "left_x": 36.5,
+      "right_x": 42.9,
+      "points": [
+        [
+          42.9,
+          25.9
+        ],
+        [
+          41.9,
+          26.7
+        ],
+        [
+          41.8,
+          27.0
+        ],
+        [
+          42.2,
+          27.2
+        ],
+        [
+          39.5,
+          29.8
+        ],
+        [
+          38.4,
+          31.6
+        ],
+        [
+          37.7,
+          31.8
+        ],
+        [
+          36.5,
+          32.7
+        ],
+        [
+          37.2,
+          33.0
+        ]
+      ]
+    },
+    {
+      "num": 16,
+      "current_trail_id": "pipe-dream",
+      "current_name": "Pipe Dream",
+      "difficulty": "blue",
+      "center_x": 34.6,
+      "center_y": 37.2,
+      "top_y": 36.7,
+      "bot_y": 37.6,
+      "left_x": 34.3,
+      "right_x": 34.8,
+      "points": [
+        [
+          34.8,
+          36.7
+        ],
+        [
+          34.3,
+          37.6
+        ]
+      ]
+    },
+    {
+      "num": 17,
+      "current_trail_id": "roundabout",
+      "current_name": "Roundabout",
+      "difficulty": "blue",
+      "center_x": 30.1,
+      "center_y": 11.0,
+      "top_y": 10.3,
+      "bot_y": 11.6,
+      "left_x": 29.2,
+      "right_x": 31.0,
+      "points": [
+        [
+          31.0,
+          10.3
+        ],
+        [
+          30.8,
+          10.5
+        ],
+        [
+          30.3,
+          10.8
+        ],
+        [
+          30.1,
+          11.0
+        ],
+        [
+          29.7,
+          11.2
+        ],
+        [
+          29.5,
+          11.4
+        ],
+        [
+          29.2,
+          11.6
+        ]
+      ]
+    },
+    {
+      "num": 18,
+      "current_trail_id": "roundabout-glade",
+      "current_name": "Roundabout Glade",
+      "difficulty": "black",
+      "center_x": 47.2,
+      "center_y": 60.6,
+      "top_y": 58.9,
+      "bot_y": 62.5,
+      "left_x": 46.9,
+      "right_x": 47.7,
+      "points": [
+        [
+          47.0,
+          58.9
+        ],
+        [
+          47.0,
+          59.1
+        ],
+        [
+          46.9,
+          59.6
+        ],
+        [
+          46.9,
+          59.8
+        ],
+        [
+          46.9,
+          60.7
+        ],
+        [
+          46.9,
+          60.9
+        ],
+        [
+          47.7,
+          61.8
+        ],
+        [
+          47.7,
+          62.0
+        ],
+        [
+          47.4,
+          62.5
+        ]
+      ]
+    },
+    {
+      "num": 19,
+      "current_trail_id": "skye-hawk",
+      "current_name": "Skye Hawk",
+      "difficulty": "blue",
+      "center_x": 33.8,
+      "center_y": 26.2,
+      "top_y": 22.5,
+      "bot_y": 29.6,
+      "left_x": 32.8,
+      "right_x": 34.7,
+      "points": [
+        [
+          34.2,
+          22.5
+        ],
+        [
+          34.3,
+          23.6
+        ],
+        [
+          33.7,
+          24.7
+        ],
+        [
+          33.5,
+          25.9
+        ],
+        [
+          34.1,
+          27.2
+        ],
+        [
+          34.7,
+          27.6
+        ],
+        [
+          33.4,
+          28.7
+        ],
+        [
+          32.8,
+          29.6
+        ]
+      ]
+    },
+    {
+      "num": 20,
+      "current_trail_id": "skye-peak-liftline",
+      "current_name": "Skye Peak Liftline",
+      "difficulty": "black",
+      "center_x": 41.0,
+      "center_y": 66.3,
+      "top_y": 65.3,
+      "bot_y": 67.6,
+      "left_x": 39.7,
+      "right_x": 41.9,
+      "points": [
+        [
+          41.9,
+          65.3
+        ],
+        [
+          41.2,
+          66.0
+        ],
+        [
+          41.2,
+          66.2
+        ],
+        [
+          39.7,
+          67.6
+        ]
+      ]
+    },
+    {
+      "num": 21,
+      "current_trail_id": "skyebits",
+      "current_name": "Skyebits",
+      "difficulty": "blue",
+      "center_x": 52.3,
+      "center_y": 49.2,
+      "top_y": 46.5,
+      "bot_y": 52.3,
+      "left_x": 51.9,
+      "right_x": 52.7,
+      "points": [
+        [
+          52.4,
+          46.5
+        ],
+        [
+          52.3,
+          47.2
+        ],
+        [
+          52.6,
+          48.0
+        ],
+        [
+          52.7,
+          48.9
+        ],
+        [
+          52.1,
+          52.0
+        ],
+        [
+          51.9,
+          52.3
+        ]
+      ]
+    },
+    {
+      "num": 22,
+      "current_trail_id": "skyeburst",
+      "current_name": "Skyeburst",
+      "difficulty": "blue",
+      "center_x": 38.2,
+      "center_y": 45.9,
+      "top_y": 42.5,
+      "bot_y": 48.7,
+      "left_x": 37.3,
+      "right_x": 38.9,
+      "points": [
+        [
+          38.9,
+          42.5
+        ],
+        [
+          38.6,
+          43.4
+        ],
+        [
+          38.5,
+          44.7
+        ],
+        [
+          38.2,
+          45.8
+        ],
+        [
+          37.3,
+          48.0
+        ],
+        [
+          37.7,
+          48.3
+        ],
+        [
+          37.9,
+          48.7
+        ]
+      ]
+    },
+    {
+      "num": 23,
+      "current_trail_id": "skyelark",
+      "current_name": "Skyelark",
+      "difficulty": "blue",
+      "center_x": 46.1,
+      "center_y": 53.9,
+      "top_y": 48.0,
+      "bot_y": 56.9,
+      "left_x": 45.4,
+      "right_x": 46.6,
+      "points": [
+        [
+          45.4,
+          48.0
+        ],
+        [
+          45.5,
+          52.3
+        ],
+        [
+          46.4,
+          56.0
+        ],
+        [
+          46.4,
+          56.5
+        ],
+        [
+          46.6,
+          56.9
+        ]
+      ]
+    },
+    {
+      "num": 24,
+      "current_trail_id": "somewhere",
+      "current_name": "Somewhere",
+      "difficulty": "blue",
+      "center_x": 41.9,
+      "center_y": 23.9,
+      "top_y": 22.5,
+      "bot_y": 25.0,
+      "left_x": 41.3,
+      "right_x": 42.9,
+      "points": [
+        [
+          42.9,
+          22.5
+        ],
+        [
+          42.0,
+          23.4
+        ],
+        [
+          41.3,
+          24.7
+        ],
+        [
+          41.5,
+          25.0
+        ]
+      ]
+    },
+    {
+      "num": 25,
+      "current_trail_id": "tin-man",
+      "current_name": "Tin Man",
+      "difficulty": "blue",
+      "center_x": 44.5,
+      "center_y": 41.8,
+      "top_y": 41.2,
+      "bot_y": 42.5,
+      "left_x": 44.4,
+      "right_x": 44.6,
+      "points": [
+        [
+          44.6,
+          41.2
+        ],
+        [
+          44.6,
+          41.4
+        ],
+        [
+          44.6,
+          41.6
+        ],
+        [
+          44.6,
+          41.8
+        ],
+        [
+          44.6,
+          42.0
+        ],
+        [
+          44.4,
+          42.3
+        ],
+        [
+          44.4,
+          42.5
+        ]
+      ]
+    },
+    {
+      "num": 26,
+      "current_trail_id": "touch-down",
+      "current_name": "Touch Down",
+      "difficulty": "blue",
+      "center_x": 41.2,
+      "center_y": 30.7,
+      "top_y": 29.2,
+      "bot_y": 32.1,
+      "left_x": 40.0,
+      "right_x": 42.5,
+      "points": [
+        [
+          42.5,
+          29.2
+        ],
+        [
+          41.2,
+          30.1
+        ],
+        [
+          40.4,
+          31.0
+        ],
+        [
+          40.0,
+          31.2
+        ],
+        [
+          41.8,
+          32.1
+        ]
+      ]
+    },
+    {
+      "num": 27,
+      "current_trail_id": "twister",
+      "current_name": "Twister",
+      "difficulty": "blue",
+      "center_x": 45.5,
+      "center_y": 42.0,
+      "top_y": 40.9,
+      "bot_y": 42.7,
+      "left_x": 45.3,
+      "right_x": 45.6,
+      "points": [
+        [
+          45.6,
+          40.9
+        ],
+        [
+          45.5,
+          42.5
+        ],
+        [
+          45.3,
+          42.7
+        ]
+      ]
+    },
+    {
+      "num": 28,
+      "current_trail_id": "upper-catwalk",
+      "current_name": "Upper Catwalk",
+      "difficulty": "blue",
+      "center_x": 45.8,
+      "center_y": 61.7,
+      "top_y": 60.9,
+      "bot_y": 62.2,
+      "left_x": 45.4,
+      "right_x": 46.1,
+      "points": [
+        [
+          46.0,
+          60.9
+        ],
+        [
+          46.1,
+          62.0
+        ],
+        [
+          45.4,
+          62.2
+        ]
+      ]
+    },
+    {
+      "num": 29,
+      "current_trail_id": "upper-great-bear",
+      "current_name": "Upper Great Bear",
+      "difficulty": "blue",
+      "center_x": 40.5,
+      "center_y": 25.1,
+      "top_y": 24.7,
+      "bot_y": 25.4,
+      "left_x": 40.4,
+      "right_x": 40.7,
+      "points": [
+        [
+          40.4,
+          24.7
+        ],
+        [
+          40.7,
+          25.0
+        ],
+        [
+          40.6,
+          25.2
+        ],
+        [
+          40.4,
+          25.4
+        ]
+      ]
+    },
+    {
+      "num": 30,
+      "current_trail_id": "upper-skyeburst",
+      "current_name": "Upper Skyeburst",
+      "difficulty": "blue",
+      "center_x": 41.8,
+      "center_y": 45.7,
+      "top_y": 42.7,
+      "bot_y": 47.6,
+      "left_x": 40.5,
+      "right_x": 43.2,
+      "points": [
+        [
+          43.2,
+          42.7
+        ],
+        [
+          43.2,
+          44.5
+        ],
+        [
+          42.9,
+          45.2
+        ],
+        [
+          41.5,
+          46.0
+        ],
+        [
+          40.9,
+          46.7
+        ],
+        [
+          40.7,
+          47.4
+        ],
+        [
+          40.5,
+          47.6
+        ]
+      ]
+    },
+    {
+      "num": 31,
+      "current_trail_id": "upper-skyelark",
+      "current_name": "Upper Skyelark",
+      "difficulty": "blue",
+      "center_x": 41.7,
+      "center_y": 34.5,
+      "top_y": 31.6,
+      "bot_y": 37.6,
+      "left_x": 40.1,
+      "right_x": 43.1,
+      "points": [
+        [
+          42.3,
+          31.6
+        ],
+        [
+          42.5,
+          31.8
+        ],
+        [
+          42.3,
+          32.3
+        ],
+        [
+          43.1,
+          33.6
+        ],
+        [
+          41.4,
+          35.8
+        ],
+        [
+          41.3,
+          36.3
+        ],
+        [
+          40.7,
+          36.7
+        ],
+        [
+          40.1,
+          37.6
+        ]
+      ]
+    },
+    {
+      "num": 32,
+      "current_trail_id": "upper-vertigo",
+      "current_name": "Upper Vertigo",
+      "difficulty": "double-black",
+      "center_x": 44.9,
+      "center_y": 34.3,
+      "top_y": 31.0,
+      "bot_y": 37.6,
+      "left_x": 44.8,
+      "right_x": 45.0,
+      "points": [
+        [
+          45.0,
+          31.0
+        ],
+        [
+          44.8,
+          37.6
+        ]
+      ]
+    },
+    {
+      "num": 33,
+      "current_trail_id": "valley-plunge",
+      "current_name": "Valley Plunge",
+      "difficulty": "blue",
+      "center_x": 46.8,
+      "center_y": 55.6,
+      "top_y": 54.7,
+      "bot_y": 56.5,
+      "left_x": 46.7,
+      "right_x": 46.8,
+      "points": [
+        [
+          46.8,
+          54.7
+        ],
+        [
+          46.8,
+          54.9
+        ],
+        [
+          46.8,
+          55.1
+        ],
+        [
+          46.8,
+          55.4
+        ],
+        [
+          46.8,
+          55.6
+        ],
+        [
+          46.7,
+          55.8
+        ],
+        [
+          46.7,
+          56.0
+        ],
+        [
+          46.7,
+          56.2
+        ],
+        [
+          46.7,
+          56.5
+        ]
+      ]
+    },
+    {
+      "num": 34,
+      "current_trail_id": "vertigo",
+      "current_name": "Vertigo",
+      "difficulty": "double-black",
+      "center_x": 39.8,
+      "center_y": 44.0,
+      "top_y": 33.2,
+      "bot_y": 51.1,
+      "left_x": 37.3,
+      "right_x": 44.0,
+      "points": [
+        [
+          44.0,
+          33.2
+        ],
+        [
+          43.5,
+          34.3
+        ],
+        [
+          37.3,
+          41.4
+        ],
+        [
+          39.1,
+          42.9
+        ],
+        [
+          40.0,
+          44.9
+        ],
+        [
+          39.7,
+          48.3
+        ],
+        [
+          38.7,
+          50.0
+        ],
+        [
+          38.0,
+          50.3
+        ],
+        [
+          37.8,
+          51.1
+        ]
+      ]
+    },
+    {
+      "num": 35,
+      "current_trail_id": "woodward-peace-park",
+      "current_name": "Woodward Peace Park",
+      "difficulty": "blue",
+      "center_x": 36.6,
+      "center_y": 26.8,
+      "top_y": 26.5,
+      "bot_y": 27.2,
+      "left_x": 35.7,
+      "right_x": 37.3,
+      "points": [
+        [
+          37.3,
+          26.5
+        ],
+        [
+          36.8,
+          26.7
+        ],
+        [
+          36.4,
+          27.0
+        ],
+        [
+          35.7,
+          27.2
+        ]
+      ]
+    }
+  ],
+  "killington-peak": [
+    {
+      "num": 1,
+      "current_trail_id": "anarchy",
+      "current_name": "Anarchy",
+      "difficulty": "double-black",
+      "center_x": 62.3,
+      "center_y": 14.2,
+      "top_y": 13.9,
+      "bot_y": 14.5,
+      "left_x": 62.2,
+      "right_x": 62.4,
+      "points": [
+        [
+          62.2,
+          13.9
+        ],
+        [
+          62.2,
+          14.1
+        ],
+        [
+          62.4,
+          14.5
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "current_trail_id": "big-dipper-glade",
+      "current_name": "Big Dipper Glade",
+      "difficulty": "double-black",
+      "center_x": 51.2,
+      "center_y": 17.5,
+      "top_y": 14.5,
+      "bot_y": 21.4,
+      "left_x": 50.4,
+      "right_x": 52.4,
+      "points": [
+        [
+          52.4,
+          14.5
+        ],
+        [
+          51.9,
+          14.8
+        ],
+        [
+          51.3,
+          15.6
+        ],
+        [
+          51.0,
+          16.3
+        ],
+        [
+          50.9,
+          17.9
+        ],
+        [
+          51.3,
+          19.0
+        ],
+        [
+          50.7,
+          20.1
+        ],
+        [
+          50.4,
+          21.4
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "current_trail_id": "cascade",
+      "current_name": "Cascade",
+      "difficulty": "double-black",
+      "center_x": 61.5,
+      "center_y": 17.8,
+      "top_y": 14.1,
+      "bot_y": 21.4,
+      "left_x": 60.7,
+      "right_x": 62.3,
+      "points": [
+        [
+          60.7,
+          14.1
+        ],
+        [
+          62.3,
+          21.4
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "current_trail_id": "double-dipper",
+      "current_name": "Double Dipper",
+      "difficulty": "double-black",
+      "center_x": 51.1,
+      "center_y": 31.0,
+      "top_y": 27.0,
+      "bot_y": 36.5,
+      "left_x": 48.6,
+      "right_x": 55.2,
+      "points": [
+        [
+          48.6,
+          27.0
+        ],
+        [
+          49.7,
+          29.2
+        ],
+        [
+          50.2,
+          29.8
+        ],
+        [
+          51.6,
+          32.3
+        ],
+        [
+          55.2,
+          36.5
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "current_trail_id": "downdraft",
+      "current_name": "Downdraft",
+      "difficulty": "double-black",
+      "center_x": 52.1,
+      "center_y": 16.5,
+      "top_y": 10.5,
+      "bot_y": 22.1,
+      "left_x": 50.4,
+      "right_x": 54.6,
+      "points": [
+        [
+          54.6,
+          10.5
+        ],
+        [
+          53.8,
+          12.1
+        ],
+        [
+          53.7,
+          13.9
+        ],
+        [
+          52.3,
+          15.0
+        ],
+        [
+          50.9,
+          17.2
+        ],
+        [
+          51.4,
+          17.9
+        ],
+        [
+          50.9,
+          19.0
+        ],
+        [
+          51.1,
+          20.5
+        ],
+        [
+          50.4,
+          22.1
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "current_trail_id": "east-fall",
+      "current_name": "East Fall",
+      "difficulty": "black",
+      "center_x": 48.0,
+      "center_y": 23.1,
+      "top_y": 21.0,
+      "bot_y": 25.6,
+      "left_x": 45.5,
+      "right_x": 50.0,
+      "points": [
+        [
+          50.0,
+          21.0
+        ],
+        [
+          50.0,
+          21.4
+        ],
+        [
+          48.2,
+          22.5
+        ],
+        [
+          46.4,
+          25.0
+        ],
+        [
+          45.5,
+          25.6
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "current_trail_id": "escapade",
+      "current_name": "Escapade",
+      "difficulty": "black",
+      "center_x": 54.1,
+      "center_y": 11.1,
+      "top_y": 9.7,
+      "bot_y": 14.1,
+      "left_x": 53.7,
+      "right_x": 54.5,
+      "points": [
+        [
+          54.4,
+          9.7
+        ],
+        [
+          54.3,
+          9.9
+        ],
+        [
+          54.5,
+          10.1
+        ],
+        [
+          54.0,
+          10.5
+        ],
+        [
+          53.7,
+          11.2
+        ],
+        [
+          53.7,
+          11.6
+        ],
+        [
+          54.2,
+          11.9
+        ],
+        [
+          54.2,
+          14.1
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "current_trail_id": "fis",
+      "current_name": "FIS",
+      "difficulty": "black",
+      "center_x": 57.5,
+      "center_y": 52.5,
+      "top_y": 51.8,
+      "bot_y": 53.1,
+      "left_x": 56.8,
+      "right_x": 58.0,
+      "points": [
+        [
+          56.8,
+          51.8
+        ],
+        [
+          57.6,
+          52.7
+        ],
+        [
+          58.0,
+          53.1
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "current_trail_id": "flume",
+      "current_name": "Flume",
+      "difficulty": "black",
+      "center_x": 46.4,
+      "center_y": 24.1,
+      "top_y": 21.2,
+      "bot_y": 26.3,
+      "left_x": 44.0,
+      "right_x": 49.3,
+      "points": [
+        [
+          49.3,
+          21.2
+        ],
+        [
+          48.4,
+          21.6
+        ],
+        [
+          46.2,
+          24.5
+        ],
+        [
+          45.6,
+          24.7
+        ],
+        [
+          44.8,
+          26.1
+        ],
+        [
+          44.0,
+          26.3
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "current_trail_id": "great-eastern-kp",
+      "current_name": "Great Eastern (K.P.)",
+      "difficulty": "green",
+      "center_x": 66.6,
+      "center_y": 17.1,
+      "top_y": 12.5,
+      "bot_y": 21.6,
+      "left_x": 61.2,
+      "right_x": 71.8,
+      "points": [
+        [
+          61.2,
+          12.5
+        ],
+        [
+          63.2,
+          13.6
+        ],
+        [
+          63.2,
+          13.9
+        ],
+        [
+          65.1,
+          15.4
+        ],
+        [
+          67.4,
+          16.5
+        ],
+        [
+          68.1,
+          19.4
+        ],
+        [
+          68.6,
+          19.9
+        ],
+        [
+          70.7,
+          20.7
+        ],
+        [
+          71.8,
+          21.6
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "current_trail_id": "header-kp",
+      "current_name": "Header",
+      "difficulty": "blue",
+      "center_x": 60.8,
+      "center_y": 17.7,
+      "top_y": 14.1,
+      "bot_y": 19.4,
+      "left_x": 60.3,
+      "right_x": 61.4,
+      "points": [
+        [
+          60.5,
+          14.1
+        ],
+        [
+          61.1,
+          17.9
+        ],
+        [
+          60.3,
+          18.1
+        ],
+        [
+          60.5,
+          18.3
+        ],
+        [
+          61.2,
+          18.5
+        ],
+        [
+          61.4,
+          19.4
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "current_trail_id": "high-road",
+      "current_name": "High Road",
+      "difficulty": "blue",
+      "center_x": 52.7,
+      "center_y": 39.5,
+      "top_y": 33.2,
+      "bot_y": 45.2,
+      "left_x": 50.2,
+      "right_x": 54.4,
+      "points": [
+        [
+          50.2,
+          33.2
+        ],
+        [
+          50.9,
+          35.6
+        ],
+        [
+          51.6,
+          36.9
+        ],
+        [
+          52.9,
+          38.1
+        ],
+        [
+          53.4,
+          40.1
+        ],
+        [
+          54.1,
+          40.7
+        ],
+        [
+          53.6,
+          41.6
+        ],
+        [
+          53.2,
+          43.8
+        ],
+        [
+          54.4,
+          45.2
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "current_trail_id": "julio",
+      "current_name": "Julio",
+      "difficulty": "black",
+      "center_x": 58.4,
+      "center_y": 42.2,
+      "top_y": 41.2,
+      "bot_y": 43.2,
+      "left_x": 57.9,
+      "right_x": 58.9,
+      "points": [
+        [
+          57.9,
+          41.2
+        ],
+        [
+          58.0,
+          41.4
+        ],
+        [
+          58.2,
+          41.8
+        ],
+        [
+          58.3,
+          42.0
+        ],
+        [
+          58.5,
+          42.3
+        ],
+        [
+          58.6,
+          42.5
+        ],
+        [
+          58.6,
+          42.7
+        ],
+        [
+          58.7,
+          42.9
+        ],
+        [
+          58.9,
+          43.2
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "current_trail_id": "k1-gondola-run",
+      "current_name": "K-1 Gondola Run",
+      "difficulty": "blue",
+      "center_x": 66.2,
+      "center_y": 23.4,
+      "top_y": 19.4,
+      "bot_y": 25.4,
+      "left_x": 64.5,
+      "right_x": 67.2,
+      "points": [
+        [
+          64.5,
+          19.4
+        ],
+        [
+          65.2,
+          20.7
+        ],
+        [
+          66.8,
+          24.5
+        ],
+        [
+          66.8,
+          25.0
+        ],
+        [
+          66.6,
+          25.2
+        ],
+        [
+          67.2,
+          25.4
+        ]
+      ]
+    },
+    {
+      "num": 15,
+      "current_trail_id": "killington-liftline",
+      "current_name": "Killington Liftline",
+      "difficulty": "black",
+      "center_x": 53.0,
+      "center_y": 47.8,
+      "top_y": 47.6,
+      "bot_y": 48.0,
+      "left_x": 52.8,
+      "right_x": 53.4,
+      "points": [
+        [
+          52.8,
+          47.6
+        ],
+        [
+          52.8,
+          47.8
+        ],
+        [
+          53.4,
+          48.0
+        ]
+      ]
+    },
+    {
+      "num": 16,
+      "current_trail_id": "low-road",
+      "current_name": "Low Road",
+      "difficulty": "green",
+      "center_x": 52.1,
+      "center_y": 12.1,
+      "top_y": 9.4,
+      "bot_y": 14.8,
+      "left_x": 50.0,
+      "right_x": 54.1,
+      "points": [
+        [
+          54.1,
+          9.4
+        ],
+        [
+          54.1,
+          9.9
+        ],
+        [
+          52.4,
+          11.6
+        ],
+        [
+          52.2,
+          12.1
+        ],
+        [
+          50.9,
+          13.4
+        ],
+        [
+          50.9,
+          13.6
+        ],
+        [
+          50.0,
+          14.8
+        ]
+      ]
+    },
+    {
+      "num": 17,
+      "current_trail_id": "lower-canyon",
+      "current_name": "Lower Canyon",
+      "difficulty": "black",
+      "center_x": 55.2,
+      "center_y": 10.4,
+      "top_y": 9.9,
+      "bot_y": 10.8,
+      "left_x": 55.2,
+      "right_x": 55.3,
+      "points": [
+        [
+          55.2,
+          9.9
+        ],
+        [
+          55.2,
+          10.5
+        ],
+        [
+          55.3,
+          10.8
+        ]
+      ]
+    },
+    {
+      "num": 18,
+      "current_trail_id": "lower-fis",
+      "current_name": "Lower FIS",
+      "difficulty": "blue",
+      "center_x": 50.9,
+      "center_y": 30.4,
+      "top_y": 26.5,
+      "bot_y": 34.5,
+      "left_x": 49.1,
+      "right_x": 52.2,
+      "points": [
+        [
+          52.1,
+          26.5
+        ],
+        [
+          52.2,
+          26.7
+        ],
+        [
+          51.9,
+          27.2
+        ],
+        [
+          52.1,
+          27.4
+        ],
+        [
+          51.2,
+          31.0
+        ],
+        [
+          50.0,
+          33.0
+        ],
+        [
+          49.5,
+          33.6
+        ],
+        [
+          49.1,
+          33.8
+        ],
+        [
+          49.7,
+          34.5
+        ]
+      ]
+    },
+    {
+      "num": 19,
+      "current_trail_id": "mouse-run",
+      "current_name": "Mouse Run",
+      "difficulty": "blue",
+      "center_x": 45.1,
+      "center_y": 17.4,
+      "top_y": 15.4,
+      "bot_y": 19.6,
+      "left_x": 44.0,
+      "right_x": 45.7,
+      "points": [
+        [
+          45.4,
+          15.4
+        ],
+        [
+          45.5,
+          15.6
+        ],
+        [
+          45.0,
+          16.1
+        ],
+        [
+          45.3,
+          17.6
+        ],
+        [
+          44.8,
+          17.9
+        ],
+        [
+          44.9,
+          18.1
+        ],
+        [
+          45.7,
+          18.5
+        ],
+        [
+          44.0,
+          19.6
+        ]
+      ]
+    },
+    {
+      "num": 20,
+      "current_trail_id": "north-way",
+      "current_name": "North Way",
+      "difficulty": "blue",
+      "center_x": 48.2,
+      "center_y": 32.8,
+      "top_y": 27.6,
+      "bot_y": 37.2,
+      "left_x": 46.8,
+      "right_x": 49.0,
+      "points": [
+        [
+          48.2,
+          27.6
+        ],
+        [
+          48.6,
+          27.8
+        ],
+        [
+          48.3,
+          29.4
+        ],
+        [
+          46.8,
+          31.6
+        ],
+        [
+          48.7,
+          33.6
+        ],
+        [
+          49.0,
+          34.5
+        ],
+        [
+          48.3,
+          36.3
+        ],
+        [
+          47.6,
+          36.9
+        ],
+        [
+          48.3,
+          37.2
+        ]
+      ]
+    },
+    {
+      "num": 21,
+      "current_trail_id": "old-superstar",
+      "current_name": "Old Superstar",
+      "difficulty": "black",
+      "center_x": 64.6,
+      "center_y": 34.2,
+      "top_y": 33.8,
+      "bot_y": 34.5,
+      "left_x": 64.5,
+      "right_x": 64.7,
+      "points": [
+        [
+          64.5,
+          33.8
+        ],
+        [
+          64.6,
+          34.1
+        ],
+        [
+          64.6,
+          34.3
+        ],
+        [
+          64.7,
+          34.5
+        ]
+      ]
+    },
+    {
+      "num": 22,
+      "current_trail_id": "reason",
+      "current_name": "Reason",
+      "difficulty": "black",
+      "center_x": 60.6,
+      "center_y": 45.7,
+      "top_y": 44.9,
+      "bot_y": 46.9,
+      "left_x": 60.0,
+      "right_x": 61.5,
+      "points": [
+        [
+          60.0,
+          44.9
+        ],
+        [
+          60.4,
+          45.4
+        ],
+        [
+          60.5,
+          45.6
+        ],
+        [
+          60.7,
+          45.8
+        ],
+        [
+          61.5,
+          46.9
+        ]
+      ]
+    },
+    {
+      "num": 23,
+      "current_trail_id": "rime",
+      "current_name": "Rime",
+      "difficulty": "black",
+      "center_x": 49.1,
+      "center_y": 17.1,
+      "top_y": 16.1,
+      "bot_y": 18.1,
+      "left_x": 47.5,
+      "right_x": 50.3,
+      "points": [
+        [
+          50.3,
+          16.1
+        ],
+        [
+          50.3,
+          16.3
+        ],
+        [
+          49.7,
+          16.8
+        ],
+        [
+          48.8,
+          17.2
+        ],
+        [
+          48.1,
+          17.9
+        ],
+        [
+          47.5,
+          18.1
+        ]
+      ]
+    },
+    {
+      "num": 24,
+      "current_trail_id": "solitude",
+      "current_name": "Solitude",
+      "difficulty": "blue",
+      "center_x": 52.4,
+      "center_y": 15.9,
+      "top_y": 12.1,
+      "bot_y": 18.8,
+      "left_x": 51.1,
+      "right_x": 54.0,
+      "points": [
+        [
+          54.0,
+          12.1
+        ],
+        [
+          54.0,
+          14.1
+        ],
+        [
+          53.1,
+          14.8
+        ],
+        [
+          51.8,
+          15.4
+        ],
+        [
+          51.2,
+          16.3
+        ],
+        [
+          51.1,
+          17.0
+        ],
+        [
+          52.1,
+          17.4
+        ],
+        [
+          51.6,
+          17.6
+        ],
+        [
+          52.9,
+          18.8
+        ]
+      ]
+    },
+    {
+      "num": 25,
+      "current_trail_id": "superstar",
+      "current_name": "Superstar",
+      "difficulty": "black",
+      "center_x": 55.9,
+      "center_y": 13.3,
+      "top_y": 9.7,
+      "bot_y": 28.7,
+      "left_x": 54.6,
+      "right_x": 59.0,
+      "points": [
+        [
+          54.6,
+          9.7
+        ],
+        [
+          54.7,
+          9.9
+        ],
+        [
+          55.3,
+          10.1
+        ],
+        [
+          55.8,
+          10.5
+        ],
+        [
+          55.8,
+          11.4
+        ],
+        [
+          56.3,
+          12.5
+        ],
+        [
+          59.0,
+          28.7
+        ]
+      ]
+    },
+    {
+      "num": 26,
+      "current_trail_id": "superstar-glade",
+      "current_name": "Superstar Glade",
+      "difficulty": "double-black",
+      "center_x": 53.0,
+      "center_y": 17.0,
+      "top_y": 15.0,
+      "bot_y": 19.0,
+      "left_x": 52.5,
+      "right_x": 53.5,
+      "points": [
+        [
+          53.5,
+          15.0
+        ],
+        [
+          53.0,
+          17.0
+        ],
+        [
+          52.5,
+          19.0
+        ]
+      ]
+    },
+    {
+      "num": 27,
+      "current_trail_id": "the-mall",
+      "current_name": "The Mall",
+      "difficulty": "green",
+      "center_x": 52.7,
+      "center_y": 11.2,
+      "top_y": 9.7,
+      "bot_y": 14.3,
+      "left_x": 50.2,
+      "right_x": 53.9,
+      "points": [
+        [
+          53.9,
+          9.7
+        ],
+        [
+          53.9,
+          9.9
+        ],
+        [
+          53.1,
+          10.5
+        ],
+        [
+          52.9,
+          11.0
+        ],
+        [
+          52.2,
+          11.6
+        ],
+        [
+          50.2,
+          14.3
+        ]
+      ]
+    },
+    {
+      "num": 28,
+      "current_trail_id": "upper-canyon",
+      "current_name": "Upper Canyon",
+      "difficulty": "black",
+      "center_x": 64.1,
+      "center_y": 31.5,
+      "top_y": 31.0,
+      "bot_y": 32.1,
+      "left_x": 64.0,
+      "right_x": 64.2,
+      "points": [
+        [
+          64.0,
+          31.0
+        ],
+        [
+          64.0,
+          31.2
+        ],
+        [
+          64.0,
+          31.4
+        ],
+        [
+          64.1,
+          31.6
+        ],
+        [
+          64.2,
+          32.1
+        ]
+      ]
+    },
+    {
+      "num": 29,
+      "current_trail_id": "upper-east-fall",
+      "current_name": "Upper East Fall",
+      "difficulty": "black",
+      "center_x": 64.2,
+      "center_y": 18.3,
+      "top_y": 17.0,
+      "bot_y": 19.9,
+      "left_x": 63.5,
+      "right_x": 65.0,
+      "points": [
+        [
+          63.5,
+          17.0
+        ],
+        [
+          63.8,
+          17.4
+        ],
+        [
+          63.9,
+          17.6
+        ],
+        [
+          64.1,
+          17.9
+        ],
+        [
+          64.2,
+          18.3
+        ],
+        [
+          64.4,
+          18.5
+        ],
+        [
+          65.0,
+          19.6
+        ],
+        [
+          65.0,
+          19.9
+        ]
+      ]
+    }
+  ],
+  "snowdon": [
+    {
+      "num": 1,
+      "current_trail_id": "bittersweet",
+      "current_name": "Bittersweet",
+      "difficulty": "blue",
+      "center_x": 76.1,
+      "center_y": 31.5,
+      "top_y": 28.7,
+      "bot_y": 33.0,
+      "left_x": 75.0,
+      "right_x": 77.7,
+      "points": [
+        [
+          77.7,
+          28.7
+        ],
+        [
+          77.1,
+          30.5
+        ],
+        [
+          76.5,
+          31.2
+        ],
+        [
+          75.3,
+          31.8
+        ],
+        [
+          75.0,
+          32.3
+        ],
+        [
+          75.5,
+          32.7
+        ],
+        [
+          75.6,
+          33.0
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "current_trail_id": "bunny-buster",
+      "current_name": "Bunny Buster",
+      "difficulty": "green",
+      "center_x": 84.3,
+      "center_y": 26.6,
+      "top_y": 22.1,
+      "bot_y": 30.5,
+      "left_x": 80.4,
+      "right_x": 87.9,
+      "points": [
+        [
+          80.4,
+          22.1
+        ],
+        [
+          80.7,
+          22.3
+        ],
+        [
+          81.1,
+          24.3
+        ],
+        [
+          82.9,
+          26.1
+        ],
+        [
+          84.7,
+          26.7
+        ],
+        [
+          85.8,
+          27.6
+        ],
+        [
+          87.5,
+          29.6
+        ],
+        [
+          87.4,
+          29.8
+        ],
+        [
+          87.9,
+          30.5
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "current_trail_id": "chute",
+      "current_name": "Chute",
+      "difficulty": "black",
+      "center_x": 73.0,
+      "center_y": 32.9,
+      "top_y": 27.2,
+      "bot_y": 40.1,
+      "left_x": 69.0,
+      "right_x": 76.1,
+      "points": [
+        [
+          76.1,
+          27.2
+        ],
+        [
+          75.6,
+          27.8
+        ],
+        [
+          74.1,
+          31.2
+        ],
+        [
+          73.6,
+          31.8
+        ],
+        [
+          73.9,
+          32.1
+        ],
+        [
+          73.4,
+          32.3
+        ],
+        [
+          72.3,
+          34.5
+        ],
+        [
+          69.2,
+          39.4
+        ],
+        [
+          69.0,
+          40.1
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "current_trail_id": "conclusion",
+      "current_name": "Conclusion",
+      "difficulty": "double-black",
+      "center_x": 79.0,
+      "center_y": 26.0,
+      "top_y": 23.4,
+      "bot_y": 28.5,
+      "left_x": 78.2,
+      "right_x": 79.8,
+      "points": [
+        [
+          79.8,
+          23.4
+        ],
+        [
+          78.2,
+          28.5
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "current_trail_id": "great-northern",
+      "current_name": "Great Northern",
+      "difficulty": "blue",
+      "center_x": 74.9,
+      "center_y": 28.3,
+      "top_y": 23.0,
+      "bot_y": 36.1,
+      "left_x": 73.1,
+      "right_x": 76.0,
+      "points": [
+        [
+          74.5,
+          23.0
+        ],
+        [
+          76.0,
+          24.1
+        ],
+        [
+          75.3,
+          25.0
+        ],
+        [
+          76.0,
+          26.1
+        ],
+        [
+          74.5,
+          27.4
+        ],
+        [
+          74.6,
+          29.0
+        ],
+        [
+          73.1,
+          31.4
+        ],
+        [
+          74.9,
+          32.5
+        ],
+        [
+          75.2,
+          36.1
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "current_trail_id": "lower-northbrook",
+      "current_name": "Lower Northbrook",
+      "difficulty": "green",
+      "center_x": 71.3,
+      "center_y": 58.8,
+      "top_y": 57.1,
+      "bot_y": 60.7,
+      "left_x": 70.9,
+      "right_x": 72.1,
+      "points": [
+        [
+          71.1,
+          57.1
+        ],
+        [
+          71.3,
+          57.8
+        ],
+        [
+          70.9,
+          58.2
+        ],
+        [
+          70.9,
+          58.5
+        ],
+        [
+          71.4,
+          59.1
+        ],
+        [
+          71.4,
+          60.0
+        ],
+        [
+          72.1,
+          60.7
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "current_trail_id": "lower-snowdon",
+      "current_name": "Lower Snowdon",
+      "difficulty": "blue",
+      "center_x": 72.5,
+      "center_y": 44.4,
+      "top_y": 42.0,
+      "bot_y": 46.5,
+      "left_x": 71.6,
+      "right_x": 73.2,
+      "points": [
+        [
+          73.2,
+          42.0
+        ],
+        [
+          73.0,
+          43.4
+        ],
+        [
+          72.2,
+          45.8
+        ],
+        [
+          71.6,
+          46.5
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "current_trail_id": "mountain-run",
+      "current_name": "Mountain Run",
+      "difficulty": "green",
+      "center_x": 62.7,
+      "center_y": 46.4,
+      "top_y": 43.8,
+      "bot_y": 49.1,
+      "left_x": 61.8,
+      "right_x": 63.8,
+      "points": [
+        [
+          63.0,
+          43.8
+        ],
+        [
+          62.8,
+          44.3
+        ],
+        [
+          62.3,
+          44.7
+        ],
+        [
+          62.3,
+          45.8
+        ],
+        [
+          61.8,
+          46.0
+        ],
+        [
+          61.8,
+          46.3
+        ],
+        [
+          63.2,
+          48.5
+        ],
+        [
+          63.8,
+          48.7
+        ],
+        [
+          63.1,
+          49.1
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "current_trail_id": "mountain-training",
+      "current_name": "Mountain Training Station",
+      "difficulty": "green",
+      "center_x": 61.2,
+      "center_y": 54.4,
+      "top_y": 51.8,
+      "bot_y": 56.5,
+      "left_x": 58.7,
+      "right_x": 63.2,
+      "points": [
+        [
+          58.7,
+          51.8
+        ],
+        [
+          59.4,
+          52.3
+        ],
+        [
+          60.2,
+          53.6
+        ],
+        [
+          61.4,
+          54.5
+        ],
+        [
+          61.5,
+          54.9
+        ],
+        [
+          62.5,
+          55.8
+        ],
+        [
+          63.0,
+          56.0
+        ],
+        [
+          63.2,
+          56.5
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "current_trail_id": "northstar",
+      "current_name": "Northstar",
+      "difficulty": "black",
+      "center_x": 73.8,
+      "center_y": 42.7,
+      "top_y": 40.1,
+      "bot_y": 46.0,
+      "left_x": 72.7,
+      "right_x": 74.7,
+      "points": [
+        [
+          74.7,
+          40.1
+        ],
+        [
+          74.0,
+          41.8
+        ],
+        [
+          73.8,
+          42.9
+        ],
+        [
+          72.7,
+          46.0
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "current_trail_id": "royal-flush",
+      "current_name": "Royal Flush",
+      "difficulty": "black",
+      "center_x": 77.9,
+      "center_y": 23.6,
+      "top_y": 22.5,
+      "bot_y": 25.0,
+      "left_x": 77.2,
+      "right_x": 78.4,
+      "points": [
+        [
+          78.4,
+          22.5
+        ],
+        [
+          78.3,
+          22.7
+        ],
+        [
+          78.2,
+          23.0
+        ],
+        [
+          78.1,
+          23.2
+        ],
+        [
+          78.0,
+          23.4
+        ],
+        [
+          77.8,
+          23.6
+        ],
+        [
+          77.4,
+          24.5
+        ],
+        [
+          77.3,
+          24.7
+        ],
+        [
+          77.2,
+          25.0
+        ]
+      ]
+    },
+    {
+      "num": 12,
+      "current_trail_id": "sass",
+      "current_name": "Sass",
+      "difficulty": "blue",
+      "center_x": 77.6,
+      "center_y": 23.7,
+      "top_y": 22.3,
+      "bot_y": 25.4,
+      "left_x": 76.9,
+      "right_x": 78.1,
+      "points": [
+        [
+          78.1,
+          22.3
+        ],
+        [
+          78.0,
+          22.7
+        ],
+        [
+          77.7,
+          23.0
+        ],
+        [
+          77.5,
+          23.9
+        ],
+        [
+          76.9,
+          24.7
+        ],
+        [
+          77.7,
+          25.4
+        ]
+      ]
+    },
+    {
+      "num": 13,
+      "current_trail_id": "snowdon-glades",
+      "current_name": "Snowdon Glades",
+      "difficulty": "black",
+      "center_x": 62.3,
+      "center_y": 54.2,
+      "top_y": 53.4,
+      "bot_y": 55.1,
+      "left_x": 61.4,
+      "right_x": 63.5,
+      "points": [
+        [
+          61.4,
+          53.4
+        ],
+        [
+          61.5,
+          53.6
+        ],
+        [
+          61.8,
+          53.8
+        ],
+        [
+          62.1,
+          54.0
+        ],
+        [
+          62.6,
+          54.5
+        ],
+        [
+          62.8,
+          54.7
+        ],
+        [
+          63.0,
+          54.9
+        ],
+        [
+          63.5,
+          55.1
+        ]
+      ]
+    },
+    {
+      "num": 14,
+      "current_trail_id": "snowdon-liftline",
+      "current_name": "Snowdon Liftline",
+      "difficulty": "blue",
+      "center_x": 80.0,
+      "center_y": 48.7,
+      "top_y": 44.7,
+      "bot_y": 52.5,
+      "left_x": 78.0,
+      "right_x": 82.4,
+      "points": [
+        [
+          82.4,
+          44.7
+        ],
+        [
+          82.3,
+          45.6
+        ],
+        [
+          82.0,
+          46.3
+        ],
+        [
+          80.0,
+          48.0
+        ],
+        [
+          79.1,
+          49.8
+        ],
+        [
+          79.2,
+          50.0
+        ],
+        [
+          78.4,
+          50.5
+        ],
+        [
+          78.2,
+          50.9
+        ],
+        [
+          78.0,
+          52.5
+        ]
+      ]
+    },
+    {
+      "num": 15,
+      "current_trail_id": "upper-fis",
+      "current_name": "Upper FIS",
+      "difficulty": "green",
+      "center_x": 85.3,
+      "center_y": 27.5,
+      "top_y": 24.3,
+      "bot_y": 31.0,
+      "left_x": 81.3,
+      "right_x": 88.7,
+      "points": [
+        [
+          81.3,
+          24.3
+        ],
+        [
+          82.4,
+          25.2
+        ],
+        [
+          82.9,
+          25.9
+        ],
+        [
+          85.0,
+          26.7
+        ],
+        [
+          86.3,
+          27.8
+        ],
+        [
+          86.5,
+          28.3
+        ],
+        [
+          87.0,
+          28.7
+        ],
+        [
+          87.2,
+          29.2
+        ],
+        [
+          88.7,
+          31.0
+        ]
+      ]
+    },
+    {
+      "num": 16,
+      "current_trail_id": "upper-northbrook",
+      "current_name": "Upper Northbrook",
+      "difficulty": "blue",
+      "center_x": 69.4,
+      "center_y": 41.4,
+      "top_y": 40.9,
+      "bot_y": 42.0,
+      "left_x": 68.9,
+      "right_x": 70.0,
+      "points": [
+        [
+          70.0,
+          40.9
+        ],
+        [
+          68.9,
+          42.0
+        ]
+      ]
+    },
+    {
+      "num": 17,
+      "current_trail_id": "upper-snowdon",
+      "current_name": "Upper Snowdon",
+      "difficulty": "blue",
+      "center_x": 71.1,
+      "center_y": 23.9,
+      "top_y": 21.0,
+      "bot_y": 27.4,
+      "left_x": 69.3,
+      "right_x": 72.0,
+      "points": [
+        [
+          69.3,
+          21.0
+        ],
+        [
+          71.0,
+          21.9
+        ],
+        [
+          71.3,
+          22.3
+        ],
+        [
+          71.2,
+          23.0
+        ],
+        [
+          71.8,
+          23.4
+        ],
+        [
+          71.3,
+          23.6
+        ],
+        [
+          70.6,
+          25.6
+        ],
+        [
+          71.2,
+          27.2
+        ],
+        [
+          72.0,
+          27.4
+        ]
+      ]
+    }
+  ],
+  "ramshead": [
+    {
+      "num": 1,
+      "current_trail_id": "caper",
+      "current_name": "Caper",
+      "difficulty": "blue",
+      "center_x": 94.2,
+      "center_y": 33.2,
+      "top_y": 32.3,
+      "bot_y": 34.3,
+      "left_x": 93.8,
+      "right_x": 94.5,
+      "points": [
+        [
+          94.3,
+          32.3
+        ],
+        [
+          94.5,
+          33.0
+        ],
+        [
+          93.8,
+          34.3
+        ]
+      ]
+    },
+    {
+      "num": 2,
+      "current_trail_id": "easy-street",
+      "current_name": "Easy Street",
+      "difficulty": "green",
+      "center_x": 85.5,
+      "center_y": 49.8,
+      "top_y": 44.0,
+      "bot_y": 58.9,
+      "left_x": 82.6,
+      "right_x": 88.3,
+      "points": [
+        [
+          88.3,
+          44.0
+        ],
+        [
+          86.2,
+          44.9
+        ],
+        [
+          85.7,
+          45.4
+        ],
+        [
+          85.6,
+          47.4
+        ],
+        [
+          85.1,
+          49.1
+        ],
+        [
+          85.5,
+          53.6
+        ],
+        [
+          85.2,
+          55.4
+        ],
+        [
+          82.6,
+          58.9
+        ]
+      ]
+    },
+    {
+      "num": 3,
+      "current_trail_id": "header",
+      "current_name": "Header",
+      "difficulty": "blue",
+      "center_x": 87.3,
+      "center_y": 32.5,
+      "top_y": 26.7,
+      "bot_y": 40.1,
+      "left_x": 83.3,
+      "right_x": 90.1,
+      "points": [
+        [
+          83.3,
+          26.7
+        ],
+        [
+          84.7,
+          27.6
+        ],
+        [
+          86.8,
+          29.8
+        ],
+        [
+          87.3,
+          31.0
+        ],
+        [
+          88.6,
+          32.1
+        ],
+        [
+          88.8,
+          33.2
+        ],
+        [
+          90.1,
+          35.2
+        ],
+        [
+          89.1,
+          37.2
+        ],
+        [
+          87.2,
+          40.1
+        ]
+      ]
+    },
+    {
+      "num": 4,
+      "current_trail_id": "ramshead-liftline",
+      "current_name": "Ramshead Liftline",
+      "difficulty": "blue",
+      "center_x": 83.1,
+      "center_y": 45.4,
+      "top_y": 34.5,
+      "bot_y": 57.6,
+      "left_x": 76.7,
+      "right_x": 87.0,
+      "points": [
+        [
+          87.0,
+          34.5
+        ],
+        [
+          86.7,
+          38.1
+        ],
+        [
+          84.7,
+          40.3
+        ],
+        [
+          84.6,
+          41.8
+        ],
+        [
+          85.4,
+          43.2
+        ],
+        [
+          83.6,
+          46.0
+        ],
+        [
+          81.9,
+          49.6
+        ],
+        [
+          76.7,
+          57.1
+        ],
+        [
+          77.5,
+          57.6
+        ]
+      ]
+    },
+    {
+      "num": 5,
+      "current_trail_id": "ramshead-run",
+      "current_name": "Ramshead Run",
+      "difficulty": "green",
+      "center_x": 91.3,
+      "center_y": 30.3,
+      "top_y": 29.4,
+      "bot_y": 31.2,
+      "left_x": 90.2,
+      "right_x": 92.4,
+      "points": [
+        [
+          92.4,
+          29.4
+        ],
+        [
+          92.4,
+          29.6
+        ],
+        [
+          91.9,
+          29.8
+        ],
+        [
+          91.6,
+          30.1
+        ],
+        [
+          91.3,
+          30.3
+        ],
+        [
+          91.0,
+          30.5
+        ],
+        [
+          90.8,
+          30.7
+        ],
+        [
+          90.5,
+          31.0
+        ],
+        [
+          90.2,
+          31.2
+        ]
+      ]
+    },
+    {
+      "num": 6,
+      "current_trail_id": "squeeze-play",
+      "current_name": "Squeeze Play",
+      "difficulty": "green",
+      "center_x": 94.5,
+      "center_y": 31.1,
+      "top_y": 29.4,
+      "bot_y": 33.0,
+      "left_x": 93.0,
+      "right_x": 96.0,
+      "points": [
+        [
+          93.0,
+          29.4
+        ],
+        [
+          93.0,
+          29.6
+        ],
+        [
+          93.5,
+          29.8
+        ],
+        [
+          93.8,
+          30.1
+        ],
+        [
+          94.5,
+          31.2
+        ],
+        [
+          95.2,
+          32.1
+        ],
+        [
+          95.4,
+          32.3
+        ],
+        [
+          95.7,
+          32.7
+        ],
+        [
+          96.0,
+          33.0
+        ]
+      ]
+    },
+    {
+      "num": 7,
+      "current_trail_id": "start-park",
+      "current_name": "Start Park",
+      "difficulty": "green",
+      "center_x": 91.5,
+      "center_y": 30.3,
+      "top_y": 29.4,
+      "bot_y": 31.2,
+      "left_x": 90.5,
+      "right_x": 92.1,
+      "points": [
+        [
+          92.1,
+          29.4
+        ],
+        [
+          92.1,
+          29.6
+        ],
+        [
+          92.1,
+          29.8
+        ],
+        [
+          91.8,
+          30.1
+        ],
+        [
+          91.6,
+          30.3
+        ],
+        [
+          91.3,
+          30.5
+        ],
+        [
+          91.0,
+          30.7
+        ],
+        [
+          90.8,
+          31.0
+        ],
+        [
+          90.5,
+          31.2
+        ]
+      ]
+    },
+    {
+      "num": 8,
+      "current_trail_id": "swirl",
+      "current_name": "Swirl",
+      "difficulty": "green",
+      "center_x": 94.1,
+      "center_y": 32.4,
+      "top_y": 29.2,
+      "bot_y": 42.9,
+      "left_x": 92.7,
+      "right_x": 96.3,
+      "points": [
+        [
+          92.7,
+          29.2
+        ],
+        [
+          92.7,
+          29.6
+        ],
+        [
+          93.3,
+          29.8
+        ],
+        [
+          94.2,
+          30.7
+        ],
+        [
+          94.3,
+          31.2
+        ],
+        [
+          95.0,
+          31.8
+        ],
+        [
+          96.3,
+          33.8
+        ],
+        [
+          94.1,
+          42.9
+        ]
+      ]
+    },
+    {
+      "num": 9,
+      "current_trail_id": "timberline",
+      "current_name": "Timberline",
+      "difficulty": "blue",
+      "center_x": 84.7,
+      "center_y": 37.8,
+      "top_y": 37.6,
+      "bot_y": 38.1,
+      "left_x": 84.7,
+      "right_x": 84.7,
+      "points": [
+        [
+          84.7,
+          37.6
+        ],
+        [
+          84.7,
+          37.8
+        ],
+        [
+          84.7,
+          38.1
+        ]
+      ]
+    },
+    {
+      "num": 10,
+      "current_trail_id": "treezy",
+      "current_name": "Treezy",
+      "difficulty": "green",
+      "center_x": 83.5,
+      "center_y": 57.4,
+      "top_y": 55.4,
+      "bot_y": 58.9,
+      "left_x": 82.3,
+      "right_x": 84.9,
+      "points": [
+        [
+          84.9,
+          55.4
+        ],
+        [
+          84.3,
+          56.5
+        ],
+        [
+          84.0,
+          56.7
+        ],
+        [
+          83.1,
+          58.0
+        ],
+        [
+          82.3,
+          58.7
+        ],
+        [
+          82.3,
+          58.9
+        ]
+      ]
+    },
+    {
+      "num": 11,
+      "current_trail_id": "vagabond",
+      "current_name": "Vagabond",
+      "difficulty": "blue",
+      "center_x": 91.6,
+      "center_y": 32.6,
+      "top_y": 31.0,
+      "bot_y": 34.1,
+      "left_x": 90.8,
+      "right_x": 92.5,
+      "points": [
+        [
+          92.5,
+          31.0
+        ],
+        [
+          90.8,
+          34.1
+        ]
+      ]
+    }
+  ]
+}
