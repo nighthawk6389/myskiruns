@@ -1,0 +1,123 @@
+.trailList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.searchBox {
+  position: sticky;
+  top: 0;
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  z-index: 1;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  border-color: var(--accent);
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+}
+
+.peakGroup {
+  border-bottom: 1px solid var(--border);
+}
+
+.peakHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: var(--bg-primary);
+  cursor: pointer;
+  user-select: none;
+  position: sticky;
+  top: 0;
+  z-index: 0;
+}
+
+.peakHeader:hover {
+  background: var(--bg-tertiary);
+}
+
+.peakName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.peakCount {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.trailRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px 8px 24px;
+  cursor: pointer;
+  transition: background 0.15s;
+  border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+}
+
+.trailRow:hover {
+  background: var(--bg-tertiary);
+}
+
+.trailRow.skied {
+  background: rgba(251, 191, 36, 0.05);
+}
+
+.difficultyIcon {
+  font-size: 9px;
+  flex-shrink: 0;
+  width: 18px;
+  text-align: center;
+}
+
+.trailName {
+  font-size: 13px;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.trailTags {
+  display: flex;
+  gap: 4px;
+}
+
+.tag {
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+}
+
+.checkmark {
+  font-size: 16px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.emptyState {
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
