@@ -1,0 +1,32 @@
+{
+  "green": {
+    "pixel_count": 417077,
+    "component_count": 97,
+    "percentage": 1.499
+  },
+  "blue": {
+    "pixel_count": 657505,
+    "component_count": 121,
+    "percentage": 2.364
+  },
+  "magenta": {
+    "pixel_count": 355055,
+    "component_count": 156,
+    "percentage": 1.276
+  },
+  "cyan": {
+    "pixel_count": 396954,
+    "component_count": 8,
+    "percentage": 1.427
+  },
+  "yellow": {
+    "pixel_count": 29815,
+    "component_count": 42,
+    "percentage": 0.107
+  },
+  "black": {
+    "pixel_count": 95109,
+    "component_count": 47,
+    "percentage": 0.342
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "_comment": "Manual polyline-to-trail-ID mappings. Keys are polyline IDs from extracted_polylines.json, values are trail IDs from trails.ts. Use this for trails the LLM can't identify or gets wrong.",
+  "_example": "green_005: superstar"
+}

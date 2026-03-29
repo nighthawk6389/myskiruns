@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# CV pipeline outputs (large generated files)
+scripts/output/trailmap_300dpi.png
+scripts/output/masks/
+scripts/output/skeletons/
+scripts/output/patches/
+scripts/output/overlay_*.jpg
+scripts/output/color_overlay.png

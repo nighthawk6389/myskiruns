@@ -1,5 +1,11 @@
 export type Difficulty = 'green' | 'blue' | 'black' | 'double-black';
 
+/** A point in image-space (percentage 0-100 of image dimensions) */
+export interface ImagePoint {
+  x: number;
+  y: number;
+}
+
 export interface Trail {
   id: string;
   name: string;
