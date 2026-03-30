@@ -32,7 +32,8 @@ IMAGE_PATH = OUTPUT_DIR / "trailmap_300dpi.png"
 META_PATH = OUTPUT_DIR / "image_meta.json"
 
 # Trail colors to process (excludes lift lines and boundaries)
-TRAIL_COLORS = ["green", "blue", "red", "black"]
+# Black includes both advanced (single black diamond) and expert (double black diamond)
+TRAIL_COLORS = ["green", "blue", "black"]
 
 # Minimum confidence score to keep a component
 MIN_SCORE_ACCEPT = 5  # "probable" or better
@@ -254,19 +255,29 @@ def main():
         if len(color_segments) <= 1:
             continue
         points_list = [t["points"] for t in color_segments]
+        scores_list = [t["score"] for t in color_segments]
         merged = merge_collinear_segments(points_list)
         if len(merged) < len(color_segments):
             print(f"  {color}: {len(color_segments)} → {len(merged)} segments")
-            # Update the accepted list
+            # Build score lookup by first point to inherit best score
+            score_by_start = {}
+            for seg, score in zip(color_segments, scores_list):
+                if seg["points"]:
+                    key = tuple(seg["points"][0])
+                    score_by_start[key] = max(score, score_by_start.get(key, 0))
             # Remove old entries
             all_accepted = [t for t in all_accepted if t["color"] != color]
-            # Add merged entries
+            # Add merged entries with inherited scores
             for i, pts in enumerate(merged):
+                best_score = 0
+                if pts:
+                    key = tuple(pts[0])
+                    best_score = score_by_start.get(key, 0)
                 all_accepted.append({
                     "id": f"{color}_merged_{i:03d}",
                     "color": color,
                     "points": pts,
-                    "score": 0,  # score not meaningful after merge
+                    "score": best_score,
                     "classification": "merged",
                     "area": 0,
                     "bbox": {},

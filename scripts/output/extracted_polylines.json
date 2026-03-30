@@ -3,7 +3,7 @@
   "image_height": 2028,
   "accepted": [
     {
-      "id": "green_000",
+      "id": "green_merged_000",
       "color": "green",
       "points": [
         [
@@ -61,10 +61,10 @@
       ],
       "num_points": 13,
       "score": 6,
-      "classification": "probable"
+      "classification": "merged"
     },
     {
-      "id": "green_001",
+      "id": "green_merged_001",
       "color": "green",
       "points": [
         [
@@ -76,69 +76,90 @@
           135
         ],
         [
-          1382,
-          139
+          1394,
+          150
         ],
         [
-          1416,
-          142
+          1515,
+          152
         ],
         [
-          1506,
-          142
-        ],
-        [
-          1508,
-          139
+          1518,
+          149
         ],
         [
           1502,
           132
         ]
       ],
-      "num_points": 7,
+      "num_points": 6,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_002",
+      "id": "green_merged_002",
       "color": "green",
       "points": [
         [
-          1981,
-          127
+          2172,
+          129
         ],
         [
-          1980,
-          135
+          2172,
+          137
         ],
         [
-          1986,
-          141
+          2179,
+          144
         ],
         [
-          2033,
-          138
+          2179,
+          150
         ],
         [
-          2038,
-          143
+          2257,
+          152
         ],
         [
-          2079,
-          142
-        ],
-        [
-          2074,
-          131
+          2257,
+          132
         ]
       ],
-      "num_points": 7,
+      "num_points": 6,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_003",
+      "id": "green_merged_003",
+      "color": "green",
+      "points": [
+        [
+          2436,
+          145
+        ],
+        [
+          2435,
+          155
+        ],
+        [
+          2439,
+          159
+        ],
+        [
+          2438,
+          161
+        ],
+        [
+          2400,
+          169
+        ]
+      ],
+      "num_points": 5,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "green_merged_004",
       "color": "green",
       "points": [
         [
@@ -156,10 +177,10 @@
       ],
       "num_points": 3,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_004",
+      "id": "green_merged_005",
       "color": "green",
       "points": [
         [
@@ -217,10 +238,10 @@
       ],
       "num_points": 13,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_005",
+      "id": "green_merged_006",
       "color": "green",
       "points": [
         [
@@ -262,10 +283,10 @@
       ],
       "num_points": 9,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_006",
+      "id": "green_merged_007",
       "color": "green",
       "points": [
         [
@@ -277,7 +298,7 @@
           634
         ],
         [
-          3142,
+          3139,
           650
         ],
         [
@@ -302,11 +323,11 @@
         ]
       ],
       "num_points": 8,
-      "score": 6,
-      "classification": "probable"
+      "score": 7,
+      "classification": "merged"
     },
     {
-      "id": "green_007",
+      "id": "green_merged_008",
       "color": "green",
       "points": [
         [
@@ -336,39 +357,31 @@
       ],
       "num_points": 6,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_008",
+      "id": "green_merged_009",
       "color": "green",
       "points": [
         [
-          1502,
-          685
+          1543,
+          689
         ],
         [
-          1552,
-          688
-        ],
-        [
-          1592,
+          1575,
           684
         ],
         [
-          1614,
-          691
+          1606,
+          687
         ],
         [
-          1623,
-          700
+          1625,
+          703
         ],
         [
           1628,
-          715
-        ],
-        [
-          1627,
-          732
+          723
         ],
         [
           1601,
@@ -379,36 +392,16 @@
           825
         ],
         [
-          1534,
+          1542,
           829
-        ],
-        [
-          1517,
-          836
-        ],
-        [
-          1493,
-          855
-        ],
-        [
-          1466,
-          866
-        ],
-        [
-          1410,
-          875
-        ],
-        [
-          1408,
-          867
         ]
       ],
-      "num_points": 15,
+      "num_points": 8,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_009",
+      "id": "green_merged_010",
       "color": "green",
       "points": [
         [
@@ -430,10 +423,10 @@
       ],
       "num_points": 4,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_010",
+      "id": "green_merged_011",
       "color": "green",
       "points": [
         [
@@ -471,14 +464,14 @@
       ],
       "num_points": 8,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_011",
+      "id": "green_merged_012",
       "color": "green",
       "points": [
         [
-          3061,
+          3060,
           761
         ],
         [
@@ -512,23 +505,15 @@
       ],
       "num_points": 8,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_012",
+      "id": "green_merged_013",
       "color": "green",
       "points": [
         [
-          2550,
-          834
-        ],
-        [
-          2586,
-          831
-        ],
-        [
-          2610,
-          824
+          2552,
+          835
         ],
         [
           2636,
@@ -539,12 +524,45 @@
           847
         ]
       ],
-      "num_points": 5,
+      "num_points": 3,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_013",
+      "id": "green_merged_014",
+      "color": "green",
+      "points": [
+        [
+          1531,
+          831
+        ],
+        [
+          1517,
+          836
+        ],
+        [
+          1493,
+          855
+        ],
+        [
+          1473,
+          864
+        ],
+        [
+          1410,
+          875
+        ],
+        [
+          1408,
+          867
+        ]
+      ],
+      "num_points": 6,
+      "score": 8,
+      "classification": "merged"
+    },
+    {
+      "id": "green_merged_015",
       "color": "green",
       "points": [
         [
@@ -578,15 +596,19 @@
       ],
       "num_points": 7,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_014",
+      "id": "green_merged_016",
       "color": "green",
       "points": [
         [
           198,
           897
+        ],
+        [
+          178,
+          901
         ],
         [
           171,
@@ -601,12 +623,20 @@
           945
         ],
         [
-          163,
-          959
+          164,
+          960
         ],
         [
-          235,
-          984
+          181,
+          968
+        ],
+        [
+          229,
+          981
+        ],
+        [
+          238,
+          987
         ],
         [
           259,
@@ -621,12 +651,12 @@
           1012
         ]
       ],
-      "num_points": 9,
+      "num_points": 12,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_015",
+      "id": "green_merged_017",
       "color": "green",
       "points": [
         [
@@ -652,10 +682,10 @@
       ],
       "num_points": 5,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_016",
+      "id": "green_merged_018",
       "color": "green",
       "points": [
         [
@@ -673,10 +703,10 @@
       ],
       "num_points": 3,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_017",
+      "id": "green_merged_019",
       "color": "green",
       "points": [
         [
@@ -706,10 +736,10 @@
       ],
       "num_points": 6,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_018",
+      "id": "green_merged_020",
       "color": "green",
       "points": [
         [
@@ -717,8 +747,33 @@
           981
         ],
         [
-          1904,
-          994
+          1874,
+          984
+        ],
+        [
+          1905,
+          999
+        ],
+        [
+          1915,
+          1011
+        ],
+        [
+          2004,
+          1060
+        ]
+      ],
+      "num_points": 5,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "green_merged_021",
+      "color": "green",
+      "points": [
+        [
+          1910,
+          986
         ],
         [
           1927,
@@ -733,6 +788,10 @@
           1007
         ],
         [
+          2034,
+          1016
+        ],
+        [
           2039,
           1021
         ],
@@ -741,16 +800,20 @@
           1025
         ],
         [
+          2086,
+          1042
+        ],
+        [
           2105,
           1051
         ]
       ],
-      "num_points": 8,
+      "num_points": 9,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_019",
+      "id": "green_merged_022",
       "color": "green",
       "points": [
         [
@@ -776,10 +839,10 @@
       ],
       "num_points": 5,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_020",
+      "id": "green_merged_023",
       "color": "green",
       "points": [
         [
@@ -805,10 +868,10 @@
       ],
       "num_points": 5,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_021",
+      "id": "green_merged_024",
       "color": "green",
       "points": [
         [
@@ -850,10 +913,10 @@
       ],
       "num_points": 9,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_022",
+      "id": "green_merged_025",
       "color": "green",
       "points": [
         [
@@ -887,10 +950,10 @@
       ],
       "num_points": 7,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_023",
+      "id": "green_merged_026",
       "color": "green",
       "points": [
         [
@@ -924,10 +987,10 @@
       ],
       "num_points": 7,
       "score": 9,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_024",
+      "id": "green_merged_027",
       "color": "green",
       "points": [
         [
@@ -953,10 +1016,10 @@
       ],
       "num_points": 5,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_025",
+      "id": "green_merged_028",
       "color": "green",
       "points": [
         [
@@ -982,75 +1045,47 @@
       ],
       "num_points": 5,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_026",
+      "id": "green_merged_029",
       "color": "green",
       "points": [
         [
-          1714,
-          1149
-        ],
-        [
-          1681,
-          1151
+          1716,
+          1148
         ],
         [
           1660,
           1156
         ],
         [
-          1656,
-          1161
-        ],
-        [
           1653,
           1182
-        ],
-        [
-          1645,
-          1190
         ],
         [
           1631,
           1197
         ],
         [
-          1605,
-          1202
-        ],
-        [
-          1596,
-          1209
-        ],
-        [
           1573,
           1212
-        ],
-        [
-          1562,
-          1221
         ],
         [
           1550,
           1225
         ],
         [
-          1540,
-          1221
-        ],
-        [
           1537,
           1216
         ]
       ],
-      "num_points": 14,
+      "num_points": 7,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_027",
+      "id": "green_merged_030",
       "color": "green",
       "points": [
         [
@@ -1091,7 +1126,7 @@
         ],
         [
           858,
-          1492
+          1493
         ],
         [
           857,
@@ -1120,10 +1155,10 @@
       ],
       "num_points": 16,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_028",
+      "id": "green_merged_031",
       "color": "green",
       "points": [
         [
@@ -1149,10 +1184,10 @@
       ],
       "num_points": 5,
       "score": 6,
-      "classification": "probable"
+      "classification": "merged"
     },
     {
-      "id": "green_029",
+      "id": "green_merged_032",
       "color": "green",
       "points": [
         [
@@ -1198,10 +1233,10 @@
       ],
       "num_points": 10,
       "score": 7,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_030",
+      "id": "green_merged_033",
       "color": "green",
       "points": [
         [
@@ -1227,10 +1262,10 @@
       ],
       "num_points": 5,
       "score": 6,
-      "classification": "probable"
+      "classification": "merged"
     },
     {
-      "id": "green_031",
+      "id": "green_merged_034",
       "color": "green",
       "points": [
         [
@@ -1284,15 +1319,15 @@
       ],
       "num_points": 12,
       "score": 8,
-      "classification": "confident"
+      "classification": "merged"
     },
     {
-      "id": "green_032",
+      "id": "green_merged_035",
       "color": "green",
       "points": [
         [
-          1135,
-          1654
+          1134,
+          1655
         ],
         [
           1196,
@@ -1307,36 +1342,65 @@
           1696
         ],
         [
-          1130,
-          1716
+          1178,
+          1703
         ],
         [
-          1046,
-          1728
+          1079,
+          1724
+        ],
+        [
+          1066,
+          1724
+        ],
+        [
+          1044,
+          1729
         ],
         [
           1033,
           1742
         ],
         [
-          1044,
-          1753
+          966,
+          1743
+        ]
+      ],
+      "num_points": 10,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "green_merged_036",
+      "color": "green",
+      "points": [
+        [
+          1055,
+          1754
         ],
         [
           1139,
           1760
         ],
         [
-          1149,
-          1771
+          1147,
+          1770
+        ],
+        [
+          1148,
+          1806
+        ],
+        [
+          1154,
+          1809
         ]
       ],
-      "num_points": 10,
-      "score": 7,
-      "classification": "confident"
+      "num_points": 5,
+      "score": 5,
+      "classification": "merged"
     },
     {
-      "id": "green_033",
+      "id": "green_merged_037",
       "color": "green",
       "points": [
         [
@@ -1362,1546 +1426,31 @@
       ],
       "num_points": 5,
       "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_001",
-      "color": "red",
-      "points": [
-        [
-          1924,
-          240
-        ],
-        [
-          2020,
-          574
-        ],
-        [
-          2048,
-          651
-        ],
-        [
-          2068,
-          690
-        ]
-      ],
-      "num_points": 4,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_002",
-      "color": "red",
-      "points": [
-        [
-          2127,
-          282
-        ],
-        [
-          2233,
-          408
-        ]
-      ],
-      "num_points": 2,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_003",
-      "color": "red",
-      "points": [
-        [
-          2080,
-          285
-        ],
-        [
-          2140,
-          453
-        ],
-        [
-          2170,
-          552
-        ]
-      ],
-      "num_points": 3,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_004",
-      "color": "red",
-      "points": [
-        [
-          1722,
-          332
-        ],
-        [
-          1605,
-          376
-        ],
-        [
-          1470,
-          419
-        ],
-        [
-          1346,
-          469
-        ]
-      ],
-      "num_points": 4,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_005",
-      "color": "red",
-      "points": [
-        [
-          2616,
-          696
-        ],
-        [
-          2727,
-          490
-        ],
-        [
-          2731,
-          471
-        ],
-        [
-          2709,
-          458
-        ],
-        [
-          2693,
-          459
-        ],
-        [
-          2674,
-          470
-        ],
-        [
-          2534,
-          638
-        ],
-        [
-          2347,
-          822
-        ]
-      ],
-      "num_points": 8,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_006",
-      "color": "red",
-      "points": [
-        [
-          2297,
-          482
-        ],
-        [
-          2299,
-          491
-        ],
-        [
-          2303,
-          495
-        ],
-        [
-          2313,
-          496
-        ]
-      ],
-      "num_points": 4,
-      "score": 6,
-      "classification": "probable"
-    },
-    {
-      "id": "red_007",
-      "color": "red",
-      "points": [
-        [
-          1259,
-          509
-        ],
-        [
-          1117,
-          575
-        ]
-      ],
-      "num_points": 2,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_008",
-      "color": "red",
-      "points": [
-        [
-          1664,
-          551
-        ],
-        [
-          1772,
-          655
-        ],
-        [
-          1897,
-          746
-        ],
-        [
-          1929,
-          776
-        ]
-      ],
-      "num_points": 4,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_009",
-      "color": "red",
-      "points": [
-        [
-          3184,
-          629
-        ],
-        [
-          2810,
-          1012
-        ]
-      ],
-      "num_points": 2,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_010",
-      "color": "red",
-      "points": [
-        [
-          2192,
-          626
-        ],
-        [
-          2198,
-          650
-        ],
-        [
-          2210,
-          683
-        ],
-        [
-          2214,
-          715
-        ],
-        [
-          2221,
-          715
-        ]
-      ],
-      "num_points": 5,
-      "score": 6,
-      "classification": "probable"
-    },
-    {
-      "id": "red_011",
-      "color": "red",
-      "points": [
-        [
-          1538,
-          633
-        ],
-        [
-          1534,
-          1009
-        ]
-      ],
-      "num_points": 2,
-      "score": 8,
-      "classification": "confident"
-    },
-    {
-      "id": "red_012",
-      "color": "red",
-      "points": [
-        [
-          927,
-          648
-        ],
-        [
-          840,
-          923
-        ]
-      ],
-      "num_points": 2,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_014",
-      "color": "red",
-      "points": [
-        [
-          1506,
-          677
-        ],
-        [
-          1304,
-          826
-        ],
-        [
-          1028,
-          969
-        ],
-        [
-          898,
-          1081
-        ]
-      ],
-      "num_points": 4,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_015",
-      "color": "red",
-      "points": [
-        [
-          2123,
-          788
-        ],
-        [
-          2174,
-          857
-        ],
-        [
-          2208,
-          890
-        ],
-        [
-          2212,
-          890
-        ]
-      ],
-      "num_points": 4,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_016",
-      "color": "red",
-      "points": [
-        [
-          1637,
-          799
-        ],
-        [
-          1618,
-          1054
-        ]
-      ],
-      "num_points": 2,
-      "score": 8,
-      "classification": "confident"
-    },
-    {
-      "id": "red_017",
-      "color": "red",
-      "points": [
-        [
-          2565,
-          800
-        ],
-        [
-          2495,
-          926
-        ],
-        [
-          2490,
-          945
-        ],
-        [
-          2486,
-          949
-        ],
-        [
-          2478,
-          950
-        ]
-      ],
-      "num_points": 5,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_018",
-      "color": "red",
-      "points": [
-        [
-          1976,
-          825
-        ],
-        [
-          1978,
-          831
-        ],
-        [
-          2045,
-          901
-        ],
-        [
-          2104,
-          947
-        ],
-        [
-          2113,
-          948
-        ]
-      ],
-      "num_points": 5,
-      "score": 8,
-      "classification": "confident"
-    },
-    {
-      "id": "red_019",
-      "color": "red",
-      "points": [
-        [
-          3199,
-          846
-        ],
-        [
-          3185,
-          866
-        ]
-      ],
-      "num_points": 2,
-      "score": 5,
-      "classification": "probable"
-    },
-    {
-      "id": "red_020",
-      "color": "red",
-      "points": [
-        [
-          2278,
-          875
-        ],
-        [
-          2269,
-          882
-        ],
-        [
-          2254,
-          889
-        ]
-      ],
-      "num_points": 3,
-      "score": 5,
-      "classification": "probable"
-    },
-    {
-      "id": "red_021",
-      "color": "red",
-      "points": [
-        [
-          258,
-          917
-        ],
-        [
-          213,
-          1035
-        ]
-      ],
-      "num_points": 2,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_022",
-      "color": "red",
-      "points": [
-        [
-          1850,
-          960
-        ],
-        [
-          1848,
-          976
-        ],
-        [
-          1867,
-          982
-        ],
-        [
-          1901,
-          1003
-        ],
-        [
-          1907,
-          998
-        ],
-        [
-          1936,
-          1003
-        ],
-        [
-          2239,
-          1151
-        ]
-      ],
-      "num_points": 7,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_023",
-      "color": "red",
-      "points": [
-        [
-          2192,
-          974
-        ],
-        [
-          2189,
-          975
-        ]
-      ],
-      "num_points": 2,
-      "score": 6,
-      "classification": "probable"
-    },
-    {
-      "id": "red_024",
-      "color": "red",
-      "points": [
-        [
-          818,
-          988
-        ],
-        [
-          814,
-          1012
-        ],
-        [
-          795,
-          1065
-        ],
-        [
-          764,
-          1119
-        ],
-        [
-          759,
-          1137
-        ],
-        [
-          755,
-          1141
-        ],
-        [
-          746,
-          1142
-        ]
-      ],
-      "num_points": 7,
-      "score": 8,
-      "classification": "confident"
-    },
-    {
-      "id": "red_025",
-      "color": "red",
-      "points": [
-        [
-          1618,
-          1090
-        ],
-        [
-          1618,
-          1096
-        ],
-        [
-          1614,
-          1103
-        ],
-        [
-          1613,
-          1151
-        ],
-        [
-          1609,
-          1155
-        ]
-      ],
-      "num_points": 5,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_026",
-      "color": "red",
-      "points": [
-        [
-          2714,
-          1103
-        ],
-        [
-          2669,
-          1143
-        ],
-        [
-          2664,
-          1157
-        ],
-        [
-          2646,
-          1162
-        ],
-        [
-          2633,
-          1177
-        ],
-        [
-          2626,
-          1179
-        ]
-      ],
-      "num_points": 6,
-      "score": 6,
-      "classification": "probable"
-    },
-    {
-      "id": "red_027",
-      "color": "red",
-      "points": [
-        [
-          170,
-          1147
-        ],
-        [
-          144,
-          1214
-        ],
-        [
-          141,
-          1230
-        ],
-        [
-          136,
-          1235
-        ],
-        [
-          132,
-          1235
-        ]
-      ],
-      "num_points": 5,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_028",
-      "color": "red",
-      "points": [
-        [
-          804,
-          1165
-        ],
-        [
-          772,
-          1195
-        ],
-        [
-          765,
-          1196
-        ]
-      ],
-      "num_points": 3,
-      "score": 5,
-      "classification": "probable"
-    },
-    {
-      "id": "red_029",
-      "color": "red",
-      "points": [
-        [
-          1533,
-          1188
-        ],
-        [
-          1532,
-          1267
-        ],
-        [
-          1351,
-          1377
-        ],
-        [
-          1049,
-          1755
-        ]
-      ],
-      "num_points": 4,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_030",
-      "color": "red",
-      "points": [
-        [
-          1609,
-          1189
-        ],
-        [
-          1606,
-          1218
-        ],
-        [
-          1608,
-          1255
-        ],
-        [
-          1613,
-          1258
-        ],
-        [
-          1636,
-          1249
-        ],
-        [
-          1641,
-          1244
-        ]
-      ],
-      "num_points": 6,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_031",
-      "color": "red",
-      "points": [
-        [
-          2325,
-          1195
-        ],
-        [
-          2384,
-          1222
-        ],
-        [
-          2398,
-          1225
-        ],
-        [
-          2403,
-          1230
-        ],
-        [
-          2407,
-          1229
-        ]
-      ],
-      "num_points": 5,
-      "score": 6,
-      "classification": "probable"
-    },
-    {
-      "id": "red_032",
-      "color": "red",
-      "points": [
-        [
-          2422,
-          1195
-        ],
-        [
-          2427,
-          1195
-        ],
-        [
-          2433,
-          1201
-        ],
-        [
-          2435,
-          1200
-        ]
-      ],
-      "num_points": 4,
-      "score": 6,
-      "classification": "probable"
-    },
-    {
-      "id": "red_033",
-      "color": "red",
-      "points": [
-        [
-          2524,
-          1207
-        ],
-        [
-          2521,
-          1208
-        ]
-      ],
-      "num_points": 2,
-      "score": 6,
-      "classification": "probable"
-    },
-    {
-      "id": "red_034",
-      "color": "red",
-      "points": [
-        [
-          2230,
-          1231
-        ],
-        [
-          2318,
-          1284
-        ],
-        [
-          2326,
-          1292
-        ],
-        [
-          2334,
-          1293
-        ]
-      ],
-      "num_points": 4,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "red_036",
-      "color": "red",
-      "points": [
-        [
-          2597,
-          1392
-        ],
-        [
-          2599,
-          1396
-        ],
-        [
-          2680,
-          1451
-        ],
-        [
-          2686,
-          1452
-        ],
-        [
-          2692,
-          1458
-        ],
-        [
-          2694,
-          1457
-        ]
-      ],
-      "num_points": 6,
-      "score": 6,
-      "classification": "probable"
-    },
-    {
-      "id": "red_037",
-      "color": "red",
-      "points": [
-        [
-          939,
-          1892
-        ],
-        [
-          927,
-          1906
-        ],
-        [
-          922,
-          1916
-        ],
-        [
-          913,
-          1923
-        ]
-      ],
-      "num_points": 4,
-      "score": 5,
-      "classification": "probable"
-    },
-    {
-      "id": "red_038",
-      "color": "red",
-      "points": [
-        [
-          1018,
-          1904
-        ],
-        [
-          1019,
-          1906
-        ]
-      ],
-      "num_points": 2,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "black_000",
-      "color": "black",
-      "points": [
-        [
-          1167,
-          283
-        ],
-        [
-          1149,
-          289
-        ],
-        [
-          1024,
-          287
-        ],
-        [
-          964,
-          310
-        ],
-        [
-          914,
-          316
-        ],
-        [
-          907,
-          325
-        ],
-        [
-          888,
-          328
-        ],
-        [
-          825,
-          328
-        ],
-        [
-          808,
-          324
-        ]
-      ],
-      "num_points": 9,
-      "score": 5,
-      "classification": "probable"
-    },
-    {
-      "id": "black_001",
-      "color": "black",
-      "points": [
-        [
-          1500,
-          538
-        ],
-        [
-          1504,
-          543
-        ],
-        [
-          1492,
-          547
-        ],
-        [
-          1485,
-          547
-        ],
-        [
-          1481,
-          543
-        ],
-        [
-          1475,
-          543
-        ],
-        [
-          1475,
-          541
-        ]
-      ],
-      "num_points": 7,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "black_002",
-      "color": "black",
-      "points": [
-        [
-          2772,
-          612
-        ],
-        [
-          2769,
-          617
-        ],
-        [
-          2769,
-          630
-        ],
-        [
-          2767,
-          633
-        ],
-        [
-          2768,
-          674
-        ],
-        [
-          2766,
-          679
-        ]
-      ],
-      "num_points": 6,
-      "score": 8,
-      "classification": "confident"
-    },
-    {
-      "id": "black_003",
-      "color": "black",
-      "points": [
-        [
-          1647,
-          798
-        ],
-        [
-          1635,
-          814
-        ],
-        [
-          1646,
-          821
-        ],
-        [
-          1652,
-          853
-        ],
-        [
-          1656,
-          857
-        ],
-        [
-          1656,
-          862
-        ],
-        [
-          1669,
-          873
-        ],
-        [
-          1675,
-          900
-        ],
-        [
-          1675,
-          919
-        ],
-        [
-          1680,
-          928
-        ],
-        [
-          1689,
-          935
-        ],
-        [
-          1692,
-          947
-        ],
-        [
-          1702,
-          943
-        ]
-      ],
-      "num_points": 13,
-      "score": 7,
-      "classification": "confident"
-    },
-    {
-      "id": "black_004",
-      "color": "black",
-      "points": [
-        [
-          302,
-          883
-        ],
-        [
-          298,
-          884
-        ],
-        [
-          291,
-          880
-        ],
-        [
-          288,
-          883
-        ],
-        [
-          275,
-          883
-        ],
-        [
-          270,
-          886
-        ],
-        [
-          238,
-          890
-        ],
-        [
-          231,
-          894
-        ],
-        [
-          210,
-          895
-        ],
-        [
-          208,
-          893
-        ]
-      ],
-      "num_points": 10,
-      "score": 6,
-      "classification": "probable"
-    },
-    {
-      "id": "black_005",
-      "color": "black",
-      "points": [
-        [
-          2461,
-          1055
-        ],
-        [
-          2462,
-          1068
-        ],
-        [
-          2553,
-          1068
-        ]
-      ],
-      "num_points": 3,
-      "score": 5,
-      "classification": "probable"
-    },
-    {
-      "id": "black_006",
-      "color": "black",
-      "points": [
-        [
-          2712,
-          1207
-        ],
-        [
-          2711,
-          1223
-        ],
-        [
-          2703,
-          1231
-        ],
-        [
-          2683,
-          1232
-        ],
-        [
-          2674,
-          1240
-        ],
-        [
-          2669,
-          1237
-        ],
-        [
-          2601,
-          1236
-        ],
-        [
-          2597,
-          1232
-        ],
-        [
-          2547,
-          1231
-        ],
-        [
-          2539,
-          1228
-        ]
-      ],
-      "num_points": 10,
-      "score": 6,
-      "classification": "probable"
-    },
-    {
-      "id": "black_007",
-      "color": "black",
-      "points": [
-        [
-          2409,
-          1830
-        ],
-        [
-          2341,
-          1831
-        ]
-      ],
-      "num_points": 2,
-      "score": 5,
-      "classification": "probable"
-    },
-    {
-      "id": "black_008",
-      "color": "black",
-      "points": [
-        [
-          1033,
-          1892
-        ],
-        [
-          1042,
-          1904
-        ],
-        [
-          1039,
-          1908
-        ],
-        [
-          1038,
-          1926
-        ],
-        [
-          997,
-          1926
-        ],
-        [
-          986,
-          1916
-        ],
-        [
-          959,
-          1917
-        ]
-      ],
-      "num_points": 7,
-      "score": 6,
-      "classification": "probable"
+      "classification": "merged"
     },
     {
       "id": "blue_merged_000",
       "color": "blue",
       "points": [
         [
-          782,
-          181
+          873,
+          425
         ],
         [
-          781,
-          248
+          876,
+          430
         ],
         [
-          646,
-          256
-        ],
-        [
-          639,
-          262
-        ],
-        [
-          593,
-          257
-        ],
-        [
-          537,
-          199
-        ]
-      ],
-      "num_points": 6,
-      "score": 0,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_merged_001",
-      "color": "blue",
-      "points": [
-        [
-          2485,
-          182
-        ],
-        [
-          2508,
-          185
-        ],
-        [
-          2513,
-          191
-        ],
-        [
-          2527,
-          185
-        ],
-        [
-          2538,
-          185
-        ],
-        [
-          2569,
-          195
-        ],
-        [
-          2600,
-          195
-        ],
-        [
-          2608,
-          198
-        ],
-        [
-          2627,
-          222
-        ],
-        [
-          2632,
-          221
-        ]
-      ],
-      "num_points": 10,
-      "score": 0,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_merged_002",
-      "color": "blue",
-      "points": [
-        [
-          1983,
-          202
-        ],
-        [
-          1975,
-          200
-        ],
-        [
-          1927,
-          220
-        ],
-        [
-          1913,
-          220
-        ],
-        [
-          1894,
-          210
-        ],
-        [
-          1866,
-          211
-        ],
-        [
-          1849,
-          226
-        ],
-        [
-          1848,
-          288
-        ],
-        [
-          1812,
-          302
-        ],
-        [
-          1785,
-          304
-        ],
-        [
-          1783,
-          286
-        ]
-      ],
-      "num_points": 11,
-      "score": 0,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_merged_003",
-      "color": "blue",
-      "points": [
-        [
-          2447,
-          219
-        ],
-        [
-          2448,
-          226
-        ],
-        [
-          2443,
-          234
-        ],
-        [
-          2372,
-          249
-        ],
-        [
-          2371,
-          223
-        ]
-      ],
-      "num_points": 5,
-      "score": 0,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_merged_004",
-      "color": "blue",
-      "points": [
-        [
-          3219,
-          271
-        ],
-        [
-          3220,
-          281
-        ],
-        [
-          3234,
-          298
-        ],
-        [
-          3212,
-          303
-        ],
-        [
-          3174,
-          302
-        ],
-        [
-          3151,
-          298
-        ],
-        [
-          3150,
-          288
-        ]
-      ],
-      "num_points": 7,
-      "score": 0,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_merged_005",
-      "color": "blue",
-      "points": [
-        [
-          1729,
-          310
-        ],
-        [
-          1700,
-          333
-        ],
-        [
-          1682,
-          333
-        ],
-        [
-          1673,
-          320
-        ],
-        [
-          1590,
-          324
-        ],
-        [
-          1551,
-          317
-        ],
-        [
-          1545,
-          323
-        ],
-        [
-          1548,
-          361
-        ],
-        [
-          1541,
-          368
-        ],
-        [
-          1532,
-          360
-        ],
-        [
-          1518,
-          358
-        ],
-        [
-          1484,
-          339
-        ],
-        [
-          1416,
-          351
-        ]
-      ],
-      "num_points": 13,
-      "score": 0,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_merged_006",
-      "color": "blue",
-      "points": [
-        [
-          1341,
-          364
-        ],
-        [
-          1277,
-          371
-        ],
-        [
-          1225,
-          353
-        ],
-        [
-          969,
-          360
-        ],
-        [
-          961,
-          364
-        ],
-        [
-          957,
-          383
-        ],
-        [
-          888,
-          401
-        ],
-        [
-          859,
+          865,
           439
         ],
         [
-          768,
-          445
+          790,
+          441
+        ],
+        [
+          765,
+          446
         ],
         [
           632,
@@ -2912,12 +1461,53 @@
           512
         ]
       ],
-      "num_points": 11,
-      "score": 0,
+      "num_points": 7,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_007",
+      "id": "blue_merged_001",
+      "color": "blue",
+      "points": [
+        [
+          2351,
+          419
+        ],
+        [
+          2431,
+          440
+        ],
+        [
+          2440,
+          456
+        ],
+        [
+          2440,
+          471
+        ],
+        [
+          2405,
+          482
+        ],
+        [
+          2397,
+          499
+        ],
+        [
+          2362,
+          499
+        ],
+        [
+          2358,
+          484
+        ]
+      ],
+      "num_points": 8,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "blue_merged_002",
       "color": "blue",
       "points": [
         [
@@ -2934,11 +1524,11 @@
         ]
       ],
       "num_points": 3,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_008",
+      "id": "blue_merged_003",
       "color": "blue",
       "points": [
         [
@@ -2950,12 +1540,20 @@
           449
         ],
         [
+          1162,
+          450
+        ],
+        [
           1169,
           454
         ],
         [
           1171,
           479
+        ],
+        [
+          1158,
+          494
         ],
         [
           1150,
@@ -2966,28 +1564,20 @@
           528
         ],
         [
-          1153,
-          538
+          1154,
+          539
         ],
         [
-          1166,
+          1170,
           546
-        ],
-        [
-          1171,
-          558
-        ],
-        [
-          1277,
-          541
         ]
       ],
       "num_points": 10,
-      "score": 0,
+      "score": 8,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_009",
+      "id": "blue_merged_004",
       "color": "blue",
       "points": [
         [
@@ -2999,7 +1589,7 @@
           468
         ],
         [
-          2657,
+          2656,
           473
         ],
         [
@@ -3028,11 +1618,11 @@
         ]
       ],
       "num_points": 9,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_010",
+      "id": "blue_merged_005",
       "color": "blue",
       "points": [
         [
@@ -3061,11 +1651,11 @@
         ]
       ],
       "num_points": 6,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_011",
+      "id": "blue_merged_006",
       "color": "blue",
       "points": [
         [
@@ -3093,16 +1683,49 @@
           588
         ],
         [
-          1751,
-          629
+          1753,
+          628
         ]
       ],
       "num_points": 7,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_012",
+      "id": "blue_merged_007",
+      "color": "blue",
+      "points": [
+        [
+          1277,
+          541
+        ],
+        [
+          1182,
+          557
+        ],
+        [
+          1168,
+          563
+        ],
+        [
+          1163,
+          570
+        ],
+        [
+          1142,
+          582
+        ],
+        [
+          1118,
+          605
+        ]
+      ],
+      "num_points": 6,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "blue_merged_008",
       "color": "blue",
       "points": [
         [
@@ -3127,11 +1750,11 @@
         ]
       ],
       "num_points": 5,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_013",
+      "id": "blue_merged_009",
       "color": "blue",
       "points": [
         [
@@ -3188,11 +1811,11 @@
         ]
       ],
       "num_points": 13,
-      "score": 0,
+      "score": 8,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_014",
+      "id": "blue_merged_010",
       "color": "blue",
       "points": [
         [
@@ -3217,11 +1840,11 @@
         ]
       ],
       "num_points": 5,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_015",
+      "id": "blue_merged_011",
       "color": "blue",
       "points": [
         [
@@ -3266,11 +1889,11 @@
         ]
       ],
       "num_points": 10,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_016",
+      "id": "blue_merged_012",
       "color": "blue",
       "points": [
         [
@@ -3327,11 +1950,11 @@
         ]
       ],
       "num_points": 13,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_017",
+      "id": "blue_merged_013",
       "color": "blue",
       "points": [
         [
@@ -3364,11 +1987,11 @@
         ]
       ],
       "num_points": 7,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_018",
+      "id": "blue_merged_014",
       "color": "blue",
       "points": [
         [
@@ -3397,11 +2020,11 @@
         ]
       ],
       "num_points": 6,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_019",
+      "id": "blue_merged_015",
       "color": "blue",
       "points": [
         [
@@ -3409,32 +2032,32 @@
           675
         ],
         [
-          1439,
-          710
+          1443,
+          706
         ],
         [
-          1433,
-          727
+          1435,
+          718
         ],
         [
-          1439,
+          1416,
+          732
+        ],
+        [
+          1408,
           734
         ],
         [
-          1465,
-          734
-        ],
-        [
-          1497,
-          727
+          1394,
+          744
         ]
       ],
       "num_points": 6,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_020",
+      "id": "blue_merged_016",
       "color": "blue",
       "points": [
         [
@@ -3459,11 +2082,11 @@
         ]
       ],
       "num_points": 5,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_021",
+      "id": "blue_merged_017",
       "color": "blue",
       "points": [
         [
@@ -3500,11 +2123,11 @@
         ]
       ],
       "num_points": 8,
-      "score": 0,
+      "score": 8,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_022",
+      "id": "blue_merged_018",
       "color": "blue",
       "points": [
         [
@@ -3512,16 +2135,16 @@
           742
         ],
         [
-          1177,
-          759
-        ],
-        [
-          1172,
-          769
+          1176,
+          758
         ],
         [
           1171,
-          783
+          770
+        ],
+        [
+          1170,
+          785
         ],
         [
           1166,
@@ -3529,11 +2152,11 @@
         ]
       ],
       "num_points": 5,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_023",
+      "id": "blue_merged_019",
       "color": "blue",
       "points": [
         [
@@ -3574,11 +2197,11 @@
         ]
       ],
       "num_points": 9,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_024",
+      "id": "blue_merged_020",
       "color": "blue",
       "points": [
         [
@@ -3595,11 +2218,11 @@
         ]
       ],
       "num_points": 3,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_025",
+      "id": "blue_merged_021",
       "color": "blue",
       "points": [
         [
@@ -3636,11 +2259,11 @@
         ]
       ],
       "num_points": 8,
-      "score": 0,
+      "score": 8,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_026",
+      "id": "blue_merged_022",
       "color": "blue",
       "points": [
         [
@@ -3661,48 +2284,32 @@
         ]
       ],
       "num_points": 4,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_027",
+      "id": "blue_merged_023",
       "color": "blue",
       "points": [
         [
-          1507,
-          850
+          1528,
+          835
         ],
         [
-          1525,
+          1526,
           853
         ],
         [
-          1531,
-          859
-        ],
-        [
-          1533,
-          865
-        ],
-        [
-          1555,
-          866
-        ],
-        [
-          1557,
-          868
-        ],
-        [
-          1560,
-          861
+          1507,
+          850
         ]
       ],
-      "num_points": 7,
-      "score": 0,
+      "num_points": 3,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_028",
+      "id": "blue_merged_024",
       "color": "blue",
       "points": [
         [
@@ -3723,11 +2330,11 @@
         ]
       ],
       "num_points": 4,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_029",
+      "id": "blue_merged_025",
       "color": "blue",
       "points": [
         [
@@ -3780,11 +2387,11 @@
         ]
       ],
       "num_points": 12,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_030",
+      "id": "blue_merged_026",
       "color": "blue",
       "points": [
         [
@@ -3817,11 +2424,11 @@
         ]
       ],
       "num_points": 7,
-      "score": 0,
+      "score": 8,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_031",
+      "id": "blue_merged_027",
       "color": "blue",
       "points": [
         [
@@ -3838,11 +2445,11 @@
         ]
       ],
       "num_points": 3,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_032",
+      "id": "blue_merged_028",
       "color": "blue",
       "points": [
         [
@@ -3867,11 +2474,52 @@
         ]
       ],
       "num_points": 5,
-      "score": 0,
+      "score": 8,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_033",
+      "id": "blue_merged_029",
+      "color": "blue",
+      "points": [
+        [
+          1102,
+          935
+        ],
+        [
+          1100,
+          963
+        ],
+        [
+          1122,
+          1023
+        ],
+        [
+          1128,
+          1048
+        ],
+        [
+          1126,
+          1064
+        ],
+        [
+          1121,
+          1070
+        ],
+        [
+          1088,
+          1073
+        ],
+        [
+          1032,
+          1087
+        ]
+      ],
+      "num_points": 8,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "blue_merged_030",
       "color": "blue",
       "points": [
         [
@@ -3884,11 +2532,11 @@
         ]
       ],
       "num_points": 2,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_034",
+      "id": "blue_merged_031",
       "color": "blue",
       "points": [
         [
@@ -3901,11 +2549,11 @@
         ]
       ],
       "num_points": 2,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_035",
+      "id": "blue_merged_032",
       "color": "blue",
       "points": [
         [
@@ -3934,11 +2582,11 @@
         ]
       ],
       "num_points": 6,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_036",
+      "id": "blue_merged_033",
       "color": "blue",
       "points": [
         [
@@ -3959,11 +2607,11 @@
         ]
       ],
       "num_points": 4,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_037",
+      "id": "blue_merged_034",
       "color": "blue",
       "points": [
         [
@@ -3988,11 +2636,11 @@
         ]
       ],
       "num_points": 5,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_038",
+      "id": "blue_merged_035",
       "color": "blue",
       "points": [
         [
@@ -4013,11 +2661,11 @@
         ]
       ],
       "num_points": 4,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_039",
+      "id": "blue_merged_036",
       "color": "blue",
       "points": [
         [
@@ -4038,11 +2686,11 @@
         ]
       ],
       "num_points": 4,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_040",
+      "id": "blue_merged_037",
       "color": "blue",
       "points": [
         [
@@ -4067,11 +2715,11 @@
         ]
       ],
       "num_points": 5,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_041",
+      "id": "blue_merged_038",
       "color": "blue",
       "points": [
         [
@@ -4088,11 +2736,11 @@
         ]
       ],
       "num_points": 3,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_042",
+      "id": "blue_merged_039",
       "color": "blue",
       "points": [
         [
@@ -4129,11 +2777,11 @@
         ]
       ],
       "num_points": 8,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_043",
+      "id": "blue_merged_040",
       "color": "blue",
       "points": [
         [
@@ -4146,11 +2794,11 @@
         ]
       ],
       "num_points": 2,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_044",
+      "id": "blue_merged_041",
       "color": "blue",
       "points": [
         [
@@ -4167,11 +2815,11 @@
         ]
       ],
       "num_points": 3,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_045",
+      "id": "blue_merged_042",
       "color": "blue",
       "points": [
         [
@@ -4184,11 +2832,11 @@
         ]
       ],
       "num_points": 2,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_046",
+      "id": "blue_merged_043",
       "color": "blue",
       "points": [
         [
@@ -4201,11 +2849,11 @@
         ]
       ],
       "num_points": 2,
-      "score": 0,
+      "score": 5,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_047",
+      "id": "blue_merged_044",
       "color": "blue",
       "points": [
         [
@@ -4266,11 +2914,11 @@
         ]
       ],
       "num_points": 14,
-      "score": 0,
+      "score": 8,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_048",
+      "id": "blue_merged_045",
       "color": "blue",
       "points": [
         [
@@ -4287,11 +2935,11 @@
         ]
       ],
       "num_points": 3,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_049",
+      "id": "blue_merged_046",
       "color": "blue",
       "points": [
         [
@@ -4312,11 +2960,11 @@
         ]
       ],
       "num_points": 4,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_050",
+      "id": "blue_merged_047",
       "color": "blue",
       "points": [
         [
@@ -4333,11 +2981,11 @@
         ]
       ],
       "num_points": 3,
-      "score": 0,
+      "score": 5,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_051",
+      "id": "blue_merged_048",
       "color": "blue",
       "points": [
         [
@@ -4378,11 +3026,11 @@
         ]
       ],
       "num_points": 9,
-      "score": 0,
+      "score": 8,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_052",
+      "id": "blue_merged_049",
       "color": "blue",
       "points": [
         [
@@ -4415,11 +3063,11 @@
         ]
       ],
       "num_points": 7,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_053",
+      "id": "blue_merged_050",
       "color": "blue",
       "points": [
         [
@@ -4440,7 +3088,7 @@
         ],
         [
           1071,
-          1742
+          1743
         ],
         [
           1073,
@@ -4448,11 +3096,11 @@
         ]
       ],
       "num_points": 6,
-      "score": 0,
+      "score": 7,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_054",
+      "id": "blue_merged_051",
       "color": "blue",
       "points": [
         [
@@ -4481,11 +3129,11 @@
         ]
       ],
       "num_points": 6,
-      "score": 0,
+      "score": 6,
       "classification": "merged"
     },
     {
-      "id": "blue_merged_055",
+      "id": "blue_merged_052",
       "color": "blue",
       "points": [
         [
@@ -4498,7 +3146,2495 @@
         ]
       ],
       "num_points": 2,
-      "score": 0,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_000",
+      "color": "black",
+      "points": [
+        [
+          2061,
+          226
+        ],
+        [
+          2059,
+          239
+        ],
+        [
+          2020,
+          239
+        ]
+      ],
+      "num_points": 3,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_001",
+      "color": "black",
+      "points": [
+        [
+          1446,
+          253
+        ],
+        [
+          1446,
+          266
+        ],
+        [
+          1462,
+          266
+        ]
+      ],
+      "num_points": 3,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_002",
+      "color": "black",
+      "points": [
+        [
+          2008,
+          267
+        ],
+        [
+          2008,
+          272
+        ],
+        [
+          2003,
+          277
+        ],
+        [
+          2002,
+          284
+        ],
+        [
+          2010,
+          288
+        ],
+        [
+          2019,
+          297
+        ],
+        [
+          2030,
+          297
+        ]
+      ],
+      "num_points": 7,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_003",
+      "color": "black",
+      "points": [
+        [
+          934,
+          300
+        ],
+        [
+          934,
+          310
+        ],
+        [
+          932,
+          312
+        ],
+        [
+          935,
+          315
+        ],
+        [
+          974,
+          316
+        ],
+        [
+          986,
+          314
+        ],
+        [
+          989,
+          311
+        ],
+        [
+          993,
+          311
+        ],
+        [
+          994,
+          308
+        ]
+      ],
+      "num_points": 9,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_004",
+      "color": "black",
+      "points": [
+        [
+          1818,
+          339
+        ],
+        [
+          1820,
+          341
+        ],
+        [
+          1820,
+          366
+        ],
+        [
+          1830,
+          376
+        ]
+      ],
+      "num_points": 4,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_005",
+      "color": "black",
+      "points": [
+        [
+          2271,
+          334
+        ],
+        [
+          2279,
+          335
+        ],
+        [
+          2289,
+          346
+        ],
+        [
+          2292,
+          391
+        ],
+        [
+          2287,
+          396
+        ],
+        [
+          2246,
+          390
+        ],
+        [
+          2242,
+          382
+        ]
+      ],
+      "num_points": 7,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_006",
+      "color": "black",
+      "points": [
+        [
+          1098,
+          338
+        ],
+        [
+          1087,
+          338
+        ],
+        [
+          1078,
+          350
+        ],
+        [
+          1068,
+          347
+        ]
+      ],
+      "num_points": 4,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_007",
+      "color": "black",
+      "points": [
+        [
+          1923,
+          339
+        ],
+        [
+          1922,
+          346
+        ],
+        [
+          1929,
+          355
+        ],
+        [
+          1947,
+          357
+        ],
+        [
+          1955,
+          389
+        ],
+        [
+          1951,
+          423
+        ],
+        [
+          1956,
+          428
+        ],
+        [
+          1950,
+          434
+        ],
+        [
+          1945,
+          449
+        ]
+      ],
+      "num_points": 9,
+      "score": 8,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_008",
+      "color": "black",
+      "points": [
+        [
+          2069,
+          339
+        ],
+        [
+          2071,
+          359
+        ],
+        [
+          2056,
+          359
+        ]
+      ],
+      "num_points": 3,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_009",
+      "color": "black",
+      "points": [
+        [
+          2355,
+          343
+        ],
+        [
+          2353,
+          349
+        ],
+        [
+          2354,
+          357
+        ],
+        [
+          2360,
+          357
+        ],
+        [
+          2368,
+          364
+        ],
+        [
+          2378,
+          364
+        ],
+        [
+          2380,
+          375
+        ],
+        [
+          2405,
+          375
+        ]
+      ],
+      "num_points": 8,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_010",
+      "color": "black",
+      "points": [
+        [
+          2153,
+          346
+        ],
+        [
+          2152,
+          356
+        ],
+        [
+          2157,
+          362
+        ],
+        [
+          2156,
+          366
+        ],
+        [
+          2164,
+          370
+        ],
+        [
+          2160,
+          377
+        ]
+      ],
+      "num_points": 6,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_011",
+      "color": "black",
+      "points": [
+        [
+          343,
+          387
+        ],
+        [
+          346,
+          404
+        ],
+        [
+          354,
+          415
+        ],
+        [
+          360,
+          415
+        ],
+        [
+          368,
+          423
+        ],
+        [
+          377,
+          423
+        ],
+        [
+          381,
+          434
+        ],
+        [
+          396,
+          439
+        ],
+        [
+          398,
+          445
+        ],
+        [
+          410,
+          445
+        ],
+        [
+          419,
+          453
+        ]
+      ],
+      "num_points": 11,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_012",
+      "color": "black",
+      "points": [
+        [
+          1552,
+          400
+        ],
+        [
+          1555,
+          404
+        ],
+        [
+          1555,
+          410
+        ],
+        [
+          1543,
+          418
+        ],
+        [
+          1500,
+          431
+        ]
+      ],
+      "num_points": 5,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_013",
+      "color": "black",
+      "points": [
+        [
+          1867,
+          401
+        ],
+        [
+          1875,
+          410
+        ],
+        [
+          1878,
+          422
+        ],
+        [
+          1890,
+          426
+        ]
+      ],
+      "num_points": 4,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_014",
+      "color": "black",
+      "points": [
+        [
+          188,
+          406
+        ],
+        [
+          180,
+          416
+        ],
+        [
+          179,
+          421
+        ],
+        [
+          172,
+          428
+        ],
+        [
+          171,
+          440
+        ],
+        [
+          163,
+          447
+        ],
+        [
+          159,
+          447
+        ],
+        [
+          154,
+          442
+        ]
+      ],
+      "num_points": 8,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_015",
+      "color": "black",
+      "points": [
+        [
+          2046,
+          411
+        ],
+        [
+          2042,
+          419
+        ],
+        [
+          2047,
+          427
+        ],
+        [
+          2061,
+          425
+        ],
+        [
+          2066,
+          428
+        ]
+      ],
+      "num_points": 5,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_016",
+      "color": "black",
+      "points": [
+        [
+          1476,
+          423
+        ],
+        [
+          1469,
+          434
+        ],
+        [
+          1454,
+          444
+        ],
+        [
+          1447,
+          440
+        ],
+        [
+          1444,
+          441
+        ]
+      ],
+      "num_points": 5,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_017",
+      "color": "black",
+      "points": [
+        [
+          1765,
+          456
+        ],
+        [
+          1765,
+          461
+        ],
+        [
+          1768,
+          464
+        ],
+        [
+          1767,
+          474
+        ],
+        [
+          1773,
+          486
+        ],
+        [
+          1777,
+          488
+        ],
+        [
+          1777,
+          494
+        ]
+      ],
+      "num_points": 7,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_018",
+      "color": "black",
+      "points": [
+        [
+          49,
+          474
+        ],
+        [
+          49,
+          481
+        ],
+        [
+          35,
+          492
+        ],
+        [
+          35,
+          498
+        ],
+        [
+          32,
+          503
+        ],
+        [
+          29,
+          504
+        ],
+        [
+          24,
+          499
+        ]
+      ],
+      "num_points": 7,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_019",
+      "color": "black",
+      "points": [
+        [
+          1365,
+          476
+        ],
+        [
+          1346,
+          480
+        ],
+        [
+          1340,
+          487
+        ],
+        [
+          1321,
+          492
+        ],
+        [
+          1314,
+          499
+        ],
+        [
+          1295,
+          504
+        ],
+        [
+          1280,
+          517
+        ],
+        [
+          1239,
+          524
+        ]
+      ],
+      "num_points": 8,
+      "score": 8,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_020",
+      "color": "black",
+      "points": [
+        [
+          2035,
+          492
+        ],
+        [
+          2034,
+          498
+        ],
+        [
+          2022,
+          510
+        ],
+        [
+          2019,
+          522
+        ],
+        [
+          2013,
+          531
+        ]
+      ],
+      "num_points": 5,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_021",
+      "color": "black",
+      "points": [
+        [
+          1874,
+          520
+        ],
+        [
+          1874,
+          527
+        ],
+        [
+          1878,
+          531
+        ],
+        [
+          1877,
+          535
+        ],
+        [
+          1869,
+          540
+        ],
+        [
+          1858,
+          542
+        ]
+      ],
+      "num_points": 6,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_022",
+      "color": "black",
+      "points": [
+        [
+          1961,
+          561
+        ],
+        [
+          1956,
+          576
+        ],
+        [
+          1933,
+          578
+        ],
+        [
+          1929,
+          581
+        ]
+      ],
+      "num_points": 4,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_023",
+      "color": "black",
+      "points": [
+        [
+          963,
+          581
+        ],
+        [
+          957,
+          585
+        ],
+        [
+          917,
+          584
+        ],
+        [
+          914,
+          587
+        ],
+        [
+          904,
+          587
+        ],
+        [
+          895,
+          593
+        ],
+        [
+          868,
+          590
+        ]
+      ],
+      "num_points": 7,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_024",
+      "color": "black",
+      "points": [
+        [
+          1673,
+          573
+        ],
+        [
+          1680,
+          590
+        ],
+        [
+          1684,
+          608
+        ],
+        [
+          1692,
+          611
+        ],
+        [
+          1697,
+          617
+        ],
+        [
+          1704,
+          619
+        ],
+        [
+          1709,
+          631
+        ],
+        [
+          1730,
+          637
+        ]
+      ],
+      "num_points": 8,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_025",
+      "color": "black",
+      "points": [
+        [
+          1736,
+          573
+        ],
+        [
+          1742,
+          578
+        ],
+        [
+          1759,
+          582
+        ],
+        [
+          1765,
+          575
+        ]
+      ],
+      "num_points": 4,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_026",
+      "color": "black",
+      "points": [
+        [
+          1264,
+          590
+        ],
+        [
+          1263,
+          594
+        ],
+        [
+          1268,
+          597
+        ],
+        [
+          1270,
+          603
+        ],
+        [
+          1325,
+          599
+        ],
+        [
+          1327,
+          593
+        ],
+        [
+          1337,
+          592
+        ]
+      ],
+      "num_points": 7,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_027",
+      "color": "black",
+      "points": [
+        [
+          1802,
+          622
+        ],
+        [
+          1800,
+          617
+        ],
+        [
+          1789,
+          616
+        ],
+        [
+          1779,
+          612
+        ],
+        [
+          1768,
+          622
+        ]
+      ],
+      "num_points": 5,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_028",
+      "color": "black",
+      "points": [
+        [
+          1928,
+          614
+        ],
+        [
+          1928,
+          623
+        ],
+        [
+          1922,
+          631
+        ],
+        [
+          1922,
+          640
+        ],
+        [
+          1913,
+          649
+        ],
+        [
+          1914,
+          663
+        ]
+      ],
+      "num_points": 6,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_029",
+      "color": "black",
+      "points": [
+        [
+          2284,
+          636
+        ],
+        [
+          2274,
+          645
+        ],
+        [
+          2260,
+          651
+        ],
+        [
+          2254,
+          658
+        ],
+        [
+          2251,
+          667
+        ],
+        [
+          2228,
+          687
+        ],
+        [
+          2226,
+          693
+        ],
+        [
+          2221,
+          693
+        ]
+      ],
+      "num_points": 8,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_030",
+      "color": "black",
+      "points": [
+        [
+          2541,
+          653
+        ],
+        [
+          2536,
+          658
+        ],
+        [
+          2531,
+          669
+        ],
+        [
+          2520,
+          669
+        ],
+        [
+          2514,
+          675
+        ],
+        [
+          2491,
+          686
+        ]
+      ],
+      "num_points": 6,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_031",
+      "color": "black",
+      "points": [
+        [
+          3314,
+          655
+        ],
+        [
+          3299,
+          656
+        ],
+        [
+          3295,
+          662
+        ],
+        [
+          3285,
+          665
+        ]
+      ],
+      "num_points": 4,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_032",
+      "color": "black",
+      "points": [
+        [
+          1554,
+          670
+        ],
+        [
+          1555,
+          674
+        ],
+        [
+          1562,
+          675
+        ],
+        [
+          1561,
+          721
+        ],
+        [
+          1558,
+          724
+        ],
+        [
+          1557,
+          731
+        ],
+        [
+          1545,
+          732
+        ],
+        [
+          1529,
+          726
+        ],
+        [
+          1525,
+          758
+        ],
+        [
+          1517,
+          761
+        ],
+        [
+          1515,
+          786
+        ],
+        [
+          1504,
+          801
+        ],
+        [
+          1501,
+          816
+        ],
+        [
+          1505,
+          821
+        ],
+        [
+          1498,
+          840
+        ]
+      ],
+      "num_points": 15,
+      "score": 8,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_033",
+      "color": "black",
+      "points": [
+        [
+          2549,
+          684
+        ],
+        [
+          2543,
+          687
+        ],
+        [
+          2541,
+          696
+        ],
+        [
+          2533,
+          708
+        ],
+        [
+          2532,
+          742
+        ]
+      ],
+      "num_points": 5,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_034",
+      "color": "black",
+      "points": [
+        [
+          1897,
+          684
+        ],
+        [
+          1895,
+          692
+        ],
+        [
+          1905,
+          693
+        ],
+        [
+          1916,
+          700
+        ],
+        [
+          1929,
+          697
+        ]
+      ],
+      "num_points": 5,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_035",
+      "color": "black",
+      "points": [
+        [
+          1725,
+          726
+        ],
+        [
+          1724,
+          734
+        ],
+        [
+          1709,
+          736
+        ],
+        [
+          1702,
+          743
+        ],
+        [
+          1690,
+          737
+        ],
+        [
+          1690,
+          731
+        ]
+      ],
+      "num_points": 6,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_036",
+      "color": "black",
+      "points": [
+        [
+          355,
+          729
+        ],
+        [
+          350,
+          731
+        ],
+        [
+          350,
+          740
+        ],
+        [
+          343,
+          751
+        ],
+        [
+          349,
+          755
+        ],
+        [
+          349,
+          766
+        ]
+      ],
+      "num_points": 6,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_037",
+      "color": "black",
+      "points": [
+        [
+          1902,
+          766
+        ],
+        [
+          1916,
+          776
+        ],
+        [
+          1918,
+          782
+        ],
+        [
+          1934,
+          803
+        ],
+        [
+          1960,
+          830
+        ],
+        [
+          1983,
+          844
+        ]
+      ],
+      "num_points": 6,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_038",
+      "color": "black",
+      "points": [
+        [
+          1067,
+          781
+        ],
+        [
+          1064,
+          824
+        ],
+        [
+          1058,
+          846
+        ],
+        [
+          1052,
+          852
+        ],
+        [
+          1073,
+          902
+        ],
+        [
+          1077,
+          927
+        ],
+        [
+          1035,
+          937
+        ],
+        [
+          1026,
+          942
+        ]
+      ],
+      "num_points": 8,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_039",
+      "color": "black",
+      "points": [
+        [
+          1740,
+          821
+        ],
+        [
+          1764,
+          824
+        ],
+        [
+          1766,
+          826
+        ],
+        [
+          1768,
+          855
+        ],
+        [
+          1773,
+          859
+        ],
+        [
+          1775,
+          869
+        ],
+        [
+          1781,
+          875
+        ],
+        [
+          1803,
+          885
+        ]
+      ],
+      "num_points": 8,
+      "score": 8,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_040",
+      "color": "black",
+      "points": [
+        [
+          320,
+          822
+        ],
+        [
+          320,
+          838
+        ],
+        [
+          311,
+          847
+        ],
+        [
+          327,
+          859
+        ],
+        [
+          336,
+          859
+        ],
+        [
+          338,
+          861
+        ],
+        [
+          351,
+          859
+        ]
+      ],
+      "num_points": 7,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_041",
+      "color": "black",
+      "points": [
+        [
+          2359,
+          832
+        ],
+        [
+          2330,
+          857
+        ],
+        [
+          2302,
+          875
+        ],
+        [
+          2285,
+          878
+        ],
+        [
+          2281,
+          874
+        ],
+        [
+          2281,
+          869
+        ],
+        [
+          2273,
+          863
+        ],
+        [
+          2274,
+          859
+        ]
+      ],
+      "num_points": 8,
+      "score": 8,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_042",
+      "color": "black",
+      "points": [
+        [
+          1599,
+          884
+        ],
+        [
+          1610,
+          887
+        ],
+        [
+          1617,
+          894
+        ],
+        [
+          1615,
+          942
+        ],
+        [
+          1612,
+          943
+        ]
+      ],
+      "num_points": 5,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_043",
+      "color": "black",
+      "points": [
+        [
+          1962,
+          901
+        ],
+        [
+          1971,
+          906
+        ],
+        [
+          1992,
+          926
+        ],
+        [
+          2003,
+          931
+        ],
+        [
+          2025,
+          934
+        ],
+        [
+          2030,
+          941
+        ],
+        [
+          2045,
+          948
+        ],
+        [
+          2055,
+          950
+        ]
+      ],
+      "num_points": 8,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_044",
+      "color": "black",
+      "points": [
+        [
+          468,
+          906
+        ],
+        [
+          468,
+          919
+        ],
+        [
+          471,
+          922
+        ],
+        [
+          471,
+          926
+        ],
+        [
+          467,
+          930
+        ],
+        [
+          461,
+          924
+        ],
+        [
+          458,
+          925
+        ]
+      ],
+      "num_points": 7,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_045",
+      "color": "black",
+      "points": [
+        [
+          2296,
+          918
+        ],
+        [
+          2294,
+          919
+        ]
+      ],
+      "num_points": 2,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_046",
+      "color": "black",
+      "points": [
+        [
+          2364,
+          927
+        ],
+        [
+          2358,
+          933
+        ],
+        [
+          2362,
+          943
+        ],
+        [
+          2387,
+          943
+        ]
+      ],
+      "num_points": 4,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_047",
+      "color": "black",
+      "points": [
+        [
+          2158,
+          946
+        ],
+        [
+          2157,
+          948
+        ]
+      ],
+      "num_points": 2,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_048",
+      "color": "black",
+      "points": [
+        [
+          1089,
+          942
+        ],
+        [
+          1088,
+          996
+        ],
+        [
+          1082,
+          1011
+        ],
+        [
+          1074,
+          1019
+        ]
+      ],
+      "num_points": 4,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_049",
+      "color": "black",
+      "points": [
+        [
+          3257,
+          960
+        ],
+        [
+          3257,
+          965
+        ],
+        [
+          3251,
+          969
+        ],
+        [
+          3249,
+          977
+        ],
+        [
+          3242,
+          977
+        ],
+        [
+          3240,
+          979
+        ],
+        [
+          3235,
+          976
+        ],
+        [
+          3233,
+          977
+        ]
+      ],
+      "num_points": 8,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_050",
+      "color": "black",
+      "points": [
+        [
+          1693,
+          1039
+        ],
+        [
+          1691,
+          1093
+        ],
+        [
+          1682,
+          1144
+        ]
+      ],
+      "num_points": 3,
+      "score": 8,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_051",
+      "color": "black",
+      "points": [
+        [
+          982,
+          1047
+        ],
+        [
+          951,
+          1051
+        ],
+        [
+          946,
+          1056
+        ],
+        [
+          942,
+          1065
+        ],
+        [
+          917,
+          1072
+        ]
+      ],
+      "num_points": 5,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_052",
+      "color": "black",
+      "points": [
+        [
+          2427,
+          1061
+        ],
+        [
+          2434,
+          1067
+        ],
+        [
+          2446,
+          1065
+        ],
+        [
+          2450,
+          1069
+        ],
+        [
+          2452,
+          1068
+        ]
+      ],
+      "num_points": 5,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_053",
+      "color": "black",
+      "points": [
+        [
+          1201,
+          1068
+        ],
+        [
+          1199,
+          1073
+        ],
+        [
+          1190,
+          1082
+        ],
+        [
+          1187,
+          1079
+        ],
+        [
+          1179,
+          1078
+        ],
+        [
+          1173,
+          1084
+        ],
+        [
+          1169,
+          1084
+        ]
+      ],
+      "num_points": 7,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_054",
+      "color": "black",
+      "points": [
+        [
+          3253,
+          1073
+        ],
+        [
+          3255,
+          1093
+        ],
+        [
+          3253,
+          1100
+        ],
+        [
+          3246,
+          1102
+        ]
+      ],
+      "num_points": 4,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_055",
+      "color": "black",
+      "points": [
+        [
+          535,
+          1109
+        ],
+        [
+          535,
+          1118
+        ],
+        [
+          542,
+          1125
+        ],
+        [
+          530,
+          1131
+        ],
+        [
+          516,
+          1129
+        ]
+      ],
+      "num_points": 5,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_056",
+      "color": "black",
+      "points": [
+        [
+          291,
+          1147
+        ],
+        [
+          290,
+          1153
+        ],
+        [
+          285,
+          1157
+        ],
+        [
+          259,
+          1160
+        ]
+      ],
+      "num_points": 4,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_057",
+      "color": "black",
+      "points": [
+        [
+          363,
+          1167
+        ],
+        [
+          345,
+          1170
+        ],
+        [
+          341,
+          1173
+        ],
+        [
+          320,
+          1173
+        ],
+        [
+          314,
+          1177
+        ]
+      ],
+      "num_points": 5,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_058",
+      "color": "black",
+      "points": [
+        [
+          2545,
+          1181
+        ],
+        [
+          2503,
+          1182
+        ]
+      ],
+      "num_points": 2,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_059",
+      "color": "black",
+      "points": [
+        [
+          709,
+          1189
+        ],
+        [
+          707,
+          1191
+        ]
+      ],
+      "num_points": 2,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_060",
+      "color": "black",
+      "points": [
+        [
+          1045,
+          1202
+        ],
+        [
+          1045,
+          1210
+        ],
+        [
+          1048,
+          1214
+        ],
+        [
+          1052,
+          1214
+        ],
+        [
+          1057,
+          1219
+        ],
+        [
+          1069,
+          1219
+        ],
+        [
+          1076,
+          1224
+        ],
+        [
+          1084,
+          1224
+        ],
+        [
+          1090,
+          1231
+        ],
+        [
+          1096,
+          1232
+        ],
+        [
+          1096,
+          1241
+        ]
+      ],
+      "num_points": 11,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_061",
+      "color": "black",
+      "points": [
+        [
+          690,
+          1215
+        ],
+        [
+          689,
+          1220
+        ],
+        [
+          686,
+          1222
+        ]
+      ],
+      "num_points": 3,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_062",
+      "color": "black",
+      "points": [
+        [
+          2553,
+          1219
+        ],
+        [
+          2561,
+          1230
+        ],
+        [
+          2566,
+          1230
+        ],
+        [
+          2570,
+          1226
+        ],
+        [
+          2575,
+          1225
+        ]
+      ],
+      "num_points": 5,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_063",
+      "color": "black",
+      "points": [
+        [
+          2494,
+          1278
+        ],
+        [
+          2492,
+          1302
+        ]
+      ],
+      "num_points": 2,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_064",
+      "color": "black",
+      "points": [
+        [
+          1527,
+          1282
+        ],
+        [
+          1535,
+          1290
+        ],
+        [
+          1535,
+          1296
+        ],
+        [
+          1529,
+          1304
+        ]
+      ],
+      "num_points": 4,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_065",
+      "color": "black",
+      "points": [
+        [
+          2619,
+          1318
+        ],
+        [
+          2617,
+          1319
+        ]
+      ],
+      "num_points": 2,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_066",
+      "color": "black",
+      "points": [
+        [
+          2338,
+          1338
+        ],
+        [
+          2370,
+          1338
+        ],
+        [
+          2373,
+          1341
+        ],
+        [
+          2373,
+          1352
+        ],
+        [
+          2366,
+          1360
+        ],
+        [
+          2364,
+          1371
+        ],
+        [
+          2357,
+          1380
+        ],
+        [
+          2349,
+          1383
+        ]
+      ],
+      "num_points": 8,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_067",
+      "color": "black",
+      "points": [
+        [
+          2689,
+          1351
+        ],
+        [
+          2693,
+          1350
+        ],
+        [
+          2697,
+          1358
+        ],
+        [
+          2704,
+          1365
+        ],
+        [
+          2728,
+          1366
+        ],
+        [
+          2732,
+          1370
+        ],
+        [
+          2748,
+          1370
+        ],
+        [
+          2750,
+          1353
+        ]
+      ],
+      "num_points": 8,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_068",
+      "color": "black",
+      "points": [
+        [
+          1565,
+          1379
+        ],
+        [
+          1563,
+          1392
+        ],
+        [
+          1586,
+          1392
+        ],
+        [
+          1595,
+          1383
+        ],
+        [
+          1595,
+          1380
+        ]
+      ],
+      "num_points": 5,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_069",
+      "color": "black",
+      "points": [
+        [
+          2252,
+          1381
+        ],
+        [
+          2251,
+          1387
+        ],
+        [
+          2253,
+          1392
+        ],
+        [
+          2247,
+          1399
+        ],
+        [
+          2223,
+          1405
+        ],
+        [
+          2216,
+          1412
+        ],
+        [
+          2207,
+          1414
+        ]
+      ],
+      "num_points": 7,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_070",
+      "color": "black",
+      "points": [
+        [
+          2875,
+          1395
+        ],
+        [
+          2880,
+          1395
+        ],
+        [
+          2884,
+          1403
+        ],
+        [
+          2897,
+          1403
+        ],
+        [
+          2899,
+          1405
+        ],
+        [
+          2899,
+          1429
+        ],
+        [
+          2887,
+          1432
+        ],
+        [
+          2873,
+          1431
+        ]
+      ],
+      "num_points": 8,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_071",
+      "color": "black",
+      "points": [
+        [
+          2528,
+          1410
+        ],
+        [
+          2533,
+          1410
+        ],
+        [
+          2537,
+          1414
+        ],
+        [
+          2536,
+          1417
+        ]
+      ],
+      "num_points": 4,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_072",
+      "color": "black",
+      "points": [
+        [
+          829,
+          1410
+        ],
+        [
+          832,
+          1414
+        ],
+        [
+          831,
+          1419
+        ],
+        [
+          791,
+          1418
+        ]
+      ],
+      "num_points": 4,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_073",
+      "color": "black",
+      "points": [
+        [
+          2985,
+          1446
+        ],
+        [
+          2981,
+          1451
+        ],
+        [
+          2955,
+          1451
+        ]
+      ],
+      "num_points": 3,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_074",
+      "color": "black",
+      "points": [
+        [
+          2520,
+          1456
+        ],
+        [
+          2549,
+          1456
+        ],
+        [
+          2559,
+          1466
+        ],
+        [
+          2558,
+          1488
+        ],
+        [
+          2562,
+          1491
+        ],
+        [
+          2656,
+          1491
+        ],
+        [
+          2660,
+          1495
+        ],
+        [
+          2659,
+          1505
+        ]
+      ],
+      "num_points": 8,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_075",
+      "color": "black",
+      "points": [
+        [
+          2409,
+          1829
+        ],
+        [
+          2342,
+          1830
+        ]
+      ],
+      "num_points": 2,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_076",
+      "color": "black",
+      "points": [
+        [
+          1016,
+          1921
+        ],
+        [
+          1016,
+          1926
+        ],
+        [
+          1027,
+          1926
+        ]
+      ],
+      "num_points": 3,
+      "score": 7,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_077",
+      "color": "black",
+      "points": [
+        [
+          844,
+          1933
+        ],
+        [
+          842,
+          1934
+        ]
+      ],
+      "num_points": 2,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_078",
+      "color": "black",
+      "points": [
+        [
+          789,
+          1943
+        ],
+        [
+          787,
+          1945
+        ]
+      ],
+      "num_points": 2,
+      "score": 6,
+      "classification": "merged"
+    },
+    {
+      "id": "black_merged_079",
+      "color": "black",
+      "points": [
+        [
+          873,
+          1992
+        ],
+        [
+          840,
+          1993
+        ]
+      ],
+      "num_points": 2,
+      "score": 5,
       "classification": "merged"
     }
   ],

@@ -25,11 +25,10 @@ READABLE_DIR = OUTPUT_DIR / "readable"
 
 # Known trail counts from trails.ts
 EXPECTED_TRAILS = {
-    "green": 21,   # easy trails
-    "blue": 55,    # intermediate trails (includes some that might show as cyan)
-    "black": 27,   # advanced trails (black diamonds)
-    "red": 12,     # expert/double-black trails (if detected as red)
-    # Note: some double-blacks may show as black or red on the map
+    "green": 21,   # easy trails (green circles)
+    "blue": 55,    # intermediate trails (blue squares)
+    "black": 39,   # advanced + expert trails (black diamonds + double-black diamonds)
+    # Both black diamond and double-black diamond trails appear as black lines on the map
 }
 TOTAL_EXPECTED = 133  # total trails in trails.ts (excluding terrain parks/glades that may not have lines)
 
@@ -64,7 +63,7 @@ def coverage_analysis(polylines: dict, meta: dict):
     color_counts = Counter(t["color"] for t in accepted)
     print(f"\nExtracted polylines by color:")
     total = 0
-    for color in ["green", "blue", "red", "black"]:
+    for color in ["green", "blue", "black"]:
         count = color_counts.get(color, 0)
         expected = EXPECTED_TRAILS.get(color, "?")
         ratio = f"{count}/{expected}" if isinstance(expected, int) else f"{count}"

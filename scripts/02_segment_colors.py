@@ -76,56 +76,83 @@ def gap_fill_mask(mask: np.ndarray) -> np.ndarray:
 
 def detect_black_trails(img: np.ndarray, hsv_img: np.ndarray,
                         existing_masks: dict) -> np.ndarray:
-    """Step 2c: Detect black trails using Canny edge detection + dark-line filtering.
+    """Detect black trails (advanced + double-black) using adaptive thresholding.
 
-    Black trails can't be found by color alone — dark lines on dark terrain.
-    Instead: find edges of dark regions, extract the dark lines between them.
+    Black trail lines are dark lines on a painted terrain that also has dark areas
+    (shadows, trees, rocks). Color-based approaches fail because there's no
+    distinguishing hue.
+
+    Strategy: Use adaptive thresholding to find locally-dark features relative to
+    their surroundings (trail lines have higher local contrast than terrain texture).
+    Then rely on the heuristic scoring in Step 3 to filter out text, buildings, etc.
     """
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    # Gaussian blur to suppress terrain texture
-    gray_blur = cv2.GaussianBlur(gray, (5, 5), 1.5)
 
-    # Canny edge detection
-    edges = cv2.Canny(gray_blur, 30, 100)
+    # Adaptive threshold: finds pixels that are dark relative to their local
+    # neighborhood. Block size 11 captures thin lines; C=5 controls sensitivity.
+    adaptive = cv2.adaptiveThreshold(
+        gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+        cv2.THRESH_BINARY_INV, blockSize=11, C=5
+    )
 
-    # Darkness mask — keep only regions that are actually dark
+    # Combine with absolute darkness constraint — trail lines should be
+    # genuinely dark, not just darker than a bright background
     v_channel = hsv_img[:, :, 2]
-    s_channel = hsv_img[:, :, 1]
-    dark_mask = ((v_channel < 100) & (s_channel < 80)).astype(np.uint8) * 255
+    dark_enough = (v_channel < 140).astype(np.uint8) * 255
+    adaptive = cv2.bitwise_and(adaptive, dark_enough)
 
-    # Dilate edges to bridge the two sides of a dark line
-    dilated_edges = cv2.dilate(edges, np.ones((3, 3), np.uint8), iterations=1)
-
-    # The dark line body: dark pixels near edges
-    dark_near_edges = cv2.bitwise_and(dark_mask, dilated_edges)
-
-    # Dilate to connect fragmented dark line segments
-    dark_lines = cv2.dilate(dark_near_edges, np.ones((3, 3), np.uint8), iterations=2)
-
-    # Close gaps
-    kernel = np.ones((3, 3), np.uint8)
-    dark_lines = cv2.morphologyEx(dark_lines, cv2.MORPH_CLOSE, kernel, iterations=3)
-
-    # Subtract already-detected colored trail masks
+    # Subtract already-detected colored trail masks (+ lifts)
     for name, mask in existing_masks.items():
         if name != "black":
-            # Dilate the colored mask a bit to ensure full subtraction
             dilated = cv2.dilate(mask, np.ones((5, 5), np.uint8), iterations=2)
-            dark_lines = cv2.bitwise_and(dark_lines, cv2.bitwise_not(dilated))
+            adaptive = cv2.bitwise_and(adaptive, cv2.bitwise_not(dilated))
 
-    # Cleanup: remove small components and non-elongated blobs
-    dark_lines = cleanup_mask(dark_lines, min_area=400)
+    # Morphological cleanup
+    kernel = np.ones((3, 3), np.uint8)
+    # Open to remove single-pixel noise and thin terrain texture
+    adaptive = cv2.morphologyEx(adaptive, cv2.MORPH_OPEN, kernel, iterations=1)
+    # Close to connect fragmented line segments
+    adaptive = cv2.morphologyEx(adaptive, cv2.MORPH_CLOSE, kernel, iterations=2)
 
-    # Additional filtering: remove components with low aspect ratio (text, blobs)
-    num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(dark_lines)
+    # Remove small components (text characters, dots)
+    adaptive = cleanup_mask(adaptive, min_area=150)
+
+    # Remove very low aspect-ratio blobs (buildings, large terrain patches)
+    num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(adaptive)
     for i in range(1, num_labels):
         w = stats[i, cv2.CC_STAT_WIDTH]
         h = stats[i, cv2.CC_STAT_HEIGHT]
+        area = stats[i, cv2.CC_STAT_AREA]
         aspect = max(w, h) / max(min(w, h), 1)
-        if aspect < 3:
-            dark_lines[labels == i] = 0
+        # Remove compact blobs (aspect < 2.5) unless very small (might be short trail segment)
+        if aspect < 2.5 and area > 500:
+            adaptive[labels == i] = 0
 
-    return dark_lines
+    return adaptive
+
+
+def create_sky_mask(img: np.ndarray) -> np.ndarray:
+    """Create a mask of the sky area at the top of the image.
+
+    The sky is blue/cyan and would otherwise contaminate the blue trail mask.
+    Strategy: the sky is the top portion of the image with high brightness
+    and blue/cyan hue.
+    """
+    h, w = img.shape[:2]
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+
+    # Sky pixels: blue-cyan hue, moderate-high value, in top 20% of image
+    sky_color = cv2.inRange(hsv, np.array([80, 20, 100]), np.array([140, 255, 255]))
+
+    # Only keep sky in the top portion
+    sky_mask = np.zeros((h, w), dtype=np.uint8)
+    sky_region_h = int(0.20 * h)
+    sky_mask[:sky_region_h, :] = sky_color[:sky_region_h, :]
+
+    # Dilate to cover fringe pixels
+    sky_mask = cv2.dilate(sky_mask, np.ones((15, 15), np.uint8), iterations=2)
+
+    return sky_mask
 
 
 def run_segmentation(img: np.ndarray) -> dict:
@@ -133,11 +160,22 @@ def run_segmentation(img: np.ndarray) -> dict:
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     masks = {}
 
+    # Create sky mask to exclude from blue detection
+    sky_mask = create_sky_mask(img)
+    sky_pixels = np.count_nonzero(sky_mask)
+    print(f"  Sky mask: {sky_pixels:,} pixels excluded")
+
     # Segment trail colors
-    print("  --- Trail colors ---")
+    print("\n  --- Trail colors ---")
     for color_name, ranges in TRAIL_COLOR_RANGES.items():
         print(f"  Segmenting {color_name}...")
         mask = segment_color(hsv, ranges)
+        # Subtract sky from blue mask
+        if color_name == "blue":
+            before = np.count_nonzero(mask)
+            mask = cv2.bitwise_and(mask, cv2.bitwise_not(sky_mask))
+            removed = before - np.count_nonzero(mask)
+            print(f"    Removed {removed:,} sky pixels")
         mask = cleanup_mask(mask)
         mask = gap_fill_mask(mask)
         masks[color_name] = mask
@@ -145,7 +183,7 @@ def run_segmentation(img: np.ndarray) -> dict:
         pixel_count = np.count_nonzero(mask)
         print(f"    {pixel_count:,} pixels ({pixel_count / mask.size * 100:.2f}%), {num_labels} components")
 
-    # Black trails via edge detection
+    # Black trails via edge detection (includes advanced AND expert/double-black)
     print("  Detecting black trails (edge detection)...")
     masks["black"] = detect_black_trails(img, hsv, masks)
     masks["black"] = gap_fill_mask(masks["black"])
