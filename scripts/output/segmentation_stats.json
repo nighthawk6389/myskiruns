@@ -1,32 +1,37 @@
 {
   "green": {
-    "pixel_count": 89515,
-    "component_count": 37,
-    "percentage": 1.287
+    "pixel_count": 214143,
+    "component_count": 47,
+    "percentage": 3.079
   },
   "blue": {
-    "pixel_count": 142857,
-    "component_count": 57,
-    "percentage": 2.054
+    "pixel_count": 249385,
+    "component_count": 74,
+    "percentage": 3.586
   },
-  "magenta": {
-    "pixel_count": 62249,
-    "component_count": 61,
-    "percentage": 0.895
+  "red": {
+    "pixel_count": 50087,
+    "component_count": 43,
+    "percentage": 0.72
   },
-  "cyan": {
+  "black": {
+    "pixel_count": 44666,
+    "component_count": 9,
+    "percentage": 0.642
+  },
+  "magenta_lift": {
+    "pixel_count": 18656,
+    "component_count": 19,
+    "percentage": 0.268
+  },
+  "cyan_lift": {
     "pixel_count": 95876,
     "component_count": 2,
     "percentage": 1.379
   },
   "yellow": {
-    "pixel_count": 8908,
-    "component_count": 23,
-    "percentage": 0.128
-  },
-  "black": {
-    "pixel_count": 38680,
-    "component_count": 10,
-    "percentage": 0.556
+    "pixel_count": 15413,
+    "component_count": 51,
+    "percentage": 0.222
   }
 }

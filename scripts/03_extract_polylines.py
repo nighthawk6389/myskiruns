@@ -31,8 +31,8 @@ SKELETONS_DIR = OUTPUT_DIR / "skeletons"
 IMAGE_PATH = OUTPUT_DIR / "trailmap_300dpi.png"
 META_PATH = OUTPUT_DIR / "image_meta.json"
 
-# Trail colors to process (excludes cyan=lifts, yellow=boundaries)
-TRAIL_COLORS = ["green", "blue", "magenta", "black"]
+# Trail colors to process (excludes lift lines and boundaries)
+TRAIL_COLORS = ["green", "blue", "red", "black"]
 
 # Minimum confidence score to keep a component
 MIN_SCORE_ACCEPT = 5  # "probable" or better

@@ -16,8 +16,9 @@ POLYLINES_PATH = OUTPUT_DIR / "extracted_polylines.json"
 COLOR_MAP = {
     "green": (0, 200, 0),
     "blue": (255, 80, 0),
-    "magenta": (255, 0, 255),
+    "red": (0, 0, 255),
     "black": (100, 100, 100),
+    "magenta": (255, 0, 255),  # legacy
 }
 
 

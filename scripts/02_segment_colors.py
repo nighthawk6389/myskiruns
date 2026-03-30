@@ -14,7 +14,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-from utils.color_ranges import COLOR_RANGES, VIS_COLORS_BGR
+from utils.color_ranges import TRAIL_COLOR_RANGES, LIFT_COLOR_RANGES, OTHER_COLOR_RANGES, COLOR_RANGES, VIS_COLORS_BGR
 
 SCRIPT_DIR = Path(__file__).parent
 OUTPUT_DIR = SCRIPT_DIR / "output"
@@ -42,12 +42,12 @@ def segment_color(hsv_img: np.ndarray, ranges: list) -> np.ndarray:
     return mask
 
 
-def cleanup_mask(mask: np.ndarray, min_area: int = 300) -> np.ndarray:
+def cleanup_mask(mask: np.ndarray, min_area: int = 200) -> np.ndarray:
     """Morphological cleanup: open (remove noise), close (fill gaps), remove small components."""
     kernel = np.ones((3, 3), np.uint8)
     # Open to remove small noise
     mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
-    # Close to fill small gaps in lines
+    # Close to fill small gaps in lines (where text overlaps trail lines)
     mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel, iterations=2)
     # Remove small connected components
     num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(mask)
@@ -55,6 +55,23 @@ def cleanup_mask(mask: np.ndarray, min_area: int = 300) -> np.ndarray:
         if stats[i, cv2.CC_STAT_AREA] < min_area:
             mask[labels == i] = 0
     return mask
+
+
+def gap_fill_mask(mask: np.ndarray) -> np.ndarray:
+    """Fill small gaps in trail lines caused by text labels or anti-aliasing.
+
+    Strategy: dilate to bridge small gaps, close to merge, then erode back.
+    This connects fragmented trail segments without fattening the lines much.
+    """
+    # Dilate to bridge gaps (up to ~10px gap at this resolution)
+    dilated = cv2.dilate(mask, np.ones((5, 5), np.uint8), iterations=2)
+    # Close to merge nearby fragments
+    closed = cv2.morphologyEx(dilated, cv2.MORPH_CLOSE, np.ones((7, 7), np.uint8), iterations=2)
+    # Erode back to approximate original line width
+    result = cv2.erode(closed, np.ones((5, 5), np.uint8), iterations=2)
+    # Keep original mask pixels (don't lose any)
+    result = cv2.bitwise_or(result, mask)
+    return result
 
 
 def detect_black_trails(img: np.ndarray, hsv_img: np.ndarray,
@@ -116,20 +133,58 @@ def run_segmentation(img: np.ndarray) -> dict:
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     masks = {}
 
-    # Segment each color
-    for color_name, ranges in COLOR_RANGES.items():
+    # Segment trail colors
+    print("  --- Trail colors ---")
+    for color_name, ranges in TRAIL_COLOR_RANGES.items():
         print(f"  Segmenting {color_name}...")
         mask = segment_color(hsv, ranges)
         mask = cleanup_mask(mask)
+        mask = gap_fill_mask(mask)
         masks[color_name] = mask
+        num_labels = cv2.connectedComponentsWithStats(mask)[0] - 1
         pixel_count = np.count_nonzero(mask)
-        print(f"    {pixel_count:,} pixels ({pixel_count / mask.size * 100:.2f}%)")
+        print(f"    {pixel_count:,} pixels ({pixel_count / mask.size * 100:.2f}%), {num_labels} components")
 
     # Black trails via edge detection
     print("  Detecting black trails (edge detection)...")
     masks["black"] = detect_black_trails(img, hsv, masks)
+    masks["black"] = gap_fill_mask(masks["black"])
     pixel_count = np.count_nonzero(masks["black"])
-    print(f"    {pixel_count:,} pixels ({pixel_count / masks['black'].size * 100:.2f}%)")
+    num_labels = cv2.connectedComponentsWithStats(masks["black"])[0] - 1
+    print(f"    {pixel_count:,} pixels ({pixel_count / masks['black'].size * 100:.2f}%), {num_labels} components")
+
+    # Segment lift colors (tracked separately)
+    print("\n  --- Lift lines (excluded from trail extraction) ---")
+    for color_name, ranges in LIFT_COLOR_RANGES.items():
+        print(f"  Segmenting {color_name}...")
+        mask = segment_color(hsv, ranges)
+        mask = cleanup_mask(mask, min_area=500)
+        masks[color_name] = mask
+        pixel_count = np.count_nonzero(mask)
+        print(f"    {pixel_count:,} pixels ({pixel_count / mask.size * 100:.2f}%)")
+
+    # Other (boundaries)
+    for color_name, ranges in OTHER_COLOR_RANGES.items():
+        mask = segment_color(hsv, ranges)
+        mask = cleanup_mask(mask)
+        masks[color_name] = mask
+
+    # Subtract lift masks from trail masks to remove any overlap
+    print("\n  Subtracting lift lines from trail masks...")
+    combined_lifts = np.zeros_like(list(masks.values())[0])
+    for lift_name in LIFT_COLOR_RANGES:
+        if lift_name in masks:
+            dilated_lift = cv2.dilate(masks[lift_name], np.ones((5, 5), np.uint8), iterations=1)
+            combined_lifts = cv2.bitwise_or(combined_lifts, dilated_lift)
+
+    for trail_name in list(TRAIL_COLOR_RANGES.keys()) + ["black"]:
+        if trail_name in masks:
+            before = np.count_nonzero(masks[trail_name])
+            masks[trail_name] = cv2.bitwise_and(masks[trail_name], cv2.bitwise_not(combined_lifts))
+            after = np.count_nonzero(masks[trail_name])
+            removed = before - after
+            if removed > 0:
+                print(f"    {trail_name}: removed {removed:,} lift-overlap pixels")
 
     return masks
 
