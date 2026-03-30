@@ -343,10 +343,21 @@ def run_segmentation(img: np.ndarray) -> dict:
         if inpaint_extra > 0:
             print(f"    Inpainting recovered {inpaint_extra:,} additional pixels")
 
-        # Basic cleanup before saving raw version
+        # Basic cleanup
         kernel = np.ones((3, 3), np.uint8)
         mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
-        mask = cleanup_mask(mask, min_area=100)
+        mask = cleanup_mask(mask, min_area=20)
+
+        # Pre-gap-fill cleanup: remove large fat blobs (terrain, not trails)
+        # Trail lines are elongated; terrain patches are compact
+        num_l, lbl, st, _ = cv2.connectedComponentsWithStats(mask)
+        for i in range(1, num_l):
+            area = st[i, cv2.CC_STAT_AREA]
+            ww = st[i, cv2.CC_STAT_WIDTH]
+            hh = st[i, cv2.CC_STAT_HEIGHT]
+            aspect = max(ww, hh) / max(min(ww, hh), 1)
+            if area > 1000 and aspect < 2.0:
+                mask[lbl == i] = 0
 
         # Save raw mask (before gap-fill) for black trail subtraction
         raw_color_masks[color_name] = mask.copy()
@@ -364,7 +375,7 @@ def run_segmentation(img: np.ndarray) -> dict:
 
         # Final cleanup
         mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
-        mask = cleanup_mask(mask, min_area=100)
+        mask = cleanup_mask(mask, min_area=80)
 
         masks[color_name] = mask
         num_labels = cv2.connectedComponentsWithStats(mask)[0] - 1
