@@ -20,8 +20,8 @@ TRAIL_COLOR_RANGES = {
         (np.array([35, 100, 60]), np.array([85, 255, 255])),
     ],
     "blue": [
-        # Intermediate trails — wider range
-        (np.array([90, 60, 50]), np.array([135, 255, 255])),
+        # Intermediate trails — S>=50 (was 60) to capture faint lines
+        (np.array([85, 50, 40]), np.array([135, 255, 255])),
     ],
 }
 

@@ -82,6 +82,17 @@ def create_mountain_mask(hsv_img: np.ndarray) -> np.ndarray:
                                  np.ones((15, 15), np.uint8), iterations=2)
     mountain = cv2.morphologyEx(mountain, cv2.MORPH_OPEN,
                                  np.ones((5, 5), np.uint8), iterations=1)
+
+    # Subtract sky from mountain mask — the yellow boundary includes the
+    # ridgeline which has sky bleed. Detect sky by color in the top portion.
+    sky = cv2.inRange(hsv_img, np.array([80, 15, 130]), np.array([140, 255, 255]))
+    sky_region = np.zeros_like(sky)
+    sky_region[:int(h * 0.25), :] = sky[:int(h * 0.25), :]
+    sky_region = cv2.dilate(sky_region, np.ones((10, 10), np.uint8), iterations=2)
+    mountain = cv2.bitwise_and(mountain, cv2.bitwise_not(sky_region))
+    mountain = cv2.erode(mountain, np.ones((3, 3), np.uint8), iterations=2)
+    mountain = cv2.dilate(mountain, np.ones((3, 3), np.uint8), iterations=1)
+
     return mountain
 
 
@@ -292,6 +303,15 @@ def run_segmentation(img: np.ndarray) -> dict:
     print(f"    Text mask: {np.count_nonzero(text_mask):,} pixels")
     cv2.imwrite(str(MASKS_DIR / "text_mask.png"), text_mask)
 
+    # Step 2b: Inpaint text regions in the original image
+    # This fills text areas with surrounding trail line colors, so that
+    # color detection captures continuous trails THROUGH trail name text.
+    print("  Inpainting text regions...")
+    inpaint_mask = cv2.dilate(text_mask, np.ones((3, 3), np.uint8), iterations=1)
+    inpainted_img = cv2.inpaint(img, inpaint_mask, inpaintRadius=5, flags=cv2.INPAINT_TELEA)
+    hsv_inpainted = cv2.cvtColor(inpainted_img, cv2.COLOR_BGR2HSV)
+    print(f"    Inpainted {np.count_nonzero(inpaint_mask):,} pixels")
+
     # Step 3: Detect difficulty symbols
     print("  Detecting difficulty symbols (■ ◆ ●)...")
     symbols = detect_difficulty_symbols(hsv, mountain_mask)
@@ -305,22 +325,23 @@ def run_segmentation(img: np.ndarray) -> dict:
     (OUTPUT_DIR / "symbols.json").write_text(json.dumps(symbol_data, indent=2))
 
     # Step 4: Segment trail colors
-    # We keep both raw (for black subtraction) and gap-filled (for output) versions
-    raw_color_masks = {}  # before gap-fill — used for black trail subtraction
+    # Detect from BOTH original and inpainted images, combine for best coverage.
+    # Raw (pre-gap-fill) masks saved separately for black trail subtraction.
+    raw_color_masks = {}
     print("\n  --- Trail colors ---")
     for color_name, ranges in TRAIL_COLOR_RANGES.items():
         print(f"  Segmenting {color_name}...")
-        mask = segment_color(hsv, ranges)
-
-        # Apply mountain mask (excludes sky, parking lots, etc.)
-        mask = cv2.bitwise_and(mask, mountain_mask)
-
-        # Remove text areas
-        before = np.count_nonzero(mask)
-        mask = cv2.bitwise_and(mask, cv2.bitwise_not(text_mask))
-        text_removed = before - np.count_nonzero(mask)
-        if text_removed > 0:
-            print(f"    Removed {text_removed:,} text-overlap pixels")
+        # Detect from original (catches pixels text didn't overlap)
+        mask_orig = segment_color(hsv, ranges)
+        mask_orig = cv2.bitwise_and(mask_orig, mountain_mask)
+        # Detect from inpainted (recovers trail lines through text regions)
+        mask_inp = segment_color(hsv_inpainted, ranges)
+        mask_inp = cv2.bitwise_and(mask_inp, mountain_mask)
+        # Combine both
+        mask = cv2.bitwise_or(mask_orig, mask_inp)
+        inpaint_extra = np.count_nonzero(mask) - np.count_nonzero(mask_orig)
+        if inpaint_extra > 0:
+            print(f"    Inpainting recovered {inpaint_extra:,} additional pixels")
 
         # Basic cleanup before saving raw version
         kernel = np.ones((3, 3), np.uint8)
@@ -352,8 +373,9 @@ def run_segmentation(img: np.ndarray) -> dict:
 
     # Step 5: Black trails via adaptive thresholding
     # Use RAW color masks (not gap-filled) for subtraction to avoid eating black trails
+    # Pass the inpainted image so text gaps are filled before thresholding
     print("  Detecting black trails (adaptive threshold)...")
-    masks["black"] = detect_black_trails(img, hsv, raw_color_masks, mountain_mask, text_mask)
+    masks["black"] = detect_black_trails(inpainted_img, hsv, raw_color_masks, mountain_mask, text_mask)
     # Add black symbol anchors
     if "black" in anchor_masks:
         masks["black"] = cv2.bitwise_or(masks["black"], anchor_masks["black"])
