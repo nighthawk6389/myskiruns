@@ -22,6 +22,8 @@ from utils.polyline_utils import (
     simplify_points,
     order_top_to_bottom,
     merge_collinear_segments,
+    compute_arc_length,
+    compute_span,
 )
 
 SCRIPT_DIR = Path(__file__).parent
@@ -248,40 +250,86 @@ def main():
         all_accepted.extend(results["accepted"])
         all_uncertain.extend(results["uncertain"])
 
-    # Attempt to merge collinear segments within each color
-    print(f"\nMerging collinear segments...")
-    for color in TRAIL_COLORS:
-        color_segments = [t for t in all_accepted if t["color"] == color]
-        if len(color_segments) <= 1:
+    # Multi-pass merge: progressively more aggressive
+    print(f"\nMerging segments (multi-pass)...")
+    for pass_num, (dist_thresh, angle_thresh) in enumerate([
+        (20, 30),   # Pass 1: conservative — close + collinear
+        (40, 45),   # Pass 2: moderate — wider distance + angle
+        (60, 60),   # Pass 3: aggressive — catch remaining gaps
+    ], 1):
+        merged_any = False
+        for color in TRAIL_COLORS:
+            color_segments = [t for t in all_accepted if t["color"] == color]
+            if len(color_segments) <= 1:
+                continue
+            points_list = [t["points"] for t in color_segments]
+            merged = merge_collinear_segments(
+                points_list,
+                angle_threshold=angle_thresh,
+                distance_threshold=dist_thresh,
+            )
+            if len(merged) < len(color_segments):
+                merged_any = True
+                # Build score lookup to inherit best score
+                score_by_pts = {}
+                for seg in color_segments:
+                    if seg["points"]:
+                        key = (tuple(seg["points"][0]), tuple(seg["points"][-1]))
+                        score_by_pts[key] = max(seg["score"], score_by_pts.get(key, 0))
+                # Remove old entries and add merged
+                all_accepted = [t for t in all_accepted if t["color"] != color]
+                for i, pts in enumerate(merged):
+                    best_score = 0
+                    for seg in color_segments:
+                        if seg["points"] and seg["points"][0] in pts:
+                            best_score = max(best_score, seg["score"])
+                    all_accepted.append({
+                        "id": f"{color}_m{pass_num}_{i:03d}",
+                        "color": color,
+                        "points": pts,
+                        "score": best_score,
+                        "classification": "merged",
+                        "area": 0,
+                        "bbox": {},
+                    })
+        counts = {c: len([t for t in all_accepted if t["color"] == c]) for c in TRAIL_COLORS}
+        counts_str = ", ".join(f"{c}={n}" for c, n in counts.items())
+        print(f"  Pass {pass_num} (dist={dist_thresh}, angle={angle_thresh}): {counts_str}")
+        if not merged_any:
+            break
+
+    # Post-merge filtering: remove noise
+    print(f"\nPost-merge filtering...")
+    before_count = len(all_accepted)
+
+    filtered = []
+    removed_short = 0
+    removed_tiny_span = 0
+
+    for trail in all_accepted:
+        pts = trail["points"]
+
+        # Filter 1: minimum span (straight-line distance between endpoints)
+        # A real trail should span at least 20px on the map
+        span = compute_span(pts)
+        if span < 20:
+            removed_tiny_span += 1
             continue
-        points_list = [t["points"] for t in color_segments]
-        scores_list = [t["score"] for t in color_segments]
-        merged = merge_collinear_segments(points_list)
-        if len(merged) < len(color_segments):
-            print(f"  {color}: {len(color_segments)} → {len(merged)} segments")
-            # Build score lookup by first point to inherit best score
-            score_by_start = {}
-            for seg, score in zip(color_segments, scores_list):
-                if seg["points"]:
-                    key = tuple(seg["points"][0])
-                    score_by_start[key] = max(score, score_by_start.get(key, 0))
-            # Remove old entries
-            all_accepted = [t for t in all_accepted if t["color"] != color]
-            # Add merged entries with inherited scores
-            for i, pts in enumerate(merged):
-                best_score = 0
-                if pts:
-                    key = tuple(pts[0])
-                    best_score = score_by_start.get(key, 0)
-                all_accepted.append({
-                    "id": f"{color}_merged_{i:03d}",
-                    "color": color,
-                    "points": pts,
-                    "score": best_score,
-                    "classification": "merged",
-                    "area": 0,
-                    "bbox": {},
-                })
+
+        # Filter 2: minimum arc length
+        # At ~3400px image width, a real trail spans at least ~50px
+        # This primarily cleans up black noise (adaptive threshold fragments)
+        arc = compute_arc_length(pts)
+        if arc < 50:
+            removed_short += 1
+            continue
+
+        filtered.append(trail)
+
+    all_accepted = filtered
+    print(f"  Removed {removed_tiny_span} tiny-span (<20px) polylines")
+    print(f"  Removed {removed_short} short-arc (<30px) polylines")
+    print(f"  Before: {before_count}, After: {len(all_accepted)}")
 
     # Save results
     print(f"\nTotal accepted: {len(all_accepted)}")

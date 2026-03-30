@@ -70,6 +70,25 @@ def points_to_svg_path(pct_points: list) -> str:
     return d
 
 
+def compute_arc_length(points: list) -> float:
+    """Compute total arc length of a polyline in pixels."""
+    total = 0.0
+    for i in range(1, len(points)):
+        dy = points[i][0] - points[i - 1][0]
+        dx = points[i][1] - points[i - 1][1]
+        total += math.sqrt(dy * dy + dx * dx)
+    return total
+
+
+def compute_span(points: list) -> float:
+    """Straight-line distance between first and last point."""
+    if len(points) < 2:
+        return 0.0
+    dy = points[-1][0] - points[0][0]
+    dx = points[-1][1] - points[0][1]
+    return math.sqrt(dy * dy + dx * dx)
+
+
 def merge_collinear_segments(segments: list, angle_threshold: float = 30.0,
                              distance_threshold: float = 20.0) -> list:
     """Merge segments that meet at junction points and are roughly collinear.
