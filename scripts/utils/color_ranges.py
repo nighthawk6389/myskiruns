@@ -20,9 +20,10 @@ TRAIL_COLOR_RANGES = {
         (np.array([35, 100, 60]), np.array([85, 255, 255])),
     ],
     "blue": [
-        # Intermediate trails — extended into cyan (H=80) to capture
-        # the lighter blue trail lines on this artistic map
+        # Intermediate trails — standard blue range
         (np.array([80, 50, 40]), np.array([135, 255, 255])),
+        # Cyan extension for lighter blue trail lines (high saturation only)
+        (np.array([75, 80, 40]), np.array([82, 255, 255])),
     ],
 }
 

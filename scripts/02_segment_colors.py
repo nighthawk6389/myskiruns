@@ -348,15 +348,14 @@ def run_segmentation(img: np.ndarray) -> dict:
         mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
         mask = cleanup_mask(mask, min_area=20)
 
-        # Pre-gap-fill cleanup: remove large fat blobs (terrain, not trails)
-        # Trail lines are elongated; terrain patches are compact
+        # Remove terrain blobs (fat, compact shapes — not trail lines)
         num_l, lbl, st, _ = cv2.connectedComponentsWithStats(mask)
         for i in range(1, num_l):
             area = st[i, cv2.CC_STAT_AREA]
             ww = st[i, cv2.CC_STAT_WIDTH]
             hh = st[i, cv2.CC_STAT_HEIGHT]
             aspect = max(ww, hh) / max(min(ww, hh), 1)
-            if area > 1000 and aspect < 2.0:
+            if area > 800 and aspect < 2.0:
                 mask[lbl == i] = 0
 
         # Save raw mask (before gap-fill) for black trail subtraction
@@ -370,12 +369,35 @@ def run_segmentation(img: np.ndarray) -> dict:
             if added > 0:
                 print(f"    Added {added:,} symbol anchor pixels")
 
-        # Directional gap fill (bridges text gaps along trail direction)
-        mask = directional_gap_fill(mask)
+        # Gap-fill strategy:
+        # - Green: directional gap-fill (green lines are thicker, less flood risk)
+        # - Blue: text corridor fill only — expand trail color into text mask
+        #   regions to bridge trail name gaps. No directional gap-fill
+        #   (would flood cyan-green terrain overlap areas).
+        if color_name == "green":
+            mask = directional_gap_fill(mask)
+            mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
+        elif color_name == "blue":
+            # Text corridor fill: expand blue into text regions only
+            text_corridor = cv2.dilate(text_mask, np.ones((3, 3), np.uint8), iterations=1)
+            for _ in range(30):
+                expanded = cv2.dilate(mask, np.ones((3, 3), np.uint8), iterations=1)
+                new_px = cv2.bitwise_and(expanded, text_corridor)
+                new_px = cv2.bitwise_and(new_px, cv2.bitwise_not(mask))
+                if np.count_nonzero(new_px) == 0:
+                    break
+                mask = cv2.bitwise_or(mask, new_px)
+            # Remove any terrain blobs that grew through text corridor
+            num_l2, lbl2, st2, _ = cv2.connectedComponentsWithStats(mask)
+            for i2 in range(1, num_l2):
+                a2 = st2[i2, cv2.CC_STAT_AREA]
+                w2 = st2[i2, cv2.CC_STAT_WIDTH]
+                h2 = st2[i2, cv2.CC_STAT_HEIGHT]
+                asp2 = max(w2, h2) / max(min(w2, h2), 1)
+                if a2 > 1500 and asp2 < 2.5:
+                    mask[lbl2 == i2] = 0
 
-        # Final cleanup
-        mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
-        mask = cleanup_mask(mask, min_area=80)
+        mask = cleanup_mask(mask, min_area=15)
 
         masks[color_name] = mask
         num_labels = cv2.connectedComponentsWithStats(mask)[0] - 1
