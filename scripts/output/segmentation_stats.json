@@ -1,13 +1,13 @@
 {
   "green": {
-    "pixel_count": 53687,
-    "component_count": 306,
-    "percentage": 0.772
+    "pixel_count": 58333,
+    "component_count": 256,
+    "percentage": 0.839
   },
   "blue": {
-    "pixel_count": 110435,
-    "component_count": 509,
-    "percentage": 1.588
+    "pixel_count": 169492,
+    "component_count": 278,
+    "percentage": 2.437
   },
   "black": {
     "pixel_count": 106019,

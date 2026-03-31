@@ -373,16 +373,29 @@ def run_segmentation(img: np.ndarray) -> dict:
         mask = directional_gap_fill(mask)
         mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
 
-        # Post-gap-fill: remove terrain blobs that grew via gap-fill
-        # Trail lines are elongated; terrain patches are compact/fat
+        # Post-gap-fill: remove terrain blobs using WIDTH RATIO
+        # (area / skeleton_length). Trail lines have consistent narrow width
+        # (~3-10px), terrain blobs are fat (~20+px).
+        from skimage.morphology import skeletonize as _skel
         num_l2, lbl2, st2, _ = cv2.connectedComponentsWithStats(mask)
         for i2 in range(1, num_l2):
             a2 = st2[i2, cv2.CC_STAT_AREA]
-            w2 = st2[i2, cv2.CC_STAT_WIDTH]
-            h2 = st2[i2, cv2.CC_STAT_HEIGHT]
-            asp2 = max(w2, h2) / max(min(w2, h2), 1)
-            if a2 > 1500 and asp2 < 2.5:
+            if a2 < 50:
                 mask[lbl2 == i2] = 0
+                continue
+            # Compute width ratio for larger components
+            if a2 > 200:
+                cx = st2[i2, cv2.CC_STAT_LEFT]
+                cy = st2[i2, cv2.CC_STAT_TOP]
+                cw2 = st2[i2, cv2.CC_STAT_WIDTH]
+                ch2 = st2[i2, cv2.CC_STAT_HEIGHT]
+                comp = (lbl2[cy:cy+ch2, cx:cx+cw2] == i2).astype(np.uint8)
+                skel = _skel(comp > 0)
+                skel_len = float(np.count_nonzero(skel))
+                if skel_len > 0:
+                    width_ratio = a2 / skel_len
+                    if width_ratio > 15:  # too fat to be a trail line
+                        mask[lbl2 == i2] = 0
 
         mask = cleanup_mask(mask, min_area=15)
 
