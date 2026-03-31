@@ -1,42 +1,42 @@
 {
-  "green_segments": 18,
-  "blue_segments": 49,
-  "black_segments": 35,
-  "total_segments": 102,
-  "total_arc_length": 18061.5,
+  "green_segments": 39,
+  "blue_segments": 96,
+  "black_segments": 129,
+  "total_segments": 264,
+  "total_arc_length": 38789.7,
   "blue_mask_pixels": 169492,
   "area_checks": {
     "Solitude area": {
-      "blue_count": 2,
+      "blue_count": 3,
       "required_min": 1,
       "pass": true
     },
     "Skye Peak center": {
-      "blue_count": 22,
+      "blue_count": 28,
       "required_min": 5,
       "pass": true
     },
     "Killington Peak": {
-      "blue_count": 0,
+      "blue_count": 16,
       "required_min": 3,
-      "pass": false
+      "pass": true
     },
     "Bear Mountain": {
-      "blue_count": 0,
+      "blue_count": 11,
       "required_min": 1,
-      "pass": false
+      "pass": true
     },
     "Snowdon": {
-      "blue_count": 24,
+      "blue_count": 30,
       "required_min": 3,
       "pass": true
     }
   },
   "precision": {
-    "green": 97.9,
-    "blue": 97.4,
-    "black": 37.8
+    "green": 98.6,
+    "blue": 98.2,
+    "black": 60.9
   },
   "gap_pairs": 0,
-  "short_polylines": 3
+  "short_polylines": 17
 }

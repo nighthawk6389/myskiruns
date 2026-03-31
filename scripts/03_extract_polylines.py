@@ -250,6 +250,56 @@ def main():
         all_accepted.extend(results["accepted"])
         all_uncertain.extend(results["uncertain"])
 
+    # PRE-MERGE precision filter: remove noise polylines BEFORE merging
+    # so they don't contaminate good polylines during merge
+    print(f"\nPre-merge precision filter...")
+    if IMAGE_PATH.exists():
+        orig_img = cv2.imread(str(IMAGE_PATH))
+        orig_hsv = cv2.cvtColor(orig_img, cv2.COLOR_BGR2HSV)
+        text_mask_path = MASKS_DIR / "text_mask.png"
+        text_mask_img = None
+        if text_mask_path.exists():
+            text_mask_img = cv2.imread(str(text_mask_path), cv2.IMREAD_GRAYSCALE)
+            text_mask_img = cv2.dilate(text_mask_img, np.ones((5, 5), np.uint8), iterations=1)
+
+        pre_filtered = []
+        removed_pre = 0
+        for trail in all_accepted:
+            pts = trail["points"]
+            on_trail = 0
+            checked = 0
+            for py, px in pts:  # internal format is (y, x)
+                py_i, px_i = int(py), int(px)
+                if (text_mask_img is not None and 0 <= py_i < img_h and 0 <= px_i < img_w
+                        and text_mask_img[py_i, px_i] > 0):
+                    continue
+                checked += 1
+                y_lo = max(0, py_i - 5)
+                y_hi = min(img_h, py_i + 6)
+                x_lo = max(0, px_i - 5)
+                x_hi = min(img_w, px_i + 6)
+                window = orig_hsv[y_lo:y_hi, x_lo:x_hi]
+                if window.size == 0:
+                    continue
+                if trail["color"] == "blue":
+                    match = cv2.inRange(window, np.array([75, 30, 30]),
+                                        np.array([135, 255, 255]))
+                elif trail["color"] == "green":
+                    match = cv2.inRange(window, np.array([35, 50, 40]),
+                                        np.array([85, 255, 255]))
+                else:  # black
+                    match = (window[:, :, 2] < 100).astype(np.uint8) * 255
+                if np.count_nonzero(match) >= 3:
+                    on_trail += 1
+            precision = on_trail / checked if checked > 0 else 1.0
+            if precision >= 0.25:
+                pre_filtered.append(trail)
+            else:
+                removed_pre += 1
+        all_accepted = pre_filtered
+        print(f"  Removed {removed_pre} low-precision polylines before merge")
+        print(f"  Remaining: {len(all_accepted)}")
+
     # Multi-pass merge: progressively more aggressive
     print(f"\nMerging segments (multi-pass)...")
     for pass_num, (dist_thresh, angle_thresh) in enumerate([
@@ -320,7 +370,7 @@ def main():
         # At ~3400px image width, a real trail spans at least ~50px
         # This primarily cleans up black noise (adaptive threshold fragments)
         arc = compute_arc_length(pts)
-        if arc < 50:
+        if arc < 30:
             removed_short += 1
             continue
 
@@ -330,64 +380,6 @@ def main():
     print(f"  Removed {removed_tiny_span} tiny-span (<20px) polylines")
     print(f"  Removed {removed_short} short-arc (<50px) polylines")
     print(f"  Before: {before_count}, After: {len(all_accepted)}")
-
-    # Precision filter: check each polyline against the original image
-    # Reject polylines where too few non-text points are on trail-colored pixels.
-    # Points in text regions are excluded from the calculation (text overlaps
-    # trail lines, so those points aren't "off trail" — they're just obscured).
-    print(f"\nPrecision filtering (checking against original image)...")
-    if IMAGE_PATH.exists():
-        orig_img = cv2.imread(str(IMAGE_PATH))
-        orig_hsv = cv2.cvtColor(orig_img, cv2.COLOR_BGR2HSV)
-        # Load text mask to exclude text-covered points
-        text_mask_path = MASKS_DIR / "text_mask.png"
-        text_mask = None
-        if text_mask_path.exists():
-            text_mask = cv2.imread(str(text_mask_path), cv2.IMREAD_GRAYSCALE)
-            # Dilate to account for text margins
-            text_mask = cv2.dilate(text_mask, np.ones((5, 5), np.uint8), iterations=1)
-
-        precision_filtered = []
-        removed_precision = 0
-        for trail in all_accepted:
-            pts = trail["points"]
-            on_trail = 0
-            checked = 0
-            for px, py in pts:
-                py_i, px_i = int(py), int(px)
-                # Skip points in text regions (trail is there but obscured by text)
-                if (text_mask is not None and 0 <= py_i < img_h and 0 <= px_i < img_w
-                        and text_mask[py_i, px_i] > 0):
-                    continue
-                checked += 1
-                y_lo = max(0, py_i - 5)
-                y_hi = min(img_h, py_i + 6)
-                x_lo = max(0, px_i - 5)
-                x_hi = min(img_w, px_i + 6)
-                window = orig_hsv[y_lo:y_hi, x_lo:x_hi]
-                if window.size == 0:
-                    continue
-                if trail["color"] == "blue":
-                    match = cv2.inRange(window, np.array([75, 30, 30]),
-                                        np.array([135, 255, 255]))
-                elif trail["color"] == "green":
-                    match = cv2.inRange(window, np.array([35, 50, 40]),
-                                        np.array([85, 255, 255]))
-                else:  # black
-                    match = (window[:, :, 2] < 100).astype(np.uint8) * 255
-                if np.count_nonzero(match) >= 3:
-                    on_trail += 1
-            precision = on_trail / checked if checked > 0 else 1.0
-            if precision >= 0.35:
-                trail["precision"] = round(precision, 3)
-                precision_filtered.append(trail)
-            else:
-                removed_precision += 1
-        all_accepted = precision_filtered
-        print(f"  Removed {removed_precision} low-precision polylines")
-        print(f"  After precision filter: {len(all_accepted)}")
-    else:
-        print(f"  Skipped (no original image)")
 
     # Save results
     print(f"\nTotal accepted: {len(all_accepted)}")
