@@ -84,14 +84,14 @@ def create_mountain_mask(hsv_img: np.ndarray) -> np.ndarray:
                                  np.ones((5, 5), np.uint8), iterations=1)
 
     # Subtract sky from mountain mask — the yellow boundary includes the
-    # ridgeline which has sky bleed. Detect sky by color in the top portion.
-    sky = cv2.inRange(hsv_img, np.array([80, 15, 130]), np.array([140, 255, 255]))
+    # ridgeline which has sky bleed. Use targeted sky detection, not erosion,
+    # to avoid clipping trails at the ridgeline (like Solitude).
+    sky = cv2.inRange(hsv_img, np.array([85, 20, 150]), np.array([135, 255, 255]))
     sky_region = np.zeros_like(sky)
-    sky_region[:int(h * 0.25), :] = sky[:int(h * 0.25), :]
-    sky_region = cv2.dilate(sky_region, np.ones((10, 10), np.uint8), iterations=2)
+    sky_region[:int(h * 0.20), :] = sky[:int(h * 0.20), :]
+    # Only dilate sky inward by a small amount
+    sky_region = cv2.dilate(sky_region, np.ones((5, 5), np.uint8), iterations=1)
     mountain = cv2.bitwise_and(mountain, cv2.bitwise_not(sky_region))
-    mountain = cv2.erode(mountain, np.ones((3, 3), np.uint8), iterations=2)
-    mountain = cv2.dilate(mountain, np.ones((3, 3), np.uint8), iterations=1)
 
     return mountain
 
@@ -369,33 +369,20 @@ def run_segmentation(img: np.ndarray) -> dict:
             if added > 0:
                 print(f"    Added {added:,} symbol anchor pixels")
 
-        # Gap-fill strategy:
-        # - Green: directional gap-fill (green lines are thicker, less flood risk)
-        # - Blue: text corridor fill only — expand trail color into text mask
-        #   regions to bridge trail name gaps. No directional gap-fill
-        #   (would flood cyan-green terrain overlap areas).
-        if color_name == "green":
-            mask = directional_gap_fill(mask)
-            mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
-        elif color_name == "blue":
-            # Text corridor fill: expand blue into text regions only
-            text_corridor = cv2.dilate(text_mask, np.ones((3, 3), np.uint8), iterations=1)
-            for _ in range(30):
-                expanded = cv2.dilate(mask, np.ones((3, 3), np.uint8), iterations=1)
-                new_px = cv2.bitwise_and(expanded, text_corridor)
-                new_px = cv2.bitwise_and(new_px, cv2.bitwise_not(mask))
-                if np.count_nonzero(new_px) == 0:
-                    break
-                mask = cv2.bitwise_or(mask, new_px)
-            # Remove any terrain blobs that grew through text corridor
-            num_l2, lbl2, st2, _ = cv2.connectedComponentsWithStats(mask)
-            for i2 in range(1, num_l2):
-                a2 = st2[i2, cv2.CC_STAT_AREA]
-                w2 = st2[i2, cv2.CC_STAT_WIDTH]
-                h2 = st2[i2, cv2.CC_STAT_HEIGHT]
-                asp2 = max(w2, h2) / max(min(w2, h2), 1)
-                if a2 > 1500 and asp2 < 2.5:
-                    mask[lbl2 == i2] = 0
+        # Directional gap fill for all trail colors
+        mask = directional_gap_fill(mask)
+        mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
+
+        # Post-gap-fill: remove terrain blobs that grew via gap-fill
+        # Trail lines are elongated; terrain patches are compact/fat
+        num_l2, lbl2, st2, _ = cv2.connectedComponentsWithStats(mask)
+        for i2 in range(1, num_l2):
+            a2 = st2[i2, cv2.CC_STAT_AREA]
+            w2 = st2[i2, cv2.CC_STAT_WIDTH]
+            h2 = st2[i2, cv2.CC_STAT_HEIGHT]
+            asp2 = max(w2, h2) / max(min(w2, h2), 1)
+            if a2 > 1500 and asp2 < 2.5:
+                mask[lbl2 == i2] = 0
 
         mask = cleanup_mask(mask, min_area=15)
 
