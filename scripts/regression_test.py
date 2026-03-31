@@ -94,6 +94,36 @@ def compute_metrics():
         if bm is not None:
             blue_mask_pixels = int(np.count_nonzero(bm))
 
+    # Compute precision: % of polyline points on actual trail-colored pixels
+    import cv2
+    precision_by_color = {}
+    img_path = OUTPUT_DIR / "trailmap_300dpi.png"
+    if img_path.exists():
+        orig_hsv = cv2.cvtColor(cv2.imread(str(img_path)), cv2.COLOR_BGR2HSV)
+        ih, iw = orig_hsv.shape[:2]
+        for color in ["green", "blue", "black"]:
+            on, total_pts = 0, 0
+            for t in accepted:
+                if t["color"] != color:
+                    continue
+                for px, py in t["points"]:
+                    total_pts += 1
+                    py_i, px_i = int(py), int(px)
+                    y0 = max(0, py_i - 3); y1_c = min(ih, py_i + 4)
+                    x0 = max(0, px_i - 3); x1_c = min(iw, px_i + 4)
+                    win = orig_hsv[y0:y1_c, x0:x1_c]
+                    if win.size == 0:
+                        continue
+                    if color == "blue":
+                        m = cv2.inRange(win, np.array([75, 30, 30]), np.array([135, 255, 255]))
+                    elif color == "green":
+                        m = cv2.inRange(win, np.array([35, 50, 40]), np.array([85, 255, 255]))
+                    else:
+                        m = (win[:, :, 2] < 100).astype(np.uint8) * 255
+                    if np.count_nonzero(m) >= 3:
+                        on += 1
+            precision_by_color[color] = round(on / total_pts * 100, 1) if total_pts > 0 else 0
+
     return {
         "green_segments": color_counts.get("green", 0),
         "blue_segments": color_counts.get("blue", 0),
@@ -102,7 +132,8 @@ def compute_metrics():
         "total_arc_length": round(total_arc, 1),
         "blue_mask_pixels": blue_mask_pixels,
         "area_checks": area_checks,
-        "gap_pairs": 0,  # computed below
+        "precision": precision_by_color,
+        "gap_pairs": 0,
         "short_polylines": sum(1 for t in accepted if t["num_points"] <= 3),
     }
 
@@ -118,6 +149,9 @@ def save_baseline(metrics):
     for name, check in metrics["area_checks"].items():
         status = "PASS" if check["pass"] else "FAIL"
         print(f"  {name}: {check['blue_count']} blue polylines [{status}]")
+    if "precision" in metrics:
+        for color, prec in metrics["precision"].items():
+            print(f"  {color} precision: {prec:.1f}%")
 
 
 def check_regression(metrics):
@@ -169,6 +203,18 @@ def check_regression(metrics):
         if not check["pass"]:
             passed = False
         print(f"    {name}: {check['blue_count']} blue (need >={check['required_min']}) [{status}]")
+
+    # Check precision
+    if "precision" in metrics and "precision" in baseline:
+        print("  Precision (% polyline points on trail pixels):")
+        for color in ["green", "blue", "black"]:
+            curr_p = metrics["precision"].get(color, 0)
+            base_p = baseline["precision"].get(color, 0)
+            min_p = base_p * 0.85  # precision can drop at most 15%
+            p_status = "PASS" if curr_p >= min_p else "FAIL"
+            if p_status == "FAIL":
+                passed = False
+            print(f"    {color}: {curr_p:.1f}% (baseline: {base_p:.1f}%, min: {min_p:.1f}%) [{p_status}]")
 
     if passed:
         print("\nAll regression checks PASSED.")
