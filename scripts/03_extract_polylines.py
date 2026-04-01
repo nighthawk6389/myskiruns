@@ -72,36 +72,37 @@ def extract_components(mask: np.ndarray) -> list:
     return components
 
 
-def extract_polyline_from_skeleton(skeleton: np.ndarray) -> list:
-    """Extract a single ordered polyline from a skeleton image.
+def extract_all_branches_from_skeleton(skeleton: np.ndarray, max_branches: int = 20) -> list:
+    """Extract ALL branches from a skeleton as separate polylines.
 
-    For skeletons with branches, follows the longest path.
-    Returns list of (y, x) tuples.
+    Instead of following only the longest path (losing branches at junctions),
+    this traces every segment between endpoints/junctions as a separate polyline.
+    Returns list of lists of (y, x) tuples, up to max_branches.
     """
-    endpoints, junctions = skeleton_endpoints_and_junctions(skeleton)
+    skel = (skeleton > 0).astype(np.uint8)
+    visited = np.zeros_like(skel, dtype=bool)
+    all_segments = []
 
-    if not endpoints and not junctions:
-        # Try any skeleton pixel
-        ys, xs = np.where(skeleton > 0)
+    endpoints, junctions = skeleton_endpoints_and_junctions(skeleton)
+    junction_set = set(junctions)
+
+    # Start from endpoints first
+    starts = list(endpoints)
+    if not starts:
+        ys, xs = np.where(skel > 0)
         if len(ys) == 0:
             return []
-        endpoints = [(ys[0], xs[0])]
+        starts = [(ys[0], xs[0])]
 
-    # Try walking from each endpoint and take the longest path
-    best_points = []
-    starts = endpoints if endpoints else junctions[:2]
-
-    for start in starts[:4]:  # limit attempts
-        skel = (skeleton > 0).astype(np.uint8)
-        visited = np.zeros_like(skel, dtype=bool)
-        points = [start]
-        visited[start[0], start[1]] = True
-        current = start
-
+    def trace_from(start_pt):
+        """Trace a path from start_pt until endpoint, junction, or dead end."""
+        segment = [start_pt]
+        if not visited[start_pt[0], start_pt[1]]:
+            visited[start_pt[0], start_pt[1]] = True
+        current = start_pt
         while True:
             y, x = current
             found = False
-            # Prefer continuing in roughly the same direction
             for dy in [-1, 0, 1]:
                 for dx in [-1, 0, 1]:
                     if dy == 0 and dx == 0:
@@ -111,18 +112,54 @@ def extract_polyline_from_skeleton(skeleton: np.ndarray) -> list:
                             and skel[ny, nx] > 0 and not visited[ny, nx]):
                         visited[ny, nx] = True
                         current = (ny, nx)
-                        points.append(current)
+                        segment.append(current)
                         found = True
+                        if (ny, nx) in junction_set:
+                            return segment, True  # hit junction
                         break
                 if found:
                     break
             if not found:
-                break
+                return segment, False  # dead end
+        return segment, False
 
-        if len(points) > len(best_points):
-            best_points = points
+    for start in starts:
+        if visited[start[0], start[1]]:
+            continue
+        seg, hit_junc = trace_from(start)
+        if len(seg) >= 2:
+            all_segments.append(seg)
+        if len(all_segments) >= max_branches:
+            break
 
-    return best_points
+    # Trace unvisited branches from junctions
+    for junc in junctions:
+        if len(all_segments) >= max_branches:
+            break
+        y, x = junc
+        for dy in [-1, 0, 1]:
+            for dx in [-1, 0, 1]:
+                if dy == 0 and dx == 0:
+                    continue
+                ny, nx = y + dy, x + dx
+                if (0 <= ny < skel.shape[0] and 0 <= nx < skel.shape[1]
+                        and skel[ny, nx] > 0 and not visited[ny, nx]):
+                    seg, _ = trace_from((ny, nx))
+                    seg.insert(0, junc)
+                    if len(seg) >= 2:
+                        all_segments.append(seg)
+                    if len(all_segments) >= max_branches:
+                        break
+
+    return all_segments
+
+
+def extract_polyline_from_skeleton(skeleton: np.ndarray) -> list:
+    """Extract the longest polyline from a skeleton. Legacy wrapper."""
+    branches = extract_all_branches_from_skeleton(skeleton)
+    if not branches:
+        return []
+    return max(branches, key=len)
 
 
 def process_color(color_name: str, mask: np.ndarray, mountain_mask=None) -> dict:
@@ -160,27 +197,32 @@ def process_color(color_name: str, mask: np.ndarray, mountain_mask=None) -> dict
         classification = score_result["classification"]
 
         if classification in ("confident", "probable"):
-            # Extract polyline
+            # Extract ALL branches from skeleton (not just longest)
             skeleton = compute_skeleton(cropped)
-            points = extract_polyline_from_skeleton(skeleton)
+            branches = extract_all_branches_from_skeleton(skeleton)
 
-            if len(points) < 3:
+            if not branches:
                 results["rejected"].append(score_result)
                 continue
 
-            # Convert cropped coords back to full image coords
-            full_points = [(py + y0, px + x0) for py, px in points]
-            full_points = order_top_to_bottom(full_points)
+            for branch_idx, points in enumerate(branches):
+                if len(points) < 3:
+                    continue
 
-            results["accepted"].append({
-                "id": comp_id,
-                "color": color_name,
-                "points": full_points,
-                "score": score_result["total"],
-                "classification": classification,
-                "area": area,
-                "bbox": bbox,
-            })
+                # Convert cropped coords back to full image coords
+                full_points = [(py + y0, px + x0) for py, px in points]
+                full_points = order_top_to_bottom(full_points)
+
+                branch_id = f"{comp_id}_{branch_idx}" if len(branches) > 1 else comp_id
+                results["accepted"].append({
+                    "id": branch_id,
+                    "color": color_name,
+                    "points": full_points,
+                    "score": score_result["total"],
+                    "classification": classification,
+                    "area": area,
+                    "bbox": bbox,
+                })
 
         elif classification == "uncertain":
             # Keep for SAM 2 refinement

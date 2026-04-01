@@ -343,9 +343,10 @@ def run_segmentation(img: np.ndarray) -> dict:
         if inpaint_extra > 0:
             print(f"    Inpainting recovered {inpaint_extra:,} additional pixels")
 
-        # Basic cleanup
+        # Basic cleanup — NO MORPH_OPEN. Trail lines are thin (3-5px wide)
+        # and erosion destroys them. Only use CLOSE to fill tiny gaps, and
+        # remove small noise by area threshold.
         kernel = np.ones((3, 3), np.uint8)
-        mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
         mask = cleanup_mask(mask, min_area=20)
 
         # Remove terrain blobs (fat, compact shapes — not trail lines)
@@ -371,7 +372,6 @@ def run_segmentation(img: np.ndarray) -> dict:
 
         # Directional gap fill for all trail colors
         mask = directional_gap_fill(mask)
-        mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
 
         # Post-gap-fill: remove terrain blobs using WIDTH RATIO
         # (area / skeleton_length). Trail lines have consistent narrow width

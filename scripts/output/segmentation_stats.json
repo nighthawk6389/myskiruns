@@ -1,18 +1,18 @@
 {
   "green": {
-    "pixel_count": 58333,
-    "component_count": 256,
-    "percentage": 0.839
+    "pixel_count": 149857,
+    "component_count": 278,
+    "percentage": 2.155
   },
   "blue": {
-    "pixel_count": 169492,
-    "component_count": 278,
-    "percentage": 2.437
+    "pixel_count": 330670,
+    "component_count": 498,
+    "percentage": 4.755
   },
   "black": {
-    "pixel_count": 106019,
-    "component_count": 592,
-    "percentage": 1.525
+    "pixel_count": 115509,
+    "component_count": 641,
+    "percentage": 1.661
   },
   "magenta_lift": {
     "pixel_count": 51156,
