@@ -59,7 +59,7 @@ def extract_components(mask: np.ndarray) -> list:
     components = []
     for i in range(1, num_labels):  # skip background (0)
         area = stats[i, cv2.CC_STAT_AREA]
-        if area < 50:  # hard minimum — trail line 5px wide, 10px long = 50px area
+        if area < 50:  # trail line 5px wide, 10px long = 50px area
             continue
         component_mask = ((labels == i) * 255).astype(np.uint8)
         bbox = {
@@ -163,92 +163,90 @@ def extract_polyline_from_skeleton(skeleton: np.ndarray) -> list:
 
 
 def process_color(color_name: str, mask: np.ndarray, mountain_mask=None) -> dict:
-    """Process a single color mask: extract components, score, extract polylines.
+    """Process a color mask: skeletonize, trace connected components as polylines.
 
-    Returns dict with accepted/uncertain/rejected lists.
+    Simple approach: skeleton of mask → connected components → each traced as a polyline.
+    No heuristic scoring — precision filter validates quality downstream.
     """
     print(f"\n  Processing {color_name}...")
-    components = extract_components(mask)
-    print(f"    Found {len(components)} components (after area filter)")
 
     results = {"accepted": [], "uncertain": [], "rejected": []}
     score_log = []
 
-    for idx, (comp_mask, bbox, area) in enumerate(components):
-        comp_id = f"{color_name}_{idx:03d}"
+    # Skeletonize the ENTIRE mask at once (much faster than per-component)
+    skeleton = compute_skeleton(mask)
+    skel_px = np.count_nonzero(skeleton)
+    print(f"    Skeleton: {skel_px:,} pixels")
 
-        # Crop to bounding box for faster processing
-        x, y, w, h = bbox["x"], bbox["y"], bbox["w"], bbox["h"]
-        # Add padding
-        pad = 5
-        y0 = max(0, y - pad)
-        x0 = max(0, x - pad)
-        y1 = min(mask.shape[0], y + h + pad)
-        x1 = min(mask.shape[1], x + w + pad)
-        cropped = comp_mask[y0:y1, x0:x1]
+    # Get connected components of the skeleton
+    num_l, lbl, st, cent = cv2.connectedComponentsWithStats(skeleton)
+    components_used = 0
 
-        # Score the component
-        score_result = score_component(cropped, mountain_mask=None)
-        score_result["id"] = comp_id
-        score_result["area"] = area
-        score_result["bbox"] = bbox
-        score_log.append(score_result)
+    for i in range(1, num_l):
+        area = st[i, cv2.CC_STAT_AREA]
+        if area < 5:  # skip tiny dots
+            continue
 
-        classification = score_result["classification"]
+        comp_id = f"{color_name}_{i:04d}"
+        x = st[i, cv2.CC_STAT_LEFT]
+        y = st[i, cv2.CC_STAT_TOP]
+        cw = st[i, cv2.CC_STAT_WIDTH]
+        ch = st[i, cv2.CC_STAT_HEIGHT]
 
-        if classification in ("confident", "probable"):
-            # Extract ALL branches from skeleton (not just longest)
-            skeleton = compute_skeleton(cropped)
-            branches = extract_all_branches_from_skeleton(skeleton)
+        # Get the skeleton pixels for this component, ordered as a path
+        comp_skel = ((lbl == i) * 255).astype(np.uint8)
+        ys, xs = np.where(comp_skel > 0)
+        if len(ys) < 3:
+            continue
 
-            if not branches:
-                results["rejected"].append(score_result)
-                continue
+        # For simple (non-branching) skeletons, just sort by y then x
+        # For branching skeletons, extract branches
+        endpoints, junctions = skeleton_endpoints_and_junctions(comp_skel)
 
-            for branch_idx, points in enumerate(branches):
-                if len(points) < 3:
-                    continue
-
-                # Convert cropped coords back to full image coords
-                full_points = [(py + y0, px + x0) for py, px in points]
-                full_points = order_top_to_bottom(full_points)
-
-                branch_id = f"{comp_id}_{branch_idx}" if len(branches) > 1 else comp_id
-                results["accepted"].append({
-                    "id": branch_id,
-                    "color": color_name,
-                    "points": full_points,
-                    "score": score_result["total"],
-                    "classification": classification,
-                    "area": area,
-                    "bbox": bbox,
-                })
-
-        elif classification == "uncertain":
-            # Keep for SAM 2 refinement
-            skeleton = compute_skeleton(cropped)
-            points = extract_polyline_from_skeleton(skeleton)
+        if len(junctions) == 0:
+            # No branches — trace single path
+            points = ordered_skeleton_points(comp_skel, endpoints)
             if len(points) >= 3:
-                full_points = [(py + y0, px + x0) for py, px in points]
-                full_points = order_top_to_bottom(full_points)
-                results["uncertain"].append({
+                points = order_top_to_bottom(points)
+                results["accepted"].append({
                     "id": comp_id,
                     "color": color_name,
-                    "points": full_points,
-                    "score": score_result["total"],
-                    "classification": classification,
+                    "points": points,
+                    "score": 5,
+                    "classification": "accepted",
                     "area": area,
-                    "bbox": bbox,
+                    "bbox": {"x": int(x), "y": int(y), "w": int(cw), "h": int(ch)},
                 })
-            else:
-                results["rejected"].append(score_result)
-
+                components_used += 1
         else:
-            results["rejected"].append(score_result)
+            # Has branches — extract all paths
+            branches = extract_all_branches_from_skeleton(comp_skel)
+            branches.sort(key=len, reverse=True)
+            # Keep longest + any branch >= 15 points
+            selected = [branches[0]] if branches else []
+            for b in branches[1:]:
+                if len(b) >= 15:
+                    selected.append(b)
 
-    print(f"    Accepted: {len(results['accepted'])}, "
-          f"Uncertain: {len(results['uncertain'])}, "
-          f"Rejected: {len(results['rejected'])}")
+            for bi, points in enumerate(selected):
+                if len(points) < 3:
+                    continue
+                points = order_top_to_bottom(points)
+                bid = f"{comp_id}_{bi}" if len(selected) > 1 else comp_id
+                results["accepted"].append({
+                    "id": bid,
+                    "color": color_name,
+                    "points": points,
+                    "score": 5,
+                    "classification": "accepted",
+                    "area": area,
+                    "bbox": {"x": int(x), "y": int(y), "w": int(cw), "h": int(ch)},
+                })
+            if selected:
+                components_used += 1
+
+    print(f"    Components used: {components_used}/{num_l-1}, "
+          f"Polylines: {len(results['accepted'])}")
 
     return results, score_log
 
@@ -277,16 +275,17 @@ def main():
         results, score_log = process_color(color, mask)
         all_score_logs[color] = score_log
 
-        # Simplify accepted polylines
+        # Simplify polylines — use gentle epsilon to preserve trail path.
+        # Aggressive simplification (epsilon>1.5) causes straight-line shortcuts
+        # that miss the actual curvy trail path, destroying recall.
         for trail in results["accepted"]:
-            # Adaptive epsilon based on trail length
             num_pts = len(trail["points"])
-            if num_pts > 200:
-                epsilon = 3.0
+            if num_pts > 500:
+                epsilon = 1.0
             elif num_pts > 100:
-                epsilon = 2.0
+                epsilon = 0.8
             else:
-                epsilon = 1.5
+                epsilon = 0.5
             trail["points"] = simplify_points(trail["points"], epsilon=epsilon)
 
         all_accepted.extend(results["accepted"])
@@ -342,13 +341,19 @@ def main():
         print(f"  Removed {removed_pre} low-precision polylines before merge")
         print(f"  Remaining: {len(all_accepted)}")
 
-    # Multi-pass merge: progressively more aggressive
-    print(f"\nMerging segments (multi-pass)...")
+    # Multi-pass merge: only run if segment count is manageable (<500)
+    # With thousands of segments, O(n²) merge is too slow
+    if len(all_accepted) > 500:
+        print(f"\nSkipping merge ({len(all_accepted)} segments — too many for O(n²) merge)")
+    else:
+        print(f"\nMerging segments (multi-pass)...")
     for pass_num, (dist_thresh, angle_thresh) in enumerate([
         (20, 30),   # Pass 1: conservative — close + collinear
         (40, 45),   # Pass 2: moderate — wider distance + angle
         (60, 60),   # Pass 3: aggressive — catch remaining gaps
     ], 1):
+        if len(all_accepted) > 500:
+            break
         merged_any = False
         for color in TRAIL_COLORS:
             color_segments = [t for t in all_accepted if t["color"] == color]
@@ -404,7 +409,7 @@ def main():
         # Filter 1: minimum span (straight-line distance between endpoints)
         # A real trail should span at least 20px on the map
         span = compute_span(pts)
-        if span < 20:
+        if span < 10:
             removed_tiny_span += 1
             continue
 
@@ -412,7 +417,7 @@ def main():
         # At ~3400px image width, a real trail spans at least ~50px
         # This primarily cleans up black noise (adaptive threshold fragments)
         arc = compute_arc_length(pts)
-        if arc < 30:
+        if arc < 15:
             removed_short += 1
             continue
 

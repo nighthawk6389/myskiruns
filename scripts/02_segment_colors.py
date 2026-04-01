@@ -343,61 +343,18 @@ def run_segmentation(img: np.ndarray) -> dict:
         if inpaint_extra > 0:
             print(f"    Inpainting recovered {inpaint_extra:,} additional pixels")
 
-        # Basic cleanup — NO MORPH_OPEN. Trail lines are thin (3-5px wide)
-        # and erosion destroys them. Only use CLOSE to fill tiny gaps, and
-        # remove small noise by area threshold.
-        kernel = np.ones((3, 3), np.uint8)
-        mask = cleanup_mask(mask, min_area=20)
-
-        # Remove terrain blobs (fat, compact shapes — not trail lines)
-        num_l, lbl, st, _ = cv2.connectedComponentsWithStats(mask)
-        for i in range(1, num_l):
-            area = st[i, cv2.CC_STAT_AREA]
-            ww = st[i, cv2.CC_STAT_WIDTH]
-            hh = st[i, cv2.CC_STAT_HEIGHT]
-            aspect = max(ww, hh) / max(min(ww, hh), 1)
-            if area > 800 and aspect < 2.0:
-                mask[lbl == i] = 0
+        # NO mask-level cleanup — the raw detection has 100% recall.
+        # Every filter we apply here destroys trail pixels.
+        # The precision filter in Step 3 handles noise at the polyline level.
+        # Only remove the very smallest dots (single pixels).
+        mask = cleanup_mask(mask, min_area=5)
 
         # Save raw mask (before gap-fill) for black trail subtraction
         raw_color_masks[color_name] = mask.copy()
 
-        # Add difficulty symbol anchor dots (small, just bridge continuity)
-        if color_name in anchor_masks:
-            color_anchor = cv2.bitwise_and(anchor_masks[color_name], mountain_mask)
-            mask = cv2.bitwise_or(mask, color_anchor)
-            added = np.count_nonzero(color_anchor)
-            if added > 0:
-                print(f"    Added {added:,} symbol anchor pixels")
-
-        # Directional gap fill for all trail colors
+        # Directional gap fill to bridge text gaps
         mask = directional_gap_fill(mask)
-
-        # Post-gap-fill: remove terrain blobs using WIDTH RATIO
-        # (area / skeleton_length). Trail lines have consistent narrow width
-        # (~3-10px), terrain blobs are fat (~20+px).
-        from skimage.morphology import skeletonize as _skel
-        num_l2, lbl2, st2, _ = cv2.connectedComponentsWithStats(mask)
-        for i2 in range(1, num_l2):
-            a2 = st2[i2, cv2.CC_STAT_AREA]
-            if a2 < 50:
-                mask[lbl2 == i2] = 0
-                continue
-            # Compute width ratio for larger components
-            if a2 > 200:
-                cx = st2[i2, cv2.CC_STAT_LEFT]
-                cy = st2[i2, cv2.CC_STAT_TOP]
-                cw2 = st2[i2, cv2.CC_STAT_WIDTH]
-                ch2 = st2[i2, cv2.CC_STAT_HEIGHT]
-                comp = (lbl2[cy:cy+ch2, cx:cx+cw2] == i2).astype(np.uint8)
-                skel = _skel(comp > 0)
-                skel_len = float(np.count_nonzero(skel))
-                if skel_len > 0:
-                    width_ratio = a2 / skel_len
-                    if width_ratio > 15:  # too fat to be a trail line
-                        mask[lbl2 == i2] = 0
-
-        mask = cleanup_mask(mask, min_area=15)
+        mask = cleanup_mask(mask, min_area=5)
 
         masks[color_name] = mask
         num_labels = cv2.connectedComponentsWithStats(mask)[0] - 1
