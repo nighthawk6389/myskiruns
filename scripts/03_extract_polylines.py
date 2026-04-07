@@ -275,17 +275,15 @@ def main():
         results, score_log = process_color(color, mask)
         all_score_logs[color] = score_log
 
-        # Simplify polylines — use gentle epsilon to preserve trail path.
-        # Aggressive simplification (epsilon>1.5) causes straight-line shortcuts
-        # that miss the actual curvy trail path, destroying recall.
+        # Simplify polylines — moderate epsilon balances point count and path accuracy
         for trail in results["accepted"]:
             num_pts = len(trail["points"])
-            if num_pts > 500:
-                epsilon = 1.0
-            elif num_pts > 100:
-                epsilon = 0.8
+            if num_pts > 200:
+                epsilon = 2.0
+            elif num_pts > 50:
+                epsilon = 1.5
             else:
-                epsilon = 0.5
+                epsilon = 1.0
             trail["points"] = simplify_points(trail["points"], epsilon=epsilon)
 
         all_accepted.extend(results["accepted"])
@@ -409,7 +407,7 @@ def main():
         # Filter 1: minimum span (straight-line distance between endpoints)
         # A real trail should span at least 20px on the map
         span = compute_span(pts)
-        if span < 10:
+        if span < 20:
             removed_tiny_span += 1
             continue
 
@@ -417,7 +415,7 @@ def main():
         # At ~3400px image width, a real trail spans at least ~50px
         # This primarily cleans up black noise (adaptive threshold fragments)
         arc = compute_arc_length(pts)
-        if arc < 15:
+        if arc < 30:
             removed_short += 1
             continue
 

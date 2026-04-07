@@ -343,18 +343,52 @@ def run_segmentation(img: np.ndarray) -> dict:
         if inpaint_extra > 0:
             print(f"    Inpainting recovered {inpaint_extra:,} additional pixels")
 
-        # NO mask-level cleanup — the raw detection has 100% recall.
-        # Every filter we apply here destroys trail pixels.
-        # The precision filter in Step 3 handles noise at the polyline level.
-        # Only remove the very smallest dots (single pixels).
-        mask = cleanup_mask(mask, min_area=5)
+        # Cleanup: gentle MORPH_OPEN removes single-pixel noise and
+        # thin terrain scatter. Trail lines are 3-8px wide and survive.
+        kernel = np.ones((3, 3), np.uint8)
+        mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
+        mask = cleanup_mask(mask, min_area=50)
+
+        # Width-ratio filter: remove fat terrain blobs
+        # Trail lines have area/skeleton_length < 12 (thin)
+        # Terrain blobs have ratio > 15 (fat)
+        from skimage.morphology import skeletonize as _skel
+        num_l2, lbl2, st2, _ = cv2.connectedComponentsWithStats(mask)
+        for i2 in range(1, num_l2):
+            a2 = st2[i2, cv2.CC_STAT_AREA]
+            if a2 < 200:
+                continue
+            cx2 = st2[i2, cv2.CC_STAT_LEFT]
+            cy2 = st2[i2, cv2.CC_STAT_TOP]
+            cw2 = st2[i2, cv2.CC_STAT_WIDTH]
+            ch2 = st2[i2, cv2.CC_STAT_HEIGHT]
+            comp = (lbl2[cy2:cy2+ch2, cx2:cx2+cw2] == i2).astype(np.uint8)
+            skel = _skel(comp > 0)
+            sl = float(np.count_nonzero(skel))
+            if sl > 0 and a2 / sl > 15:
+                mask[lbl2 == i2] = 0
 
         # Save raw mask (before gap-fill) for black trail subtraction
         raw_color_masks[color_name] = mask.copy()
 
         # Directional gap fill to bridge text gaps
         mask = directional_gap_fill(mask)
-        mask = cleanup_mask(mask, min_area=5)
+        # Re-apply width-ratio filter after gap-fill (blobs may have grown)
+        num_l3, lbl3, st3, _ = cv2.connectedComponentsWithStats(mask)
+        for i3 in range(1, num_l3):
+            a3 = st3[i3, cv2.CC_STAT_AREA]
+            if a3 < 200:
+                continue
+            cx3 = st3[i3, cv2.CC_STAT_LEFT]
+            cy3 = st3[i3, cv2.CC_STAT_TOP]
+            cw3 = st3[i3, cv2.CC_STAT_WIDTH]
+            ch3 = st3[i3, cv2.CC_STAT_HEIGHT]
+            comp3 = (lbl3[cy3:cy3+ch3, cx3:cx3+cw3] == i3).astype(np.uint8)
+            skel3 = _skel(comp3 > 0)
+            sl3 = float(np.count_nonzero(skel3))
+            if sl3 > 0 and a3 / sl3 > 15:
+                mask[lbl3 == i3] = 0
+        mask = cleanup_mask(mask, min_area=30)
 
         masks[color_name] = mask
         num_labels = cv2.connectedComponentsWithStats(mask)[0] - 1
