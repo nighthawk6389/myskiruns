@@ -1,0 +1,27 @@
+{
+  "green": {
+    "pixel_count": 60976,
+    "component_count": 81,
+    "percentage": 0.877
+  },
+  "blue": {
+    "pixel_count": 168951,
+    "component_count": 177,
+    "percentage": 2.43
+  },
+  "black": {
+    "pixel_count": 101994,
+    "component_count": 562,
+    "percentage": 1.467
+  },
+  "magenta_lift": {
+    "pixel_count": 51156,
+    "component_count": 35,
+    "percentage": 0.736
+  },
+  "yellow": {
+    "pixel_count": 5421,
+    "component_count": 32,
+    "percentage": 0.078
+  }
+}
