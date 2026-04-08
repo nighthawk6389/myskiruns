@@ -194,7 +194,7 @@ def create_symbol_anchor_mask(symbols: dict, shape: tuple, radius: int = 4) -> d
     return anchor_masks
 
 
-def directional_gap_fill(mask: np.ndarray) -> np.ndarray:
+def directional_gap_fill(mask: np.ndarray, bridge_length: int = 15) -> np.ndarray:
     """Fill gaps in trail lines using directional morphological closing.
 
     Instead of isotropic dilation (which creates blobs), uses thin elongated
@@ -203,7 +203,7 @@ def directional_gap_fill(mask: np.ndarray) -> np.ndarray:
     """
     result = mask.copy()
     for angle in range(0, 180, 15):  # 12 directions
-        length = 15  # bridge gaps up to ~15px
+        length = bridge_length
         kern = np.zeros((length, length), dtype=np.uint8)
         center = length // 2
         dx = np.cos(np.radians(angle))
@@ -239,17 +239,19 @@ def detect_black_trails(img: np.ndarray, hsv_img: np.ndarray,
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # Adaptive threshold: finds locally-dark features
+    # blockSize=15 and C=7 give more stable thresholds than 11/5, reducing noise
     adaptive = cv2.adaptiveThreshold(
         gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
-        cv2.THRESH_BINARY_INV, blockSize=11, C=5
+        cv2.THRESH_BINARY_INV, blockSize=15, C=7
     )
 
     # Constrain to mountain mask
     adaptive = cv2.bitwise_and(adaptive, mountain_mask)
 
-    # Darkness constraint (must be genuinely dark, not just locally darker)
+    # Darkness constraint — must be genuinely dark (V < 120), not just
+    # locally darker than surroundings. Black trail lines are typically V < 80.
     v_channel = hsv_img[:, :, 2]
-    dark_enough = (v_channel < 140).astype(np.uint8) * 255
+    dark_enough = (v_channel < 120).astype(np.uint8) * 255
     adaptive = cv2.bitwise_and(adaptive, dark_enough)
 
     # Subtract colored trail masks and lifts — minimal dilation to preserve
@@ -271,13 +273,14 @@ def detect_black_trails(img: np.ndarray, hsv_img: np.ndarray,
     adaptive = cleanup_mask(adaptive, min_area=50)
 
     # Remove compact blobs (buildings, large terrain patches)
+    # Also remove very compact small blobs (likely text fragments)
     num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(adaptive)
     for i in range(1, num_labels):
         ww = stats[i, cv2.CC_STAT_WIDTH]
         hh = stats[i, cv2.CC_STAT_HEIGHT]
         area = stats[i, cv2.CC_STAT_AREA]
         aspect = max(ww, hh) / max(min(ww, hh), 1)
-        if aspect < 2.5 and area > 500:
+        if aspect < 2.5 and area > 300:
             adaptive[labels == i] = 0
 
     return adaptive
@@ -343,10 +346,9 @@ def run_segmentation(img: np.ndarray) -> dict:
         if inpaint_extra > 0:
             print(f"    Inpainting recovered {inpaint_extra:,} additional pixels")
 
-        # Cleanup: gentle MORPH_OPEN removes single-pixel noise and
-        # thin terrain scatter. Trail lines are 3-8px wide and survive.
-        kernel = np.ones((3, 3), np.uint8)
-        mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
+        # Cleanup: remove small noise components. Skip MORPH_OPEN for trail
+        # colors — it erodes thin 3px trail lines. The width-ratio filter and
+        # polyline precision filter handle terrain noise instead.
         mask = cleanup_mask(mask, min_area=50)
 
         # Width-ratio filter: remove fat terrain blobs
@@ -368,11 +370,16 @@ def run_segmentation(img: np.ndarray) -> dict:
             if sl > 0 and a2 / sl > 15:
                 mask[lbl2 == i2] = 0
 
+        # Add symbol anchor dots AFTER width-ratio filter so anchors don't
+        # cause combined components to be filtered as blobs
+        if color_name in anchor_masks:
+            mask = cv2.bitwise_or(mask, cv2.bitwise_and(anchor_masks[color_name], mountain_mask))
+
         # Save raw mask (before gap-fill) for black trail subtraction
         raw_color_masks[color_name] = mask.copy()
 
         # Directional gap fill to bridge text gaps
-        mask = directional_gap_fill(mask)
+        mask = directional_gap_fill(mask, bridge_length=15)
         # Re-apply width-ratio filter after gap-fill (blobs may have grown)
         num_l3, lbl3, st3, _ = cv2.connectedComponentsWithStats(mask)
         for i3 in range(1, num_l3):

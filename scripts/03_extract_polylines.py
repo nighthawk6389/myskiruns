@@ -331,7 +331,9 @@ def main():
                 if np.count_nonzero(match) >= 3:
                     on_trail += 1
             precision = on_trail / checked if checked > 0 else 1.0
-            if precision >= 0.25:
+            # Higher threshold for black (adaptive threshold is noisier)
+            min_precision = 0.40 if trail["color"] == "black" else 0.25
+            if precision >= min_precision:
                 pre_filtered.append(trail)
             else:
                 removed_pre += 1
@@ -339,23 +341,22 @@ def main():
         print(f"  Removed {removed_pre} low-precision polylines before merge")
         print(f"  Remaining: {len(all_accepted)}")
 
-    # Multi-pass merge: only run if segment count is manageable (<500)
-    # With thousands of segments, O(n²) merge is too slow
-    if len(all_accepted) > 500:
-        print(f"\nSkipping merge ({len(all_accepted)} segments — too many for O(n²) merge)")
-    else:
-        print(f"\nMerging segments (multi-pass)...")
+    # Multi-pass merge: per-color O(n²) merge
+    # Skip colors with >500 segments (too slow), but merge others
+    print(f"\nMerging segments (multi-pass, per-color)...")
     for pass_num, (dist_thresh, angle_thresh) in enumerate([
         (20, 30),   # Pass 1: conservative — close + collinear
         (40, 45),   # Pass 2: moderate — wider distance + angle
         (60, 60),   # Pass 3: aggressive — catch remaining gaps
     ], 1):
-        if len(all_accepted) > 500:
-            break
         merged_any = False
         for color in TRAIL_COLORS:
             color_segments = [t for t in all_accepted if t["color"] == color]
             if len(color_segments) <= 1:
+                continue
+            if len(color_segments) > 1000:
+                if pass_num == 1:
+                    print(f"  Skipping {color} merge ({len(color_segments)} segments)")
                 continue
             points_list = [t["points"] for t in color_segments]
             merged = merge_collinear_segments(

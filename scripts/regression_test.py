@@ -20,6 +20,7 @@ SCRIPT_DIR = Path(__file__).parent
 OUTPUT_DIR = SCRIPT_DIR / "output"
 BASELINE_PATH = OUTPUT_DIR / "regression_baseline.json"
 POLYLINES_PATH = OUTPUT_DIR / "extracted_polylines.json"
+SYMBOLS_PATH = OUTPUT_DIR / "symbols.json"
 META_PATH = OUTPUT_DIR / "image_meta.json"
 
 # Thresholds for regression detection
@@ -124,6 +125,35 @@ def compute_metrics():
                         on += 1
             precision_by_color[color] = round(on / total_pts * 100, 1) if total_pts > 0 else 0
 
+    # Symbol-based recall: what % of difficulty symbols have a polyline nearby?
+    # This is our best proxy for true recall since symbols mark real trail locations.
+    symbol_recall = {}
+    if SYMBOLS_PATH.exists():
+        symbols = json.loads(SYMBOLS_PATH.read_text())
+        for color in ["green", "blue", "black"]:
+            sym_positions = symbols.get(color, [])
+            if not sym_positions:
+                continue
+            matched = 0
+            radius = 50  # pixels — symbol should be within 50px of a trail polyline
+            color_polylines = [t for t in accepted if t["color"] == color]
+            for sx, sy in sym_positions:
+                found = False
+                for t in color_polylines:
+                    for px, py in t["points"]:
+                        if abs(px - sx) <= radius and abs(py - sy) <= radius:
+                            found = True
+                            break
+                    if found:
+                        break
+                if found:
+                    matched += 1
+            symbol_recall[color] = {
+                "matched": matched,
+                "total": len(sym_positions),
+                "recall_pct": round(matched / len(sym_positions) * 100, 1),
+            }
+
     return {
         "green_segments": color_counts.get("green", 0),
         "blue_segments": color_counts.get("blue", 0),
@@ -133,6 +163,7 @@ def compute_metrics():
         "blue_mask_pixels": blue_mask_pixels,
         "area_checks": area_checks,
         "precision": precision_by_color,
+        "symbol_recall": symbol_recall,
         "gap_pairs": 0,
         "short_polylines": sum(1 for t in accepted if t["num_points"] <= 3),
     }
@@ -152,6 +183,9 @@ def save_baseline(metrics):
     if "precision" in metrics:
         for color, prec in metrics["precision"].items():
             print(f"  {color} precision: {prec:.1f}%")
+    if "symbol_recall" in metrics:
+        for color, sr in metrics["symbol_recall"].items():
+            print(f"  {color} symbol recall: {sr['matched']}/{sr['total']} ({sr['recall_pct']:.1f}%)")
 
 
 def check_regression(metrics):
@@ -215,6 +249,26 @@ def check_regression(metrics):
             if p_status == "FAIL":
                 passed = False
             print(f"    {color}: {curr_p:.1f}% (baseline: {base_p:.1f}%, min: {min_p:.1f}%) [{p_status}]")
+
+    # Check symbol-based recall
+    if "symbol_recall" in metrics:
+        print("  Symbol-based recall (% of difficulty symbols near a polyline):")
+        for color in ["green", "blue", "black"]:
+            sr = metrics["symbol_recall"].get(color, {})
+            if not sr:
+                continue
+            curr_r = sr["recall_pct"]
+            # Check against baseline if available, otherwise use absolute threshold
+            base_sr = baseline.get("symbol_recall", {}).get(color, {})
+            if base_sr:
+                min_r = base_sr["recall_pct"] * 0.85
+                r_status = "PASS" if curr_r >= min_r else "FAIL"
+                if r_status == "FAIL":
+                    passed = False
+                print(f"    {color}: {curr_r:.1f}% ({sr['matched']}/{sr['total']}) "
+                      f"(baseline: {base_sr['recall_pct']:.1f}%, min: {min_r:.1f}%) [{r_status}]")
+            else:
+                print(f"    {color}: {curr_r:.1f}% ({sr['matched']}/{sr['total']})")
 
     if passed:
         print("\nAll regression checks PASSED.")

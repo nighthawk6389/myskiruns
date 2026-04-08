@@ -16,8 +16,8 @@ import numpy as np
 # Trail color ranges
 TRAIL_COLOR_RANGES = {
     "green": [
-        # Easy trails — moderate saturation to avoid terrain flood
-        (np.array([35, 100, 60]), np.array([85, 255, 255])),
+        # Easy trails — S>=80 captures lighter greens while width-ratio filter handles terrain
+        (np.array([35, 80, 60]), np.array([85, 255, 255])),
     ],
     "blue": [
         # Intermediate trails
