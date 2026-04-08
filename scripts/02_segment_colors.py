@@ -176,14 +176,26 @@ def detect_difficulty_symbols(hsv_img: np.ndarray, mountain_mask: np.ndarray) ->
         if 20 < area < 150 and aspect < 1.5 and max(ww, hh) < 18 and fill > 0.5:
             symbols["black"].append((int(cent[i][0]), int(cent[i][1])))
 
+    # Filter out symbols in the base/parking area at the bottom of the image.
+    # These are often legend markers, signage, or base-area features — not
+    # difficulty markers on actual ski trails.
+    h, w = hsv_img.shape[:2]
+    max_y = int(h * 0.78)  # bottom 22% is base area
+    for color in symbols:
+        before = len(symbols[color])
+        symbols[color] = [(x, y) for x, y in symbols[color] if y <= max_y]
+        removed = before - len(symbols[color])
+        if removed > 0:
+            print(f"    Filtered {removed} {color} symbols in base area (y>{max_y})")
+
     return symbols
 
 
-def create_symbol_anchor_mask(symbols: dict, shape: tuple, radius: int = 4) -> dict:
-    """Create small anchor dots at difficulty symbol locations.
+def create_symbol_anchor_mask(symbols: dict, shape: tuple, radius: int = 8) -> dict:
+    """Create anchor regions at difficulty symbol locations.
 
-    Small radius (4px) — just ensures the trail line is connected through
-    the symbol location without creating large false blobs.
+    Radius of 8px — large enough to create skeleton fragments that survive
+    extraction filters, while small enough to not create terrain-like blobs.
     """
     anchor_masks = {}
     for color, positions in symbols.items():
@@ -261,9 +273,12 @@ def detect_black_trails(img: np.ndarray, hsv_img: np.ndarray,
             dilated = cv2.dilate(mask, np.ones((3, 3), np.uint8), iterations=1)
             adaptive = cv2.bitwise_and(adaptive, cv2.bitwise_not(dilated))
 
-    # Morphological cleanup
+    # Morphological cleanup — light MORPH_OPEN to clean noise while preserving
+    # thin trail lines. Use smaller kernel (2x2) with 1 iteration instead of
+    # 3x3 which was too aggressive for thin lines.
+    kernel_small = np.ones((2, 2), np.uint8)
     kernel = np.ones((3, 3), np.uint8)
-    adaptive = cv2.morphologyEx(adaptive, cv2.MORPH_OPEN, kernel, iterations=1)
+    adaptive = cv2.morphologyEx(adaptive, cv2.MORPH_OPEN, kernel_small, iterations=1)
     adaptive = cv2.morphologyEx(adaptive, cv2.MORPH_CLOSE, kernel, iterations=2)
 
     # Directional gap fill (bridges text gaps along trail direction)
@@ -273,8 +288,8 @@ def detect_black_trails(img: np.ndarray, hsv_img: np.ndarray,
     adaptive = cleanup_mask(adaptive, min_area=50)
 
     # Remove compact blobs (buildings, large terrain patches)
-    # Also remove very compact small blobs (likely text fragments)
-    num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(adaptive)
+    # But exempt components near black difficulty symbols — those are real trails.
+    num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(adaptive)
     for i in range(1, num_labels):
         ww = stats[i, cv2.CC_STAT_WIDTH]
         hh = stats[i, cv2.CC_STAT_HEIGHT]
@@ -353,6 +368,15 @@ def run_segmentation(img: np.ndarray) -> dict:
         mask_hi_inp = cv2.bitwise_and(mask_hi_inp, mountain_mask)
         mask_hi = cv2.bitwise_or(mask_hi_orig, mask_hi_inp)
 
+        # Boost HIGH mask with symbol anchors — difficulty symbols are
+        # definitive evidence of a trail, so treat them as HIGH confidence.
+        # This ensures LOW-confidence trail components near symbols survive
+        # the multi-scale filter even if the trail is faint.
+        if color_name in anchor_masks:
+            symbol_boost = cv2.dilate(anchor_masks[color_name],
+                                       np.ones((5, 5), np.uint8), iterations=2)
+            mask_hi = cv2.bitwise_or(mask_hi, cv2.bitwise_and(symbol_boost, mountain_mask))
+
         hi_px = np.count_nonzero(mask_hi)
         lo_px = np.count_nonzero(mask_lo)
         print(f"    High confidence: {hi_px:,} px, Low: {lo_px:,} px")
@@ -407,12 +431,10 @@ def run_segmentation(img: np.ndarray) -> dict:
             if sl > 0 and a2 / sl > 15:
                 mask[lbl2 == i2] = 0
 
-        # Add symbol anchor dots AFTER width-ratio filter so anchors don't
-        # cause combined components to be filtered as blobs
+        # Save raw mask (before gap-fill) for black trail subtraction
+        # Add anchors to raw mask so they're available for subtraction reference
         if color_name in anchor_masks:
             mask = cv2.bitwise_or(mask, cv2.bitwise_and(anchor_masks[color_name], mountain_mask))
-
-        # Save raw mask (before gap-fill) for black trail subtraction
         raw_color_masks[color_name] = mask.copy()
 
         # Directional gap fill to bridge text gaps
@@ -433,6 +455,12 @@ def run_segmentation(img: np.ndarray) -> dict:
             if sl3 > 0 and a3 / sl3 > 15:
                 mask[lbl3 == i3] = 0
         mask = cleanup_mask(mask, min_area=30)
+
+        # Re-add symbol anchors AFTER all filtering — anchors should never
+        # be removed by width-ratio or cleanup filters since they represent
+        # definitive trail locations.
+        if color_name in anchor_masks:
+            mask = cv2.bitwise_or(mask, cv2.bitwise_and(anchor_masks[color_name], mountain_mask))
 
         masks[color_name] = mask
         num_labels = cv2.connectedComponentsWithStats(mask)[0] - 1

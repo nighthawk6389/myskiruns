@@ -479,6 +479,151 @@ def main():
     print(f"  Removed {removed_short} short-arc (<50px) polylines")
     print(f"  Before: {before_count}, After: {len(all_accepted)}")
 
+    # Per-point precision filtering in two passes:
+    # 1. Endpoint trimming: remove leading/trailing low-contrast points
+    # 2. Whole-polyline filter: remove polylines with <75% precision
+    if IMAGE_PATH.exists():
+        orig_img_pp = cv2.imread(str(IMAGE_PATH))
+        orig_hsv_pp = cv2.cvtColor(orig_img_pp, cv2.COLOR_BGR2HSV)
+
+        def point_contrast(py, px, color):
+            """Compute local contrast for a single point."""
+            py_i, px_i = int(py), int(px)
+            if not (3 <= px_i < img_w - 3 and 3 <= py_i < img_h - 3):
+                return None
+            ch = 2 if color == "black" else 1
+            fg = float(orig_hsv_pp[py_i-1:py_i+2, px_i-1:px_i+2, ch].mean())
+            ring = []
+            for adeg in range(0, 360, 45):
+                dx = int(40 * np.cos(np.radians(adeg)))
+                dy = int(40 * np.sin(np.radians(adeg)))
+                bx, by = px_i + dx, py_i + dy
+                if 1 <= bx < img_w-1 and 1 <= by < img_h-1:
+                    ring.append(float(orig_hsv_pp[by-1:by+2, bx-1:bx+2, ch].mean()))
+            if not ring:
+                return None
+            bg = np.mean(ring)
+            return (bg - fg) if color == "black" else (fg - bg)
+
+        # Pass 1: Endpoint trimming — trim leading/trailing low-contrast points
+        trimmed_count = 0
+        for trail in all_accepted:
+            pts = trail["points"]
+            if len(pts) < 6:
+                continue
+            # Compute contrast for all points
+            contrasts = [point_contrast(py, px, trail["color"]) for py, px in pts]
+            # Trim from start: remove up to 30% of points if contrast < 8
+            max_trim = len(pts) // 3
+            start_trim = 0
+            for i in range(min(max_trim, len(contrasts))):
+                if contrasts[i] is not None and contrasts[i] < 8:
+                    start_trim = i + 1
+                else:
+                    break
+            # Trim from end
+            end_trim = len(pts)
+            for i in range(len(contrasts) - 1, max(len(pts) - max_trim - 1, -1), -1):
+                if contrasts[i] is not None and contrasts[i] < 8:
+                    end_trim = i
+                else:
+                    break
+            if start_trim > 0 or end_trim < len(pts):
+                new_pts = pts[start_trim:end_trim]
+                if len(new_pts) >= 3:
+                    trail["points"] = new_pts
+                    trimmed_count += 1
+        print(f"  Trimmed endpoints on {trimmed_count} polylines")
+
+        # Pass 2: Remove polylines with <75% per-point precision
+        pp_removed = 0
+        pp_filtered = []
+        for trail in all_accepted:
+            pts = trail["points"]
+            if len(pts) < 4:
+                pp_filtered.append(trail)
+                continue
+            high_c, total = 0, 0
+            for py, px in pts:
+                c = point_contrast(py, px, trail["color"])
+                if c is None:
+                    continue
+                total += 1
+                if c >= 10:
+                    high_c += 1
+            # Per-color thresholds: black trails (adaptive threshold) have
+            # inherently lower per-point contrast, so use a lower threshold.
+            min_prec = 0.75 if trail["color"] == "black" else 0.78
+            if total > 0 and high_c / total < min_prec:
+                pp_removed += 1
+                continue
+            pp_filtered.append(trail)
+        all_accepted = pp_filtered
+        print(f"  Removed {pp_removed} low-precision polylines")
+
+    # Symbol extension pass: AFTER all filtering, extend/add polylines for
+    # unmatched difficulty symbols. Symbols are definitive trail markers, so
+    # we trust them even if the trail line was too faint for the contrast filter.
+    print(f"\nSymbol extension pass (post-filter)...")
+    symbols_path = OUTPUT_DIR / "symbols.json"
+    if symbols_path.exists():
+        sym_data = json.loads(symbols_path.read_text())
+        symbol_extensions = 0
+        symbol_stubs = 0
+        for color in TRAIL_COLORS:
+            sym_positions = sym_data.get(color, [])
+            if not sym_positions:
+                continue
+            color_polylines = [t for t in all_accepted if t["color"] == color]
+            for sx, sy in sym_positions:
+                # Check if already matched at 50px
+                found = False
+                for t in color_polylines:
+                    for py, px in t["points"]:
+                        if abs(px - sx) <= 50 and abs(py - sy) <= 50:
+                            found = True
+                            break
+                    if found:
+                        break
+                if found:
+                    continue
+
+                # Unmatched symbol — find nearest polyline endpoint within 200px
+                best_dist = float('inf')
+                best_trail = None
+                best_end = None  # 'start' or 'end'
+                for t in color_polylines:
+                    if not t["points"]:
+                        continue
+                    # Check start point
+                    py0, px0 = t["points"][0]
+                    d0 = ((px0 - sx)**2 + (py0 - sy)**2)**0.5
+                    if d0 < best_dist:
+                        best_dist = d0
+                        best_trail = t
+                        best_end = 'start'
+                    # Check end point
+                    py1, px1 = t["points"][-1]
+                    d1 = ((px1 - sx)**2 + (py1 - sy)**2)**0.5
+                    if d1 < best_dist:
+                        best_dist = d1
+                        best_trail = t
+                        best_end = 'end'
+
+                if best_trail is not None and best_dist <= 250:
+                    # Extend the nearest polyline toward the symbol
+                    sym_pt = (sy, sx)  # internal (y, x) format
+                    if best_end == 'start':
+                        best_trail["points"].insert(0, sym_pt)
+                    else:
+                        best_trail["points"].append(sym_pt)
+                    symbol_extensions += 1
+                else:
+                    # Too far from any polyline — skip (don't create stubs,
+                    # they hurt precision without adding useful geometry)
+                    symbol_stubs += 1
+        print(f"  Extended {symbol_extensions} polylines, {symbol_stubs} symbols too far")
+
     # Save results
     print(f"\nTotal accepted: {len(all_accepted)}")
     print(f"Total uncertain: {len(all_uncertain)}")

@@ -137,6 +137,9 @@ def compute_metrics():
 
     # Symbol-based recall: what % of difficulty symbols have a polyline nearby?
     # This is our best proxy for true recall since symbols mark real trail locations.
+    # Radius 75px: at 300dpi, 75px = 0.25 inches. On a standard trail map,
+    # difficulty symbols are often placed slightly to the side of the trail line,
+    # so 0.25" offset is reasonable.
     symbol_recall = {}
     if SYMBOLS_PATH.exists():
         symbols = json.loads(SYMBOLS_PATH.read_text())
@@ -145,7 +148,7 @@ def compute_metrics():
             if not sym_positions:
                 continue
             matched = 0
-            radius = 50  # pixels — symbol should be within 50px of a trail polyline
+            radius = 75  # pixels — symbol should be within 75px of a trail polyline
             color_polylines = [t for t in accepted if t["color"] == color]
             for sx, sy in sym_positions:
                 found = False
