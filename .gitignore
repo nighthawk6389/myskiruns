@@ -30,4 +30,5 @@ scripts/output/skeletons/
 scripts/output/patches/
 scripts/output/overlay_*.jpg
 scripts/output/color_overlay.png
+scripts/output/readable/
 __pycache__/

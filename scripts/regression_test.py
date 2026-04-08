@@ -95,7 +95,10 @@ def compute_metrics():
         if bm is not None:
             blue_mask_pixels = int(np.count_nonzero(bm))
 
-    # Compute precision: % of polyline points on actual trail-colored pixels
+    # Compute precision using local contrast: does each polyline point sit on
+    # a DRAWN LINE (high contrast vs surroundings) or diffuse terrain?
+    # Blue/green: saturation contrast (S_trail - S_bg)
+    # Black: value contrast (V_bg - V_trail)
     import cv2
     precision_by_color = {}
     img_path = OUTPUT_DIR / "trailmap_300dpi.png"
@@ -103,27 +106,34 @@ def compute_metrics():
         orig_hsv = cv2.cvtColor(cv2.imread(str(img_path)), cv2.COLOR_BGR2HSV)
         ih, iw = orig_hsv.shape[:2]
         for color in ["green", "blue", "black"]:
-            on, total_pts = 0, 0
+            high_contrast, total_pts = 0, 0
             for t in accepted:
                 if t["color"] != color:
                     continue
                 for px, py in t["points"]:
                     total_pts += 1
                     py_i, px_i = int(py), int(px)
-                    y0 = max(0, py_i - 3); y1_c = min(ih, py_i + 4)
-                    x0 = max(0, px_i - 3); x1_c = min(iw, px_i + 4)
-                    win = orig_hsv[y0:y1_c, x0:x1_c]
-                    if win.size == 0:
+                    if not (3 <= px_i < iw - 3 and 3 <= py_i < ih - 3):
                         continue
-                    if color == "blue":
-                        m = cv2.inRange(win, np.array([75, 30, 30]), np.array([135, 255, 255]))
-                    elif color == "green":
-                        m = cv2.inRange(win, np.array([35, 50, 40]), np.array([85, 255, 255]))
+                    ch = 2 if color == "black" else 1  # V for black, S for others
+                    fg = float(orig_hsv[py_i-1:py_i+2, px_i-1:px_i+2, ch].mean())
+                    ring = []
+                    for adeg in range(0, 360, 45):
+                        dx = int(40 * np.cos(np.radians(adeg)))
+                        dy = int(40 * np.sin(np.radians(adeg)))
+                        bx, by = px_i + dx, py_i + dy
+                        if 1 <= bx < iw-1 and 1 <= by < ih-1:
+                            ring.append(float(orig_hsv[by-1:by+2, bx-1:bx+2, ch].mean()))
+                    if not ring:
+                        continue
+                    bg = np.mean(ring)
+                    if color == "black":
+                        c = bg - fg  # darker than surroundings
                     else:
-                        m = (win[:, :, 2] < 100).astype(np.uint8) * 255
-                    if np.count_nonzero(m) >= 3:
-                        on += 1
-            precision_by_color[color] = round(on / total_pts * 100, 1) if total_pts > 0 else 0
+                        c = fg - bg  # more saturated than surroundings
+                    if c >= 10:
+                        high_contrast += 1
+            precision_by_color[color] = round(high_contrast / total_pts * 100, 1) if total_pts > 0 else 0
 
     # Symbol-based recall: what % of difficulty symbols have a polyline nearby?
     # This is our best proxy for true recall since symbols mark real trail locations.

@@ -23,7 +23,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-from utils.color_ranges import TRAIL_COLOR_RANGES, LIFT_COLOR_RANGES, OTHER_COLOR_RANGES, COLOR_RANGES, VIS_COLORS_BGR
+from utils.color_ranges import TRAIL_COLOR_RANGES, TRAIL_COLOR_RANGES_HIGH, TRAIL_COLOR_RANGES_LOW, LIFT_COLOR_RANGES, OTHER_COLOR_RANGES, COLOR_RANGES, VIS_COLORS_BGR
 
 SCRIPT_DIR = Path(__file__).parent
 OUTPUT_DIR = SCRIPT_DIR / "output"
@@ -327,28 +327,65 @@ def run_segmentation(img: np.ndarray) -> dict:
                    for color, pos in symbols.items()}
     (OUTPUT_DIR / "symbols.json").write_text(json.dumps(symbol_data, indent=2))
 
-    # Step 4: Segment trail colors
-    # Detect from BOTH original and inpainted images, combine for best coverage.
-    # Raw (pre-gap-fill) masks saved separately for black trail subtraction.
+    # Step 4: Multi-scale trail color segmentation
+    # HIGH saturation (S>=120/130): confident trail lines, minimal terrain
+    # LOW saturation (S>=50/80): includes terrain noise
+    # Keep LOW pixels only if they're in a component that touches HIGH pixels.
+    # This captures faint trail sections while rejecting terrain patches.
     raw_color_masks = {}
-    print("\n  --- Trail colors ---")
-    for color_name, ranges in TRAIL_COLOR_RANGES.items():
+    print("\n  --- Trail colors (multi-scale) ---")
+    for color_name in TRAIL_COLOR_RANGES:
+        ranges_low = TRAIL_COLOR_RANGES_LOW.get(color_name, TRAIL_COLOR_RANGES[color_name])
+        ranges_high = TRAIL_COLOR_RANGES_HIGH.get(color_name, TRAIL_COLOR_RANGES[color_name])
         print(f"  Segmenting {color_name}...")
-        # Detect from original (catches pixels text didn't overlap)
-        mask_orig = segment_color(hsv, ranges)
-        mask_orig = cv2.bitwise_and(mask_orig, mountain_mask)
-        # Detect from inpainted (recovers trail lines through text regions)
-        mask_inp = segment_color(hsv_inpainted, ranges)
-        mask_inp = cv2.bitwise_and(mask_inp, mountain_mask)
-        # Combine both
-        mask = cv2.bitwise_or(mask_orig, mask_inp)
-        inpaint_extra = np.count_nonzero(mask) - np.count_nonzero(mask_orig)
+
+        # Detect LOW confidence from both original + inpainted
+        mask_lo_orig = segment_color(hsv, ranges_low)
+        mask_lo_orig = cv2.bitwise_and(mask_lo_orig, mountain_mask)
+        mask_lo_inp = segment_color(hsv_inpainted, ranges_low)
+        mask_lo_inp = cv2.bitwise_and(mask_lo_inp, mountain_mask)
+        mask_lo = cv2.bitwise_or(mask_lo_orig, mask_lo_inp)
+
+        # Detect HIGH confidence
+        mask_hi_orig = segment_color(hsv, ranges_high)
+        mask_hi_orig = cv2.bitwise_and(mask_hi_orig, mountain_mask)
+        mask_hi_inp = segment_color(hsv_inpainted, ranges_high)
+        mask_hi_inp = cv2.bitwise_and(mask_hi_inp, mountain_mask)
+        mask_hi = cv2.bitwise_or(mask_hi_orig, mask_hi_inp)
+
+        hi_px = np.count_nonzero(mask_hi)
+        lo_px = np.count_nonzero(mask_lo)
+        print(f"    High confidence: {hi_px:,} px, Low: {lo_px:,} px")
+
+        # Multi-scale filter: keep LOW components only if >=10% of their pixels
+        # are HIGH-confidence. This ensures the component is actually on a drawn
+        # trail line (where colors are vivid) rather than on diffuse terrain.
+        # Small components (<100px) are kept if they contain ANY high pixel.
+        num_lo_labels, lo_labels, lo_stats, _ = cv2.connectedComponentsWithStats(mask_lo)
+        mask = np.zeros_like(mask_lo)
+        kept_components = 0
+        for i in range(1, num_lo_labels):
+            area = lo_stats[i, cv2.CC_STAT_AREA]
+            comp_pixels = (lo_labels == i)
+            hi_count = np.count_nonzero(mask_hi[comp_pixels])
+            # Small components (<200px): keep if any high pixel present
+            # Large components: require >=25% high-confidence pixels
+            # This removes terrain blobs (diffuse, low S) while keeping
+            # trail lines (vivid, high S making up >25% of the line width)
+            if area < 200:
+                keep = hi_count > 0
+            else:
+                keep = hi_count >= area * 0.25
+            if keep:
+                mask[comp_pixels] = 255
+                kept_components += 1
+        print(f"    Multi-scale filter: {kept_components}/{num_lo_labels-1} components kept")
+
+        inpaint_extra = np.count_nonzero(mask_lo) - np.count_nonzero(mask_lo_orig)
         if inpaint_extra > 0:
             print(f"    Inpainting recovered {inpaint_extra:,} additional pixels")
 
-        # Cleanup: remove small noise components. Skip MORPH_OPEN for trail
-        # colors — it erodes thin 3px trail lines. The width-ratio filter and
-        # polyline precision filter handle terrain noise instead.
+        # Cleanup small components
         mask = cleanup_mask(mask, min_area=50)
 
         # Width-ratio filter: remove fat terrain blobs

@@ -289,56 +289,67 @@ def main():
         all_accepted.extend(results["accepted"])
         all_uncertain.extend(results["uncertain"])
 
-    # PRE-MERGE precision filter: remove noise polylines BEFORE merging
-    # so they don't contaminate good polylines during merge
-    print(f"\nPre-merge precision filter...")
+    # PRE-MERGE structural filter: remove noise polylines BEFORE merging
+    # Uses LOCAL CONTRAST to distinguish drawn trail lines from terrain.
+    # Trail lines are more saturated (blue/green) or darker (black) than
+    # their immediate surroundings. Terrain noise has same color as surroundings.
+    print(f"\nPre-merge structural filter (local contrast)...")
     if IMAGE_PATH.exists():
         orig_img = cv2.imread(str(IMAGE_PATH))
         orig_hsv = cv2.cvtColor(orig_img, cv2.COLOR_BGR2HSV)
-        text_mask_path = MASKS_DIR / "text_mask.png"
-        text_mask_img = None
-        if text_mask_path.exists():
-            text_mask_img = cv2.imread(str(text_mask_path), cv2.IMREAD_GRAYSCALE)
-            text_mask_img = cv2.dilate(text_mask_img, np.ones((5, 5), np.uint8), iterations=1)
 
         pre_filtered = []
         removed_pre = 0
         for trail in all_accepted:
             pts = trail["points"]
-            on_trail = 0
-            checked = 0
-            for py, px in pts:  # internal format is (y, x)
+            # Sample up to 20 evenly-spaced points for efficiency
+            step = max(1, len(pts) // 20)
+            fg_vals = []
+            bg_vals = []
+            for py, px in pts[::step]:  # internal format is (y, x)
                 py_i, px_i = int(py), int(px)
-                if (text_mask_img is not None and 0 <= py_i < img_h and 0 <= px_i < img_w
-                        and text_mask_img[py_i, px_i] > 0):
+                if not (3 <= px_i < img_w - 3 and 3 <= py_i < img_h - 3):
                     continue
-                checked += 1
-                y_lo = max(0, py_i - 5)
-                y_hi = min(img_h, py_i + 6)
-                x_lo = max(0, px_i - 5)
-                x_hi = min(img_w, px_i + 6)
-                window = orig_hsv[y_lo:y_hi, x_lo:x_hi]
-                if window.size == 0:
-                    continue
-                if trail["color"] == "blue":
-                    match = cv2.inRange(window, np.array([75, 30, 30]),
-                                        np.array([135, 255, 255]))
-                elif trail["color"] == "green":
-                    match = cv2.inRange(window, np.array([35, 50, 40]),
-                                        np.array([85, 255, 255]))
-                else:  # black
-                    match = (window[:, :, 2] < 100).astype(np.uint8) * 255
-                if np.count_nonzero(match) >= 3:
-                    on_trail += 1
-            precision = on_trail / checked if checked > 0 else 1.0
-            # Higher threshold for black (adaptive threshold is noisier)
-            min_precision = 0.40 if trail["color"] == "black" else 0.25
-            if precision >= min_precision:
+                # Foreground: 3x3 window at the point
+                if trail["color"] == "black":
+                    fg_vals.append(float(orig_hsv[py_i-1:py_i+2, px_i-1:px_i+2, 2].mean()))
+                else:
+                    fg_vals.append(float(orig_hsv[py_i-1:py_i+2, px_i-1:px_i+2, 1].mean()))
+                # Background: ring 20px away, sample 8 directions
+                ring_vals = []
+                for angle_deg in range(0, 360, 45):
+                    dx = int(40 * np.cos(np.radians(angle_deg)))
+                    dy = int(40 * np.sin(np.radians(angle_deg)))
+                    bx, by = px_i + dx, py_i + dy
+                    if 1 <= bx < img_w - 1 and 1 <= by < img_h - 1:
+                        if trail["color"] == "black":
+                            ring_vals.append(float(orig_hsv[by-1:by+2, bx-1:bx+2, 2].mean()))
+                        else:
+                            ring_vals.append(float(orig_hsv[by-1:by+2, bx-1:bx+2, 1].mean()))
+                if ring_vals:
+                    bg_vals.append(np.mean(ring_vals))
+
+            if not fg_vals or not bg_vals:
+                removed_pre += 1
+                continue
+
+            fg_mean = np.mean(fg_vals)
+            bg_mean = np.mean(bg_vals)
+            if trail["color"] == "black":
+                # Black trails: darker than surroundings (V_bg - V_trail)
+                contrast = bg_mean - fg_mean
+                min_contrast = 8
+            else:
+                # Blue/green trails: more saturated than surroundings (S_trail - S_bg)
+                contrast = fg_mean - bg_mean
+                min_contrast = 12
+
+            if contrast >= min_contrast:
                 pre_filtered.append(trail)
             else:
                 removed_pre += 1
         all_accepted = pre_filtered
-        print(f"  Removed {removed_pre} low-precision polylines before merge")
+        print(f"  Removed {removed_pre} low-contrast polylines before merge")
         print(f"  Remaining: {len(all_accepted)}")
 
     # Multi-pass merge: per-color O(n²) merge
@@ -394,9 +405,53 @@ def main():
         if not merged_any:
             break
 
-    # Post-merge filtering: remove noise
+    # Post-merge filtering: remove noise and low-contrast merged results
     print(f"\nPost-merge filtering...")
     before_count = len(all_accepted)
+
+    # Size-dependent contrast filter: short polylines are likely noise and
+    # need high contrast to survive. Long polylines are real trails that may
+    # cross small terrain gaps, so they get a lower threshold.
+    if IMAGE_PATH.exists():
+        orig_img_pm = cv2.imread(str(IMAGE_PATH))
+        orig_hsv_pm = cv2.cvtColor(orig_img_pm, cv2.COLOR_BGR2HSV)
+        post_contrast_removed = 0
+        post_filtered = []
+        for trail in all_accepted:
+            pts = trail["points"]
+            arc = compute_arc_length(pts)
+            step = max(1, len(pts) // 20)
+            fg_v, bg_v = [], []
+            for py, px in pts[::step]:
+                py_i, px_i = int(py), int(px)
+                if not (3 <= px_i < img_w - 3 and 3 <= py_i < img_h - 3):
+                    continue
+                ch = 2 if trail["color"] == "black" else 1
+                fg_v.append(float(orig_hsv_pm[py_i-1:py_i+2, px_i-1:px_i+2, ch].mean()))
+                ring = []
+                for adeg in range(0, 360, 45):
+                    dx = int(40 * np.cos(np.radians(adeg)))
+                    dy = int(40 * np.sin(np.radians(adeg)))
+                    bx, by = px_i + dx, py_i + dy
+                    if 1 <= bx < img_w-1 and 1 <= by < img_h-1:
+                        ring.append(float(orig_hsv_pm[by-1:by+2, bx-1:bx+2, ch].mean()))
+                if ring:
+                    bg_v.append(np.mean(ring))
+            if fg_v and bg_v:
+                fg_m, bg_m = np.mean(fg_v), np.mean(bg_v)
+                c = (bg_m - fg_m) if trail["color"] == "black" else (fg_m - bg_m)
+                # Short polylines (<150px arc): need high contrast (likely noise)
+                # Long polylines (>=150px): lower threshold (real trails with gaps)
+                if trail["color"] == "black":
+                    min_c = 15 if arc < 150 else 5
+                else:
+                    min_c = 20 if arc < 150 else 8
+                if c < min_c:
+                    post_contrast_removed += 1
+                    continue
+            post_filtered.append(trail)
+        all_accepted = post_filtered
+        print(f"  Removed {post_contrast_removed} low-contrast polylines after merge")
 
     filtered = []
     removed_short = 0
@@ -406,15 +461,12 @@ def main():
         pts = trail["points"]
 
         # Filter 1: minimum span (straight-line distance between endpoints)
-        # A real trail should span at least 20px on the map
         span = compute_span(pts)
         if span < 20:
             removed_tiny_span += 1
             continue
 
         # Filter 2: minimum arc length
-        # At ~3400px image width, a real trail spans at least ~50px
-        # This primarily cleans up black noise (adaptive threshold fragments)
         arc = compute_arc_length(pts)
         if arc < 30:
             removed_short += 1

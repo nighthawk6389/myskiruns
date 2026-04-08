@@ -13,19 +13,31 @@ Color scheme on the Killington trail map:
 
 import numpy as np
 
-# Trail color ranges
+# Trail color ranges — LOW confidence (includes terrain, needs filtering)
 TRAIL_COLOR_RANGES = {
     "green": [
-        # Easy trails — S>=80 captures lighter greens while width-ratio filter handles terrain
-        (np.array([35, 80, 60]), np.array([85, 255, 255])),
+        (np.array([35, 90, 60]), np.array([85, 255, 255])),
     ],
     "blue": [
-        # Intermediate trails
-        (np.array([80, 50, 40]), np.array([135, 255, 255])),
-        # Cyan extension for lighter blue trail lines (high saturation only)
-        (np.array([75, 80, 40]), np.array([82, 255, 255])),
+        # Raised S from 50→90 to reduce terrain flood; multi-scale extends with S>=50
+        (np.array([80, 90, 40]), np.array([135, 255, 255])),
+        (np.array([75, 90, 40]), np.array([82, 255, 255])),
     ],
 }
+
+# Trail color ranges — HIGH confidence (trail lines only, minimal terrain)
+TRAIL_COLOR_RANGES_HIGH = {
+    "green": [
+        (np.array([35, 130, 60]), np.array([85, 255, 255])),
+    ],
+    "blue": [
+        (np.array([80, 130, 40]), np.array([135, 255, 255])),
+        (np.array([75, 130, 40]), np.array([82, 255, 255])),
+    ],
+}
+
+# Extended LOW ranges for multi-scale fill (same as main ranges)
+TRAIL_COLOR_RANGES_LOW = TRAIL_COLOR_RANGES
 
 # Lift line color ranges — tracked separately, excluded from trail extraction
 LIFT_COLOR_RANGES = {
