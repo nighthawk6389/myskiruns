@@ -30,6 +30,7 @@ SCRIPT_DIR = Path(__file__).parent
 OUTPUT_DIR = SCRIPT_DIR / "output"
 MASKS_DIR = OUTPUT_DIR / "masks"
 SKELETONS_DIR = OUTPUT_DIR / "skeletons"
+MOUNTAIN_MASK_PATH = OUTPUT_DIR / "masks" / "mountain_mask.png"
 IMAGE_PATH = OUTPUT_DIR / "trailmap_300dpi.png"
 META_PATH = OUTPUT_DIR / "image_meta.json"
 
@@ -461,22 +462,25 @@ def main():
         pts = trail["points"]
 
         # Filter 1: minimum span (straight-line distance between endpoints)
+        # Black trails (double diamonds) are often short steep runs
+        min_span = 20 if trail["color"] == "black" else 30
         span = compute_span(pts)
-        if span < 20:
+        if span < min_span:
             removed_tiny_span += 1
             continue
 
         # Filter 2: minimum arc length
+        min_arc = 30 if trail["color"] == "black" else 50
         arc = compute_arc_length(pts)
-        if arc < 30:
+        if arc < min_arc:
             removed_short += 1
             continue
 
         filtered.append(trail)
 
     all_accepted = filtered
-    print(f"  Removed {removed_tiny_span} tiny-span (<20px) polylines")
-    print(f"  Removed {removed_short} short-arc (<50px) polylines")
+    print(f"  Removed {removed_tiny_span} tiny-span polylines")
+    print(f"  Removed {removed_short} short-arc polylines")
     print(f"  Before: {before_count}, After: {len(all_accepted)}")
 
     # Per-point precision filtering in two passes:
@@ -560,6 +564,58 @@ def main():
             pp_filtered.append(trail)
         all_accepted = pp_filtered
         print(f"  Removed {pp_removed} low-precision polylines")
+
+    # Base-area filter: remove polylines in the bottom of the image that are
+    # tracing roads, parking lots, or base-area features rather than ski trails.
+    # Ski trails end at base lodges around y=70-75%. Below that, blue/green
+    # markings are typically access roads, signage, or map decorations.
+    # We use a graduated approach:
+    #   - Above 65% y: keep everything (definitely on-mountain)
+    #   - 65-80% y: keep only if high contrast (real trails stand out)
+    #   - Below 80% y: remove (base area / parking / roads)
+    base_removed = 0
+    base_filtered = []
+    for trail in all_accepted:
+        pts = trail["points"]
+        cy = np.mean([py for py, px in pts])
+        y_pct = cy / img_h * 100
+        if y_pct <= 65:
+            base_filtered.append(trail)
+        elif y_pct <= 80:
+            # In transition zone: keep only if polyline has strong contrast
+            # (real trails connecting to base have vivid color)
+            if IMAGE_PATH.exists() and trail["color"] != "black":
+                step = max(1, len(pts) // 15)
+                fg_v, bg_v = [], []
+                for py, px in pts[::step]:
+                    py_i, px_i = int(py), int(px)
+                    if not (3 <= px_i < img_w - 3 and 3 <= py_i < img_h - 3):
+                        continue
+                    ch = 1  # saturation for blue/green
+                    fg_v.append(float(orig_hsv_pp[py_i-1:py_i+2, px_i-1:px_i+2, ch].mean()))
+                    ring = []
+                    for adeg in range(0, 360, 45):
+                        dx = int(40 * np.cos(np.radians(adeg)))
+                        dy = int(40 * np.sin(np.radians(adeg)))
+                        bx, by = px_i + dx, py_i + dy
+                        if 1 <= bx < img_w-1 and 1 <= by < img_h-1:
+                            ring.append(float(orig_hsv_pp[by-1:by+2, bx-1:bx+2, ch].mean()))
+                    if ring:
+                        bg_v.append(np.mean(ring))
+                if fg_v and bg_v:
+                    contrast = np.mean(fg_v) - np.mean(bg_v)
+                    if contrast >= 20:  # high contrast = real trail
+                        base_filtered.append(trail)
+                    else:
+                        base_removed += 1
+                else:
+                    base_filtered.append(trail)
+            else:
+                base_filtered.append(trail)  # keep black trails in transition zone
+        else:
+            base_removed += 1  # below 80% = remove
+    all_accepted = base_filtered
+    print(f"  Removed {base_removed} base-area polylines")
 
     # Symbol extension pass: AFTER all filtering, extend/add polylines for
     # unmatched difficulty symbols. Symbols are definitive trail markers, so

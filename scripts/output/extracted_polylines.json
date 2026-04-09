@@ -3,7 +3,7 @@
   "image_height": 2028,
   "accepted": [
     {
-      "id": "green_m3_000",
+      "id": "green_m3_004",
       "color": "green",
       "points": [
         [
@@ -11,12 +11,12 @@
           231
         ],
         [
-          2044,
-          256
+          1979,
+          178
         ],
         [
-          2044,
-          260
+          2049,
+          269
         ],
         [
           2051,
@@ -27,12 +27,20 @@
           281
         ],
         [
-          2046,
-          287
+          2047,
+          284
         ],
         [
-          2048,
-          302
+          2046,
+          289
+        ],
+        [
+          2047,
+          301
+        ],
+        [
+          2050,
+          304
         ],
         [
           2048,
@@ -51,15 +59,7 @@
           345
         ],
         [
-          2073,
-          348
-        ],
-        [
-          2069,
-          352
-        ],
-        [
-          2069,
+          2067,
           359
         ],
         [
@@ -75,7 +75,11 @@
           356
         ],
         [
-          2128,
+          2122,
+          363
+        ],
+        [
+          2129,
           382
         ],
         [
@@ -83,189 +87,64 @@
           338
         ],
         [
-          2145,
+          2143,
+          343
+        ],
+        [
+          2154,
+          357
+        ],
+        [
+          2155,
+          363
+        ],
+        [
+          2162,
+          370
+        ],
+        [
+          2161,
+          373
+        ],
+        [
+          2201,
+          338
+        ],
+        [
+          2204,
+          340
+        ],
+        [
+          2219,
           342
         ],
         [
-          2148,
-          342
+          2233,
+          352
         ],
         [
-          2160,
-          335
+          2242,
+          368
         ],
         [
-          2157,
-          329
+          2242,
+          379
         ],
         [
-          2160,
-          326
+          2250,
+          382
         ],
         [
-          2166,
-          330
+          2254,
+          381
         ],
         [
-          2206,
-          407
+          2255,
+          367
         ],
         [
-          2291,
-          427
-        ],
-        [
-          2229,
-          483
-        ]
-      ],
-      "num_points": 28,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "green_m3_001",
-      "color": "green",
-      "points": [
-        [
-          1954,
-          161
-        ],
-        [
-          1959,
-          165
-        ],
-        [
-          1959,
-          167
-        ],
-        [
-          1962,
-          170
-        ],
-        [
-          1971,
-          174
-        ],
-        [
-          1972,
-          163
-        ],
-        [
-          1979,
-          160
-        ],
-        [
-          1983,
-          168
-        ],
-        [
-          1987,
-          172
-        ],
-        [
-          1976,
-          180
-        ],
-        [
-          1990,
-          181
-        ],
-        [
-          1999,
-          182
-        ],
-        [
-          2000,
-          203
-        ],
-        [
-          1976,
-          181
-        ],
-        [
-          1969,
-          188
-        ],
-        [
-          1963,
-          199
-        ],
-        [
-          1968,
-          217
-        ],
-        [
-          1968,
-          220
-        ],
-        [
-          1966,
-          222
-        ],
-        [
-          1966,
-          233
-        ],
-        [
-          1964,
-          247
-        ],
-        [
-          1965,
-          271
-        ],
-        [
-          1969,
-          275
-        ],
-        [
-          1985,
-          280
-        ],
-        [
-          2003,
-          308
-        ],
-        [
-          2008,
-          312
-        ],
-        [
-          2009,
-          317
-        ],
-        [
-          2006,
-          323
-        ],
-        [
-          2006,
-          327
-        ],
-        [
-          1966,
-          308
-        ],
-        [
-          1968,
-          312
-        ],
-        [
-          1968,
-          322
-        ],
-        [
-          1971,
-          327
-        ],
-        [
-          1919,
-          341
-        ],
-        [
-          1913,
-          336
+          2192,
+          454
         ]
       ],
       "num_points": 35,
@@ -273,7 +152,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_002",
+      "id": "green_m3_005",
       "color": "green",
       "points": [
         [
@@ -281,72 +160,89 @@
           162
         ],
         [
-          1931,
-          207
+          1911,
+          276
         ],
         [
-          1936,
-          208
+          1908,
+          280
         ],
         [
-          1949,
+          1908,
+          287
+        ],
+        [
+          1910,
+          293
+        ],
+        [
+          1918,
+          299
+        ],
+        [
+          1918,
+          308
+        ],
+        [
+          1914,
+          337
+        ],
+        [
+          1918,
+          341
+        ],
+        [
+          1920,
+          341
+        ],
+        [
+          1981,
           245
-        ],
-        [
-          1950,
-          247
-        ],
-        [
-          1964,
-          247
-        ],
-        [
-          1970,
-          245
-        ],
-        [
-          1978,
-          245
-        ],
-        [
-          1986,
-          249
-        ],
-        [
-          1949,
-          245
-        ],
-        [
-          1959,
-          235
-        ],
-        [
-          1966,
-          233
-        ],
-        [
-          1948,
-          246
-        ],
-        [
-          1944,
-          244
-        ],
-        [
-          1939,
-          236
-        ],
-        [
-          1940,
-          231
         ]
       ],
-      "num_points": 16,
+      "num_points": 11,
       "score": 5,
       "classification": "merged"
     },
     {
-      "id": "green_m3_003",
+      "id": "green_m3_006",
+      "color": "green",
+      "points": [
+        [
+          1867,
+          322
+        ],
+        [
+          1869,
+          324
+        ],
+        [
+          1869,
+          329
+        ],
+        [
+          1822,
+          361
+        ],
+        [
+          1825,
+          368
+        ],
+        [
+          1862,
+          337
+        ],
+        [
+          1847,
+          337
+        ]
+      ],
+      "num_points": 7,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "green_m3_007",
       "color": "green",
       "points": [
         [
@@ -362,30 +258,25 @@
           311
         ],
         [
-          2312,
-          325
+          2316,
+          332
         ],
         [
-          2315,
-          327
+          2322,
+          335
         ],
         [
-          2317,
-          334
+          2325,
+          341
         ],
         [
-          2330,
-          343
-        ]
-      ],
-      "num_points": 7,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "green_m3_004",
-      "color": "green",
-      "points": [
+          2331,
+          342
+        ],
+        [
+          2336,
+          347
+        ],
         [
           2337,
           332
@@ -399,57 +290,42 @@
           347
         ],
         [
-          2330,
-          344
-        ],
-        [
-          2326,
+          2341,
           348
         ],
         [
-          2326,
+          2348,
+          355
+        ],
+        [
+          2347,
+          363
+        ],
+        [
+          2345,
+          364
+        ],
+        [
+          2336,
+          348
+        ],
+        [
+          2334,
           351
         ],
         [
-          2333,
-          358
-        ],
-        [
-          2372,
-          367
-        ],
-        [
-          2376,
-          376
-        ],
-        [
-          2371,
-          385
-        ],
-        [
-          2367,
-          389
-        ],
-        [
-          2367,
-          392
-        ],
-        [
-          2402,
-          377
-        ],
-        [
-          2401,
-          394
-        ],
-        [
-          2401,
-          395
-        ],
-        [
-          2398,
-          416
-        ],
+          2334,
+          363
+        ]
+      ],
+      "num_points": 18,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "green_m3_011",
+      "color": "green",
+      "points": [
         [
           2403,
           395
@@ -495,26 +371,104 @@
           569
         ]
       ],
-      "num_points": 27,
+      "num_points": 11,
       "score": 5,
       "classification": "merged"
     },
     {
-      "id": "green_m3_005",
+      "id": "green_m3_012",
       "color": "green",
       "points": [
         [
-          1824,
-          372
+          2402,
+          378
         ],
         [
-          1824,
-          376
+          2400,
+          381
         ],
         [
-          1798,
-          410
+          2400,
+          386
         ],
+        [
+          2402,
+          388
+        ],
+        [
+          2401,
+          394
+        ],
+        [
+          2401,
+          395
+        ],
+        [
+          2396,
+          403
+        ],
+        [
+          2396,
+          412
+        ],
+        [
+          2398,
+          416
+        ],
+        [
+          2366,
+          449
+        ],
+        [
+          2370,
+          455
+        ]
+      ],
+      "num_points": 11,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "green_m3_013",
+      "color": "green",
+      "points": [
+        [
+          1640,
+          389
+        ],
+        [
+          1640,
+          393
+        ],
+        [
+          1638,
+          395
+        ],
+        [
+          1635,
+          395
+        ],
+        [
+          1591,
+          388
+        ],
+        [
+          1587,
+          392
+        ],
+        [
+          1582,
+          391
+        ]
+      ],
+      "num_points": 7,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "green_m3_014",
+      "color": "green",
+      "points": [
         [
           1798,
           432
@@ -558,43 +512,18 @@
         [
           1688,
           520
+        ],
+        [
+          1764,
+          578
         ]
       ],
-      "num_points": 14,
+      "num_points": 12,
       "score": 5,
       "classification": "merged"
     },
     {
-      "id": "green_m3_006",
-      "color": "green",
-      "points": [
-        [
-          1591,
-          388
-        ],
-        [
-          1587,
-          392
-        ],
-        [
-          1582,
-          391
-        ],
-        [
-          1640,
-          390
-        ],
-        [
-          1635,
-          396
-        ]
-      ],
-      "num_points": 5,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "green_m3_009",
+      "id": "green_m3_017",
       "color": "green",
       "points": [
         [
@@ -675,7 +604,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_010",
+      "id": "green_m3_018",
       "color": "green",
       "points": [
         [
@@ -712,7 +641,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_012",
+      "id": "green_m3_019",
       "color": "green",
       "points": [
         [
@@ -813,7 +742,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_015",
+      "id": "green_m3_022",
       "color": "green",
       "points": [
         [
@@ -954,7 +883,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_016",
+      "id": "green_m3_023",
       "color": "green",
       "points": [
         [
@@ -1011,7 +940,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_025",
+      "id": "green_m3_031",
       "color": "green",
       "points": [
         [
@@ -1072,32 +1001,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_026",
-      "color": "green",
-      "points": [
-        [
-          1795,
-          568
-        ],
-        [
-          1801,
-          585
-        ],
-        [
-          1809,
-          594
-        ],
-        [
-          1817,
-          600
-        ]
-      ],
-      "num_points": 4,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "green_m3_027",
+      "id": "green_m3_033",
       "color": "green",
       "points": [
         [
@@ -1158,7 +1062,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_028",
+      "id": "green_m3_034",
       "color": "green",
       "points": [
         [
@@ -1199,7 +1103,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_031",
+      "id": "green_m3_037",
       "color": "green",
       "points": [
         [
@@ -1288,7 +1192,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_032",
+      "id": "green_m3_038",
       "color": "green",
       "points": [
         [
@@ -1321,7 +1225,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_033",
+      "id": "green_m3_039",
       "color": "green",
       "points": [
         [
@@ -1474,7 +1378,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_039",
+      "id": "green_m3_045",
       "color": "green",
       "points": [
         [
@@ -1567,7 +1471,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_041",
+      "id": "green_m3_047",
       "color": "green",
       "points": [
         [
@@ -1604,7 +1508,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_044",
+      "id": "green_m3_050",
       "color": "green",
       "points": [
         [
@@ -1669,7 +1573,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_045",
+      "id": "green_m3_051",
       "color": "green",
       "points": [
         [
@@ -1734,7 +1638,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_047",
+      "id": "green_m3_053",
       "color": "green",
       "points": [
         [
@@ -1795,7 +1699,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_048",
+      "id": "green_m3_054",
       "color": "green",
       "points": [
         [
@@ -1864,7 +1768,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_050",
+      "id": "green_m3_056",
       "color": "green",
       "points": [
         [
@@ -1921,7 +1825,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_051",
+      "id": "green_m3_057",
       "color": "green",
       "points": [
         [
@@ -1950,7 +1854,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_053",
+      "id": "green_m3_059",
       "color": "green",
       "points": [
         [
@@ -2007,7 +1911,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_054",
+      "id": "green_m3_060",
       "color": "green",
       "points": [
         [
@@ -2080,7 +1984,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_055",
+      "id": "green_m3_061",
       "color": "green",
       "points": [
         [
@@ -2133,7 +2037,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_058",
+      "id": "green_m3_064",
       "color": "green",
       "points": [
         [
@@ -2162,7 +2066,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_060",
+      "id": "green_m3_066",
       "color": "green",
       "points": [
         [
@@ -2335,7 +2239,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_061",
+      "id": "green_m3_067",
       "color": "green",
       "points": [
         [
@@ -2416,7 +2320,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_062",
+      "id": "green_m3_068",
       "color": "green",
       "points": [
         [
@@ -2437,7 +2341,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_063",
+      "id": "green_m3_069",
       "color": "green",
       "points": [
         [
@@ -2474,7 +2378,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_064",
+      "id": "green_m3_070",
       "color": "green",
       "points": [
         [
@@ -2511,7 +2415,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_069",
+      "id": "green_m3_075",
       "color": "green",
       "points": [
         [
@@ -2568,7 +2472,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_071",
+      "id": "green_m3_077",
       "color": "green",
       "points": [
         [
@@ -2609,28 +2513,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_072",
-      "color": "green",
-      "points": [
-        [
-          2598,
-          1031
-        ],
-        [
-          2586,
-          1040
-        ],
-        [
-          2576,
-          1052
-        ]
-      ],
-      "num_points": 3,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "green_m3_073",
+      "id": "green_m3_079",
       "color": "green",
       "points": [
         [
@@ -2663,7 +2546,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_074",
+      "id": "green_m3_080",
       "color": "green",
       "points": [
         [
@@ -2744,7 +2627,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_075",
+      "id": "green_m3_081",
       "color": "green",
       "points": [
         [
@@ -2921,7 +2804,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_076",
+      "id": "green_m3_082",
       "color": "green",
       "points": [
         [
@@ -2982,7 +2865,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_077",
+      "id": "green_m3_083",
       "color": "green",
       "points": [
         [
@@ -3043,7 +2926,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_078",
+      "id": "green_m3_084",
       "color": "green",
       "points": [
         [
@@ -3116,7 +2999,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_080",
+      "id": "green_m3_086",
       "color": "green",
       "points": [
         [
@@ -3157,9 +3040,13 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_082",
+      "id": "green_m3_088",
       "color": "green",
       "points": [
+        [
+          1792,
+          1249
+        ],
         [
           1715,
           1148
@@ -3233,12 +3120,12 @@
           1179
         ]
       ],
-      "num_points": 18,
+      "num_points": 19,
       "score": 5,
       "classification": "merged"
     },
     {
-      "id": "green_m3_083",
+      "id": "green_m3_089",
       "color": "green",
       "points": [
         [
@@ -3315,7 +3202,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_084",
+      "id": "green_m3_090",
       "color": "green",
       "points": [
         [
@@ -3360,9 +3247,13 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_085",
+      "id": "green_m3_091",
       "color": "green",
       "points": [
+        [
+          1206,
+          1478
+        ],
         [
           1345,
           1315
@@ -3524,12 +3415,12 @@
           1805
         ]
       ],
-      "num_points": 40,
+      "num_points": 41,
       "score": 5,
       "classification": "merged"
     },
     {
-      "id": "green_m3_086",
+      "id": "green_m3_092",
       "color": "green",
       "points": [
         [
@@ -3562,7 +3453,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_087",
+      "id": "green_m3_093",
       "color": "green",
       "points": [
         [
@@ -3603,7 +3494,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_088",
+      "id": "green_m3_094",
       "color": "green",
       "points": [
         [
@@ -3644,7 +3535,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_089",
+      "id": "green_m3_095",
       "color": "green",
       "points": [
         [
@@ -3713,36 +3604,7 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_091",
-      "color": "green",
-      "points": [
-        [
-          1834,
-          1236
-        ],
-        [
-          1835,
-          1242
-        ],
-        [
-          1833,
-          1245
-        ],
-        [
-          1832,
-          1266
-        ],
-        [
-          1836,
-          1271
-        ]
-      ],
-      "num_points": 5,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "green_m3_092",
+      "id": "green_m3_098",
       "color": "green",
       "points": [
         [
@@ -3783,178 +3645,89 @@
       "classification": "merged"
     },
     {
-      "id": "green_m3_097",
-      "color": "green",
-      "points": [
-        [
-          1206,
-          1478
-        ],
-        [
-          1080,
-          1638
-        ],
-        [
-          1095,
-          1641
-        ],
-        [
-          1121,
-          1650
-        ],
-        [
-          1127,
-          1650
-        ],
-        [
-          1135,
-          1656
-        ],
-        [
-          1139,
-          1655
-        ],
-        [
-          1187,
-          1670
-        ],
-        [
-          1210,
-          1673
-        ],
-        [
-          1217,
-          1683
-        ],
-        [
-          1210,
-          1692
-        ],
-        [
-          1141,
-          1714
-        ],
-        [
-          1089,
-          1721
-        ],
-        [
-          1077,
-          1727
-        ],
-        [
-          1056,
-          1729
-        ],
-        [
-          1009,
-          1734
-        ]
-      ],
-      "num_points": 16,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "green_m3_099",
-      "color": "green",
-      "points": [
-        [
-          1095,
-          1871
-        ],
-        [
-          1088,
-          1879
-        ],
-        [
-          1026,
-          1885
-        ],
-        [
-          964,
-          1887
-        ],
-        [
-          942,
-          1892
-        ],
-        [
-          933,
-          1892
-        ],
-        [
-          925,
-          1898
-        ],
-        [
-          914,
-          1908
-        ],
-        [
-          906,
-          1899
-        ],
-        [
-          897,
-          1895
-        ],
-        [
-          838,
-          1890
-        ],
-        [
-          823,
-          1885
-        ],
-        [
-          807,
-          1876
-        ]
-      ],
-      "num_points": 13,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_001",
+      "id": "blue_m3_002",
       "color": "blue",
       "points": [
         [
-          2211,
-          284
+          1888,
+          272
         ],
         [
-          2217,
-          284
+          1899,
+          282
         ],
         [
-          2223,
-          287
+          1905,
+          283
         ],
         [
-          2225,
-          300
+          1910,
+          293
         ],
         [
-          2227,
-          304
+          1918,
+          299
         ],
         [
-          2216,
+          1919,
+          309
+        ],
+        [
+          1912,
+          335
+        ],
+        [
+          1927,
+          350
+        ],
+        [
+          1927,
+          352
+        ],
+        [
+          1869,
           342
         ],
         [
-          2235,
-          346
+          1875,
+          351
         ],
         [
-          2250,
-          354
+          1886,
+          351
         ],
         [
-          2258,
-          377
+          1927,
+          422
+        ],
+        [
+          1904,
+          484
+        ],
+        [
+          1892,
+          599
+        ]
+      ],
+      "num_points": 15,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "blue_m3_007",
+      "color": "blue",
+      "points": [
+        [
+          2193,
+          452
+        ],
+        [
+          2194,
+          456
+        ],
+        [
+          2196,
+          457
         ],
         [
           2221,
@@ -3993,105 +3766,7 @@
           508
         ]
       ],
-      "num_points": 18,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_002",
-      "color": "blue",
-      "points": [
-        [
-          1950,
-          242
-        ],
-        [
-          1955,
-          245
-        ],
-        [
-          1964,
-          246
-        ],
-        [
-          1940,
-          231
-        ],
-        [
-          1938,
-          233
-        ],
-        [
-          1945,
-          241
-        ],
-        [
-          1950,
-          242
-        ],
-        [
-          1965,
-          271
-        ],
-        [
-          1970,
-          275
-        ],
-        [
-          1986,
-          280
-        ],
-        [
-          1998,
-          300
-        ],
-        [
-          2007,
-          318
-        ]
-      ],
       "num_points": 12,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_007",
-      "color": "blue",
-      "points": [
-        [
-          2114,
-          332
-        ],
-        [
-          2114,
-          343
-        ],
-        [
-          2122,
-          356
-        ],
-        [
-          2127,
-          373
-        ],
-        [
-          2132,
-          380
-        ],
-        [
-          2151,
-          348
-        ],
-        [
-          2155,
-          356
-        ],
-        [
-          2163,
-          366
-        ]
-      ],
-      "num_points": 8,
       "score": 5,
       "classification": "merged"
     },
@@ -4100,56 +3775,84 @@
       "color": "blue",
       "points": [
         [
-          1892,
-          599
+          1845,
+          406
         ],
         [
-          1904,
-          484
+          1844,
+          400
         ],
         [
-          1927,
-          422
+          1837,
+          434
         ],
         [
-          2046,
-          407
+          1828,
+          434
         ],
         [
-          2046,
-          416
+          1821,
+          428
         ],
         [
-          2055,
-          429
+          1789,
+          433
         ],
         [
-          2088,
+          1789,
+          438
+        ],
+        [
+          1786,
+          441
+        ],
+        [
+          1786,
+          451
+        ],
+        [
+          1788,
+          455
+        ],
+        [
+          1736,
           432
         ],
         [
-          2091,
-          447
+          1739,
+          442
         ],
         [
-          2081,
-          474
+          1739,
+          451
         ],
         [
-          2081,
-          480
+          1695,
+          438
         ],
         [
-          2084,
-          483
+          1675,
+          438
+        ],
+        [
+          1655,
+          445
+        ],
+        [
+          1630,
+          467
+        ],
+        [
+          1583,
+          502
         ]
       ],
-      "num_points": 11,
+      "num_points": 18,
       "score": 5,
       "classification": "merged"
     },
     {
-      "id": "blue_m3_015",
+      "id": "blue_m3_014",
       "color": "blue",
       "points": [
         [
@@ -4214,7 +3917,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_016",
+      "id": "blue_m3_015",
       "color": "blue",
       "points": [
         [
@@ -4246,7 +3949,7 @@
           511
         ],
         [
-          575,
+          576,
           492
         ],
         [
@@ -4262,7 +3965,7 @@
           497
         ],
         [
-          557,
+          558,
           502
         ],
         [
@@ -4275,9 +3978,54 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_018",
+      "id": "blue_m3_017",
       "color": "blue",
       "points": [
+        [
+          2046,
+          407
+        ],
+        [
+          2046,
+          416
+        ],
+        [
+          2055,
+          429
+        ],
+        [
+          2088,
+          432
+        ],
+        [
+          2091,
+          447
+        ],
+        [
+          2081,
+          474
+        ],
+        [
+          2081,
+          480
+        ],
+        [
+          2084,
+          483
+        ]
+      ],
+      "num_points": 8,
+      "score": 5,
+      "classification": "merged"
+    },
+    {
+      "id": "blue_m3_019",
+      "color": "blue",
+      "points": [
+        [
+          1118,
+          450
+        ],
         [
           1190,
           428
@@ -4325,84 +4073,6 @@
         [
           1170,
           546
-        ]
-      ],
-      "num_points": 12,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_019",
-      "color": "blue",
-      "points": [
-        [
-          1119,
-          450
-        ],
-        [
-          1168,
-          450
-        ]
-      ],
-      "num_points": 2,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_020",
-      "color": "blue",
-      "points": [
-        [
-          1788,
-          455
-        ],
-        [
-          1786,
-          451
-        ],
-        [
-          1786,
-          441
-        ],
-        [
-          1789,
-          438
-        ],
-        [
-          1789,
-          433
-        ],
-        [
-          1739,
-          451
-        ],
-        [
-          1739,
-          442
-        ],
-        [
-          1736,
-          432
-        ],
-        [
-          1695,
-          438
-        ],
-        [
-          1675,
-          438
-        ],
-        [
-          1655,
-          445
-        ],
-        [
-          1630,
-          467
-        ],
-        [
-          1583,
-          502
         ]
       ],
       "num_points": 13,
@@ -4475,7 +4145,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_025",
+      "id": "blue_m3_024",
       "color": "blue",
       "points": [
         [
@@ -4505,14 +4175,18 @@
         [
           2660,
           522
+        ],
+        [
+          2539,
+          470
         ]
       ],
-      "num_points": 7,
+      "num_points": 8,
       "score": 5,
       "classification": "merged"
     },
     {
-      "id": "blue_m3_026",
+      "id": "blue_m3_025",
       "color": "blue",
       "points": [
         [
@@ -4617,7 +4291,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_028",
+      "id": "blue_m3_027",
       "color": "blue",
       "points": [
         [
@@ -4694,39 +4368,6 @@
       "color": "blue",
       "points": [
         [
-          2539,
-          470
-        ],
-        [
-          2579,
-          552
-        ],
-        [
-          2579,
-          562
-        ],
-        [
-          2571,
-          577
-        ],
-        [
-          2566,
-          581
-        ],
-        [
-          2553,
-          583
-        ]
-      ],
-      "num_points": 6,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_030",
-      "color": "blue",
-      "points": [
-        [
           1277,
           541
         ],
@@ -4776,7 +4417,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_031",
+      "id": "blue_m3_030",
       "color": "blue",
       "points": [
         [
@@ -4833,7 +4474,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_032",
+      "id": "blue_m3_031",
       "color": "blue",
       "points": [
         [
@@ -4910,7 +4551,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_037",
+      "id": "blue_m3_036",
       "color": "blue",
       "points": [
         [
@@ -5031,7 +4672,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_041",
+      "id": "blue_m3_040",
       "color": "blue",
       "points": [
         [
@@ -5060,7 +4701,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_046",
+      "id": "blue_m3_045",
       "color": "blue",
       "points": [
         [
@@ -5101,7 +4742,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_050",
+      "id": "blue_m3_049",
       "color": "blue",
       "points": [
         [
@@ -5138,7 +4779,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_051",
+      "id": "blue_m3_050",
       "color": "blue",
       "points": [
         [
@@ -5179,7 +4820,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_052",
+      "id": "blue_m3_051",
       "color": "blue",
       "points": [
         [
@@ -5232,32 +4873,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_053",
-      "color": "blue",
-      "points": [
-        [
-          1270,
-          700
-        ],
-        [
-          1206,
-          677
-        ],
-        [
-          1180,
-          675
-        ],
-        [
-          1172,
-          678
-        ]
-      ],
-      "num_points": 4,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_055",
+      "id": "blue_m3_054",
       "color": "blue",
       "points": [
         [
@@ -5318,7 +4934,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_056",
+      "id": "blue_m3_055",
       "color": "blue",
       "points": [
         [
@@ -5395,7 +5011,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_057",
+      "id": "blue_m3_056",
       "color": "blue",
       "points": [
         [
@@ -5496,7 +5112,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_059",
+      "id": "blue_m3_058",
       "color": "blue",
       "points": [
         [
@@ -5557,7 +5173,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_062",
+      "id": "blue_m3_061",
       "color": "blue",
       "points": [
         [
@@ -5662,7 +5278,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_063",
+      "id": "blue_m3_062",
       "color": "blue",
       "points": [
         [
@@ -5699,43 +5315,6 @@
       "color": "blue",
       "points": [
         [
-          1183,
-          754
-        ],
-        [
-          1176,
-          758
-        ],
-        [
-          1173,
-          763
-        ],
-        [
-          1173,
-          766
-        ],
-        [
-          1173,
-          766
-        ],
-        [
-          1171,
-          770
-        ],
-        [
-          1170,
-          780
-        ]
-      ],
-      "num_points": 7,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_065",
-      "color": "blue",
-      "points": [
-        [
           1389,
           964
         ],
@@ -5753,7 +5332,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_066",
+      "id": "blue_m3_065",
       "color": "blue",
       "points": [
         [
@@ -5882,7 +5461,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_067",
+      "id": "blue_m3_066",
       "color": "blue",
       "points": [
         [
@@ -5927,9 +5506,13 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_069",
+      "id": "blue_m3_068",
       "color": "blue",
       "points": [
+        [
+          1270,
+          700
+        ],
         [
           1292,
           804
@@ -5971,12 +5554,12 @@
           922
         ]
       ],
-      "num_points": 10,
+      "num_points": 11,
       "score": 5,
       "classification": "merged"
     },
     {
-      "id": "blue_m3_070",
+      "id": "blue_m3_069",
       "color": "blue",
       "points": [
         [
@@ -6009,7 +5592,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_071",
+      "id": "blue_m3_070",
       "color": "blue",
       "points": [
         [
@@ -6050,7 +5633,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_073",
+      "id": "blue_m3_072",
       "color": "blue",
       "points": [
         [
@@ -6083,7 +5666,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_074",
+      "id": "blue_m3_073",
       "color": "blue",
       "points": [
         [
@@ -6108,7 +5691,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_077",
+      "id": "blue_m3_076",
       "color": "blue",
       "points": [
         [
@@ -6132,8 +5715,8 @@
           900
         ],
         [
-          3241,
-          909
+          3243,
+          906
         ],
         [
           3237,
@@ -6173,7 +5756,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_079",
+      "id": "blue_m3_078",
       "color": "blue",
       "points": [
         [
@@ -6198,7 +5781,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_081",
+      "id": "blue_m3_080",
       "color": "blue",
       "points": [
         [
@@ -6231,7 +5814,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_085",
+      "id": "blue_m3_084",
       "color": "blue",
       "points": [
         [
@@ -6268,7 +5851,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_086",
+      "id": "blue_m3_085",
       "color": "blue",
       "points": [
         [
@@ -6317,7 +5900,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_087",
+      "id": "blue_m3_086",
       "color": "blue",
       "points": [
         [
@@ -6366,7 +5949,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_088",
+      "id": "blue_m3_087",
       "color": "blue",
       "points": [
         [
@@ -6415,7 +5998,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_091",
+      "id": "blue_m3_090",
       "color": "blue",
       "points": [
         [
@@ -6445,27 +6028,6 @@
     },
     {
       "id": "blue_m3_092",
-      "color": "blue",
-      "points": [
-        [
-          1024,
-          1265
-        ],
-        [
-          1020,
-          1290
-        ],
-        [
-          1021,
-          1298
-        ]
-      ],
-      "num_points": 3,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_093",
       "color": "blue",
       "points": [
         [
@@ -6506,7 +6068,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_096",
+      "id": "blue_m3_095",
       "color": "blue",
       "points": [
         [
@@ -6535,7 +6097,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_099",
+      "id": "blue_m3_098",
       "color": "blue",
       "points": [
         [
@@ -6552,7 +6114,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_100",
+      "id": "blue_m3_099",
       "color": "blue",
       "points": [
         [
@@ -6573,7 +6135,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_104",
+      "id": "blue_m3_103",
       "color": "blue",
       "points": [
         [
@@ -6590,44 +6152,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_108",
-      "color": "blue",
-      "points": [
-        [
-          1828,
-          1240
-        ],
-        [
-          1827,
-          1248
-        ],
-        [
-          1829,
-          1264
-        ],
-        [
-          1829,
-          1265
-        ],
-        [
-          1830,
-          1271
-        ],
-        [
-          1835,
-          1276
-        ],
-        [
-          1838,
-          1276
-        ]
-      ],
-      "num_points": 7,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_112",
+      "id": "blue_m3_111",
       "color": "blue",
       "points": [
         [
@@ -6700,7 +6225,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_115",
+      "id": "blue_m3_114",
       "color": "blue",
       "points": [
         [
@@ -6788,11 +6313,7 @@
           1393
         ],
         [
-          1862,
-          1395
-        ],
-        [
-          1854,
+          1853,
           1395
         ],
         [
@@ -6808,12 +6329,12 @@
           1442
         ]
       ],
-      "num_points": 26,
+      "num_points": 25,
       "score": 5,
       "classification": "merged"
     },
     {
-      "id": "blue_m3_116",
+      "id": "blue_m3_115",
       "color": "blue",
       "points": [
         [
@@ -6838,28 +6359,7 @@
       "classification": "merged"
     },
     {
-      "id": "blue_m3_119",
-      "color": "blue",
-      "points": [
-        [
-          2062,
-          1448
-        ],
-        [
-          2086,
-          1457
-        ],
-        [
-          2097,
-          1463
-        ]
-      ],
-      "num_points": 3,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_122",
+      "id": "blue_m3_121",
       "color": "blue",
       "points": [
         [
@@ -6928,247 +6428,6 @@
         ]
       ],
       "num_points": 16,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_124",
-      "color": "blue",
-      "points": [
-        [
-          2981,
-          1623
-        ],
-        [
-          2981,
-          1629
-        ],
-        [
-          2984,
-          1634
-        ],
-        [
-          3013,
-          1630
-        ],
-        [
-          3014,
-          1634
-        ],
-        [
-          3010,
-          1641
-        ]
-      ],
-      "num_points": 6,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_125",
-      "color": "blue",
-      "points": [
-        [
-          981,
-          1641
-        ],
-        [
-          979,
-          1640
-        ],
-        [
-          975,
-          1643
-        ],
-        [
-          975,
-          1649
-        ],
-        [
-          958,
-          1697
-        ],
-        [
-          958,
-          1705
-        ]
-      ],
-      "num_points": 6,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_128",
-      "color": "blue",
-      "points": [
-        [
-          764,
-          1659
-        ],
-        [
-          756,
-          1661
-        ],
-        [
-          740,
-          1670
-        ],
-        [
-          731,
-          1678
-        ],
-        [
-          726,
-          1688
-        ],
-        [
-          726,
-          1699
-        ],
-        [
-          736,
-          1718
-        ],
-        [
-          736,
-          1724
-        ],
-        [
-          738,
-          1726
-        ],
-        [
-          744,
-          1725
-        ]
-      ],
-      "num_points": 10,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_130",
-      "color": "blue",
-      "points": [
-        [
-          1112,
-          1692
-        ],
-        [
-          1122,
-          1702
-        ],
-        [
-          1124,
-          1710
-        ],
-        [
-          1122,
-          1717
-        ],
-        [
-          1110,
-          1727
-        ],
-        [
-          1077,
-          1734
-        ],
-        [
-          1071,
-          1743
-        ],
-        [
-          1073,
-          1749
-        ],
-        [
-          1085,
-          1757
-        ],
-        [
-          1092,
-          1765
-        ],
-        [
-          1095,
-          1782
-        ],
-        [
-          1098,
-          1787
-        ]
-      ],
-      "num_points": 12,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "blue_m3_132",
-      "color": "blue",
-      "points": [
-        [
-          1010,
-          1832
-        ],
-        [
-          1000,
-          1835
-        ],
-        [
-          985,
-          1844
-        ],
-        [
-          983,
-          1843
-        ],
-        [
-          969,
-          1854
-        ],
-        [
-          965,
-          1852
-        ],
-        [
-          952,
-          1857
-        ],
-        [
-          935,
-          1857
-        ],
-        [
-          909,
-          1853
-        ],
-        [
-          881,
-          1855
-        ],
-        [
-          867,
-          1859
-        ],
-        [
-          834,
-          1878
-        ],
-        [
-          842,
-          1891
-        ],
-        [
-          830,
-          1888
-        ],
-        [
-          828,
-          1885
-        ]
-      ],
-      "num_points": 15,
       "score": 5,
       "classification": "merged"
     },
@@ -9070,715 +8329,6 @@
         ]
       ],
       "num_points": 6,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_100",
-      "color": "black",
-      "points": [
-        [
-          2516,
-          1621
-        ],
-        [
-          2532,
-          1624
-        ],
-        [
-          2614,
-          1625
-        ],
-        [
-          2616,
-          1621
-        ],
-        [
-          2632,
-          1621
-        ],
-        [
-          2633,
-          1617
-        ],
-        [
-          2609,
-          1653
-        ],
-        [
-          2610,
-          1656
-        ],
-        [
-          2603,
-          1663
-        ],
-        [
-          2633,
-          1668
-        ],
-        [
-          2633,
-          1684
-        ],
-        [
-          2641,
-          1723
-        ],
-        [
-          2647,
-          1728
-        ],
-        [
-          2663,
-          1680
-        ],
-        [
-          2678,
-          1679
-        ],
-        [
-          2682,
-          1681
-        ],
-        [
-          2705,
-          1679
-        ],
-        [
-          2721,
-          1680
-        ]
-      ],
-      "num_points": 18,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_101",
-      "color": "black",
-      "points": [
-        [
-          3042,
-          1621
-        ],
-        [
-          3044,
-          1624
-        ],
-        [
-          3055,
-          1628
-        ],
-        [
-          3031,
-          1669
-        ],
-        [
-          3029,
-          1667
-        ],
-        [
-          3031,
-          1664
-        ],
-        [
-          3030,
-          1661
-        ],
-        [
-          3063,
-          1674
-        ],
-        [
-          3063,
-          1669
-        ],
-        [
-          3070,
-          1656
-        ],
-        [
-          3070,
-          1638
-        ],
-        [
-          3076,
-          1630
-        ],
-        [
-          3076,
-          1628
-        ],
-        [
-          3096,
-          1650
-        ],
-        [
-          3101,
-          1645
-        ],
-        [
-          3100,
-          1642
-        ]
-      ],
-      "num_points": 16,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_102",
-      "color": "black",
-      "points": [
-        [
-          2937,
-          1659
-        ],
-        [
-          2940,
-          1659
-        ],
-        [
-          2952,
-          1670
-        ],
-        [
-          2982,
-          1649
-        ],
-        [
-          2983,
-          1681
-        ],
-        [
-          2981,
-          1686
-        ],
-        [
-          3015,
-          1684
-        ],
-        [
-          3021,
-          1689
-        ],
-        [
-          3012,
-          1695
-        ],
-        [
-          3008,
-          1696
-        ],
-        [
-          3006,
-          1697
-        ],
-        [
-          3006,
-          1700
-        ],
-        [
-          2996,
-          1710
-        ],
-        [
-          2994,
-          1709
-        ]
-      ],
-      "num_points": 14,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_103",
-      "color": "black",
-      "points": [
-        [
-          1161,
-          1656
-        ],
-        [
-          1149,
-          1653
-        ],
-        [
-          1147,
-          1651
-        ],
-        [
-          1144,
-          1669
-        ],
-        [
-          1144,
-          1673
-        ],
-        [
-          1132,
-          1678
-        ],
-        [
-          1122,
-          1685
-        ],
-        [
-          1119,
-          1685
-        ],
-        [
-          1094,
-          1689
-        ],
-        [
-          1065,
-          1722
-        ]
-      ],
-      "num_points": 10,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_106",
-      "color": "black",
-      "points": [
-        [
-          2494,
-          1668
-        ],
-        [
-          2503,
-          1676
-        ],
-        [
-          2514,
-          1677
-        ],
-        [
-          2517,
-          1680
-        ],
-        [
-          2532,
-          1683
-        ],
-        [
-          2535,
-          1686
-        ],
-        [
-          2555,
-          1686
-        ],
-        [
-          2561,
-          1678
-        ],
-        [
-          2567,
-          1673
-        ],
-        [
-          2577,
-          1685
-        ],
-        [
-          2619,
-          1688
-        ],
-        [
-          2603,
-          1728
-        ],
-        [
-          2605,
-          1728
-        ],
-        [
-          2613,
-          1734
-        ]
-      ],
-      "num_points": 14,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_108",
-      "color": "black",
-      "points": [
-        [
-          3120,
-          1703
-        ],
-        [
-          3120,
-          1706
-        ],
-        [
-          3112,
-          1713
-        ],
-        [
-          3115,
-          1730
-        ],
-        [
-          3081,
-          1709
-        ],
-        [
-          3082,
-          1715
-        ],
-        [
-          3091,
-          1724
-        ]
-      ],
-      "num_points": 7,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_113",
-      "color": "black",
-      "points": [
-        [
-          1968,
-          1748
-        ],
-        [
-          1973,
-          1744
-        ],
-        [
-          1987,
-          1744
-        ],
-        [
-          1991,
-          1749
-        ],
-        [
-          1991,
-          1749
-        ],
-        [
-          1996,
-          1759
-        ],
-        [
-          2000,
-          1761
-        ]
-      ],
-      "num_points": 7,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_118",
-      "color": "black",
-      "points": [
-        [
-          2913,
-          1858
-        ],
-        [
-          2891,
-          1854
-        ],
-        [
-          2901,
-          1834
-        ],
-        [
-          2898,
-          1828
-        ],
-        [
-          2867,
-          1821
-        ],
-        [
-          2863,
-          1819
-        ],
-        [
-          2855,
-          1861
-        ],
-        [
-          2831,
-          1863
-        ],
-        [
-          2824,
-          1862
-        ]
-      ],
-      "num_points": 9,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_122",
-      "color": "black",
-      "points": [
-        [
-          1146,
-          1907
-        ],
-        [
-          1145,
-          1910
-        ],
-        [
-          1136,
-          1915
-        ],
-        [
-          1129,
-          1915
-        ],
-        [
-          1126,
-          1912
-        ],
-        [
-          1126,
-          1901
-        ],
-        [
-          1096,
-          1899
-        ],
-        [
-          1081,
-          1902
-        ],
-        [
-          1075,
-          1906
-        ],
-        [
-          1045,
-          1907
-        ],
-        [
-          1052,
-          1871
-        ],
-        [
-          1042,
-          1871
-        ],
-        [
-          1039,
-          1907
-        ],
-        [
-          1037,
-          1905
-        ],
-        [
-          1037,
-          1899
-        ],
-        [
-          1034,
-          1892
-        ],
-        [
-          979,
-          1907
-        ],
-        [
-          980,
-          1927
-        ],
-        [
-          952,
-          1906
-        ],
-        [
-          949,
-          1907
-        ],
-        [
-          950,
-          1921
-        ],
-        [
-          953,
-          1907
-        ],
-        [
-          956,
-          1910
-        ],
-        [
-          956,
-          1916
-        ],
-        [
-          951,
-          1921
-        ],
-        [
-          952,
-          1906
-        ],
-        [
-          957,
-          1904
-        ],
-        [
-          974,
-          1904
-        ],
-        [
-          979,
-          1907
-        ]
-      ],
-      "num_points": 29,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_126",
-      "color": "black",
-      "points": [
-        [
-          859,
-          1914
-        ],
-        [
-          861,
-          1912
-        ],
-        [
-          878,
-          1912
-        ],
-        [
-          892,
-          1915
-        ],
-        [
-          896,
-          1914
-        ]
-      ],
-      "num_points": 5,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_128",
-      "color": "black",
-      "points": [
-        [
-          367,
-          1964
-        ],
-        [
-          370,
-          1967
-        ],
-        [
-          391,
-          1971
-        ],
-        [
-          394,
-          2024
-        ],
-        [
-          393,
-          2016
-        ],
-        [
-          426,
-          2013
-        ],
-        [
-          426,
-          2003
-        ],
-        [
-          424,
-          2002
-        ],
-        [
-          366,
-          2015
-        ],
-        [
-          368,
-          2011
-        ],
-        [
-          367,
-          2006
-        ]
-      ],
-      "num_points": 11,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_131",
-      "color": "black",
-      "points": [
-        [
-          843,
-          1994
-        ],
-        [
-          874,
-          1994
-        ],
-        [
-          879,
-          1999
-        ]
-      ],
-      "num_points": 3,
-      "score": 5,
-      "classification": "merged"
-    },
-    {
-      "id": "black_m3_132",
-      "color": "black",
-      "points": [
-        [
-          2977,
-          1995
-        ],
-        [
-          2976,
-          2000
-        ],
-        [
-          2933,
-          2013
-        ],
-        [
-          2940,
-          2019
-        ],
-        [
-          2942,
-          2025
-        ]
-      ],
-      "num_points": 5,
       "score": 5,
       "classification": "merged"
     }

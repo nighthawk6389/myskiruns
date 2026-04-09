@@ -439,6 +439,8 @@ def run_segmentation(img: np.ndarray) -> dict:
 
         # Directional gap fill to bridge text gaps
         mask = directional_gap_fill(mask, bridge_length=15)
+        # Re-apply mountain mask — gap-fill can extend pixels outside boundary
+        mask = cv2.bitwise_and(mask, mountain_mask)
         # Re-apply width-ratio filter after gap-fill (blobs may have grown)
         num_l3, lbl3, st3, _ = cv2.connectedComponentsWithStats(mask)
         for i3 in range(1, num_l3):
