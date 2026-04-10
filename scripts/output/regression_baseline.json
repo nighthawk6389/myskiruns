@@ -1,10 +1,10 @@
 {
-  "green_segments": 53,
-  "blue_segments": 56,
-  "black_segments": 40,
-  "total_segments": 149,
-  "total_arc_length": 47374.3,
-  "blue_mask_pixels": 230173,
+  "green_segments": 54,
+  "blue_segments": 51,
+  "black_segments": 33,
+  "total_segments": 138,
+  "total_arc_length": 45290.8,
+  "blue_mask_pixels": 211062,
   "area_checks": {
     "Solitude area": {
       "blue_count": 2,
@@ -17,12 +17,12 @@
       "pass": true
     },
     "Killington Peak": {
-      "blue_count": 12,
+      "blue_count": 9,
       "required_min": 3,
       "pass": true
     },
     "Bear Mountain": {
-      "blue_count": 8,
+      "blue_count": 7,
       "required_min": 1,
       "pass": true
     },
@@ -33,25 +33,25 @@
     }
   },
   "precision": {
-    "green": 92.0,
-    "blue": 91.8,
-    "black": 90.8
+    "green": 92.1,
+    "blue": 91.4,
+    "black": 89.0
   },
   "symbol_recall": {
     "green": {
-      "matched": 248,
-      "total": 256,
-      "recall_pct": 96.9
+      "matched": 225,
+      "total": 229,
+      "recall_pct": 98.3
     },
     "blue": {
-      "matched": 42,
-      "total": 43,
-      "recall_pct": 97.7
+      "matched": 35,
+      "total": 35,
+      "recall_pct": 100.0
     },
     "black": {
-      "matched": 88,
-      "total": 95,
-      "recall_pct": 92.6
+      "matched": 89,
+      "total": 96,
+      "recall_pct": 92.7
     }
   },
   "gap_pairs": 0,

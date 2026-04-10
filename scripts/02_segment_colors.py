@@ -315,24 +315,9 @@ def run_segmentation(img: np.ndarray) -> dict:
     masks["_mountain"] = mountain_mask
     cv2.imwrite(str(MASKS_DIR / "mountain_mask.png"), mountain_mask)
 
-    # Create a wider mountain mask for HIGH-confidence trail pixels.
-    # The yellow boundary doesn't fully enclose edge trails (e.g. Solitude),
-    # so high-saturation trail pixels near the boundary get clipped.
-    # Dilating by 150px captures edge trails, and subtracting sky prevents
-    # sky bleed at the ridgeline.
-    mountain_mask_wide = cv2.dilate(mountain_mask, np.ones((150, 150), np.uint8), iterations=1)
-    # Subtract sky from the wide mask
-    sky_for_wide = cv2.inRange(hsv, np.array([85, 20, 150]), np.array([135, 255, 255]))
-    sky_for_wide_region = np.zeros_like(sky_for_wide)
-    sky_for_wide_region[:int(h * 0.20), :] = sky_for_wide[:int(h * 0.20), :]
-    sky_for_wide_region = cv2.dilate(sky_for_wide_region, np.ones((10, 10), np.uint8), iterations=2)
-    mountain_mask_wide = cv2.bitwise_and(mountain_mask_wide, cv2.bitwise_not(sky_for_wide_region))
-    wide_pct = np.count_nonzero(mountain_mask_wide) / mountain_mask_wide.size * 100
-    print(f"    Wide region (for high-confidence): {np.count_nonzero(mountain_mask_wide):,} pixels ({wide_pct:.1f}%)")
-
     # Step 2: Detect and mask trail name text
     print("  Detecting trail name text...")
-    text_mask = create_text_mask(hsv, mountain_mask_wide)
+    text_mask = create_text_mask(hsv, mountain_mask)
     print(f"    Text mask: {np.count_nonzero(text_mask):,} pixels")
     cv2.imwrite(str(MASKS_DIR / "text_mask.png"), text_mask)
 
@@ -347,7 +332,7 @@ def run_segmentation(img: np.ndarray) -> dict:
 
     # Step 3: Detect difficulty symbols
     print("  Detecting difficulty symbols (■ ◆ ●)...")
-    symbols = detect_difficulty_symbols(hsv, mountain_mask_wide)
+    symbols = detect_difficulty_symbols(hsv, mountain_mask)
     for color, positions in symbols.items():
         print(f"    {color}: {len(positions)} symbols found")
     anchor_masks = create_symbol_anchor_mask(symbols, (h, w))
@@ -370,21 +355,17 @@ def run_segmentation(img: np.ndarray) -> dict:
         print(f"  Segmenting {color_name}...")
 
         # Detect LOW confidence from both original + inpainted
-        # Use wider mountain mask — multi-scale filter prevents noise by
-        # requiring LOW components to overlap HIGH-confidence pixels.
         mask_lo_orig = segment_color(hsv, ranges_low)
-        mask_lo_orig = cv2.bitwise_and(mask_lo_orig, mountain_mask_wide)
+        mask_lo_orig = cv2.bitwise_and(mask_lo_orig, mountain_mask)
         mask_lo_inp = segment_color(hsv_inpainted, ranges_low)
-        mask_lo_inp = cv2.bitwise_and(mask_lo_inp, mountain_mask_wide)
+        mask_lo_inp = cv2.bitwise_and(mask_lo_inp, mountain_mask)
         mask_lo = cv2.bitwise_or(mask_lo_orig, mask_lo_inp)
 
-        # Detect HIGH confidence — use wider mountain mask so trails near
-        # the yellow boundary (like Solitude) aren't clipped. These pixels
-        # have high saturation, so they're intentional markings, not noise.
+        # Detect HIGH confidence
         mask_hi_orig = segment_color(hsv, ranges_high)
-        mask_hi_orig = cv2.bitwise_and(mask_hi_orig, mountain_mask_wide)
+        mask_hi_orig = cv2.bitwise_and(mask_hi_orig, mountain_mask)
         mask_hi_inp = segment_color(hsv_inpainted, ranges_high)
-        mask_hi_inp = cv2.bitwise_and(mask_hi_inp, mountain_mask_wide)
+        mask_hi_inp = cv2.bitwise_and(mask_hi_inp, mountain_mask)
         mask_hi = cv2.bitwise_or(mask_hi_orig, mask_hi_inp)
 
         # Boost HIGH mask with symbol anchors — difficulty symbols are
@@ -394,7 +375,7 @@ def run_segmentation(img: np.ndarray) -> dict:
         if color_name in anchor_masks:
             symbol_boost = cv2.dilate(anchor_masks[color_name],
                                        np.ones((5, 5), np.uint8), iterations=2)
-            mask_hi = cv2.bitwise_or(mask_hi, cv2.bitwise_and(symbol_boost, mountain_mask_wide))
+            mask_hi = cv2.bitwise_or(mask_hi, cv2.bitwise_and(symbol_boost, mountain_mask))
 
         hi_px = np.count_nonzero(mask_hi)
         lo_px = np.count_nonzero(mask_lo)
@@ -451,16 +432,15 @@ def run_segmentation(img: np.ndarray) -> dict:
                 mask[lbl2 == i2] = 0
 
         # Save raw mask (before gap-fill) for black trail subtraction.
-        # Use TIGHT mountain mask for these — the wide mask extends green/blue
-        # into areas where black trails exist, causing over-subtraction.
+        # Add anchors to raw mask so they're available for subtraction reference
         if color_name in anchor_masks:
-            mask = cv2.bitwise_or(mask, cv2.bitwise_and(anchor_masks[color_name], mountain_mask_wide))
-        raw_color_masks[color_name] = cv2.bitwise_and(mask, mountain_mask)
+            mask = cv2.bitwise_or(mask, cv2.bitwise_and(anchor_masks[color_name], mountain_mask))
+        raw_color_masks[color_name] = mask.copy()
 
         # Directional gap fill to bridge text gaps
         mask = directional_gap_fill(mask, bridge_length=15)
-        # Re-apply wide mountain mask — gap-fill can extend pixels outside boundary
-        mask = cv2.bitwise_and(mask, mountain_mask_wide)
+        # Re-apply mountain mask — gap-fill can extend pixels outside boundary
+        mask = cv2.bitwise_and(mask, mountain_mask)
         # Re-apply width-ratio filter after gap-fill (blobs may have grown)
         num_l3, lbl3, st3, _ = cv2.connectedComponentsWithStats(mask)
         for i3 in range(1, num_l3):
@@ -482,7 +462,7 @@ def run_segmentation(img: np.ndarray) -> dict:
         # be removed by width-ratio or cleanup filters since they represent
         # definitive trail locations.
         if color_name in anchor_masks:
-            mask = cv2.bitwise_or(mask, cv2.bitwise_and(anchor_masks[color_name], mountain_mask_wide))
+            mask = cv2.bitwise_or(mask, cv2.bitwise_and(anchor_masks[color_name], mountain_mask))
 
         masks[color_name] = mask
         num_labels = cv2.connectedComponentsWithStats(mask)[0] - 1
@@ -493,7 +473,7 @@ def run_segmentation(img: np.ndarray) -> dict:
     # Use RAW color masks (not gap-filled) for subtraction to avoid eating black trails
     # Pass the inpainted image so text gaps are filled before thresholding
     print("  Detecting black trails (adaptive threshold)...")
-    masks["black"] = detect_black_trails(inpainted_img, hsv, raw_color_masks, mountain_mask_wide, text_mask)
+    masks["black"] = detect_black_trails(inpainted_img, hsv, raw_color_masks, mountain_mask, text_mask)
     # Add black symbol anchors
     if "black" in anchor_masks:
         masks["black"] = cv2.bitwise_or(masks["black"], anchor_masks["black"])
