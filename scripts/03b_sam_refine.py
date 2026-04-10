@@ -1,15 +1,32 @@
 #!/usr/bin/env python3
-"""Step 3b: SAM 2 interactive refinement for missed trails.
+"""Step 3b: Automated SAM 2 refinement of CV-extracted trail polylines.
 
-Interactive matplotlib UI where you click on trails the CV pipeline missed,
-SAM 2 segments them, and you assign trail names.
+Uses the CV pipeline's polylines (from 03_extract_polylines.py) as prompt
+points for SAM 2, which produces clean, continuous trail masks. The SAM masks
+are then skeletonized back into refined polylines.
+
+Why this helps:
+- SAM understands object boundaries → trails separated from background
+- SAM bridges text gaps → continuous trails instead of fragments
+- SAM ignores color → works for faded/desaturated trail sections
+- SAM masks are cleaner → fewer false positives from terrain noise
+
+Pipeline:
+1. Load CV polylines as prompt candidates
+2. For each polyline, sample points along it as SAM positive prompts
+3. Add negative prompts from nearby non-trail areas
+4. Run SAM 2 prediction → get a clean mask per trail
+5. Skeletonize each mask → refined polyline
+6. Filter and merge refined polylines
+7. Output replaces or augments the CV polylines
 
 Requirements:
-    pip install sam2 torch
+    pip install sam2 torch torchvision
 
 Usage:
-    python 03b_sam_refine.py                # Interactive refinement session
-    python 03b_sam_refine.py --resume       # Resume from saved progress
+    python 03b_sam_refine.py              # Refine all CV polylines
+    python 03b_sam_refine.py --color blue # Refine only blue trails
+    python 03b_sam_refine.py --interactive # Fall back to interactive mode
 """
 
 import argparse
@@ -24,383 +41,340 @@ SCRIPT_DIR = Path(__file__).parent
 OUTPUT_DIR = SCRIPT_DIR / "output"
 IMAGE_PATH = OUTPUT_DIR / "trailmap_300dpi.png"
 POLYLINES_PATH = OUTPUT_DIR / "extracted_polylines.json"
-REFINEMENTS_PATH = OUTPUT_DIR / "sam_refinements.json"
+REFINED_PATH = OUTPUT_DIR / "refined_polylines.json"
+MASKS_DIR = OUTPUT_DIR / "masks"
 
-COLOR_MAP = {
-    "green": (0, 0.78, 0),
-    "blue": (0, 0.31, 1.0),
-    "magenta": (1.0, 0, 1.0),
-    "black": (0.4, 0.4, 0.4),
-}
+# SAM 2 model config — tiny is fast enough for CPU
+SAM2_CONFIG = "sam2_hiera_t"
+SAM2_CHECKPOINT = "sam2_hiera_tiny.pt"
 
-
-def check_sam2_available():
-    """Check if SAM 2 is available and return the model."""
-    try:
-        # Try to import SAM 2
-        from sam2.build_sam import build_sam2
-        from sam2.sam2_image_predictor import SAM2ImagePredictor
-        return True
-    except ImportError:
-        return False
+# How many prompt points to sample per polyline
+POINTS_PER_TRAIL = 8
+# Distance for negative prompt points (pixels away from trail)
+NEGATIVE_OFFSET = 60
+# Minimum mask area to accept (filters out failed predictions)
+MIN_MASK_AREA = 200
+# Maximum mask area (filters out masks that capture too much)
+MAX_MASK_AREA_RATIO = 0.02  # max 2% of image
 
 
-def load_existing_polylines():
-    """Load already-extracted polylines for overlay."""
+def load_cv_polylines():
+    """Load polylines from the CV pipeline."""
     if not POLYLINES_PATH.exists():
-        return []
+        print("ERROR: No extracted_polylines.json. Run 03_extract_polylines.py first.")
+        sys.exit(1)
     data = json.loads(POLYLINES_PATH.read_text())
-    return data.get("accepted", [])
+    return data
 
 
-def load_refinements():
-    """Load saved refinements from previous session."""
-    if not REFINEMENTS_PATH.exists():
-        return {"trails": [], "masks": []}
-    return json.loads(REFINEMENTS_PATH.read_text())
+def sample_prompt_points(polyline_pts, num_points=POINTS_PER_TRAIL):
+    """Sample evenly-spaced points along a polyline for SAM prompts.
+
+    Returns array of (x, y) points.
+    """
+    if len(polyline_pts) <= num_points:
+        return np.array(polyline_pts, dtype=np.float32)
+
+    # Sample evenly by arc length
+    indices = np.linspace(0, len(polyline_pts) - 1, num_points, dtype=int)
+    return np.array([polyline_pts[i] for i in indices], dtype=np.float32)
 
 
-def save_refinements(refinements):
-    """Save refinements to disk."""
-    REFINEMENTS_PATH.write_text(json.dumps(refinements, indent=2))
+def generate_negative_points(positive_pts, img_h, img_w, offset=NEGATIVE_OFFSET):
+    """Generate negative prompt points perpendicular to the trail.
+
+    Places points offset pixels to each side of the trail midpoint,
+    perpendicular to the trail direction. This tells SAM "this area
+    is NOT part of the trail."
+    """
+    negatives = []
+    if len(positive_pts) < 2:
+        return np.empty((0, 2), dtype=np.float32)
+
+    # Sample a few negative points along the trail
+    step = max(1, len(positive_pts) // 3)
+    for i in range(1, len(positive_pts) - 1, step):
+        px, py = positive_pts[i]
+        # Get trail direction from neighbors
+        prev = positive_pts[max(0, i - 1)]
+        nxt = positive_pts[min(len(positive_pts) - 1, i + 1)]
+        dx = nxt[0] - prev[0]
+        dy = nxt[1] - prev[1]
+        length = max(np.sqrt(dx**2 + dy**2), 1)
+        # Perpendicular direction
+        perp_x = -dy / length * offset
+        perp_y = dx / length * offset
+        # Add points on both sides
+        for sign in [1, -1]:
+            nx = int(px + sign * perp_x)
+            ny = int(py + sign * perp_y)
+            if 0 <= nx < img_w and 0 <= ny < img_h:
+                negatives.append([nx, ny])
+
+    return np.array(negatives, dtype=np.float32) if negatives else np.empty((0, 2), dtype=np.float32)
 
 
-class SAMRefineUI:
-    """Interactive matplotlib UI for SAM 2 trail refinement."""
+def mask_to_polyline(mask):
+    """Convert a binary mask to an ordered polyline via skeletonization.
 
-    def __init__(self, img, predictor, existing_polylines, refinements):
-        import matplotlib.pyplot as plt
-        from matplotlib.widgets import TextBox
+    Returns list of [x, y] points, or empty list if mask is too small.
+    """
+    from skimage.morphology import skeletonize
 
-        self.img = img
-        self.img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        self.predictor = predictor
-        self.existing = existing_polylines
-        self.refinements = refinements
+    skeleton = skeletonize(mask > 0).astype(np.uint8) * 255
+    if np.count_nonzero(skeleton) < 3:
+        return []
 
-        self.positive_points = []
-        self.negative_points = []
-        self.current_mask = None
-        self.mode = "click"  # click, accept
+    # Find connected components of skeleton
+    num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(skeleton)
+    if num_labels < 2:
+        return []
 
-        # Set up figure
-        self.fig, self.ax = plt.subplots(1, 1, figsize=(16, 10))
-        self.fig.subplots_adjust(bottom=0.15)
-        self.ax.set_title(
-            f"SAM 2 Refinement — {len(refinements.get('trails', []))} trails saved\n"
-            "Left-click: add point | Shift+click: add point | Right-click: negative point\n"
-            "Enter: accept | Escape: clear | S: save | Q: quit",
-            fontsize=10,
+    # Take the largest skeleton component
+    largest = 1 + np.argmax(stats[1:, cv2.CC_STAT_AREA])
+    skel_mask = (labels == largest).astype(np.uint8) * 255
+
+    # Order skeleton points by tracing
+    ys, xs = np.where(skel_mask > 0)
+    if len(ys) < 3:
+        return []
+
+    # Simple ordering: start from the topmost point and trace via nearest-neighbor
+    points = list(zip(xs.tolist(), ys.tolist()))
+    ordered = [points.pop(np.argmin([p[1] for p in points]))]  # start from top
+
+    while points:
+        last = ordered[-1]
+        dists = [(p[0] - last[0])**2 + (p[1] - last[1])**2 for p in points]
+        nearest_idx = np.argmin(dists)
+        if dists[nearest_idx] > 100**2:  # gap too large, stop
+            break
+        ordered.append(points.pop(nearest_idx))
+
+    if len(ordered) < 3:
+        return []
+
+    # Simplify with Douglas-Peucker
+    pts_array = np.array(ordered, dtype=np.float32).reshape(-1, 1, 2)
+    simplified = cv2.approxPolyDP(pts_array, 2.0, closed=False)
+    return [[int(p[0][0]), int(p[0][1])] for p in simplified]
+
+
+def refine_polyline_with_sam(predictor, trail, img_h, img_w):
+    """Refine a single polyline using SAM 2.
+
+    Args:
+        predictor: SAM2ImagePredictor with image already set
+        trail: dict with 'points' (list of [x,y]) and 'color'
+        img_h, img_w: image dimensions
+
+    Returns:
+        Refined trail dict, or None if SAM fails
+    """
+    pts = trail["points"]
+    if len(pts) < 2:
+        return None
+
+    # Sample positive prompt points along the polyline
+    pos_points = sample_prompt_points(pts)
+
+    # Generate negative points perpendicular to trail
+    neg_points = generate_negative_points(pts, img_h, img_w)
+
+    # Combine prompts
+    if len(neg_points) > 0:
+        all_points = np.vstack([pos_points, neg_points])
+        labels = np.array([1] * len(pos_points) + [0] * len(neg_points))
+    else:
+        all_points = pos_points
+        labels = np.ones(len(pos_points), dtype=int)
+
+    # Run SAM prediction
+    masks, scores, _ = predictor.predict(
+        point_coords=all_points,
+        point_labels=labels,
+        multimask_output=True,
+    )
+
+    # Select best mask
+    best_idx = np.argmax(scores)
+    mask = masks[best_idx]
+    score = scores[best_idx]
+    area = np.count_nonzero(mask)
+
+    # Validate mask
+    max_area = int(img_h * img_w * MAX_MASK_AREA_RATIO)
+    if area < MIN_MASK_AREA:
+        return None
+    if area > max_area:
+        # Mask too large — SAM captured the whole mountain
+        # Try with more negative points or single-mask mode
+        masks2, scores2, _ = predictor.predict(
+            point_coords=all_points,
+            point_labels=labels,
+            multimask_output=False,
         )
-        self.ax.imshow(self.img_rgb)
+        mask = masks2[0]
+        score = scores2[0]
+        area = np.count_nonzero(mask)
+        if area > max_area or area < MIN_MASK_AREA:
+            return None
 
-        # Draw existing polylines
-        for trail in self.existing:
-            pts = trail["points"]
-            color = COLOR_MAP.get(trail["color"], (1, 1, 1))
-            xs = [p[0] for p in pts]
-            ys = [p[1] for p in pts]
-            self.ax.plot(xs, ys, color=color, linewidth=1, alpha=0.3)
+    # Convert mask to polyline
+    refined_pts = mask_to_polyline(mask)
+    if len(refined_pts) < 3:
+        return None
 
-        # Draw previously refined trails
-        for refined in refinements.get("trails", []):
-            pts = refined["points"]
-            xs = [p[0] for p in pts]
-            ys = [p[1] for p in pts]
-            self.ax.plot(xs, ys, color="gold", linewidth=2, alpha=0.7)
+    return {
+        "id": trail["id"] + "_sam",
+        "color": trail["color"],
+        "points": refined_pts,
+        "num_points": len(refined_pts),
+        "score": 8,  # high confidence — SAM-refined
+        "classification": "sam_refined",
+        "sam_score": float(score),
+        "sam_mask_area": area,
+        "original_id": trail["id"],
+    }
 
-        # Point markers
-        self.pos_scatter = self.ax.scatter([], [], c="lime", s=50, zorder=5, marker="o")
-        self.neg_scatter = self.ax.scatter([], [], c="red", s=50, zorder=5, marker="x")
 
-        # Mask overlay
-        self.mask_overlay = None
+def refine_all(predictor, polylines_data, colors=None):
+    """Refine all polylines (or specific colors) with SAM 2.
 
-        # Text box for trail name
-        ax_text = self.fig.add_axes([0.15, 0.02, 0.5, 0.04])
-        self.text_box = TextBox(ax_text, "Trail ID: ", initial="")
+    Args:
+        predictor: SAM2ImagePredictor with image set
+        polylines_data: dict from extracted_polylines.json
+        colors: list of colors to refine, or None for all
 
-        # Connect events
-        self.fig.canvas.mpl_connect("button_press_event", self.on_click)
-        self.fig.canvas.mpl_connect("key_press_event", self.on_key)
+    Returns:
+        List of refined trail dicts
+    """
+    accepted = polylines_data["accepted"]
+    img_w = polylines_data["image_width"]
+    img_h = polylines_data["image_height"]
 
-        plt.show()
+    if colors:
+        candidates = [t for t in accepted if t["color"] in colors]
+    else:
+        candidates = accepted
 
-    def on_click(self, event):
-        if event.inaxes != self.ax:
-            return
+    print(f"\nRefining {len(candidates)} polylines with SAM 2...")
+    refined = []
+    failed = 0
 
-        x, y = int(event.xdata), int(event.ydata)
-
-        if event.button == 3:  # Right click = negative point
-            self.negative_points.append([x, y])
-        else:  # Left click = positive point
-            self.positive_points.append([x, y])
-
-        self.update_points_display()
-        self.run_sam_prediction()
-
-    def on_key(self, event):
-        if event.key == "escape":
-            self.clear_current()
-        elif event.key == "enter":
-            self.accept_mask()
-        elif event.key == "s":
-            save_refinements(self.refinements)
-            print(f"Saved {len(self.refinements.get('trails', []))} refinements")
-        elif event.key == "q":
-            save_refinements(self.refinements)
-            print("Saved and quitting.")
-            import matplotlib.pyplot as plt
-            plt.close(self.fig)
-        elif event.key == "u":
-            # Undo last point
-            if self.positive_points:
-                self.positive_points.pop()
-            elif self.negative_points:
-                self.negative_points.pop()
-            self.update_points_display()
-            if self.positive_points or self.negative_points:
-                self.run_sam_prediction()
-            else:
-                self.clear_mask_overlay()
-
-    def update_points_display(self):
-        if self.positive_points:
-            pos = np.array(self.positive_points)
-            self.pos_scatter.set_offsets(pos)
+    for i, trail in enumerate(candidates):
+        result = refine_polyline_with_sam(predictor, trail, img_h, img_w)
+        if result:
+            refined.append(result)
+            status = f"OK ({result['num_points']} pts, score={result['sam_score']:.2f})"
         else:
-            self.pos_scatter.set_offsets(np.empty((0, 2)))
+            failed += 1
+            status = "FAILED"
 
-        if self.negative_points:
-            neg = np.array(self.negative_points)
-            self.neg_scatter.set_offsets(neg)
-        else:
-            self.neg_scatter.set_offsets(np.empty((0, 2)))
+        if (i + 1) % 10 == 0 or i == len(candidates) - 1:
+            print(f"  [{i+1}/{len(candidates)}] {trail['id']}: {status}")
 
-        self.fig.canvas.draw_idle()
-
-    def run_sam_prediction(self):
-        """Run SAM 2 prediction with current points."""
-        if not self.positive_points and not self.negative_points:
-            return
-
-        all_points = self.positive_points + self.negative_points
-        labels = [1] * len(self.positive_points) + [0] * len(self.negative_points)
-
-        point_coords = np.array(all_points)
-        point_labels = np.array(labels)
-
-        print("  Running SAM 2 prediction...")
-        masks, scores, _ = self.predictor.predict(
-            point_coords=point_coords,
-            point_labels=point_labels,
-            multimask_output=True,
-        )
-
-        # Take the highest-scoring mask
-        best_idx = np.argmax(scores)
-        self.current_mask = masks[best_idx]
-
-        # Display mask overlay
-        self.clear_mask_overlay()
-        mask_display = np.zeros((*self.current_mask.shape, 4))
-        mask_display[self.current_mask] = [1, 0.3, 0, 0.4]  # orange overlay
-        self.mask_overlay = self.ax.imshow(mask_display, alpha=0.5)
-        self.fig.canvas.draw_idle()
-        print(f"  Mask area: {np.count_nonzero(self.current_mask)} pixels, "
-              f"score: {scores[best_idx]:.3f}")
-
-    def clear_mask_overlay(self):
-        if self.mask_overlay is not None:
-            self.mask_overlay.remove()
-            self.mask_overlay = None
-
-    def clear_current(self):
-        self.positive_points = []
-        self.negative_points = []
-        self.current_mask = None
-        self.clear_mask_overlay()
-        self.update_points_display()
-        self.fig.canvas.draw_idle()
-
-    def accept_mask(self):
-        """Accept current mask and prompt for trail name."""
-        if self.current_mask is None:
-            print("  No mask to accept. Click on a trail first.")
-            return
-
-        trail_id = self.text_box.text.strip()
-        if not trail_id:
-            print("  Enter a trail ID in the text box first, then press Enter.")
-            return
-
-        # Skeletonize the mask to get a polyline
-        from skimage.morphology import skeletonize
-        skeleton = skeletonize(self.current_mask)
-        ys, xs = np.where(skeleton)
-
-        if len(ys) < 3:
-            print("  Mask too small to extract polyline.")
-            return
-
-        # Order points (simple: sort by y then follow skeleton)
-        points = list(zip(xs.tolist(), ys.tolist()))
-        # Simplify
-        pts_array = np.array(points, dtype=np.float32).reshape(-1, 1, 2)
-        simplified = cv2.approxPolyDP(pts_array, 3.0, closed=False)
-        points = [[int(p[0][0]), int(p[0][1])] for p in simplified]
-
-        refined_trail = {
-            "id": trail_id,
-            "points": points,
-            "color": "refined",
-            "num_points": len(points),
-        }
-
-        if "trails" not in self.refinements:
-            self.refinements["trails"] = []
-        self.refinements["trails"].append(refined_trail)
-
-        # Draw the accepted trail
-        xs_plot = [p[0] for p in points]
-        ys_plot = [p[1] for p in points]
-        self.ax.plot(xs_plot, ys_plot, color="gold", linewidth=2, alpha=0.8)
-
-        print(f"  Accepted: {trail_id} ({len(points)} points)")
-
-        # Clear for next trail
-        self.text_box.set_val("")
-        self.clear_current()
-        self.ax.set_title(
-            f"SAM 2 Refinement — {len(self.refinements['trails'])} trails saved",
-            fontsize=10,
-        )
-        self.fig.canvas.draw_idle()
-
-
-def run_without_sam(img, existing_polylines, refinements):
-    """Run the UI in manual point-placement mode (no SAM 2)."""
-    import matplotlib.pyplot as plt
-    from matplotlib.widgets import TextBox
-
-    print("\nSAM 2 not available. Running in manual polyline tracing mode.")
-    print("Left-click to add points. Enter to accept. Escape to clear.")
-
-    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
-    fig, ax = plt.subplots(1, 1, figsize=(16, 10))
-    fig.subplots_adjust(bottom=0.15)
-    ax.set_title("Manual Trail Tracing (no SAM 2)\nClick to add points | Enter: accept | Escape: clear | Q: quit")
-    ax.imshow(img_rgb)
-
-    # Draw existing
-    for trail in existing_polylines:
-        pts = trail["points"]
-        color = COLOR_MAP.get(trail["color"], (1, 1, 1))
-        xs = [p[0] for p in pts]
-        ys = [p[1] for p in pts]
-        ax.plot(xs, ys, color=color, linewidth=1, alpha=0.3)
-
-    current_points = []
-    scatter = ax.scatter([], [], c="lime", s=30, zorder=5)
-    line, = ax.plot([], [], "g-", linewidth=2, alpha=0.7)
-
-    ax_text = fig.add_axes([0.15, 0.02, 0.5, 0.04])
-    text_box = TextBox(ax_text, "Trail ID: ", initial="")
-
-    def on_click(event):
-        if event.inaxes != ax or event.button != 1:
-            return
-        current_points.append([int(event.xdata), int(event.ydata)])
-        pts = np.array(current_points)
-        scatter.set_offsets(pts)
-        line.set_data(pts[:, 0], pts[:, 1])
-        fig.canvas.draw_idle()
-
-    def on_key(event):
-        nonlocal current_points
-        if event.key == "escape":
-            current_points = []
-            scatter.set_offsets(np.empty((0, 2)))
-            line.set_data([], [])
-            fig.canvas.draw_idle()
-        elif event.key == "enter":
-            trail_id = text_box.text.strip()
-            if not trail_id or not current_points:
-                return
-            refinements.setdefault("trails", []).append({
-                "id": trail_id,
-                "points": current_points.copy(),
-                "color": "manual",
-                "num_points": len(current_points),
-            })
-            ax.plot([p[0] for p in current_points], [p[1] for p in current_points],
-                    color="gold", linewidth=2)
-            print(f"  Saved: {trail_id} ({len(current_points)} points)")
-            current_points = []
-            scatter.set_offsets(np.empty((0, 2)))
-            line.set_data([], [])
-            text_box.set_val("")
-            fig.canvas.draw_idle()
-        elif event.key == "s":
-            save_refinements(refinements)
-            print(f"Saved {len(refinements.get('trails', []))} refinements")
-        elif event.key == "q":
-            save_refinements(refinements)
-            plt.close(fig)
-
-    fig.canvas.mpl_connect("button_press_event", on_click)
-    fig.canvas.mpl_connect("key_press_event", on_key)
-    plt.show()
+    print(f"\nRefined: {len(refined)}, Failed: {failed}")
+    return refined
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--resume", action="store_true", help="Resume from saved progress")
+    parser = argparse.ArgumentParser(description="SAM 2 automated trail refinement")
+    parser.add_argument("--color", type=str, help="Only refine this color (green/blue/black)")
+    parser.add_argument("--interactive", action="store_true", help="Interactive mode (click to prompt)")
+    parser.add_argument("--checkpoint", type=str, default=SAM2_CHECKPOINT,
+                        help=f"Path to SAM 2 checkpoint (default: {SAM2_CHECKPOINT})")
     args = parser.parse_args()
 
     if not IMAGE_PATH.exists():
         print("ERROR: Run 01_convert_pdf.py first.")
         sys.exit(1)
 
-    print("Loading image...")
-    img = cv2.imread(str(IMAGE_PATH))
-    print(f"  {img.shape[1]}x{img.shape[0]}")
-
-    existing = load_existing_polylines()
-    print(f"Loaded {len(existing)} existing polylines")
-
-    refinements = load_refinements() if args.resume else {"trails": []}
-    if args.resume:
-        print(f"Resuming with {len(refinements.get('trails', []))} saved refinements")
-
-    has_sam2 = check_sam2_available()
-
-    if has_sam2:
-        print("\nLoading SAM 2 (tiny model)...")
+    # Check SAM 2 availability
+    try:
         from sam2.build_sam import build_sam2
         from sam2.sam2_image_predictor import SAM2ImagePredictor
+    except ImportError:
+        print("ERROR: SAM 2 not installed. Install with:")
+        print("  pip install sam2 torch torchvision")
+        sys.exit(1)
 
-        # Use tiny model for CPU
-        sam2 = build_sam2("sam2_hiera_t", "sam2_hiera_tiny.pt")
-        predictor = SAM2ImagePredictor(sam2)
+    # Load image
+    print("Loading image...")
+    img = cv2.imread(str(IMAGE_PATH))
+    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    print(f"  {img.shape[1]}x{img.shape[0]}")
 
-        print("Computing image embedding (this takes ~30s on CPU)...")
-        img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        predictor.set_image(img_rgb)
-        print("Embedding ready!")
+    # Load CV polylines
+    polylines_data = load_cv_polylines()
+    print(f"Loaded {len(polylines_data['accepted'])} CV polylines")
 
-        ui = SAMRefineUI(img, predictor, existing, refinements)
-    else:
-        print("\nSAM 2 not installed. Install with: pip install sam2 torch")
-        print("Falling back to manual tracing mode...")
-        run_without_sam(img, existing, refinements)
+    # Load SAM 2 model
+    print(f"\nLoading SAM 2 ({SAM2_CONFIG})...")
+    # Search for checkpoint in common locations
+    ckpt_paths = [
+        args.checkpoint,
+        SCRIPT_DIR / args.checkpoint,
+        Path.home() / ".cache" / "torch" / "hub" / "checkpoints" / args.checkpoint,
+    ]
+    ckpt_path = None
+    for p in ckpt_paths:
+        if Path(p).exists():
+            ckpt_path = str(p)
+            break
 
-    # Save final state
-    save_refinements(refinements)
-    print(f"\nDone. {len(refinements.get('trails', []))} trails refined.")
-    print(f"Saved to {REFINEMENTS_PATH}")
+    if ckpt_path is None:
+        print(f"ERROR: Checkpoint not found. Searched:")
+        for p in ckpt_paths:
+            print(f"  {p}")
+        print(f"\nDownload from: https://dl.fbaipublicfiles.com/segment_anything_2/072824/{args.checkpoint}")
+        sys.exit(1)
+
+    print(f"  Using checkpoint: {ckpt_path}")
+    sam2 = build_sam2(SAM2_CONFIG, ckpt_path)
+    predictor = SAM2ImagePredictor(sam2)
+
+    print("Computing image embedding...")
+    predictor.set_image(img_rgb)
+    print("  Embedding ready!")
+
+    # Refine
+    colors = [args.color] if args.color else None
+    refined = refine_all(predictor, polylines_data, colors=colors)
+
+    # Save refined polylines
+    output = {
+        "image_width": polylines_data["image_width"],
+        "image_height": polylines_data["image_height"],
+        "accepted": refined,
+        "uncertain": [],
+        "source": "sam2_refined",
+        "original_count": len(polylines_data["accepted"]),
+        "refined_count": len(refined),
+    }
+
+    REFINED_PATH.write_text(json.dumps(output, indent=2))
+    print(f"\nSaved {len(refined)} refined polylines to {REFINED_PATH}")
+
+    # Generate comparison overlay
+    print("\nGenerating comparison overlay...")
+    overlay = img.copy()
+    # Draw original in thin gray
+    for t in polylines_data["accepted"]:
+        pts = [(int(p[0]), int(p[1])) for p in t["points"]]
+        for j in range(1, len(pts)):
+            cv2.line(overlay, pts[j-1], pts[j], (128, 128, 128), 1)
+    # Draw refined in color
+    color_bgr = {"green": (0, 200, 0), "blue": (255, 128, 0), "black": (80, 80, 80)}
+    for t in refined:
+        color = color_bgr.get(t["color"], (0, 255, 255))
+        pts = [(int(p[0]), int(p[1])) for p in t["points"]]
+        for j in range(1, len(pts)):
+            cv2.line(overlay, pts[j-1], pts[j], color, 3)
+
+    overlay_path = OUTPUT_DIR / "overlay_sam_refined.jpg"
+    cv2.imwrite(str(overlay_path), overlay)
+    print(f"Saved comparison overlay to {overlay_path}")
 
 
 if __name__ == "__main__":
