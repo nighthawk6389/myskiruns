@@ -85,13 +85,12 @@ def create_mountain_mask(hsv_img: np.ndarray) -> np.ndarray:
 
     # Subtract sky from mountain mask — the yellow boundary includes the
     # ridgeline which has sky bleed. Detect sky by color in the top portion.
-    sky = cv2.inRange(hsv_img, np.array([80, 15, 130]), np.array([140, 255, 255]))
+    # Use tight saturation floor to avoid masking trail lines near ridgeline.
+    sky = cv2.inRange(hsv_img, np.array([85, 30, 160]), np.array([135, 255, 255]))
     sky_region = np.zeros_like(sky)
-    sky_region[:int(h * 0.25), :] = sky[:int(h * 0.25), :]
-    sky_region = cv2.dilate(sky_region, np.ones((10, 10), np.uint8), iterations=2)
+    sky_region[:int(h * 0.20), :] = sky[:int(h * 0.20), :]
+    sky_region = cv2.dilate(sky_region, np.ones((7, 7), np.uint8), iterations=1)
     mountain = cv2.bitwise_and(mountain, cv2.bitwise_not(sky_region))
-    mountain = cv2.erode(mountain, np.ones((3, 3), np.uint8), iterations=2)
-    mountain = cv2.dilate(mountain, np.ones((3, 3), np.uint8), iterations=1)
 
     return mountain
 
@@ -277,7 +276,7 @@ def detect_black_trails(img: np.ndarray, hsv_img: np.ndarray,
         hh = stats[i, cv2.CC_STAT_HEIGHT]
         area = stats[i, cv2.CC_STAT_AREA]
         aspect = max(ww, hh) / max(min(ww, hh), 1)
-        if aspect < 2.5 and area > 500:
+        if aspect < 1.8 and area > 1500:
             adaptive[labels == i] = 0
 
     return adaptive
@@ -349,13 +348,15 @@ def run_segmentation(img: np.ndarray) -> dict:
         mask = cleanup_mask(mask, min_area=20)
 
         # Remove terrain blobs (fat, compact shapes — not trail lines)
+        # Relaxed thresholds: only remove very large, very compact blobs
+        # to avoid killing trail junctions and switchbacks
         num_l, lbl, st, _ = cv2.connectedComponentsWithStats(mask)
         for i in range(1, num_l):
             area = st[i, cv2.CC_STAT_AREA]
             ww = st[i, cv2.CC_STAT_WIDTH]
             hh = st[i, cv2.CC_STAT_HEIGHT]
             aspect = max(ww, hh) / max(min(ww, hh), 1)
-            if area > 800 and aspect < 2.0:
+            if area > 2000 and aspect < 1.5:
                 mask[lbl == i] = 0
 
         # Save raw mask (before gap-fill) for black trail subtraction
@@ -374,28 +375,20 @@ def run_segmentation(img: np.ndarray) -> dict:
         # - Blue: text corridor fill only — expand trail color into text mask
         #   regions to bridge trail name gaps. No directional gap-fill
         #   (would flood cyan-green terrain overlap areas).
-        if color_name == "green":
+        # Gap-fill: directional for green + blue, text corridor for blue too
+        if color_name in ("green", "blue"):
             mask = directional_gap_fill(mask)
             mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
-        elif color_name == "blue":
-            # Text corridor fill: expand blue into text regions only
+        if color_name == "blue":
+            # Also expand blue into text corridor regions
             text_corridor = cv2.dilate(text_mask, np.ones((3, 3), np.uint8), iterations=1)
-            for _ in range(30):
+            for _ in range(20):
                 expanded = cv2.dilate(mask, np.ones((3, 3), np.uint8), iterations=1)
                 new_px = cv2.bitwise_and(expanded, text_corridor)
                 new_px = cv2.bitwise_and(new_px, cv2.bitwise_not(mask))
                 if np.count_nonzero(new_px) == 0:
                     break
                 mask = cv2.bitwise_or(mask, new_px)
-            # Remove any terrain blobs that grew through text corridor
-            num_l2, lbl2, st2, _ = cv2.connectedComponentsWithStats(mask)
-            for i2 in range(1, num_l2):
-                a2 = st2[i2, cv2.CC_STAT_AREA]
-                w2 = st2[i2, cv2.CC_STAT_WIDTH]
-                h2 = st2[i2, cv2.CC_STAT_HEIGHT]
-                asp2 = max(w2, h2) / max(min(w2, h2), 1)
-                if a2 > 1500 and asp2 < 2.5:
-                    mask[lbl2 == i2] = 0
 
         mask = cleanup_mask(mask, min_area=15)
 
