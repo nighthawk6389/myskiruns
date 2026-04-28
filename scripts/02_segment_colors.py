@@ -83,24 +83,21 @@ def create_mountain_mask(hsv_img: np.ndarray) -> np.ndarray:
     mountain = cv2.morphologyEx(mountain, cv2.MORPH_OPEN,
                                  np.ones((5, 5), np.uint8), iterations=1)
 
-    # Subtract sky from mountain mask — the yellow boundary includes the
-    # ridgeline which has sky bleed. Detect sky by color in the top portion.
-    # Use tight saturation floor to avoid masking trail lines near ridgeline.
-    sky = cv2.inRange(hsv_img, np.array([85, 30, 160]), np.array([135, 255, 255]))
-    sky_region = np.zeros_like(sky)
-    sky_region[:int(h * 0.20), :] = sky[:int(h * 0.20), :]
-    sky_region = cv2.dilate(sky_region, np.ones((7, 7), np.uint8), iterations=1)
-    mountain = cv2.bitwise_and(mountain, cv2.bitwise_not(sky_region))
-
     return mountain
 
 
-def create_text_mask(hsv_img: np.ndarray, mountain_mask: np.ndarray) -> np.ndarray:
+def create_text_mask(hsv_img: np.ndarray, mountain_mask: np.ndarray):
     """Detect white trail name text that overlaps trail lines.
 
     Trail names are written in white/light text along the trail lines.
     This text breaks the color detection of the underlying trail line.
     We detect the text, mask it out, and then gap-fill through it.
+
+    Returns:
+        (text_dilated, regions) where regions is a list of dicts
+        {"x", "y", "w", "h", "area"} for each detected text-character
+        component. The bboxes are in original image pixel coordinates,
+        un-dilated, and are useful downstream for OCR.
     """
     # White/light text: low saturation, high value
     white = cv2.inRange(hsv_img, np.array([0, 0, 185]), np.array([180, 65, 255]))
@@ -109,20 +106,28 @@ def create_text_mask(hsv_img: np.ndarray, mountain_mask: np.ndarray) -> np.ndarr
     # Filter: keep only small connected components (text characters)
     num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(white)
     text_mask = np.zeros_like(white)
+    regions = []
     for i in range(1, num_labels):
-        area = stats[i, cv2.CC_STAT_AREA]
-        ww = stats[i, cv2.CC_STAT_WIDTH]
-        hh = stats[i, cv2.CC_STAT_HEIGHT]
+        area = int(stats[i, cv2.CC_STAT_AREA])
+        ww = int(stats[i, cv2.CC_STAT_WIDTH])
+        hh = int(stats[i, cv2.CC_STAT_HEIGHT])
         # Text characters: small area, limited size
         if 5 < area < 1000 and max(ww, hh) < 60:
             text_mask[labels == i] = 255
+            regions.append({
+                "x": int(stats[i, cv2.CC_STAT_LEFT]),
+                "y": int(stats[i, cv2.CC_STAT_TOP]),
+                "w": ww,
+                "h": hh,
+                "area": area,
+            })
 
     # Note: we do NOT detect dark text here because dark text looks identical
     # to black trail lines. Black trail detection handles this via heuristics.
 
     # Dilate text mask to cover the text plus small margin
     text_dilated = cv2.dilate(text_mask, np.ones((3, 3), np.uint8), iterations=1)
-    return text_dilated
+    return text_dilated, regions
 
 
 def detect_difficulty_symbols(hsv_img: np.ndarray, mountain_mask: np.ndarray) -> dict:
@@ -276,10 +281,83 @@ def detect_black_trails(img: np.ndarray, hsv_img: np.ndarray,
         hh = stats[i, cv2.CC_STAT_HEIGHT]
         area = stats[i, cv2.CC_STAT_AREA]
         aspect = max(ww, hh) / max(min(ww, hh), 1)
-        if aspect < 1.8 and area > 1500:
+        if aspect < 2.5 and area > 500:
             adaptive[labels == i] = 0
 
     return adaptive
+
+
+def extract_cyan_trail_lines(img: np.ndarray, mountain_mask: np.ndarray,
+                              text_mask: np.ndarray) -> np.ndarray:
+    """Extract faint cyan/teal trail lines using Meijering ridge detection.
+
+    Trails like Sassafras are drawn in light cyan that overlaps with terrain
+    in HSV space. Instead of color thresholding, we use:
+    1. LAB-B channel (blue-yellow axis) — trail lines are more blue than terrain
+    2. Meijering filter — detects thin ridge/line structures, suppresses terrain
+    3. Threshold + elongation filter to keep only trail-like components
+    """
+    from skimage.filters import meijering
+    from skimage import img_as_float
+
+    lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+    B_channel = lab[:, :, 2]
+
+    # Invert B: blue features (low B) become bright
+    B_inv = img_as_float(255 - B_channel)
+
+    # Meijering ridge filter — detects thin line structures
+    ridges = meijering(B_inv, sigmas=range(1, 4), black_ridges=False)
+
+    # Normalize and threshold
+    if ridges.max() > 0:
+        ridges_norm = (ridges / ridges.max() * 255).astype(np.uint8)
+    else:
+        return np.zeros(img.shape[:2], dtype=np.uint8)
+
+    _, binary = cv2.threshold(ridges_norm, 25, 255, cv2.THRESH_BINARY)
+
+    # Constrain to pixels that are actually cyan-colored — the Meijering
+    # filter detects ANY line feature in the B channel, including roads,
+    # boundaries, etc. Only keep ridges where the original pixel is cyan.
+    h, w = img.shape[:2]
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    cyan_color = cv2.inRange(hsv, np.array([60, 15, 40]), np.array([90, 255, 255]))
+    # Dilate the color mask so ridges near cyan pixels are kept
+    cyan_color = cv2.dilate(cyan_color, np.ones((5, 5), np.uint8), iterations=2)
+    binary = cv2.bitwise_and(binary, cyan_color)
+
+    # Remove sky/ridgeline edge responses
+    sky = cv2.inRange(hsv, np.array([85, 30, 150]), np.array([140, 255, 255]))
+    sky_region = np.zeros_like(sky)
+    sky_region[:int(h * 0.18), :] = sky[:int(h * 0.18), :]
+    sky_region = cv2.dilate(sky_region, np.ones((12, 12), np.uint8), iterations=1)
+    binary = cv2.bitwise_and(binary, cv2.bitwise_not(sky_region))
+
+    binary = cv2.bitwise_and(binary, cv2.bitwise_not(text_mask))
+
+    # Clean up
+    kernel = np.ones((3, 3), np.uint8)
+    binary = cv2.morphologyEx(binary, cv2.MORPH_OPEN, kernel, iterations=1)
+
+    # Remove only very compact blobs (terrain patches, not trail lines).
+    # The cyan color constraint already filters non-trail features, so
+    # this only needs to catch remaining terrain noise.
+    num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(binary)
+    result = np.zeros_like(binary)
+    for i in range(1, num_labels):
+        area = stats[i, cv2.CC_STAT_AREA]
+        ww = stats[i, cv2.CC_STAT_WIDTH]
+        hh = stats[i, cv2.CC_STAT_HEIGHT]
+        span = max(ww, hh)
+        aspect = span / max(min(ww, hh), 1)
+        # Reject only large compact blobs (terrain), keep everything else
+        if area > 2000 and aspect < 1.5:
+            continue
+        if span >= 10:
+            result[labels == i] = 255
+
+    return result
 
 
 def run_segmentation(img: np.ndarray) -> dict:
@@ -298,18 +376,14 @@ def run_segmentation(img: np.ndarray) -> dict:
 
     # Step 2: Detect and mask trail name text
     print("  Detecting trail name text...")
-    text_mask = create_text_mask(hsv, mountain_mask)
-    print(f"    Text mask: {np.count_nonzero(text_mask):,} pixels")
+    text_mask, text_regions = create_text_mask(hsv, mountain_mask)
+    print(f"    Text mask: {np.count_nonzero(text_mask):,} pixels "
+          f"across {len(text_regions)} character components")
     cv2.imwrite(str(MASKS_DIR / "text_mask.png"), text_mask)
-
-    # Step 2b: Inpaint text regions in the original image
-    # This fills text areas with surrounding trail line colors, so that
-    # color detection captures continuous trails THROUGH trail name text.
-    print("  Inpainting text regions...")
-    inpaint_mask = cv2.dilate(text_mask, np.ones((3, 3), np.uint8), iterations=1)
-    inpainted_img = cv2.inpaint(img, inpaint_mask, inpaintRadius=5, flags=cv2.INPAINT_TELEA)
-    hsv_inpainted = cv2.cvtColor(inpainted_img, cv2.COLOR_BGR2HSV)
-    print(f"    Inpainted {np.count_nonzero(inpaint_mask):,} pixels")
+    # Persist character bboxes for the OCR step (scripts/02b_extract_text.py).
+    # Saved here (not in 02b) because the bboxes are computed as a side effect
+    # of the inpainting mask and the raw component data isn't reproducible later.
+    (OUTPUT_DIR / "text_regions.json").write_text(json.dumps(text_regions, indent=2))
 
     # Step 3: Detect difficulty symbols
     print("  Detecting difficulty symbols (■ ◆ ●)...")
@@ -324,40 +398,37 @@ def run_segmentation(img: np.ndarray) -> dict:
     (OUTPUT_DIR / "symbols.json").write_text(json.dumps(symbol_data, indent=2))
 
     # Step 4: Segment trail colors
-    # Detect from BOTH original and inpainted images, combine for best coverage.
-    # Raw (pre-gap-fill) masks saved separately for black trail subtraction.
-    raw_color_masks = {}
+    # We keep both raw (for black subtraction) and gap-filled (for output) versions
+    raw_color_masks = {}  # before gap-fill — used for black trail subtraction
     print("\n  --- Trail colors ---")
     for color_name, ranges in TRAIL_COLOR_RANGES.items():
         print(f"  Segmenting {color_name}...")
-        # Detect from original (catches pixels text didn't overlap)
-        mask_orig = segment_color(hsv, ranges)
-        mask_orig = cv2.bitwise_and(mask_orig, mountain_mask)
-        # Detect from inpainted (recovers trail lines through text regions)
-        mask_inp = segment_color(hsv_inpainted, ranges)
-        mask_inp = cv2.bitwise_and(mask_inp, mountain_mask)
-        # Combine both
-        mask = cv2.bitwise_or(mask_orig, mask_inp)
-        inpaint_extra = np.count_nonzero(mask) - np.count_nonzero(mask_orig)
-        if inpaint_extra > 0:
-            print(f"    Inpainting recovered {inpaint_extra:,} additional pixels")
+        mask = segment_color(hsv, ranges)
 
-        # Basic cleanup
+        # Apply mountain mask (excludes sky, parking lots, etc.)
+        mask = cv2.bitwise_and(mask, mountain_mask)
+
+        # Remove text areas
+        before = np.count_nonzero(mask)
+        mask = cv2.bitwise_and(mask, cv2.bitwise_not(text_mask))
+        text_removed = before - np.count_nonzero(mask)
+        if text_removed > 0:
+            print(f"    Removed {text_removed:,} text-overlap pixels")
+
+        # Basic cleanup before saving raw version
         kernel = np.ones((3, 3), np.uint8)
         mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
-        mask = cleanup_mask(mask, min_area=20)
+        mask = cleanup_mask(mask, min_area=100)
 
-        # Remove terrain blobs (fat, compact shapes — not trail lines)
-        # Relaxed thresholds: only remove very large, very compact blobs
-        # to avoid killing trail junctions and switchbacks
-        num_l, lbl, st, _ = cv2.connectedComponentsWithStats(mask)
-        for i in range(1, num_l):
-            area = st[i, cv2.CC_STAT_AREA]
-            ww = st[i, cv2.CC_STAT_WIDTH]
-            hh = st[i, cv2.CC_STAT_HEIGHT]
-            aspect = max(ww, hh) / max(min(ww, hh), 1)
-            if area > 2000 and aspect < 1.5:
-                mask[lbl == i] = 0
+        # For blue: also extract faint cyan trail lines (e.g. Sassafras)
+        # that overlap with terrain color. Detect wide cyan range, then
+        # skeletonize to keep only thin line features, discarding terrain.
+        if color_name == "blue":
+            cyan_lines = extract_cyan_trail_lines(img, mountain_mask, text_mask)
+            added = np.count_nonzero(cv2.bitwise_and(cyan_lines, cv2.bitwise_not(mask)))
+            mask = cv2.bitwise_or(mask, cyan_lines)
+            if added > 0:
+                print(f"    Cyan line extraction recovered {added:,} pixels")
 
         # Save raw mask (before gap-fill) for black trail subtraction
         raw_color_masks[color_name] = mask.copy()
@@ -370,27 +441,12 @@ def run_segmentation(img: np.ndarray) -> dict:
             if added > 0:
                 print(f"    Added {added:,} symbol anchor pixels")
 
-        # Gap-fill strategy:
-        # - Green: directional gap-fill (green lines are thicker, less flood risk)
-        # - Blue: text corridor fill only — expand trail color into text mask
-        #   regions to bridge trail name gaps. No directional gap-fill
-        #   (would flood cyan-green terrain overlap areas).
-        # Gap-fill: directional for green + blue, text corridor for blue too
-        if color_name in ("green", "blue"):
-            mask = directional_gap_fill(mask)
-            mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
-        if color_name == "blue":
-            # Also expand blue into text corridor regions
-            text_corridor = cv2.dilate(text_mask, np.ones((3, 3), np.uint8), iterations=1)
-            for _ in range(20):
-                expanded = cv2.dilate(mask, np.ones((3, 3), np.uint8), iterations=1)
-                new_px = cv2.bitwise_and(expanded, text_corridor)
-                new_px = cv2.bitwise_and(new_px, cv2.bitwise_not(mask))
-                if np.count_nonzero(new_px) == 0:
-                    break
-                mask = cv2.bitwise_or(mask, new_px)
+        # Directional gap fill (bridges text gaps along trail direction)
+        mask = directional_gap_fill(mask)
 
-        mask = cleanup_mask(mask, min_area=15)
+        # Final cleanup
+        mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
+        mask = cleanup_mask(mask, min_area=100)
 
         masks[color_name] = mask
         num_labels = cv2.connectedComponentsWithStats(mask)[0] - 1
@@ -399,9 +455,8 @@ def run_segmentation(img: np.ndarray) -> dict:
 
     # Step 5: Black trails via adaptive thresholding
     # Use RAW color masks (not gap-filled) for subtraction to avoid eating black trails
-    # Pass the inpainted image so text gaps are filled before thresholding
     print("  Detecting black trails (adaptive threshold)...")
-    masks["black"] = detect_black_trails(inpainted_img, hsv, raw_color_masks, mountain_mask, text_mask)
+    masks["black"] = detect_black_trails(img, hsv, raw_color_masks, mountain_mask, text_mask)
     # Add black symbol anchors
     if "black" in anchor_masks:
         masks["black"] = cv2.bitwise_or(masks["black"], anchor_masks["black"])

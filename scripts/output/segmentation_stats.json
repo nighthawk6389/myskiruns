@@ -1,23 +1,23 @@
 {
   "green": {
-    "pixel_count": 81761,
-    "component_count": 304,
-    "percentage": 1.176
+    "pixel_count": 57983,
+    "component_count": 81,
+    "percentage": 0.834
   },
   "blue": {
-    "pixel_count": 278413,
-    "component_count": 521,
-    "percentage": 4.004
+    "pixel_count": 681039,
+    "component_count": 288,
+    "percentage": 9.793
   },
   "black": {
-    "pixel_count": 268785,
-    "component_count": 699,
-    "percentage": 3.865
+    "pixel_count": 109438,
+    "component_count": 597,
+    "percentage": 1.574
   },
   "magenta_lift": {
-    "pixel_count": 51200,
-    "component_count": 35,
-    "percentage": 0.736
+    "pixel_count": 54184,
+    "component_count": 37,
+    "percentage": 0.779
   },
   "yellow": {
     "pixel_count": 5421,

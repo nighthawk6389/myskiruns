@@ -22,8 +22,8 @@ TRAIL_COLOR_RANGES = {
     "blue": [
         # Intermediate trails — standard blue range
         (np.array([80, 50, 40]), np.array([135, 255, 255])),
-        # Cyan extension for lighter blue trail lines (high saturation only)
-        (np.array([75, 80, 40]), np.array([82, 255, 255])),
+        # Cyan/teal trail lines (Sassafras, etc.) — wider saturation
+        (np.array([70, 45, 50]), np.array([82, 255, 255])),
     ],
 }
 

@@ -1,10 +1,8 @@
 """Geometric heuristic scoring for trail vs. non-trail classification.
 
-Each heuristic contributes +1 to a confidence score (0-9 range).
-Score 7-9: high confidence trail
-Score 5-6: probable trail (flagged for review)
-Score 3-4: low confidence (candidate for SAM 2 refinement)
-Score 0-2: reject (noise/text)
+Each heuristic contributes +1 to a confidence score (0-6 range).
+Classification thresholds are exposed as module constants below so they can
+be tuned via scripts/tune_thresholds.py.
 """
 
 import math
@@ -12,6 +10,15 @@ import math
 import cv2
 import numpy as np
 from skimage.morphology import skeletonize
+
+
+# Classification thresholds. Tune via scripts/tune_thresholds.py.
+# These values were picked from a sweep against score_logs.json: probable=3
+# exactly preserves the pre-refactor accept set (F1=1.000, drift=0). The 5/3/1
+# spacing mirrors the original 7/5/3 (2-point gaps between tiers).
+CONFIDENT_THRESHOLD = 5  # >= this score => "confident"
+PROBABLE_THRESHOLD = 3   # >= this score => "probable" (this is the accept cutoff)
+UNCERTAIN_THRESHOLD = 1  # >= this score => "uncertain"; below => "reject"
 
 
 def compute_skeleton(mask_component: np.ndarray) -> np.ndarray:
@@ -187,107 +194,64 @@ def count_holes(mask_component: np.ndarray) -> int:
     return holes
 
 
-def score_component(mask_component: np.ndarray,
-                    mountain_mask: np.ndarray | None = None,
-                    all_other_skeletons: np.ndarray | None = None) -> dict:
+def classify(total: int) -> str:
+    """Map a numeric total score to a classification label."""
+    if total >= CONFIDENT_THRESHOLD:
+        return "confident"
+    if total >= PROBABLE_THRESHOLD:
+        return "probable"
+    if total >= UNCERTAIN_THRESHOLD:
+        return "uncertain"
+    return "reject"
+
+
+def score_component(mask_component: np.ndarray) -> dict:
     """Score a single connected component on all heuristics.
 
     Args:
         mask_component: Binary mask of just this component (cropped or full-size).
-        mountain_mask: Optional binary mask of the mountain region (full-size).
-        all_other_skeletons: Optional combined skeleton of all other accepted components.
 
-    Returns dict with individual scores and total.
+    Returns dict with individual scores and total. The 6 heuristics each
+    contribute 0 or 1; total range is 0-6. See `classify()` for the
+    label mapping.
     """
     scores = {}
 
     # Compute skeleton
     skeleton = compute_skeleton(mask_component)
     arc_len = skeleton_arc_length(skeleton)
-    endpoints, junctions = skeleton_endpoints_and_junctions(skeleton)
+    endpoints, _ = skeleton_endpoints_and_junctions(skeleton)
     points = ordered_skeleton_points(skeleton, endpoints)
 
     # 1. Arc length
     scores["arc_length"] = 1 if arc_len > 100 else 0
 
-    # 2. Aspect ratio
-    ys, xs = np.where(mask_component > 0)
-    if len(ys) > 0:
-        bbox_h = ys.max() - ys.min() + 1
-        bbox_w = xs.max() - xs.min() + 1
-        aspect = max(bbox_h, bbox_w) / max(min(bbox_h, bbox_w), 1)
-        scores["aspect_ratio"] = 1 if aspect > 5 else 0
-    else:
-        scores["aspect_ratio"] = 0
-
-    # 3. Sinuosity
+    # 2. Sinuosity
     sinuosity = compute_sinuosity(points)
     scores["sinuosity"] = 1 if sinuosity > 1.1 else 0
 
-    # 4. Smooth curvature
+    # 3. Smooth curvature
     max_angle = compute_max_angular_change(points)
     scores["smooth_curvature"] = 1 if max_angle < 70 else 0
 
-    # 5. Downhill tendency
+    # 4. Downhill tendency
     endpoint_angle = compute_endpoint_angle(points)
     scores["downhill"] = 1 if endpoint_angle > 15 else 0
 
-    # 6. Consistent stroke width
+    # 5. Consistent stroke width
     mean_w, std_w = compute_stroke_width_stats(mask_component, skeleton)
     scores["stroke_width"] = 1 if std_w < 2.0 else 0
 
-    # 7. No enclosed holes
+    # 6. No enclosed holes
     holes = count_holes(mask_component)
     scores["no_holes"] = 1 if holes == 0 else 0
 
-    # 8. Within mountain region
-    if mountain_mask is not None and len(ys) > 0:
-        cy, cx = int(np.mean(ys)), int(np.mean(xs))
-        if 0 <= cy < mountain_mask.shape[0] and 0 <= cx < mountain_mask.shape[1]:
-            scores["in_mountain"] = 1 if mountain_mask[cy, cx] > 0 else 0
-        else:
-            scores["in_mountain"] = 0
-    else:
-        scores["in_mountain"] = 1  # assume in-mountain if no mask provided
-
-    # 9. Proximity to other trails
-    if all_other_skeletons is not None and len(endpoints) > 0:
-        min_dist = float("inf")
-        for ey, ex in endpoints:
-            if 0 <= ey < all_other_skeletons.shape[0] and 0 <= ex < all_other_skeletons.shape[1]:
-                # Check a window around the endpoint
-                y_lo = max(0, ey - 50)
-                y_hi = min(all_other_skeletons.shape[0], ey + 50)
-                x_lo = max(0, ex - 50)
-                x_hi = min(all_other_skeletons.shape[1], ex + 50)
-                window = all_other_skeletons[y_lo:y_hi, x_lo:x_hi]
-                if np.any(window > 0):
-                    dist = cv2.distanceTransform(
-                        255 - all_other_skeletons[y_lo:y_hi, x_lo:x_hi],
-                        cv2.DIST_L2, 5
-                    )
-                    local_y, local_x = ey - y_lo, ex - x_lo
-                    if 0 <= local_y < dist.shape[0] and 0 <= local_x < dist.shape[1]:
-                        min_dist = min(min_dist, dist[local_y, local_x])
-        scores["proximity"] = 1 if min_dist < 50 else 0
-    else:
-        scores["proximity"] = 1  # no comparison data = neutral
-
     total = sum(scores.values())
-
-    if total >= 7:
-        classification = "confident"
-    elif total >= 5:
-        classification = "probable"
-    elif total >= 3:
-        classification = "uncertain"
-    else:
-        classification = "reject"
 
     return {
         "scores": scores,
         "total": total,
-        "classification": classification,
+        "classification": classify(total),
         "arc_length": arc_len,
         "sinuosity": sinuosity,
         "max_angular_change": max_angle,

@@ -37,10 +37,6 @@ META_PATH = OUTPUT_DIR / "image_meta.json"
 # Black includes both advanced (single black diamond) and expert (double black diamond)
 TRAIL_COLORS = ["green", "blue", "black"]
 
-# Minimum confidence score to keep a component
-MIN_SCORE_ACCEPT = 5  # "probable" or better
-MIN_SCORE_UNCERTAIN = 3  # keep for SAM 2 refinement
-
 
 def load_mask(color_name: str) -> np.ndarray | None:
     path = MASKS_DIR / f"{color_name}_mask.png"
@@ -125,7 +121,7 @@ def extract_polyline_from_skeleton(skeleton: np.ndarray) -> list:
     return best_points
 
 
-def process_color(color_name: str, mask: np.ndarray, mountain_mask=None) -> dict:
+def process_color(color_name: str, mask: np.ndarray) -> dict:
     """Process a single color mask: extract components, score, extract polylines.
 
     Returns dict with accepted/uncertain/rejected lists.
@@ -151,7 +147,7 @@ def process_color(color_name: str, mask: np.ndarray, mountain_mask=None) -> dict
         cropped = comp_mask[y0:y1, x0:x1]
 
         # Score the component
-        score_result = score_component(cropped, mountain_mask=None)
+        score_result = score_component(cropped)
         score_result["id"] = comp_id
         score_result["area"] = area
         score_result["bbox"] = bbox

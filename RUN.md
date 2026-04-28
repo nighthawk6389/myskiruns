@@ -69,6 +69,8 @@ Saved metadata to scripts/output/image_meta.json
 - If using the JPG fallback, the image is lower resolution (~3429x2028 vs ~6858x4056 from PDF). This means fewer pixels per trail line and slightly less accurate extraction.
 - The PNG output is large (~16-70 MB). It is gitignored.
 
+**Note on vector extraction (don't bother):** The source PDF was inspected with PyMuPDF — it contains zero vector drawings; the entire trail map is a single embedded JPEG-2000 image (4560x2704). There are no extractable colored stroked paths. Pixel-based CV (steps 2–3) is the only viable extraction approach for this map.
+
 ---
 
 ## Step 2: Color Segmentation
@@ -110,6 +112,8 @@ Running color segmentation...
 | `output/masks/yellow_mask.png` | Binary mask of yellow (boundaries) |
 | `output/color_overlay.png` | Composite overlay of all masks on the original image |
 | `output/segmentation_stats.json` | Pixel counts and component counts per color |
+| `output/text_regions.json` | Per-character bounding boxes for white trail-name text (used by OCR experiments; see "OCR experiment" note below) |
+| `output/symbols.json` | Per-difficulty symbol (■◆●) center positions |
 
 **HSV threshold ranges** (defined in `scripts/utils/color_ranges.py`):
 
@@ -135,6 +139,8 @@ Opens an OpenCV window with HSV trackbars. Adjust sliders to see which pixels ar
 - **Black mask is conservative.** Edge detection produces fewer false positives but may miss some faint black trails. Use SAM 2 (Step 3b) for any missed ones.
 - The `--tune` mode requires a display (won't work in headless/SSH environments).
 
+**OCR experiment (deferred):** The `text_regions.json` output was added to support an OCR-augmented naming pipeline that would replace some of the LLM calls in Step 4 with deterministic text-to-trail matching. A POC was run via `scripts/ocr_poc.py` (uses easyocr; install with `pip install easyocr`). Result: OCR works on real text (perfect on labels like "SOLITUDE", "CAPER"), but the white-pixel detector here surfaces ~50% non-text clusters (bridges, snow patches, building edges), and the trail-name labels that *are* real are too small / low-contrast for high-confidence OCR matches. POC matched ~17% of test clusters to a trail name, well below the plan's 50% gate. The infrastructure (`text_regions.json` + the catalog refactor) stays in place for a future attempt with a better text-vs-noise classifier or a different OCR engine. Reproduce with: `python scripts/ocr_poc.py --cluster-size trail-like --dump-crops`.
+
 ---
 
 ## Step 3: Polyline Extraction with Heuristic Scoring
@@ -145,7 +151,7 @@ python scripts/03_extract_polylines.py
 
 **What it does:** For each color mask:
 1. Extracts connected components (blobs)
-2. Scores each component with 9 geometric heuristics (confidence scoring system)
+2. Scores each component with 6 geometric heuristics (confidence scoring system)
 3. Skeletonizes accepted components to 1-pixel-wide lines
 4. Walks the skeleton to produce ordered point sequences
 5. Simplifies with Douglas-Peucker algorithm
@@ -187,25 +193,34 @@ Total uncertain: 2
 | `output/extracted_polylines.json` | All extracted polylines with pixel coordinates, scores, classifications |
 | `output/score_logs.json` | Detailed per-component heuristic scores for debugging |
 
-**Heuristic scoring system** (each adds +1, max score = 9):
+**Heuristic scoring system** (each adds +1, max score = 6):
 
 | # | Heuristic | +1 if | What it catches |
 |---|-----------|-------|-----------------|
 | 1 | Arc length | >100px | Removes text characters, small noise |
-| 2 | Aspect ratio | >5:1 (length/width) | Removes compact blobs |
-| 3 | Sinuosity | >1.1 (arc/straight) | Removes straight borders, keeps curvy trails |
-| 4 | Smooth curvature | max angle change <70 deg | Removes text (sharp corners) |
-| 5 | Downhill tendency | >15 deg from horizontal | Soft signal - trails go downhill |
-| 6 | Stroke width | std dev <2.0px | Removes variable-width text |
-| 7 | No holes | 0 enclosed holes | Removes letters O, D, B, P |
-| 8 | Mountain region | centroid on-mountain | Removes legend/parking lot noise |
-| 9 | Proximity | <50px from other segment | Real trails cluster together |
+| 2 | Sinuosity | >1.1 (arc/straight) | Removes straight borders, keeps curvy trails |
+| 3 | Smooth curvature | max angle change <70 deg | Removes text (sharp corners) |
+| 4 | Downhill tendency | >15 deg from horizontal | Soft signal - trails go downhill |
+| 5 | Stroke width | std dev <2.0px | Removes variable-width text |
+| 6 | No holes | 0 enclosed holes | Removes letters O, D, B, P |
 
-**Classification by total score:**
-- **7-9:** High confidence (accepted)
-- **5-6:** Probable (accepted, flagged)
-- **3-4:** Uncertain (kept for SAM 2 refinement)
-- **0-2:** Rejected (noise/text)
+**Classification by total score** (thresholds in `scripts/utils/heuristics.py` as `CONFIDENT_THRESHOLD` / `PROBABLE_THRESHOLD` / `UNCERTAIN_THRESHOLD`):
+- **5-6:** High confidence (accepted)
+- **3-4:** Probable (accepted, flagged)
+- **1-2:** Uncertain (kept for SAM 2 refinement)
+- **0:** Rejected (noise/text)
+
+To pick or re-tune these thresholds against the current `score_logs.json`, run:
+
+```bash
+python scripts/tune_thresholds.py
+```
+
+It sweeps candidate (confident, probable, uncertain) triples, reports
+precision/recall/F1/drift versus the current pipeline output, and renders
+side-by-side overlay diffs (`output/tune/overlay_*.jpg`) for the top picks.
+
+**History note:** an earlier version of this scorer had 9 heuristics. Three were removed because they didn't actually discriminate trails from noise: aspect-ratio (>5:1) fired on only 3.9% of components because curved trails have square-ish bounding boxes; mountain-region and proximity were always +1 because their masks were never wired up at the call site. The current 6-heuristic version reproduces the prior accept set exactly (F1=1.000 in the threshold sweep).
 
 **Watch out for:**
 - Runtime is ~30-60 seconds depending on image resolution. Skeletonization of large components is the bottleneck.
