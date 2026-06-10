@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "detect:eval": "node --experimental-strip-types scripts/evaluate.ts",
     "detect:sweep": "node --experimental-strip-types scripts/evaluate.ts --sweep",
-    "detect:overlay": "node --experimental-strip-types scripts/overlay.ts"
+    "detect:overlay": "node --experimental-strip-types scripts/overlay.ts",
+    "detect:place": "node --experimental-strip-types scripts/placeTrails.ts --render"
   },
   "dependencies": {
     "react": "^19.2.0",

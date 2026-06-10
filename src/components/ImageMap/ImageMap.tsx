@@ -2,6 +2,8 @@ import { useState, useMemo, useCallback } from 'react';
 import type { Trail } from '../../types';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_COLORS } from '../../types';
 import { peaks, getTrailsByPeak } from '../../data/trails';
+import { PEAK_REGIONS } from '../../data/peakRegions';
+import trailPositions from '../../data/trailPositions.json';
 import { TrailHotspot } from './TrailHotspot';
 import { useTrailDetection } from '../../detection/useTrailDetection';
 import styles from './ImageMap.module.css';
@@ -16,51 +18,32 @@ interface ImageMapProps {
   onHoverTrail: (id: string | null) => void;
 }
 
-// Seeded random for consistent hotspot placement
-function seededRandom(seed: number) {
-  let s = seed;
-  return () => {
-    s = (s * 16807 + 0) % 2147483647;
-    return (s - 1) / 2147483646;
-  };
-}
-
-function hashString(str: string): number {
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    hash = ((hash << 5) - hash + str.charCodeAt(i)) | 0;
-  }
-  return Math.abs(hash);
-}
-
+// Hotspot positions are generated offline by the trail detector
+// (scripts/placeTrails.ts -> trailPositions.json), so dots land on actual
+// detected runs. Trails missing from the JSON (e.g. added after the last
+// `npm run detect:place`) fall back to a grid inside their peak's region.
 function generateHotspotPositions(): Map<string, { x: number; y: number }> {
   const positions = new Map<string, { x: number; y: number }>();
-  // Map peaks to approximate percentage positions on a typical trail map image
-  const peakRegions: Record<string, { cx: number; cy: number; w: number; h: number }> = {
-    'snowshed': { cx: 8, cy: 55, w: 10, h: 40 },
-    'sunrise': { cx: 18, cy: 50, w: 10, h: 40 },
-    'ramshead': { cx: 30, cy: 40, w: 12, h: 45 },
-    'snowdon': { cx: 44, cy: 35, w: 14, h: 50 },
-    'skye-peak': { cx: 62, cy: 28, w: 16, h: 55 },
-    'killington-peak': { cx: 78, cy: 20, w: 16, h: 60 },
-    'bear-mountain': { cx: 92, cy: 32, w: 12, h: 50 },
-  };
+  const detected = trailPositions as Record<string, { x: number; y: number }>;
 
   for (const peak of peaks) {
-    const region = peakRegions[peak.id];
-    if (!region) continue;
     const peakTrails = getTrailsByPeak(peak.id);
+    const region = PEAK_REGIONS[peak.id];
     peakTrails.forEach((trail, index) => {
-      const rng = seededRandom(hashString(trail.id));
+      const pos = detected[trail.id];
+      if (pos) {
+        positions.set(trail.id, pos);
+        return;
+      }
+      if (!region) return;
       const cols = Math.ceil(Math.sqrt(peakTrails.length));
-      const row = Math.floor(index / cols);
-      const col = index % cols;
       const rows = Math.ceil(peakTrails.length / cols);
-
-      const x = region.cx - region.w / 2 + (col / Math.max(cols - 1, 1)) * region.w + (rng() - 0.5) * 2;
-      const y = region.cy - region.h / 2 + (row / Math.max(rows - 1, 1)) * region.h + (rng() - 0.5) * 2;
-
-      positions.set(trail.id, { x: Math.max(2, Math.min(98, x)), y: Math.max(5, Math.min(95, y)) });
+      const col = index % cols;
+      const row = Math.floor(index / cols);
+      positions.set(trail.id, {
+        x: region.cx - region.w / 2 + ((col + 0.5) / cols) * region.w,
+        y: region.cy - region.h / 2 + ((row + 0.5) / rows) * region.h,
+      });
     });
   }
 
