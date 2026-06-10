@@ -3,7 +3,10 @@ import type { Trail } from '../../types';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_COLORS } from '../../types';
 import { peaks, getTrailsByPeak } from '../../data/trails';
 import { TrailHotspot } from './TrailHotspot';
+import { useTrailDetection } from '../../detection/useTrailDetection';
 import styles from './ImageMap.module.css';
+
+const MAP_SRC = '/killington-trail-map.jpg';
 
 interface ImageMapProps {
   filteredTrailIds: Set<string>;
@@ -75,6 +78,9 @@ export function ImageMap({
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
+  const [showDetection, setShowDetection] = useState(false);
+
+  const detection = useTrailDetection(MAP_SRC, showDetection && imageLoaded);
 
   const hotspotPositions = useMemo(() => generateHotspotPositions(), []);
 
@@ -117,13 +123,21 @@ export function ImageMap({
           style={{ transform: `scale(${zoom})` }}
         >
           <img
-            src="/killington-trail-map.jpg"
+            src={MAP_SRC}
             alt="Killington Trail Map"
             className={styles.mapImage}
             onLoad={() => setImageLoaded(true)}
             onError={() => setImageError(true)}
             style={{ display: imageLoaded ? 'block' : 'none' }}
           />
+          {showDetection && detection.overlayUrl && (
+            <img
+              src={detection.overlayUrl}
+              alt="Detected trails"
+              className={styles.overlay}
+              style={{ pointerEvents: 'none' }}
+            />
+          )}
           {(imageLoaded || imageError) && (
             <svg
               className={styles.overlay}
@@ -153,10 +167,39 @@ export function ImageMap({
       </div>
 
       <div className={styles.zoomControls}>
+        <button
+          className={styles.zoomBtn}
+          onClick={() => setShowDetection((s) => !s)}
+          title="Toggle detected-trail overlay"
+          style={{
+            fontSize: 16,
+            background: showDetection ? 'var(--accent, #38f5ff)' : undefined,
+            color: showDetection ? '#06283d' : undefined,
+          }}
+        >
+          {detection.loading ? '…' : '⛷'}
+        </button>
         <button className={styles.zoomBtn} onClick={() => setZoom((z) => Math.min(z + 0.25, 3))}>+</button>
         <button className={styles.zoomBtn} onClick={() => setZoom((z) => Math.max(z - 0.25, 0.5))}>-</button>
         <button className={styles.zoomBtn} onClick={() => setZoom(1)} style={{ fontSize: 12 }}>1x</button>
       </div>
+      {showDetection && detection.overlayUrl && (
+        <div
+          style={{
+            position: 'absolute',
+            top: 16,
+            left: 16,
+            background: 'rgba(15, 23, 42, 0.9)',
+            border: '1px solid var(--border)',
+            borderRadius: 8,
+            padding: '6px 12px',
+            fontSize: 12,
+            color: 'var(--text-secondary)',
+          }}
+        >
+          Detected trail surface · {(detection.coverage * 100).toFixed(1)}% of pixels
+        </div>
+      )}
 
       {hoveredTrailData && mousePos && (
         <div

@@ -1,0 +1,353 @@
+{
+  "_policy": "trail = bright skiable snow surface (ski run / open slope). off = forest, sky, water, base buildings, parking, roads, background mountains. Points are normalized (x,y) in [0,1] over the full trail-map image. Derived from a 12x8 labeling grid; ambiguous grid cells were skipped. Detection target = white/groomed snow trail SURFACE (open runs); thin forest-embedded trail lines are out of scope. Four upper-left points on forested corridors were dropped after visual audit. Positive points were snapped onto the nearest run-surface pixel within a small window and visually audited. Points 94/95 (ambiguous lower-right open snow) were dropped.",
+  "points": [
+    {
+      "id": 0,
+      "x": 0.0417,
+      "y": 0.0625,
+      "label": "off"
+    },
+    {
+      "id": 1,
+      "x": 0.125,
+      "y": 0.0625,
+      "label": "off"
+    },
+    {
+      "id": 2,
+      "x": 0.2083,
+      "y": 0.0625,
+      "label": "off"
+    },
+    {
+      "id": 3,
+      "x": 0.2917,
+      "y": 0.0625,
+      "label": "off"
+    },
+    {
+      "id": 4,
+      "x": 0.375,
+      "y": 0.0625,
+      "label": "off"
+    },
+    {
+      "id": 5,
+      "x": 0.4583,
+      "y": 0.0625,
+      "label": "off"
+    },
+    {
+      "id": 7,
+      "x": 0.5417,
+      "y": 0.0625,
+      "label": "off"
+    },
+    {
+      "id": 8,
+      "x": 0.625,
+      "y": 0.0625,
+      "label": "off"
+    },
+    {
+      "id": 9,
+      "x": 0.7083,
+      "y": 0.0625,
+      "label": "off"
+    },
+    {
+      "id": 10,
+      "x": 0.7917,
+      "y": 0.0625,
+      "label": "off"
+    },
+    {
+      "id": 11,
+      "x": 0.875,
+      "y": 0.0625,
+      "label": "off"
+    },
+    {
+      "id": 12,
+      "x": 0.0417,
+      "y": 0.1875,
+      "label": "off"
+    },
+    {
+      "id": 13,
+      "x": 0.125,
+      "y": 0.1875,
+      "label": "off"
+    },
+    {
+      "id": 18,
+      "x": 0.5502,
+      "y": 0.1939,
+      "label": "trail"
+    },
+    {
+      "id": 19,
+      "x": 0.6209,
+      "y": 0.1702,
+      "label": "trail"
+    },
+    {
+      "id": 21,
+      "x": 0.7972,
+      "y": 0.2035,
+      "label": "trail"
+    },
+    {
+      "id": 22,
+      "x": 0.875,
+      "y": 0.1875,
+      "label": "off"
+    },
+    {
+      "id": 23,
+      "x": 0.9583,
+      "y": 0.1875,
+      "label": "off"
+    },
+    {
+      "id": 30,
+      "x": 0.5524,
+      "y": 0.3108,
+      "label": "trail"
+    },
+    {
+      "id": 31,
+      "x": 0.6283,
+      "y": 0.3204,
+      "label": "trail"
+    },
+    {
+      "id": 32,
+      "x": 0.6998,
+      "y": 0.3026,
+      "label": "trail"
+    },
+    {
+      "id": 33,
+      "x": 0.7801,
+      "y": 0.3093,
+      "label": "trail"
+    },
+    {
+      "id": 35,
+      "x": 0.9583,
+      "y": 0.3125,
+      "label": "off"
+    },
+    {
+      "id": 37,
+      "x": 0.1247,
+      "y": 0.4181,
+      "label": "trail"
+    },
+    {
+      "id": 39,
+      "x": 0.3656,
+      "y": 0.4181,
+      "label": "trail"
+    },
+    {
+      "id": 40,
+      "x": 0.4699,
+      "y": 0.4358,
+      "label": "trail"
+    },
+    {
+      "id": 42,
+      "x": 0.5471,
+      "y": 0.4358,
+      "label": "trail"
+    },
+    {
+      "id": 44,
+      "x": 0.7073,
+      "y": 0.4255,
+      "label": "trail"
+    },
+    {
+      "id": 45,
+      "x": 0.8038,
+      "y": 0.4521,
+      "label": "trail"
+    },
+    {
+      "id": 46,
+      "x": 0.8736,
+      "y": 0.4284,
+      "label": "trail"
+    },
+    {
+      "id": 47,
+      "x": 0.9583,
+      "y": 0.4375,
+      "label": "off"
+    },
+    {
+      "id": 43,
+      "x": 0.625,
+      "y": 0.4375,
+      "label": "off"
+    },
+    {
+      "id": 50,
+      "x": 0.2083,
+      "y": 0.5625,
+      "label": "off"
+    },
+    {
+      "id": 51,
+      "x": 0.2967,
+      "y": 0.5642,
+      "label": "trail"
+    },
+    {
+      "id": 53,
+      "x": 0.4583,
+      "y": 0.5625,
+      "label": "off"
+    },
+    {
+      "id": 60,
+      "x": 0.0417,
+      "y": 0.6875,
+      "label": "off"
+    },
+    {
+      "id": 61,
+      "x": 0.125,
+      "y": 0.6875,
+      "label": "off"
+    },
+    {
+      "id": 64,
+      "x": 0.375,
+      "y": 0.6875,
+      "label": "off"
+    },
+    {
+      "id": 65,
+      "x": 0.4583,
+      "y": 0.6875,
+      "label": "off"
+    },
+    {
+      "id": 70,
+      "x": 0.7917,
+      "y": 0.6875,
+      "label": "off"
+    },
+    {
+      "id": 71,
+      "x": 0.875,
+      "y": 0.6875,
+      "label": "off"
+    },
+    {
+      "id": 72,
+      "x": 0.0417,
+      "y": 0.8125,
+      "label": "off"
+    },
+    {
+      "id": 73,
+      "x": 0.125,
+      "y": 0.8125,
+      "label": "off"
+    },
+    {
+      "id": 76,
+      "x": 0.375,
+      "y": 0.8125,
+      "label": "off"
+    },
+    {
+      "id": 77,
+      "x": 0.4583,
+      "y": 0.8125,
+      "label": "off"
+    },
+    {
+      "id": 78,
+      "x": 0.5417,
+      "y": 0.8125,
+      "label": "off"
+    },
+    {
+      "id": 80,
+      "x": 0.7187,
+      "y": 0.801,
+      "label": "trail"
+    },
+    {
+      "id": 81,
+      "x": 0.7946,
+      "y": 0.8306,
+      "label": "trail"
+    },
+    {
+      "id": 82,
+      "x": 0.8665,
+      "y": 0.832,
+      "label": "trail"
+    },
+    {
+      "id": 85,
+      "x": 0.2083,
+      "y": 0.9375,
+      "label": "off"
+    },
+    {
+      "id": 88,
+      "x": 0.4583,
+      "y": 0.9375,
+      "label": "off"
+    },
+    {
+      "id": 90,
+      "x": 0.5417,
+      "y": 0.9375,
+      "label": "off"
+    },
+    {
+      "id": 92,
+      "x": 0.6963,
+      "y": 0.9193,
+      "label": "trail"
+    },
+    {
+      "id": 54,
+      "x": 0.5417,
+      "y": 0.5625,
+      "label": "off"
+    },
+    {
+      "id": 67,
+      "x": 0.625,
+      "y": 0.6875,
+      "label": "off"
+    },
+    {
+      "id": 68,
+      "x": 0.7083,
+      "y": 0.6875,
+      "label": "off"
+    },
+    {
+      "id": 86,
+      "x": 0.375,
+      "y": 0.9375,
+      "label": "off"
+    },
+    {
+      "id": 87,
+      "x": 0.4583,
+      "y": 0.9375,
+      "label": "off"
+    }
+  ]
+}
