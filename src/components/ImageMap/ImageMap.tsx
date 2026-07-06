@@ -62,6 +62,8 @@ export function ImageMap({
   const [imageError, setImageError] = useState(false);
   const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
   const [showDetection, setShowDetection] = useState(false);
+  // precomputed trail-LINE overlay (see scripts/generateLineOverlay.mjs)
+  const [showLines, setShowLines] = useState(false);
 
   const detection = useTrailDetection(MAP_SRC, showDetection && imageLoaded);
 
@@ -121,6 +123,14 @@ export function ImageMap({
               style={{ pointerEvents: 'none' }}
             />
           )}
+          {showLines && (
+            <img
+              src="/trail-lines.png"
+              alt="Detected trail lines"
+              className={styles.overlay}
+              style={{ pointerEvents: 'none' }}
+            />
+          )}
           {(imageLoaded || imageError) && (
             <svg
               className={styles.overlay}
@@ -152,8 +162,20 @@ export function ImageMap({
       <div className={styles.zoomControls}>
         <button
           className={styles.zoomBtn}
+          onClick={() => setShowLines((s) => !s)}
+          title="Toggle detected trail-line overlay"
+          style={{
+            fontSize: 15,
+            background: showLines ? 'var(--accent, #38f5ff)' : undefined,
+            color: showLines ? '#06283d' : undefined,
+          }}
+        >
+          〰
+        </button>
+        <button
+          className={styles.zoomBtn}
           onClick={() => setShowDetection((s) => !s)}
-          title="Toggle detected-trail overlay"
+          title="Toggle detected snow-surface overlay"
           style={{
             fontSize: 16,
             background: showDetection ? 'var(--accent, #38f5ff)' : undefined,
