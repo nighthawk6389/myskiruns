@@ -1,0 +1,725 @@
+{
+  "labels": [
+    {
+      "text": "BLUE HEAVEN",
+      "x": 0.5169,
+      "y": 0.1396,
+      "angleDeg": -31.3,
+      "confidence": 96
+    },
+    {
+      "text": "SKELTER",
+      "x": 0.5241,
+      "y": 0.1597,
+      "angleDeg": -36.3,
+      "confidence": 96
+    },
+    {
+      "text": "ESCAPADE",
+      "x": 0.556,
+      "y": 0.2206,
+      "angleDeg": 49.8,
+      "confidence": 96
+    },
+    {
+      "text": "DOUBLE",
+      "x": 0.6201,
+      "y": 0.2323,
+      "angleDeg": 70.6,
+      "confidence": 96
+    },
+    {
+      "text": "EAST FALL",
+      "x": 0.6489,
+      "y": 0.2229,
+      "angleDeg": 51.2,
+      "confidence": 96
+    },
+    {
+      "text": "SASSAFRAS",
+      "x": 0.3131,
+      "y": 0.2226,
+      "angleDeg": -0.6,
+      "confidence": 96
+    },
+    {
+      "text": "ROYAL FLUSH",
+      "x": 0.7309,
+      "y": 0.2508,
+      "angleDeg": -15.6,
+      "confidence": 96
+    },
+    {
+      "text": "FLUSH FULL HOUSE",
+      "x": 0.7406,
+      "y": 0.2605,
+      "angleDeg": -27.4,
+      "confidence": 96
+    },
+    {
+      "text": "SOLITUDE",
+      "x": 0.1695,
+      "y": 0.2688,
+      "angleDeg": -42.5,
+      "confidence": 96
+    },
+    {
+      "text": "CHUTE",
+      "x": 0.7802,
+      "y": 0.2761,
+      "angleDeg": -60.2,
+      "confidence": 96
+    },
+    {
+      "text": "BEAR TRAX",
+      "x": 0.4092,
+      "y": 0.2796,
+      "angleDeg": -28,
+      "confidence": 96
+    },
+    {
+      "text": "NORTH",
+      "x": 0.8127,
+      "y": 0.2953,
+      "angleDeg": 84.3,
+      "confidence": 96
+    },
+    {
+      "text": "RIDER",
+      "x": 0.801,
+      "y": 0.3059,
+      "angleDeg": 84.3,
+      "confidence": 96
+    },
+    {
+      "text": "BEAR CUB",
+      "x": 0.3026,
+      "y": 0.3059,
+      "angleDeg": 2.5,
+      "confidence": 96
+    },
+    {
+      "text": "USE TRAP",
+      "x": 0.7356,
+      "y": 0.3491,
+      "angleDeg": -6.1,
+      "confidence": 96
+    },
+    {
+      "text": "HIGHLINE",
+      "x": 0.6926,
+      "y": 0.3601,
+      "angleDeg": -38.7,
+      "confidence": 96
+    },
+    {
+      "text": "BUNNY BUSTER",
+      "x": 0.7137,
+      "y": 0.3951,
+      "angleDeg": -35.1,
+      "confidence": 96
+    },
+    {
+      "text": "MOUSE RUN",
+      "x": 0.7308,
+      "y": 0.3925,
+      "angleDeg": -35.9,
+      "confidence": 96
+    },
+    {
+      "text": "HEADER",
+      "x": 0.8636,
+      "y": 0.4144,
+      "angleDeg": -44.2,
+      "confidence": 96
+    },
+    {
+      "text": "EASY STREET",
+      "x": 0.8766,
+      "y": 0.4321,
+      "angleDeg": -5.5,
+      "confidence": 96
+    },
+    {
+      "text": "CAPER",
+      "x": 0.7552,
+      "y": 0.4351,
+      "angleDeg": -38.6,
+      "confidence": 96
+    },
+    {
+      "text": "LOW ROAD",
+      "x": 0.5495,
+      "y": 0.4681,
+      "angleDeg": 45.3,
+      "confidence": 96
+    },
+    {
+      "text": "STITCH LINE",
+      "x": 0.4701,
+      "y": 0.4822,
+      "angleDeg": -85.4,
+      "confidence": 96
+    },
+    {
+      "text": "BEAR",
+      "x": 0.1245,
+      "y": 0.5151,
+      "angleDeg": 69.9,
+      "confidence": 96
+    },
+    {
+      "text": "SPACE WALK",
+      "x": 0.2032,
+      "y": 0.5151,
+      "angleDeg": -12.9,
+      "confidence": 96
+    },
+    {
+      "text": "IDLER",
+      "x": 0.6812,
+      "y": 0.5283,
+      "angleDeg": 29.1,
+      "confidence": 96
+    },
+    {
+      "text": "HIGH ROAD",
+      "x": 0.5178,
+      "y": 0.5399,
+      "angleDeg": -64.4,
+      "confidence": 96
+    },
+    {
+      "text": "FALL",
+      "x": 0.5914,
+      "y": 0.7091,
+      "angleDeg": 16,
+      "confidence": 96
+    },
+    {
+      "text": "FIELD",
+      "x": 0.3031,
+      "y": 0.8032,
+      "angleDeg": 12.4,
+      "confidence": 96
+    },
+    {
+      "text": "VALLEY PLUNGE",
+      "x": 0.2855,
+      "y": 0.895,
+      "angleDeg": -48.5,
+      "confidence": 96
+    },
+    {
+      "text": "KILLINGTON PEAK",
+      "x": 0.5598,
+      "y": 0.0653,
+      "angleDeg": 0,
+      "confidence": 96
+    },
+    {
+      "text": "BEAR MOUNTAIN",
+      "x": 0.2675,
+      "y": 0.2929,
+      "angleDeg": 0,
+      "confidence": 96
+    },
+    {
+      "text": "KILLINGTON TUBING PARK",
+      "x": 0.7602,
+      "y": 0.7354,
+      "angleDeg": 0,
+      "confidence": 96
+    },
+    {
+      "text": "SOLITUDE",
+      "x": 0.4014,
+      "y": 0.1768,
+      "angleDeg": -10.4,
+      "confidence": 95
+    },
+    {
+      "text": "BEAR",
+      "x": 0.5098,
+      "y": 0.194,
+      "angleDeg": -76.6,
+      "confidence": 95
+    },
+    {
+      "text": "PIPE DREAM",
+      "x": 0.4736,
+      "y": 0.2048,
+      "angleDeg": -23.7,
+      "confidence": 95
+    },
+    {
+      "text": "PIPE DREAM",
+      "x": 0.3855,
+      "y": 0.2602,
+      "angleDeg": -16,
+      "confidence": 95
+    },
+    {
+      "text": "EAST THE",
+      "x": 0.6535,
+      "y": 0.2868,
+      "angleDeg": -57.1,
+      "confidence": 95
+    },
+    {
+      "text": "EASY STREET",
+      "x": 0.9469,
+      "y": 0.3047,
+      "angleDeg": -3,
+      "confidence": 95
+    },
+    {
+      "text": "CHUTE",
+      "x": 0.7356,
+      "y": 0.4087,
+      "angleDeg": -60.3,
+      "confidence": 95
+    },
+    {
+      "text": "VERTIGO",
+      "x": 0.494,
+      "y": 0.4898,
+      "angleDeg": 88.9,
+      "confidence": 95
+    },
+    {
+      "text": "WILDFIRE",
+      "x": 0.3001,
+      "y": 0.5118,
+      "angleDeg": -12,
+      "confidence": 95
+    },
+    {
+      "text": "CRUISE CONTROL",
+      "x": 0.417,
+      "y": 0.5315,
+      "angleDeg": 65.5,
+      "confidence": 95
+    },
+    {
+      "text": "KILLINGTON MEDICAL CLINIC",
+      "x": 0.7364,
+      "y": 0.5823,
+      "angleDeg": 0,
+      "confidence": 95
+    },
+    {
+      "text": "GREAT NQRTHERN",
+      "x": 0.7101,
+      "y": 0.2781,
+      "angleDeg": 58.1,
+      "confidence": 94
+    },
+    {
+      "text": "FROLIC",
+      "x": 0.8232,
+      "y": 0.2619,
+      "angleDeg": 25,
+      "confidence": 94
+    },
+    {
+      "text": "SKYE LIFTLINE",
+      "x": 0.2907,
+      "y": 0.4823,
+      "angleDeg": -40.6,
+      "confidence": 94
+    },
+    {
+      "text": "SNOWSHED SLOPE",
+      "x": 0.6079,
+      "y": 0.5456,
+      "angleDeg": 29.9,
+      "confidence": 94
+    },
+    {
+      "text": "NORT TRAIL",
+      "x": 0.5166,
+      "y": 0.567,
+      "angleDeg": -8.4,
+      "confidence": 94
+    },
+    {
+      "text": "SUNRISE BAR GRILL",
+      "x": 0.0644,
+      "y": 0.6189,
+      "angleDeg": 0,
+      "confidence": 94
+    },
+    {
+      "text": "THE JUG",
+      "x": 0.468,
+      "y": 0.1793,
+      "angleDeg": -15.3,
+      "confidence": 93
+    },
+    {
+      "text": "VAGABOND TIN MAN",
+      "x": 0.8485,
+      "y": 0.3175,
+      "angleDeg": -44.3,
+      "confidence": 93
+    },
+    {
+      "text": "SHORTY",
+      "x": 0.336,
+      "y": 0.4051,
+      "angleDeg": -73.2,
+      "confidence": 93
+    },
+    {
+      "text": "DREAM",
+      "x": 0.3576,
+      "y": 0.4894,
+      "angleDeg": -33.4,
+      "confidence": 93
+    },
+    {
+      "text": "BEARLY",
+      "x": 0.282,
+      "y": 0.6445,
+      "angleDeg": -2.1,
+      "confidence": 93
+    },
+    {
+      "text": "RAMSHEAD MOUNTAIN",
+      "x": 0.9145,
+      "y": 0.2652,
+      "angleDeg": 0,
+      "confidence": 93
+    },
+    {
+      "text": "SKYE PEAK 3,800'",
+      "x": 0.4213,
+      "y": 0.3073,
+      "angleDeg": 0,
+      "confidence": 93
+    },
+    {
+      "text": "BEAR MOUNTAIN 2.120'",
+      "x": 0.2185,
+      "y": 0.6089,
+      "angleDeg": 0,
+      "confidence": 93
+    },
+    {
+      "text": "KILLINK",
+      "x": 0.731,
+      "y": 0.232,
+      "angleDeg": -0.5,
+      "confidence": 92
+    },
+    {
+      "text": "ROUNDAB",
+      "x": 0.3703,
+      "y": 0.2821,
+      "angleDeg": -4.3,
+      "confidence": 92
+    },
+    {
+      "text": "THETHRON",
+      "x": 0.6631,
+      "y": 0.293,
+      "angleDeg": -48.4,
+      "confidence": 92
+    },
+    {
+      "text": "DEN DEVIL'S FIDDLE",
+      "x": 0.2129,
+      "y": 0.4228,
+      "angleDeg": -45.6,
+      "confidence": 92
+    },
+    {
+      "text": "EATNORTHE",
+      "x": 0.7016,
+      "y": 0.4277,
+      "angleDeg": -25,
+      "confidence": 92
+    },
+    {
+      "text": "PARKING",
+      "x": 0.7225,
+      "y": 0.5268,
+      "angleDeg": 7,
+      "confidence": 92
+    },
+    {
+      "text": "SKYEBURST",
+      "x": 0.2802,
+      "y": 0.5547,
+      "angleDeg": -15.1,
+      "confidence": 92
+    },
+    {
+      "text": "SNOWSHED",
+      "x": 0.4151,
+      "y": 0.5752,
+      "angleDeg": 21.9,
+      "confidence": 92
+    },
+    {
+      "text": "RTHERN",
+      "x": 0.5936,
+      "y": 0.1876,
+      "angleDeg": 14.4,
+      "confidence": 91
+    },
+    {
+      "text": "THE STASH",
+      "x": 0.3586,
+      "y": 0.3557,
+      "angleDeg": -30,
+      "confidence": 91
+    },
+    {
+      "text": "YURT LEDGEWOOD",
+      "x": 0.5396,
+      "y": 0.5179,
+      "angleDeg": -2.2,
+      "confidence": 91
+    },
+    {
+      "text": "YODELER",
+      "x": 0.6255,
+      "y": 0.5244,
+      "angleDeg": 17.5,
+      "confidence": 91
+    },
+    {
+      "text": "HIGHRIDGE",
+      "x": 0.5569,
+      "y": 0.6821,
+      "angleDeg": 57.4,
+      "confidence": 91
+    },
+    {
+      "text": "BREAKAWAY",
+      "x": 0.4126,
+      "y": 0.2256,
+      "angleDeg": -19.3,
+      "confidence": 90
+    },
+    {
+      "text": "ATEWAY",
+      "x": 0.4341,
+      "y": 0.2875,
+      "angleDeg": -17.9,
+      "confidence": 90
+    },
+    {
+      "text": "UANITA",
+      "x": 0.5604,
+      "y": 0.2966,
+      "angleDeg": 34.9,
+      "confidence": 90
+    },
+    {
+      "text": "SKYEBURST",
+      "x": 0.3883,
+      "y": 0.3857,
+      "angleDeg": -27.6,
+      "confidence": 90
+    },
+    {
+      "text": "TREEZY",
+      "x": 0.8385,
+      "y": 0.5479,
+      "angleDeg": -52,
+      "confidence": 90
+    },
+    {
+      "text": "EDGEMONT",
+      "x": 0.614,
+      "y": 0.6345,
+      "angleDeg": 68.2,
+      "confidence": 89
+    },
+    {
+      "text": "SUNRISE MOUNTAIN 2.456'",
+      "x": 0.0809,
+      "y": 0.4185,
+      "angleDeg": 0,
+      "confidence": 89
+    },
+    {
+      "text": "JERK JAMAICAN MTN. GRILL",
+      "x": 0.4676,
+      "y": 0.6492,
+      "angleDeg": 0,
+      "confidence": 89
+    },
+    {
+      "text": "LAUNCHPAD",
+      "x": 0.5145,
+      "y": 0.2474,
+      "angleDeg": 58.3,
+      "confidence": 88
+    },
+    {
+      "text": "SNOWSHED ROSSOVER",
+      "x": 0.3315,
+      "y": 0.3582,
+      "angleDeg": 38.7,
+      "confidence": 87
+    },
+    {
+      "text": "CARPENTER'S",
+      "x": 0.4096,
+      "y": 0.6378,
+      "angleDeg": -18.4,
+      "confidence": 87
+    },
+    {
+      "text": "RUM BUNNY BUSTER",
+      "x": 0.7662,
+      "y": 0.2822,
+      "angleDeg": -57.6,
+      "confidence": 86
+    },
+    {
+      "text": "HWAY MAKER HEADWALL",
+      "x": 0.4131,
+      "y": 0.3913,
+      "angleDeg": -35.6,
+      "confidence": 85
+    },
+    {
+      "text": "OUTER",
+      "x": 0.2454,
+      "y": 0.4271,
+      "angleDeg": -68.3,
+      "confidence": 85
+    },
+    {
+      "text": "SNOWDON MOUNTAIN 3,592",
+      "x": 0.8128,
+      "y": 0.2115,
+      "angleDeg": 0,
+      "confidence": 85
+    },
+    {
+      "text": "CONCLUSION BUNNY",
+      "x": 0.7018,
+      "y": 0.3876,
+      "angleDeg": -45.1,
+      "confidence": 84
+    },
+    {
+      "text": "QOME",
+      "x": 0.3816,
+      "y": 0.6025,
+      "angleDeg": -60.5,
+      "confidence": 84
+    },
+    {
+      "text": "GROWLER",
+      "x": 0.281,
+      "y": 0.4199,
+      "angleDeg": 71.4,
+      "confidence": 83
+    },
+    {
+      "text": "GREAT EASTERN",
+      "x": 0.2214,
+      "y": 0.9076,
+      "angleDeg": 35,
+      "confidence": 83
+    },
+    {
+      "text": "SKYESHIP 1,160'",
+      "x": 0.2837,
+      "y": 0.9445,
+      "angleDeg": 0,
+      "confidence": 81
+    },
+    {
+      "text": "ESCAPAD ARCY",
+      "x": 0.5636,
+      "y": 0.2001,
+      "angleDeg": 49.3,
+      "confidence": 79
+    },
+    {
+      "text": "HIGHTANDER",
+      "x": 0.5933,
+      "y": 0.4819,
+      "angleDeg": -13.2,
+      "confidence": 78
+    },
+    {
+      "text": "MOUSE RUN",
+      "x": 0.7613,
+      "y": 0.2536,
+      "angleDeg": -35.1,
+      "confidence": 77
+    },
+    {
+      "text": "CAPER",
+      "x": 0.8419,
+      "y": 0.3492,
+      "angleDeg": -3.7,
+      "confidence": 76
+    },
+    {
+      "text": "LDFI",
+      "x": 0.2892,
+      "y": 0.3868,
+      "angleDeg": 62.4,
+      "confidence": 75
+    },
+    {
+      "text": "BEAR CLAW",
+      "x": 0.3083,
+      "y": 0.3739,
+      "angleDeg": 45.8,
+      "confidence": 74
+    },
+    {
+      "text": "SEBITS",
+      "x": 0.5604,
+      "y": 0.4326,
+      "angleDeg": 30.5,
+      "confidence": 74
+    },
+    {
+      "text": "NORTHERN",
+      "x": 0.7586,
+      "y": 0.5027,
+      "angleDeg": 44.9,
+      "confidence": 74
+    },
+    {
+      "text": "JWISTER",
+      "x": 0.9157,
+      "y": 0.3758,
+      "angleDeg": -44.7,
+      "confidence": 70
+    },
+    {
+      "text": "RENDEZVOUS",
+      "x": 0.0587,
+      "y": 0.4598,
+      "angleDeg": -17.2,
+      "confidence": 67
+    },
+    {
+      "text": "STAIRS",
+      "x": 0.5055,
+      "y": 0.4623,
+      "angleDeg": 71.3,
+      "confidence": 65
+    },
+    {
+      "text": "WEEP",
+      "x": 0.4594,
+      "y": 0.4419,
+      "angleDeg": -67.3,
+      "confidence": 60
+    }
+  ]
+}

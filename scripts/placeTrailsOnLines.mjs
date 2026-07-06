@@ -36,6 +36,33 @@ const CLASS_FOR = {
   'double-black': CLS.black,
 };
 
+// OCR name anchors (scripts/reconcileTrails.mjs): if a trail's name label was
+// read off the map, place its hotspot on the line nearest that label.
+let nameAnchors = {};
+try {
+  nameAnchors = JSON.parse(readFileSync(resolve(root, 'src/data/trailAnchors.json'), 'utf8')).anchors;
+} catch {
+  // no anchors yet — purely geometric placement
+}
+
+/** Snap a normalized point to the nearest centerline pixel of a class (px radius). */
+function snapToLine(nx, ny, cls, rad = 55) {
+  const cx = Math.round(nx * W), cy = Math.round(ny * H);
+  let best = null, bestD = Infinity;
+  for (let dy = -rad; dy <= rad; dy += 2) {
+    for (let dx = -rad; dx <= rad; dx += 2) {
+      const x = cx + dx, y = cy + dy;
+      if (x < 0 || y < 0 || x >= W || y >= H) continue;
+      const m = centerMask[y * W + x];
+      if (m && (cls == null || m === cls)) {
+        const d = dx * dx + dy * dy;
+        if (d < bestD) { bestD = d; best = { x, y }; }
+      }
+    }
+  }
+  return best ? { x: (best.x / W) * 100, y: (best.y / H) * 100 } : null;
+}
+
 // skeleton points per class inside a region (percent coords)
 function linePointsInRegion(region, cls) {
   const x0 = ((region.cx - region.w / 2) / 100) * W;
@@ -75,7 +102,7 @@ function farthestPoints(pts, k, center) {
 }
 
 const positions = {};
-let onLine = 0, fallback = 0;
+let onLine = 0, fallback = 0, anchored = 0;
 for (const [peakId, region] of Object.entries(PEAK_REGIONS)) {
   const peakTrails = trails.filter((t) => t.peak === peakId);
   if (!peakTrails.length) continue;
@@ -83,6 +110,19 @@ for (const [peakId, region] of Object.entries(PEAK_REGIONS)) {
   // group by line class so each difficulty is spread over ITS color's lines
   const byClass = new Map();
   for (const t of peakTrails) {
+    // name-anchored trails place directly on the line nearest their label
+    const a = nameAnchors[t.id];
+    if (a) {
+      const snapped = snapToLine(a.x, a.y, CLASS_FOR[t.difficulty] ?? null) ?? snapToLine(a.x, a.y, null);
+      if (snapped) {
+        positions[t.id] = {
+          x: Math.round(Math.max(2, Math.min(98, snapped.x)) * 10) / 10,
+          y: Math.round(Math.max(5, Math.min(95, snapped.y)) * 10) / 10,
+        };
+        anchored++;
+        continue;
+      }
+    }
     const c = CLASS_FOR[t.difficulty] ?? CLS.blue;
     if (!byClass.has(c)) byClass.set(c, []);
     byClass.get(c).push(t);
@@ -119,7 +159,10 @@ for (const [peakId, region] of Object.entries(PEAK_REGIONS)) {
 }
 
 writeFileSync(resolve(root, 'src/data/trailPositions.json'), JSON.stringify(positions) + '\n');
-console.log(`wrote ${Object.keys(positions).length} positions (${onLine} on color-matched lines, ${fallback} fallback)`);
+console.log(
+  `wrote ${Object.keys(positions).length} positions ` +
+    `(${anchored} name-anchored, ${onLine} on color-matched lines, ${fallback} fallback)`,
+);
 
 if (process.argv.includes('--render')) {
   const { decodeJpeg, downscale, encodeJpeg } = await import('./lib/image.mjs');

@@ -101,7 +101,33 @@ wrong:
 - At least one difficulty mismatch: Field Goal is drawn as a green line on
   the map but listed blue in `trails.ts`.
 
-Fixing the roster/difficulties (or OCR-ing the map's labels with
-tesseract.js — horizontal labels read at ~90% confidence in testing, angled
-ones need counter-rotation) is the natural next step toward per-name
-placement.
+## Label OCR and per-name placement
+
+`scripts/extractLabels.mjs` OCRs the map's trail-name labels: dark-glyph
+detection → word clustering → PCA baseline angle → counter-rotated crops →
+tesseract.js (local langdata; the CDN is proxy-blocked). Result: **103 labels,
+mean confidence 90.4**, positions verified 16/16 on zoomed spot-checks
+(`src/data/labelAnchors.json`).
+
+`scripts/reconcileTrails.mjs` fuzzy-matches labels to the roster (Levenshtein
+plus containment, because OCR truncates words that touch trail lines):
+
+- **54 trails matched to name anchors** (`src/data/trailAnchors.json`);
+  `npm run lines:place` now places those hotspots ON the line nearest their
+  own name label (color-matched), rest by farthest-point spreading.
+- **11 missing trails added to `data/trails.ts`** after hand-curation of the
+  OCR proposals (Blue Heaven, Helter Skelter, Full House, Frolic, The Jug,
+  Shorty, Bearly, Killink, Gateway, Highlander, Sassafras), difficulty taken
+  from the detected line class next to each label (cross-checked against
+  marker colors on zoomed crops). Field Goal's difficulty corrected blue→green
+  per the map.
+
+Validation criterion #5 — **name-anchor spot-check**: zoomed crops of anchored
+hotspots confirm dots on the named trail's line at the label; known
+imperfection: between close parallel same-color lines the snap can pick the
+neighbour (~25px), e.g. Killink vs Royal Flush.
+
+Remaining gaps: ~60 low-confidence labels were discarded (precision first);
+lift names printed white-on-maroon are unreadable to this pipeline; truncated
+labels ("UANITA") that didn't clear the gates mean Juanita/Julio and a few
+others still lack anchors.

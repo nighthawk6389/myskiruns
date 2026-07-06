@@ -1,0 +1,383 @@
+{
+ "_note": "OCR-derived name anchors: normalized label centroid per matched trail id",
+ "anchors": {
+  "blue-heaven": {
+   "x": 0.5169,
+   "y": 0.1396,
+   "text": "BLUE HEAVEN",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "helter-skelter": {
+   "x": 0.5241,
+   "y": 0.1597,
+   "text": "SKELTER",
+   "matchScore": 0.85,
+   "confidence": 96
+  },
+  "escapade": {
+   "x": 0.556,
+   "y": 0.2206,
+   "text": "ESCAPADE",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "double-dipper": {
+   "x": 0.6201,
+   "y": 0.2323,
+   "text": "DOUBLE",
+   "matchScore": 0.85,
+   "confidence": 96
+  },
+  "east-fall": {
+   "x": 0.6489,
+   "y": 0.2229,
+   "text": "EAST FALL",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "sassafras": {
+   "x": 0.3131,
+   "y": 0.2226,
+   "text": "SASSAFRAS",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "royal-flush": {
+   "x": 0.7309,
+   "y": 0.2508,
+   "text": "ROYAL FLUSH",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "full-house": {
+   "x": 0.7406,
+   "y": 0.2605,
+   "text": "FLUSH FULL HOUSE",
+   "matchScore": 0.85,
+   "confidence": 96
+  },
+  "solitude": {
+   "x": 0.1695,
+   "y": 0.2688,
+   "text": "SOLITUDE",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "chute": {
+   "x": 0.7802,
+   "y": 0.2761,
+   "text": "CHUTE",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "bear-trax": {
+   "x": 0.4092,
+   "y": 0.2796,
+   "text": "BEAR TRAX",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "great-northern": {
+   "x": 0.8127,
+   "y": 0.2953,
+   "text": "NORTH",
+   "matchScore": 0.85,
+   "confidence": 96
+  },
+  "bear-cub": {
+   "x": 0.3026,
+   "y": 0.3059,
+   "text": "BEAR CUB",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "mouse-trap": {
+   "x": 0.7356,
+   "y": 0.3491,
+   "text": "USE TRAP",
+   "matchScore": 0.85,
+   "confidence": 96
+  },
+  "highline": {
+   "x": 0.6926,
+   "y": 0.3601,
+   "text": "HIGHLINE",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "bunny-buster": {
+   "x": 0.7137,
+   "y": 0.3951,
+   "text": "BUNNY BUSTER",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "mouse-run": {
+   "x": 0.7308,
+   "y": 0.3925,
+   "text": "MOUSE RUN",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "header": {
+   "x": 0.8636,
+   "y": 0.4144,
+   "text": "HEADER",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "easy-street": {
+   "x": 0.8766,
+   "y": 0.4321,
+   "text": "EASY STREET",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "caper": {
+   "x": 0.7552,
+   "y": 0.4351,
+   "text": "CAPER",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "spacewalk": {
+   "x": 0.2032,
+   "y": 0.5151,
+   "text": "SPACE WALK",
+   "matchScore": 0.9,
+   "confidence": 96
+  },
+  "idler": {
+   "x": 0.6812,
+   "y": 0.5283,
+   "text": "IDLER",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "field-goal": {
+   "x": 0.3031,
+   "y": 0.8032,
+   "text": "FIELD",
+   "matchScore": 0.85,
+   "confidence": 96
+  },
+  "valley-plunge": {
+   "x": 0.2855,
+   "y": 0.895,
+   "text": "VALLEY PLUNGE",
+   "matchScore": 1,
+   "confidence": 96
+  },
+  "pipe-dream": {
+   "x": 0.4736,
+   "y": 0.2048,
+   "text": "PIPE DREAM",
+   "matchScore": 1,
+   "confidence": 95
+  },
+  "vertigo": {
+   "x": 0.494,
+   "y": 0.4898,
+   "text": "VERTIGO",
+   "matchScore": 1,
+   "confidence": 95
+  },
+  "wildfire": {
+   "x": 0.3001,
+   "y": 0.5118,
+   "text": "WILDFIRE",
+   "matchScore": 1,
+   "confidence": 95
+  },
+  "cruise-control": {
+   "x": 0.417,
+   "y": 0.5315,
+   "text": "CRUISE CONTROL",
+   "matchScore": 1,
+   "confidence": 95
+  },
+  "frolic": {
+   "x": 0.8232,
+   "y": 0.2619,
+   "text": "FROLIC",
+   "matchScore": 1,
+   "confidence": 94
+  },
+  "skye-peak-liftline": {
+   "x": 0.2907,
+   "y": 0.4823,
+   "text": "SKYE LIFTLINE",
+   "matchScore": 0.72,
+   "confidence": 94
+  },
+  "snowshed-slope": {
+   "x": 0.6079,
+   "y": 0.5456,
+   "text": "SNOWSHED SLOPE",
+   "matchScore": 0.85,
+   "confidence": 94
+  },
+  "the-jug": {
+   "x": 0.468,
+   "y": 0.1793,
+   "text": "THE JUG",
+   "matchScore": 1,
+   "confidence": 93
+  },
+  "vagabond": {
+   "x": 0.8485,
+   "y": 0.3175,
+   "text": "VAGABOND TIN MAN",
+   "matchScore": 0.85,
+   "confidence": 93
+  },
+  "shorty": {
+   "x": 0.336,
+   "y": 0.4051,
+   "text": "SHORTY",
+   "matchScore": 1,
+   "confidence": 93
+  },
+  "dream-maker": {
+   "x": 0.3576,
+   "y": 0.4894,
+   "text": "DREAM",
+   "matchScore": 0.85,
+   "confidence": 93
+  },
+  "bearly": {
+   "x": 0.282,
+   "y": 0.6445,
+   "text": "BEARLY",
+   "matchScore": 1,
+   "confidence": 93
+  },
+  "killink": {
+   "x": 0.731,
+   "y": 0.232,
+   "text": "KILLINK",
+   "matchScore": 1,
+   "confidence": 92
+  },
+  "roundabout": {
+   "x": 0.3703,
+   "y": 0.2821,
+   "text": "ROUNDAB",
+   "matchScore": 0.85,
+   "confidence": 92
+  },
+  "skyeburst": {
+   "x": 0.2802,
+   "y": 0.5547,
+   "text": "SKYEBURST",
+   "matchScore": 1,
+   "confidence": 92
+  },
+  "the-stash": {
+   "x": 0.3586,
+   "y": 0.3557,
+   "text": "THE STASH",
+   "matchScore": 1,
+   "confidence": 91
+  },
+  "yodeler": {
+   "x": 0.6255,
+   "y": 0.5244,
+   "text": "YODELER",
+   "matchScore": 1,
+   "confidence": 91
+  },
+  "breakaway": {
+   "x": 0.4126,
+   "y": 0.2256,
+   "text": "BREAKAWAY",
+   "matchScore": 1,
+   "confidence": 90
+  },
+  "gateway": {
+   "x": 0.4341,
+   "y": 0.2875,
+   "text": "ATEWAY",
+   "matchScore": 0.86,
+   "confidence": 90
+  },
+  "treezy": {
+   "x": 0.8385,
+   "y": 0.5479,
+   "text": "TREEZY",
+   "matchScore": 1,
+   "confidence": 90
+  },
+  "dream-maker-headwall": {
+   "x": 0.4131,
+   "y": 0.3913,
+   "text": "HWAY MAKER HEADWALL",
+   "matchScore": 0.8,
+   "confidence": 85
+  },
+  "outer-limits": {
+   "x": 0.2454,
+   "y": 0.4271,
+   "text": "OUTER",
+   "matchScore": 0.85,
+   "confidence": 85
+  },
+  "conclusion": {
+   "x": 0.7018,
+   "y": 0.3876,
+   "text": "CONCLUSION BUNNY",
+   "matchScore": 0.85,
+   "confidence": 84
+  },
+  "growler": {
+   "x": 0.281,
+   "y": 0.4199,
+   "text": "GROWLER",
+   "matchScore": 1,
+   "confidence": 83
+  },
+  "great-eastern": {
+   "x": 0.2214,
+   "y": 0.9076,
+   "text": "GREAT EASTERN",
+   "matchScore": 1,
+   "confidence": 83
+  },
+  "highlander": {
+   "x": 0.5933,
+   "y": 0.4819,
+   "text": "HIGHTANDER",
+   "matchScore": 0.9,
+   "confidence": 78
+  },
+  "bear-claw": {
+   "x": 0.3083,
+   "y": 0.3739,
+   "text": "BEAR CLAW",
+   "matchScore": 1,
+   "confidence": 74
+  },
+  "skyebits": {
+   "x": 0.5604,
+   "y": 0.4326,
+   "text": "SEBITS",
+   "matchScore": 0.75,
+   "confidence": 74
+  },
+  "twister": {
+   "x": 0.9157,
+   "y": 0.3758,
+   "text": "JWISTER",
+   "matchScore": 0.86,
+   "confidence": 70
+  },
+  "rendezvous": {
+   "x": 0.0587,
+   "y": 0.4598,
+   "text": "RENDEZVOUS",
+   "matchScore": 1,
+   "confidence": 67
+  }
+ }
+}
