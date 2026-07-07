@@ -60,21 +60,37 @@ labeled / labeled incorrectly" at the data source.
 | `node scripts/extractLabels.mjs` | OCR the map labels |
 | `node scripts/reconcileTrails.mjs [--apply]` | match labels to roster, propose missing trails |
 
+### 5. Clickable named trail paths (the finish line)
+- `scripts/tracePolylines.mjs` vectorizes the detection skeletons into 393
+  polylines (skeleton graph, junction resolution by straightest continuation,
+  Douglas-Peucker).
+- `scripts/enrichAnchors.mjs` second-pass OCR with dictionary-constrained
+  matching grew name anchors to **76/130 trails**, every new anchor visually
+  verified.
+- `scripts/assignTrailPaths.mjs` assigns polylines to trails: global
+  nearest-first label→line matching with baseline-angle agreement and chain
+  stitching across junctions; **127/130 trails have a traced path (71 claimed
+  by their own name label)**, 3 fall back to dots.
+- The app renders each trail as a **clickable path along its actual run**
+  (hover = name tooltip, click = toggle skied). Validated by automated
+  browser tests hovering 30 known trails at their label positions: 26/30
+  resolve to the exact right name; the 4 misses are pixels where two
+  parallel runs or a fallback dot overlap (hovering a few px along the run
+  resolves correctly). Median label-to-assigned-path distance: 1.5% of map
+  width.
+
 ## What's left
 
-- **Full per-name placement**: 40/130 hotspots are name-anchored; the rest
-  are on correct-color lines but not necessarily the named trail. A second
-  OCR pass (per-block contrast tuning, inverted pass for white-on-maroon lift
-  labels) could anchor most of the remainder (Juanita, Julio, etc.).
-- **Snap disambiguation**: between close parallel same-color lines the anchor
-  snap can pick the neighbour (~25px), e.g. Killink vs Royal Flush.
-- **Line tracing to polylines**: the skeleton could be vectorized into named
-  polyline paths (skeleton graph → junction resolution), enabling clickable
-  trail *paths* instead of point hotspots and exact per-name assignment.
-- **Roster completeness**: ~60 low-confidence OCR labels were discarded;
-  some map trails may still be missing from the roster.
-- **Known detector edge cases** (3 FN / 1 FP): two lines drawn under forest
-  texture are chromatically undetectable; one trail-end flare merges with a
-  lift-end blob. Documented in `src/detection/LINES.md`.
-- **Schematic map view** still uses hand-drawn synthetic paths, untouched by
-  detection.
+- **Overlap disambiguation at contested pixels**: 4/30 sampled hover points
+  land where parallel trails converge; full junction-aware tracing per named
+  run (not just per polyline) would resolve them.
+- **Roster difficulty audit**: labels prove several data difficulties differ
+  from the map's drawn color (Chute, Royal Flush, East Fall, Reason drawn
+  blue; Bear View green). The paths follow the map; the badges follow
+  `trails.ts`. Decide which is authoritative and fix the data.
+- **Unanchorable labels**: upper/lower trail variants share one map label
+  (Upper/Lower FIS etc.), lift-line runs have no label of their own, and ~15
+  labels are unreadable at any OCR setting. These use region heuristics.
+- **Known detector edge cases** (3 FN / 1 FP) documented in
+  `src/detection/LINES.md`.
+- **Schematic map view** still uses hand-drawn synthetic paths.

@@ -720,6 +720,204 @@
       "y": 0.4419,
       "angleDeg": -67.3,
       "confidence": 60
+    },
+    {
+      "text": "LOWROAD",
+      "x": 0.5495,
+      "y": 0.4681,
+      "angleDeg": 45.3,
+      "confidence": 96,
+      "pass": 2,
+      "ocr": "LOW ROAD"
+    },
+    {
+      "text": "HIGHROAD",
+      "x": 0.5178,
+      "y": 0.5399,
+      "angleDeg": -64.4,
+      "confidence": 96,
+      "pass": 2,
+      "ocr": "HIGH ROAD"
+    },
+    {
+      "text": "REASON",
+      "x": 0.6226,
+      "y": 0.1752,
+      "angleDeg": 67,
+      "confidence": 96,
+      "pass": 2,
+      "ocr": "REASON"
+    },
+    {
+      "text": "NORTHSTAR",
+      "x": 0.8127,
+      "y": 0.2953,
+      "angleDeg": 84.3,
+      "confidence": 96,
+      "pass": 2,
+      "ocr": "NORTH STAR"
+    },
+    {
+      "text": "OVATION",
+      "x": 0.5609,
+      "y": 0.3544,
+      "angleDeg": 40.7,
+      "confidence": 96,
+      "pass": 2,
+      "ocr": "OVATION"
+    },
+    {
+      "text": "SUPERSTAR",
+      "x": 0.539,
+      "y": 0.3596,
+      "angleDeg": 37.4,
+      "confidence": 96,
+      "pass": 2,
+      "ocr": "SUPERSTAR"
+    },
+    {
+      "text": "PANIC BUTTON",
+      "x": 0.4594,
+      "y": 0.4419,
+      "angleDeg": -67.3,
+      "confidence": 96,
+      "pass": 2,
+      "ocr": "PANIC BUTTON"
+    },
+    {
+      "text": "CENTERPIECE",
+      "x": 0.224,
+      "y": 0.4375,
+      "angleDeg": -55,
+      "confidence": 96,
+      "pass": 2,
+      "ocr": "CENTERPIECE"
+    },
+    {
+      "text": "TIN MAN",
+      "x": 0.8485,
+      "y": 0.3175,
+      "angleDeg": -44.3,
+      "confidence": 93,
+      "pass": 2,
+      "ocr": "VAGABOND TIN MAN"
+    },
+    {
+      "text": "RIME",
+      "x": 0.6405,
+      "y": 0.1719,
+      "angleDeg": 53.6,
+      "confidence": 91,
+      "pass": 2,
+      "ocr": "RIME"
+    },
+    {
+      "text": "NORTH WAY",
+      "x": 0.3973,
+      "y": 0.4068,
+      "angleDeg": -35.6,
+      "confidence": 91,
+      "pass": 2,
+      "ocr": "NO RTHW AY"
+    },
+    {
+      "text": "BITTERSWEET",
+      "x": 0.57,
+      "y": 0.4656,
+      "angleDeg": 15.8,
+      "confidence": 90,
+      "pass": 2,
+      "ocr": "BITTERSWEET"
+    },
+    {
+      "text": "HOME STRETCH",
+      "x": 0.2388,
+      "y": 0.8111,
+      "angleDeg": -11.3,
+      "confidence": 79,
+      "pass": 2,
+      "ocr": "HOME STR ETCH"
+    },
+    {
+      "text": "CROSSOVER",
+      "x": 0.3315,
+      "y": 0.3582,
+      "angleDeg": 38.7,
+      "confidence": 87,
+      "pass": 2,
+      "ocr": "SNOWSHED ROSSOVER"
+    },
+    {
+      "text": "BIG DIPPER GLADE",
+      "x": 0.6356,
+      "y": 0.2436,
+      "angleDeg": 72.2,
+      "confidence": 92,
+      "pass": 2,
+      "ocr": "BIG DIPPER"
+    },
+    {
+      "text": "TOUCH DOWN",
+      "x": 0.3141,
+      "y": 0.8984,
+      "angleDeg": -2.8,
+      "confidence": 77,
+      "pass": 2,
+      "ocr": "TOUCH"
+    },
+    {
+      "text": "GREAT EASTERN KP",
+      "x": 0.2214,
+      "y": 0.9076,
+      "angleDeg": -35,
+      "confidence": 69,
+      "pass": 2,
+      "ocr": "GREAT AY WV EASTERN"
+    },
+    {
+      "text": "SKYELARK",
+      "x": 0.563,
+      "y": 0.4343,
+      "angleDeg": -20,
+      "confidence": 40,
+      "pass": 2,
+      "ocr": "SKYELARY"
+    },
+    {
+      "text": "CASCADE",
+      "x": 0.5745,
+      "y": 0.2282,
+      "angleDeg": 75,
+      "confidence": 96,
+      "pass": 2,
+      "ocr": "CASCADE"
+    },
+    {
+      "text": "BEAR VIEW",
+      "x": 0.0946,
+      "y": 0.4497,
+      "angleDeg": 20,
+      "confidence": 93,
+      "pass": 2,
+      "ocr": "BEAR VIEW"
+    },
+    {
+      "text": "DOWNDRAFT",
+      "x": 0.5955,
+      "y": 0.2388,
+      "angleDeg": 52,
+      "confidence": 93,
+      "pass": 2,
+      "ocr": "DOWND RAFT"
+    },
+    {
+      "text": "ANARCHY",
+      "x": 0.5523,
+      "y": 0.2496,
+      "angleDeg": 40,
+      "confidence": 95,
+      "pass": 2,
+      "ocr": "ANARCHY"
     }
   ]
 }

@@ -4,7 +4,9 @@ import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_COLORS } from '../../ty
 import { peaks, getTrailsByPeak } from '../../data/trails';
 import { PEAK_REGIONS } from '../../data/peakRegions';
 import trailPositions from '../../data/trailPositions.json';
+import trailPathsData from '../../data/trailPaths.json';
 import { TrailHotspot } from './TrailHotspot';
+import { TrailPath } from './TrailPath';
 import { useTrailDetection } from '../../detection/useTrailDetection';
 import styles from './ImageMap.module.css';
 
@@ -145,7 +147,46 @@ export function ImageMap({
               className={styles.overlay}
               viewBox={`0 0 1000 ${Math.round(1000 / aspect)}`}
             >
-              {allTrails.map((trail) => {
+              {[...allTrails]
+                .sort((a, b) => {
+                  // anchored paths render on top of heuristic ones so hover
+                  // resolves to the better-trusted name at overlaps
+                  const rank = (t: Trail) => {
+                    const e = (
+                      trailPathsData as {
+                        trails: Record<string, { source?: string }>;
+                      }
+                    ).trails[t.id];
+                    if (!e) return 2; // dots on top
+                    return e.source === 'anchor' ? 1 : 0;
+                  };
+                  return rank(a) - rank(b);
+                })
+                .map((trail) => {
+                const vH = Math.round(1000 / aspect);
+                const path = (
+                  trailPathsData as {
+                    trails: Record<string, { points: number[][] }>;
+                  }
+                ).trails[trail.id];
+                if (path) {
+                  // detected line polyline: the whole run is clickable
+                  const pts = path.points
+                    .map((q) => `${(q[0] * 10).toFixed(1)},${((q[1] * vH) / 100).toFixed(1)}`)
+                    .join(' ');
+                  return (
+                    <TrailPath
+                      key={trail.id}
+                      trail={trail}
+                      points={pts}
+                      isSkied={skiedTrails.has(trail.id)}
+                      isHovered={hoveredTrail === trail.id}
+                      isVisible={filteredTrailIds.has(trail.id)}
+                      onClick={() => onToggleTrail(trail.id)}
+                      onHover={onHoverTrail}
+                    />
+                  );
+                }
                 const pos = hotspotPositions.get(trail.id);
                 if (!pos) return null;
                 return (
@@ -153,7 +194,7 @@ export function ImageMap({
                     key={trail.id}
                     trail={trail}
                     x={pos.x * 10}
-                    y={(pos.y * Math.round(1000 / aspect)) / 100}
+                    y={(pos.y * vH) / 100}
                     isSkied={skiedTrails.has(trail.id)}
                     isHovered={hoveredTrail === trail.id}
                     isVisible={filteredTrailIds.has(trail.id)}

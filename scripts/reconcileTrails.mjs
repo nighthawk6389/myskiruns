@@ -100,7 +100,7 @@ for (const lab of labels) {
   if (best && bestS >= 0.72) {
     // keep the highest-confidence anchor per trail
     if (!anchors[best.id] || anchors[best.id].confidence < lab.confidence) {
-      anchors[best.id] = { x: lab.x, y: lab.y, text, matchScore: +bestS.toFixed(2), confidence: lab.confidence };
+      anchors[best.id] = { x: lab.x, y: lab.y, text, matchScore: +bestS.toFixed(2), confidence: lab.confidence, angleDeg: lab.angleDeg ?? null };
     }
     usedLabels.add(lab);
   } else if (lab.confidence >= 75) {

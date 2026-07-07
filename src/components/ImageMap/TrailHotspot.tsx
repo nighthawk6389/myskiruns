@@ -17,7 +17,7 @@ interface TrailHotspotProps {
 // dot renders ~12px in diameter on a ~1100px-wide map.
 const R_DOT = 5.5;
 const R_DOT_HOVER = 8;
-const R_HIT = 16;
+const R_HIT = 11;
 const R_GLOW = 10;
 
 export function TrailHotspot({
