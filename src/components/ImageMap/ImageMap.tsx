@@ -2,8 +2,15 @@ import { useState, useMemo, useCallback } from 'react';
 import type { Trail } from '../../types';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_COLORS } from '../../types';
 import { peaks, getTrailsByPeak } from '../../data/trails';
+import { PEAK_REGIONS } from '../../data/peakRegions';
+import trailPositions from '../../data/trailPositions.json';
+import trailPathsData from '../../data/trailPaths.json';
 import { TrailHotspot } from './TrailHotspot';
+import { TrailPath } from './TrailPath';
+import { useTrailDetection } from '../../detection/useTrailDetection';
 import styles from './ImageMap.module.css';
+
+const MAP_SRC = '/killington-trail-map.jpg';
 
 interface ImageMapProps {
   filteredTrailIds: Set<string>;
@@ -13,51 +20,32 @@ interface ImageMapProps {
   onHoverTrail: (id: string | null) => void;
 }
 
-// Seeded random for consistent hotspot placement
-function seededRandom(seed: number) {
-  let s = seed;
-  return () => {
-    s = (s * 16807 + 0) % 2147483647;
-    return (s - 1) / 2147483646;
-  };
-}
-
-function hashString(str: string): number {
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    hash = ((hash << 5) - hash + str.charCodeAt(i)) | 0;
-  }
-  return Math.abs(hash);
-}
-
+// Hotspot positions are generated offline by the trail detector
+// (scripts/placeTrails.ts -> trailPositions.json), so dots land on actual
+// detected runs. Trails missing from the JSON (e.g. added after the last
+// `npm run detect:place`) fall back to a grid inside their peak's region.
 function generateHotspotPositions(): Map<string, { x: number; y: number }> {
   const positions = new Map<string, { x: number; y: number }>();
-  // Map peaks to approximate percentage positions on a typical trail map image
-  const peakRegions: Record<string, { cx: number; cy: number; w: number; h: number }> = {
-    'snowshed': { cx: 8, cy: 55, w: 10, h: 40 },
-    'sunrise': { cx: 18, cy: 50, w: 10, h: 40 },
-    'ramshead': { cx: 30, cy: 40, w: 12, h: 45 },
-    'snowdon': { cx: 44, cy: 35, w: 14, h: 50 },
-    'skye-peak': { cx: 62, cy: 28, w: 16, h: 55 },
-    'killington-peak': { cx: 78, cy: 20, w: 16, h: 60 },
-    'bear-mountain': { cx: 92, cy: 32, w: 12, h: 50 },
-  };
+  const detected = trailPositions as Record<string, { x: number; y: number }>;
 
   for (const peak of peaks) {
-    const region = peakRegions[peak.id];
-    if (!region) continue;
     const peakTrails = getTrailsByPeak(peak.id);
+    const region = PEAK_REGIONS[peak.id];
     peakTrails.forEach((trail, index) => {
-      const rng = seededRandom(hashString(trail.id));
+      const pos = detected[trail.id];
+      if (pos) {
+        positions.set(trail.id, pos);
+        return;
+      }
+      if (!region) return;
       const cols = Math.ceil(Math.sqrt(peakTrails.length));
-      const row = Math.floor(index / cols);
-      const col = index % cols;
       const rows = Math.ceil(peakTrails.length / cols);
-
-      const x = region.cx - region.w / 2 + (col / Math.max(cols - 1, 1)) * region.w + (rng() - 0.5) * 2;
-      const y = region.cy - region.h / 2 + (row / Math.max(rows - 1, 1)) * region.h + (rng() - 0.5) * 2;
-
-      positions.set(trail.id, { x: Math.max(2, Math.min(98, x)), y: Math.max(5, Math.min(95, y)) });
+      const col = index % cols;
+      const row = Math.floor(index / cols);
+      positions.set(trail.id, {
+        x: region.cx - region.w / 2 + ((col + 0.5) / cols) * region.w,
+        y: region.cy - region.h / 2 + ((row + 0.5) / rows) * region.h,
+      });
     });
   }
 
@@ -74,7 +62,15 @@ export function ImageMap({
   const [zoom, setZoom] = useState(1);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+  // true aspect of the loaded map image; the overlay viewBox follows it so
+  // circles render as circles (not stretched ellipses)
+  const [aspect, setAspect] = useState(4572 / 2704);
   const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
+  const [showDetection, setShowDetection] = useState(false);
+  // precomputed trail-LINE overlay (see scripts/generateLineOverlay.mjs)
+  const [showLines, setShowLines] = useState(false);
+
+  const detection = useTrailDetection(MAP_SRC, showDetection && imageLoaded);
 
   const hotspotPositions = useMemo(() => generateHotspotPositions(), []);
 
@@ -117,28 +113,88 @@ export function ImageMap({
           style={{ transform: `scale(${zoom})` }}
         >
           <img
-            src="/killington-trail-map.jpg"
+            src={MAP_SRC}
             alt="Killington Trail Map"
             className={styles.mapImage}
-            onLoad={() => setImageLoaded(true)}
+            onLoad={(e) => {
+              const img = e.currentTarget;
+              if (img.naturalWidth && img.naturalHeight) {
+                setAspect(img.naturalWidth / img.naturalHeight);
+              }
+              setImageLoaded(true);
+            }}
             onError={() => setImageError(true)}
             style={{ display: imageLoaded ? 'block' : 'none' }}
           />
+          {showDetection && detection.overlayUrl && (
+            <img
+              src={detection.overlayUrl}
+              alt="Detected trails"
+              className={styles.overlay}
+              style={{ pointerEvents: 'none' }}
+            />
+          )}
+          {showLines && (
+            <img
+              src="/trail-lines.png"
+              alt="Detected trail lines"
+              className={styles.overlay}
+              style={{ pointerEvents: 'none' }}
+            />
+          )}
           {(imageLoaded || imageError) && (
             <svg
               className={styles.overlay}
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
+              viewBox={`0 0 1000 ${Math.round(1000 / aspect)}`}
             >
-              {allTrails.map((trail) => {
+              {[...allTrails]
+                .sort((a, b) => {
+                  // anchored paths render on top of heuristic ones so hover
+                  // resolves to the better-trusted name at overlaps
+                  const rank = (t: Trail) => {
+                    const e = (
+                      trailPathsData as {
+                        trails: Record<string, { source?: string }>;
+                      }
+                    ).trails[t.id];
+                    if (!e) return 2; // dots on top
+                    return e.source === 'anchor' ? 1 : 0;
+                  };
+                  return rank(a) - rank(b);
+                })
+                .map((trail) => {
+                const vH = Math.round(1000 / aspect);
+                const path = (
+                  trailPathsData as {
+                    trails: Record<string, { points: number[][] }>;
+                  }
+                ).trails[trail.id];
+                if (path) {
+                  // detected line polyline: the whole run is clickable
+                  const pts = path.points
+                    .map((q) => `${(q[0] * 10).toFixed(1)},${((q[1] * vH) / 100).toFixed(1)}`)
+                    .join(' ');
+                  return (
+                    <TrailPath
+                      key={trail.id}
+                      trail={trail}
+                      points={pts}
+                      isSkied={skiedTrails.has(trail.id)}
+                      isHovered={hoveredTrail === trail.id}
+                      isVisible={filteredTrailIds.has(trail.id)}
+                      onClick={() => onToggleTrail(trail.id)}
+                      onHover={onHoverTrail}
+                    />
+                  );
+                }
                 const pos = hotspotPositions.get(trail.id);
                 if (!pos) return null;
                 return (
                   <TrailHotspot
                     key={trail.id}
                     trail={trail}
-                    x={pos.x}
-                    y={pos.y}
+                    x={pos.x * 10}
+                    y={(pos.y * vH) / 100}
                     isSkied={skiedTrails.has(trail.id)}
                     isHovered={hoveredTrail === trail.id}
                     isVisible={filteredTrailIds.has(trail.id)}
@@ -153,10 +209,51 @@ export function ImageMap({
       </div>
 
       <div className={styles.zoomControls}>
+        <button
+          className={styles.zoomBtn}
+          onClick={() => setShowLines((s) => !s)}
+          title="Toggle detected trail-line overlay"
+          style={{
+            fontSize: 15,
+            background: showLines ? 'var(--accent, #38f5ff)' : undefined,
+            color: showLines ? '#06283d' : undefined,
+          }}
+        >
+          〰
+        </button>
+        <button
+          className={styles.zoomBtn}
+          onClick={() => setShowDetection((s) => !s)}
+          title="Toggle detected snow-surface overlay"
+          style={{
+            fontSize: 16,
+            background: showDetection ? 'var(--accent, #38f5ff)' : undefined,
+            color: showDetection ? '#06283d' : undefined,
+          }}
+        >
+          {detection.loading ? '…' : '⛷'}
+        </button>
         <button className={styles.zoomBtn} onClick={() => setZoom((z) => Math.min(z + 0.25, 3))}>+</button>
         <button className={styles.zoomBtn} onClick={() => setZoom((z) => Math.max(z - 0.25, 0.5))}>-</button>
         <button className={styles.zoomBtn} onClick={() => setZoom(1)} style={{ fontSize: 12 }}>1x</button>
       </div>
+      {showDetection && detection.overlayUrl && (
+        <div
+          style={{
+            position: 'absolute',
+            top: 16,
+            left: 16,
+            background: 'rgba(15, 23, 42, 0.9)',
+            border: '1px solid var(--border)',
+            borderRadius: 8,
+            padding: '6px 12px',
+            fontSize: 12,
+            color: 'var(--text-secondary)',
+          }}
+        >
+          Detected trail surface · {(detection.coverage * 100).toFixed(1)}% of pixels
+        </div>
+      )}
 
       {hoveredTrailData && mousePos && (
         <div
