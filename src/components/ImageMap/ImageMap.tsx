@@ -60,6 +60,9 @@ export function ImageMap({
   const [zoom, setZoom] = useState(1);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+  // true aspect of the loaded map image; the overlay viewBox follows it so
+  // circles render as circles (not stretched ellipses)
+  const [aspect, setAspect] = useState(4572 / 2704);
   const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
   const [showDetection, setShowDetection] = useState(false);
   // precomputed trail-LINE overlay (see scripts/generateLineOverlay.mjs)
@@ -111,7 +114,13 @@ export function ImageMap({
             src={MAP_SRC}
             alt="Killington Trail Map"
             className={styles.mapImage}
-            onLoad={() => setImageLoaded(true)}
+            onLoad={(e) => {
+              const img = e.currentTarget;
+              if (img.naturalWidth && img.naturalHeight) {
+                setAspect(img.naturalWidth / img.naturalHeight);
+              }
+              setImageLoaded(true);
+            }}
             onError={() => setImageError(true)}
             style={{ display: imageLoaded ? 'block' : 'none' }}
           />
@@ -134,8 +143,7 @@ export function ImageMap({
           {(imageLoaded || imageError) && (
             <svg
               className={styles.overlay}
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
+              viewBox={`0 0 1000 ${Math.round(1000 / aspect)}`}
             >
               {allTrails.map((trail) => {
                 const pos = hotspotPositions.get(trail.id);
@@ -144,8 +152,8 @@ export function ImageMap({
                   <TrailHotspot
                     key={trail.id}
                     trail={trail}
-                    x={pos.x}
-                    y={pos.y}
+                    x={pos.x * 10}
+                    y={(pos.y * Math.round(1000 / aspect)) / 100}
                     isSkied={skiedTrails.has(trail.id)}
                     isHovered={hoveredTrail === trail.id}
                     isVisible={filteredTrailIds.has(trail.id)}
