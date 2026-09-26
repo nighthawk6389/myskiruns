@@ -1,5 +1,6 @@
 import jpeg from 'jpeg-js';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { dirname } from 'node:path';
 
 // Decode a JPEG file to {data:Uint8Array RGBA, width, height}
 export function decodeJpeg(path) {
@@ -31,5 +32,6 @@ export function downscale(img, targetW) {
 
 export function encodeJpeg(img, path, quality = 85) {
   const buf = jpeg.encode({ data: Buffer.from(img.data), width: img.width, height: img.height }, quality);
+  mkdirSync(dirname(path), { recursive: true });
   writeFileSync(path, buf.data);
 }

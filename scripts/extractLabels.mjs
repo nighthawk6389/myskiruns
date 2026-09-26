@@ -26,7 +26,7 @@ import sharp from 'sharp';
 import { createWorker, PSM } from 'tesseract.js';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { drawText, drawDot } from './lib/draw.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -683,7 +683,13 @@ async function main() {
     confidence: l.confidence,
   }));
   final.sort((a, b) => b.confidence - a.confidence);
-  writeFileSync(OUT, JSON.stringify({ labels: final }, null, 2) + '\n');
+  // pass-2 labels were appended by enrichAnchors.mjs --commit after visual
+  // verification; this pass cannot reproduce them, so carry them over
+  const verified = existsSync(OUT)
+    ? JSON.parse(readFileSync(OUT, 'utf8')).labels.filter((l) => l.pass === 2)
+    : [];
+  writeFileSync(OUT, JSON.stringify({ labels: [...final, ...verified] }, null, 2) + '\n');
+  if (verified.length) console.log(`kept ${verified.length} verified pass-2 labels`);
 
   const meanConf = final.reduce((s, l) => s + l.confidence, 0) / Math.max(1, final.length);
   console.log(`\nwrote ${OUT}`);

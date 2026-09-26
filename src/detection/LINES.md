@@ -83,9 +83,16 @@ two FNs where the line ink is literally absent under forest texture
 
 Consumers:
 - `npm run lines:png` → `public/trail-lines.png`, the app's 〰 overlay.
-- `npm run lines:place` → `src/data/trailPositions.json`: hotspots placed ON
-  detected lines whose color matches each trail's difficulty, spread by
-  farthest-point sampling, hardest-highest within each peak region.
+- `scripts/tracePolylines.mjs` → `src/data/linePolylines.json` → 
+  `scripts/assignTrailPaths.mjs` → `src/data/trailPaths.json` (the app's
+  clickable paths).
+- `npm run lines:place` → `src/data/trailPositions.json`, dot fallback for
+  trails without a path.
+
+**Scope of these numbers:** they say whether a pixel is on *some* trail
+line. They say nothing about whether the line gets the right *name*; that
+end-to-end accuracy is much lower (see "Honest end-to-end status" in the
+repo README).
 
 ## Data-quality findings (why trails "weren't labeled")
 
@@ -105,14 +112,14 @@ wrong:
 
 `scripts/extractLabels.mjs` OCRs the map's trail-name labels: dark-glyph
 detection → word clustering → PCA baseline angle → counter-rotated crops →
-tesseract.js (local langdata; the CDN is proxy-blocked). Result: **103 labels,
-mean confidence 90.4**, positions verified 16/16 on zoomed spot-checks
+tesseract.js (local langdata; the CDN is proxy-blocked). Result: **103 labels in pass 1
+(mean confidence 90.4), 125 after the verified pass 2** (`enrichAnchors.mjs`), positions verified 16/16 on zoomed spot-checks
 (`src/data/labelAnchors.json`).
 
 `scripts/reconcileTrails.mjs` fuzzy-matches labels to the roster (Levenshtein
 plus containment, because OCR truncates words that touch trail lines):
 
-- **54 trails matched to name anchors** (`src/data/trailAnchors.json`);
+- **54 trails matched to name anchors** in pass 1 (76 after pass 2) (`src/data/trailAnchors.json`);
   `npm run lines:place` now places those hotspots ON the line nearest their
   own name label (color-matched), rest by farthest-point spreading.
 - **11 missing trails added to `data/trails.ts`** after hand-curation of the
@@ -123,9 +130,11 @@ plus containment, because OCR truncates words that touch trail lines):
   per the map.
 
 Validation criterion #5 — **name-anchor spot-check**: zoomed crops of anchored
-hotspots confirm dots on the named trail's line at the label; known
-imperfection: between close parallel same-color lines the snap can pick the
-neighbour (~25px), e.g. Killink vs Royal Flush.
+hotspots. A later random-sample audit (repo README) found 3 of 8 anchored
+paths on the wrong line: the snap picks a neighbouring line when two lines
+flank a label, when the roster difficulty is wrong (the same-color
+preference then pulls to the wrong line), or when the trail is a glade with
+no line.
 
 Remaining gaps: ~60 low-confidence labels were discarded (precision first);
 lift names printed white-on-maroon are unreadable to this pipeline; truncated

@@ -4,7 +4,9 @@ A React + TypeScript app for tracking which Killington trails you've skied,
 with hotspots overlaid on the actual resort trail map. The interesting part of
 this repo is the **computer-vision pipeline** that reads the trail map image:
 it detects the colored trail lines, OCRs the trail-name labels, audits the
-trail roster, and places every hotspot on the correct line.
+trail roster, and turns trails into clickable paths. Line detection is solid;
+assigning the right *name* to each line is not solved yet — see
+"Honest end-to-end status" below.
 
 ## Running
 
@@ -35,8 +37,8 @@ recall green 29/29, blue 23/24, black 17/19. Docs and methodology:
 `src/detection/LINES.md`.
 
 ### 3. Label OCR + roster reconciliation
-`scripts/extractLabels.mjs` OCRs the rotated trail-name labels (103 labels,
-mean confidence 90.4). `scripts/reconcileTrails.mjs` matches them to the
+`scripts/extractLabels.mjs` OCRs the rotated trail-name labels (103 labels
+in pass 1, 125 after the verified pass 2). `scripts/reconcileTrails.mjs` matches them to the
 roster: 54 trails gained name anchors; **11 trails that were missing from
 `src/data/trails.ts` were added** (Blue Heaven, Helter Skelter, Full House,
 Frolic, The Jug, Shorty, Bearly, Killink, Gateway, Highlander, Sassafras) and
@@ -45,10 +47,25 @@ labeled / labeled incorrectly" at the data source.
 
 ### 4. Detection-driven app assets
 - `public/trail-lines.png` — difficulty-colored line overlay (〰 toggle).
-- `src/data/trailPositions.json` — hotspot positions: 40 name-anchored at
-  their OCR'd label, the rest spread over color-matched lines per peak.
+- `src/data/trailPositions.json` — dot positions, now used only for trails
+  without a traced path (`npm run lines:place` owns this file; the v1
+  `detect:place` writes to `/tmp/explore/` so it can't clobber it).
 
-### Scripts
+### 5. Clickable trail paths
+- `scripts/tracePolylines.mjs` vectorizes the detection skeletons into 393
+  polylines (skeleton graph, junction resolution by straightest continuation,
+  Douglas-Peucker).
+- `scripts/enrichAnchors.mjs` second-pass OCR with dictionary-constrained
+  matching grew name anchors to 76/130 trails.
+- `scripts/assignTrailPaths.mjs` assigns polylines to trails: nearest-first
+  label→line matching with baseline-angle agreement and chain stitching.
+  Output: 127/130 trails get a path — **71 claimed via their own name label
+  (`source: anchor`), 56 guessed by a region/color heuristic
+  (`source: region`)**.
+- The app renders each path as a clickable polyline (hover = name, click =
+  toggle skied).
+
+## Scripts
 
 | command | purpose |
 |---|---|
@@ -60,37 +77,79 @@ labeled / labeled incorrectly" at the data source.
 | `node scripts/extractLabels.mjs` | OCR the map labels |
 | `node scripts/reconcileTrails.mjs [--apply]` | match labels to roster, propose missing trails |
 
-### 5. Clickable named trail paths (the finish line)
-- `scripts/tracePolylines.mjs` vectorizes the detection skeletons into 393
-  polylines (skeleton graph, junction resolution by straightest continuation,
-  Douglas-Peucker).
-- `scripts/enrichAnchors.mjs` second-pass OCR with dictionary-constrained
-  matching grew name anchors to **76/130 trails**, every new anchor visually
-  verified.
-- `scripts/assignTrailPaths.mjs` assigns polylines to trails: global
-  nearest-first label→line matching with baseline-angle agreement and chain
-  stitching across junctions; **127/130 trails have a traced path (71 claimed
-  by their own name label)**, 3 fall back to dots.
-- The app renders each trail as a **clickable path along its actual run**
-  (hover = name tooltip, click = toggle skied). Validated by automated
-  browser tests hovering 30 known trails at their label positions: 26/30
-  resolve to the exact right name; the 4 misses are pixels where two
-  parallel runs or a fallback dot overlap (hovering a few px along the run
-  resolves correctly). Median label-to-assigned-path distance: 1.5% of map
-  width.
+## Honest end-to-end status (audit, Sept 2026)
+
+The detector scores (97% F1) measure *line pixels*, not *named trails*. The
+real goal — every trail drawn on its own line, clickable, with the right
+name — was audited directly on zoomed crops of a random sample:
+
+| group | sampled | on the correct line | wrong line | can't verify |
+|---|---|---|---|---|
+| anchored (label-claimed) | 8 | 5 (4 of them only partially covered) | 3 | 0 |
+| region heuristic | 10 | 0 | 6 | 4 |
+
+- Anchored errors: roster difficulty wrong so the same-color preference picks
+  a neighbouring line (Breakaway is drawn black, roster says blue); label
+  sits between two lines and the neighbour wins (Bear Cub → Ridgeview's
+  line); glades with no drawn line get forced onto one (Treezy).
+- Region guesses mostly steal the *unlabeled continuation of another trail*
+  (Snow Play → lower Great Northern, Lower Home Stretch → Bear Trax, Lower
+  Northbrook → Caper, Start Park → Easy Street).
+- Coverage: median assigned path is ~160px on a 4572px map (fragments between
+  junctions), and only **53% of the detected trail-line length is clickable at
+  all**.
+- The earlier "26/30 hover" test was circular — it hovered on whatever path
+  had been assigned, so a wrong line still passed. Don't use it as evidence.
+
+Realistic estimate: roughly 40% of trails are on the right line, most only
+partially. Treat `source: region` paths as unverified guesses.
+
+## Prior attempts (other branches — none merged to `main`)
+
+`main` has not moved since March 2026; every attempt below started from it.
+
+| branch / PR | approach | outcome / lesson |
+|---|---|---|
+| `ski-trail-clickable-overlays` (#3) | sweepline tracing + Hungarian matching to label positions read *visually by AI agents* from crops | claimed 114/115 matched, but keyed pink/yellow as trail colors (those are highlight bands and boundary dots); tesseract got 2/114 |
+| `ski-run-plotting-explanation` (#4), `improve-extraction-metrics` (#5), `heuristic-cleanup-and-naming-refactor` | Python OpenCV: HSV + heuristic scoring + skeletons, text inpainting, SAM 2 click tool, Claude-Vision naming step | 90%+ on self-defined pixel metrics; naming step needs an API key and was never run; SAM 2 tool needs a desktop display; easyocr POC 17%. PR #4 notes "the recall metric itself was wrong" |
+| `fix-trail-overlays`, `debug-trail-map-overlay` | hand-set coordinates / debug overlays | point fixes only |
+| `fix-build-add-e2e-tests` | Playwright E2E tests for selection + overlay alignment | reusable |
+| this branch (#6) | JS line detector, rotation-aware OCR, label-anchored assignment | best line detection and OCR so far; naming still ~40% (above) |
+
+Common failure: each attempt optimized a proxy metric (pixels, coverage,
+label count) that it defined itself, and none had a human-verified,
+per-trail ground truth for the actual goal.
+
+Note: `TrailMapForWeb-compressed.pdf` (commit `4d4a326`) is a flattened
+raster (one JPEG-2000 image, authored in Illustrator, no vector layers). Its
+image is sharper than `public/killington-trail-map.jpg`, which was resampled
+and re-encoded with 4:2:0 chroma subsampling — prefer it as pipeline input.
 
 ## What's left
 
-- **Overlap disambiguation at contested pixels**: 4/30 sampled hover points
-  land where parallel trails converge; full junction-aware tracing per named
-  run (not just per polyline) would resolve them.
-- **Roster difficulty audit**: labels prove several data difficulties differ
-  from the map's drawn color (Chute, Royal Flush, East Fall, Reason drawn
-  blue; Bear View green). The paths follow the map; the badges follow
-  `trails.ts`. Decide which is authoritative and fix the data.
-- **Unanchorable labels**: upper/lower trail variants share one map label
-  (Upper/Lower FIS etc.), lift-line runs have no label of their own, and ~15
-  labels are unreadable at any OCR setting. These use region heuristics.
-- **Known detector edge cases** (3 FN / 1 FP) documented in
-  `src/detection/LINES.md`.
-- **Schematic map view** still uses hand-drawn synthetic paths.
+1. **Per-trail ground truth for the real goal**: for each of the 130 trails,
+   its line (or "no line: glade/area"), human-verified. It is both the
+   shipping data and the test set. Fastest route: a review mode that shows
+   each proposed overlay for ✓/✗ and snaps a click to the detected polylines.
+2. **Stop shipping region guesses** (or mark them unverified) and extend
+   anchored trails along their own unlabeled continuations instead.
+3. **Roster authority**: the map disagrees with `trails.ts` difficulties
+   (Chute, Royal Flush, East Fall, Reason drawn blue; Bear View green;
+   Breakaway black); ~18 map trails are still missing; some roster entries
+   (Mountain Training Station, Snow Play, Start Park) may not be lines.
+4. **Glades/parks** (14 roster entries) often have a marker + tree icon but
+   no line — decide how they should be clickable.
+5. Known detector edge cases (3 FN / 1 FP) in `src/detection/LINES.md`;
+   schematic view still uses synthetic paths.
+
+## Regenerating the data (order matters)
+
+```bash
+node scripts/extractLabels.mjs        # OCR -> labelAnchors.json (keeps pass-2 labels)
+node scripts/enrichAnchors.mjs        # pass-2 proposals -> /tmp/explore2/enrich; then --commit <ids>
+node scripts/reconcileTrails.mjs      # labels -> trailAnchors.json
+node scripts/tracePolylines.mjs       # detection -> linePolylines.json
+node scripts/assignTrailPaths.mjs     # -> trailPaths.json (--render for audit)
+npm run lines:place                   # fallback dots -> trailPositions.json
+npm run lines:png                     # -> public/trail-lines.png
+```

@@ -83,20 +83,15 @@ parking, and white base buildings.
 Beware overfitting: 58 points is small, so favour simple, well-motivated
 thresholds and always confirm changes on the whole-image overlay.
 
-## Limitations / next steps
+## Limitations / status
 
-- **Buildings** at the base are neutral white and pass the colour test. Telling
-  them from snow needs a non-colour cue (texture, sharp rectangular edges, or
-  the fact that runs are bordered by forest). This is the main precision ceiling.
-- The detector finds trail *surface*, not the thin forest-embedded trail lines
-  drawn purely as coloured strokes — those would need separate line detection.
-- Output is a pixel mask, not named runs. `scripts/placeTrails.ts`
-  (`npm run detect:place`) bridges the gap: it distributes each peak's trails
-  across the detected run pixels in that peak's region (`data/peakRegions.ts`,
-  calibrated against the map's peak labels), using farthest-point sampling with
-  a mask-density filter (so it doesn't pick isolated false-positive speckles)
-  and pairing harder trails with higher points. The result
-  (`data/trailPositions.json`) drives the image-map hotspots, and `--render`
-  writes an audit image to /tmp/explore/placement.jpg. Which *named* trail gets
-  which point within a peak is still heuristic — the map's run labels aren't
-  machine-readable — so exact per-name placement is the remaining gap.
+This v1 detector is **superseded for trail identification** by the line
+detector (`LINES.md`): trails are identified by their colored lines, not by
+snow surface. It remains as the ⛷ overlay and a reference.
+
+- **Buildings** at the base are neutral white and pass the colour test — the
+  main precision ceiling of this approach.
+- `scripts/placeTrails.ts` (`npm run detect:place`) is the old v1 placement;
+  it now writes to `/tmp/explore/` only. The app's dots come from
+  `npm run lines:place`, its paths from `scripts/assignTrailPaths.mjs`; see
+  the repo README for the end-to-end status.

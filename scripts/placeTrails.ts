@@ -4,10 +4,10 @@
 //
 // Runs the trail detector on the map, then distributes each peak's trails across
 // the *detected* run pixels inside that peak's region (farthest-point sampling
-// for a good spread). Writes src/data/trailPositions.json, consumed by the
-// image-map view. Identity within a peak is heuristic — the map's run labels
-// are not machine-readable here — but every hotspot lands on real snow.
-import { writeFileSync, readFileSync } from 'node:fs';
+// for a good spread). SUPERSEDED by scripts/placeTrailsOnLines.mjs, which owns
+// src/data/trailPositions.json; this v1 result goes to /tmp/explore so running
+// it can never overwrite the app's data.
+import { writeFileSync, readFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import { decodeJpeg, downscale, encodeJpeg } from './lib/image.mjs';
@@ -174,8 +174,9 @@ function round(p: Pt): Pt {
   };
 }
 
+mkdirSync('/tmp/explore', { recursive: true });
 writeFileSync(
-  resolve(root, 'src/data/trailPositions.json'),
+  '/tmp/explore/trailPositions.v1.json',
   JSON.stringify(positions, null, 0) + '\n',
 );
 console.log(

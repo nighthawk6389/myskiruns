@@ -29,7 +29,7 @@ import { cropScaled, drawText } from './lib/draw.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const MAP = resolve(root, 'public/killington-trail-map.jpg');
 const ANCHORS = resolve(root, 'src/data/labelAnchors.json');
-const SCRATCH = '/tmp/claude-0/-home-user-myskiruns/1c44806e-766f-55ff-af2b-8d49ae9b9cf4/scratchpad';
+const SCRATCH = process.env.ENRICH_DIR ?? '/tmp/explore2/enrich';
 const PROPOSALS = `${SCRATCH}/enrich_proposals.json`;
 
 // ---------------------------------------------------------------- commit mode

@@ -20,10 +20,13 @@ interface ImageMapProps {
   onHoverTrail: (id: string | null) => void;
 }
 
-// Hotspot positions are generated offline by the trail detector
-// (scripts/placeTrails.ts -> trailPositions.json), so dots land on actual
-// detected runs. Trails missing from the JSON (e.g. added after the last
-// `npm run detect:place`) fall back to a grid inside their peak's region.
+// Trails are drawn as clickable paths from trailPaths.json
+// (scripts/assignTrailPaths.mjs). Trails without a path fall back to a dot from
+// trailPositions.json (`npm run lines:place`), then to a grid inside their
+// peak's region.
+const TRAIL_PATHS = (
+  trailPathsData as { trails: Record<string, { points: number[][]; source?: string }> }
+).trails;
 function generateHotspotPositions(): Map<string, { x: number; y: number }> {
   const positions = new Map<string, { x: number; y: number }>();
   const detected = trailPositions as Record<string, { x: number; y: number }>;
@@ -152,11 +155,7 @@ export function ImageMap({
                   // anchored paths render on top of heuristic ones so hover
                   // resolves to the better-trusted name at overlaps
                   const rank = (t: Trail) => {
-                    const e = (
-                      trailPathsData as {
-                        trails: Record<string, { source?: string }>;
-                      }
-                    ).trails[t.id];
+                    const e = TRAIL_PATHS[t.id];
                     if (!e) return 2; // dots on top
                     return e.source === 'anchor' ? 1 : 0;
                   };
@@ -164,11 +163,7 @@ export function ImageMap({
                 })
                 .map((trail) => {
                 const vH = Math.round(1000 / aspect);
-                const path = (
-                  trailPathsData as {
-                    trails: Record<string, { points: number[][] }>;
-                  }
-                ).trails[trail.id];
+                const path = TRAIL_PATHS[trail.id];
                 if (path) {
                   // detected line polyline: the whole run is clickable
                   const pts = path.points
