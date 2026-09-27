@@ -1,0 +1,3827 @@
+{
+ "_note": "Human review decisions exported from the Killington Trail Check page",
+ "reviews": {
+  "anarchy": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:41:26.023Z",
+   "labelAt": [
+    54.92,
+    24.89
+   ]
+  },
+  "bear-claw": {
+   "status": "confirmed",
+   "polylines": [
+    106,
+    218,
+    223
+   ],
+   "drawn": [
+    [
+     1314,
+     938
+    ],
+    [
+     1367,
+     959
+    ],
+    [
+     1422,
+     991
+    ],
+    [
+     1453,
+     1035
+    ],
+    [
+     1463,
+     1114
+    ],
+    [
+     1518,
+     1162
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:43:15.903Z"
+  },
+  "bear-cub": {
+   "status": "confirmed",
+   "polylines": [
+    2,
+    21,
+    55,
+    67,
+    75,
+    203,
+    335,
+    354,
+    375,
+    378
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:24:18.059Z"
+  },
+  "bear-mountain-liftline": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:44:30.154Z"
+  },
+  "bear-run": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:48:45.848Z"
+  },
+  "bear-trax": {
+   "status": "confirmed",
+   "polylines": [
+    39,
+    66,
+    70,
+    78,
+    154,
+    181,
+    182,
+    285,
+    376
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:43:35.336Z"
+  },
+  "bear-view": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     352,
+     1212
+    ],
+    [
+     375,
+     1216
+    ],
+    [
+     403,
+     1217
+    ],
+    [
+     454,
+     1218
+    ],
+    [
+     471,
+     1237
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:24:27.035Z"
+  },
+  "bearly": {
+   "status": "confirmed",
+   "polylines": [
+    136,
+    175,
+    192,
+    205,
+    208,
+    232,
+    236,
+    336,
+    337,
+    371
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:50:03.087Z"
+  },
+  "big-dipper-glade": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:38:31.623Z",
+   "labelAt": [
+    63.46,
+    24.24
+   ]
+  },
+  "bittersweet": {
+   "status": "confirmed",
+   "polylines": [
+    45,
+    252,
+    301,
+    315
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:31:31.598Z"
+  },
+  "blue-heaven": {
+   "status": "confirmed",
+   "polylines": [
+    278,
+    329
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:48:50.558Z"
+  },
+  "breakaway": {
+   "status": "confirmed",
+   "polylines": [
+    100,
+    160,
+    201,
+    276
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:33:44.895Z"
+  },
+  "bunny-buster": {
+   "status": "confirmed",
+   "polylines": [
+    121,
+    155,
+    275
+   ],
+   "drawn": [
+    [
+     3426,
+     990
+    ],
+    [
+     3438,
+     972
+    ],
+    [
+     3439,
+     947
+    ],
+    [
+     3427,
+     937
+    ],
+    [
+     3418,
+     915
+    ],
+    [
+     3412,
+     900
+    ],
+    [
+     3433,
+     874
+    ],
+    [
+     3455,
+     845
+    ],
+    [
+     3492,
+     793
+    ],
+    [
+     3522,
+     749
+    ],
+    [
+     3547,
+     701
+    ],
+    [
+     3566,
+     677
+    ],
+    [
+     3584,
+     661
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:29:49.930Z"
+  },
+  "caper": {
+   "status": "confirmed",
+   "polylines": [
+    81,
+    107,
+    151,
+    227
+   ],
+   "drawn": [
+    [
+     4070,
+     884
+    ],
+    [
+     4127,
+     861
+    ],
+    [
+     4179,
+     857
+    ],
+    [
+     4230,
+     833
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:28:27.942Z"
+  },
+  "cascade": {
+   "status": "confirmed",
+   "polylines": [
+    60
+   ],
+   "drawn": [
+    [
+     2650,
+     631
+    ],
+    [
+     2632,
+     581
+    ],
+    [
+     2614,
+     533
+    ],
+    [
+     2607,
+     484
+    ],
+    [
+     2583,
+     438
+    ],
+    [
+     2570,
+     388
+    ],
+    [
+     2557,
+     348
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:38:07.275Z"
+  },
+  "catwalk": {
+   "status": "confirmed",
+   "polylines": [
+    204
+   ],
+   "drawn": [
+    [
+     2677,
+     344
+    ],
+    [
+     2663,
+     322
+    ],
+    [
+     2650,
+     298
+    ],
+    [
+     2649,
+     278
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:34:10.447Z"
+  },
+  "centerpiece": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:43:21.141Z",
+   "labelAt": [
+    22.14,
+    44.47
+   ]
+  },
+  "chute": {
+   "status": "confirmed",
+   "polylines": [
+    47,
+    113,
+    139
+   ],
+   "drawn": [
+    [
+     3560,
+     771
+    ],
+    [
+     3583,
+     741
+    ],
+    [
+     3597,
+     706
+    ],
+    [
+     3610,
+     681
+    ],
+    [
+     3619,
+     656
+    ],
+    [
+     3622,
+     650
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:30:05.115Z"
+  },
+  "conclusion": {
+   "status": "confirmed",
+   "polylines": [
+    54,
+    215,
+    351
+   ],
+   "drawn": [
+    [
+     3144,
+     1118
+    ],
+    [
+     3177,
+     1081
+    ],
+    [
+     3222,
+     1041
+    ],
+    [
+     3261,
+     1008
+    ],
+    [
+     3267,
+     985
+    ],
+    [
+     3274,
+     956
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:30:22.425Z"
+  },
+  "cruise-control": {
+   "status": "confirmed",
+   "polylines": [
+    31,
+    108,
+    308
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:33:28.846Z"
+  },
+  "devils-fiddle": {
+   "status": "confirmed",
+   "polylines": [
+    32,
+    41
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:42:48.260Z"
+  },
+  "double-dipper": {
+   "status": "confirmed",
+   "polylines": [
+    162,
+    189
+   ],
+   "drawn": [
+    [
+     2865,
+     708
+    ],
+    [
+     2853,
+     657
+    ],
+    [
+     2836,
+     613
+    ],
+    [
+     2825,
+     569
+    ],
+    [
+     2814,
+     542
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:38:28.157Z"
+  },
+  "downdraft": {
+   "status": "confirmed",
+   "polylines": [
+    99,
+    149,
+    199,
+    209
+   ],
+   "drawn": [
+    [
+     2723,
+     636
+    ],
+    [
+     2703,
+     607
+    ],
+    [
+     2686,
+     584
+    ],
+    [
+     2674,
+     549
+    ],
+    [
+     2682,
+     507
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:38:19.172Z"
+  },
+  "dream-maker-headwall": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     2036,
+     926
+    ],
+    [
+     2038,
+     945
+    ],
+    [
+     2027,
+     964
+    ],
+    [
+     1996,
+     980
+    ],
+    [
+     1962,
+     1003
+    ],
+    [
+     1943,
+     1020
+    ],
+    [
+     1898,
+     1050
+    ],
+    [
+     1875,
+     1060
+    ],
+    [
+     1856,
+     1063
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:36:24.733Z"
+  },
+  "dream-maker": {
+   "status": "confirmed",
+   "polylines": [
+    7
+   ],
+   "drawn": [
+    [
+     1547,
+     1379
+    ],
+    [
+     1578,
+     1366
+    ],
+    [
+     1616,
+     1340
+    ],
+    [
+     1665,
+     1312
+    ],
+    [
+     1696,
+     1299
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:36:15.161Z"
+  },
+  "east-fall": {
+   "status": "confirmed",
+   "polylines": [
+    309,
+    360
+   ],
+   "drawn": [
+    [
+     2924,
+     558
+    ],
+    [
+     2944,
+     573
+    ],
+    [
+     2973,
+     601
+    ],
+    [
+     2995,
+     618
+    ],
+    [
+     3016,
+     661
+    ],
+    [
+     3051,
+     682
+    ],
+    [
+     3052,
+     683
+    ],
+    [
+     3129,
+     676
+    ],
+    [
+     3167,
+     663
+    ],
+    [
+     3199,
+     654
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:39:25.682Z"
+  },
+  "easy-street": {
+   "status": "confirmed",
+   "polylines": [
+    10,
+    53,
+    94,
+    140,
+    191,
+    296,
+    297
+   ],
+   "drawn": [
+    [
+     4049,
+     1176
+    ],
+    [
+     4008,
+     1168
+    ],
+    [
+     3943,
+     1183
+    ],
+    [
+     3914,
+     1189
+    ],
+    [
+     3897,
+     1197
+    ],
+    [
+     4074,
+     1162
+    ],
+    [
+     3532,
+     1544
+    ],
+    [
+     3513,
+     1542
+    ],
+    [
+     3495,
+     1561
+    ],
+    [
+     3467,
+     1586
+    ],
+    [
+     3438,
+     1596
+    ],
+    [
+     3399,
+     1614
+    ],
+    [
+     3364,
+     1642
+    ],
+    [
+     3355,
+     1656
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:25:33.378Z"
+  },
+  "escapade": {
+   "status": "confirmed",
+   "polylines": [
+    98,
+    219
+   ],
+   "drawn": [
+    [
+     2581,
+     636
+    ],
+    [
+     2565,
+     598
+    ],
+    [
+     2528,
+     570
+    ],
+    [
+     2504,
+     535
+    ],
+    [
+     2474,
+     501
+    ],
+    [
+     2450,
+     478
+    ],
+    [
+     2420,
+     461
+    ],
+    [
+     2411,
+     440
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:39:10.057Z"
+  },
+  "falls-brook": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:43:45.686Z"
+  },
+  "field-goal": {
+   "status": "confirmed",
+   "polylines": [
+    16,
+    34,
+    40,
+    49,
+    213,
+    228,
+    245,
+    271
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:36:57.265Z"
+  },
+  "fis": {
+   "status": "confirmed",
+   "polylines": [
+    242
+   ],
+   "drawn": [
+    [
+     2519,
+     425
+    ],
+    [
+     2520,
+     401
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:40:29.133Z"
+  },
+  "flume": {
+   "status": "confirmed",
+   "polylines": [
+    71
+   ],
+   "drawn": [
+    [
+     2727,
+     918
+    ],
+    [
+     2713,
+     878
+    ],
+    [
+     2697,
+     837
+    ],
+    [
+     2684,
+     800
+    ],
+    [
+     2679,
+     762
+    ],
+    [
+     2673,
+     734
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:38:44.222Z"
+  },
+  "frolic": {
+   "status": "confirmed",
+   "polylines": [
+    12,
+    322
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:49:23.909Z"
+  },
+  "full-house": {
+   "status": "confirmed",
+   "polylines": [
+    291
+   ],
+   "drawn": [
+    [
+     3479,
+     656
+    ],
+    [
+     3447,
+     667
+    ],
+    [
+     3420,
+     681
+    ],
+    [
+     3378,
+     698
+    ],
+    [
+     3343,
+     720
+    ],
+    [
+     3283,
+     747
+    ],
+    [
+     3270,
+     746
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:49:18.039Z"
+  },
+  "gateway": {
+   "status": "confirmed",
+   "polylines": [
+    51,
+    92
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:50:25.795Z"
+  },
+  "great-bear": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     3555,
+     799
+    ],
+    [
+     3575,
+     822
+    ],
+    [
+     3576,
+     850
+    ],
+    [
+     3586,
+     874
+    ],
+    [
+     3602,
+     921
+    ],
+    [
+     3595,
+     940
+    ],
+    [
+     3597,
+     965
+    ],
+    [
+     3591,
+     970
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:37:36.405Z"
+  },
+  "great-eastern-kp": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:40:22.519Z"
+  },
+  "great-eastern": {
+   "status": "confirmed",
+   "polylines": [
+    3,
+    4,
+    9,
+    17,
+    57,
+    65,
+    102,
+    153,
+    197,
+    241,
+    247,
+    328,
+    343
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:34:32.132Z"
+  },
+  "great-northern": {
+   "status": "confirmed",
+   "polylines": [
+    24,
+    46,
+    48,
+    52,
+    68,
+    85,
+    119,
+    120,
+    129,
+    214,
+    233,
+    254,
+    261,
+    307,
+    311,
+    314,
+    346,
+    349
+   ],
+   "drawn": [
+    [
+     2611,
+     486
+    ],
+    [
+     2654,
+     479
+    ],
+    [
+     2679,
+     497
+    ],
+    [
+     2749,
+     525
+    ],
+    [
+     2797,
+     524
+    ],
+    [
+     2837,
+     525
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:29:14.549Z"
+  },
+  "growler": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:43:19.205Z",
+   "labelAt": [
+    28.06,
+    41.86
+   ]
+  },
+  "header-kp": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     4243,
+     830
+    ],
+    [
+     4214,
+     858
+    ],
+    [
+     4177,
+     885
+    ],
+    [
+     4140,
+     927
+    ],
+    [
+     4097,
+     977
+    ],
+    [
+     4043,
+     1025
+    ],
+    [
+     3998,
+     1084
+    ],
+    [
+     3935,
+     1129
+    ],
+    [
+     3865,
+     1206
+    ],
+    [
+     3780,
+     1292
+    ],
+    [
+     3707,
+     1372
+    ],
+    [
+     3590,
+     1466
+    ],
+    [
+     3493,
+     1541
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:42:13.632Z"
+  },
+  "header": {
+   "status": "confirmed",
+   "polylines": [
+    20,
+    25,
+    28,
+    244
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:27:50.411Z"
+  },
+  "helter-skelter": {
+   "status": "confirmed",
+   "polylines": [
+    226,
+    267
+   ],
+   "drawn": [
+    [
+     2441,
+     404
+    ],
+    [
+     2451,
+     399
+    ],
+    [
+     2424,
+     410
+    ],
+    [
+     2400,
+     428
+    ],
+    [
+     2373,
+     442
+    ],
+    [
+     2352,
+     453
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:49:09.018Z"
+  },
+  "high-road": {
+   "status": "confirmed",
+   "polylines": [
+    138,
+    304
+   ],
+   "drawn": [
+    [
+     2353,
+     1446
+    ],
+    [
+     2349,
+     1477
+    ],
+    [
+     2331,
+     1514
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:40:00.138Z"
+  },
+  "highlander": {
+   "status": "confirmed",
+   "polylines": [
+    235,
+    289
+   ],
+   "drawn": [
+    [
+     2774,
+     1297
+    ],
+    [
+     2749,
+     1299
+    ],
+    [
+     2701,
+     1311
+    ],
+    [
+     2647,
+     1315
+    ],
+    [
+     2603,
+     1313
+    ],
+    [
+     2508,
+     1315
+    ],
+    [
+     2479,
+     1309
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:50:38.159Z"
+  },
+  "highline": {
+   "status": "confirmed",
+   "polylines": [
+    38,
+    168,
+    211
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:36:29.419Z"
+  },
+  "home-stretch": {
+   "status": "confirmed",
+   "polylines": [
+    5,
+    15,
+    43,
+    127,
+    143,
+    248
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:34:47.662Z"
+  },
+  "idler": {
+   "status": "confirmed",
+   "polylines": [
+    36
+   ],
+   "drawn": [
+    [
+     3070,
+     1403
+    ],
+    [
+     3035,
+     1379
+    ],
+    [
+     3005,
+     1349
+    ],
+    [
+     2970,
+     1334
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:22:39.899Z"
+  },
+  "juggernaut": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:34:56.016Z"
+  },
+  "julio": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:39:53.334Z",
+   "labelAt": [
+    55.18,
+    30.76
+   ]
+  },
+  "k1-gondola-run": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:41:22.426Z"
+  },
+  "killington-liftline": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:41:45.634Z"
+  },
+  "killink": {
+   "status": "confirmed",
+   "polylines": [
+    158,
+    216,
+    284
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:50:19.799Z"
+  },
+  "lil-stash": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:44:43.080Z"
+  },
+  "low-road": {
+   "status": "confirmed",
+   "polylines": [
+    104
+   ],
+   "drawn": [
+    [
+     2524,
+     1275
+    ],
+    [
+     2493,
+     1241
+    ],
+    [
+     2471,
+     1229
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:42:28.568Z"
+  },
+  "lower-canyon": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:41:34.682Z"
+  },
+  "lower-fis": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:40:37.818Z"
+  },
+  "lower-home-stretch": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:34:53.365Z"
+  },
+  "lower-northbrook": {
+   "status": "confirmed",
+   "polylines": [
+    69,
+    125,
+    198
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:32:17.031Z"
+  },
+  "lower-snowdon": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:31:19.741Z"
+  },
+  "lower-wildfire": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:48:35.234Z"
+  },
+  "mountain-run": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:30:50.596Z"
+  },
+  "mountain-training": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:30:53.048Z"
+  },
+  "mouse-run": {
+   "status": "confirmed",
+   "polylines": [
+    62,
+    72,
+    280
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:42:19.696Z"
+  },
+  "mouse-trap": {
+   "status": "confirmed",
+   "polylines": [
+    338
+   ],
+   "drawn": [
+    [
+     3380,
+     940
+    ],
+    [
+     3398,
+     926
+    ],
+    [
+     3419,
+     898
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:33:36.451Z"
+  },
+  "needles-eye": {
+   "status": "confirmed",
+   "polylines": [
+    42,
+    146,
+    350
+   ],
+   "drawn": [
+    [
+     2139,
+     1637
+    ],
+    [
+     2136,
+     1618
+    ],
+    [
+     2132,
+     1596
+    ],
+    [
+     2135,
+     1575
+    ],
+    [
+     2129,
+     1560
+    ],
+    [
+     2129,
+     1543
+    ],
+    [
+     2084,
+     1410
+    ],
+    [
+     2083,
+     1166
+    ],
+    [
+     2085,
+     1051
+    ],
+    [
+     2088,
+     911
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:35:48.833Z"
+  },
+  "alpine-training-venue": {
+   "status": "confirmed",
+   "polylines": [
+    283,
+    323
+   ],
+   "drawn": [
+    [
+     4202,
+     1121
+    ],
+    [
+     4247,
+     1096
+    ],
+    [
+     4274,
+     1076
+    ],
+    [
+     4274,
+     1044
+    ],
+    [
+     4267,
+     1007
+    ],
+    [
+     4281,
+     963
+    ],
+    [
+     4293,
+     936
+    ],
+    [
+     4308,
+     910
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:53:37.844Z"
+  },
+  "carpenters-run": {
+   "status": "confirmed",
+   "polylines": [
+    77,
+    259,
+    342
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:53:26.649Z"
+  },
+  "chop-chop": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:55:13.636Z",
+   "labelAt": [
+    67.07,
+    35.99
+   ]
+  },
+  "chunnel": {
+   "status": "confirmed",
+   "polylines": [
+    257
+   ],
+   "drawn": [
+    [
+     2039,
+     1161
+    ],
+    [
+     2043,
+     1177
+    ],
+    [
+     2044,
+     1201
+    ],
+    [
+     2046,
+     1228
+    ],
+    [
+     2067,
+     1230
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:53:16.583Z"
+  },
+  "devils-den": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T12:31:54.755Z",
+   "labelAt": [
+    19.44,
+    42.29
+   ]
+  },
+  "edgemont-whiffletree": {
+   "status": "confirmed",
+   "polylines": [
+    80,
+    84
+   ],
+   "drawn": [
+    [
+     2849,
+     1843
+    ],
+    [
+     2842,
+     1805
+    ],
+    [
+     2824,
+     1754
+    ],
+    [
+     2822,
+     1699
+    ],
+    [
+     2778,
+     1654
+    ],
+    [
+     2757,
+     1593
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:51:39.869Z"
+  },
+  "escape": {
+   "status": "confirmed",
+   "polylines": [
+    156,
+    200,
+    251
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:52:57.695Z"
+  },
+  "fall-line": {
+   "status": "confirmed",
+   "polylines": [
+    229,
+    272
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:53:28.608Z"
+  },
+  "grizzly": {
+   "status": "confirmed",
+   "polylines": [
+    89
+   ],
+   "drawn": [
+    [
+     1351,
+     1519
+    ],
+    [
+     1394,
+     1508
+    ],
+    [
+     1440,
+     1483
+    ],
+    [
+     1486,
+     1466
+    ],
+    [
+     1517,
+     1425
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:51:11.179Z"
+  },
+  "high-traverse": {
+   "status": "confirmed",
+   "polylines": [
+    105,
+    266,
+    387
+   ],
+   "drawn": [
+    [
+     2694,
+     442
+    ],
+    [
+     2737,
+     420
+    ],
+    [
+     2753,
+     402
+    ],
+    [
+     2773,
+     388
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:52:18.157Z"
+  },
+  "highridge": {
+   "status": "confirmed",
+   "polylines": [
+    0,
+    19
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:51:30.355Z"
+  },
+  "homerun": {
+   "status": "confirmed",
+   "polylines": [
+    86,
+    90
+   ],
+   "drawn": [
+    [
+     2486,
+     531
+    ],
+    [
+     2522,
+     529
+    ],
+    [
+     2591,
+     528
+    ],
+    [
+     2626,
+     533
+    ],
+    [
+     2792,
+     533
+    ],
+    [
+     2945,
+     515
+    ],
+    [
+     3050,
+     553
+    ],
+    [
+     3195,
+     575
+    ],
+    [
+     3247,
+     591
+    ],
+    [
+     3250,
+     613
+    ],
+    [
+     3236,
+     639
+    ],
+    [
+     3207,
+     647
+    ],
+    [
+     3188,
+     654
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:52:02.785Z"
+  },
+  "juanita": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:54:41.423Z",
+   "labelAt": [
+    56.01,
+    29.46
+   ]
+  },
+  "jug-handle": {
+   "status": "confirmed",
+   "polylines": [
+    255
+   ],
+   "drawn": [
+    [
+     1776,
+     598
+    ],
+    [
+     1827,
+     589
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:53:08.169Z"
+  },
+  "launchpad": {
+   "status": "confirmed",
+   "polylines": [
+    132,
+    137,
+    167,
+    217,
+    312
+   ],
+   "drawn": [
+    [
+     2375,
+     705
+    ],
+    [
+     2356,
+     674
+    ],
+    [
+     2350,
+     633
+    ],
+    [
+     2326,
+     614
+    ],
+    [
+     2307,
+     592
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:52:37.307Z"
+  },
+  "learn-to-ski-ride-area": {
+   "status": "confirmed",
+   "polylines": [
+    256,
+    306,
+    250
+   ],
+   "drawn": [
+    [
+     3003,
+     1449
+    ],
+    [
+     2985,
+     1427
+    ],
+    [
+     2982,
+     1376
+    ],
+    [
+     2972,
+     1357
+    ],
+    [
+     2963,
+     1319
+    ],
+    [
+     2930,
+     1318
+    ],
+    [
+     2890,
+     1311
+    ],
+    [
+     2860,
+     1299
+    ],
+    [
+     2820,
+     1284
+    ],
+    [
+     2788,
+     1285
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:54:03.922Z"
+  },
+  "ledgewood-yurt-trail": {
+   "status": "confirmed",
+   "polylines": [
+    133
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:52:40.413Z"
+  },
+  "low-rider": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:55:15.274Z",
+   "labelAt": [
+    79.98,
+    30.33
+   ]
+  },
+  "nivis-walk": {
+   "status": "confirmed",
+   "polylines": [
+    194,
+    279
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:53:01.280Z"
+  },
+  "nowhere": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:54:37.865Z",
+   "labelAt": [
+    50.42,
+    38.92
+   ]
+  },
+  "ol-express": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1354,
+     909
+    ],
+    [
+     1332,
+     918
+    ],
+    [
+     1301,
+     937
+    ],
+    [
+     1266,
+     961
+    ],
+    [
+     1231,
+     982
+    ],
+    [
+     1201,
+     991
+    ],
+    [
+     1184,
+     987
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:54:22.191Z"
+  },
+  "powerline": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     2859,
+     387
+    ],
+    [
+     2897,
+     413
+    ],
+    [
+     2926,
+     454
+    ],
+    [
+     2952,
+     501
+    ],
+    [
+     2974,
+     524
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:54:50.435Z"
+  },
+  "racers-edge": {
+   "status": "confirmed",
+   "polylines": [
+    117,
+    169,
+    258,
+    334
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:53:40.947Z"
+  },
+  "ridge-run": {
+   "status": "confirmed",
+   "polylines": [
+    122,
+    313
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:53:42.698Z"
+  },
+  "ridgeview": {
+   "status": "confirmed",
+   "polylines": [
+    318
+   ],
+   "drawn": [
+    [
+     1258,
+     869
+    ],
+    [
+     1299,
+     859
+    ],
+    [
+     1339,
+     854
+    ],
+    [
+     1396,
+     861
+    ],
+    [
+     1441,
+     868
+    ],
+    [
+     1478,
+     872
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:51:00.418Z"
+  },
+  "scarecrow": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:55:30.688Z",
+   "labelAt": [
+    85.39,
+    32.94
+   ]
+  },
+  "skyewalker": {
+   "status": "confirmed",
+   "polylines": [
+    274
+   ],
+   "drawn": [
+    [
+     2074,
+     725
+    ],
+    [
+     2063,
+     713
+    ],
+    [
+     2057,
+     703
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:53:22.769Z"
+  },
+  "south-ridge-link": {
+   "status": "confirmed",
+   "polylines": [
+    101,
+    163,
+    240,
+    369,
+    374,
+    377
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:52:09.839Z"
+  },
+  "spillway": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     2721,
+     659
+    ],
+    [
+     2692,
+     697
+    ],
+    [
+     2675,
+     715
+    ],
+    [
+     2695,
+     745
+    ],
+    [
+     2798,
+     827
+    ],
+    [
+     2894,
+     881
+    ],
+    [
+     2941,
+     885
+    ],
+    [
+     2969,
+     894
+    ],
+    [
+     2989,
+     934
+    ],
+    [
+     2963,
+     986
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:55:06.945Z"
+  },
+  "stashway": {
+   "status": "confirmed",
+   "polylines": [
+    109
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:52:26.339Z"
+  },
+  "stitch-line": {
+   "status": "confirmed",
+   "polylines": [
+    135,
+    186
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:52:54.578Z"
+  },
+  "sunrise-trail": {
+   "status": "confirmed",
+   "polylines": [
+    225
+   ],
+   "drawn": [
+    [
+     393,
+     1175
+    ],
+    [
+     362,
+     1182
+    ],
+    [
+     317,
+     1187
+    ],
+    [
+     276,
+     1190
+    ],
+    [
+     236,
+     1208
+    ],
+    [
+     225,
+     1239
+    ],
+    [
+     206,
+     1249
+    ],
+    [
+     197,
+     1274
+    ],
+    [
+     237,
+     1282
+    ],
+    [
+     294,
+     1302
+    ],
+    [
+     342,
+     1320
+    ],
+    [
+     351,
+     1338
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:51:25.384Z"
+  },
+  "the-stairs": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:54:39.602Z",
+   "labelAt": [
+    50.61,
+    46.43
+   ]
+  },
+  "the-throne": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:55:11.808Z",
+   "labelAt": [
+    65.91,
+    29.68
+   ]
+  },
+  "thimble": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     2037,
+     976
+    ],
+    [
+     2039,
+     1008
+    ],
+    [
+     2038,
+     1045
+    ],
+    [
+     2042,
+     1090
+    ],
+    [
+     2031,
+     1125
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:54:35.258Z"
+  },
+  "trail-creek": {
+   "status": "confirmed",
+   "polylines": [
+    173
+   ],
+   "drawn": [
+    [
+     2972,
+     1841
+    ],
+    [
+     2962,
+     1802
+    ],
+    [
+     2980,
+     1759
+    ],
+    [
+     3003,
+     1741
+    ],
+    [
+     3015,
+     1719
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:54:10.154Z"
+  },
+  "north-way": {
+   "status": "confirmed",
+   "polylines": [
+    180,
+    188,
+    207
+   ],
+   "drawn": [
+    [
+     1783,
+     1145
+    ],
+    [
+     1823,
+     1111
+    ],
+    [
+     1860,
+     1079
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:40:11.511Z"
+  },
+  "northstar": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     3719,
+     920
+    ],
+    [
+     3715,
+     895
+    ],
+    [
+     3727,
+     873
+    ],
+    [
+     3725,
+     842
+    ],
+    [
+     3711,
+     802
+    ],
+    [
+     3708,
+     765
+    ],
+    [
+     3715,
+     734
+    ],
+    [
+     3724,
+     707
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:31:55.648Z"
+  },
+  "old-superstar": {
+   "status": "confirmed",
+   "polylines": [
+    359
+   ],
+   "drawn": [
+    [
+     2437,
+     878
+    ],
+    [
+     2395,
+     854
+    ],
+    [
+     2364,
+     834
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:41:43.247Z"
+  },
+  "outer-limits": {
+   "status": "confirmed",
+   "polylines": [
+    22,
+    230,
+    264,
+    277
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:42:42.873Z"
+  },
+  "ovation": {
+   "status": "confirmed",
+   "polylines": [
+    14,
+    174,
+    210,
+    270
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:35:26.072Z"
+  },
+  "panic-button": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     2179,
+     1060
+    ],
+    [
+     2163,
+     1085
+    ],
+    [
+     2134,
+     1102
+    ],
+    [
+     2126,
+     1132
+    ],
+    [
+     2121,
+     1171
+    ],
+    [
+     2098,
+     1215
+    ],
+    [
+     2093,
+     1240
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:36:00.043Z"
+  },
+  "patsys": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:33:59.439Z",
+   "labelAt": [
+    83.01,
+    30.33
+   ]
+  },
+  "pipe-dream": {
+   "status": "confirmed",
+   "polylines": [
+    111,
+    130,
+    131,
+    178,
+    187,
+    319
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:36:39.237Z"
+  },
+  "ramshead-liftline": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:27:39.258Z"
+  },
+  "ramshead-run": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:27:18.217Z"
+  },
+  "reason": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     2866,
+     505
+    ],
+    [
+     2854,
+     484
+    ],
+    [
+     2838,
+     451
+    ],
+    [
+     2832,
+     439
+    ],
+    [
+     2821,
+     413
+    ],
+    [
+     2810,
+     388
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:39:48.328Z"
+  },
+  "rendezvous": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     216,
+     1260
+    ],
+    [
+     246,
+     1251
+    ],
+    [
+     284,
+     1237
+    ],
+    [
+     325,
+     1224
+    ],
+    [
+     349,
+     1211
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:24:01.317Z"
+  },
+  "rime": {
+   "status": "confirmed",
+   "polylines": [
+    56,
+    292
+   ],
+   "drawn": [
+    [
+     2895,
+     475
+    ],
+    [
+     2886,
+     448
+    ],
+    [
+     2867,
+     433
+    ],
+    [
+     2852,
+     405
+    ],
+    [
+     2838,
+     386
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:39:38.694Z"
+  },
+  "roundabout-glade": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:37:17.141Z",
+   "labelAt": [
+    36.99,
+    28.37
+   ]
+  },
+  "roundabout": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1805,
+     795
+    ],
+    [
+     1757,
+     801
+    ],
+    [
+     1743,
+     808
+    ],
+    [
+     1713,
+     803
+    ],
+    [
+     1679,
+     806
+    ],
+    [
+     1626,
+     806
+    ],
+    [
+     1578,
+     806
+    ],
+    [
+     1537,
+     805
+    ],
+    [
+     1502,
+     805
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:37:14.246Z"
+  },
+  "royal-flush": {
+   "status": "confirmed",
+   "polylines": [
+    115,
+    161,
+    164,
+    243,
+    246
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:32:03.214Z"
+  },
+  "sass": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:31:37.936Z"
+  },
+  "sassafras": {
+   "status": "confirmed",
+   "polylines": [
+    97,
+    128,
+    171,
+    221,
+    379
+   ],
+   "drawn": [
+    [
+     1551,
+     722
+    ],
+    [
+     1569,
+     738
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:50:48.898Z"
+  },
+  "shorty": {
+   "status": "confirmed",
+   "polylines": [
+    126
+   ],
+   "drawn": [
+    [
+     1550,
+     1034
+    ],
+    [
+     1552,
+     1061
+    ],
+    [
+     1532,
+     1114
+    ],
+    [
+     1515,
+     1141
+    ],
+    [
+     1517,
+     1180
+    ],
+    [
+     1507,
+     1211
+    ],
+    [
+     1471,
+     1252
+    ],
+    [
+     1474,
+     1287
+    ],
+    [
+     1494,
+     1341
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:49:59.281Z"
+  },
+  "skye-burst-bear": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1977,
+     912
+    ],
+    [
+     1931,
+     934
+    ],
+    [
+     1857,
+     991
+    ],
+    [
+     1733,
+     1065
+    ],
+    [
+     1660,
+     1104
+    ],
+    [
+     1593,
+     1169
+    ],
+    [
+     1522,
+     1202
+    ],
+    [
+     1469,
+     1228
+    ],
+    [
+     1453,
+     1298
+    ],
+    [
+     1467,
+     1354
+    ],
+    [
+     1489,
+     1367
+    ],
+    [
+     1499,
+     1357
+    ],
+    [
+     1523,
+     1289
+    ],
+    [
+     1534,
+     1272
+    ],
+    [
+     1555,
+     1227
+    ],
+    [
+     1563,
+     1198
+    ],
+    [
+     1549,
+     1241
+    ],
+    [
+     1537,
+     1303
+    ],
+    [
+     1513,
+     1340
+    ],
+    [
+     1501,
+     1371
+    ],
+    [
+     1504,
+     1400
+    ],
+    [
+     1436,
+     1441
+    ],
+    [
+     1374,
+     1456
+    ],
+    [
+     1307,
+     1490
+    ],
+    [
+     1226,
+     1521
+    ],
+    [
+     1164,
+     1558
+    ],
+    [
+     1104,
+     1560
+    ],
+    [
+     1028,
+     1574
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:44:25.621Z"
+  },
+  "skye-hawk": {
+   "status": "confirmed",
+   "polylines": [
+    237
+   ],
+   "drawn": [
+    [
+     2307,
+     904
+    ],
+    [
+     2302,
+     886
+    ],
+    [
+     2271,
+     869
+    ],
+    [
+     2242,
+     840
+    ],
+    [
+     2209,
+     818
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:33:18.901Z"
+  },
+  "skye-peak-liftline": {
+   "status": "confirmed",
+   "polylines": [
+    287
+   ],
+   "drawn": [
+    [
+     1399,
+     1262
+    ],
+    [
+     1337,
+     1296
+    ],
+    [
+     1313,
+     1321
+    ],
+    [
+     1276,
+     1346
+    ],
+    [
+     1242,
+     1369
+    ],
+    [
+     1231,
+     1383
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:37:27.349Z"
+  },
+  "skyebits": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:33:24.545Z",
+   "labelAt": [
+    55.18,
+    44.14
+   ]
+  },
+  "skyeburst": {
+   "status": "confirmed",
+   "polylines": [
+    6,
+    73,
+    88,
+    147,
+    222
+   ],
+   "drawn": [
+    [
+     1556,
+     1195
+    ],
+    [
+     1552,
+     1230
+    ],
+    [
+     1540,
+     1269
+    ],
+    [
+     1517,
+     1313
+    ],
+    [
+     1511,
+     1347
+    ],
+    [
+     1499,
+     1373
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:33:04.826Z"
+  },
+  "skyelark": {
+   "status": "confirmed",
+   "polylines": [
+    76,
+    87,
+    110,
+    114,
+    224,
+    294,
+    356
+   ],
+   "drawn": [
+    [
+     2622,
+     1196
+    ],
+    [
+     2589,
+     1170
+    ],
+    [
+     2556,
+     1152
+    ],
+    [
+     2524,
+     1128
+    ],
+    [
+     2511,
+     1105
+    ],
+    [
+     2477,
+     1093
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:32:40.372Z"
+  },
+  "snow-play": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:23:10.859Z"
+  },
+  "snowdon-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:32:20.591Z"
+  },
+  "snowdon-liftline": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:30:57.561Z"
+  },
+  "snowshed-crossover": {
+   "status": "confirmed",
+   "polylines": [
+    96,
+    170,
+    177,
+    185,
+    212,
+    220,
+    286
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:23:20.398Z"
+  },
+  "snowshed-slope": {
+   "status": "confirmed",
+   "polylines": [
+    63,
+    64,
+    159
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T12:31:36.734Z"
+  },
+  "solitude": {
+   "status": "confirmed",
+   "polylines": [
+    1,
+    8,
+    13,
+    26,
+    260
+   ],
+   "drawn": [
+    [
+     1562,
+     476
+    ],
+    [
+     1596,
+     472
+    ],
+    [
+     1662,
+     487
+    ],
+    [
+     1719,
+     493
+    ],
+    [
+     1833,
+     480
+    ],
+    [
+     1888,
+     461
+    ],
+    [
+     1944,
+     457
+    ],
+    [
+     1986,
+     457
+    ],
+    [
+     2028,
+     477
+    ],
+    [
+     2065,
+     479
+    ],
+    [
+     2063,
+     440
+    ],
+    [
+     2086,
+     418
+    ],
+    [
+     2132,
+     428
+    ],
+    [
+     2215,
+     421
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:41:15.922Z"
+  },
+  "somewhere": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:33:40.499Z",
+   "labelAt": [
+    51.06,
+    37.07
+   ]
+  },
+  "spacewalk": {
+   "status": "confirmed",
+   "polylines": [
+    93,
+    165,
+    239
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:43:25.472Z"
+  },
+  "squeeze-play": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     3945,
+     963
+    ],
+    [
+     3915,
+     1004
+    ],
+    [
+     3840,
+     1065
+    ],
+    [
+     3790,
+     1115
+    ],
+    [
+     3730,
+     1163
+    ],
+    [
+     3672,
+     1224
+    ],
+    [
+     3651,
+     1253
+    ],
+    [
+     3575,
+     1313
+    ],
+    [
+     3535,
+     1338
+    ],
+    [
+     3512,
+     1346
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:26:29.687Z"
+  },
+  "start-park": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:28:36.927Z"
+  },
+  "sun-dog": {
+   "status": "confirmed",
+   "polylines": [
+    27
+   ],
+   "drawn": [
+    [
+     333,
+     1393
+    ],
+    [
+     354,
+     1372
+    ],
+    [
+     379,
+     1354
+    ],
+    [
+     418,
+     1331
+    ],
+    [
+     442,
+     1296
+    ],
+    [
+     461,
+     1252
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:23:44.326Z"
+  },
+  "sunrise-connector": {
+   "status": "confirmed",
+   "polylines": [
+    59,
+    249
+   ],
+   "drawn": [
+    [
+     331,
+     1193
+    ],
+    [
+     383,
+     1183
+    ],
+    [
+     452,
+     1169
+    ],
+    [
+     495,
+     1169
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:25:06.313Z"
+  },
+  "superstar-glade": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:41:47.588Z"
+  },
+  "superstar": {
+   "status": "confirmed",
+   "polylines": [
+    118,
+    202,
+    265,
+    326,
+    390
+   ],
+   "drawn": [
+    [
+     2524,
+     1011
+    ],
+    [
+     2520,
+     989
+    ],
+    [
+     2483,
+     962
+    ],
+    [
+     2456,
+     955
+    ],
+    [
+     2435,
+     932
+    ],
+    [
+     2401,
+     919
+    ],
+    [
+     2353,
+     881
+    ],
+    [
+     2306,
+     844
+    ],
+    [
+     2276,
+     799
+    ],
+    [
+     2242,
+     768
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:37:57.141Z"
+  },
+  "swirl": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:25:56.503Z"
+  },
+  "the-jug": {
+   "status": "confirmed",
+   "polylines": [
+    83,
+    196,
+    298
+   ],
+   "drawn": [
+    [
+     2277,
+     444
+    ],
+    [
+     2255,
+     452
+    ],
+    [
+     2172,
+     475
+    ],
+    [
+     2114,
+     499
+    ],
+    [
+     2022,
+     517
+    ],
+    [
+     1967,
+     542
+    ],
+    [
+     1924,
+     558
+    ],
+    [
+     1876,
+     568
+    ],
+    [
+     1837,
+     586
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:49:38.486Z"
+  },
+  "the-mall": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:42:36.748Z"
+  },
+  "the-stash": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:44:33.445Z",
+   "labelAt": [
+    38.21,
+    35.99
+   ]
+  },
+  "timberline": {
+   "status": "confirmed",
+   "polylines": [
+    23,
+    29,
+    58,
+    330,
+    392
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:28:33.749Z"
+  },
+  "tin-man": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:37:19.600Z",
+   "labelAt": [
+    84.49,
+    32.07
+   ]
+  },
+  "touch-down": {
+   "status": "confirmed",
+   "polylines": [
+    37,
+    91,
+    290
+   ],
+   "drawn": [
+    [
+     1477,
+     2245
+    ],
+    [
+     1461,
+     2236
+    ],
+    [
+     1443,
+     2239
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:33:55.891Z"
+  },
+  "treezy": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:26:06.014Z"
+  },
+  "twister": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:34:02.323Z",
+   "labelAt": [
+    91.62,
+    37.62
+   ]
+  },
+  "upper-canyon": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:41:32.487Z"
+  },
+  "upper-catwalk": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:34:15.808Z"
+  },
+  "upper-east-fall": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:39:28.702Z"
+  },
+  "upper-fis": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:30:37.182Z"
+  },
+  "upper-great-bear": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:37:41.352Z"
+  },
+  "upper-northbrook": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:32:08.133Z"
+  },
+  "upper-skyeburst": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:33:08.404Z"
+  },
+  "upper-skyelark": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:32:43.371Z"
+  },
+  "upper-snowdon": {
+   "status": "not-on-map",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:31:15.362Z"
+  },
+  "upper-vertigo": {
+   "status": "confirmed",
+   "polylines": [
+    281
+   ],
+   "drawn": [
+    [
+     2237,
+     1200
+    ],
+    [
+     2234,
+     1168
+    ],
+    [
+     2237,
+     1146
+    ],
+    [
+     2224,
+     1122
+    ],
+    [
+     2209,
+     1107
+    ],
+    [
+     2199,
+     1085
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:35:18.859Z"
+  },
+  "vagabond": {
+   "status": "confirmed",
+   "polylines": [
+    44,
+    386
+   ],
+   "drawn": [
+    [
+     3823,
+     878
+    ],
+    [
+     3858,
+     846
+    ],
+    [
+     3893,
+     789
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:28:04.210Z"
+  },
+  "valley-plunge": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1458,
+     2249
+    ],
+    [
+     1449,
+     2267
+    ],
+    [
+     1429,
+     2279
+    ],
+    [
+     1406,
+     2299
+    ],
+    [
+     1390,
+     2317
+    ],
+    [
+     1366,
+     2342
+    ],
+    [
+     1357,
+     2359
+    ],
+    [
+     1337,
+     2385
+    ],
+    [
+     1313,
+     2414
+    ],
+    [
+     1289,
+     2447
+    ],
+    [
+     1266,
+     2457
+    ],
+    [
+     1258,
+     2461
+    ],
+    [
+     1259,
+     2477
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:36:52.146Z"
+  },
+  "vertigo": {
+   "status": "confirmed",
+   "polylines": [
+    116
+   ],
+   "drawn": [
+    [
+     2270,
+     1369
+    ],
+    [
+     2267,
+     1330
+    ],
+    [
+     2261,
+     1297
+    ],
+    [
+     2259,
+     1268
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:35:09.444Z"
+  },
+  "wildfire": {
+   "status": "confirmed",
+   "polylines": [
+    61,
+    74,
+    166,
+    176,
+    352
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:42:52.651Z"
+  },
+  "woodward-peace-park": {
+   "status": "skip",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:37:43.828Z"
+  },
+  "yodeler": {
+   "status": "confirmed",
+   "polylines": [
+    30,
+    50
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:22:02.869Z"
+  }
+ }
+}

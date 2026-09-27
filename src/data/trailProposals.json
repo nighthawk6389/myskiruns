@@ -1,0 +1,1282 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles (see README). Reviews in trailReviews.json override these.",
+ "trails": {
+  "snowshed-slope": {
+   "polylines": [
+    63,
+    64,
+    159
+   ],
+   "confidence": "high",
+   "mapName": "SNOWSHED SLOPE",
+   "note": "before circle + SNOWSHED SLOPE label | starts at end of SNOWSHED SLOPE label | continuation of 159 to Snowshed base"
+  },
+  "yodeler": {
+   "polylines": [
+    30,
+    50
+   ],
+   "confidence": "high",
+   "mapName": "YODELER",
+   "note": "green line ending at circle before YODELER label | starts at end of YODELER label, through learn-to-ski junction, ends joining Idler"
+  },
+  "idler": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "IDLER",
+   "note": "starts at end of IDLER label down to Snowshed base"
+  },
+  "snowshed-crossover": {
+   "polylines": [
+    96,
+    170,
+    177,
+    185,
+    212,
+    220,
+    286
+   ],
+   "confidence": "medium",
+   "mapName": "SNOWSHED CROSSOVER",
+   "note": "SNOWSHED CROSSOVER label along it | west branch of Snowshed Crossover rejoining Great Eastern under its label | short unlabeled green connector from Home Stretch/Crossover junction src (1748,1525) west to the Great Eastern corridor mid-label (1666,1549) | toward SNOWSHED CROSSOVER dot+label | leaves"
+  },
+  "sun-dog": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "SUN DOG",
+   "note": "starts at lower end of SUN DOG label | Lower Sun Dog from below the rotated SUN DOG label down to the Sunrise Village Triple base. The polyline is closed, so its return segment draws a straight magenta chord beside the curved green line. The upper Sun Dog segment above the label (green dot + snowfla"
+  },
+  "rendezvous": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "RENDEZVOUS",
+   "note": "from green start dot SW to Sunrise Trail (59); line almost entirely covered by label"
+  },
+  "bear-cub": {
+   "polylines": [
+    2,
+    21,
+    55,
+    67,
+    75,
+    203,
+    335,
+    354,
+    375,
+    378
+   ],
+   "confidence": "high",
+   "mapName": "BEAR CUB",
+   "note": "BEAR CUB label at its NE end (between 21 and 2); runs SW past Solitude junction to Sunrise Trail junction src (484,1168); polyline is out-and-back | from Bear Mountain summit down-left to BEAR CUB label; drawn line continues east past summit (snowflake, dot, 2nd BEAR CUB label) - that stretch src (1"
+  },
+  "bear-view": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "BEAR VIEW",
+   "note": "from green dot/snowflake east to junction; mostly under label; only 33's stub touches its end. Drawn green, roster says blue"
+  },
+  "sunrise-connector": {
+   "polylines": [
+    59,
+    249
+   ],
+   "confidence": "high",
+   "mapName": "SUNRISE TRAIL",
+   "note": "from west end of SUNRISE TRAIL label down around to src (306,1311); rosterId is a loose match | continuation of 59 across Sunrise Village Triple to junction src (359,1358)"
+  },
+  "easy-street": {
+   "polylines": [
+    10,
+    53,
+    94,
+    140,
+    191,
+    296,
+    297
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "from EASY STREET label/circle at Ramshead summit around the hairpin and W | continuation of 94 W to merge with 144 | shared segment after 144 merges; leads to junction where Caper (107) and Easy Street (140) split | from junction S across Header/lift, continuous with 53 to lower EASY STREET label | "
+  },
+  "squeeze-play": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "SQUEEZE PLAY",
+   "note": "no drawn line: glade (red tree icon + difficulty symbol only)"
+  },
+  "header": {
+   "polylines": [
+    20,
+    25,
+    28,
+    244
+   ],
+   "confidence": "high",
+   "mapName": "HEADER",
+   "note": "HEADER label along it, parallel to Ramshead Express Quad | blue line along HEADER label parallel to Ramshead Express Quad | upper Header along the lift | upper Header line above snowflake/blue square | top of the Header line at Ramshead summit | 2-point chord but lies on Header blue line down to Ram"
+  },
+  "vagabond": {
+   "polylines": [
+    44,
+    386
+   ],
+   "confidence": "high",
+   "mapName": "VAGABOND",
+   "note": "Caper junction up NE to VAGABOND label; polyline closes with a chord back across trees | tiny piece at the Vagabond square (top of label)"
+  },
+  "caper": {
+   "polylines": [
+    81,
+    107,
+    151,
+    227
+   ],
+   "confidence": "high",
+   "mapName": "CAPER",
+   "note": "starts at CAPER label, runs W to Great Northern green circle | from Easy Street/Caper junction W into Caper snowflake+circle; no other label between | from lower GREAT NORTHERN label end S to the green circle/snowflake of the lower CAPER label | branch from Great Northern junction down to snowflake+"
+  },
+  "timberline": {
+   "polylines": [
+    23,
+    29,
+    58,
+    330,
+    392
+   ],
+   "confidence": "high",
+   "mapName": "TIMBERLINE",
+   "note": "from terrain-park pill S to snowflake/square of TIMBERLINE label; SQUEEZE PLAY label to its left belongs to a no-line glade (square + tree) | blue line (with orange pill) above squares/snowflake preceding TIMBERLINE label | tiny, at Timberline snowflake | tiny, at snowflake on Timberline line | star"
+  },
+  "great-northern": {
+   "polylines": [
+    24,
+    46,
+    48,
+    52,
+    68,
+    85,
+    119,
+    120,
+    129,
+    214,
+    233,
+    254,
+    261,
+    307,
+    311,
+    314,
+    346,
+    349
+   ],
+   "confidence": "high",
+   "mapName": "GREAT NORTHERN",
+   "note": "west part of 119 line; leads to square where GREAT NORTHERN label starts | from peak junction down to same Great Northern square; FIS branches off it | leads to square where GREAT NORTHERN inline label starts | from bottom of GREAT NORTHERN label past star/under-bridge SE | continuation to snowflake"
+  },
+  "bunny-buster": {
+   "polylines": [
+    121,
+    155,
+    275
+   ],
+   "confidence": "high",
+   "mapName": "BUNNY BUSTER",
+   "note": "Snowdon summit to snowflake/square of BUNNY BUSTER label | from Chute line W to lower BUNNY BUSTER snowflake/square | below lower BUNNY BUSTER label to base | blue line ending at start of BUNNY BUSTER label; drawn blue (roster says green)"
+  },
+  "chute": {
+   "polylines": [
+    47,
+    113,
+    139
+   ],
+   "confidence": "high",
+   "mapName": "CHUTE",
+   "note": "below upper CHUTE label down-left; Bunny Buster merges at its lower end | continues to snowflake/square of lower CHUTE label | blue line above CHUTE label (blue square/snowflake markers), from junction near upper BUNNY BUSTER label; side junctions with Bunny Buster/Mouse Run connectors so upper part"
+  },
+  "conclusion": {
+   "polylines": [
+    54,
+    215,
+    351
+   ],
+   "confidence": "high",
+   "mapName": "CONCLUSION",
+   "note": "from Snowdon Six base (star) SW to crossing; continuous with 351, no other label | below crossing to CONCLUSION snowflake/diamonds | below CONCLUSION label along Snowdon Triple | lower Conclusion line from CONCLUSION label down to Snowdon Triple base; polyline is a closed chord"
+  },
+  "bittersweet": {
+   "polylines": [
+    45,
+    252,
+    301,
+    315
+   ],
+   "confidence": "high",
+   "mapName": "BITTERSWEET",
+   "note": "after second BITTERSWEET label | blue line leaving end of BITTERSWEET label to K-1 gondola base | down to Bittersweet square | square before BITTERSWEET label"
+  },
+  "northstar": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "NORTH STAR",
+   "note": "no overlay at all; black line above and below label, joins Vagabond/Caper"
+  },
+  "royal-flush": {
+   "polylines": [
+    115,
+    161,
+    164,
+    243,
+    246
+   ],
+   "confidence": "high",
+   "mapName": "ROYAL FLUSH",
+   "note": "branch off Killink down-left to Royal Flush square/label | below ROYAL FLUSH (blue) label down to Great Northern | continues 115 across Great Northern as black line to Racer's Edge crossing and on to 246 | to diamond before black ROYAL FLUSH label | below black ROYAL FLUSH label down-left to Spillwa"
+  },
+  "lower-northbrook": {
+   "polylines": [
+    69,
+    125,
+    198
+   ],
+   "confidence": "medium",
+   "mapName": "NORTHBROOK TRAIL",
+   "note": "after NORTHBROOK TRAIL label; roster match uncertain | west of NORTHBROOK TRAIL label, curving down to 198. Roster match uncertain (map just says NORTHBROOK TRAIL; green) | leads to NORTHBROOK TRAIL dot/label; roster match uncertain | unlabeled green from src (2595,1426) (edge of Snowshed base area)"
+  },
+  "skyelark": {
+   "polylines": [
+    76,
+    87,
+    110,
+    114,
+    224,
+    294,
+    356
+   ],
+   "confidence": "high",
+   "mapName": "SKYELARK",
+   "note": "after SKYELARK label | diagonal from 114/195 junction straight into Skyelark square + inline label | continuation of 294 toward K-1 gondola | from lift top to junction that continues straight into Skyelark | continuation after 76/148 merge | black line after the second (black, diamond) SKYELARK labe"
+  },
+  "skyeburst": {
+   "polylines": [
+    6,
+    73,
+    88,
+    147,
+    222
+   ],
+   "confidence": "low",
+   "mapName": "SKYEBURST",
+   "note": "SKYEBURST label at its upper end (t102/t202); runs down to merge with 126; polyline out-and-back | after SKYEBURST label | to snowflake/blue square then SKYEBURST label in line | From the fork at src ~(1505,1395) down-left to the snowflake and blue square that come just before the lower SKYEBURST la"
+  },
+  "skye-hawk": {
+   "polylines": [
+    237
+   ],
+   "confidence": "high",
+   "mapName": "SKYEHAWK",
+   "note": "inline continuation of SKYEHAWK label (label has black diamond)"
+  },
+  "skyebits": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "SKYE BITS",
+   "note": "diamond + label only, no drawn line"
+  },
+  "cruise-control": {
+   "polylines": [
+    31,
+    108,
+    308
+   ],
+   "confidence": "high",
+   "mapName": "CRUISE CONTROL",
+   "note": "after CRUISE CONTROL label | below CRUISE CONTROL label to its merge with Snowshed Crossover | short connector from corridor to Cruise Control"
+  },
+  "mouse-trap": {
+   "polylines": [
+    338
+   ],
+   "confidence": "high",
+   "mapName": "MOUSE TRAP",
+   "note": "from MOUSE TRAP diamond S | upper segment from Chute line to MOUSE TRAP diamond undetected"
+  },
+  "somewhere": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "SOMEWHERE",
+   "note": "diamond + label only, no drawn line (glade-like)"
+  },
+  "breakaway": {
+   "polylines": [
+    100,
+    160,
+    201,
+    276
+   ],
+   "confidence": "high",
+   "mapName": "BREAKAWAY",
+   "note": "top of Breakaway; small tail at east end hooks into PIPE DREAM text | diamond + BREAKAWAY label inline"
+  },
+  "touch-down": {
+   "polylines": [
+    37,
+    91,
+    290
+   ],
+   "confidence": "high",
+   "mapName": "TOUCH DOWN",
+   "note": "Blue line that leaves the Great Eastern hairpin heading east. It continues into 91. | blue leaving the Great Eastern hairpin, continues into 91 | Continues 290: west across the gondola, then south to the blue square at the head of the TOUCH DOWN label. It crosses the Field Goal green legs but has no"
+  },
+  "patsys": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "PATSY'S",
+   "note": "no drawn line: glade (red tree icon + difficulty symbol only)"
+  },
+  "twister": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "TWISTER",
+   "note": "no drawn line: glade (red tree icon + difficulty symbol only)"
+  },
+  "catwalk": {
+   "polylines": [
+    204
+   ],
+   "confidence": "high",
+   "mapName": "CATWALK",
+   "note": "below CATWALK diamond; roster says blue | black line below CATWALK diamonds/label, under the zigzag toward HIGH text"
+  },
+  "great-eastern": {
+   "polylines": [
+    3,
+    4,
+    9,
+    17,
+    57,
+    65,
+    102,
+    153,
+    197,
+    241,
+    247,
+    328,
+    343
+   ],
+   "confidence": "high",
+   "mapName": "GREAT EASTERN",
+   "note": "Green line inside the magenta highlight corridor. It runs from the 57/77 junction (t302; GREAT EASTERN label there) south to the pink park icon at src ~(1250,2172). | green line inside magenta corridor from Carpenter's Run/Great Eastern junction src (1554,1757) SW | Corridor line from the pink icon "
+  },
+  "home-stretch": {
+   "polylines": [
+    5,
+    15,
+    43,
+    127,
+    143,
+    248
+   ],
+   "confidence": "high",
+   "mapName": "HOME STRETCH",
+   "note": "Blue line from the Great Eastern corridor (src ~1169,1954) east to (1548,1912). There it continues from 15, which carries HOME STRETCH down past the Carpenter's Run junction (t302). The closed polyline draws a straight chord along the bottom. | continuation of 15 west to the Great Eastern corridor s"
+  },
+  "vertigo": {
+   "polylines": [
+    116
+   ],
+   "confidence": "high",
+   "mapName": "VERTIGO",
+   "note": "black line directly below the VERTIGO label down to Northbrook Trail"
+  },
+  "upper-vertigo": {
+   "polylines": [
+    281
+   ],
+   "confidence": "high",
+   "mapName": "VERTIGO HEADWALL",
+   "note": "roster match approximate"
+  },
+  "ovation": {
+   "polylines": [
+    14,
+    174,
+    210,
+    270
+   ],
+   "confidence": "high",
+   "mapName": "OVATION",
+   "note": "after OVATION label | from OVATION diamond SE to Roaring Brook base (Flume merges) | label is west of my tiles (per t203 context); portion after Flume (71) merges in is shared, ends at Roaring Brook area | same line as 210 | unlabeled black upstream of Ovation junction (Old Superstar joins below) | "
+  },
+  "needles-eye": {
+   "polylines": [
+    42,
+    146,
+    350
+   ],
+   "confidence": "high",
+   "mapName": "NEEDLE'S EYE",
+   "note": "NEEDLE'S EYE label inline | starts right below NEEDLE'S EYE label, down to merge with 135 src (2130,1545) | black upper part leading to Needle's Eye square; unlabeled itself | square area; hooks west toward Chunnel"
+  },
+  "panic-button": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "PANIC BUTTON",
+   "note": "only stub + diamond visible; inline label covers line"
+  },
+  "dream-maker": {
+   "polylines": [
+    7
+   ],
+   "confidence": "low",
+   "mapName": "DREAM MAKER",
+   "note": "SPLIT-ish: first leg (1509,1402)->(1555,1382) is a blue line heading NE off-tile; rest is long blue under orange dashes from right-side snowflake west to src (1224,1563); no label in my tiles | From the fork at src (1509,1402), a short unlabeled connector goes to the orange Dream Maker terrain-park "
+  },
+  "dream-maker-headwall": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "DREAM MAKER - HEADWALL",
+   "note": "only a short black stub visible; line mostly covered by inline label"
+  },
+  "highline": {
+   "polylines": [
+    38,
+    168,
+    211
+   ],
+   "confidence": "high",
+   "mapName": "HIGHLINE",
+   "note": "from Great Northern SW, crosses Racer's Edge, continuous with 168 | to snowflake/diamond of HIGHLINE label | below HIGHLINE label to K-1 base | black line directly below HIGHLINE label, joins 18 near K-1 base"
+  },
+  "pipe-dream": {
+   "polylines": [
+    111,
+    130,
+    131,
+    178,
+    187,
+    319
+   ],
+   "confidence": "medium",
+   "mapName": "PIPE DREAM",
+   "note": "blue from Sassafras merge point src (1577,748) down-left to Bear Cub east end (1491,810); no label; probably Sassafras continuation but a junction intervenes | below Sassafras merge, continues SW to Bear Cub loop | second PIPE DREAM label inline at its NE end | PIPE DREAM label inline | between gree"
+  },
+  "valley-plunge": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "VALLEY PLUNGE",
+   "note": "Black trail line (black square marker at its lower end) running parallel to and west of the maroon Skyeship Gondola, with no magenta overlay. In t401 it runs from ~(1175,712) to (960,918), i.e. src ~(1463,2245) to (1340,2387); it starts at the Great Eastern hairpin. Roster says blue, but the map lin"
+  },
+  "field-goal": {
+   "polylines": [
+    16,
+    34,
+    40,
+    49,
+    213,
+    228,
+    245,
+    271
+   ],
+   "confidence": "high",
+   "mapName": "FIELD GOAL",
+   "note": "Green line from the 43 junction to the green dot at the start of the upper FIELD GOAL label. | From the east end of the upper FIELD GOAL label east across the gondola, into hairpin 34. | right of upper FIELD GOAL label | East hairpin of the Field Goal switchback, src (1513,2205)->(1633,2244)->(1501,"
+  },
+  "roundabout": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "ROUNDABOUT",
+   "note": "entire black line undetected (diamond + inline label)"
+  },
+  "roundabout-glade": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "ROUNDABOUT GLADE",
+   "note": "glade label with diamond + tree, no drawn line"
+  },
+  "tin-man": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "TIN MAN",
+   "note": "no drawn line: glade (red tree icon + difficulty symbol only)"
+  },
+  "skye-peak-liftline": {
+   "polylines": [
+    287
+   ],
+   "confidence": "high",
+   "mapName": "SKYE PEAK LIFTLINE",
+   "note": "short black from Wildfire to the double diamond at top of SKYE PEAK LIFTLINE label; rest of that trail is covered by the label | to double diamond + label"
+  },
+  "great-bear": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "GREAT BEAR",
+   "note": "no overlay; black line from Chute end to diamond, label, snowflake, down to Great Northern circle (map color black)"
+  },
+  "superstar": {
+   "polylines": [
+    118,
+    202,
+    265,
+    326,
+    390
+   ],
+   "confidence": "high",
+   "mapName": "SUPERSTAR",
+   "note": "ends at Roaring Brook sign | continuation to Roaring Brook base | lower end of 265's line, ends at Roaring Brook Umbrella Bar sign | continuation of lower SUPERSTAR label line along Superstar Six | label outside my tiles; continuous with 118 | after SUPERSTAR label | tiny bit at SUPERSTAR label end "
+  },
+  "cascade": {
+   "polylines": [
+    60
+   ],
+   "confidence": "high",
+   "mapName": "CASCADE",
+   "note": "below CASCADE label through junction to FLUME diamonds (segment below junction arguably Flume's top)"
+  },
+  "downdraft": {
+   "polylines": [
+    99,
+    149,
+    199,
+    209
+   ],
+   "confidence": "low",
+   "mapName": "DOWNDRAFT",
+   "note": "inline after DOWNDRAFT label | continuation right after DOWNDRAFT label to Double Dipper | from those diamonds down, merges with Catwalk line; the trunk below leads to Downdraft diamonds (likely upper Downdraft) | branch leaving DOWNDRAFT label toward Cascade | branch leaving the line under the DOWN"
+  },
+  "double-dipper": {
+   "polylines": [
+    162,
+    189
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLE DIPPER",
+   "note": "below DOUBLE DIPPER label along Canyon Quad | continuation of 189 (Downdraft merged in) to Canyon Quad base | short top segment (snowflake to diamonds) undetected"
+  },
+  "big-dipper-glade": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "BIG DIPPER",
+   "note": "no drawn line: glade (red tree icon + difficulty symbol only)"
+  },
+  "flume": {
+   "polylines": [
+    71
+   ],
+   "confidence": "high",
+   "mapName": "FLUME",
+   "note": "below FLUME label | black line below FLUME label, joins 14"
+  },
+  "escapade": {
+   "polylines": [
+    98,
+    219
+   ],
+   "confidence": "high",
+   "mapName": "ESCAPADE",
+   "note": "left branch below ESCAPADE label, joins Cascade line above Flume diamonds | branch from Escapade to Cascade junction | right branch below ESCAPADE label to Cascade junction"
+  },
+  "east-fall": {
+   "polylines": [
+    309,
+    360
+   ],
+   "confidence": "high",
+   "mapName": "EAST FALL",
+   "note": "from horizontal down to snowflake/square that start EAST FALL label | below the black EAST FALL label to Canyon Quad base | black lower East Fall from quad-base junction to its diamond undetected (309 covers below label)"
+  },
+  "rime": {
+   "polylines": [
+    56,
+    292
+   ],
+   "confidence": "high",
+   "mapName": "RIME",
+   "note": "below RIME label to the Great Northern horizontal | collinear continuation of Rime across the horizontal, down along North Ridge Quad to its base | only the segment above/under the label is missing; 292/56 cover the rest"
+  },
+  "reason": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "REASON",
+   "note": "whole line undetected; map color blue"
+  },
+  "julio": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "JULIO",
+   "note": "double diamond + label, no drawn line"
+  },
+  "high-road": {
+   "polylines": [
+    138,
+    304
+   ],
+   "confidence": "high",
+   "mapName": "HIGH ROAD",
+   "note": "between the two HIGH ROAD labels; the stub below the lower label has no overlay (see missed) | partial: lower stub below second HIGH ROAD label | stub below the lower HIGH ROAD label down to Northbrook Trail, src (2347,1484)->(2331,1522), uncovered"
+  },
+  "north-way": {
+   "polylines": [
+    180,
+    188,
+    207
+   ],
+   "confidence": "high",
+   "mapName": "THE NORTHWAY",
+   "note": "THE NORTHWAY label inline | unlabeled continuation from Dream Maker square down to corridor | down to Dream Maker square"
+  },
+  "fis": {
+   "polylines": [
+    242
+   ],
+   "confidence": "high",
+   "mapName": "FIS",
+   "note": "below FIS square | partial: upper FIS branch from 85 to FIS square"
+  },
+  "solitude": {
+   "polylines": [
+    1,
+    8,
+    13,
+    26,
+    260
+   ],
+   "confidence": "high",
+   "mapName": "SOLITUDE",
+   "note": "SOLITUDE label on the line at its NE end (label covers the gap to 13); winds down to Bear Cub junction at src (517,1129) | SOLITUDE label at its SW end; ends at Sassafras/Solitude junction src (1188,573) | second SOLITUDE label at its east end (src ~1790,485). Overlay stops at src (1570,470) but the"
+  },
+  "anarchy": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "ANARCHY",
+   "note": "double diamond + label, no drawn line"
+  },
+  "old-superstar": {
+   "polylines": [
+    359
+   ],
+   "confidence": "high",
+   "mapName": "OLD SUPERSTAR",
+   "note": "after OLD SUPERSTAR label to junction"
+  },
+  "mouse-run": {
+   "polylines": [
+    62,
+    72,
+    280
+   ],
+   "confidence": "high",
+   "mapName": "MOUSE RUN",
+   "note": "from end of MOUSE RUN label past park pill, down to Snowdon Six base (star) | second branch from the Mouse Run park pill down-left to Great Northern; inside terrain park | Snowdon summit to snowflake/square of MOUSE RUN label | lower Mouse Run (from Chute line to Great Northern) undetected | short b"
+  },
+  "low-road": {
+   "polylines": [
+    104
+   ],
+   "confidence": "high",
+   "mapName": "LOW ROAD",
+   "note": "LOW ROAD label inline | label west of my tiles (per t203 context); merges with 252 before K-1 gondola"
+  },
+  "outer-limits": {
+   "polylines": [
+    22,
+    230,
+    264,
+    277
+   ],
+   "confidence": "high",
+   "mapName": "OUTER LIMITS",
+   "note": "black from summit alongside Bear Mtn Quad; continuous with the line labeled OUTER LIMITS below | continuation of 264 | continuation down to src (1161,1053); OL EXPRESS connector joins at its top | below OUTER LIMITS label to base | Black trail line from the OUTER LIMITS label (t201) down to the Bear"
+  },
+  "devils-fiddle": {
+   "polylines": [
+    32,
+    41
+   ],
+   "confidence": "high",
+   "mapName": "DEVIL'S FIDDLE",
+   "note": "hook from Bear Mtn summit down straight into DEVIL'S FIDDLE (label just below junction with 150) | DEVIL'S FIDDLE label printed at its top end | Runs from the lower end of the DEVIL'S FIDDLE label (t201) down to where Space Walk joins at src ~(786,1434)."
+  },
+  "wildfire": {
+   "polylines": [
+    61,
+    74,
+    166,
+    176,
+    352
+   ],
+   "confidence": "medium",
+   "mapName": "WILDFIRE",
+   "note": "black from Bear Mtn summit; WILDFIRE label on its continuation | WILDFIRE label printed along it just above | WILDFIRE label inline upstream and again downstream | lower Wildfire descending to diamond/snowflake then WILDFIRE label | directly left of 2nd WILDFIRE label | black down to Skye Peak Expre"
+  },
+  "bear-claw": {
+   "polylines": [
+    106,
+    218,
+    223
+   ],
+   "confidence": "medium",
+   "mapName": "BEAR CLAW",
+   "note": "blue from Ridgeview start down to snowflake; BEAR CLAW label continues along it | blue connector from pink icon src (1407,922) curving into Bear Claw at its snowflake; unlabeled | pink icon down to Bear Claw square | starts exactly at end of BEAR CLAW label text, down to merge with Shorty src (1513,"
+  },
+  "growler": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "GROWLER",
+   "note": "glade (red tree + double diamond), no drawn line"
+  },
+  "centerpiece": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "CENTERPIECE",
+   "note": "glade, no drawn line"
+  },
+  "spacewalk": {
+   "polylines": [
+    93,
+    165,
+    239
+   ],
+   "confidence": "high",
+   "mapName": "SPACE WALK",
+   "note": "straight continuation of 165 across the Bear Mtn Quad to the Wildfire/Skye Peak Liftline junction src (1270,1395) | right of SPACE WALK label/diamonds; crosses Outer Limits | left end of SPACE WALK label to Devil's Fiddle bottom | Short segment from the SPACE WALK label's west end down-left to the D"
+  },
+  "bear-trax": {
+   "polylines": [
+    39,
+    66,
+    70,
+    78,
+    154,
+    181,
+    182,
+    285,
+    376
+   ],
+   "confidence": "medium",
+   "mapName": "BEAR TRAX",
+   "note": "green branch of 141 west toward the pink ski-school icon; feeds the SNOWSHED CROSSOVER start dot; unlabeled | corridor green with arrows continuing to pink icon | same line as 154 (arrow glyph) | same line as 154/376, loops around arrow glyph at pink icon | end of corridor green at pink icon / Snows"
+  },
+  "the-stash": {
+   "polylines": [
+    123,
+    262
+   ],
+   "confidence": "high",
+   "mapName": "THE STASH",
+   "note": "park line with orange pills | inline after THE STASH label, ends at Shorty square | second THE STASH label over park area; park features (orange pills) without their own line"
+  },
+  "blue-heaven": {
+   "polylines": [
+    278,
+    329
+   ],
+   "confidence": "high",
+   "mapName": "BLUE HEAVEN",
+   "note": "Blue Heaven top: square to Bear Trax corridor | short bottom piece of Blue Heaven at lift-top junction"
+  },
+  "helter-skelter": {
+   "polylines": [
+    226,
+    267
+   ],
+   "confidence": "high",
+   "mapName": "HELTER SKELTER",
+   "note": "continues toward ESCAPADE label | partial: short black stub from corridor to diamond"
+  },
+  "full-house": {
+   "polylines": [
+    291
+   ],
+   "confidence": "high",
+   "mapName": "FULL HOUSE",
+   "note": "from Killink down to Full House snowflake/square | line under label, park pill and W end undetected (291 covers only the top)"
+  },
+  "frolic": {
+   "polylines": [
+    12,
+    322
+   ],
+   "confidence": "high",
+   "mapName": "FROLIC",
+   "note": "from FROLIC label end SE down to the Header/Ramshead lift line | Snowdon summit down to snowflake/square that start the FROLIC label"
+  },
+  "the-jug": {
+   "polylines": [
+    83,
+    196,
+    298
+   ],
+   "confidence": "high",
+   "mapName": "THE JUG",
+   "note": "lower black section of The Jug (THE JUG label + diamond inline) | SW curve where The Jug black line bends down near lift base; Breakaway merges here"
+  },
+  "shorty": {
+   "polylines": [
+    126
+   ],
+   "confidence": "medium",
+   "mapName": "SHORTY",
+   "note": "top from Shorty snowflake src (1522,1134) is Shorty; Bear Claw (106) merges at (1513,1167); Skyeburst (6) merges at ~(1506,1205), below that shared/Skyeburst | after SHORTY label, merges into Skyeburst"
+  },
+  "bearly": {
+   "polylines": [
+    136,
+    175,
+    192,
+    205,
+    208,
+    232,
+    236,
+    336,
+    337,
+    371
+   ],
+   "confidence": "high",
+   "mapName": "BEARLY",
+   "note": "Starts at the blue circle icon (363) and runs south. It is part of the continuous green arrowed line that ends at the BEARLY label. | Short piece of the Bearly line (box partly hidden as '33'). | Short Bearly piece, overlaps 208. | Ends at the west end of the BEARLY label. | Starts at the green dot "
+  },
+  "killink": {
+   "polylines": [
+    158,
+    216,
+    284
+   ],
+   "confidence": "high",
+   "mapName": "KILLINK",
+   "note": "runs into KILLINK label from the snowflake junction; crosses the 48/214 line | Killink E of label toward Snowdon summit | Killink last stretch to Snowdon summit"
+  },
+  "gateway": {
+   "polylines": [
+    51,
+    92
+   ],
+   "confidence": "high",
+   "mapName": "GATEWAY",
+   "note": "GATEWAY label inline"
+  },
+  "highlander": {
+   "polylines": [
+    235,
+    289
+   ],
+   "confidence": "high",
+   "mapName": "HIGHLANDER",
+   "note": "green branch (snowflake + circle) off the green line that leaves the end of HIGHLANDER label toward K-1 base / learn-to-ski area"
+  },
+  "sassafras": {
+   "polylines": [
+    97,
+    128,
+    171,
+    221,
+    379
+   ],
+   "confidence": "high",
+   "mapName": "SASSAFRAS",
+   "note": "branches off Solitude at src (1188,573); SASSAFRAS label on this line | directly left of SASSAFRAS label | right of SASSAFRAS label/blue square | continuation of 379, includes arrow glyph | continuation of 97 down to merge with an east-west blue line at src ~(1577,748) | descends to join Pipe Dream "
+  },
+  "ridgeview": {
+   "polylines": [
+    318
+   ],
+   "confidence": "high",
+   "mapName": "RIDGEVIEW",
+   "newTrail": true,
+   "name": "Ridgeview",
+   "difficulty": "green",
+   "note": "green line just right of RIDGEVIEW label | RIDGEVIEW label inline"
+  },
+  "grizzly": {
+   "polylines": [
+    89
+   ],
+   "confidence": "high",
+   "mapName": "GRIZZLY",
+   "newTrail": true,
+   "name": "Grizzly",
+   "difficulty": "blue",
+   "note": "left of GRIZZLY label | Starts at the west end of the GRIZZLY label and runs west to the 222/147 junction. Grizzly is not in the roster."
+  },
+  "sunrise-trail": {
+   "polylines": [
+    225
+   ],
+   "confidence": "high",
+   "mapName": "SUNRISE TRAIL",
+   "newTrail": true,
+   "name": "Sunrise Trail",
+   "difficulty": "green",
+   "note": "junction to green start dot; SUNRISE TRAIL label immediately west (roster has no Sunrise Trail; nearest sunrise-connector)"
+  },
+  "highridge": {
+   "polylines": [
+    0,
+    19
+   ],
+   "confidence": "medium",
+   "mapName": "HIGHRIDGE",
+   "newTrail": true,
+   "name": "Highridge",
+   "difficulty": "green",
+   "note": "unlabeled green heading south past Ledgewood Yurt | from Ledgewood junction south past the yurt to the green circle at the HIGHRIDGE label | below HIGHRIDGE label SE to the bottom near East Mountain Rd; no other label. Polyline closes with a straight chord from (3060,2324) back to (2576,1890) that c"
+  },
+  "edgemont-whiffletree": {
+   "polylines": [
+    80,
+    84
+   ],
+   "confidence": "high",
+   "mapName": "EDGEMONT / WHIFFLETREE",
+   "newTrail": true,
+   "name": "Edgemont / Whiffletree",
+   "difficulty": "blue",
+   "note": "label just below this tile | blue line above the blue square/EDGEMONT / WHIFFLETREE label | blue line above the blue square/label | blue line below the label toward Trail Creek condos; closed chord polyline"
+  },
+  "homerun": {
+   "polylines": [
+    86,
+    90
+   ],
+   "confidence": "high",
+   "mapName": "HOMERUN",
+   "newTrail": true,
+   "name": "Homerun",
+   "difficulty": "blue",
+   "note": "to square before HOMERUN label | after HOMERUN label; east end (~x>2772) shared with Great Northern | HOMERUN label is just W (t003); horizontal E to where 105 joins (GN label merges near its E end)"
+  },
+  "south-ridge-link": {
+   "polylines": [
+    101,
+    163,
+    240,
+    369,
+    374,
+    377
+   ],
+   "confidence": "high",
+   "mapName": "SOUTH RIDGE LINK",
+   "newTrail": true,
+   "name": "South Ridge Link",
+   "difficulty": "green",
+   "note": "arrowed green from snowflake NW to Pipe Dream end, then down-leg SW to Bear Trax; down-leg unlabeled | through the SOUTH RIDGE LINK green dot | crossing with Bear Trax corridor | arrowed one-way green continuation | start near lift top"
+  },
+  "high-traverse": {
+   "polylines": [
+    105,
+    266,
+    387
+   ],
+   "confidence": "low",
+   "mapName": "HIGH TRAVERSE",
+   "newTrail": true,
+   "name": "High Traverse",
+   "difficulty": "blue",
+   "note": "continues past label end down to Homerun line | High Traverse runs under its label to the top then turns S as this line down to Homerun/GN; below that it becomes black Double Dipper | aligned with HIGH TRAVERSE label | from Great Northern square up through snowflake to square that starts HIGH TRAVER"
+  },
+  "stashway": {
+   "polylines": [
+    109
+   ],
+   "confidence": "high",
+   "mapName": "STASHWAY",
+   "newTrail": true,
+   "name": "Stashway",
+   "difficulty": "blue",
+   "note": "STASHWAY label directly beneath and parallel"
+  },
+  "launchpad": {
+   "polylines": [
+    132,
+    137,
+    167,
+    217,
+    312
+   ],
+   "confidence": "high",
+   "mapName": "LAUNCHPAD",
+   "newTrail": true,
+   "name": "Launchpad",
+   "difficulty": "blue",
+   "note": "past junction with Skyelark/Skyehawk | after LAUNCHPAD label | short hook to Great Eastern green"
+  },
+  "ledgewood-yurt-trail": {
+   "polylines": [
+    133
+   ],
+   "confidence": "high",
+   "mapName": "LEDGEWOOD YURT TRAIL",
+   "newTrail": true,
+   "name": "Ledgewood Yurt Trail",
+   "difficulty": "blue",
+   "note": "from blue square under LEDGEWOOD YURT TRAIL label down to the junction at src (2515,1490)"
+  },
+  "stitch-line": {
+   "polylines": [
+    135,
+    186
+   ],
+   "confidence": "high",
+   "mapName": "STITCH LINE",
+   "newTrail": true,
+   "name": "Stitch Line",
+   "difficulty": "black",
+   "note": "starts on the black Stitch Line and runs down where it merges with Needle's Eye | blue runout that continues the black STITCH LINE line (color changes black->blue at src (2136,1475)) down past the Needle's Eye merge to the base; no label on the blue part. The black part above it has no overlay (see "
+  },
+  "escape": {
+   "polylines": [
+    156,
+    200,
+    251
+   ],
+   "confidence": "high",
+   "mapName": "ESCAPE",
+   "newTrail": true,
+   "name": "Escape",
+   "difficulty": "blue",
+   "note": "branch leaving the ESCAPE label bottom, curving SW | from ESCAPE square down | continues 156 south across Pipe Dream to Bear Trax; unlabeled"
+  },
+  "nivis-walk": {
+   "polylines": [
+    194,
+    279
+   ],
+   "confidence": "high",
+   "mapName": "NIVIS WALK",
+   "newTrail": true,
+   "name": "Nivis Walk",
+   "difficulty": "blue"
+  },
+  "jug-handle": {
+   "polylines": [
+    255
+   ],
+   "confidence": "high",
+   "mapName": "JUG HANDLE",
+   "newTrail": true,
+   "name": "Jug Handle",
+   "difficulty": "black",
+   "note": "arc from The Jug up to Jug Handle diamond | partial: segment from Jug Handle diamond east back to The Jug"
+  },
+  "chunnel": {
+   "polylines": [
+    257
+   ],
+   "confidence": "high",
+   "mapName": "CHUNNEL",
+   "newTrail": true,
+   "name": "Chunnel",
+   "difficulty": "blue",
+   "note": "CHUNNEL label inline"
+  },
+  "skyewalker": {
+   "polylines": [
+    274
+   ],
+   "confidence": "high",
+   "mapName": "SKYEWALKER",
+   "newTrail": true,
+   "name": "Skyewalker",
+   "difficulty": "green",
+   "note": "arrowed green toward SKYEWALKER dot, branches off Gateway"
+  },
+  "carpenters-run": {
+   "polylines": [
+    77,
+    259,
+    342
+   ],
+   "confidence": "high",
+   "mapName": "CARPENTER'S RUN",
+   "newTrail": true,
+   "name": "Carpenter'S Run",
+   "difficulty": "green",
+   "note": "between Home Stretch junction and CARPENTER'S RUN label | continuous westward continuation of 342 across the Home Stretch crossing to the Great Eastern corridor | right of the CARPENTER'S RUN label/green circle to the base star icon"
+  },
+  "fall-line": {
+   "polylines": [
+    229,
+    272
+   ],
+   "confidence": "high",
+   "mapName": "FALL LINE",
+   "newTrail": true,
+   "name": "Fall Line",
+   "difficulty": "blue",
+   "note": "from the Highridge junction to the FALL LINE label/blue square | left of FALL LINE label | right of FALL LINE label to Fall Line Condos | right of FALL LINE label toward Fall Line condos"
+  },
+  "alpine-training-venue": {
+   "polylines": [
+    283,
+    323
+   ],
+   "confidence": "low",
+   "mapName": "ALPINE TRAINING VENUE",
+   "newTrail": true,
+   "name": "Alpine Training Venue",
+   "difficulty": "blue",
+   "note": "from Easy Street hairpin down to snowflake/square at top of ALPINE TRAINING VENUE label | bottom of ALPINE TRAINING VENUE label to Easy Street | blue line leading to ALPINE TRAINING label"
+  },
+  "racers-edge": {
+   "polylines": [
+    117,
+    169,
+    258,
+    334
+   ],
+   "confidence": "high",
+   "mapName": "RACER'S EDGE",
+   "newTrail": true,
+   "name": "Racer'S Edge",
+   "difficulty": "black",
+   "note": "from traverse at North Ridge base S to RACER'S EDGE diamond/label | below RACER'S EDGE label to crossing near Snowdon Triple | continuation of 169 past crossing, curves SE under MOUSE TRAP text | continuation of 258 to Bunny Buster/Chute junction"
+  },
+  "ridge-run": {
+   "polylines": [
+    122,
+    313
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE RUN",
+   "newTrail": true,
+   "name": "Ridge Run",
+   "difficulty": "black",
+   "note": "below upper RIDGE RUN label to the traverse; continues as blue lower Ridge Run | from summit to the Ridge Run diamond | lower blue Ridge Run under its label undetected"
+  },
+  "learn-to-ski-ride-area": {
+   "polylines": [
+    250,
+    256,
+    306
+   ],
+   "confidence": "high",
+   "mapName": "LEARN TO SKI & RIDE AREA",
+   "newTrail": true,
+   "name": "Learn To Ski & Ride Area",
+   "difficulty": "green",
+   "note": "short green segment beside the LEARN TO SKI & RIDE AREA text; beginner area path, no trail name | continuation of the line that leaves the LEARN TO SKI & RIDE AREA label, through the Yodeler crossing down toward Snowshed Slope; possibly the roster's 'Crossover' but no such label printed | same conne"
+  },
+  "trail-creek": {
+   "polylines": [
+    173
+   ],
+   "confidence": "high",
+   "mapName": "TRAIL CREEK",
+   "newTrail": true,
+   "name": "Trail Creek",
+   "difficulty": "green",
+   "note": "green line down to circle preceding TRAIL CREEK label | short green segment after TRAIL CREEK label, not covered (173 covers part above label)"
+  },
+  "ol-express": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "OL EXPRESS",
+   "newTrail": true,
+   "name": "Ol Express",
+   "difficulty": "black",
+   "note": "short black connector from Outer Limits (230 top) east to Wildfire; no overlay"
+  },
+  "devils-den": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "DEVIL'S DEN",
+   "newTrail": true,
+   "name": "Devil'S Den",
+   "difficulty": "black",
+   "note": "glade, no drawn line"
+  },
+  "thimble": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "THIMBLE",
+   "newTrail": true,
+   "name": "Thimble",
+   "difficulty": "black",
+   "note": "black line with diamond and inline label undetected"
+  },
+  "nowhere": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "NOWHERE",
+   "newTrail": true,
+   "name": "Nowhere",
+   "difficulty": "black",
+   "note": "diamond + label only, no drawn line"
+  },
+  "the-stairs": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "THE STAIRS",
+   "newTrail": true,
+   "name": "The Stairs",
+   "difficulty": "black",
+   "note": "diamond + label only, no drawn line"
+  },
+  "juanita": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "JUANITA",
+   "newTrail": true,
+   "name": "Juanita",
+   "difficulty": "black",
+   "note": "double diamond + label, no drawn line"
+  },
+  "powerline": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "POWERLINE",
+   "newTrail": true,
+   "name": "Powerline",
+   "difficulty": "black",
+   "note": "whole line undetected (mostly under label), from summit along North Ridge Quad to traverse"
+  },
+  "spillway": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "SPILLWAY",
+   "newTrail": true,
+   "name": "Spillway",
+   "difficulty": "black",
+   "note": "from Spillway diamond down to merge with 18; no overlay"
+  },
+  "the-throne": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "THE THRONE",
+   "newTrail": true,
+   "name": "The Throne",
+   "difficulty": "black",
+   "note": "no drawn line: glade (red tree icon + difficulty symbol only)"
+  },
+  "chop-chop": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "CHOP CHOP",
+   "newTrail": true,
+   "name": "Chop Chop",
+   "difficulty": "black",
+   "note": "no drawn line: glade (red tree icon + difficulty symbol only)"
+  },
+  "low-rider": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "LOW RIDER",
+   "newTrail": true,
+   "name": "Low Rider",
+   "difficulty": "black",
+   "note": "no drawn line: glade (red tree icon + difficulty symbol only)"
+  },
+  "scarecrow": {
+   "polylines": [],
+   "confidence": "missed",
+   "mapName": "SCARECROW",
+   "newTrail": true,
+   "name": "Scarecrow",
+   "difficulty": "black",
+   "note": "no drawn line: glade (red tree icon + difficulty symbol only)"
+  }
+ }
+}

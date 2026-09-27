@@ -15,7 +15,8 @@
     "lines:eval": "node scripts/evaluateLines.mjs",
     "lines:overlay": "node scripts/evaluateLines.mjs --overlay",
     "lines:png": "node scripts/generateLineOverlay.mjs",
-    "lines:place": "node scripts/placeTrailsOnLines.mjs --render"
+    "lines:place": "node scripts/placeTrailsOnLines.mjs --render",
+    "trails:apply": "node scripts/applyTrailProposals.mjs"
   },
   "dependencies": {
     "react": "^19.2.0",
