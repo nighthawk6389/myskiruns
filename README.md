@@ -126,10 +126,10 @@ trail that needs action (undecided, skipped, or flagged).
 Browser check: 325/352 hover points show the right name; misses are all at
 junctions/crossings.
 
-To re-export after more review: read the page's `reviews` collection, write
-it to `src/data/trailReviews.json` (the page still uses `new-…` ids for the 36
-added trails; strip the prefix and the `-s-` possessive, e.g.
-`new-racer-s-edge` → `racers-edge`), then `npm run trails:apply`.
+To bring in more review work: export the page's `reviews` collection to a
+folder of JSON files (one per trail), then
+`npm run reviews:import -- <folder>` (maps the page's `new-…` ids, keeps the
+newer decision, ignores trails no longer listed) and `npm run trails:apply`.
 
 ### Earlier audit of the fully automatic assignment
 

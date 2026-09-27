@@ -141,7 +141,7 @@
    "drawn": [],
    "mapDifficulty": null,
    "note": "",
-   "at": "2026-09-27T01:38:31.623Z",
+   "at": "2026-09-27T18:42:49.749Z",
    "labelAt": [
     63.46,
     24.24
@@ -620,8 +620,8 @@
     ]
    ],
    "mapDifficulty": null,
-   "note": "lower black section (diamond at label ~2978,791); upper blue section split off as Upper East Fall (by Claude)",
-   "at": "2026-09-27T01:39:25.682Z"
+   "note": "",
+   "at": "2026-09-27T20:24:53.832Z"
   },
   "easy-street": {
    "status": "confirmed",
@@ -1062,8 +1062,8 @@
     ]
    ],
    "mapDifficulty": null,
-   "note": "merged duplicate roster entry header-kp",
-   "at": "2026-09-27T01:27:50.411Z"
+   "note": "",
+   "at": "2026-09-27T20:24:20.057Z"
   },
   "helter-skelter": {
    "status": "confirmed",
@@ -1248,13 +1248,12 @@
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "by": "claude",
-   "at": "2026-09-27T20:22:56.000Z",
+   "note": "",
+   "at": "2026-09-27T20:25:18.560Z",
    "labelAt": [
     79.44,
     55.58
-   ],
-   "note": "label + park pill + tree icon printed at (3632,1503); no drawn line"
+   ]
   },
   "low-road": {
    "status": "confirmed",
@@ -2876,8 +2875,8 @@
     ]
    ],
    "mapDifficulty": null,
-   "note": "merged duplicate roster entry skye-burst-bear",
-   "at": "2026-09-27T01:33:04.826Z"
+   "note": "",
+   "at": "2026-09-27T20:24:49.669Z"
   },
   "skyelark": {
    "status": "confirmed",
@@ -2914,8 +2913,8 @@
     ]
    ],
    "mapDifficulty": null,
-   "note": "lower black section; upper blue section split off as Upper Skyelark (by Claude)",
-   "at": "2026-09-27T01:32:40.372Z"
+   "note": "",
+   "at": "2026-09-27T20:24:32.192Z"
   },
   "snowshed-crossover": {
    "status": "confirmed",
@@ -2943,7 +2942,7 @@
    "drawn": [],
    "mapDifficulty": null,
    "note": "",
-   "at": "2026-09-27T12:31:36.734Z"
+   "at": "2026-09-27T20:23:59.030Z"
   },
   "solitude": {
    "status": "confirmed",
@@ -3324,13 +3323,12 @@
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "by": "claude",
-   "at": "2026-09-27T20:22:56.000Z",
+   "note": "",
+   "at": "2026-09-27T20:24:10.959Z",
    "labelAt": [
     83.81,
     54.84
-   ],
-   "note": "label + green circle + glade icon printed at (3832,1483); no drawn line"
+   ]
   },
   "twister": {
    "status": "no-line",
@@ -3373,12 +3371,23 @@
     [
      3051,
      682
+    ],
+    [
+     3097,
+     696
+    ],
+    [
+     3125,
+     681
+    ],
+    [
+     3190,
+     668
     ]
    ],
    "mapDifficulty": null,
-   "by": "claude",
-   "at": "2026-09-27T20:22:56.000Z",
-   "note": "map prints EAST FALL twice: upper blue section (square) is Upper East Fall"
+   "note": "",
+   "at": "2026-09-27T20:25:08.676Z"
   },
   "upper-skyelark": {
    "status": "confirmed",
@@ -3402,9 +3411,8 @@
     ]
    ],
    "mapDifficulty": null,
-   "by": "claude",
-   "at": "2026-09-27T20:22:56.000Z",
-   "note": "map prints SKYELARK twice: upper blue section (square at 2273,932) is Upper Skyelark"
+   "note": "",
+   "at": "2026-09-27T20:24:37.846Z"
   },
   "upper-vertigo": {
    "status": "confirmed",
