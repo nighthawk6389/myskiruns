@@ -87,7 +87,7 @@ export const trails: Trail[] = [
   { id: 'highline', name: 'Highline', difficulty: 'black', peak: 'skye-peak' },
   { id: 'pipe-dream', name: 'Pipe Dream', difficulty: 'blue', peak: 'skye-peak' },
   { id: 'valley-plunge', name: 'Valley Plunge', difficulty: 'blue', peak: 'skye-peak' },
-  { id: 'field-goal', name: 'Field Goal', difficulty: 'blue', peak: 'skye-peak' },
+  { id: 'field-goal', name: 'Field Goal', difficulty: 'green', peak: 'skye-peak' },
   { id: 'roundabout', name: 'Roundabout', difficulty: 'blue', peak: 'skye-peak' },
   { id: 'roundabout-glade', name: 'Roundabout Glade', difficulty: 'black', peak: 'skye-peak', isGlade: true },
   { id: 'tin-man', name: 'Tin Man', difficulty: 'blue', peak: 'skye-peak' },
@@ -143,6 +143,18 @@ export const trails: Trail[] = [
   { id: 'lil-stash', name: "Lil' Stash", difficulty: 'blue', peak: 'bear-mountain', isTerrainPark: true },
   { id: 'lower-wildfire', name: 'Lower Wildfire', difficulty: 'blue', peak: 'bear-mountain' },
   { id: 'bear-run', name: 'Bear Run', difficulty: 'blue', peak: 'bear-mountain' },
+  // === ADDED FROM MAP OCR + line-color audit (see src/detection/LINES.md) ===
+  { id: 'blue-heaven', name: 'Blue Heaven', difficulty: 'blue', peak: 'killington-peak' },
+  { id: 'helter-skelter', name: 'Helter Skelter', difficulty: 'black', peak: 'killington-peak' },
+  { id: 'full-house', name: 'Full House', difficulty: 'blue', peak: 'snowdon' },
+  { id: 'frolic', name: 'Frolic', difficulty: 'blue', peak: 'snowdon' },
+  { id: 'the-jug', name: 'The Jug', difficulty: 'blue', peak: 'skye-peak' },
+  { id: 'shorty', name: 'Shorty', difficulty: 'blue', peak: 'skye-peak' },
+  { id: 'bearly', name: 'Bearly', difficulty: 'green', peak: 'sunrise' },
+  { id: 'killink', name: 'Killink', difficulty: 'blue', peak: 'snowdon' },
+  { id: 'gateway', name: 'Gateway', difficulty: 'blue', peak: 'skye-peak' },
+  { id: 'highlander', name: 'Highlander', difficulty: 'green', peak: 'killington-peak' },
+  { id: 'sassafras', name: 'Sassafras', difficulty: 'blue', peak: 'bear-mountain' },
 ];
 
 export function getTrailsByPeak(peakId: string): Trail[] {

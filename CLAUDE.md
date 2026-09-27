@@ -1,0 +1,37 @@
+# CLAUDE.md
+
+Killington ski-run tracker (React 19 + TS + Vite). The hard part is putting a
+clickable, correctly *named* overlay on each trail of
+`public/killington-trail-map.jpg`. Read `README.md` ("Honest end-to-end
+status" and "Prior attempts") before changing the pipeline.
+
+## Definition of done for trail overlays
+For every trail in `src/data/trails.ts`: its overlay lies on that trail's own
+drawn line along its full length (or is explicitly marked as having no line,
+e.g. some glades), and hovering/clicking anywhere on it shows that trail's
+name. Pixel-level detector scores are not evidence of this. Verify on zoomed
+crops or against human-verified per-trail ground truth; never with a test
+that hovers on the already-assigned path (that is circular).
+
+## Map facts (verified on the lossless image)
+- Trail difficulty = line color: green, blue, black (diamonds on the line).
+- Maroon lines with black outline = lifts. Yellow dots = boundary.
+  Magenta bands = highlight corridors, not a difficulty. Orange pills =
+  terrain-park features. Red tree icon = glade (often no line at all).
+- Trail names are black text on a white halo, rotated along the line.
+- The source PDF (commit `4d4a326`) is one flattened JPEG-2000 image, with no
+  vector layers. It is sharper than the repo JPG (which is resampled, 4:2:0).
+
+## What works / what doesn't
+- Works: line detection (`scripts/lib/lineDetector.mjs`, 97% F1 on
+  `groundTruthLines.json`), rotation-aware tesseract OCR of labels.
+- Doesn't: fully automatic name→line assignment (~40% end-to-end); region
+  heuristics mostly steal other trails' unlabeled segments.
+- Tried and failed on other branches: sweepline + pink/yellow colors, HSV
+  heuristic scoring, SAM 2 (needs a display), easyocr, un-rotated tesseract.
+
+## Rules
+- Never tune the detector by editing `src/detection/groundTruth*.json`.
+- `trailPositions.json` is owned by `npm run lines:place`; `trailPaths.json`
+  by `scripts/assignTrailPaths.mjs`. The regeneration order is in the README.
+- Before finishing: `npx tsc -b && npx eslint .`
