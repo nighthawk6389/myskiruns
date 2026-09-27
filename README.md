@@ -97,15 +97,32 @@ naming is now done in two steps:
 
 `npm run trails:apply` merges both into `src/data/trailPaths.json`: reviews
 win, unreviewed trails use high/medium proposals, and trails with neither get
-**no overlay** (no more guessed dots). Today: 68 roster trails drawn from
-proposals, 0 verified.
+**no overlay** (no more guessed dots).
 
-Open data questions surfaced by the readers (decide during review): 37 names
-printed on the map are not in `trails.ts` (Ridgeview, Grizzly, Homerun,
-Launchpad, South Ridge Link, Escape, Racer's Edge, …); the roster has
-duplicate "Header" and "Skyeburst" entries; several difficulties differ from
-the drawn color (Breakaway, Catwalk, Needle's Eye, Low Road, Bear View, …);
-glades like Growler, Centerpiece, Somewhere, Nowhere have a label but no line.
+**Status after the first full review (Sept 27 2026)** — all 166 decisions made:
+
+| decision | trails | in the app |
+|---|---|---|
+| confirmed line (tapped pieces and/or hand-drawn) | 110 | clickable along the whole line |
+| no drawn line (glades) | 22 | clickable marker at the label (20; 2 have no known label position) |
+| not on this map | 13 | list only |
+| skipped | 21 | list only (mostly upper/lower variants and liftlines) |
+
+36 trails printed on the map were added to `trails.ts` (roster now 166).
+Browser check: hovering 3 points along each of the 110 lines shows the right
+name at 304/330 points; every miss is within 16px of another trail's line
+(junctions, crossings, tight parallels), where either name is defensible.
+
+Still open: the reviewer set no difficulty overrides, so roster colors that
+differ from the drawn line (Breakaway, Catwalk, Needle's Eye, Low Road, Bear
+View, …) are unchanged; skipped upper/lower variants need a decision on how to
+split one drawn line into two trails; new trails' peak grouping comes from
+`peakRegions.ts` and double-black vs black was not distinguished.
+
+To re-export after more review: read the page's `reviews` collection, write
+it to `src/data/trailReviews.json` (the page still uses `new-…` ids for the 36
+added trails; strip the prefix and the `-s-` possessive, e.g.
+`new-racer-s-edge` → `racers-edge`), then `npm run trails:apply`.
 
 ### Earlier audit of the fully automatic assignment
 

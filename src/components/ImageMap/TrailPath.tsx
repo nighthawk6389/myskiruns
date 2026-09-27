@@ -14,7 +14,8 @@ interface TrailPathProps {
 
 // Stroke widths in overlay units (viewBox is 1000 wide → 1 unit ≈ 0.1% of
 // the map width). The hit stroke is generous so the whole run is clickable.
-const W_HIT = 14;
+// narrow enough that parallel trails ~20px apart on the map stay separable
+const W_HIT = 7;
 const W_LINE = 3.2;
 const W_LINE_HOVER = 5.5;
 

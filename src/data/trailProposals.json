@@ -879,7 +879,7 @@
    "mapName": "SASSAFRAS",
    "note": "branches off Solitude at src (1188,573); SASSAFRAS label on this line | directly left of SASSAFRAS label | right of SASSAFRAS label/blue square | continuation of 379, includes arrow glyph | continuation of 97 down to merge with an east-west blue line at src ~(1577,748) | descends to join Pipe Dream "
   },
-  "new-ridgeview": {
+  "ridgeview": {
    "polylines": [
     318
    ],
@@ -890,7 +890,7 @@
    "difficulty": "green",
    "note": "green line just right of RIDGEVIEW label | RIDGEVIEW label inline"
   },
-  "new-grizzly": {
+  "grizzly": {
    "polylines": [
     89
    ],
@@ -901,7 +901,7 @@
    "difficulty": "blue",
    "note": "left of GRIZZLY label | Starts at the west end of the GRIZZLY label and runs west to the 222/147 junction. Grizzly is not in the roster."
   },
-  "new-sunrise-trail": {
+  "sunrise-trail": {
    "polylines": [
     225
    ],
@@ -912,7 +912,7 @@
    "difficulty": "green",
    "note": "junction to green start dot; SUNRISE TRAIL label immediately west (roster has no Sunrise Trail; nearest sunrise-connector)"
   },
-  "new-highridge": {
+  "highridge": {
    "polylines": [
     0,
     19
@@ -924,7 +924,7 @@
    "difficulty": "green",
    "note": "unlabeled green heading south past Ledgewood Yurt | from Ledgewood junction south past the yurt to the green circle at the HIGHRIDGE label | below HIGHRIDGE label SE to the bottom near East Mountain Rd; no other label. Polyline closes with a straight chord from (3060,2324) back to (2576,1890) that c"
   },
-  "new-edgemont-whiffletree": {
+  "edgemont-whiffletree": {
    "polylines": [
     80,
     84
@@ -936,7 +936,7 @@
    "difficulty": "blue",
    "note": "label just below this tile | blue line above the blue square/EDGEMONT / WHIFFLETREE label | blue line above the blue square/label | blue line below the label toward Trail Creek condos; closed chord polyline"
   },
-  "new-homerun": {
+  "homerun": {
    "polylines": [
     86,
     90
@@ -948,7 +948,7 @@
    "difficulty": "blue",
    "note": "to square before HOMERUN label | after HOMERUN label; east end (~x>2772) shared with Great Northern | HOMERUN label is just W (t003); horizontal E to where 105 joins (GN label merges near its E end)"
   },
-  "new-south-ridge-link": {
+  "south-ridge-link": {
    "polylines": [
     101,
     163,
@@ -964,7 +964,7 @@
    "difficulty": "green",
    "note": "arrowed green from snowflake NW to Pipe Dream end, then down-leg SW to Bear Trax; down-leg unlabeled | through the SOUTH RIDGE LINK green dot | crossing with Bear Trax corridor | arrowed one-way green continuation | start near lift top"
   },
-  "new-high-traverse": {
+  "high-traverse": {
    "polylines": [
     105,
     266,
@@ -977,7 +977,7 @@
    "difficulty": "blue",
    "note": "continues past label end down to Homerun line | High Traverse runs under its label to the top then turns S as this line down to Homerun/GN; below that it becomes black Double Dipper | aligned with HIGH TRAVERSE label | from Great Northern square up through snowflake to square that starts HIGH TRAVER"
   },
-  "new-stashway": {
+  "stashway": {
    "polylines": [
     109
    ],
@@ -988,7 +988,7 @@
    "difficulty": "blue",
    "note": "STASHWAY label directly beneath and parallel"
   },
-  "new-launchpad": {
+  "launchpad": {
    "polylines": [
     132,
     137,
@@ -1003,7 +1003,7 @@
    "difficulty": "blue",
    "note": "past junction with Skyelark/Skyehawk | after LAUNCHPAD label | short hook to Great Eastern green"
   },
-  "new-ledgewood-yurt-trail": {
+  "ledgewood-yurt-trail": {
    "polylines": [
     133
    ],
@@ -1014,7 +1014,7 @@
    "difficulty": "blue",
    "note": "from blue square under LEDGEWOOD YURT TRAIL label down to the junction at src (2515,1490)"
   },
-  "new-stitch-line": {
+  "stitch-line": {
    "polylines": [
     135,
     186
@@ -1026,7 +1026,7 @@
    "difficulty": "black",
    "note": "starts on the black Stitch Line and runs down where it merges with Needle's Eye | blue runout that continues the black STITCH LINE line (color changes black->blue at src (2136,1475)) down past the Needle's Eye merge to the base; no label on the blue part. The black part above it has no overlay (see "
   },
-  "new-escape": {
+  "escape": {
    "polylines": [
     156,
     200,
@@ -1039,7 +1039,7 @@
    "difficulty": "blue",
    "note": "branch leaving the ESCAPE label bottom, curving SW | from ESCAPE square down | continues 156 south across Pipe Dream to Bear Trax; unlabeled"
   },
-  "new-nivis-walk": {
+  "nivis-walk": {
    "polylines": [
     194,
     279
@@ -1050,7 +1050,7 @@
    "name": "Nivis Walk",
    "difficulty": "blue"
   },
-  "new-jug-handle": {
+  "jug-handle": {
    "polylines": [
     255
    ],
@@ -1061,7 +1061,7 @@
    "difficulty": "black",
    "note": "arc from The Jug up to Jug Handle diamond | partial: segment from Jug Handle diamond east back to The Jug"
   },
-  "new-chunnel": {
+  "chunnel": {
    "polylines": [
     257
    ],
@@ -1072,7 +1072,7 @@
    "difficulty": "blue",
    "note": "CHUNNEL label inline"
   },
-  "new-skyewalker": {
+  "skyewalker": {
    "polylines": [
     274
    ],
@@ -1083,7 +1083,7 @@
    "difficulty": "green",
    "note": "arrowed green toward SKYEWALKER dot, branches off Gateway"
   },
-  "new-carpenter-s-run": {
+  "carpenters-run": {
    "polylines": [
     77,
     259,
@@ -1096,7 +1096,7 @@
    "difficulty": "green",
    "note": "between Home Stretch junction and CARPENTER'S RUN label | continuous westward continuation of 342 across the Home Stretch crossing to the Great Eastern corridor | right of the CARPENTER'S RUN label/green circle to the base star icon"
   },
-  "new-fall-line": {
+  "fall-line": {
    "polylines": [
     229,
     272
@@ -1108,7 +1108,7 @@
    "difficulty": "blue",
    "note": "from the Highridge junction to the FALL LINE label/blue square | left of FALL LINE label | right of FALL LINE label to Fall Line Condos | right of FALL LINE label toward Fall Line condos"
   },
-  "new-alpine-training-venue": {
+  "alpine-training-venue": {
    "polylines": [
     283,
     323
@@ -1120,7 +1120,7 @@
    "difficulty": "blue",
    "note": "from Easy Street hairpin down to snowflake/square at top of ALPINE TRAINING VENUE label | bottom of ALPINE TRAINING VENUE label to Easy Street | blue line leading to ALPINE TRAINING label"
   },
-  "new-racer-s-edge": {
+  "racers-edge": {
    "polylines": [
     117,
     169,
@@ -1134,7 +1134,7 @@
    "difficulty": "black",
    "note": "from traverse at North Ridge base S to RACER'S EDGE diamond/label | below RACER'S EDGE label to crossing near Snowdon Triple | continuation of 169 past crossing, curves SE under MOUSE TRAP text | continuation of 258 to Bunny Buster/Chute junction"
   },
-  "new-ridge-run": {
+  "ridge-run": {
    "polylines": [
     122,
     313
@@ -1146,7 +1146,7 @@
    "difficulty": "black",
    "note": "below upper RIDGE RUN label to the traverse; continues as blue lower Ridge Run | from summit to the Ridge Run diamond | lower blue Ridge Run under its label undetected"
   },
-  "new-learn-to-ski-ride-area": {
+  "learn-to-ski-ride-area": {
    "polylines": [
     250,
     256,
@@ -1159,7 +1159,7 @@
    "difficulty": "green",
    "note": "short green segment beside the LEARN TO SKI & RIDE AREA text; beginner area path, no trail name | continuation of the line that leaves the LEARN TO SKI & RIDE AREA label, through the Yodeler crossing down toward Snowshed Slope; possibly the roster's 'Crossover' but no such label printed | same conne"
   },
-  "new-trail-creek": {
+  "trail-creek": {
    "polylines": [
     173
    ],
@@ -1170,7 +1170,7 @@
    "difficulty": "green",
    "note": "green line down to circle preceding TRAIL CREEK label | short green segment after TRAIL CREEK label, not covered (173 covers part above label)"
   },
-  "new-ol-express": {
+  "ol-express": {
    "polylines": [],
    "confidence": "missed",
    "mapName": "OL EXPRESS",
@@ -1179,7 +1179,7 @@
    "difficulty": "black",
    "note": "short black connector from Outer Limits (230 top) east to Wildfire; no overlay"
   },
-  "new-devil-s-den": {
+  "devils-den": {
    "polylines": [],
    "confidence": "missed",
    "mapName": "DEVIL'S DEN",
@@ -1188,7 +1188,7 @@
    "difficulty": "black",
    "note": "glade, no drawn line"
   },
-  "new-thimble": {
+  "thimble": {
    "polylines": [],
    "confidence": "missed",
    "mapName": "THIMBLE",
@@ -1197,7 +1197,7 @@
    "difficulty": "black",
    "note": "black line with diamond and inline label undetected"
   },
-  "new-nowhere": {
+  "nowhere": {
    "polylines": [],
    "confidence": "missed",
    "mapName": "NOWHERE",
@@ -1206,7 +1206,7 @@
    "difficulty": "black",
    "note": "diamond + label only, no drawn line"
   },
-  "new-the-stairs": {
+  "the-stairs": {
    "polylines": [],
    "confidence": "missed",
    "mapName": "THE STAIRS",
@@ -1215,7 +1215,7 @@
    "difficulty": "black",
    "note": "diamond + label only, no drawn line"
   },
-  "new-juanita": {
+  "juanita": {
    "polylines": [],
    "confidence": "missed",
    "mapName": "JUANITA",
@@ -1224,7 +1224,7 @@
    "difficulty": "black",
    "note": "double diamond + label, no drawn line"
   },
-  "new-powerline": {
+  "powerline": {
    "polylines": [],
    "confidence": "missed",
    "mapName": "POWERLINE",
@@ -1233,7 +1233,7 @@
    "difficulty": "black",
    "note": "whole line undetected (mostly under label), from summit along North Ridge Quad to traverse"
   },
-  "new-spillway": {
+  "spillway": {
    "polylines": [],
    "confidence": "missed",
    "mapName": "SPILLWAY",
@@ -1242,7 +1242,7 @@
    "difficulty": "black",
    "note": "from Spillway diamond down to merge with 18; no overlay"
   },
-  "new-the-throne": {
+  "the-throne": {
    "polylines": [],
    "confidence": "missed",
    "mapName": "THE THRONE",
@@ -1251,7 +1251,7 @@
    "difficulty": "black",
    "note": "no drawn line: glade (red tree icon + difficulty symbol only)"
   },
-  "new-chop-chop": {
+  "chop-chop": {
    "polylines": [],
    "confidence": "missed",
    "mapName": "CHOP CHOP",
@@ -1260,7 +1260,7 @@
    "difficulty": "black",
    "note": "no drawn line: glade (red tree icon + difficulty symbol only)"
   },
-  "new-low-rider": {
+  "low-rider": {
    "polylines": [],
    "confidence": "missed",
    "mapName": "LOW RIDER",
@@ -1269,7 +1269,7 @@
    "difficulty": "black",
    "note": "no drawn line: glade (red tree icon + difficulty symbol only)"
   },
-  "new-scarecrow": {
+  "scarecrow": {
    "polylines": [],
    "confidence": "missed",
    "mapName": "SCARECROW",

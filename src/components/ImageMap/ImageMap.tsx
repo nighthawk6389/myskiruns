@@ -4,6 +4,7 @@ import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_COLORS } from '../../ty
 import { peaks, getTrailsByPeak } from '../../data/trails';
 import trailPathsData from '../../data/trailPaths.json';
 import { TrailPath } from './TrailPath';
+import { TrailHotspot } from './TrailHotspot';
 import { useTrailDetection } from '../../detection/useTrailDetection';
 import styles from './ImageMap.module.css';
 
@@ -20,9 +21,23 @@ interface ImageMapProps {
 // Trails are drawn as clickable paths from trailPaths.json
 // (scripts/applyTrailProposals.mjs). A trail with no verified or proposed line
 // gets no overlay rather than a guess; it can still be toggled from the list.
+// Glades printed only as a label get a marker at the label.
 const TRAIL_PATHS = (
-  trailPathsData as { trails: Record<string, { segments: number[][][]; source: string }> }
+  trailPathsData as {
+    trails: Record<string, { segments: number[][][]; label?: number[]; source: string }>;
+  }
 ).trails;
+
+const TRAIL_LENGTH = new Map(
+  Object.entries(TRAIL_PATHS).map(([id, p]) => [
+    id,
+    p.segments.reduce(
+      (sum, seg) =>
+        sum + seg.slice(1).reduce((s, q, i) => s + Math.hypot(q[0] - seg[i][0], q[1] - seg[i][1]), 0),
+      0,
+    ),
+  ]),
+);
 
 export function ImageMap({
   filteredTrailIds,
@@ -118,16 +133,29 @@ export function ImageMap({
               viewBox={`0 0 1000 ${Math.round(1000 / aspect)}`}
             >
               {[...allTrails]
-                .sort((a, b) => {
-                  // verified paths render on top so hover resolves to the
-                  // trusted name where lines overlap
-                  const rank = (t: Trail) => (TRAIL_PATHS[t.id]?.source === 'verified' ? 1 : 0);
-                  return rank(a) - rank(b);
-                })
+                // shorter trails render last (on top) so a long run passing
+                // nearby doesn't swallow the hover of a short one
+                .sort((a, b) => (TRAIL_LENGTH.get(b.id) ?? 0) - (TRAIL_LENGTH.get(a.id) ?? 0))
                 .map((trail) => {
                   const path = TRAIL_PATHS[trail.id];
                   if (!path) return null;
                   const vH = Math.round(1000 / aspect);
+                  if (path.label) {
+                    // trail printed as a label with no drawn line (glades)
+                    return (
+                      <TrailHotspot
+                        key={trail.id}
+                        trail={trail}
+                        x={path.label[0] * 10}
+                        y={(path.label[1] * vH) / 100}
+                        isSkied={skiedTrails.has(trail.id)}
+                        isHovered={hoveredTrail === trail.id}
+                        isVisible={filteredTrailIds.has(trail.id)}
+                        onClick={() => onToggleTrail(trail.id)}
+                        onHover={onHoverTrail}
+                      />
+                    );
+                  }
                   const segments = path.segments.map((seg) =>
                     seg.map((q) => `${(q[0] * 10).toFixed(1)},${((q[1] * vH) / 100).toFixed(1)}`).join(' '),
                   );
