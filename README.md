@@ -99,25 +99,32 @@ naming is now done in two steps:
 win, unreviewed trails use high/medium proposals, and trails with neither get
 **no overlay** (no more guessed dots).
 
-**Status after the first full review (Sept 27 2026)** — all 166 decisions made:
+**Status (Sept 27 2026, after review + map-evidence cleanup)** — every trail
+in `trails.ts` (132) has an overlay: 110 clickable lines, 22 glade markers at
+their printed label.
 
-| decision | trails | in the app |
-|---|---|---|
-| confirmed line (tapped pieces and/or hand-drawn) | 110 | clickable along the whole line |
-| no drawn line (glades) | 22 | clickable marker at the label (20; 2 have no known label position) |
-| not on this map | 13 | list only |
-| skipped | 21 | list only (mostly upper/lower variants and liftlines) |
+What changed after the review, all from evidence printed on the map:
+- **Difficulties** follow the symbol printed at each trail (circle / square /
+  diamond / double diamond), read by six sub-agents over the tiles and each
+  change checked on a zoomed crop: 34 changes plus Low Road (blue line, no
+  symbol). Trails whose symbol changes along the way (Great Northern, Ridge
+  Run, Royal Flush, The Jug) and Skye Hawk (symbol and line disagree) keep
+  their listed difficulty.
+- **Splits:** the map prints SKYELARK and EAST FALL twice (upper blue, lower
+  black); the upper sections are Upper Skyelark / Upper East Fall.
+- **Glades found:** Treezy and Lil' Stash are printed as labels with no line.
+- **Duplicates merged:** Header and Skyeburst each appeared twice.
+- **Removed (32):** entries neither the reviewer nor the tile readers
+  could find printed anywhere on this map: Snow Play, Swirl, Ramshead Run, Ramshead Liftline, Start Park, Upper FIS, Mountain Run, Mountain Training Station, Snowdon Liftline, Upper Snowdon, Lower Snowdon, Sass, Upper Northbrook, Snowdon Glades, Upper Skyeburst, Upper Catwalk, Lower Home Stretch, Juggernaut, Upper Great Bear, Woodward Peace Park, Great Eastern (K.P.), Lower FIS, K-1 Gondola Run, Upper Canyon, Lower Canyon, Killington Liftline, Superstar Glade, The Mall, Falls Brook, Bear Mountain Liftline, Lower Wildfire, Bear Run.
+  They are in git history if any should come back.
+- Areas for the 36 trails added from the review come from their nearest
+  original neighbours.
 
-36 trails printed on the map were added to `trails.ts` (roster now 166).
-Browser check: hovering 3 points along each of the 110 lines shows the right
-name at 304/330 points; every miss is within 16px of another trail's line
-(junctions, crossings, tight parallels), where either name is defensible.
-
-Still open: the reviewer set no difficulty overrides, so roster colors that
-differ from the drawn line (Breakaway, Catwalk, Needle's Eye, Low Road, Bear
-View, …) are unchanged; skipped upper/lower variants need a decision on how to
-split one drawn line into two trails; new trails' peak grouping comes from
-`peakRegions.ts` and double-black vs black was not distinguished.
+Changes made by Claude are marked `"by": "claude"` in `trailReviews.json`
+and flagged "please recheck" on the review page, which now jumps to the next
+trail that needs action (undecided, skipped, or flagged).
+Browser check: 325/352 hover points show the right name; misses are all at
+junctions/crossings.
 
 To re-export after more review: read the page's `reviews` collection, write
 it to `src/data/trailReviews.json` (the page still uses `new-…` ids for the 36

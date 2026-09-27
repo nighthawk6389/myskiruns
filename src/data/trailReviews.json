@@ -69,22 +69,6 @@
    "note": "",
    "at": "2026-09-27T01:24:18.059Z"
   },
-  "bear-mountain-liftline": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:44:30.154Z"
-  },
-  "bear-run": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:48:45.848Z"
-  },
   "bear-trax": {
    "status": "confirmed",
    "polylines": [
@@ -615,53 +599,28 @@
   "east-fall": {
    "status": "confirmed",
    "polylines": [
-    309,
-    360
+    309
    ],
    "drawn": [
     [
-     2924,
-     558
-    ],
-    [
-     2944,
-     573
-    ],
-    [
-     2973,
-     601
-    ],
-    [
-     2995,
-     618
-    ],
-    [
-     3016,
-     661
-    ],
-    [
-     3051,
+     3046,
      682
     ],
     [
-     3052,
-     683
+     3010,
+     735
     ],
     [
-     3129,
-     676
+     2978,
+     791
     ],
     [
-     3167,
-     663
-    ],
-    [
-     3199,
-     654
+     2951,
+     834
     ]
    ],
    "mapDifficulty": null,
-   "note": "",
+   "note": "lower black section (diamond at label ~2978,791); upper blue section split off as Upper East Fall (by Claude)",
    "at": "2026-09-27T01:39:25.682Z"
   },
   "easy-street": {
@@ -780,14 +739,6 @@
    "mapDifficulty": null,
    "note": "",
    "at": "2026-09-27T01:39:10.057Z"
-  },
-  "falls-brook": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:43:45.686Z"
   },
   "field-goal": {
    "status": "confirmed",
@@ -962,14 +913,6 @@
    "note": "",
    "at": "2026-09-27T01:37:36.405Z"
   },
-  "great-eastern-kp": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:40:22.519Z"
-  },
   "great-eastern": {
    "status": "confirmed",
    "polylines": [
@@ -1056,9 +999,14 @@
     41.86
    ]
   },
-  "header-kp": {
+  "header": {
    "status": "confirmed",
-   "polylines": [],
+   "polylines": [
+    20,
+    25,
+    28,
+    244
+   ],
    "drawn": [
     [
      4243,
@@ -1114,20 +1062,7 @@
     ]
    ],
    "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:42:13.632Z"
-  },
-  "header": {
-   "status": "confirmed",
-   "polylines": [
-    20,
-    25,
-    28,
-    244
-   ],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
+   "note": "merged duplicate roster entry header-kp",
    "at": "2026-09-27T01:27:50.411Z"
   },
   "helter-skelter": {
@@ -1284,14 +1219,6 @@
    "note": "",
    "at": "2026-09-27T01:22:39.899Z"
   },
-  "juggernaut": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:34:56.016Z"
-  },
   "julio": {
    "status": "no-line",
    "polylines": [],
@@ -1303,22 +1230,6 @@
     55.18,
     30.76
    ]
-  },
-  "k1-gondola-run": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:41:22.426Z"
-  },
-  "killington-liftline": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:41:45.634Z"
   },
   "killink": {
    "status": "confirmed",
@@ -1333,12 +1244,17 @@
    "at": "2026-09-27T01:50:19.799Z"
   },
   "lil-stash": {
-   "status": "skip",
+   "status": "no-line",
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:44:43.080Z"
+   "by": "claude",
+   "at": "2026-09-27T20:22:56.000Z",
+   "labelAt": [
+    79.44,
+    55.58
+   ],
+   "note": "label + park pill + tree icon printed at (3632,1503); no drawn line"
   },
   "low-road": {
    "status": "confirmed",
@@ -1363,30 +1279,6 @@
    "note": "",
    "at": "2026-09-27T01:42:28.568Z"
   },
-  "lower-canyon": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:41:34.682Z"
-  },
-  "lower-fis": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:40:37.818Z"
-  },
-  "lower-home-stretch": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:34:53.365Z"
-  },
   "lower-northbrook": {
    "status": "confirmed",
    "polylines": [
@@ -1398,38 +1290,6 @@
    "mapDifficulty": null,
    "note": "",
    "at": "2026-09-27T01:32:17.031Z"
-  },
-  "lower-snowdon": {
-   "status": "not-on-map",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:31:19.741Z"
-  },
-  "lower-wildfire": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:48:35.234Z"
-  },
-  "mountain-run": {
-   "status": "not-on-map",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:30:50.596Z"
-  },
-  "mountain-training": {
-   "status": "not-on-map",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:30:53.048Z"
   },
   "mouse-run": {
    "status": "confirmed",
@@ -2555,22 +2415,6 @@
    "note": "",
    "at": "2026-09-27T01:36:39.237Z"
   },
-  "ramshead-liftline": {
-   "status": "not-on-map",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:27:39.258Z"
-  },
-  "ramshead-run": {
-   "status": "not-on-map",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:27:18.217Z"
-  },
   "reason": {
    "status": "confirmed",
    "polylines": [],
@@ -2736,14 +2580,6 @@
    "note": "",
    "at": "2026-09-27T01:32:03.214Z"
   },
-  "sass": {
-   "status": "not-on-map",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:31:37.936Z"
-  },
   "sassafras": {
    "status": "confirmed",
    "polylines": [
@@ -2814,10 +2650,118 @@
    "note": "",
    "at": "2026-09-27T01:49:59.281Z"
   },
-  "skye-burst-bear": {
+  "skye-hawk": {
    "status": "confirmed",
-   "polylines": [],
+   "polylines": [
+    237
+   ],
    "drawn": [
+    [
+     2307,
+     904
+    ],
+    [
+     2302,
+     886
+    ],
+    [
+     2271,
+     869
+    ],
+    [
+     2242,
+     840
+    ],
+    [
+     2209,
+     818
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:33:18.901Z"
+  },
+  "skye-peak-liftline": {
+   "status": "confirmed",
+   "polylines": [
+    287
+   ],
+   "drawn": [
+    [
+     1399,
+     1262
+    ],
+    [
+     1337,
+     1296
+    ],
+    [
+     1313,
+     1321
+    ],
+    [
+     1276,
+     1346
+    ],
+    [
+     1242,
+     1369
+    ],
+    [
+     1231,
+     1383
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:37:27.349Z"
+  },
+  "skyebits": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-27T01:33:24.545Z",
+   "labelAt": [
+    55.18,
+    44.14
+   ]
+  },
+  "skyeburst": {
+   "status": "confirmed",
+   "polylines": [
+    6,
+    73,
+    88,
+    147,
+    222
+   ],
+   "drawn": [
+    [
+     1556,
+     1195
+    ],
+    [
+     1552,
+     1230
+    ],
+    [
+     1540,
+     1269
+    ],
+    [
+     1517,
+     1313
+    ],
+    [
+     1511,
+     1347
+    ],
+    [
+     1499,
+     1373
+    ],
     [
      1977,
      912
@@ -2932,133 +2876,13 @@
     ]
    ],
    "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:44:25.621Z"
-  },
-  "skye-hawk": {
-   "status": "confirmed",
-   "polylines": [
-    237
-   ],
-   "drawn": [
-    [
-     2307,
-     904
-    ],
-    [
-     2302,
-     886
-    ],
-    [
-     2271,
-     869
-    ],
-    [
-     2242,
-     840
-    ],
-    [
-     2209,
-     818
-    ]
-   ],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:33:18.901Z"
-  },
-  "skye-peak-liftline": {
-   "status": "confirmed",
-   "polylines": [
-    287
-   ],
-   "drawn": [
-    [
-     1399,
-     1262
-    ],
-    [
-     1337,
-     1296
-    ],
-    [
-     1313,
-     1321
-    ],
-    [
-     1276,
-     1346
-    ],
-    [
-     1242,
-     1369
-    ],
-    [
-     1231,
-     1383
-    ]
-   ],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:37:27.349Z"
-  },
-  "skyebits": {
-   "status": "no-line",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:33:24.545Z",
-   "labelAt": [
-    55.18,
-    44.14
-   ]
-  },
-  "skyeburst": {
-   "status": "confirmed",
-   "polylines": [
-    6,
-    73,
-    88,
-    147,
-    222
-   ],
-   "drawn": [
-    [
-     1556,
-     1195
-    ],
-    [
-     1552,
-     1230
-    ],
-    [
-     1540,
-     1269
-    ],
-    [
-     1517,
-     1313
-    ],
-    [
-     1511,
-     1347
-    ],
-    [
-     1499,
-     1373
-    ]
-   ],
-   "mapDifficulty": null,
-   "note": "",
+   "note": "merged duplicate roster entry skye-burst-bear",
    "at": "2026-09-27T01:33:04.826Z"
   },
   "skyelark": {
    "status": "confirmed",
    "polylines": [
-    76,
-    87,
     110,
-    114,
     224,
     294,
     356
@@ -3090,32 +2914,8 @@
     ]
    ],
    "mapDifficulty": null,
-   "note": "",
+   "note": "lower black section; upper blue section split off as Upper Skyelark (by Claude)",
    "at": "2026-09-27T01:32:40.372Z"
-  },
-  "snow-play": {
-   "status": "not-on-map",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:23:10.859Z"
-  },
-  "snowdon-glades": {
-   "status": "no-line",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:32:20.591Z"
-  },
-  "snowdon-liftline": {
-   "status": "not-on-map",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:30:57.561Z"
   },
   "snowshed-crossover": {
    "status": "confirmed",
@@ -3289,14 +3089,6 @@
    "note": "",
    "at": "2026-09-27T01:26:29.687Z"
   },
-  "start-park": {
-   "status": "not-on-map",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:28:36.927Z"
-  },
   "sun-dog": {
    "status": "confirmed",
    "polylines": [
@@ -3360,14 +3152,6 @@
    "note": "",
    "at": "2026-09-27T01:25:06.313Z"
   },
-  "superstar-glade": {
-   "status": "no-line",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:41:47.588Z"
-  },
   "superstar": {
    "status": "confirmed",
    "polylines": [
@@ -3423,14 +3207,6 @@
    "note": "",
    "at": "2026-09-27T01:37:57.141Z"
   },
-  "swirl": {
-   "status": "not-on-map",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:25:56.503Z"
-  },
   "the-jug": {
    "status": "confirmed",
    "polylines": [
@@ -3479,14 +3255,6 @@
    "mapDifficulty": null,
    "note": "",
    "at": "2026-09-27T01:49:38.486Z"
-  },
-  "the-mall": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:42:36.748Z"
   },
   "the-stash": {
    "status": "no-line",
@@ -3552,12 +3320,17 @@
    "at": "2026-09-27T01:33:55.891Z"
   },
   "treezy": {
-   "status": "not-on-map",
+   "status": "no-line",
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:26:06.014Z"
+   "by": "claude",
+   "at": "2026-09-27T20:22:56.000Z",
+   "labelAt": [
+    83.81,
+    54.84
+   ],
+   "note": "label + green circle + glade icon printed at (3832,1483); no drawn line"
   },
   "twister": {
    "status": "no-line",
@@ -3571,77 +3344,67 @@
     37.62
    ]
   },
-  "upper-canyon": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:41:32.487Z"
-  },
-  "upper-catwalk": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:34:15.808Z"
-  },
   "upper-east-fall": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
+   "status": "confirmed",
+   "polylines": [
+    360
+   ],
+   "drawn": [
+    [
+     2924,
+     558
+    ],
+    [
+     2944,
+     573
+    ],
+    [
+     2973,
+     601
+    ],
+    [
+     2995,
+     618
+    ],
+    [
+     3016,
+     661
+    ],
+    [
+     3051,
+     682
+    ]
+   ],
    "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:39:28.702Z"
-  },
-  "upper-fis": {
-   "status": "not-on-map",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:30:37.182Z"
-  },
-  "upper-great-bear": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:37:41.352Z"
-  },
-  "upper-northbrook": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:32:08.133Z"
-  },
-  "upper-skyeburst": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:33:08.404Z"
+   "by": "claude",
+   "at": "2026-09-27T20:22:56.000Z",
+   "note": "map prints EAST FALL twice: upper blue section (square) is Upper East Fall"
   },
   "upper-skyelark": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
+   "status": "confirmed",
+   "polylines": [
+    114,
+    87,
+    76
+   ],
+   "drawn": [
+    [
+     2279,
+     937
+    ],
+    [
+     2317,
+     961
+    ],
+    [
+     2356,
+     1001
+    ]
+   ],
    "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:32:43.371Z"
-  },
-  "upper-snowdon": {
-   "status": "not-on-map",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:31:15.362Z"
+   "by": "claude",
+   "at": "2026-09-27T20:22:56.000Z",
+   "note": "map prints SKYELARK twice: upper blue section (square at 2273,932) is Upper Skyelark"
   },
   "upper-vertigo": {
    "status": "confirmed",
@@ -3803,14 +3566,6 @@
    "mapDifficulty": null,
    "note": "",
    "at": "2026-09-27T01:42:52.651Z"
-  },
-  "woodward-peace-park": {
-   "status": "skip",
-   "polylines": [],
-   "drawn": [],
-   "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:37:43.828Z"
   },
   "yodeler": {
    "status": "confirmed",
