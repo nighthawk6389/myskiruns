@@ -77,7 +77,37 @@ labeled / labeled incorrectly" at the data source.
 | `node scripts/extractLabels.mjs` | OCR the map labels |
 | `node scripts/reconcileTrails.mjs [--apply]` | match labels to roster, propose missing trails |
 
-## Honest end-to-end status (audit, Sept 2026)
+## Current approach: propose, then human review (Sept 2026)
+
+Fully automatic name→line assignment reached only ~40% (audit below), so
+naming is now done in two steps:
+
+1. **Propose.** The map is cut into 37 overlapping tiles at 1.7× zoom with
+   every detected line piece numbered. Six readers (Claude sub-agents, in
+   parallel) named each piece from the labels printed along it and its
+   continuity through junctions, or marked it lift / not-a-trail / unknown,
+   and listed labels whose line was not detected. Result:
+   `src/data/trailProposals.json` — 82 trails at high confidence; 57 pieces
+   flagged as not trails (building outlines, icons, text); 92% of the real
+   trail-line length now carries a name (was 53%).
+2. **Review.** The *Killington Trail Check* page shows each trail's proposed
+   lines on the map; a person confirms, taps lines to add/remove, draws lines
+   the detector missed, or marks "no line" / "not on this map". Decisions are
+   exported to `src/data/trailReviews.json`.
+
+`npm run trails:apply` merges both into `src/data/trailPaths.json`: reviews
+win, unreviewed trails use high/medium proposals, and trails with neither get
+**no overlay** (no more guessed dots). Today: 68 roster trails drawn from
+proposals, 0 verified.
+
+Open data questions surfaced by the readers (decide during review): 37 names
+printed on the map are not in `trails.ts` (Ridgeview, Grizzly, Homerun,
+Launchpad, South Ridge Link, Escape, Racer's Edge, …); the roster has
+duplicate "Header" and "Skyeburst" entries; several difficulties differ from
+the drawn color (Breakaway, Catwalk, Needle's Eye, Low Road, Bear View, …);
+glades like Growler, Centerpiece, Somewhere, Nowhere have a label but no line.
+
+### Earlier audit of the fully automatic assignment
 
 The detector scores (97% F1) measure *line pixels*, not *named trails*. The
 real goal — every trail drawn on its own line, clickable, with the right
@@ -149,7 +179,7 @@ node scripts/extractLabels.mjs        # OCR -> labelAnchors.json (keeps pass-2 l
 node scripts/enrichAnchors.mjs        # pass-2 proposals -> /tmp/explore2/enrich; then --commit <ids>
 node scripts/reconcileTrails.mjs      # labels -> trailAnchors.json
 node scripts/tracePolylines.mjs       # detection -> linePolylines.json
-node scripts/assignTrailPaths.mjs     # -> trailPaths.json (--render for audit)
-npm run lines:place                   # fallback dots -> trailPositions.json
+# naming: tiles + readers produce trailProposals.json; review page -> trailReviews.json
+npm run trails:apply                  # -> trailPaths.json (what the app draws)
 npm run lines:png                     # -> public/trail-lines.png
 ```
