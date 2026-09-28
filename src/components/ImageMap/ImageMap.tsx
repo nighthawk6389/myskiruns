@@ -12,6 +12,8 @@ const MAP_SRC = '/killington-trail-map.jpg';
 interface ImageMapProps {
   filteredTrailIds: Set<string>;
   skiedTrails: Set<string>;
+  /** trails skied on any trip, shown fainter when not skied on this one */
+  skiedEver: Set<string>;
   hoveredTrail: string | null;
   onToggleTrail: (id: string) => void;
   onHoverTrail: (id: string | null) => void;
@@ -41,6 +43,7 @@ const TRAIL_LENGTH = new Map(
 export function ImageMap({
   filteredTrailIds,
   skiedTrails,
+  skiedEver,
   hoveredTrail,
   onToggleTrail,
   onHoverTrail,
@@ -153,6 +156,7 @@ export function ImageMap({
                       trail={trail}
                       segments={segments}
                       isSkied={skiedTrails.has(trail.id)}
+                      skiedBefore={skiedEver.has(trail.id)}
                       isHovered={hoveredTrail === trail.id}
                       isVisible={filteredTrailIds.has(trail.id)}
                       onClick={() => onToggleTrail(trail.id)}
@@ -205,7 +209,9 @@ export function ImageMap({
             {DIFFICULTY_LABELS[hoveredTrailData.difficulty]}
             {hoveredTrailData.isGlade && ' • Glade'}
             {hoveredTrailData.isTerrainPark && ' • Terrain Park'}
-            {skiedTrails.has(hoveredTrailData.id) && ' • ✓ Skied'}
+            {skiedTrails.has(hoveredTrailData.id)
+              ? ' • ✓ Skied this trip'
+              : skiedEver.has(hoveredTrailData.id) && ' • Skied on an earlier trip'}
           </div>
         </div>
       )}

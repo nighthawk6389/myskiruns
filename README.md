@@ -16,6 +16,18 @@ npm run dev        # app at localhost:5173
 npm run build      # typecheck + production build
 ```
 
+## Using the app
+
+- **Trips.** What you ski is logged per trip ("Presidents Day weekend").
+  Pick or start a trip in the header; tapping a trail on the map or in the
+  list marks it skied on the current trip (tap again to unmark). With no
+  trip yet, the first tap starts one for today. Stats show this trip and all
+  trips; trails skied on an earlier trip are drawn dashed and get a faint ✓.
+- **Your data stays on this device** (browser `localStorage`, key
+  `myskiruns.trips`). Use ⋯ → Export backup / Import backup to move or keep
+  it; importing adds trips that aren't already on the device. Data from the
+  pre-trips version is carried into a trip called "Earlier runs".
+
 ## What was done
 
 ### 1. Snow-surface detection (v1)
