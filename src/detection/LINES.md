@@ -53,7 +53,7 @@ The old point set measured snow-surface detection. For lines we use:
 3. **Whole-map overlay audit** — `npm run lines:overlay` tints every detected
    line pixel; systematic errors (sky, lifts, text) are obvious at a glance
    in a way 283 points can never be. `npm run lines:png` produces the app's
-   overlay (toggle 〰 in the image view).
+   overlay (toggle 〰 on the map; open the app with `?lines` to show it).
 4. **Failure forensics** — `--why` traces every miss to the pipeline stage
    that dropped it; every fix in the detector's history corresponds to a
    named mechanism, not threshold luck.

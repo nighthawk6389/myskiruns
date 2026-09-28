@@ -87,6 +87,12 @@
   font-size: 10px;
 }
 
+.filterBtn:focus-visible,
+.modeBtn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
 @media (max-width: 760px) {
   .filterBar {
     padding: 8px 12px;
@@ -94,7 +100,28 @@
     overflow-x: auto;
   }
 
-  .filterBtn {
+  .filterBar {
+    gap: 6px;
+    justify-content: space-between;
+  }
+
+  .filterGroup {
+    gap: 4px;
+  }
+
+  /* icons only: the four difficulty chips and three modes fit one row */
+  .label {
+    display: none;
+  }
+
+  .filterBtn,
+  .modeBtn {
     white-space: nowrap;
+    padding: 6px 10px;
+    min-height: 34px;
+  }
+
+  .separator {
+    display: none;
   }
 }

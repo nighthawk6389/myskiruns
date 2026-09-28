@@ -1,6 +1,6 @@
-import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
+import { useState, useMemo, useCallback, useEffect, useImperativeHandle, useRef } from 'react';
 import type { Trail } from '../../types';
-import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_COLORS } from '../../types';
+import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_COLORS, DIFFICULTY_UI_COLORS } from '../../types';
 import { peaks, getTrailsByPeak } from '../../data/trails';
 import trailPathsData from '../../data/trailPaths.json';
 import { TrailPath } from './TrailPath';
@@ -15,6 +15,15 @@ const PICK_RADIUS_TOUCH = 24;
 const PICK_RADIUS_MOUSE = 12;
 // movement beyond this turns a press into a pan instead of a tap
 const TAP_SLOP = 8;
+// below this width the map opens zoomed to fill the (tall) map area
+const PHONE_MAX_W = 760;
+// the detected-lines debug overlay is only offered with ?lines in the URL
+const SHOW_LINES_TOGGLE = typeof location !== 'undefined' && new URLSearchParams(location.search).has('lines');
+
+export interface ImageMapHandle {
+  /** zoom to a trail, highlight it and open its sheet */
+  focusTrail: (id: string) => void;
+}
 
 interface ImageMapProps {
   filteredTrailIds: Set<string>;
@@ -24,6 +33,9 @@ interface ImageMapProps {
   hoveredTrail: string | null;
   onToggleTrail: (id: string) => void;
   onHoverTrail: (id: string | null) => void;
+  /** show the "tap a trail" hint (nothing marked on this trip yet) */
+  showHint: boolean;
+  ref?: React.Ref<ImageMapHandle>;
 }
 
 // Trails are drawn from trailPaths.json (scripts/applyTrailProposals.mjs).
@@ -107,6 +119,8 @@ export function ImageMap({
   hoveredTrail,
   onToggleTrail,
   onHoverTrail,
+  showHint,
+  ref,
 }: ImageMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [box, setBox] = useState({ w: 0, h: 0 });
@@ -114,7 +128,10 @@ export function ImageMap({
   const [imageError, setImageError] = useState(false);
   // true aspect of the loaded map image; the overlay viewBox follows it
   const [aspect, setAspect] = useState(4572 / 2704);
-  const [view, setView] = useState<View>({ k: 1, tx: 0, ty: 0 });
+  // null until the user moves the map: the default view for the screen size
+  const [view, setView] = useState<View | null>(null);
+  // animate programmatic moves (buttons, locate), not direct manipulation
+  const [smooth, setSmooth] = useState(false);
   const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
   const [showLines, setShowLines] = useState(false);
   const [sheet, setSheet] = useState<SheetTrail[] | null>(null);
@@ -144,6 +161,14 @@ export function ImageMap({
     [fitW, fitH, box.w, box.h],
   );
 
+  // phones: the map area is taller than the fitted map, so start zoomed in
+  // to fill its height (centered) instead of showing empty bands
+  const defaultView = useMemo((): View => {
+    if (!fitH || box.w > PHONE_MAX_W || box.h < fitH * 1.2) return { k: 1, tx: 0, ty: 0 };
+    const k = Math.min(MAX_ZOOM, box.h / fitH);
+    return { k, tx: (box.w - fitW * k) / 2, ty: 0 };
+  }, [box.w, box.h, fitW, fitH]);
+
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
@@ -154,12 +179,13 @@ export function ImageMap({
 
   const zoomAt = useCallback(
     (factor: number, cx: number, cy: number) => {
-      setView((v) => {
+      setView((prev) => {
+        const v = prev ?? defaultView;
         const k = Math.min(MAX_ZOOM, Math.max(1, v.k * factor));
         return clamp({ k, tx: cx - ((cx - v.tx) * k) / v.k, ty: cy - ((cy - v.ty) * k) / v.k });
       });
     },
-    [clamp],
+    [clamp, defaultView],
   );
 
   useEffect(() => {
@@ -167,6 +193,7 @@ export function ImageMap({
     if (!el) return;
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
+      setSmooth(false);
       const r = el.getBoundingClientRect();
       zoomAt(Math.exp(-e.deltaY * 0.0015), e.clientX - r.left, e.clientY - r.top);
     };
@@ -175,7 +202,7 @@ export function ImageMap({
   }, [zoomAt]);
 
   // clamp at render time so resizes and image loads re-fit without an effect
-  const cv = clamp(view);
+  const cv = clamp(view ?? defaultView);
   // lines and markers are designed for a ~1100px-wide map; thin them when the
   // map is drawn smaller so they don't swamp it on a phone
   const weight = Math.min(1, Math.max(0.5, (fitW * cv.k) / 1100));
@@ -256,6 +283,7 @@ export function ImageMap({
   const onPointerDown = (e: React.PointerEvent) => {
     if ((e.target as HTMLElement).closest('[data-map-ui]')) return;
     containerRef.current?.setPointerCapture(e.pointerId);
+    setSmooth(false);
     pointers.current.set(e.pointerId, local(e));
     if (pointers.current.size === 1) gesture.current = { moved: 0, pinch: 0 };
     if (pointers.current.size === 2) {
@@ -281,7 +309,12 @@ export function ImageMap({
     const dx = p.x - prev.x;
     const dy = p.y - prev.y;
     gesture.current.moved += Math.abs(dx) + Math.abs(dy);
-    if (gesture.current.moved > TAP_SLOP) setView((v) => clamp({ ...v, tx: v.tx + dx, ty: v.ty + dy }));
+    if (gesture.current.moved > TAP_SLOP) {
+      setView((prev) => {
+        const v = clamp(prev ?? defaultView);
+        return clamp({ ...v, tx: v.tx + dx, ty: v.ty + dy });
+      });
+    }
   };
 
   const onPointerUp = (e: React.PointerEvent) => {
@@ -305,6 +338,39 @@ export function ImageMap({
     onHoverTrail(null);
     setToast({ trail, skied: willBeSkied });
   };
+
+  const focusTrail = (id: string) => {
+    const path = TRAIL_PATHS[id];
+    const trail = trailById.get(id);
+    if (!trail) return;
+    onHoverTrail(id);
+    setSheet([{ trail, distance: 0 }]);
+    if (!path || !fitW) return;
+    const pts = path.label ? [path.label] : path.segments.flat();
+    const xs = pts.map((q) => (q[0] * fitW) / 100);
+    const ys = pts.map((q) => (q[1] * fitH) / 100);
+    const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
+    // fit the trail in the middle ~60% of the map area, never closer than 4x
+    const k = Math.min(4, Math.max(1.5, Math.min((box.w * 0.6) / (x1 - x0 || 1), (box.h * 0.5) / (y1 - y0 || 1))));
+    // on phones the sheet covers the bottom of the screen, so aim higher
+    const cy = box.w <= PHONE_MAX_W ? box.h * 0.4 : box.h / 2;
+    setSmooth(true);
+    setView(clamp({ k, tx: box.w / 2 - ((x0 + x1) / 2) * k, ty: cy - ((y0 + y1) / 2) * k }));
+  };
+  useImperativeHandle(ref, () => ({ focusTrail }));
+
+  // Escape closes the sheet
+  useEffect(() => {
+    if (!sheet) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSheet(null);
+        onHoverTrail(null);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [sheet, onHoverTrail]);
 
   useEffect(() => {
     if (!toast) return;
@@ -335,7 +401,7 @@ export function ImageMap({
           <div className={styles.placeholderCode}>public/killington-trail-map.jpg</div>
         </div>
       )}
-      <div className={styles.stage} style={stageStyle}>
+      <div className={`${styles.stage} ${smooth ? styles.smooth : ''}`} style={stageStyle}>
         <img
           src={MAP_SRC}
           alt="Killington trail map"
@@ -388,6 +454,7 @@ export function ImageMap({
                     isHovered={highlighted}
                     isVisible={filteredTrailIds.has(trail.id)}
                     weight={weight}
+                    zoom={cv.k}
                     onHover={onHoverTrail}
                   />
                 );
@@ -420,33 +487,66 @@ export function ImageMap({
       </div>
 
       <div className={styles.zoomControls} data-map-ui>
+        {SHOW_LINES_TOGGLE && (
+          <button
+            className={styles.zoomBtn}
+            onClick={() => setShowLines((s) => !s)}
+            title="Show detected trail lines"
+            aria-pressed={showLines}
+            style={{ fontSize: 15 }}
+          >
+            〰
+          </button>
+        )}
         <button
           className={styles.zoomBtn}
-          onClick={() => setShowLines((s) => !s)}
-          title="Show detected trail lines"
-          aria-pressed={showLines}
-          style={{ fontSize: 15 }}
+          onClick={() => {
+            setSmooth(true);
+            zoomAt(1.5, box.w / 2, box.h / 2);
+          }}
+          aria-label="Zoom in"
+          title="Zoom in"
         >
-          〰
-        </button>
-        <button className={styles.zoomBtn} onClick={() => zoomAt(1.5, box.w / 2, box.h / 2)} aria-label="Zoom in">
           +
         </button>
-        <button className={styles.zoomBtn} onClick={() => zoomAt(1 / 1.5, box.w / 2, box.h / 2)} aria-label="Zoom out">
+        <button
+          className={styles.zoomBtn}
+          onClick={() => {
+            setSmooth(true);
+            zoomAt(1 / 1.5, box.w / 2, box.h / 2);
+          }}
+          aria-label="Zoom out"
+          title="Zoom out"
+        >
           −
         </button>
-        <button className={styles.zoomBtn} onClick={() => setView(clamp({ k: 1, tx: 0, ty: 0 }))} style={{ fontSize: 12 }}>
-          Fit
+        <button
+          className={styles.zoomBtn}
+          onClick={() => {
+            setSmooth(true);
+            setView({ k: 1, tx: 0, ty: 0 });
+          }}
+          aria-label="Show the whole map"
+          title="Show the whole map"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+            <path d="M1.5 5.5v-4h4M10.5 1.5h4v4M14.5 10.5v4h-4M5.5 14.5h-4v-4" />
+          </svg>
         </button>
       </div>
+
+      {showHint && imageLoaded && !sheet && !toast && (
+        <div className={styles.hint} aria-hidden="true">
+          Tap a trail on the map to mark it skied
+        </div>
+      )}
 
       {hoveredTrailData && mousePos && !sheet && (
         <div className={styles.tooltip} style={{ left: mousePos.x, top: mousePos.y }}>
           <div className={styles.tooltipName}>
             <span
               style={{
-                color:
-                  hoveredTrailData.difficulty === 'double-black' ? '#ef4444' : DIFFICULTY_COLORS[hoveredTrailData.difficulty],
+                color: DIFFICULTY_UI_COLORS[hoveredTrailData.difficulty],
                 marginRight: 4,
               }}
             >

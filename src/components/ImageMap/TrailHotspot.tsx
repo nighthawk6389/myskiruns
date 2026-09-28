@@ -41,8 +41,7 @@ export function TrailHotspot({ trail, x, y, pxPerUnit, weight, isSkied, isHovere
         r={radius}
         fill={color}
         stroke={isHovered ? '#fff' : 'rgba(255,255,255,0.85)'}
-        strokeWidth={isHovered ? 2 : 1.2}
-        vectorEffect="non-scaling-stroke"
+        strokeWidth={(isHovered ? 2 : 1.2) * u}
       />
       {isSkied && (
         <text

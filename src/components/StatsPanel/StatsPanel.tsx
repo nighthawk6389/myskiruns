@@ -1,5 +1,5 @@
 import type { Trail, Difficulty } from '../../types';
-import { DIFFICULTY_COLORS, DIFFICULTY_LABELS } from '../../types';
+import { DIFFICULTY_LABELS, DIFFICULTY_UI_COLORS } from '../../types';
 import styles from './StatsPanel.module.css';
 
 interface StatsPanelProps {
@@ -36,7 +36,14 @@ export function StatsPanel({ trails, skiedTrails, skiedEver, tripName }: StatsPa
           / {total} trails ({pct}%)
         </span>
       </div>
-      <div className={styles.progressBarOuter}>
+      <div
+        className={styles.progressBarOuter}
+        role="progressbar"
+        aria-label="Trails skied this trip"
+        aria-valuemin={0}
+        aria-valuemax={total}
+        aria-valuenow={skied}
+      >
         <div
           className={styles.progressBarInner}
           style={{ width: `${pct}%` }}
@@ -47,15 +54,10 @@ export function StatsPanel({ trails, skiedTrails, skiedEver, tripName }: StatsPa
       </div>
       <div className={styles.breakdowns}>
         {byDifficulty.map(({ difficulty, total: t, skied: s }) => (
-          <div key={difficulty} className={styles.breakdownItem}>
+          <div key={difficulty} className={styles.breakdownItem} title={`${DIFFICULTY_LABELS[difficulty]}: ${s} of ${t} this trip`}>
             <span
               className={styles.breakdownDot}
-              style={{
-                background:
-                  difficulty === 'double-black'
-                    ? '#ef4444'
-                    : DIFFICULTY_COLORS[difficulty],
-              }}
+              style={{ background: DIFFICULTY_UI_COLORS[difficulty] }}
             />
             <span className={styles.breakdownLabel}>
               {DIFFICULTY_LABELS[difficulty]}

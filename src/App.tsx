@@ -1,15 +1,12 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import { trails } from './data/trails';
 import { useTrips } from './hooks/useTrips';
 import { useTrailFilter } from './hooks/useTrailFilter';
 import { FilterBar } from './components/FilterBar/FilterBar';
 import { StatsPanel } from './components/StatsPanel/StatsPanel';
 import { TrailList } from './components/TrailList/TrailList';
-import { SchematicMap } from './components/SchematicMap/SchematicMap';
-import { ImageMap } from './components/ImageMap/ImageMap';
-import { MapToggle } from './components/MapToggle/MapToggle';
+import { ImageMap, type ImageMapHandle } from './components/ImageMap/ImageMap';
 import { TripBar } from './components/TripBar/TripBar';
-import type { MapView } from './components/MapToggle/MapToggle';
 import styles from './App.module.css';
 
 function App() {
@@ -32,12 +29,13 @@ function App() {
     searchQuery,
     filteredTrails,
     toggleDifficulty,
+    setAllDifficulties,
     setFilterMode,
     setSearchQuery,
   } = useTrailFilter(trails, skiedTrails);
 
   const [hoveredTrail, setHoveredTrail] = useState<string | null>(null);
-  const [mapView, setMapView] = useState<MapView>('image');
+  const mapRef = useRef<ImageMapHandle>(null);
 
   const filteredTrailIds = useMemo(
     () => new Set(filteredTrails.map((t) => t.id)),
@@ -49,17 +47,9 @@ function App() {
       <header className={styles.header}>
         <div className={styles.headerLeft}>
           <span className={styles.logo}>⛷</span>
-          <div>
-            <div className={styles.title}>
-              Killington Trail Tracker
-              <span className={styles.subtitle}> — My Ski Runs</span>
-            </div>
-          </div>
+          <h1 className={styles.title}>Killington Trail Tracker</h1>
         </div>
         <div className={styles.headerRight}>
-          <div className={styles.viewToggle}>
-            <MapToggle view={mapView} onChange={setMapView} />
-          </div>
           <TripBar
             trips={trips}
             activeTrip={activeTrip}
@@ -82,24 +72,16 @@ function App() {
 
       <div className={styles.main}>
         <div className={styles.mapArea}>
-          {mapView === 'schematic' ? (
-            <SchematicMap
-              filteredTrailIds={filteredTrailIds}
-              skiedTrails={skiedTrails}
-              hoveredTrail={hoveredTrail}
-              onToggleTrail={toggle}
-              onHoverTrail={setHoveredTrail}
-            />
-          ) : (
-            <ImageMap
-              filteredTrailIds={filteredTrailIds}
-              skiedTrails={skiedTrails}
-              skiedEver={skiedEver}
-              hoveredTrail={hoveredTrail}
-              onToggleTrail={toggle}
-              onHoverTrail={setHoveredTrail}
-            />
-          )}
+          <ImageMap
+            ref={mapRef}
+            filteredTrailIds={filteredTrailIds}
+            skiedTrails={skiedTrails}
+            skiedEver={skiedEver}
+            hoveredTrail={hoveredTrail}
+            onToggleTrail={toggle}
+            onHoverTrail={setHoveredTrail}
+            showHint={skiedTrails.size === 0}
+          />
         </div>
 
         <aside className={styles.sidebar}>
@@ -116,7 +98,13 @@ function App() {
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
             onToggleTrail={toggle}
+            onLocateTrail={(id) => mapRef.current?.focusTrail(id)}
             onHoverTrail={setHoveredTrail}
+            onClearFilters={() => {
+              setAllDifficulties();
+              setFilterMode('all');
+              setSearchQuery('');
+            }}
           />
         </aside>
       </div>

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import type { Trail } from '../../types';
-import { DIFFICULTY_COLORS, DIFFICULTY_ICONS, DIFFICULTY_LABELS } from '../../types';
+import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_UI_COLORS } from '../../types';
 import styles from './ImageMap.module.css';
 
 export interface SheetTrail {
@@ -41,9 +41,7 @@ export function TrailSheet({ candidates, skiedTrails, skiedEver, onMark, onHover
       </div>
       {candidates.map(({ trail }) => {
         const skied = skiedTrails.has(trail.id);
-        // black is invisible on the dark sheet, so black diamonds show light
-        const color =
-          trail.difficulty === 'double-black' ? '#ef4444' : trail.difficulty === 'black' ? '#e5e7eb' : DIFFICULTY_COLORS[trail.difficulty];
+        const color = DIFFICULTY_UI_COLORS[trail.difficulty];
         return (
           <div
             key={trail.id}

@@ -25,11 +25,15 @@ each iteration taught us, and how to scale it to many maps.
 ## Using the app
 
 - **Trips.** What you ski is logged per trip ("Presidents Day weekend").
-  Pick or start a trip in the header; tapping a trail on the map or in the
-  list marks it skied on the current trip (tap again to unmark). With no
-  trip yet, the first tap starts one for today. Stats show this trip and all
-  trips; trails skied on an earlier trip are drawn dashed and get a faint ✓.
-- **On the map:** drag to pan, pinch or scroll to zoom (Fit resets). Tap a
+  Pick or start a trip in the header; mark a trail skied on the current
+  trip from the map, or with its check box in the list. With no trip yet,
+  the first mark starts one for today. Stats show this trip and all trips;
+  trails skied on an earlier trip are drawn dashed and say "skied before"
+  in the list.
+- **Finding a trail:** search the list and tap a trail's name; the map
+  zooms to it, highlights it and opens its sheet.
+- **On the map:** drag to pan, pinch or scroll to zoom (the corners button
+  shows the whole map; phones open zoomed to fill the screen). Tap a
   trail and a sheet lists every trail within a finger's width, nearest
   first, each with a big "Skied it" / "Remove" button, so junctions and dense
   areas are never guessed; a toast offers Undo. Lines and markers keep a
@@ -37,7 +41,8 @@ each iteration taught us, and how to scale it to many maps.
 - **Works offline and installs to the home screen.** A service worker
   (`public/sw.js`, production builds only) caches the app and the trail map,
   so it opens without signal on the mountain; on a phone use "Add to Home
-  Screen". On narrow screens the progress and trail list sit below the map.
+  Screen". On narrow screens the progress and trail list sit below the map
+  and scroll together, with the search box pinned.
 - **Your data stays on this device** (browser `localStorage`, key
   `myskiruns.trips`). Use ⋯ → Export backup / Import backup to move or keep
   it; importing adds trips that aren't already on the device. Data from the
@@ -73,7 +78,8 @@ Field Goal's difficulty was corrected to green — fixing "trails aren't
 labeled / labeled incorrectly" at the data source.
 
 ### 4. Detection-driven app assets
-- `public/trail-lines.png` — difficulty-colored line overlay (〰 toggle).
+- `public/trail-lines.png` — difficulty-colored line overlay (〰 toggle,
+  shown only with `?lines` in the URL).
 
 ### 5. Clickable trail paths
 - `scripts/tracePolylines.mjs` vectorizes the detection skeletons into 393
@@ -222,8 +228,8 @@ and re-encoded with 4:2:0 chroma subsampling — prefer it as pipeline input.
    (Mountain Training Station, Snow Play, Start Park) may not be lines.
 4. **Glades/parks** (14 roster entries) often have a marker + tree icon but
    no line — decide how they should be clickable.
-5. Known detector edge cases (3 FN / 1 FP) in `src/detection/LINES.md`;
-   schematic view still uses synthetic paths.
+5. Known detector edge cases (3 FN / 1 FP) in `src/detection/LINES.md`.
+   (The synthetic schematic view was removed in the UI review.)
 
 ## Regenerating the data (order matters)
 
