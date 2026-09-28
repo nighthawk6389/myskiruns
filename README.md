@@ -99,8 +99,8 @@ naming is now done in two steps:
 win, unreviewed trails use high/medium proposals, and trails with neither get
 **no overlay** (no more guessed dots).
 
-**Status (Sept 27 2026, after review + map-evidence cleanup)** — every trail
-in `trails.ts` (132) has an overlay: 110 clickable lines, 22 glade markers at
+**Status (Sept 28 2026, after review + map-evidence cleanup)** — every trail
+in `trails.ts` (135) has an overlay: 113 clickable lines, 22 glade markers at
 their printed label.
 
 What changed after the review, all from evidence printed on the map:
@@ -114,9 +114,17 @@ What changed after the review, all from evidence printed on the map:
   black); the upper sections are Upper Skyelark / Upper East Fall.
 - **Glades found:** Treezy and Lil' Stash are printed as labels with no line.
 - **Duplicates merged:** Header and Skyeburst each appeared twice.
-- **Removed (32):** entries neither the reviewer nor the tile readers
-  could find printed anywhere on this map: Snow Play, Swirl, Ramshead Run, Ramshead Liftline, Start Park, Upper FIS, Mountain Run, Mountain Training Station, Snowdon Liftline, Upper Snowdon, Lower Snowdon, Sass, Upper Northbrook, Snowdon Glades, Upper Skyeburst, Upper Catwalk, Lower Home Stretch, Juggernaut, Upper Great Bear, Woodward Peace Park, Great Eastern (K.P.), Lower FIS, K-1 Gondola Run, Upper Canyon, Lower Canyon, Killington Liftline, Superstar Glade, The Mall, Falls Brook, Bear Mountain Liftline, Lower Wildfire, Bear Run.
-  They are in git history if any should come back.
+- **Removed (29):** entries not printed anywhere on this map. Two independent
+  multi-agent searches (six agents by map area, then four agents each
+  scanning the whole map for 8 names) and the reviewer found no label for:
+  Snow Play, Swirl, Ramshead Run, Ramshead Liftline, Start Park, Upper FIS, Mountain Run, Mountain Training Station, Snowdon Liftline, Upper Snowdon, Lower Snowdon, Sass, Upper Northbrook, Snowdon Glades, Upper Catwalk, Juggernaut, Upper Great Bear, Woodward Peace Park, Great Eastern (K.P.), Lower FIS, K-1 Gondola Run, Upper Canyon, Lower Canyon, Killington Liftline, Superstar Glade, The Mall, Falls Brook, Bear Mountain Liftline, Bear Run. They are in git history if any should come back.
+- **Sections restored by the second search:** the map prints HOME STRETCH,
+  SKYEBURST and WILDFIRE more than once, each section starting at its own
+  difficulty marker, so Lower Home Stretch, Upper Skyeburst and Lower
+  Wildfire are split out again.
+- **Printed names:** Snowshed Slope, Snowshed Crossover, Northbrook Trail,
+  Vertigo Headwall, Big Dipper, Skyehawk, Skye Bits, The Northway, North
+  Star, Lil Stash (ids unchanged, so skied history is kept).
 - Areas for the 36 trails added from the review come from their nearest
   original neighbours.
 

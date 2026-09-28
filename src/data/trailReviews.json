@@ -1183,14 +1183,13 @@
     5,
     15,
     43,
-    127,
-    143,
-    248
+    143
    ],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:34:47.662Z"
+   "note": "upper/lower section split off by Claude (map labels it separately)",
+   "at": "2026-09-27T23:51:40.000Z",
+   "by": "claude"
   },
   "idler": {
    "status": "confirmed",
@@ -2730,17 +2729,11 @@
   "skyeburst": {
    "status": "confirmed",
    "polylines": [
-    6,
-    73,
     88,
     147,
     222
    ],
    "drawn": [
-    [
-     1556,
-     1195
-    ],
     [
      1552,
      1230
@@ -2760,34 +2753,6 @@
     [
      1499,
      1373
-    ],
-    [
-     1977,
-     912
-    ],
-    [
-     1931,
-     934
-    ],
-    [
-     1857,
-     991
-    ],
-    [
-     1733,
-     1065
-    ],
-    [
-     1660,
-     1104
-    ],
-    [
-     1593,
-     1169
-    ],
-    [
-     1522,
-     1202
     ],
     [
      1469,
@@ -2820,10 +2785,6 @@
     [
      1555,
      1227
-    ],
-    [
-     1563,
-     1198
     ],
     [
      1549,
@@ -2875,8 +2836,9 @@
     ]
    ],
    "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T20:24:49.669Z"
+   "note": "upper/lower section split off by Claude (map labels it separately)",
+   "at": "2026-09-27T23:51:40.000Z",
+   "by": "claude"
   },
   "skyelark": {
    "status": "confirmed",
@@ -3564,16 +3526,15 @@
   "wildfire": {
    "status": "confirmed",
    "polylines": [
-    61,
     74,
     166,
-    176,
-    352
+    176
    ],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "",
-   "at": "2026-09-27T01:42:52.651Z"
+   "note": "upper/lower section split off by Claude (map labels it separately)",
+   "at": "2026-09-27T23:51:40.000Z",
+   "by": "claude"
   },
   "yodeler": {
    "status": "confirmed",
@@ -3585,6 +3546,97 @@
    "mapDifficulty": null,
    "note": "",
    "at": "2026-09-27T01:22:02.869Z"
+  },
+  "lower-home-stretch": {
+   "status": "confirmed",
+   "polylines": [
+    248,
+    127
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "by": "claude",
+   "at": "2026-09-27T23:51:40.000Z",
+   "note": "second HOME STRETCH label with its own blue square at ~(1087,2190)"
+  },
+  "lower-wildfire": {
+   "status": "confirmed",
+   "polylines": [
+    352,
+    288,
+    61
+   ],
+   "drawn": [
+    [
+     1439,
+     1353
+    ],
+    [
+     1410,
+     1375
+    ],
+    [
+     1360,
+     1392
+    ],
+    [
+     1313,
+     1396
+    ]
+   ],
+   "mapDifficulty": null,
+   "by": "claude",
+   "at": "2026-09-27T23:51:40.000Z",
+   "note": "second WILDFIRE label with its own diamond at ~(1355,1392)"
+  },
+  "upper-skyeburst": {
+   "status": "confirmed",
+   "polylines": [
+    73,
+    6
+   ],
+   "drawn": [
+    [
+     1556,
+     1195
+    ],
+    [
+     1977,
+     912
+    ],
+    [
+     1931,
+     934
+    ],
+    [
+     1857,
+     991
+    ],
+    [
+     1733,
+     1065
+    ],
+    [
+     1660,
+     1104
+    ],
+    [
+     1593,
+     1169
+    ],
+    [
+     1522,
+     1202
+    ],
+    [
+     1563,
+     1198
+    ]
+   ],
+   "mapDifficulty": null,
+   "by": "claude",
+   "at": "2026-09-27T23:51:40.000Z",
+   "note": "upper SKYEBURST label with its own blue square at ~(1832,1012)"
   }
  }
 }
