@@ -1,0 +1,291 @@
+<title>Trail Map Check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --ground:#eef2f4; --panel:#ffffff; --ink:#1b2530; --muted:#5b6b78; --rule:#d5dde3;
+  --accent:#ff5a1f; --accent-ink:#ffffff; --pine:#2f6b55; --warn:#b7791f; --bad:#b4323c;
+  --chip:#e6ecf0; --line-idle:#1b2530; --line-other:#2f6b55;
+  --display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark; --ground:#10161c; --panel:#18212a; --ink:#e7eef3; --muted:#93a4b1; --rule:#2a3642;
+  --chip:#22303b; --accent:#ff6a33; --pine:#5fb394; --warn:#e0a44a; --bad:#e2616b; --line-idle:#e7eef3; --line-other:#5fb394;}}
+:root[data-theme="dark"]{
+  color-scheme:dark; --ground:#10161c; --panel:#18212a; --ink:#e7eef3; --muted:#93a4b1; --rule:#2a3642;
+  --chip:#22303b; --accent:#ff6a33; --pine:#5fb394; --warn:#e0a44a; --bad:#e2616b; --line-idle:#e7eef3; --line-other:#5fb394;}
+html,body{height:100%}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:15px}
+.app{height:100%;display:grid;grid-template-columns:300px 1fr;grid-template-rows:auto 1fr;gap:0}
+header{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding:10px 16px;border-bottom:1px solid var(--rule);background:var(--panel)}
+h1{font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.02em;margin:0;text-transform:uppercase}
+.progress{font-variant-numeric:tabular-nums;color:var(--muted)}
+.bar{flex:1 1 160px;height:6px;background:var(--chip);border-radius:3px;overflow:hidden;align-self:center}
+.bar i{display:block;height:100%;background:var(--pine);width:0}
+aside{background:var(--panel);border-right:1px solid var(--rule);display:flex;flex-direction:column;min-height:0}
+.filters{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--rule);flex-wrap:wrap}
+.filters button,.seg button{font:600 13px var(--body);border:1px solid var(--rule);background:var(--chip);color:var(--ink);border-radius:999px;padding:4px 10px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+ul{list-style:none;margin:0;padding:0;overflow:auto;flex:1}
+li button{width:100%;text-align:left;display:grid;grid-template-columns:14px 1fr auto;gap:8px;align-items:center;padding:7px 12px;border:0;border-bottom:1px solid var(--rule);background:none;color:var(--ink);font:15px var(--body);cursor:pointer}
+li button[aria-current="true"]{background:var(--chip);box-shadow:inset 3px 0 0 var(--accent)}
+.dot{width:12px;height:12px;border-radius:50%;border:2px solid var(--muted)}
+.dot.green{background:#16a34a;border-color:#16a34a}.dot.blue{background:#2563eb;border-color:#2563eb}
+.dot.black{background:#111;border-color:#111}.dot.double-black{background:#111;border-color:var(--bad)}
+.st{font:500 11px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.st.done{color:var(--pine)}.st.flag{color:var(--warn)}
+main{position:relative;min-height:0;display:flex;flex-direction:column}
+.viewport{position:relative;flex:1;overflow:hidden;background:#cfd8dd;touch-action:none;cursor:grab}
+.stage{position:absolute;left:0;top:0;width:4572px;height:2704px;transform-origin:0 0}
+.stage img{width:4572px;height:2704px;max-width:none;display:block;user-select:none;-webkit-user-drag:none}
+.stage svg{position:absolute;inset:0;width:4572px;height:2704px}
+.pl{fill:none;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
+.pl.idle{stroke:var(--line-idle);stroke-opacity:.35;stroke-width:1.5;stroke-dasharray:4 3}
+.pl.other{stroke:var(--line-other);stroke-opacity:.8;stroke-width:2.5}
+.pl.sel{stroke:var(--accent);stroke-width:5;stroke-opacity:.95}
+.pl.hit{stroke:#000;stroke-opacity:0;stroke-width:18;pointer-events:stroke;cursor:pointer}
+.drawn{fill:none;stroke:var(--accent);stroke-width:4;stroke-dasharray:8 5;vector-effect:non-scaling-stroke}
+.drawn-pt{fill:var(--accent);stroke:#fff;stroke-width:2;vector-effect:non-scaling-stroke}
+.zoom{position:absolute;right:12px;top:12px;display:flex;flex-direction:column;gap:6px}
+.zoom button{width:38px;height:38px;border-radius:8px;border:1px solid var(--rule);background:var(--panel);color:var(--ink);font:600 18px var(--body);cursor:pointer}
+.card{background:var(--panel);border-top:1px solid var(--rule);padding:12px 16px;display:grid;gap:10px}
+.card h2{font-family:var(--display);font-size:26px;margin:0;text-transform:uppercase;letter-spacing:.02em;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--muted);font-size:14px}
+.meta b{color:var(--ink);font-weight:600}
+.hint{font-size:14px;color:var(--muted);max-width:70ch}
+.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.actions button{font:600 14px var(--body);border-radius:8px;padding:9px 14px;border:1px solid var(--rule);background:var(--chip);color:var(--ink);cursor:pointer}
+.actions .primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.actions button[aria-pressed="true"]{outline:2px solid var(--accent);outline-offset:1px}
+.actions input,.actions select{font:14px var(--body);padding:8px 10px;border-radius:8px;border:1px solid var(--rule);background:var(--panel);color:var(--ink)}
+.actions input{flex:1 1 200px;min-width:0}
+.toast{font:600 14px var(--body);color:var(--pine);min-height:1em}
+.toast.err{color:var(--bad)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:760px){
+  .app{grid-template-columns:1fr;grid-template-rows:auto 55% auto minmax(180px,1fr)}
+  aside{grid-row:4;border-right:0;border-top:1px solid var(--rule)}
+  main{display:contents}
+  .viewport{grid-row:2}
+  .card{grid-row:3}
+}
+</style>
+
+<div class="app">
+  <header>
+    <h1>Trail Map Check</h1>
+    <span class="progress" id="progress">Loading…</span>
+    <div class="bar" aria-hidden="true"><i id="barfill"></i></div>
+  </header>
+  <aside>
+    <div class="filters" role="group" aria-label="Show">
+      <button id="f-todo" aria-pressed="true">Needs action</button>
+      <button id="f-flag" aria-pressed="false">Not done or flagged</button>
+      <button id="f-all" aria-pressed="false">All</button>
+    </div>
+    <ul id="list"></ul>
+  </aside>
+  <main>
+    <div class="viewport" id="vp">
+      <div class="stage" id="stage">
+        <img id="map" src="map.jpg" alt="Killington trail map">
+        <svg id="svg" viewBox="0 0 4572 2704" aria-label="Detected trail lines"></svg>
+      </div>
+      <div class="zoom">
+        <button id="zin" aria-label="Zoom in">+</button>
+        <button id="zout" aria-label="Zoom out">−</button>
+        <button id="zfit" aria-label="Zoom to trail" style="font-size:13px">fit</button>
+      </div>
+    </div>
+    <section class="card" id="card">
+      <h2 id="tname">—</h2>
+      <div class="meta" id="tmeta"></div>
+      <p class="hint" id="thint">Tap a line to add or remove it. Orange = this trail. Green = already confirmed for another trail.</p>
+      <div class="actions">
+        <button class="primary" id="b-ok">Correct — save</button>
+        <button id="b-draw" aria-pressed="false">Draw missing line</button>
+        <button id="b-undo">Undo point</button>
+        <button id="b-noline">No line (glade/area)</button>
+        <button id="b-notmap">Not on this map</button>
+        <button id="b-skip">Skip</button>
+      </div>
+      <div class="actions">
+        <label for="diff" class="st">Color on map</label>
+        <select id="diff">
+          <option value="">same as list</option><option value="green">green</option><option value="blue">blue</option>
+          <option value="black">black</option><option value="double-black">double black</option>
+        </select>
+        <input id="note" placeholder="Note (e.g. name printed as “Snowshed Slope”)" autocomplete="off">
+      </div>
+      <div class="toast" id="toast" role="status"></div>
+    </section>
+  </main>
+</div>
+
+<script>
+(async function(){
+  const NS='http://www.w3.org/2000/svg';
+  const $=id=>document.getElementById(id);
+  const data=await (await fetch('data.json')).json();
+  // map size comes from the data file so the page works for any trail map
+  const [W,H]=data.imageSize ?? [4572,2704];
+  for (const el of [$('stage'), $('map'), $('svg')]) { el.style.width=W+'px'; el.style.height=H+'px'; }
+  $('svg').setAttribute('viewBox',`0 0 ${W} ${H}`);
+  const polys=new Map(data.polylines.map(p=>[p.id,p]));
+  const trails=data.trails;
+  let reviews={};           // trailId -> review doc
+  let current=null, sel=new Set(), drawn=[], drawMode=false, filter='todo';
+  let db=null;
+
+  // ---------- rendering of lines
+  const svg=$('svg');
+  const idleG=document.createElementNS(NS,'g'), otherG=document.createElementNS(NS,'g'),
+        selG=document.createElementNS(NS,'g'), drawG=document.createElementNS(NS,'g'), hitG=document.createElementNS(NS,'g');
+  svg.append(idleG,otherG,selG,drawG,hitG);
+  const ptsAttr=p=>p.pts.map(q=>q[0].toFixed(1)+','+q[1].toFixed(1)).join(' ');
+  for(const p of data.polylines){
+    if(p.junk) continue;
+    const h=document.createElementNS(NS,'polyline'); h.setAttribute('points',ptsAttr(p));
+    h.setAttribute('class','pl hit'); h.dataset.id=p.id; hitG.append(h);
+  }
+  function owner(pid){ for(const [tid,r] of Object.entries(reviews)){ if(tid!==current?.id && r.status==='confirmed' && (r.polylines||[]).includes(pid)) return tid; } return null; }
+  function drawLines(){
+    for(const g of [idleG,otherG,selG,drawG]) g.replaceChildren();
+    for(const p of data.polylines){
+      if(p.junk && !sel.has(p.id)) continue;
+      const e=document.createElementNS(NS,'polyline'); e.setAttribute('points',ptsAttr(p));
+      e.setAttribute('class','pl '+(sel.has(p.id)?'sel':owner(p.id)?'other':'idle'));
+      (sel.has(p.id)?selG:owner(p.id)?otherG:idleG).append(e);
+    }
+    if(drawn.length){
+      const e=document.createElementNS(NS,'polyline'); e.setAttribute('class','drawn');
+      e.setAttribute('points',drawn.map(q=>q.join(',')).join(' ')); drawG.append(e);
+      for(const q of drawn){const c=document.createElementNS(NS,'circle');c.setAttribute('cx',q[0]);c.setAttribute('cy',q[1]);c.setAttribute('r',5/scale);c.setAttribute('class','drawn-pt');drawG.append(c);}
+    }
+  }
+
+  // ---------- pan / zoom
+  const vp=$('vp'), stage=$('stage');
+  let scale=0.3, tx=0, ty=0;
+  function apply(){ stage.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`; }
+  function zoomAt(f,cx,cy){ const ns=Math.min(4,Math.max(0.12,scale*f)); tx=cx-(cx-tx)*ns/scale; ty=cy-(cy-ty)*ns/scale; scale=ns; apply(); drawLines(); }
+  function fitBox(x0,y0,x1,y1){
+    const r=vp.getBoundingClientRect(), m=80;
+    scale=Math.min(3,Math.max(0.12,Math.min(r.width/(x1-x0+2*m), r.height/(y1-y0+2*m))));
+    tx=r.width/2-scale*(x0+x1)/2; ty=r.height/2-scale*(y0+y1)/2; apply(); drawLines();
+  }
+  function fitCurrent(){
+    const pts=[...sel].flatMap(id=>polys.get(id).pts).concat(drawn);
+    if(!pts.length && current?.hint) pts.push(...current.hint);
+    if(!pts.length) return fitBox(0,0,W,H);
+    const xs=pts.map(q=>q[0]), ys=pts.map(q=>q[1]);
+    fitBox(Math.min(...xs)-150,Math.min(...ys)-150,Math.max(...xs)+150,Math.max(...ys)+150);
+  }
+  vp.addEventListener('wheel',e=>{e.preventDefault(); const r=vp.getBoundingClientRect(); zoomAt(Math.exp(-e.deltaY*0.0015),e.clientX-r.left,e.clientY-r.top);},{passive:false});
+  const ptrs=new Map(); let moved=0, pinch0=null;
+  vp.addEventListener('pointerdown',e=>{ ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY}); moved=0; vp.setPointerCapture(e.pointerId);
+    if(ptrs.size===2){const [a,b]=[...ptrs.values()]; pinch0=Math.hypot(a.x-b.x,a.y-b.y);} });
+  vp.addEventListener('pointermove',e=>{ const p=ptrs.get(e.pointerId); if(!p) return;
+    const dx=e.clientX-p.x, dy=e.clientY-p.y; moved+=Math.abs(dx)+Math.abs(dy);
+    if(ptrs.size===2){ p.x=e.clientX;p.y=e.clientY; const [a,b]=[...ptrs.values()]; const d=Math.hypot(a.x-b.x,a.y-b.y);
+      const r=vp.getBoundingClientRect(); if(pinch0){zoomAt(d/pinch0,(a.x+b.x)/2-r.left,(a.y+b.y)/2-r.top);} pinch0=d; return; }
+    tx+=dx; ty+=dy; p.x=e.clientX; p.y=e.clientY; apply(); });
+  vp.addEventListener('pointerup',e=>{ ptrs.delete(e.pointerId); if(ptrs.size<2) pinch0=null;
+    if(moved>8 || !current) return;
+    const r=vp.getBoundingClientRect(); const sx=(e.clientX-r.left-tx)/scale, sy=(e.clientY-r.top-ty)/scale;
+    if(drawMode){ drawn.push([Math.round(sx),Math.round(sy)]); drawLines(); return; }
+    const hit=document.elementsFromPoint(e.clientX,e.clientY).find(el=>el.dataset && el.dataset.id);
+    if(!hit) return; const id=+hit.dataset.id;
+    const o=owner(id);
+    if(sel.has(id)) sel.delete(id); else sel.add(id);
+    drawLines(); say(o && sel.has(id) ? `That line is also confirmed for ${nameOf(o)}. Saving will keep it on both.` : '');
+  });
+  $('zin').onclick=()=>{const r=vp.getBoundingClientRect(); zoomAt(1.4,r.width/2,r.height/2);};
+  $('zout').onclick=()=>{const r=vp.getBoundingClientRect(); zoomAt(1/1.4,r.width/2,r.height/2);};
+  $('zfit').onclick=fitCurrent;
+
+  // ---------- list + selection
+  const nameOf=id=>trails.find(t=>t.id===id)?.name ?? id;
+  const statusLabel={confirmed:'done','no-line':'no line','not-on-map':'not on map',skip:'skipped'};
+  // a trail needs action when it has no decision, was skipped, or Claude
+  // re-opened it (t.recheck) after the last save
+  function needs(t){ const r=reviews[t.id];
+    return !r || r.status==='skip' || (!!t.recheck && r.at < t.recheck.since); }
+  function visible(t){ const r=reviews[t.id];
+    if(filter==='todo') return needs(t);
+    if(filter==='flag') return !!r && (r.status!=='confirmed' || r.note || r.mapDifficulty);
+    return true; }
+  function renderList(){
+    const ul=$('list'); ul.replaceChildren();
+    for(const t of trails.filter(visible)){
+      const r=reviews[t.id]; const li=document.createElement('li'); const b=document.createElement('button');
+      b.setAttribute('aria-current',current?.id===t.id?'true':'false');
+      const d=document.createElement('span'); d.className='dot '+t.difficulty;
+      const n=document.createElement('span'); n.textContent=t.name+(t.isNew?' (new)':'');
+      const s=document.createElement('span'); s.className='st'+(r?.status==='confirmed'?' done':r?' flag':'');
+      s.textContent=(t.recheck && needs(t) && r) ? 'please recheck' : r?statusLabel[r.status]:(t.proposal?.polylines?.length?t.proposal.confidence:'no guess');
+      if(needs(t) && r) s.className='st flag';
+      b.append(d,n,s); b.onclick=()=>select(t.id); li.append(b); ul.append(li);
+    }
+    const open=trails.filter(needs).length;
+    $('progress').textContent = open===0
+      ? `All ${trails.length} trails are done. Edits still save.`
+      : `${open} of ${trails.length} trails need action`;
+    $('barfill').style.width=(100*(trails.length-open)/trails.length)+'%';
+  }
+  function select(id){
+    current=trails.find(t=>t.id===id); const r=reviews[id];
+    const reopen=current.recheck && needs(current);
+    sel=new Set((reopen ? current.proposal?.polylines : r?.polylines) ?? current.proposal?.polylines ?? []);
+    drawn=((reopen ? current.proposal?.drawn : r?.drawn) ?? []).map(q=>q.slice()); drawMode=false; $('b-draw').setAttribute('aria-pressed','false');
+    $('tname').textContent=current.name;
+    const m=$('tmeta'); m.replaceChildren();
+    const add=(k,v)=>{const s=document.createElement('span'); const b=document.createElement('b'); b.textContent=v; s.append(k+' ',b); m.append(s);};
+    add('List says',current.difficulty.replace('-',' ')); add('Area',current.peak.replace('-',' '));
+    if(current.proposal?.mapName) add('Read on map as',current.proposal.mapName);
+    if(current.proposal) add('Guess confidence',current.proposal.confidence);
+    if(current.proposal?.note) add('Reader note',current.proposal.note);
+    if(r) add('Saved',statusLabel[r.status]);
+    if(current.recheck && needs(current)) add('Why recheck',current.recheck.why);
+    $('diff').value=r?.mapDifficulty ?? ''; $('note').value=r?.note ?? '';
+    say(sel.size||drawn.length ? '' : 'No line guessed yet. Find the trail’s name on the map and tap its line, or draw it.');
+    renderList(); fitCurrent();
+  }
+  function nextTodo(){ const i=trails.findIndex(t=>t.id===current?.id);
+    const order=[...trails.slice(i+1),...trails.slice(0,i+1)];
+    const n=order.find(t=>t.id!==current?.id && needs(t));
+    if(n) select(n.id); else { renderList(); say(`Saved ${current.name}. Nothing else needs action. Pick any trail in the list to change it.`); } }
+
+  // ---------- saving
+  function say(msg,err){ const t=$('toast'); t.textContent=msg; t.className='toast'+(err?' err':''); }
+  async function save(status){
+    if(!current) return;
+    const doc={status, polylines:status==='confirmed'?[...sel]:[], drawn:status==='confirmed'?drawn:[],
+      mapDifficulty:$('diff').value||null, note:$('note').value.trim(), at:new Date().toISOString()};
+    if(status==='confirmed' && !doc.polylines.length && doc.drawn.length<2){ say('Select or draw at least one line first, or choose “No line”.',true); return; }
+    if(!db){ say('Saving is unavailable in this view. Open the page on claude.ai while signed in.',true); return; }
+    try{ await db.doc('reviews/'+current.id).set(doc); reviews[current.id]=doc; say('Saved '+current.name+'.'); nextTodo(); }
+    catch(e){ say(e && e.code==='invalid_argument' ? 'You don’t have permission to save on this page.' : 'Could not save. Check your connection and try again.',true); }
+  }
+  $('b-ok').onclick=()=>save('confirmed');
+  $('b-noline').onclick=()=>save('no-line');
+  $('b-notmap').onclick=()=>save('not-on-map');
+  $('b-skip').onclick=()=>save('skip');
+  $('b-draw').onclick=()=>{drawMode=!drawMode; $('b-draw').setAttribute('aria-pressed',String(drawMode)); say(drawMode?'Tap along the trail to place points. Tap “Draw” again to go back to selecting lines.':'');};
+  $('b-undo').onclick=()=>{drawn.pop(); drawLines();};
+  for(const [id,f] of [['f-todo','todo'],['f-flag','flag'],['f-all','all']]) $(id).onclick=()=>{filter=f;
+    for(const b of ['f-todo','f-flag','f-all']) $(b).setAttribute('aria-pressed',String(b===id)); renderList();};
+
+  // ---------- start
+  fitBox(0,0,W,H); renderList();
+  select((trails.find(t=>!t.recheck && t.proposal?.polylines?.length) ?? trails[0]).id);
+  db=window.claude ? await window.claude.use('db') : null;
+  if(!db){ say('Read-only view: decisions can’t be saved here.',true); return; }
+  db.collection('reviews').onSnapshot(snap=>{
+    reviews={}; for(const d of snap.docs) reviews[d.id]=d.data();
+    renderList(); drawLines();
+  },()=>say('Lost connection to saved reviews. Reload to reconnect.',true));
+})();
+</script>

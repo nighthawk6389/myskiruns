@@ -16,6 +16,12 @@ npm run dev        # app at localhost:5173
 npm run build      # typecheck + production build
 ```
 
+**Doing this for another resort?** Follow
+[`docs/trail-map-playbook.md`](docs/trail-map-playbook.md): the full workflow
+(source image → line detection → AI tile reading → human review → symbols and
+missing-trail search → apply and verify), the tools in `tools/trailmap/`, what
+each iteration taught us, and how to scale it to many maps.
+
 ## Using the app
 
 - **Trips.** What you ski is logged per trip ("Presidents Day weekend").
