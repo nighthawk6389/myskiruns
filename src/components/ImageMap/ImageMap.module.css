@@ -265,3 +265,15 @@ svg.overlay {
     background: rgba(30, 41, 59, 0.85);
   }
 }
+
+/* trail names drawn along their lines; the white halo keeps them readable */
+.trailNames text {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-anchor: middle;
+  dominant-baseline: central;
+  stroke: #fff;
+  stroke-linejoin: round;
+  paint-order: stroke;
+  pointer-events: none;
+}

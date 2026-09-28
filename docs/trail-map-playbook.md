@@ -133,10 +133,12 @@ npm run trails:apply
 ```
 
 `trails:apply` also joins each trail's pieces into continuous lines: ends
-closer than 40 source px always join, ends up to 250 px apart join when both
-pieces point at each other (the gap an inline label leaves), and an end that
-stops just short of another piece is extended to touch it. On Killington this
-took 382 pieces down to 160 lines.
+closer than 40 source px always join; ends up to 250 px apart join when both
+pieces point at each other (the gap an inline label leaves); an end that stops
+just short of another piece is extended to touch it; remaining gaps up to
+400 px are bridged along the map's detected line network (a route no longer
+than 1.6× the gap + 80 px), or straight if under 180 px. On Killington this
+took 382 pieces to 142 lines, with only 2 trails left in separate parts.
 
 `importReviews` keeps the newer decision per trail and maps the page's
 `new-<slug>` ids to clean trail ids (`new-racer-s-edge` → `racers-edge`).
@@ -203,7 +205,7 @@ node tools/trailmap/hover_check.cjs http://localhost:4199/
 ```
 
 The hover check hovers 3 points along every line and each glade marker in the
-real app. Killington: 347/361 show the right name; every miss is at a
+real app. Killington: 344/361 show the right name; every miss is at a
 junction or crossing within ~16 px of another trail, where either name is
 defensible. It checks rendering against the reviewed geometry — it is not
 evidence the geometry is right (only the review is).

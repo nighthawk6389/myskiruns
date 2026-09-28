@@ -19,8 +19,8 @@ interface TrailPathProps {
 // weight at every zoom level. Taps are resolved by the map itself (nearest
 // trails within a finger's radius); the hit stroke only drives mouse hover.
 const W_HIT = 10;
-const W_LINE = 1.6;
-const W_LINE_HOVER = 3.2;
+const W_LINE = 1;
+const W_LINE_HOVER = 2.2;
 
 export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, isVisible, weight, onHover }: TrailPathProps) {
   if (!isVisible) return null;
@@ -46,7 +46,7 @@ export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, is
             {...line}
             stroke="#fff"
             strokeOpacity={isHovered ? 0.95 : isSkied ? 0.8 : 0.45}
-            strokeWidth={lineW + 1.2 * weight}
+            strokeWidth={lineW + 0.9 * weight}
           />
           <polyline
             points={points}
@@ -54,7 +54,7 @@ export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, is
             stroke={color}
             strokeOpacity={isHovered ? 1 : isSkied ? 0.95 : 0.75}
             strokeWidth={lineW}
-            strokeDasharray={skiedBefore && !isSkied ? `${5 * weight} ${3 * weight}` : undefined}
+            strokeDasharray={skiedBefore && !isSkied ? `${4 * weight} ${2.5 * weight}` : undefined}
             style={{ transition: 'stroke 0.15s, stroke-opacity 0.15s' }}
           />
         </g>

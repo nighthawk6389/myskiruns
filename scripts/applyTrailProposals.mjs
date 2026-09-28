@@ -65,8 +65,7 @@ function nearestOnSegment(p, s) {
   return best;
 }
 
-function joinSegments(segments) {
-  let segs = segments.map((s) => s.map(([x, y]) => [(x * W) / 100, (y * H) / 100])).filter((s) => s.length > 1);
+function joinEnds(segs) {
   for (;;) {
     let best = null;
     for (let i = 0; i < segs.length; i++) {
@@ -88,13 +87,16 @@ function joinSegments(segments) {
         }
       }
     }
-    if (!best) break;
+    if (!best) return segs;
     const a = best.ei ? segs[best.i] : [...segs[best.i]].reverse();
     const b = best.ej ? [...segs[best.j]].reverse() : segs[best.j];
     const merged = [...a, ...(best.d < 1 ? b.slice(1) : b)];
     segs = segs.filter((_, k) => k !== best.i && k !== best.j).concat([merged]);
   }
-  // Y-junctions: extend a free end onto the nearest point of another piece
+}
+
+// Y-junctions: extend a free end onto the nearest point of another piece
+function bridgeJunctions(segs) {
   for (const s of segs) {
     for (const atEnd of [false, true]) {
       const p = atEnd ? s.at(-1) : s[0];
@@ -110,6 +112,133 @@ function joinSegments(segments) {
       }
     }
   }
+  return segs;
+}
+
+// Every detected line piece on the map, as a graph, so a gap between two
+// parts of a trail can be bridged along the line actually drawn there (often
+// a stretch assigned to another trail, or a piece nobody claimed).
+const NETWORK_LINK = 25; // px: pieces this close are treated as connected
+const network = (() => {
+  const nodes = [];
+  const edges = [];
+  for (const pts of pieces.values()) {
+    let prev = -1;
+    for (const [x, y] of pts) {
+      const id = nodes.push([(x * W) / 100, (y * H) / 100]) - 1;
+      edges.push([]);
+      if (prev >= 0) {
+        const d = Math.hypot(nodes[id][0] - nodes[prev][0], nodes[id][1] - nodes[prev][1]);
+        edges[id].push([prev, d]);
+        edges[prev].push([id, d]);
+      }
+      prev = id;
+    }
+  }
+  const cell = (p) => `${Math.floor(p[0] / NETWORK_LINK)},${Math.floor(p[1] / NETWORK_LINK)}`;
+  const grid = new Map();
+  nodes.forEach((p, i) => {
+    const k = cell(p);
+    if (!grid.has(k)) grid.set(k, []);
+    grid.get(k).push(i);
+  });
+  const near = (p, r) => {
+    const out = [];
+    const cx = Math.floor(p[0] / NETWORK_LINK);
+    const cy = Math.floor(p[1] / NETWORK_LINK);
+    const span = Math.ceil(r / NETWORK_LINK);
+    for (let dx = -span; dx <= span; dx++) {
+      for (let dy = -span; dy <= span; dy++) {
+        for (const i of grid.get(`${cx + dx},${cy + dy}`) ?? []) {
+          const d = Math.hypot(nodes[i][0] - p[0], nodes[i][1] - p[1]);
+          if (d <= r) out.push([i, d]);
+        }
+      }
+    }
+    return out;
+  };
+  nodes.forEach((p, i) => {
+    for (const [j, d] of near(p, NETWORK_LINK)) if (j !== i) edges[i].push([j, d]);
+  });
+  return { nodes, edges, near };
+})();
+
+/** Shortest path along drawn lines from p to q, or null if longer than maxLen. */
+function routeAlongLines(p, q, maxLen) {
+  const start = network.near(p, NETWORK_LINK).sort((a, b) => a[1] - b[1])[0];
+  const goal = network.near(q, NETWORK_LINK).sort((a, b) => a[1] - b[1])[0];
+  if (!start || !goal) return null;
+  const dist = new Map([[start[0], start[1]]]);
+  const prev = new Map();
+  const open = [[start[1], start[0]]];
+  while (open.length) {
+    open.sort((a, b) => a[0] - b[0]);
+    const [d, u] = open.shift();
+    if (d > (dist.get(u) ?? Infinity) || d > maxLen) continue;
+    if (u === goal[0]) {
+      const path = [q];
+      for (let v = u; v !== undefined; v = prev.get(v)) path.push(network.nodes[v]);
+      path.push(p);
+      return d + goal[1] <= maxLen ? path.reverse() : null;
+    }
+    for (const [v, w] of network.edges[u]) {
+      const nd = d + w;
+      if (nd < (dist.get(v) ?? Infinity)) {
+        dist.set(v, nd);
+        prev.set(v, u);
+        open.push([nd, v]);
+      }
+    }
+  }
+  return null;
+}
+
+// Remaining gaps between separate parts of one trail: follow the drawn line
+// network when a route of reasonable length exists, else bridge short gaps
+// straight. Parts further apart stay separate.
+const ROUTE_SLACK = 1.6;
+const ROUTE_EXTRA = 80;
+const STRAIGHT_MAX = 180;
+const PART_MAX = 400;
+
+function connectParts(segs) {
+  const parent = segs.map((_, i) => i);
+  const find = (i) => (parent[i] === i ? i : (parent[i] = find(parent[i])));
+  const touching = (a, b) =>
+    [a[0], a.at(-1)].some((e) => nearestOnSegment(e, b).d < 2) || [b[0], b.at(-1)].some((e) => nearestOnSegment(e, a).d < 2);
+  for (let i = 0; i < segs.length; i++)
+    for (let j = i + 1; j < segs.length; j++) if (touching(segs[i], segs[j])) parent[find(i)] = find(j);
+
+  const failed = new Set();
+  for (;;) {
+    let best = null;
+    for (let i = 0; i < segs.length; i++) {
+      for (let j = 0; j < segs.length; j++) {
+        if (i === j || find(i) === find(j) || failed.has(`${find(i)}-${find(j)}`)) continue;
+        for (const e of [segs[i][0], segs[i].at(-1)]) {
+          const h = nearestOnSegment(e, segs[j]);
+          if (h.d <= PART_MAX && (!best || h.d < best.d)) best = { i, j, p: e, q: h.q, d: h.d };
+        }
+      }
+    }
+    if (!best) return segs;
+    const route = routeAlongLines(best.p, best.q, ROUTE_SLACK * best.d + ROUTE_EXTRA);
+    if (route || best.d <= STRAIGHT_MAX) {
+      segs.push(route ?? [best.p, best.q]);
+      parent.push(parent.length);
+      parent[find(best.i)] = find(best.j);
+      parent[find(parent.length - 1)] = find(best.j);
+    } else {
+      failed.add(`${find(best.i)}-${find(best.j)}`);
+      failed.add(`${find(best.j)}-${find(best.i)}`);
+    }
+  }
+}
+
+function joinSegments(segments) {
+  let segs = segments.map((s) => s.map(([x, y]) => [(x * W) / 100, (y * H) / 100])).filter((s) => s.length > 1);
+  segs = bridgeJunctions(joinEnds(segs));
+  segs = joinEnds(connectParts(segs));
   return segs.map((s) => s.map(([x, y]) => [+((100 * x) / W).toFixed(2), +((100 * y) / H).toFixed(2)]));
 }
 

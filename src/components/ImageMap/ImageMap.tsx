@@ -46,6 +46,46 @@ const TRAIL_LENGTH = new Map(
   ]),
 );
 
+interface NameAnchor {
+  x: number;
+  y: number;
+  /** degrees, kept within ±90 so text never reads upside down */
+  angle: number;
+  /** length of the stretch the name sits on, viewBox units */
+  length: number;
+}
+
+/** Where to print a trail's name: the middle of its longest stretch, turned
+ * to follow the line there. Coordinates are overlay viewBox units. */
+function nameAnchor(segments: number[][][], vH: number): NameAnchor | null {
+  let best: { pts: number[][]; cum: number[] } | null = null;
+  for (const seg of segments) {
+    const pts = seg.map((q) => [q[0] * 10, (q[1] * vH) / 100]);
+    const cum = [0];
+    for (let i = 1; i < pts.length; i++) cum.push(cum[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+    if (!best || cum.at(-1)! > best.cum.at(-1)!) best = { pts, cum };
+  }
+  if (!best || best.cum.at(-1)! === 0) return null;
+  const { pts, cum } = best;
+  const total = cum.at(-1)!;
+  const at = (t: number) => {
+    const i = Math.max(1, cum.findIndex((c) => c >= t));
+    const u = (t - cum[i - 1]) / Math.max(1e-9, cum[i] - cum[i - 1]);
+    return [pts[i - 1][0] + u * (pts[i][0] - pts[i - 1][0]), pts[i - 1][1] + u * (pts[i][1] - pts[i - 1][1])];
+  };
+  const mid = at(total / 2);
+  // direction over a stretch either side of the middle smooths out kinks
+  const a = at(Math.max(0, total / 2 - 15));
+  const b = at(Math.min(total, total / 2 + 15));
+  let angle = (Math.atan2(b[1] - a[1], b[0] - a[0]) * 180) / Math.PI;
+  if (angle > 90) angle -= 180;
+  if (angle < -90) angle += 180;
+  return { x: mid[0], y: mid[1], angle, length: total };
+}
+
+const NAME_PX = 11;
+const NAME_CHAR_PX = 6.2;
+
 function distToSegment(px: number, py: number, ax: number, ay: number, bx: number, by: number) {
   const dx = bx - ax;
   const dy = by - ay;
@@ -139,6 +179,40 @@ export function ImageMap({
   // lines and markers are designed for a ~1100px-wide map; thin them when the
   // map is drawn smaller so they don't swamp it on a phone
   const weight = Math.min(1, Math.max(0.5, (fitW * cv.k) / 1100));
+  const pxPerUnit = (fitW * cv.k) / 1000 || 1;
+  const namePx = NAME_PX * Math.max(0.8, weight);
+
+  const anchors = useMemo(
+    () =>
+      new Map(
+        Object.entries(TRAIL_PATHS)
+          .map(([id, p]) => [id, nameAnchor(p.segments, vH)] as const)
+          .filter((e): e is readonly [string, NameAnchor] => !!e[1]),
+      ),
+    [vH],
+  );
+
+  // Names go where the line is long enough on screen to hold them and they
+  // don't collide with a name already placed; longer trails get first pick,
+  // so zooming in reveals more names.
+  const names = useMemo(() => {
+    const placed: { x: number; y: number; r: number }[] = [];
+    const out: { trail: Trail; a: NameAnchor; width: number }[] = [];
+    const order = [...anchors.entries()].sort((p, q) => q[1].length - p[1].length);
+    for (const [id, a] of order) {
+      const trail = trailById.get(id);
+      if (!trail || !filteredTrailIds.has(id)) continue;
+      const width = (trail.name.length * NAME_CHAR_PX * namePx) / NAME_PX + 8;
+      if (a.length * pxPerUnit < width * 1.2) continue;
+      const x = a.x * pxPerUnit;
+      const y = a.y * pxPerUnit;
+      const r = width / 2;
+      if (placed.some((o) => Math.hypot(o.x - x, o.y - y) < (o.r + r) * 0.8)) continue;
+      placed.push({ x, y, r });
+      out.push({ trail, a, width });
+    }
+    return out;
+  }, [anchors, pxPerUnit, namePx, trailById, filteredTrailIds]);
 
   /** Trails near a point on screen, nearest first. */
   const pick = useCallback(
@@ -292,7 +366,7 @@ export function ImageMap({
                       trail={trail}
                       x={path.label[0] * 10}
                       y={(path.label[1] * vH) / 100}
-                      pxPerUnit={(fitW * cv.k) / 1000 || 1}
+                      pxPerUnit={pxPerUnit}
                       weight={weight}
                       isSkied={skiedTrails.has(trail.id)}
                       isHovered={highlighted}
@@ -318,6 +392,29 @@ export function ImageMap({
                   />
                 );
               })}
+            <g className={styles.trailNames} aria-hidden="true">
+              {names.map(({ trail, a }) => (
+                <text
+                  key={trail.id}
+                  x={a.x}
+                  y={a.y}
+                  transform={`rotate(${a.angle.toFixed(1)} ${a.x.toFixed(1)} ${a.y.toFixed(1)})`}
+                  fontSize={namePx / pxPerUnit}
+                  strokeWidth={3 / pxPerUnit}
+                  fill={
+                    skiedTrails.has(trail.id)
+                      ? '#92400e'
+                      : trail.difficulty === 'double-black'
+                        ? '#b91c1c'
+                        : trail.difficulty === 'black'
+                          ? '#111827'
+                          : DIFFICULTY_COLORS[trail.difficulty]
+                  }
+                >
+                  {trail.name}
+                </text>
+              ))}
+            </g>
           </svg>
         )}
       </div>
