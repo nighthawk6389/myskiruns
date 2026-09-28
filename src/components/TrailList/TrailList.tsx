@@ -6,6 +6,7 @@ import styles from './TrailList.module.css';
 interface TrailListProps {
   trails: Trail[];
   skiedTrails: Set<string>;
+  skiedEver: Set<string>;
   searchQuery: string;
   onSearchChange: (q: string) => void;
   onToggleTrail: (id: string) => void;
@@ -15,6 +16,7 @@ interface TrailListProps {
 export function TrailList({
   trails,
   skiedTrails,
+  skiedEver,
   searchQuery,
   onSearchChange,
   onToggleTrail,
@@ -78,6 +80,9 @@ export function TrailList({
                     {trail.isTerrainPark && <span className={styles.tag}>Park</span>}
                   </div>
                   {isSkied && <span className={styles.checkmark}>✓</span>}
+                  {!isSkied && skiedEver.has(trail.id) && (
+                    <span className={styles.earlier} title="Skied on an earlier trip">✓</span>
+                  )}
                 </div>
               );
             })}

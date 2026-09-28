@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { trails } from './data/trails';
-import { useSkiedTrails } from './hooks/useSkiedTrails';
+import { useTrips } from './hooks/useTrips';
 import { useTrailFilter } from './hooks/useTrailFilter';
 import { FilterBar } from './components/FilterBar/FilterBar';
 import { StatsPanel } from './components/StatsPanel/StatsPanel';
@@ -8,11 +8,24 @@ import { TrailList } from './components/TrailList/TrailList';
 import { SchematicMap } from './components/SchematicMap/SchematicMap';
 import { ImageMap } from './components/ImageMap/ImageMap';
 import { MapToggle } from './components/MapToggle/MapToggle';
+import { TripBar } from './components/TripBar/TripBar';
 import type { MapView } from './components/MapToggle/MapToggle';
 import styles from './App.module.css';
 
 function App() {
-  const { skiedTrails, toggle, reset } = useSkiedTrails();
+  const {
+    trips,
+    activeTrip,
+    skiedThisTrip: skiedTrails,
+    skiedEver,
+    createTrip,
+    selectTrip,
+    updateTrip,
+    deleteTrip,
+    toggleRun: toggle,
+    exportJson,
+    importJson,
+  } = useTrips();
   const {
     activeDifficulties,
     filterMode,
@@ -24,7 +37,7 @@ function App() {
   } = useTrailFilter(trails, skiedTrails);
 
   const [hoveredTrail, setHoveredTrail] = useState<string | null>(null);
-  const [mapView, setMapView] = useState<MapView>('schematic');
+  const [mapView, setMapView] = useState<MapView>('image');
 
   const filteredTrailIds = useMemo(
     () => new Set(filteredTrails.map((t) => t.id)),
@@ -45,19 +58,16 @@ function App() {
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <MapToggle view={mapView} onChange={setMapView} />
-          <button
-            onClick={reset}
-            style={{
-              padding: '5px 14px',
-              borderRadius: 6,
-              border: '1px solid var(--border)',
-              background: 'var(--bg-tertiary)',
-              color: 'var(--text-secondary)',
-              fontSize: 13,
-            }}
-          >
-            Reset
-          </button>
+          <TripBar
+            trips={trips}
+            activeTrip={activeTrip}
+            onSelect={selectTrip}
+            onCreate={createTrip}
+            onUpdate={updateTrip}
+            onDelete={deleteTrip}
+            onExport={exportJson}
+            onImport={importJson}
+          />
         </div>
       </header>
 
@@ -82,6 +92,7 @@ function App() {
             <ImageMap
               filteredTrailIds={filteredTrailIds}
               skiedTrails={skiedTrails}
+              skiedEver={skiedEver}
               hoveredTrail={hoveredTrail}
               onToggleTrail={toggle}
               onHoverTrail={setHoveredTrail}
@@ -90,10 +101,16 @@ function App() {
         </div>
 
         <aside className={styles.sidebar}>
-          <StatsPanel trails={trails} skiedTrails={skiedTrails} />
+          <StatsPanel
+            trails={trails}
+            skiedTrails={skiedTrails}
+            skiedEver={skiedEver}
+            tripName={activeTrip?.name ?? null}
+          />
           <TrailList
             trails={filteredTrails}
             skiedTrails={skiedTrails}
+            skiedEver={skiedEver}
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
             onToggleTrail={toggle}

@@ -6,6 +6,8 @@ interface TrailPathProps {
   /** one polyline per drawn line piece, in overlay viewBox units */
   segments: string[];
   isSkied: boolean;
+  /** skied on some trip (drawn dashed when not skied on this one) */
+  skiedBefore: boolean;
   isHovered: boolean;
   isVisible: boolean;
   onClick: () => void;
@@ -23,6 +25,7 @@ export function TrailPath({
   trail,
   segments,
   isSkied,
+  skiedBefore,
   isHovered,
   isVisible,
   onClick,
@@ -72,6 +75,7 @@ export function TrailPath({
             strokeWidth={isHovered ? W_LINE_HOVER : W_LINE}
             strokeLinecap="round"
             strokeLinejoin="round"
+            strokeDasharray={skiedBefore && !isSkied ? '6 4' : undefined}
             style={{ transition: 'stroke 0.15s, stroke-opacity 0.15s' }}
           />
         </g>

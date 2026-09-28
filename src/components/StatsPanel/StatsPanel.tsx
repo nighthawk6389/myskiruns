@@ -5,12 +5,15 @@ import styles from './StatsPanel.module.css';
 interface StatsPanelProps {
   trails: Trail[];
   skiedTrails: Set<string>;
+  skiedEver: Set<string>;
+  tripName: string | null;
 }
 
-export function StatsPanel({ trails, skiedTrails }: StatsPanelProps) {
+export function StatsPanel({ trails, skiedTrails, skiedEver, tripName }: StatsPanelProps) {
   const total = trails.length;
   const skied = trails.filter((t) => skiedTrails.has(t.id)).length;
   const pct = total > 0 ? Math.round((skied / total) * 100) : 0;
+  const ever = trails.filter((t) => skiedEver.has(t.id)).length;
 
   const byDifficulty = (['green', 'blue', 'black', 'double-black'] as Difficulty[]).map(
     (d) => {
@@ -26,7 +29,7 @@ export function StatsPanel({ trails, skiedTrails }: StatsPanelProps) {
 
   return (
     <div className={styles.stats}>
-      <div className={styles.statsTitle}>Your Progress</div>
+      <div className={styles.statsTitle}>{tripName ?? 'This trip'}</div>
       <div className={styles.totalRow}>
         <span className={styles.totalCount}>{skied}</span>
         <span className={styles.totalLabel}>
@@ -38,6 +41,9 @@ export function StatsPanel({ trails, skiedTrails }: StatsPanelProps) {
           className={styles.progressBarInner}
           style={{ width: `${pct}%` }}
         />
+      </div>
+      <div className={styles.lifetime}>
+        All trips: <strong>{ever}</strong> of {total} trails skied
       </div>
       <div className={styles.breakdowns}>
         {byDifficulty.map(({ difficulty, total: t, skied: s }) => (
