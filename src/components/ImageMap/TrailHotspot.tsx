@@ -18,10 +18,10 @@ interface TrailHotspotProps {
 
 // Sizes in screen pixels; converted to viewBox units so the marker keeps its
 // on-screen size at every zoom level.
-const R_DOT = 6;
-const R_DOT_HOVER = 9;
+const R_DOT = 4.5;
+const R_DOT_HOVER = 6.5;
 const R_HIT = 12;
-const R_GLOW = 11;
+const R_GLOW = 8;
 
 export function TrailHotspot({ trail, x, y, pxPerUnit, weight, isSkied, isHovered, isVisible, onHover }: TrailHotspotProps) {
   if (!isVisible) return null;
@@ -51,7 +51,7 @@ export function TrailHotspot({ trail, x, y, pxPerUnit, weight, isSkied, isHovere
           textAnchor="middle"
           dominantBaseline="central"
           fill="#000"
-          fontSize={9 * u}
+          fontSize={7 * u}
           fontWeight="bold"
         >
           ✓
