@@ -86,3 +86,15 @@
 .icon {
   font-size: 10px;
 }
+
+@media (max-width: 760px) {
+  .filterBar {
+    padding: 8px 12px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .filterBtn {
+    white-space: nowrap;
+  }
+}

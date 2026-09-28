@@ -75,3 +75,20 @@
   color: var(--text-muted);
   cursor: default;
 }
+
+@media (max-width: 760px) {
+  .bar {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .select {
+    flex: 1;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .hint {
+    flex: 1;
+  }
+}

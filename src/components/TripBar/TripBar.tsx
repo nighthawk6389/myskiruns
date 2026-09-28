@@ -116,7 +116,7 @@ export function TripBar({ trips, activeTrip, onSelect, onCreate, onUpdate, onDel
             ))}
         </select>
       ) : (
-        <span className={styles.hint}>No trip yet — marking a trail starts one for today</span>
+        <span className={styles.hint}>No trip yet — tap a trail to start one</span>
       )}
       <button className={styles.primary} onClick={openNew}>New trip</button>
       <div className={styles.menuWrap}>

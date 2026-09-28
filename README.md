@@ -23,6 +23,15 @@ npm run build      # typecheck + production build
   list marks it skied on the current trip (tap again to unmark). With no
   trip yet, the first tap starts one for today. Stats show this trip and all
   trips; trails skied on an earlier trip are drawn dashed and get a faint ✓.
+- **On the map:** drag to pan, pinch or scroll to zoom (Fit resets). Tap a
+  trail and a sheet lists every trail within a finger's width, nearest
+  first, each with a big "Skied it" / "Remove" button, so junctions and dense
+  areas are never guessed; a toast offers Undo. Lines and markers keep a
+  constant on-screen size at every zoom and are thinner on small screens.
+- **Works offline and installs to the home screen.** A service worker
+  (`public/sw.js`, production builds only) caches the app and the trail map,
+  so it opens without signal on the mountain; on a phone use "Add to Home
+  Screen". On narrow screens the progress and trail list sit below the map.
 - **Your data stays on this device** (browser `localStorage`, key
   `myskiruns.trips`). Use ⋯ → Export backup / Import backup to move or keep
   it; importing adds trips that aren't already on the device. Data from the

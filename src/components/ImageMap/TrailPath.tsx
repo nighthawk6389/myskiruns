@@ -10,72 +10,51 @@ interface TrailPathProps {
   skiedBefore: boolean;
   isHovered: boolean;
   isVisible: boolean;
-  onClick: () => void;
+  /** 0.5–1: thinner lines when the map is drawn small (phones) */
+  weight: number;
   onHover: (id: string | null) => void;
 }
 
-// Stroke widths in overlay units (viewBox is 1000 wide → 1 unit ≈ 0.1% of
-// the map width). The hit stroke is generous so the whole run is clickable.
-// narrow enough that parallel trails ~20px apart on the map stay separable
-const W_HIT = 7;
-const W_LINE = 3.2;
-const W_LINE_HOVER = 5.5;
+// Widths are screen pixels (non-scaling strokes), so lines keep the same
+// weight at every zoom level. Taps are resolved by the map itself (nearest
+// trails within a finger's radius); the hit stroke only drives mouse hover.
+const W_HIT = 10;
+const W_LINE = 2.5;
+const W_LINE_HOVER = 5;
 
-export function TrailPath({
-  trail,
-  segments,
-  isSkied,
-  skiedBefore,
-  isHovered,
-  isVisible,
-  onClick,
-  onHover,
-}: TrailPathProps) {
+export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, isVisible, weight, onHover }: TrailPathProps) {
   if (!isVisible) return null;
 
-  const baseColor =
-    trail.difficulty === 'double-black'
-      ? '#ef4444'
-      : DIFFICULTY_COLORS[trail.difficulty];
+  const baseColor = trail.difficulty === 'double-black' ? '#ef4444' : DIFFICULTY_COLORS[trail.difficulty];
   const color = isSkied ? '#fbbf24' : baseColor;
+  const lineW = (isHovered ? W_LINE_HOVER : W_LINE) * weight;
+  const line = {
+    fill: 'none',
+    strokeLinecap: 'round' as const,
+    strokeLinejoin: 'round' as const,
+    vectorEffect: 'non-scaling-stroke' as const,
+  };
 
   return (
-    <g
-      onClick={onClick}
-      onMouseEnter={() => onHover(trail.id)}
-      onMouseLeave={() => onHover(null)}
-      style={{ cursor: 'pointer' }}
-    >
+    <g onMouseEnter={() => onHover(trail.id)} onMouseLeave={() => onHover(null)} style={{ cursor: 'pointer' }}>
       {segments.map((points, i) => (
         <g key={i}>
-          {/* invisible wide hit stroke — makes the whole run clickable */}
-          <polyline
-            points={points}
-            fill="none"
-            stroke="transparent"
-            strokeWidth={W_HIT}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
+          <polyline points={points} {...line} stroke="transparent" strokeWidth={W_HIT} />
           {/* white casing for contrast against the busy map */}
           <polyline
             points={points}
-            fill="none"
+            {...line}
             stroke="#fff"
             strokeOpacity={isHovered ? 0.95 : isSkied ? 0.8 : 0.55}
-            strokeWidth={(isHovered ? W_LINE_HOVER : W_LINE) + 2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            strokeWidth={lineW + 1.5 * weight}
           />
           <polyline
             points={points}
-            fill="none"
+            {...line}
             stroke={color}
-            strokeOpacity={isHovered ? 1 : isSkied ? 0.95 : 0.8}
-            strokeWidth={isHovered ? W_LINE_HOVER : W_LINE}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeDasharray={skiedBefore && !isSkied ? '6 4' : undefined}
+            strokeOpacity={isHovered ? 1 : isSkied ? 0.95 : 0.75}
+            strokeWidth={lineW}
+            strokeDasharray={skiedBefore && !isSkied ? `${6 * weight} ${4 * weight}` : undefined}
             style={{ transition: 'stroke 0.15s, stroke-opacity 0.15s' }}
           />
         </g>

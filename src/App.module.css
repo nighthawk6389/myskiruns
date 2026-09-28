@@ -59,3 +59,57 @@
   background: var(--bg-secondary);
   flex-shrink: 0;
 }
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* phones: map on top, progress and trail list below */
+@media (max-width: 760px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 12px;
+    padding-top: max(8px, env(safe-area-inset-top));
+  }
+
+  .subtitle {
+    display: none;
+  }
+
+  .title {
+    font-size: 17px;
+  }
+
+  .headerRight {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* the schematic view isn't useful on a small screen */
+  .viewToggle {
+    display: none;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .mapArea {
+    flex: 1 1 58%;
+    min-height: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex: 1 1 42%;
+    min-height: 0;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

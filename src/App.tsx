@@ -56,8 +56,10 @@ function App() {
             </div>
           </div>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <MapToggle view={mapView} onChange={setMapView} />
+        <div className={styles.headerRight}>
+          <div className={styles.viewToggle}>
+            <MapToggle view={mapView} onChange={setMapView} />
+          </div>
           <TripBar
             trips={trips}
             activeTrip={activeTrip}
