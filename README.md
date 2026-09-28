@@ -21,7 +21,7 @@ npm run build      # typecheck + production build
 ### 1. Snow-surface detection (v1)
 `src/detection/trailDetector.ts` classifies the white groomed-run surface
 (bright, neutral pixels with ridge-based sky suppression). Evaluated against
-58 hand-labeled points: F1 92.7%. Powers the ⛷ overlay toggle.
+58 hand-labeled points: F1 92.7%. Kept as a reference; no longer used by the app.
 Docs: `src/detection/README.md`.
 
 ### 2. Trail-LINE detection (v2 — the real trail identifier)
@@ -47,9 +47,6 @@ labeled / labeled incorrectly" at the data source.
 
 ### 4. Detection-driven app assets
 - `public/trail-lines.png` — difficulty-colored line overlay (〰 toggle).
-- `src/data/trailPositions.json` — dot positions, now used only for trails
-  without a traced path (`npm run lines:place` owns this file; the v1
-  `detect:place` writes to `/tmp/explore/` so it can't clobber it).
 
 ### 5. Clickable trail paths
 - `scripts/tracePolylines.mjs` vectorizes the detection skeletons into 393
@@ -57,11 +54,9 @@ labeled / labeled incorrectly" at the data source.
   Douglas-Peucker).
 - `scripts/enrichAnchors.mjs` second-pass OCR with dictionary-constrained
   matching grew name anchors to 76/130 trails.
-- `scripts/assignTrailPaths.mjs` assigns polylines to trails: nearest-first
-  label→line matching with baseline-angle agreement and chain stitching.
-  Output: 127/130 trails get a path — **71 claimed via their own name label
-  (`source: anchor`), 56 guessed by a region/color heuristic
-  (`source: region`)**.
+- A first fully automatic assigner (nearest-first label→line matching;
+  removed, see git history) placed only ~40% of trails correctly — see the
+  audit below. Paths now come from the propose-then-review workflow.
 - The app renders each path as a clickable polyline (hover = name, click =
   toggle skied).
 
@@ -72,8 +67,7 @@ labeled / labeled incorrectly" at the data source.
 | `npm run lines:eval` | precision/recall vs line ground truth (`--why` for forensics) |
 | `npm run lines:overlay` | whole-map detection overlay render |
 | `npm run lines:png` | regenerate the app's line overlay |
-| `npm run lines:place` | regenerate hotspot positions (`--render` audit image) |
-| `npm run detect:eval` / `detect:overlay` / `detect:place` | v1 surface-detector equivalents |
+| `npm run detect:eval` / `detect:overlay` | v1 surface-detector equivalents |
 | `node scripts/extractLabels.mjs` | OCR the map labels |
 | `node scripts/reconcileTrails.mjs [--apply]` | match labels to roster, propose missing trails |
 

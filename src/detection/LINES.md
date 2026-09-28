@@ -83,11 +83,9 @@ two FNs where the line ink is literally absent under forest texture
 
 Consumers:
 - `npm run lines:png` → `public/trail-lines.png`, the app's 〰 overlay.
-- `scripts/tracePolylines.mjs` → `src/data/linePolylines.json` → 
-  `scripts/assignTrailPaths.mjs` → `src/data/trailPaths.json` (the app's
-  clickable paths).
-- `npm run lines:place` → `src/data/trailPositions.json`, dot fallback for
-  trails without a path.
+- `scripts/tracePolylines.mjs` → `src/data/linePolylines.json`, the line
+  pieces that the review workflow assigns to trails
+  (`npm run trails:apply` → `src/data/trailPaths.json`).
 
 **Scope of these numbers:** they say whether a pixel is on *some* trail
 line. They say nothing about whether the line gets the right *name*; that
@@ -120,8 +118,7 @@ tesseract.js (local langdata; the CDN is proxy-blocked). Result: **103 labels in
 plus containment, because OCR truncates words that touch trail lines):
 
 - **54 trails matched to name anchors** in pass 1 (76 after pass 2) (`src/data/trailAnchors.json`);
-  `npm run lines:place` now places those hotspots ON the line nearest their
-  own name label (color-matched), rest by farthest-point spreading.
+  these anchors seeded the (since removed) automatic placement.
 - **11 missing trails added to `data/trails.ts`** after hand-curation of the
   OCR proposals (Blue Heaven, Helter Skelter, Full House, Frolic, The Jug,
   Shorty, Bearly, Killink, Gateway, Highlander, Sassafras), difficulty taken

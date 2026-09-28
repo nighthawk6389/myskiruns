@@ -3,10 +3,8 @@
 This module finds the **white/groomed snow trail surface** (open ski runs) on the
 Killington trail-map image and provides a way to *measure* how well it does.
 
-The same detection code runs in two places:
+It is exercised by:
 
-- **The app** — `useTrailDetection` paints a cyan overlay of detected runs on the
-  image map (toggle the ⛷ button in the image view).
 - **The evaluation harness** — `scripts/evaluate.ts` scores the detector against
   hand-labelled ground truth.
 
@@ -87,11 +85,9 @@ thresholds and always confirm changes on the whole-image overlay.
 
 This v1 detector is **superseded for trail identification** by the line
 detector (`LINES.md`): trails are identified by their colored lines, not by
-snow surface. It remains as the ⛷ overlay and a reference.
+snow surface. It is kept as a reference; the app no longer uses it.
 
 - **Buildings** at the base are neutral white and pass the colour test — the
   main precision ceiling of this approach.
-- `scripts/placeTrails.ts` (`npm run detect:place`) is the old v1 placement;
-  it now writes to `/tmp/explore/` only. The app's dots come from
-  `npm run lines:place`, its paths from `scripts/assignTrailPaths.mjs`; see
-  the repo README for the end-to-end status.
+- The app's trail overlays come from `npm run trails:apply`; see the repo
+  README for the end-to-end status.
