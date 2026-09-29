@@ -26,6 +26,15 @@ export const DIFFICULTY_COLORS: Record<Difficulty, string> = {
   'double-black': '#111827',
 };
 
+/** Difficulty colors for markers on the dark UI (black diamonds show light;
+ * DIFFICULTY_COLORS is for lines drawn on the light trail map). */
+export const DIFFICULTY_UI_COLORS: Record<Difficulty, string> = {
+  green: '#22c55e',
+  blue: '#3b82f6',
+  black: '#e5e7eb',
+  'double-black': '#ef4444',
+};
+
 export const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   green: 'Easy',
   blue: 'Intermediate',

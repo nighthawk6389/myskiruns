@@ -1,26 +1,36 @@
 .trailList {
   flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll {
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
-  padding: 0;
+  overscroll-behavior: contain;
 }
 
 .searchBox {
-  position: sticky;
-  top: 0;
-  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border);
-  z-index: 1;
+  z-index: 2;
 }
 
 .searchInput {
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-size: 13px;
+  font-size: 14px;
   outline: none;
   transition: border-color 0.2s;
 }
@@ -41,17 +51,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 16px;
+  padding: 8px 16px;
   background: var(--bg-primary);
-  cursor: pointer;
-  user-select: none;
   position: sticky;
   top: 0;
-  z-index: 0;
-}
-
-.peakHeader:hover {
-  background: var(--bg-tertiary);
+  z-index: 1;
 }
 
 .peakName {
@@ -60,19 +64,22 @@
   color: var(--text-primary);
 }
 
+.peakElevation {
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
 .peakCount {
   font-size: 12px;
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 .trailRow {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 16px 8px 24px;
-  cursor: pointer;
-  transition: background 0.15s;
   border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+  transition: background 0.15s;
 }
 
 .trailRow:hover {
@@ -80,25 +87,38 @@
 }
 
 .trailRow.skied {
-  background: rgba(251, 191, 36, 0.05);
+  background: rgba(251, 191, 36, 0.07);
+}
+
+.locate {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 6px 8px 6px 20px;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: left;
 }
 
 .difficultyIcon {
-  font-size: 9px;
+  font-size: 10px;
   flex-shrink: 0;
   width: 18px;
   text-align: center;
 }
 
 .trailName {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-primary);
   flex: 1;
-}
-
-.trailTags {
-  display: flex;
-  gap: 4px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .tag {
@@ -106,13 +126,62 @@
   padding: 1px 6px;
   border-radius: 4px;
   background: var(--bg-tertiary);
-  color: var(--text-muted);
+  color: var(--text-secondary);
+  flex-shrink: 0;
 }
 
-.checkmark {
-  font-size: 16px;
-  color: var(--gold);
+.earlier {
+  font-size: 11px;
+  color: var(--text-secondary);
   flex-shrink: 0;
+}
+
+.earlier::before {
+  content: '✓ ';
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+/* the check box: 26px visible, 44px tap target */
+.check {
+  flex-shrink: 0;
+  width: 44px;
+  height: 42px;
+  margin-right: 8px;
+  border: 0;
+  background: none;
+  position: relative;
+  color: #1e1b0f;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.check::before {
+  content: '';
+  position: absolute;
+  inset: 8px 9px;
+  border: 2px solid var(--text-muted);
+  border-radius: 7px;
+  z-index: -1;
+}
+
+.check {
+  z-index: 0;
+}
+
+.check:hover::before {
+  border-color: var(--gold);
+}
+
+.check.checked::before {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.locate:focus-visible,
+.check:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
 }
 
 .emptyState {
@@ -122,7 +191,111 @@
   font-size: 13px;
 }
 
-.earlier {
-  color: var(--text-muted);
+.clearSearch {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 760px) {
+  /* the whole sidebar scrolls on phones (see App.module.css) */
+  .trailList {
+    flex: none;
+    display: block;
+  }
+
+  .scroll {
+    overflow: visible;
+  }
+
+  .searchBox {
+    position: sticky;
+    top: 0;
+    height: 56px;
+  }
+
+  .peakHeader {
+    top: 56px;
+  }
+
+  /* 16px inputs stop iOS Safari zooming the page on focus */
+  .searchInput {
+    font-size: 16px;
+  }
+}
+
+.clearFilters {
+  display: block;
+  margin: 12px auto 0;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--gold);
+  background: none;
+  color: var(--gold);
   font-size: 13px;
+  font-weight: 600;
+}
+
+.goodToday {
+  padding: 8px 0 4px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(34, 197, 94, 0.06);
+}
+
+.goodTitle {
+  padding: 2px 16px 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--green);
+}
+
+.goodRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 38px;
+  padding: 4px 16px 4px 20px;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: left;
+}
+
+.goodRow:hover {
+  background: var(--bg-tertiary);
+}
+
+.goodCount {
+  font-size: 12px;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.goodDown {
+  color: var(--text-secondary);
+}
+
+.rating {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.ratingGood {
+  background: rgba(34, 197, 94, 0.18);
+  color: #bbf7d0;
+}
+
+.ratingBad {
+  background: rgba(239, 68, 68, 0.18);
+  color: #fecaca;
 }

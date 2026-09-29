@@ -88,3 +88,51 @@
 .lifetime strong {
   color: var(--text-primary);
 }
+
+/* phones: one compact block so the trail list keeps most of the space */
+@media (max-width: 760px) {
+  .stats {
+    padding: 10px 12px;
+  }
+
+  .statsTitle {
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+
+  .totalRow {
+    margin-bottom: 6px;
+  }
+
+  .totalCount {
+    font-size: 24px;
+  }
+
+  .progressBarOuter {
+    margin-bottom: 8px;
+  }
+
+  .lifetime {
+    margin-bottom: 8px;
+  }
+
+  .breakdowns {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .breakdownItem {
+    padding: 4px 6px;
+    gap: 5px;
+    justify-content: center;
+  }
+
+  /* dot + count only; the dot's color says which */
+  .breakdownLabel {
+    display: none;
+  }
+
+  .breakdownCount {
+    font-size: 12px;
+  }
+}

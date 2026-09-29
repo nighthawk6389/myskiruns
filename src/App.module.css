@@ -31,12 +31,6 @@
   color: var(--text-primary);
 }
 
-.subtitle {
-  font-size: 12px;
-  color: var(--text-secondary);
-  font-weight: 400;
-}
-
 .main {
   display: flex;
   flex: 1;
@@ -58,4 +52,67 @@
   overflow: hidden;
   background: var(--bg-secondary);
   flex-shrink: 0;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* phones: map on top, progress and trail list below */
+@media (max-width: 760px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 12px;
+    padding-top: max(8px, env(safe-area-inset-top));
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .header {
+    flex-wrap: nowrap;
+  }
+
+  /* the trip is the context that matters on a phone; the app name is on the
+     home-screen icon */
+  .title {
+    display: none;
+  }
+
+  .headerRight {
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-start;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .mapArea {
+    flex: 1 1 60%;
+    min-height: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex: 1 1 40%;
+    min-height: 0;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    padding-bottom: env(safe-area-inset-bottom);
+    /* stats scroll away; the search box stays pinned */
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
 }

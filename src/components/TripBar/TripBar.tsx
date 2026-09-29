@@ -76,7 +76,7 @@ export function TripBar({ trips, activeTrip, onSelect, onCreate, onUpdate, onDel
 
   if (mode === 'new' || mode === 'edit') {
     return (
-      <form className={styles.bar} onSubmit={submit}>
+      <form className={`${styles.bar} ${styles.form}`} onSubmit={submit}>
         <input
           id="trip-name"
           className={styles.input}
@@ -116,11 +116,11 @@ export function TripBar({ trips, activeTrip, onSelect, onCreate, onUpdate, onDel
             ))}
         </select>
       ) : (
-        <span className={styles.hint}>No trip yet — marking a trail starts one for today</span>
+        <span className={styles.hint}>No trip yet — tap a trail to start one</span>
       )}
       <button className={styles.primary} onClick={openNew}>New trip</button>
       <div className={styles.menuWrap}>
-        <button className={styles.button} onClick={() => setMode(mode === 'menu' ? 'idle' : 'menu')} aria-expanded={mode === 'menu'}>
+        <button className={styles.button} onClick={() => setMode(mode === 'menu' ? 'idle' : 'menu')} aria-expanded={mode === 'menu'} aria-haspopup="menu" aria-label="Trip options" title="Trip options">
           ⋯
         </button>
         {mode === 'menu' && (

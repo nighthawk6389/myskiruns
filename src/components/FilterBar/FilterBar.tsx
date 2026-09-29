@@ -25,37 +25,43 @@ export function FilterBar({
 }: FilterBarProps) {
   return (
     <div className={styles.filterBar}>
-      <div className={styles.filterGroup}>
+      <div className={styles.filterGroup} role="group" aria-label="Difficulty">
         {difficulties.map(({ key, className }) => (
           <button
             key={key}
             className={`${styles.filterBtn} ${className} ${activeDifficulties.has(key) ? styles.active : ''}`}
             onClick={() => onToggleDifficulty(key)}
+            aria-pressed={activeDifficulties.has(key)}
+            aria-label={DIFFICULTY_LABELS[key]}
+            title={`Show ${DIFFICULTY_LABELS[key].toLowerCase()} trails`}
           >
-            <span className={styles.icon}>{DIFFICULTY_ICONS[key]}</span>
-            {DIFFICULTY_LABELS[key]}
+            <span className={styles.icon} aria-hidden="true">{DIFFICULTY_ICONS[key]}</span>
+            <span className={styles.label}>{DIFFICULTY_LABELS[key]}</span>
           </button>
         ))}
       </div>
       <div className={styles.separator} />
-      <div className={styles.filterGroup}>
+      <div className={styles.filterGroup} role="group" aria-label="Skied this trip">
         <button
           className={`${styles.modeBtn} ${filterMode === 'all' ? styles.active : ''}`}
           onClick={() => onSetFilterMode('all')}
+          aria-pressed={filterMode === 'all'}
         >
           All
         </button>
         <button
           className={`${styles.modeBtn} ${filterMode === 'skied' ? styles.active : ''}`}
           onClick={() => onSetFilterMode('skied')}
+          aria-pressed={filterMode === 'skied'}
         >
           Skied
         </button>
         <button
           className={`${styles.modeBtn} ${filterMode === 'not-skied' ? styles.active : ''}`}
           onClick={() => onSetFilterMode('not-skied')}
+          aria-pressed={filterMode === 'not-skied'}
         >
-          Not Skied
+          Not skied
         </button>
       </div>
     </div>
