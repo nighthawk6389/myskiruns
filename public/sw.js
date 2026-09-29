@@ -1,7 +1,7 @@
 // Offline support: the app shell and trail map are cached so the app opens
 // and works on the mountain without signal. Pages are network-first (so a new
 // deploy is picked up when online); everything else is cache-first.
-const CACHE = 'myskiruns-v1';
+const CACHE = 'myskiruns-v2';
 const PRECACHE = ['/', '/killington-trail-map.jpg', '/manifest.webmanifest', '/icon-192.png'];
 
 self.addEventListener('install', (event) => {
@@ -19,7 +19,10 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const req = event.request;
-  if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
+  const url = new URL(req.url);
+  if (req.method !== 'GET' || url.origin !== self.location.origin) return;
+  // live data (trail conditions) always goes to the network
+  if (url.pathname.startsWith('/api/')) return;
 
   if (req.mode === 'navigate') {
     event.respondWith(

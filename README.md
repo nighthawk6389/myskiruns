@@ -38,12 +38,22 @@ each iteration taught us, and how to scale it to many maps.
   first, each with a big "Skied it" / "Remove" button, so junctions and dense
   areas are never guessed; a toast offers Undo. Lines and markers keep a
   constant on-screen size at every zoom and are thinner on small screens.
+- **Trail conditions (👍 / 👎).** In a trail's sheet, rate today's conditions;
+  tap the same thumb again to take it back. Votes count for 24 hours. The
+  list opens with "Good conditions today" (best net votes first) and rows
+  show a 👍/👎 badge. Votes are shared with everyone through
+  `api/conditions.ts`, a Vercel function backed by a Redis hash (Upstash,
+  added from the Vercel Marketplace; it sets `KV_REST_API_URL` /
+  `KV_REST_API_TOKEN`). Until that's connected the endpoint answers 503 and
+  the app keeps votes on the device (the sheet says so). Each device sends a
+  random id so it has one vote per trail; nothing identifies the person.
+  `vite` / `vite preview` serve the same API from memory for local testing.
 - **Works offline and installs to the home screen.** A service worker
   (`public/sw.js`, production builds only) caches the app and the trail map,
   so it opens without signal on the mountain; on a phone use "Add to Home
   Screen". On narrow screens the progress and trail list sit below the map
   and scroll together, with the search box pinned.
-- **Your data stays on this device** (browser `localStorage`, key
+- **Your trips stay on this device** (browser `localStorage`, key
   `myskiruns.trips`). Use ⋯ → Export backup / Import backup to move or keep
   it; importing adds trips that aren't already on the device. Data from the
   pre-trips version is carried into a trip called "Earlier runs".

@@ -6,6 +6,7 @@ import trailPathsData from '../../data/trailPaths.json';
 import { TrailPath } from './TrailPath';
 import { TrailHotspot } from './TrailHotspot';
 import { TrailSheet, type SheetTrail } from './TrailSheet';
+import type { Conditions } from '../../hooks/useConditions';
 import styles from './ImageMap.module.css';
 
 const MAP_SRC = '/killington-trail-map.jpg';
@@ -35,6 +36,7 @@ interface ImageMapProps {
   onHoverTrail: (id: string | null) => void;
   /** show the "tap a trail" hint (nothing marked on this trip yet) */
   showHint: boolean;
+  conditions: Conditions;
   ref?: React.Ref<ImageMapHandle>;
 }
 
@@ -120,6 +122,7 @@ export function ImageMap({
   onToggleTrail,
   onHoverTrail,
   showHint,
+  conditions,
   ref,
 }: ImageMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -562,6 +565,14 @@ export function ImageMap({
               ? ' • ✓ Skied this trip'
               : skiedEver.has(hoveredTrailData.id) && ' • Skied on an earlier trip'}
           </div>
+          {(() => {
+            const c = conditions.countsFor(hoveredTrailData.id);
+            return c.up + c.down > 0 ? (
+              <div className={styles.tooltipDetail}>
+                Today: 👍 {c.up} · 👎 {c.down}
+              </div>
+            ) : null;
+          })()}
         </div>
       )}
 
@@ -572,6 +583,7 @@ export function ImageMap({
           skiedEver={skiedEver}
           onMark={mark}
           onHover={onHoverTrail}
+          conditions={conditions}
           onClose={() => {
             setSheet(null);
             onHoverTrail(null);

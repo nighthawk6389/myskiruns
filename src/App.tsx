@@ -2,6 +2,7 @@ import { useState, useMemo, useRef } from 'react';
 import { trails } from './data/trails';
 import { useTrips } from './hooks/useTrips';
 import { useTrailFilter } from './hooks/useTrailFilter';
+import { useConditions } from './hooks/useConditions';
 import { FilterBar } from './components/FilterBar/FilterBar';
 import { StatsPanel } from './components/StatsPanel/StatsPanel';
 import { TrailList } from './components/TrailList/TrailList';
@@ -36,6 +37,7 @@ function App() {
 
   const [hoveredTrail, setHoveredTrail] = useState<string | null>(null);
   const mapRef = useRef<ImageMapHandle>(null);
+  const conditions = useConditions();
 
   const filteredTrailIds = useMemo(
     () => new Set(filteredTrails.map((t) => t.id)),
@@ -81,6 +83,7 @@ function App() {
             onToggleTrail={toggle}
             onHoverTrail={setHoveredTrail}
             showHint={skiedTrails.size === 0}
+            conditions={conditions}
           />
         </div>
 
@@ -105,6 +108,7 @@ function App() {
               setFilterMode('all');
               setSearchQuery('');
             }}
+            conditions={conditions}
           />
         </aside>
       </div>

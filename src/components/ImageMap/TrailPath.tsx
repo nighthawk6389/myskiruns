@@ -21,7 +21,9 @@ interface TrailPathProps {
 // lines keep the same weight at every zoom level. Taps are resolved by the map itself (nearest
 // trails within a finger's radius); the hit stroke only drives mouse hover.
 const W_HIT = 10;
-const W_LINE = 1;
+const W_LINE = 1.3;
+// skied trails are drawn bolder so the day's runs stand out
+const W_LINE_SKIED = 2.2;
 const W_LINE_HOVER = 3.5;
 
 export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, isVisible, weight, zoom, onHover }: TrailPathProps) {
@@ -31,7 +33,7 @@ export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, is
   const color = isSkied ? '#fbbf24' : baseColor;
   // widths in screen px: undo the stage's CSS zoom
   const px = weight / zoom;
-  const lineW = (isHovered ? W_LINE_HOVER : W_LINE) * px;
+  const lineW = (isHovered ? W_LINE_HOVER : isSkied ? W_LINE_SKIED : W_LINE) * px;
   const line = {
     fill: 'none',
     strokeLinecap: 'round' as const,
@@ -49,14 +51,14 @@ export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, is
             points={points}
             {...line}
             stroke="#fff"
-            strokeOpacity={isHovered ? 0.95 : isSkied ? 0.8 : 0.45}
-            strokeWidth={lineW + (isHovered ? 2.5 : 0.9) * px}
+            strokeOpacity={isHovered ? 0.95 : isSkied ? 0.9 : 0.45}
+            strokeWidth={lineW + (isHovered ? 2.5 : isSkied ? 1.6 : 0.9) * px}
           />
           <polyline
             points={points}
             {...line}
             stroke={color}
-            strokeOpacity={isHovered ? 1 : isSkied ? 0.95 : 0.75}
+            strokeOpacity={isHovered || isSkied ? 1 : 0.75}
             strokeWidth={lineW}
             strokeDasharray={skiedBefore && !isSkied ? `${4 * px} ${2.5 * px}` : undefined}
             style={{ transition: 'stroke 0.15s, stroke-opacity 0.15s' }}

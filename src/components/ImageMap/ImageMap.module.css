@@ -244,6 +244,53 @@ svg.overlay {
   margin-top: 2px;
 }
 
+.conditions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.thumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 34px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.thumb span {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.thumb.thumbUp {
+  border-color: var(--green);
+  background: rgba(34, 197, 94, 0.15);
+}
+
+.thumb.thumbDown {
+  border-color: var(--red);
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.conditionsNote {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.sheetFootnote {
+  padding: 6px 8px 0;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
 .sheetMark,
 .sheetUndo {
   min-width: 104px;

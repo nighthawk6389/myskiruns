@@ -1,6 +1,7 @@
 import type { Trail } from '../../types';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_UI_COLORS } from '../../types';
 import { peaks } from '../../data/trails';
+import type { Conditions } from '../../hooks/useConditions';
 import styles from './TrailList.module.css';
 
 interface TrailListProps {
@@ -15,7 +16,11 @@ interface TrailListProps {
   onHoverTrail: (id: string | null) => void;
   /** reset search, difficulty and skied filters */
   onClearFilters: () => void;
+  conditions: Conditions;
 }
+
+// how many trails the "good conditions today" section lists
+const TOP_GOOD = 5;
 
 export function TrailList({
   trails,
@@ -27,7 +32,15 @@ export function TrailList({
   onLocateTrail,
   onHoverTrail,
   onClearFilters,
+  conditions,
 }: TrailListProps) {
+  // trails people rated well today, best first (net thumbs, then most votes)
+  const good = trails
+    .map((t) => ({ trail: t, c: conditions.countsFor(t.id) }))
+    .filter(({ c }) => c.up > c.down)
+    .sort((a, b) => b.c.up - b.c.down - (a.c.up - a.c.down) || b.c.up - a.c.up)
+    .slice(0, TOP_GOOD);
+
   const trailsByPeak = peaks.map((peak) => ({
     peak,
     trails: trails.filter((t) => t.peak === peak.id),
@@ -51,6 +64,23 @@ export function TrailList({
         )}
       </div>
       <div className={styles.scroll}>
+        {good.length > 0 && (
+          <section className={styles.goodToday} aria-label="Good conditions today">
+            <div className={styles.goodTitle}>👍 Good conditions today</div>
+            {good.map(({ trail, c }) => (
+              <button key={trail.id} className={styles.goodRow} onClick={() => onLocateTrail(trail.id)} title="Show on map">
+                <span className={styles.difficultyIcon} style={{ color: DIFFICULTY_UI_COLORS[trail.difficulty] }}>
+                  {DIFFICULTY_ICONS[trail.difficulty]}
+                </span>
+                <span className={styles.trailName}>{trail.name}</span>
+                <span className={styles.goodCount}>
+                  👍 {c.up}
+                  {c.down > 0 && <span className={styles.goodDown}> · 👎 {c.down}</span>}
+                </span>
+              </button>
+            ))}
+          </section>
+        )}
         {trailsByPeak.length === 0 && (
           <div className={styles.emptyState}>
             No trails match your filters.
@@ -74,6 +104,8 @@ export function TrailList({
               {peakTrails.map((trail) => {
                 const isSkied = skiedTrails.has(trail.id);
                 const earlier = !isSkied && skiedEver.has(trail.id);
+                const c = conditions.countsFor(trail.id);
+                const net = c.up - c.down;
                 return (
                   <div
                     key={trail.id}
@@ -97,6 +129,14 @@ export function TrailList({
                       {trail.isGlade && <span className={styles.tag}>Glade</span>}
                       {trail.isTerrainPark && <span className={styles.tag}>Park</span>}
                       {earlier && <span className={styles.earlier}>skied before</span>}
+                      {c.up + c.down > 0 && (
+                        <span
+                          className={`${styles.rating} ${net > 0 ? styles.ratingGood : net < 0 ? styles.ratingBad : ''}`}
+                          title={`Today: ${c.up} 👍 · ${c.down} 👎`}
+                        >
+                          {net >= 0 ? '👍' : '👎'} {net >= 0 ? c.up : c.down}
+                        </span>
+                      )}
                     </button>
                     <button
                       className={`${styles.check} ${isSkied ? styles.checked : ''}`}
