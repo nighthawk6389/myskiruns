@@ -1,0 +1,56 @@
+{
+ "_note": "Args used for Okemo (2025-26 map) with the trailmap-readers workflow: 6 readers, 33 tiles (one column each; the sparse left column joined the second). Paths were a scratch dir; use your own. sourceImage was a lossless PNG render of the same PDF clip and scale as public/maps/okemo.jpg (same pixel grid).",
+ "resort": "Okemo Mountain Resort, Vermont, 2025-26 winter map",
+ "tilesDir": "work/okemo/tiles",
+ "sourceImage": "work/okemo/okemo_source.png",
+ "zoom": 1.7,
+ "legend": "Trail difficulty = the color of the drawn trail line and the symbol printed with the name: green line + green circle = easiest; blue line + blue square = more difficult; black line + ONE black diamond = most difficult; black line + TWO black diamonds = extremely difficult. Trail names are capital text printed in the trail's own color (green, blue or black) with a white halo, along or beside their own line, often rotated; the symbol sits just before or after the name. GLADES are shaded bands with the glade's name, its symbol and a small orange-brown tree icon beside it: blue-violet bands = more difficult glades (square), dark grey bands = most difficult (one diamond) or extremely difficult (two diamonds) glades; thin lines drawn inside a band belong to that glade. ORANGE lines with a small orange pill next to an orange name are TERRAIN PARKS (e.g. THE ZONE, HALFPIPE, PROGRESSION PARK): report them like trails, with color \"freestyle\" and symbol \"none-visible\". Red lines are LIFTS and carpets (lift names in red capitals along the line, e.g. SOUTH FACE EXPRESS QUAD, SUNBURST SIX, QUANTUM SIX; carpets are short red lines with a numbered red circle). The brown looping line near Jackson Gore is the TIMBER RIPPER MOUNTAIN COASTER, not a trail. Yellow shaded areas = slow zones; salmon/pink shaded areas = closed areas; grey diagonal hatching = race areas; light-green shaded bands = family learning zones; lilac dotted patches = ski & ride school areas. A yellow smiley icon marks a Kids Adventure Zone (e.g. RED FOX WOODS): these are not trails, do not list them as labels. SNOW TUBING, and dark-blue or green boxes with white text (lodges, restaurants, villages, base areas, TO SOUTH FACE, JACKSON GORE JUNCTION), are not trails either. Grey winding lines on the lower slopes are roads and condo streets, not trails.",
+ "areas": "\"okemo-mountain\" = Okemo Mountain: the main mountain on the left and centre, under OKEMO MOUNTAIN PEAK - South Face (Sunshine Quad, South Face Express Quad), Glades Peak, the summit, the Solitude side (Solitude Express Quad, Morning Star Triple, Solitude Village) and the Clock Tower base area, including Mountain Road, Upper/Lower Moonshadow, Jack-a-Lope and Line Drive; \"jackson-gore\" = Jackson Gore: the right-hand mountain under JACKSON GORE PEAK, from the JACKSON GORE JUNCTION sign eastward - Sunset Strip, Blue Moon and all Quantum Six and Coleman Brook Express Quad terrain down to the Jackson Gore base area, including Southern Crossing",
+ "groups": [
+  [
+   "t000",
+   "t100",
+   "t200",
+   "t001",
+   "t101",
+   "t201",
+   "t301",
+   "t401"
+  ],
+  [
+   "t002",
+   "t102",
+   "t202",
+   "t302",
+   "t402"
+  ],
+  [
+   "t003",
+   "t103",
+   "t203",
+   "t303",
+   "t403"
+  ],
+  [
+   "t004",
+   "t104",
+   "t204",
+   "t304",
+   "t404"
+  ],
+  [
+   "t005",
+   "t105",
+   "t205",
+   "t305",
+   "t405"
+  ],
+  [
+   "t006",
+   "t106",
+   "t206",
+   "t306",
+   "t406"
+  ]
+ ]
+}
