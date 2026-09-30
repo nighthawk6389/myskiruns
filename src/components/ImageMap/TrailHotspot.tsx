@@ -13,17 +13,15 @@ interface TrailHotspotProps {
   isSkied: boolean;
   isHovered: boolean;
   isVisible: boolean;
-  onHover: (id: string | null) => void;
 }
 
 // Sizes in screen pixels; converted to viewBox units so the marker keeps its
 // on-screen size at every zoom level.
 const R_DOT = 4.5;
 const R_DOT_HOVER = 6.5;
-const R_HIT = 12;
 const R_GLOW = 8;
 
-export function TrailHotspot({ trail, x, y, pxPerUnit, weight, isSkied, isHovered, isVisible, onHover }: TrailHotspotProps) {
+export function TrailHotspot({ trail, x, y, pxPerUnit, weight, isSkied, isHovered, isVisible }: TrailHotspotProps) {
   if (!isVisible) return null;
 
   const u = weight / pxPerUnit;
@@ -32,8 +30,7 @@ export function TrailHotspot({ trail, x, y, pxPerUnit, weight, isSkied, isHovere
   const radius = (isHovered ? R_DOT_HOVER : R_DOT) * u;
 
   return (
-    <g onMouseEnter={() => onHover(trail.id)} onMouseLeave={() => onHover(null)} style={{ cursor: 'pointer' }}>
-      <circle cx={x} cy={y} r={R_HIT * u} fill="transparent" />
+    <g>
       {isSkied && <circle cx={x} cy={y} r={R_GLOW * u} fill={color} opacity={0.3} />}
       <circle
         cx={x}

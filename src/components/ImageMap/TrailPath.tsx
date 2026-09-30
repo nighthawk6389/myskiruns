@@ -14,19 +14,17 @@ interface TrailPathProps {
   weight: number;
   /** current zoom; the stage is CSS-scaled, which non-scaling strokes don't undo */
   zoom: number;
-  onHover: (id: string | null) => void;
 }
 
 // Widths are screen pixels (non-scaling strokes, divided by the CSS zoom), so
-// lines keep the same weight at every zoom level. Taps are resolved by the map itself (nearest
-// trails within a finger's radius); the hit stroke only drives mouse hover.
-const W_HIT = 10;
+// lines keep the same weight at every zoom level. Taps and mouse hover are
+// resolved by the map itself (nearest trail within reach).
 const W_LINE = 1.3;
 // skied trails are drawn bolder so the day's runs stand out
 const W_LINE_SKIED = 2.2;
 const W_LINE_HOVER = 3.5;
 
-export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, isVisible, weight, zoom, onHover }: TrailPathProps) {
+export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, isVisible, weight, zoom }: TrailPathProps) {
   if (!isVisible) return null;
 
   const baseColor = trail.difficulty === 'double-black' ? '#ef4444' : DIFFICULTY_COLORS[trail.difficulty];
@@ -42,10 +40,9 @@ export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, is
   };
 
   return (
-    <g onMouseEnter={() => onHover(trail.id)} onMouseLeave={() => onHover(null)} style={{ cursor: 'pointer' }}>
+    <g>
       {segments.map((points, i) => (
         <g key={i}>
-          <polyline points={points} {...line} stroke="transparent" strokeWidth={W_HIT / zoom} />
           {/* white casing for contrast against the busy map */}
           <polyline
             points={points}

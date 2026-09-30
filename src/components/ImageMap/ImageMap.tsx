@@ -296,10 +296,24 @@ export function ImageMap({
     }
   };
 
+  // Mouse hover names the NEAREST trail within reach, like a tap does, so at
+  // a crossing the line under the pointer wins rather than whichever trail
+  // happens to be drawn on top (and markers never cover lines).
+  const mouseHover = useRef<string | null>(null);
+  const setMouseHover = (id: string | null) => {
+    if (mouseHover.current === id) return;
+    mouseHover.current = id;
+    onHoverTrail(id);
+  };
+
   const onPointerMove = (e: React.PointerEvent) => {
     const p = local(e);
-    if (e.pointerType === 'mouse') setMousePos(p);
     const prev = pointers.current.get(e.pointerId);
+    if (e.pointerType === 'mouse') {
+      setMousePos(p);
+      const overUi = (e.target as HTMLElement).closest('[data-map-ui]');
+      if (!prev && !sheet) setMouseHover(overUi ? null : (pick(p.x, p.y, PICK_RADIUS_MOUSE)[0]?.trail.id ?? null));
+    }
     if (!prev) return;
     pointers.current.set(e.pointerId, p);
     if (pointers.current.size === 2) {
@@ -392,11 +406,15 @@ export function ImageMap({
     <div
       ref={containerRef}
       className={styles.container}
+      style={{ cursor: hoveredTrail && mousePos && !sheet ? 'pointer' : undefined }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
       onPointerCancel={onPointerCancel}
-      onPointerLeave={() => setMousePos(null)}
+      onPointerLeave={() => {
+        setMousePos(null);
+        setMouseHover(null);
+      }}
     >
       {imageError && (
         <div className={styles.placeholder}>
@@ -440,7 +458,6 @@ export function ImageMap({
                       isSkied={skiedTrails.has(trail.id)}
                       isHovered={highlighted}
                       isVisible={filteredTrailIds.has(trail.id)}
-                      onHover={onHoverTrail}
                     />
                   );
                 }
@@ -458,7 +475,6 @@ export function ImageMap({
                     isVisible={filteredTrailIds.has(trail.id)}
                     weight={weight}
                     zoom={cv.k}
-                    onHover={onHoverTrail}
                   />
                 );
               })}

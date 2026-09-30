@@ -27,7 +27,10 @@ import re
 WEIGHT = {'certain': 10, 'high': 3, 'medium': 2, 'low': 1}
 # reader verdicts that are not trail names (compare the word before any ':',
 # so a trail called LIFTLINE is not taken for a LIFT)
-VERDICTS = {'LIFT', 'NOT_A_TRAIL', 'UNKNOWN', 'SPLIT'}
+VERDICTS = {'LIFT', 'NOT_A_TRAIL', 'UNKNOWN', 'SPLIT', 'UNNAMED'}
+# UNNAMED: a real connector the map prints no name for (checked on a crop);
+# hidden on the review page like NOT_A_TRAIL so nobody re-decides it
+HIDDEN = {'#NOT_A_TRAIL', '#UNNAMED'}
 ROSTER_RE = re.compile(
     r"\{ id:\s*'([^']+)',\s*name:\s*(['\"])(.*?)\2,[^}]*?difficulty:\s*'([^']+)'[^}]*?peak:\s*'([^']+)'")
 
@@ -63,6 +66,8 @@ def main() -> None:
     polys = poly_doc['polylines']
     # pieces cut by split_pieces.py: their names come from its reading
     was_split = {int(k) for k in poly_doc.get('_splits', {})}
+    # connectors checked on a crop and recorded as having no printed name
+    unnamed = {int(k) for k in poly_doc.get('_unnamed', {})}
 
     votes = collections.defaultdict(collections.Counter)
     info = collections.defaultdict(list)
@@ -86,7 +91,7 @@ def main() -> None:
     props = collections.defaultdict(lambda: {'polylines': [], 'share': [], 'mapName': None, 'notes': []})
     for pid, c in votes.items():
         (name, rid), w = c.most_common(1)[0]
-        if name.startswith('#'):
+        if name.startswith('#') or pid in unnamed:
             continue
         tid = rid or 'new-' + slug(name)
         if not rid:
@@ -153,7 +158,7 @@ def main() -> None:
             e['auto'] = True
         trails.append(e)
 
-    junk = {int(k) for k, c in votes.items() if c.most_common(1)[0][0][0] == '#NOT_A_TRAIL'}
+    junk = {int(k) for k, c in votes.items() if c.most_common(1)[0][0][0] in HIDDEN} | unnamed
     review = {
         'imageSize': [W, H],
         'polylines': [{'id': p['id'], 'cls': p['cls'], **({'junk': True} if p['id'] in junk else {}),

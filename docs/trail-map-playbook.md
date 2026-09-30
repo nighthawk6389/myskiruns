@@ -152,6 +152,15 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
   multi-piece runs right; the misses were two traverses traced down the
   fall line (prompt since fixed), one trail stopped early and one boundary
   between two names read differently.
+  Re-run on the 5 misses after the prompt fix: the two traverses now run
+  across the slope (Christiana recall 50% → 100%, West Smugglers 71% →
+  93%), Stowe Derby goes further (48% → 71%); traces still run somewhat
+  longer than the reviewer drew, and the Crossover / Jake's Ride boundary
+  is read the same way (a naming call), so they stay pre-fills.
+- **Unnamed connectors:** short pieces the map prints no name for are
+  checked on a crop and recorded in `linePolylines.json` `_unnamed`
+  ({id: why}); the aggregator hides them on the review page instead of
+  inventing names (Stowe: 5).
 - The label's text direction does **not** give a trail's direction (Stowe:
   40-90° off the reviewer's lines); don't use it.
 - `trails:apply` snaps a hand-drawn stretch onto a line piece no other
@@ -244,13 +253,15 @@ each pre-filled with Claude's geometry. Killington: 8 trails, then 6.
 npm run reviews:import -- <export dir> && npm run trails:apply
 npx tsc -b && npx eslint . && npm run build
 npx vite preview --port 4199 &
-node tools/trailmap/hover_check.cjs http://localhost:4199/
+node tools/trailmap/hover_check.cjs http://localhost:4199/ --resort <id>
 ```
 
 The hover check hovers 3 points along every line and each glade marker in the
-real app. Killington: 344/361 show the right name; every miss is at a
-junction or crossing within ~16 px of another trail, where either name is
-defensible. It checks rendering against the reviewed geometry — it is not
+real app. The map names the NEAREST trail to the pointer (the same test a tap
+uses), not whichever trail is drawn on top: that took Killington from
+344/361 to 359/361 and Stowe from 343/353 to 351/353. The remaining misses
+are stretches two trails genuinely share (Great Eastern / Home Stretch,
+Jake's Ride / Crossover), where either name is right. It checks rendering against the reviewed geometry — it is not
 evidence the geometry is right (only the review is).
 
 ## What we tried, and what it taught us
