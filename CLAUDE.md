@@ -40,3 +40,6 @@ that hovers on the already-assigned path (that is circular).
   review decisions in `trailReviews.json` outrank every automatic source.
   The regeneration order is in the README.
 - Before finishing: `npx tsc -b && npx eslint .`
+- `api/` runs on Vercel as Node ESM (`"type": "module"`): relative imports
+  need explicit `.js` extensions or the function fails to load (500 on every
+  request). `npx vercel build` reports a missing one as TS2835.

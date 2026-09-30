@@ -5,7 +5,7 @@
 // "<vote>:<ms>[:<tag>,<tag>]". A device has at most one report per trail (a
 // vote of 1 / -1 / 0 plus up to MAX_TAGS condition tags); only reports from
 // the last WINDOW_MS count, because conditions change day to day.
-import { MAX_TAGS, TAG_KEYS } from '../../src/conditionTags';
+import { MAX_TAGS, TAG_KEYS } from '../../src/conditionTags.js';
 
 export interface VoteStore {
   getAll(): Promise<Record<string, string>>;
