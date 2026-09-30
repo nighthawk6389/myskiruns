@@ -7,9 +7,11 @@ interface StatsPanelProps {
   skiedTrails: Set<string>;
   skiedEver: Set<string>;
   tripName: string | null;
+  /** open the trip summary (only when there is a trip) */
+  onOpenSummary?: () => void;
 }
 
-export function StatsPanel({ trails, skiedTrails, skiedEver, tripName }: StatsPanelProps) {
+export function StatsPanel({ trails, skiedTrails, skiedEver, tripName, onOpenSummary }: StatsPanelProps) {
   const total = trails.length;
   const skied = trails.filter((t) => skiedTrails.has(t.id)).length;
   const pct = total > 0 ? Math.round((skied / total) * 100) : 0;
@@ -29,7 +31,14 @@ export function StatsPanel({ trails, skiedTrails, skiedEver, tripName }: StatsPa
 
   return (
     <div className={styles.stats}>
-      <div className={styles.statsTitle}>{tripName ?? 'This trip'}</div>
+      <div className={styles.titleRow}>
+        <div className={styles.statsTitle}>{tripName ?? 'This trip'}</div>
+        {onOpenSummary && (
+          <button className={styles.summaryBtn} onClick={onOpenSummary}>
+            Summary
+          </button>
+        )}
+      </div>
       <div className={styles.totalRow}>
         <span className={styles.totalCount}>{skied}</span>
         <span className={styles.totalLabel}>

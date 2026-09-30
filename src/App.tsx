@@ -8,6 +8,7 @@ import { StatsPanel } from './components/StatsPanel/StatsPanel';
 import { TrailList } from './components/TrailList/TrailList';
 import { ImageMap, type ImageMapHandle } from './components/ImageMap/ImageMap';
 import { TripBar } from './components/TripBar/TripBar';
+import { TripSummary } from './components/TripSummary/TripSummary';
 import styles from './App.module.css';
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
   const [hoveredTrail, setHoveredTrail] = useState<string | null>(null);
   const mapRef = useRef<ImageMapHandle>(null);
   const conditions = useConditions();
+  const [summaryOpen, setSummaryOpen] = useState(false);
 
   const filteredTrailIds = useMemo(
     () => new Set(filteredTrails.map((t) => t.id)),
@@ -61,6 +63,7 @@ function App() {
             onDelete={deleteTrip}
             onExport={exportJson}
             onImport={importJson}
+            onSummary={() => setSummaryOpen(true)}
           />
         </div>
       </header>
@@ -93,6 +96,7 @@ function App() {
             skiedTrails={skiedTrails}
             skiedEver={skiedEver}
             tripName={activeTrip?.name ?? null}
+            onOpenSummary={activeTrip ? () => setSummaryOpen(true) : undefined}
           />
           <TrailList
             trails={filteredTrails}
@@ -112,6 +116,15 @@ function App() {
           />
         </aside>
       </div>
+
+      {summaryOpen && activeTrip && (
+        <TripSummary
+          trip={activeTrip}
+          trips={trips}
+          onClose={() => setSummaryOpen(false)}
+          onLocateTrail={(id) => mapRef.current?.focusTrail(id)}
+        />
+      )}
     </div>
   );
 }

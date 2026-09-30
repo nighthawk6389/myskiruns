@@ -2,6 +2,7 @@ import type { Trail } from '../../types';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_UI_COLORS } from '../../types';
 import { peaks } from '../../data/trails';
 import type { Conditions } from '../../hooks/useConditions';
+import { topTags } from '../../conditionTags';
 import styles from './TrailList.module.css';
 
 interface TrailListProps {
@@ -73,6 +74,11 @@ export function TrailList({
                   {DIFFICULTY_ICONS[trail.difficulty]}
                 </span>
                 <span className={styles.trailName}>{trail.name}</span>
+                {topTags(c.tags, 1).map(({ tag }) => (
+                  <span key={tag.key} className={styles.tag} title={tag.label}>
+                    {tag.emoji} {tag.label}
+                  </span>
+                ))}
                 <span className={styles.goodCount}>
                   👍 {c.up}
                   {c.down > 0 && <span className={styles.goodDown}> · 👎 {c.down}</span>}

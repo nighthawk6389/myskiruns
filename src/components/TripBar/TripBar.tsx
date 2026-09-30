@@ -12,6 +12,7 @@ interface TripBarProps {
   onDelete: (id: string) => void;
   onExport: () => string;
   onImport: (text: string) => number;
+  onSummary: () => void;
 }
 
 const today = () => new Date().toISOString().slice(0, 10);
@@ -21,7 +22,7 @@ function tripLabel(t: Trip) {
   return `${t.name} · ${trails} trail${trails === 1 ? '' : 's'}`;
 }
 
-export function TripBar({ trips, activeTrip, onSelect, onCreate, onUpdate, onDelete, onExport, onImport }: TripBarProps) {
+export function TripBar({ trips, activeTrip, onSelect, onCreate, onUpdate, onDelete, onExport, onImport, onSummary }: TripBarProps) {
   const [mode, setMode] = useState<'idle' | 'new' | 'edit' | 'menu'>('idle');
   const [name, setName] = useState('');
   const [date, setDate] = useState(today());
@@ -125,6 +126,7 @@ export function TripBar({ trips, activeTrip, onSelect, onCreate, onUpdate, onDel
         </button>
         {mode === 'menu' && (
           <div className={styles.menu} role="menu">
+            <button role="menuitem" onClick={() => { setMode('idle'); onSummary(); }} disabled={!activeTrip}>Trip summary</button>
             <button role="menuitem" onClick={openEdit} disabled={!activeTrip}>Rename trip</button>
             <button role="menuitem" onClick={remove} disabled={!activeTrip}>Delete trip</button>
             <button role="menuitem" onClick={exportFile} disabled={!trips.length}>Export backup</button>
