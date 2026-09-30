@@ -100,7 +100,7 @@ export const trails: Trail[] = [
   { id: 'upper-goat-run', name: 'Upper Goat Run', difficulty: 'blue', peak: 'jay-peak' },
   { id: 'upper-milk-run', name: 'Upper Milk Run', difficulty: 'blue', peak: 'jay-peak' },
   { id: 'upper-river-quai', name: 'Upper River Quai', difficulty: 'black', peak: 'jay-peak' },
-  { id: 'valhalla', name: 'Valhalla', difficulty: 'black', peak: 'jay-peak' },
+  { id: 'valhalla', name: 'Valhalla', difficulty: 'black', peak: 'jay-peak', isGlade: true },
   { id: 'vermonter', name: 'Vermonter', difficulty: 'blue', peak: 'jay-peak' },
   { id: 'vertigo', name: 'Vertigo', difficulty: 'black', peak: 'jay-peak' },
   { id: 'wedelmaster', name: 'Wedelmaster', difficulty: 'blue', peak: 'jay-peak' },
