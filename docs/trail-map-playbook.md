@@ -205,6 +205,11 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
   to be areas with no run (two carpet learning areas and a small park);
   they became label markers (`no-line` + `labelAt`) rather than invented
   lines.
+  Okemo's review: only the 23 pre-filled trails needed action (the other
+  105 were auto-accepted and nobody reopened them). 20 were saved as
+  pre-filled; the reviewer extended Turkey Shoot up the curve it shares
+  with Challenger, moved the Mountain Road / Lower Mountain Road boundary
+  and redrew Fast Track's stretch along its label. Hover check 376/376.
 - **Unnamed connectors:** short pieces the map prints no name for are
   checked on a crop and recorded in `linePolylines.json` `_unnamed`
   ({id: why}); the aggregator hides them on the review page instead of

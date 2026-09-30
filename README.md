@@ -125,9 +125,7 @@ pipeline scripts take `--resort <id>` (default `killington`), e.g.
 `npm run trails:apply -- --resort stowe`. To add a resort, follow
 `docs/trail-map-playbook.md`.
 
-Resorts so far: Killington and Stowe (reviewed), and Okemo (2025-26 map;
-proposed and pre-traced lines, shown in the app while its review is
-pending).
+Resorts so far: Killington, Stowe and Okemo (2025-26 map), all reviewed.
 
 ## Scripts
 
