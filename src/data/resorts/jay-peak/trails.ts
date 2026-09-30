@@ -10,8 +10,8 @@ import type { Trail, PeakData } from '../../../types';
 // Woods) and the trails whose label sits in painted trees with no cut
 // (Timbuktu, Valhalla, André's Paradise, Staircase; checked on crops): a
 // marker at the label, not a line; so is Tuckerman's Chute (no chute painted
-// on the treed summit face). The 5 terrain parks print no symbol and default to
-// blue. Sis Boom Bah is printed only in the Side View inset. "Lower Lift
+// on the treed summit face). The 5 terrain parks print no symbol and default
+// to blue. Sis Boom Bah is printed only in the Side View inset. "Lower Lift
 // Linee" on the map is Lower Lift Line. x/y/baseY/width are unused layout
 // fields.
 export const peaks: PeakData[] = [
