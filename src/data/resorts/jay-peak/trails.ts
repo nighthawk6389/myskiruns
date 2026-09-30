@@ -8,10 +8,11 @@ import type { Trail, PeakData } from '../../../types';
 // one black) and a tie takes the harder (Jet, U.N., Green Mountain Boys:
 // one blue label, one black). Glades are the names that say so (Glade,
 // Woods) and the trails whose label sits in painted trees with no cut
-// (Timbuktu, Valhalla, André's Paradise: checked on crops; a marker, not a line). The 5 terrain parks
-// print no symbol and default to blue. Sis Boom
-// Bah is printed only in the Side View inset. "Lower Lift Linee" on the map
-// is Lower Lift Line. x/y/baseY/width are unused layout fields.
+// (Timbuktu, Valhalla, André's Paradise; checked on crops): a marker at the
+// label, not a line. The 5 terrain parks print no symbol and default to
+// blue. Sis Boom Bah is printed only in the Side View inset. "Lower Lift
+// Linee" on the map is Lower Lift Line. x/y/baseY/width are unused layout
+// fields.
 export const peaks: PeakData[] = [
   { id: 'jay-peak', name: 'Jay Peak', elevation: 3862, x: 0, y: 0, baseY: 0, width: 0 },
 ];
