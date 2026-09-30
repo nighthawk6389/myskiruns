@@ -7,6 +7,9 @@ Each traced trail becomes a "confirmed" review with the reader's pieces and
 traced points (by: claude), unless a human decision already exists; it is
 also added to the recheck file so the review page opens it pre-filled with
 "please recheck". Then run refresh_review_data.py and trails:apply.
+Reviews hold whole pieces: a trace that uses only part of a piece (its
+`partial`) is warned about; cut that piece with split_pieces.py and put the
+part's id in the trace first (Okemo: Turkey Shoot on piece 210).
 """
 import argparse
 import datetime
@@ -39,6 +42,9 @@ def main():
             }
             recheck[t['id']] = f"Traced by a reader ({t.get('confidence')} confidence): {(t.get('note') or '')[:200]}"
             added.append(t['id'])
+            if any(t.get('partial', {}).values()):
+                # the review stores whole pieces: cut them first (split_pieces.py) and list the part's id
+                print(f"warning: {t['id']} uses only part of piece(s) {', '.join(t['partial'])}: {t['partial']}")
     json.dump(doc, open(a.reviews, 'w'), indent=1)
     json.dump(recheck, open(a.recheck, 'w'), indent=1)
     print(f'{len(added)} traced trails pre-filled for recheck:', ', '.join(added))

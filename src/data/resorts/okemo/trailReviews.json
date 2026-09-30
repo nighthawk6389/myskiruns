@@ -1,0 +1,483 @@
+{
+ "reviews": {
+  "galaxy-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:07:03.842Z",
+   "labelAt": [
+    33.42,
+    74.92
+   ]
+  },
+  "kettle-brook": {
+   "status": "confirmed",
+   "polylines": [
+    156,
+    155,
+    157
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:07:31.491Z"
+  },
+  "lower-mountain-road": {
+   "status": "confirmed",
+   "polylines": [
+    140,
+    234,
+    231,
+    232,
+    203,
+    202
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:07:37.103Z"
+  },
+  "mountain-road": {
+   "status": "confirmed",
+   "polylines": [
+    142,
+    141
+   ],
+   "drawn": [
+    [
+     2953,
+     1031
+    ],
+    [
+     2930,
+     1046
+    ],
+    [
+     2906,
+     1060
+    ],
+    [
+     2882,
+     1074
+    ],
+    [
+     2864,
+     1086
+    ],
+    [
+     2850,
+     1093
+    ],
+    [
+     2828,
+     1100
+    ],
+    [
+     2806,
+     1107
+    ],
+    [
+     2775,
+     1117
+    ],
+    [
+     2730,
+     1129
+    ],
+    [
+     2681,
+     1152
+    ],
+    [
+     2661,
+     1162
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:07:52.830Z"
+  },
+  "switchback": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     2293,
+     1319
+    ],
+    [
+     2298,
+     1342
+    ],
+    [
+     2304,
+     1368
+    ],
+    [
+     2310,
+     1394
+    ],
+    [
+     2316,
+     1418
+    ],
+    [
+     2321,
+     1436
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:08:23.693Z"
+  },
+  "turkey-shoot": {
+   "status": "confirmed",
+   "polylines": [
+    238,
+    256
+   ],
+   "drawn": [
+    [
+     1579,
+     482
+    ],
+    [
+     1588,
+     503
+    ],
+    [
+     1603,
+     520
+    ],
+    [
+     1594,
+     540
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:08:38.094Z"
+  },
+  "rum-run": {
+   "status": "confirmed",
+   "polylines": [
+    207,
+    206,
+    245
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:08:06.237Z"
+  },
+  "sundog": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1341,
+     335
+    ],
+    [
+     1348,
+     350
+    ],
+    [
+     1353,
+     368
+    ],
+    [
+     1358,
+     385
+    ],
+    [
+     1361,
+     395
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:08:22.331Z"
+  },
+  "scooter": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1430,
+     909
+    ],
+    [
+     1440,
+     922
+    ],
+    [
+     1446,
+     945
+    ],
+    [
+     1452,
+     967
+    ],
+    [
+     1457,
+     985
+    ],
+    [
+     1459,
+     996
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:08:11.516Z"
+  },
+  "drop-off": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1542,
+     886
+    ],
+    [
+     1515,
+     891
+    ],
+    [
+     1488,
+     898
+    ],
+    [
+     1462,
+     906
+    ],
+    [
+     1433,
+     911
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:06:44.305Z"
+  },
+  "sidekick": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1897,
+     1074
+    ],
+    [
+     1907,
+     1080
+    ],
+    [
+     1926,
+     1087
+    ],
+    [
+     1946,
+     1095
+    ],
+    [
+     1966,
+     1102
+    ],
+    [
+     1977,
+     1109
+    ],
+    [
+     1981,
+     1127
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:08:20.880Z"
+  },
+  "searles-way": {
+   "status": "confirmed",
+   "polylines": [
+    102,
+    103,
+    101
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:08:15.379Z"
+  },
+  "rt-103": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     2200,
+     926
+    ],
+    [
+     2185,
+     937
+    ],
+    [
+     2165,
+     952
+    ],
+    [
+     2145,
+     967
+    ],
+    [
+     2125,
+     982
+    ],
+    [
+     2107,
+     991
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:07:59.574Z"
+  },
+  "tomahawk": {
+   "status": "confirmed",
+   "polylines": [
+    118,
+    117
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:08:25.361Z"
+  },
+  "tomahawk-park": {
+   "status": "confirmed",
+   "polylines": [
+    255,
+    254
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:08:26.391Z"
+  },
+  "jack-a-lope": {
+   "status": "confirmed",
+   "polylines": [
+    163,
+    165,
+    164
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:07:16.292Z"
+  },
+  "upper-moonshadow": {
+   "status": "confirmed",
+   "polylines": [
+    182,
+    183,
+    185,
+    186
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:08:44.745Z"
+  },
+  "sunset-strip": {
+   "status": "confirmed",
+   "polylines": [
+    222,
+    223,
+    224
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:09:54.540Z"
+  },
+  "fast-track": {
+   "status": "confirmed",
+   "polylines": [
+    168
+   ],
+   "drawn": [
+    [
+     4021,
+     1884
+    ],
+    [
+     4038,
+     1909
+    ],
+    [
+     4055,
+     1937
+    ],
+    [
+     4067,
+     1958
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:09:43.400Z"
+  },
+  "inn-bound": {
+   "status": "confirmed",
+   "polylines": [
+    169,
+    170
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:09:48.047Z"
+  },
+  "bright-star-basin": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:08:50.053Z",
+   "labelAt": [
+    91.54,
+    77.91
+   ]
+  },
+  "tree-tap": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:09:59.927Z",
+   "labelAt": [
+    90.44,
+    76.23
+   ]
+  },
+  "challenger": {
+   "status": "confirmed",
+   "polylines": [
+    61,
+    62,
+    210
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T11:06:25.924Z"
+  }
+ },
+ "_note": "Human review decisions (tools/trailmap/review). by: claude = proposed by Claude, flagged for recheck."
+}

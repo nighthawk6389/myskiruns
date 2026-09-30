@@ -1,0 +1,48 @@
+{
+ "_note": "Args used for Stowe (2025-26 map) with the trailmap-readers workflow: 6 readers, 25 tiles, ~15 min, ~620k tokens. Paths were a scratch dir; use your own.",
+ "resort": "Stowe Mountain Resort, Vermont, 2025-26 winter map",
+ "tilesDir": "work/stowe/tiles",
+ "sourceImage": "public/maps/stowe.jpg",
+ "zoom": 1.7,
+ "legend": "Trail difficulty = the color of the drawn trail line (green = easier, blue = more difficult, black = most difficult / experts only) and the symbol printed with the name: green circle easier, blue square more difficult, one black diamond most difficult, two black diamonds experts only. Thick maroon/dark-red lines are LIFTS (their names, e.g. FOURRUNNER QUAD, LOOKOUT DOUBLE, GONDOLA, are printed in white on the maroon line). Yellow dotted lines = ski area boundary. Pink shaded areas = race areas; yellow shaded areas = learning/slow zones; orange = freestyle terrain; orange triangles = crossover/yield areas; small white circles with a snowflake = snowmaking (not a difficulty). A small black square icon with trees = GLADED TERRAIN (glades are often drawn with no line, only the name and this icon). Trail names are black capital text on a white halo, printed along or beside their own line, often rotated. Red boxes with numbers are lodges/buildings, not trails.",
+ "areas": "\"mansfield\" = Mount Mansfield: everything from the Toll House area (lower left) across to the Over Easy gondola and Route 108, i.e. the Fourrunner Quad, Gondola, Lookout, Toll House lifts; \"spruce-peak\" = Spruce Peak: the right-hand mountain served by Sensation Quad, Sunny Spruce, Meadows and Adventure Triple, east of the Over Easy gondola",
+ "groups": [
+  [
+   "t000",
+   "t100",
+   "t200",
+   "t300",
+   "t400",
+   "t301"
+  ],
+  [
+   "t001",
+   "t101",
+   "t201"
+  ],
+  [
+   "t002",
+   "t102",
+   "t202"
+  ],
+  [
+   "t003",
+   "t103",
+   "t203",
+   "t303"
+  ],
+  [
+   "t004",
+   "t104",
+   "t204",
+   "t304"
+  ],
+  [
+   "t005",
+   "t105",
+   "t205",
+   "t006",
+   "t106"
+  ]
+ ]
+}

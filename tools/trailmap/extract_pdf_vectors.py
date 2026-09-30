@@ -61,6 +61,8 @@ def main():
     ap.add_argument('--color', action='append', required=True, help='class=r,g,b (0-1, 2 decimals)')
     ap.add_argument('--max-width', type=float, default=1.0, help='ignore thicker strokes (lifts)')
     ap.add_argument('--min-length', type=float, default=4.0, help='drop pieces shorter than this (points)')
+    ap.add_argument('--max-icon', type=float, default=10.0,
+                    help='drop closed runs smaller than this (points): icons such as legend symbols')
     ap.add_argument('--image', help='write the map image here (omit with --append)')
     ap.add_argument('--append', action='store_true',
                     help='add pieces for these colours to an existing --out, keeping its ids')
@@ -112,6 +114,9 @@ def main():
         length = sum(math.hypot(q[0] - p[0], q[1] - p[1]) for p, q in zip(run, run[1:]))
         if length < a.min_length:
             continue
+        xs, ys = [p[0] for p in run], [p[1] for p in run]
+        if math.dist(run[0], run[-1]) < 0.5 and math.hypot(max(xs) - min(xs), max(ys) - min(ys)) < a.max_icon:
+            continue  # a closed loop this small is an icon (Okemo's legend), not a trail
         pts = simplify(run, 0.25)
         out.append({
             'id': first_new + sum(1 for p in out if p['id'] >= first_new),

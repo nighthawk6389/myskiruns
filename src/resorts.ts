@@ -3,6 +3,8 @@ import * as killington from './data/resorts/killington/trails';
 import killingtonPaths from './data/resorts/killington/trailPaths.json';
 import * as stowe from './data/resorts/stowe/trails';
 import stowePaths from './data/resorts/stowe/trailPaths.json';
+import * as okemo from './data/resorts/okemo/trails';
+import okemoPaths from './data/resorts/okemo/trailPaths.json';
 
 /** A trail's overlay: line segments and/or a label marker, in percent of the
  * map image (see scripts/applyTrailProposals.mjs). */
@@ -41,6 +43,14 @@ export const RESORTS: Resort[] = [
     peaks: stowe.peaks,
     trails: stowe.trails,
     paths: (stowePaths as { trails: Record<string, TrailPath> }).trails,
+  },
+  {
+    id: 'okemo',
+    name: 'Okemo',
+    mapSrc: '/maps/okemo.jpg',
+    peaks: okemo.peaks,
+    trails: okemo.trails,
+    paths: (okemoPaths as { trails: Record<string, TrailPath> }).trails,
   },
 ];
 

@@ -33,6 +33,8 @@ approaches all stalled at ~40% (see "What we tried").
 | file | what it does |
 |---|---|
 | `tools/trailmap/extract_pdf_image.py` | Lossless raster from the resort PDF; reports any vector text/lines |
+| `tools/trailmap/extract_pdf_vectors.py` | Map image + numbered pieces straight from a PDF's vector trail strokes |
+| `tools/trailmap/pdf_symbols.py` | Difficulty symbols from a vector PDF; `--check` compares them with the trail list |
 | `scripts/lib/lineDetector.mjs`, `scripts/evaluateLines.mjs` | Colored-line detector and its ground-truth scorer |
 | `scripts/tracePolylines.mjs` | Detection mask → numbered line pieces (`src/data/resorts/killington/linePolylines.json`) |
 | `tools/trailmap/render_tiles.py` | Zoomed tiles with every piece drawn and numbered, for the readers |
@@ -67,6 +69,11 @@ Download the resort's trail map PDF (not the web JPG) and run
   `--append` adds another colour, e.g. orange freestyle lines, later).
   Find the colours by tallying stroke colours/widths with pymupdf and
   drawing them on a blank page; lifts were the thicker maroon strokes.
+  Okemo 2025-26 is built the same way (256 pieces: 0.74 pt green, blue and
+  black strokes plus orange park lines; lifts are 1.11 pt red). Its legend's
+  hatch pattern is 1.0 pt black strokes (keep them out with `--max-width`),
+  and the extractor drops small closed loops (a legend icon had come out as
+  a piece). Check the whole map on zoomed crops with the pieces drawn on.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.
@@ -102,11 +109,25 @@ python3 tools/trailmap/render_tiles.py --image map.png \
   --polylines src/data/resorts/killington/linePolylines.json --out work/tiles
 ```
 
-Then ask Claude Code to "use a workflow" with one sub-agent per group of 5–8
-neighbouring tiles, each given `prompts/1-name-lines.md` filled in (legend,
-roster, paths). Each reader writes `result_<n>.json` naming every piece it sees
-(or LIFT / NOT_A_TRAIL / UNKNOWN / SPLIT), and lists labels whose line wasn't
-detected.
+Then run the readers as a Claude Code workflow (the user must opt in to
+multi-agent runs — say "use a workflow"). The workflow is saved in the repo:
+
+- `.claude/workflows/trailmap-readers.js` (workflow name `trailmap-readers`)
+  runs one reader per group of neighbouring tiles; each reader reads
+  `prompts/0-new-map.md` itself and fills in the values the workflow passes
+  (resort, tile paths, zoom, legend, areas, output file). Group tiles by
+  column so readers can follow lines across tile edges. Example args:
+  `tools/trailmap/runs/stowe-readers.json` (Stowe: 25 tiles in 6 groups).
+- `.claude/workflows/trailmap-trace.js` (`trailmap-trace`) runs the trace
+  pass (step 3b), ~5 trails per reader; example args
+  `tools/trailmap/runs/stowe-trace.json`.
+
+Write the legend for each map from its printed key and a few zoomed crops
+before running (the args carry it). Each reader writes `result_<n>.json`
+naming every piece it sees (or LIFT / NOT_A_TRAIL / UNKNOWN / SPLIT) and
+listing every printed label. Killington used the older
+`prompts/1-name-lines.md` (roster already known); a new map uses
+`0-new-map.md`.
 
 ```bash
 python3 tools/trailmap/aggregate_readings.py --tiles work/tiles \
@@ -132,6 +153,20 @@ cut with `split_pieces.py` (the names go in as a "certain" reading). Stowe:
 unanimous line, 18 printed with no line (11 glades) pre-filled as label
 markers for the reviewer to confirm. Watch for trail names that start with a
 reader verdict word (LIFTLINE was once dropped as a LIFT).
+Okemo: 6 readers over 33 tiles (one per column), ~1.5M tokens, ~69 min
+because the runner ran two at a time → 128 trails, 108 with a unanimous
+line, 9 printed with no line. Unlike Stowe, Okemo prints a symbol with every
+glade (in a box with the tree icon), so read the key before assuming the
+glade default; terrain parks print only an orange pill, so they get the
+default (blue).
+
+**Check the symbols by a second method.** On a vector map,
+`pdf_symbols.py --check labels.json --trails trails.ts` pulls every circle,
+square and diamond out of the PDF's fills and lists the trails whose
+difficulty has no matching symbol by its label (Okemo: 120/127; the other 7
+print no symbol, or draw the circle differently). Then look at every
+diamond trail on a zoomed crop: single vs double diamond is the easy
+misread (Okemo: 29 single and 9 double, all as read).
 
 ### 3b. Accept the easy ones, trace the hard ones (before the review)
 
@@ -144,6 +179,11 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
   proposals and glades printed with no line (marker at the label) are
   marked `auto`; the review page leaves them out of "Needs action" (they
   show under All as "auto") and `trails:apply` uses them as proposed.
+- **Readers' own confidence counts.** Readers work by column, so most
+  pieces are seen by one reader and are "unanimous" by default.
+  `aggregate_readings.py` caps a trail at the best confidence its readers
+  gave the winning name, so a lone "medium" or "low" goes to the trace pass
+  and the reviewer instead of being auto-accepted (Okemo: 9 trails).
 - **Trace pass** (`prompts/4-trace.md`, ~5 trails per reader) for trails
   with no line and for medium/low or split proposals; load the result with
   `traces_to_reviews.py` so the reviewer confirms instead of drawing.
@@ -157,6 +197,19 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
   93%), Stowe Derby goes further (48% → 71%); traces still run somewhat
   longer than the reviewer drew, and the Crossover / Jake's Ride boundary
   is read the same way (a naming call), so they stay pre-fills.
+  Okemo (before its review): 5 readers, 22 trails (9 printed with no line,
+  10 medium/low, both halves of a split, 2 boundary neighbours), ~980k
+  tokens, ~42 min two at a time. One trail used only part of a piece
+  (Turkey Shoot on 210): cut it with `split_pieces.py` before
+  `traces_to_reviews.py`, which stores whole pieces. Three names turned out
+  to be areas with no run (two carpet learning areas and a small park);
+  they became label markers (`no-line` + `labelAt`) rather than invented
+  lines.
+  Okemo's review: only the 23 pre-filled trails needed action (the other
+  105 were auto-accepted and nobody reopened them). 20 were saved as
+  pre-filled; the reviewer extended Turkey Shoot up the curve it shares
+  with Challenger, moved the Mountain Road / Lower Mountain Road boundary
+  and redrew Fast Track's stretch along its label. Hover check 376/376.
 - **Unnamed connectors:** short pieces the map prints no name for are
   checked on a crop and recorded in `linePolylines.json` `_unnamed`
   ({id: why}); the aggregator hides them on the review page instead of
