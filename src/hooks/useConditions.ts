@@ -18,7 +18,8 @@ const EMPTY: Counts = { up: 0, down: 0, tags: {} };
 export type ConditionsMode = 'loading' | 'shared' | 'local';
 
 const DEVICE_KEY = 'myskiruns.device';
-const VOTES_KEY = 'myskiruns.votes';
+// Killington keeps the key it had before other resorts were added
+const votesKey = (resort: string) => (resort === 'killington' ? 'myskiruns.votes' : `myskiruns.votes.${resort}`);
 // matches the server's window: conditions change day to day
 const WINDOW_MS = 24 * 60 * 60 * 1000;
 const REFRESH_MS = 5 * 60 * 1000;
@@ -39,9 +40,9 @@ function deviceId(): string {
   return id;
 }
 
-function loadMine(): Record<string, MyVote> {
+function loadMine(resort: string): Record<string, MyVote> {
   try {
-    const all = JSON.parse(localStorage.getItem(VOTES_KEY) ?? '{}') as Record<string, MyVote>;
+    const all = JSON.parse(localStorage.getItem(votesKey(resort)) ?? '{}') as Record<string, MyVote>;
     const now = Date.now();
     return Object.fromEntries(Object.entries(all).filter(([, v]) => now - v.at < WINDOW_MS));
   } catch {
@@ -49,26 +50,27 @@ function loadMine(): Record<string, MyVote> {
   }
 }
 
-async function request(init?: RequestInit): Promise<Record<string, Counts>> {
-  const res = await fetch('/api/conditions', init);
+async function request(resort: string, init?: RequestInit): Promise<Record<string, Counts>> {
+  const res = await fetch(`/api/conditions?resort=${encodeURIComponent(resort)}`, init);
   if (!res.ok || !res.headers.get('content-type')?.includes('application/json')) throw new Error(String(res.status));
   return ((await res.json()) as { trails: Record<string, Counts> }).trails;
 }
 
-/** Thumbs up / down on today's conditions, per trail. */
-export function useConditions() {
-  const [mine, setMine] = useState<Record<string, MyVote>>(loadMine);
+/** Thumbs up / down and condition tags on today's conditions, per trail at
+ * one resort. Remount (key) to switch resorts. */
+export function useConditions(resort = 'killington') {
+  const [mine, setMine] = useState<Record<string, MyVote>>(() => loadMine(resort));
   const [shared, setShared] = useState<Record<string, Counts> | null>(null);
   const [mode, setMode] = useState<ConditionsMode>('loading');
 
   useEffect(() => {
-    localStorage.setItem(VOTES_KEY, JSON.stringify(mine));
-  }, [mine]);
+    localStorage.setItem(votesKey(resort), JSON.stringify(mine));
+  }, [mine, resort]);
 
   useEffect(() => {
     let alive = true;
     const refresh = () =>
-      request()
+      request(resort)
         .then((trails) => {
           if (!alive) return;
           setShared(trails);
@@ -83,7 +85,7 @@ export function useConditions() {
       clearInterval(t);
       window.removeEventListener('online', refresh);
     };
-  }, []);
+  }, [resort]);
 
   /** Replace this device's report on a trail, updating counts optimistically
    * and sending it to the server. */
@@ -108,7 +110,7 @@ export function useConditions() {
         for (const t of next.tags) c.tags[t] = (c.tags[t] ?? 0) + 1;
         return { ...s, [trailId]: c };
       });
-      request({
+      request(resort, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ trailId, deviceId: deviceId(), ...next }),
@@ -119,7 +121,7 @@ export function useConditions() {
         })
         .catch(() => setMode((m) => (m === 'shared' ? m : 'local')));
     },
-    [mine],
+    [mine, resort],
   );
 
   /** Vote on a trail; voting the same way again takes the vote back. */

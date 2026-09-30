@@ -2,8 +2,8 @@
 
     python3 tools/trailmap/aggregate_readings.py \\
         --tiles work/tiles --readings 'work/readings/result_*.json' \\
-        --roster src/data/trails.ts --polylines src/data/linePolylines.json \\
-        --proposals src/data/trailProposals.json --review-data work/review/data.json
+        --roster src/data/resorts/killington/trails.ts --polylines src/data/resorts/killington/linePolylines.json \\
+        --proposals src/data/resorts/killington/trailProposals.json --review-data work/review/data.json
 
 Each reading file (written by a reader, see prompts/1-name-lines.md) has
   {"lines":[{id, mapName, rosterId, color, confidence, note}],
@@ -24,7 +24,10 @@ import glob
 import json
 import re
 
-WEIGHT = {'high': 3, 'medium': 2, 'low': 1}
+WEIGHT = {'certain': 10, 'high': 3, 'medium': 2, 'low': 1}
+# reader verdicts that are not trail names (compare the word before any ':',
+# so a trail called LIFTLINE is not taken for a LIFT)
+VERDICTS = {'LIFT', 'NOT_A_TRAIL', 'UNKNOWN', 'SPLIT'}
 ROSTER_RE = re.compile(
     r"\{ id:\s*'([^']+)',\s*name:\s*(['\"])(.*?)\2,[^}]*?difficulty:\s*'([^']+)'[^}]*?peak:\s*'([^']+)'")
 
@@ -41,6 +44,8 @@ def main() -> None:
     ap.add_argument('--polylines', required=True)
     ap.add_argument('--proposals', required=True, help='output: trailProposals.json')
     ap.add_argument('--review-data', required=True, help='output: data.json for the review page')
+    ap.add_argument('--labels', help='labels.json from seed_roster.py: glades printed with no line become '
+                    'label markers automatically')
     a = ap.parse_args()
 
     index = json.load(open(f'{a.tiles}/index.json'))
@@ -48,7 +53,16 @@ def main() -> None:
     tiles = {t['tile']: t for t in index['tiles']}
     roster = [dict(id=i, name=n, difficulty=d, peak=p) for i, _q, n, d, p in ROSTER_RE.findall(open(a.roster).read())]
     roster_ids = {t['id'] for t in roster}
-    polys = json.load(open(a.polylines))['polylines']
+    # readers of a new map (prompts/0-new-map.md) give no rosterId: match the
+    # printed name to a roster name instead
+    by_name = {slug(t['name'].replace("'", '')): t['id'] for t in roster}
+    def roster_id(rec):
+        rid = rec.get('rosterId')
+        return rid if rid in roster_ids else by_name.get(slug((rec.get('mapName') or '').replace("'", '').replace('’', '')))
+    poly_doc = json.load(open(a.polylines))
+    polys = poly_doc['polylines']
+    # pieces cut by split_pieces.py: their names come from its reading
+    was_split = {int(k) for k in poly_doc.get('_splits', {})}
 
     votes = collections.defaultdict(collections.Counter)
     info = collections.defaultdict(list)
@@ -57,10 +71,13 @@ def main() -> None:
         r = json.load(open(f))
         for L in r.get('lines', []):
             name = (L.get('mapName') or '').strip().upper()
-            if not name or name.startswith(('LIFT', 'NOT_A_TRAIL', 'UNKNOWN', 'SPLIT')):
+            verdict = name.split(':')[0].strip()
+            if verdict == 'SPLIT' and L['id'] in was_split:
+                continue
+            if not name or verdict in VERDICTS:
                 key = ('#' + (name.split(':')[0] or 'UNKNOWN'), None)
             else:
-                key = (name, L.get('rosterId') if L.get('rosterId') in roster_ids else None)
+                key = (name, roster_id(L))
             votes[L['id']][key] += WEIGHT.get(L.get('confidence'), 1)
             info[L['id']].append(L)
         missed += r.get('missed', [])
@@ -84,7 +101,7 @@ def main() -> None:
 
     hints = collections.defaultdict(list)
     for m in missed:
-        rid = m.get('rosterId') if m.get('rosterId') in roster_ids else None
+        rid = roster_id(m)
         tid = rid or 'new-' + slug(m.get('mapName'))
         if not rid:
             new.setdefault(tid, {'name': (m.get('mapName') or '?').title(), 'colors': collections.Counter()})
@@ -105,6 +122,8 @@ def main() -> None:
 
     new_trails = [dict(id=k, name=v['name'], difficulty=(v['colors'].most_common(1) or [('blue', 0)])[0][0] or 'blue',
                        peak='new on map', isNew=True) for k, v in new.items()]
+    labels = json.load(open(a.labels)) if a.labels else {}
+    glades = {t_id for t_id in re.findall(r"id: '([^']+)'[^}]*isGlade: true", open(a.roster).read())}
     trails, proposals = [], {}
     for t in roster + new_trails:
         e = {k: t[k] for k in ('id', 'name', 'difficulty', 'peak')}
@@ -119,6 +138,19 @@ def main() -> None:
                 {'newTrail': True, 'name': t['name'], 'difficulty': e['difficulty']} if t.get('isNew') else {})
         if hints.get(t['id']):
             e['hint'] = hints[t['id']]
+        pos = (labels.get(t['id']) or {}).get('positions')
+        if not p and t['id'] in glades and pos:
+            # Auto-accepted: glades are printed as a label + icon with no line
+            # (all 22 at Killington and 11 at Stowe held up in review).
+            label = [round(100 * pos[0][0] / W, 2), round(100 * pos[0][1] / H, 2)]
+            proposals[t['id']] = {'noLine': True, 'label': label, 'confidence': 'high'}
+            e['proposal'] = {'polylines': [], 'confidence': 'high', 'noLine': True}
+            e['hint'] = [pos[0]]
+            e['auto'] = True
+        elif p and e['proposal']['confidence'] == 'high':
+            # every reader who saw these pieces named them the same: accepted
+            # unless the reviewer opens it (Stowe: 101/101 held up)
+            e['auto'] = True
         trails.append(e)
 
     junk = {int(k) for k, c in votes.items() if c.most_common(1)[0][0][0] == '#NOT_A_TRAIL'}

@@ -72,12 +72,12 @@ export function summarizeTrip(trip: Trip, allTrips: Trip[], trails: Trail[], pea
 }
 
 /** Plain-text version for sharing. */
-export function summaryText(trip: Trip, s: TripStats, totalTrails: number): string {
+export function summaryText(trip: Trip, s: TripStats, totalTrails: number, resortName: string): string {
   const icons: Record<Difficulty, string> = { green: '🟢', blue: '🟦', black: '◆', 'double-black': '◆◆' };
   const mix = DIFFICULTY_ORDER.filter((d) => s.byDifficulty[d]).map((d) => `${icons[d]} ${s.byDifficulty[d]}`);
   const lines = [
     `⛷ ${trip.name}`,
-    `${s.trails.length} of ${totalTrails} Killington trails${s.newTrails.length ? `, ${s.newTrails.length} new to me` : ''}` +
+    `${s.trails.length} of ${totalTrails} ${resortName} trails${s.newTrails.length ? `, ${s.newTrails.length} new to me` : ''}` +
       (s.days.length > 1 ? ` over ${s.days.length} days` : ''),
   ];
   if (mix.length) lines.push(mix.join('  '));

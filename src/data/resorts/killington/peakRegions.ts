@@ -1,6 +1,6 @@
 // Approximate image-space regions (percent of the full trail-map image) where
 // each peak's runs appear. Calibrated by reading the peak labels off
-// public/killington-trail-map.jpg. cx/cy are the box centre, w/h its full
+// public/maps/killington.jpg. cx/cy are the box centre, w/h its full
 // width/height — all in [0,100].
 //
 // NOTE: this map is drawn in perspective, not the usual left-to-right schematic

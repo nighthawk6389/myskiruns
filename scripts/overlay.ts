@@ -16,7 +16,7 @@ const root = resolve(here, '..');
 const out = process.argv[2] ?? '/tmp/explore/overlay.jpg';
 mkdirSync(dirname(out), { recursive: true });
 
-const full = decodeJpeg(resolve(root, 'public/killington-trail-map.jpg'));
+const full = decodeJpeg(resolve(root, 'public/maps/killington.jpg'));
 const img = downscale(full, 1300);
 const mask = detectTrailMask(img, DEFAULT_PARAMS);
 

@@ -1,12 +1,13 @@
 // Build the app's clickable trail paths from per-trail line proposals and
 // human review decisions.
 //
-//   node scripts/applyTrailProposals.mjs
+//   node scripts/applyTrailProposals.mjs [--resort killington]
 //
-// Inputs:  src/data/linePolylines.json   detected line pieces (percent coords)
-//          src/data/trailProposals.json  proposed pieces per trail (tile reading)
-//          src/data/trailReviews.json    review decisions; override proposals
-// Output:  src/data/trailPaths.json      {trails: {id: {segments, source}}}
+// Inputs (src/data/resorts/<resort>/):
+//   linePolylines.json   detected line pieces (percent coords)
+//   trailProposals.json  proposed pieces per trail (tile reading)
+//   trailReviews.json    review decisions; override proposals
+// Output: trailPaths.json  {trails: {id: {segments, source}}}
 //
 // A review with status "confirmed" uses its own pieces plus any hand-drawn
 // line (source "verified"); "no-line" (e.g. a glade drawn only as a label)
@@ -14,19 +15,17 @@
 // "not-on-map" removes the trail from the map. Unreviewed trails use
 // high/medium-confidence proposals (source "proposed"). Everything else gets
 // no overlay rather than a guess.
-import { readFileSync, writeFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'node:path';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { jpegSize, resortPaths } from './lib/resort.mjs';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const read = (p) => JSON.parse(readFileSync(resolve(root, p), 'utf8'));
-const W = 4572;
-const H = 2704;
+const R = resortPaths();
+const read = (p) => JSON.parse(readFileSync(p, 'utf8'));
+const { width: W, height: H } = jpegSize(R.map);
 const MAX_DRAWN_STEP = 400; // source px
 
-const pieces = new Map(read('src/data/linePolylines.json').polylines.map((p) => [p.id, p.points]));
-const proposals = read('src/data/trailProposals.json').trails;
-const reviews = read('src/data/trailReviews.json').reviews;
+const pieces = new Map(read(R.polylines).polylines.map((p) => [p.id, p.points]));
+const proposals = existsSync(R.proposals) ? read(R.proposals).trails : {};
+const reviews = existsSync(R.reviews) ? read(R.reviews).reviews : {};
 
 // Detected pieces break at junctions, markers and inline labels, so one
 // trail arrives as several polylines with small gaps. Join them so the trail
@@ -243,7 +242,48 @@ function joinSegments(segments) {
 }
 
 const out = {};
-const counts = { verified: 0, proposed: 0, labels: 0, removed: 0 };
+// A reviewer often traces a trail by hand where the line already exists as
+// a piece (a traverse split across trails, a piece that was hard to tap).
+// Swap such stretches for the pieces themselves: a piece counts as traced
+// when >= SNAP_SHARE of it lies within SNAP_PX of the stroke and no other
+// trail uses it (a stretch shared with another trail keeps the reviewer's
+// own drawing); stroke points on a snapped piece are then dropped (what
+// remains is off-line drawing).
+const SNAP_PX = 15;
+const SNAP_SHARE = 0.9;
+const claimed = new Map();
+for (const [tid, r] of Object.entries(reviews)) for (const pid of r.polylines ?? []) claimed.set(pid, [...(claimed.get(pid) ?? []), tid]);
+for (const [tid, p] of Object.entries(proposals)) if (!reviews[tid]) for (const pid of p.polylines ?? []) claimed.set(pid, [...(claimed.get(pid) ?? []), tid]);
+const distToPolyline = (p, pts) => nearestOnSegment(p, pts).d;
+const sub = (a, b) => [a[0] - b[0], a[1] - b[1]];
+function densify(pts, step = 8) {
+  const out = [];
+  for (let i = 1; i < pts.length; i++) {
+    const n = Math.max(1, Math.ceil(Math.hypot(...sub(pts[i], pts[i - 1])) / step));
+    for (let k = 0; k < n; k++) out.push([pts[i - 1][0] + ((pts[i][0] - pts[i - 1][0]) * k) / n, pts[i - 1][1] + ((pts[i][1] - pts[i - 1][1]) * k) / n]);
+  }
+  return pts.length ? [...out, pts.at(-1)] : out;
+}
+const piecePx = new Map([...pieces].map(([id, pts]) => [id, pts.map(([x, y]) => [(x * W) / 100, (y * H) / 100])]));
+function snapStroke(stroke, trailId) {
+  const line = densify(stroke);
+  const snapped = [];
+  for (const [id, pts] of piecePx) {
+    if ((claimed.get(id) ?? []).some((t) => t !== trailId)) continue;
+    const ds = densify(pts);
+    if (ds.filter((q) => distToPolyline(q, stroke) <= SNAP_PX).length >= SNAP_SHARE * ds.length) snapped.push(id);
+  }
+  // keep the hand-drawn runs that don't lie on a snapped piece
+  const rest = [[]];
+  for (const q of line) {
+    if (snapped.some((id) => distToPolyline(q, piecePx.get(id)) <= SNAP_PX)) {
+      if (rest.at(-1).length) rest.push([]);
+    } else rest.at(-1).push(q);
+  }
+  return { snapped, rest: rest.filter((r) => r.length >= 2 && Math.hypot(...sub(r.at(-1), r[0])) > SNAP_PX) };
+}
+
+const counts = { verified: 0, proposed: 0, labels: 0, removed: 0, snapped: 0 };
 for (const id of new Set([...Object.keys(proposals), ...Object.keys(reviews)])) {
   const r = reviews[id];
   const p = proposals[id];
@@ -266,13 +306,18 @@ for (const id of new Set([...Object.keys(proposals), ...Object.keys(reviews)])) 
       drawn = r.drawn ?? [];
       source = 'verified';
     }
+  } else if (p?.noLine && p.label) {
+    // a glade printed with no line: marker at its label (aggregate_readings)
+    out[id] = { segments: [], label: p.label, source: 'proposed' };
+    counts.labels++;
+    continue;
   } else if (p && (p.confidence === 'high' || p.confidence === 'medium')) {
     ids = p.polylines;
     source = 'proposed';
   } else {
     continue;
   }
-  const segments = ids.filter((i) => pieces.has(i)).map((i) => pieces.get(i));
+  ids = [...ids];
   // hand-drawn points are in source pixels; the review tool records one
   // stroke, so a long jump means the reviewer started a separate stretch
   const strokes = [[]];
@@ -281,17 +326,22 @@ for (const id of new Set([...Object.keys(proposals), ...Object.keys(reviews)])) 
     if (prev && Math.hypot(q[0] - prev[0], q[1] - prev[1]) > MAX_DRAWN_STEP) strokes.push([]);
     strokes.at(-1).push(q);
   });
+  const handRuns = [];
   for (const stroke of strokes) {
     if (stroke.length < 2) continue;
-    segments.push(stroke.map(([x, y]) => [+(100 * x / W).toFixed(2), +(100 * y / H).toFixed(2)]));
+    const { snapped, rest } = snapStroke(stroke, id);
+    for (const pid of snapped) if (!ids.includes(pid)) (ids.push(pid), counts.snapped++);
+    handRuns.push(...rest);
   }
+  const segments = ids.filter((i) => pieces.has(i)).map((i) => pieces.get(i));
+  for (const run of handRuns) segments.push(run.map(([x, y]) => [+(100 * x / W).toFixed(2), +(100 * y / H).toFixed(2)]));
   if (!segments.length) continue;
   out[id] = { segments: joinSegments(segments), source };
   counts[source]++;
 }
 
 writeFileSync(
-  resolve(root, 'src/data/trailPaths.json'),
+  R.paths,
   JSON.stringify({
     _note: 'Clickable trail overlays (percent coords). source: verified = human-reviewed; proposed = from tile reading, not yet reviewed.',
     trails: out,
@@ -299,5 +349,6 @@ writeFileSync(
 );
 console.log(
   `trail paths: ${counts.verified} verified, ${counts.proposed} proposed, ` +
-    `${counts.labels} label markers; ${counts.removed} with no overlay by review`,
+    `${counts.labels} label markers; ${counts.removed} with no overlay by review; ` +
+      `${counts.snapped} hand-drawn stretches snapped to line pieces`,
 );

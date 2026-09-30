@@ -8,7 +8,7 @@
 // Two candidate sources:
 //   a) re-detected label blocks that pass 1 rejected: re-OCR them with extra
 //      variants (contrast boost, non-ink crop, inverted, vertical flips)
-//   b) pass-1 labels in src/data/labelAnchors.json that reconcile could not
+//   b) pass-1 labels in src/data/resorts/killington/labelAnchors.json that reconcile could not
 //      match at 0.72: retry with the dictionary-constrained rule
 //
 // Usage:
@@ -16,7 +16,7 @@
 //   node scripts/enrichAnchors.mjs --commit id1,id2,...   # append verified
 //
 // Proposals + sheets go to the scratchpad dir; --commit appends the accepted
-// subset to src/data/labelAnchors.json with "pass": 2 (existing entries are
+// subset to src/data/resorts/killington/labelAnchors.json with "pass": 2 (existing entries are
 // never touched). Then re-run: node scripts/reconcileTrails.mjs
 import sharp from 'sharp';
 import { createWorker, PSM } from 'tesseract.js';
@@ -27,8 +27,8 @@ import { decodeJpeg, encodeJpeg } from './lib/image.mjs';
 import { cropScaled, drawText } from './lib/draw.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const MAP = resolve(root, 'public/killington-trail-map.jpg');
-const ANCHORS = resolve(root, 'src/data/labelAnchors.json');
+const MAP = resolve(root, 'public/maps/killington.jpg');
+const ANCHORS = resolve(root, 'src/data/resorts/killington/labelAnchors.json');
 const SCRATCH = process.env.ENRICH_DIR ?? '/tmp/explore2/enrich';
 const PROPOSALS = `${SCRATCH}/enrich_proposals.json`;
 
@@ -52,7 +52,7 @@ if (process.argv.includes('--commit')) {
 }
 
 // ------------------------------------------------- roster + matching helpers
-const trailSrc = readFileSync(resolve(root, 'src/data/trails.ts'), 'utf8');
+const trailSrc = readFileSync(resolve(root, 'src/data/resorts/killington/trails.ts'), 'utf8');
 const trails = [];
 for (const m of trailSrc.matchAll(/\{ id:\s*'([^']+)',\s*name:\s*'([^']+)'[^}]*?difficulty:\s*'([^']+)'[^}]*?peak:\s*'([^']+)'/g)) {
   trails.push({ id: m[1], name: m[2] });

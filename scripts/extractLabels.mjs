@@ -1,7 +1,7 @@
 // Trail-name OCR pipeline for the Killington ski map.
 //
 // Extracts the black uppercase trail/lift/lodge name labels (usually rotated
-// to follow their trail line) and emits src/data/labelAnchors.json with
+// to follow their trail line) and emits src/data/resorts/killington/labelAnchors.json with
 // { text, x, y, angleDeg, confidence } anchors (x,y normalized [0,1]).
 //
 // Pipeline:
@@ -30,8 +30,8 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { drawText, drawDot } from './lib/draw.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const MAP = resolve(root, 'public/killington-trail-map.jpg');
-const OUT = resolve(root, 'src/data/labelAnchors.json');
+const MAP = resolve(root, 'public/maps/killington.jpg');
+const OUT = resolve(root, 'src/data/resorts/killington/labelAnchors.json');
 const DBG = '/tmp/explore2';
 const DETECT_ONLY = process.argv.includes('--detect-only');
 

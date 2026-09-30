@@ -34,14 +34,14 @@ approaches all stalled at ~40% (see "What we tried").
 |---|---|
 | `tools/trailmap/extract_pdf_image.py` | Lossless raster from the resort PDF; reports any vector text/lines |
 | `scripts/lib/lineDetector.mjs`, `scripts/evaluateLines.mjs` | Colored-line detector and its ground-truth scorer |
-| `scripts/tracePolylines.mjs` | Detection mask → numbered line pieces (`src/data/linePolylines.json`) |
+| `scripts/tracePolylines.mjs` | Detection mask → numbered line pieces (`src/data/resorts/killington/linePolylines.json`) |
 | `tools/trailmap/render_tiles.py` | Zoomed tiles with every piece drawn and numbered, for the readers |
 | `tools/trailmap/prompts/*.md` | Reader prompts: name pieces, symbols + missing, whole-map search |
 | `tools/trailmap/aggregate_readings.py` | Readers' votes → per-trail proposals + review-page data |
 | `tools/trailmap/review/index.html` | The review page (Claude artifact with a database) |
 | `tools/trailmap/refresh_review_data.py` | Rebuild page data after fixes; flag trails for recheck |
-| `scripts/importReviews.mjs` (`npm run reviews:import`) | Review-page export → `src/data/trailReviews.json` |
-| `scripts/applyTrailProposals.mjs` (`npm run trails:apply`) | Reviews + proposals → `src/data/trailPaths.json` (what the app draws) |
+| `scripts/importReviews.mjs` (`npm run reviews:import`) | Review-page export → `src/data/resorts/killington/trailReviews.json` |
+| `scripts/applyTrailProposals.mjs` (`npm run trails:apply`) | Reviews + proposals → `src/data/resorts/killington/trailPaths.json` (what the app draws) |
 | `tools/trailmap/render_crops.py` | Zoomed crops of overlays for audits and split checks |
 | `tools/trailmap/hover_check.cjs` | Browser check that each overlay shows its own name |
 
@@ -59,6 +59,14 @@ Download the resort's trail map PDF (not the web JPG) and run
   instead: exact names, positions and line geometry, no CV needed. Worth
   asking the resort for the layered Illustrator/PDF file — Killington's PDF
   metadata shows it was made in Illustrator and flattened.
+- **Vector trail lines (Stowe 2025-26):** the painted background was one
+  raster and every trail line, label and symbol a vector on top (outlined
+  text, so no words). `extract_pdf_vectors.py` renders the map area to
+  `public/maps/<id>.jpg` and writes each trail-coloured stroke as a
+  numbered piece — exact geometry, no detector, no tuning (165 pieces;
+  `--append` adds another colour, e.g. orange freestyle lines, later).
+  Find the colours by tallying stroke colours/widths with pymupdf and
+  drawing them on a blank page; lifts were the thicker maroon strokes.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.
@@ -91,7 +99,7 @@ misses (Killington's reviewer hand-drew ~45 stretches).
 
 ```bash
 python3 tools/trailmap/render_tiles.py --image map.png \
-  --polylines src/data/linePolylines.json --out work/tiles
+  --polylines src/data/resorts/killington/linePolylines.json --out work/tiles
 ```
 
 Then ask Claude Code to "use a workflow" with one sub-agent per group of 5–8
@@ -102,9 +110,9 @@ detected.
 
 ```bash
 python3 tools/trailmap/aggregate_readings.py --tiles work/tiles \
-  --readings 'work/tiles/result_*.json' --roster src/data/trails.ts \
-  --polylines src/data/linePolylines.json \
-  --proposals src/data/trailProposals.json --review-data work/review/data.json
+  --readings 'work/tiles/result_*.json' --roster src/data/resorts/killington/trails.ts \
+  --polylines src/data/resorts/killington/linePolylines.json \
+  --proposals src/data/resorts/killington/trailProposals.json --review-data work/review/data.json
 ```
 
 Killington: 6 readers, 37 tiles, ~25 min, ~780k sub-agent tokens. Result: 82
@@ -114,6 +122,41 @@ list, and 92% of the real trail-line length named (automatic matching had
 reached 53% coverage and ~40% correct names).
 
 Spot-check a few proposals with `render_crops.py` before the human review.
+
+**A resort with no trail list yet (Stowe):** use `prompts/0-new-map.md`,
+which also records every printed label's symbol, glade icon and area, then
+`seed_roster.py` builds `trails.ts` from those labels before
+`aggregate_readings.py` runs. Pieces a reader reports as "SPLIT: A / B" are
+cut with `split_pieces.py` (the names go in as a "certain" reading). Stowe:
+6 readers over 25 tiles, ~15 min, ~620k tokens → 125 trails, 101 with a
+unanimous line, 18 printed with no line (11 glades) pre-filled as label
+markers for the reviewer to confirm. Watch for trail names that start with a
+reader verdict word (LIFTLINE was once dropped as a LIFT).
+
+### 3b. Accept the easy ones, trace the hard ones (before the review)
+
+What the Stowe review showed: all 101 unanimous proposals and all 11 glades
+were accepted unchanged, while the reviewer's time went to (a) short trails
+printed with a name but no line and (b) traverses and trails that share
+pieces (Crossover, Jake's Ride), which they redrew by hand. So:
+
+- **Auto-accept** (`aggregate_readings.py --labels labels.json`): unanimous
+  proposals and glades printed with no line (marker at the label) are
+  marked `auto`; the review page leaves them out of "Needs action" (they
+  show under All as "auto") and `trails:apply` uses them as proposed.
+- **Trace pass** (`prompts/4-trace.md`, ~5 trails per reader) for trails
+  with no line and for medium/low or split proposals; load the result with
+  `traces_to_reviews.py` so the reviewer confirms instead of drawing.
+  Stowe, blind vs. the reviewer's drawings (`score_traces.py`): 8/13 within
+  25 px, ~3 min and ~200k tokens for 3 readers. It gets fall-line cuts and
+  multi-piece runs right; the misses were two traverses traced down the
+  fall line (prompt since fixed), one trail stopped early and one boundary
+  between two names read differently.
+- The label's text direction does **not** give a trail's direction (Stowe:
+  40-90° off the reviewer's lines); don't use it.
+- `trails:apply` snaps a hand-drawn stretch onto a line piece no other
+  trail uses when >= 90% of the piece lies within 15 px of the stroke, so
+  hand-traced traverses end up on the exact line.
 
 ### 4. Human review
 
@@ -186,7 +229,7 @@ flagged for recheck:
 
 ```bash
 python3 tools/trailmap/refresh_review_data.py --review-data work/review/data.json \
-  --roster src/data/trails.ts --reviews src/data/trailReviews.json \
+  --roster src/data/resorts/killington/trails.ts --reviews src/data/resorts/killington/trailReviews.json \
   --page-ids work/page_ids.txt --recheck recheck.json
 ```
 
@@ -262,10 +305,12 @@ Lessons:
 
 In rough order of payoff:
 
-1. **One data folder per resort** (`src/data/resorts/<id>/`: `trails.ts`,
-   `linePolylines.json`, `trailProposals.json`, `trailReviews.json`,
-   `trailPaths.json`, `legend.json`, map image) and resort-aware scripts.
-   Today the scripts assume Killington's paths and image size.
+1. **One data folder per resort** — done: `src/data/resorts/<id>/`
+   (`trails.ts`, `linePolylines.json`, `trailProposals.json`,
+   `trailReviews.json`, `trailPaths.json`), map at `public/maps/<id>.jpg`,
+   registered in `src/resorts.ts`. `tracePolylines`, `trails:apply`,
+   `reviews:import` and `hover_check.cjs` take `--resort <id>`; the image
+   size comes from the map file. Still to do: a `legend.json` per map.
 2. **A per-map legend file** (trail colors, lift color, boundary, highlight
    bands, symbols, text styles) feeding both the detector's color gates and
    the reader prompts.

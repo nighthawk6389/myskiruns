@@ -12,14 +12,16 @@
 //   4. Douglas-Peucker simplification (epsilon 2.5 px)
 //   5. percent coordinates, 2 decimals
 //
-// Output: src/data/linePolylines.json  +  audit render /tmp/explore2/polylines_audit.jpg
+//   node scripts/tracePolylines.mjs [--resort killington]
+//
+// Output: src/data/resorts/<resort>/linePolylines.json  +  audit render /tmp/explore2/polylines_audit.jpg
 
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { detectTrailLines, CLS } from './lib/lineDetector.mjs';
 import { decodeJpeg, downscale, encodeJpeg } from './lib/image.mjs';
+import { resortPaths } from './lib/resort.mjs';
 
-const MAP = 'public/killington-trail-map.jpg';
-const OUT_JSON = 'src/data/linePolylines.json';
+const { map: MAP, polylines: OUT_JSON } = resortPaths();
 const AUDIT = '/tmp/explore2/polylines_audit.jpg';
 
 const TANGENT_WIN = 12; // chain pixels used to estimate an edge-end tangent

@@ -1,4 +1,4 @@
-import type { Trail, PeakData } from '../types';
+import type { Trail, PeakData } from '../../../types';
 
 export const peaks: PeakData[] = [
   { id: 'snowshed', name: 'Snowshed', elevation: 2150, x: 100, y: 280, baseY: 700, width: 160 },

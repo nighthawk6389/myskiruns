@@ -3,7 +3,7 @@ piece drawn in magenta and labelled with its numeric id. These tiles are what
 the naming readers (Claude sub-agents) look at.
 
     python3 tools/trailmap/render_tiles.py \\
-        --image map.png --polylines src/data/linePolylines.json --out work/tiles
+        --image map.png --polylines src/data/resorts/killington/linePolylines.json --out work/tiles
 
 Writes <out>/<tile>.jpg and <out>/index.json ([{tile, box:[x0,y0,x1,y1], ids}]).
 Tile pixel (px,py) maps to source pixel (x0 + px/zoom, y0 + py/zoom).

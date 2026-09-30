@@ -22,6 +22,9 @@ export interface ConditionCounts {
 
 export const WINDOW_MS = 24 * 60 * 60 * 1000;
 const TRAIL_ID = /^[a-z0-9-]{1,64}$/;
+const RESORT_ID = /^[a-z0-9-]{1,32}$/;
+/** resorts before multi-resort support used no resort parameter */
+export const DEFAULT_RESORT = 'killington';
 const DEVICE_ID = /^[a-zA-Z0-9-]{8,64}$/;
 
 const json = (body: unknown, status = 200) =>
@@ -49,7 +52,13 @@ export function tally(all: Record<string, string>, now: number) {
   return { trails, stale };
 }
 
-export async function handleConditions(req: Request, store: VoteStore | null): Promise<Response> {
+/** Each resort's votes live in their own store; null = not configured. */
+export type StoreFor = (resort: string) => VoteStore | null;
+
+export async function handleConditions(req: Request, storeFor: StoreFor): Promise<Response> {
+  const resort = new URL(req.url).searchParams.get('resort') ?? DEFAULT_RESORT;
+  if (!RESORT_ID.test(resort)) return json({ error: 'Bad resort.' }, 400);
+  const store = storeFor(resort);
   if (!store) return json({ error: 'Shared conditions are not set up on this server.' }, 503);
   const now = Date.now();
 
@@ -85,12 +94,16 @@ export async function handleConditions(req: Request, store: VoteStore | null): P
   return json({ error: 'Method not allowed.' }, 405);
 }
 
-/** In-memory store for local development. */
-export function memoryStore(): VoteStore {
-  const data = new Map<string, string>();
-  return {
-    getAll: async () => Object.fromEntries(data),
-    set: async (f, v) => void data.set(f, v),
-    remove: async (fs) => fs.forEach((f) => data.delete(f)),
+/** In-memory stores (one per resort) for local development. */
+export function memoryStores(): StoreFor {
+  const all = new Map<string, Map<string, string>>();
+  return (resort) => {
+    if (!all.has(resort)) all.set(resort, new Map());
+    const data = all.get(resort)!;
+    return {
+      getAll: async () => Object.fromEntries(data),
+      set: async (f, v) => void data.set(f, v),
+      remove: async (fs) => fs.forEach((f) => data.delete(f)),
+    };
   };
 }

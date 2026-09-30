@@ -2,12 +2,12 @@
 
 Killington ski-run tracker (React 19 + TS + Vite). The hard part is putting a
 clickable, correctly *named* overlay on each trail of
-`public/killington-trail-map.jpg`. Read `README.md` ("Honest end-to-end
+`public/maps/killington.jpg`. Read `README.md` ("Honest end-to-end
 status" and "Prior attempts") before changing the pipeline, and
 `docs/trail-map-playbook.md` before labeling another trail map.
 
 ## Definition of done for trail overlays
-For every trail in `src/data/trails.ts`: its overlay lies on that trail's own
+For every trail in each resort's `src/data/resorts/<id>/trails.ts`: its overlay lies on that trail's own
 drawn line along its full length (or is explicitly marked as having no line,
 e.g. some glades), and hovering/clicking anywhere on it shows that trail's
 name. Pixel-level detector scores are not evidence of this. Verify on zoomed

@@ -1,7 +1,7 @@
 // Browser check that every trail overlay shows its own name.
 //
 //   npm run build && npx vite preview --port 4199 &
-//   node tools/trailmap/hover_check.cjs http://localhost:4199/
+//   node tools/trailmap/hover_check.cjs http://localhost:4199/ [--resort killington]
 //
 // Hovers 3 points (1/4, 1/2, 3/4 along the longest segment) of every line
 // trail and each glade marker, in the real app, and compares the tooltip with
@@ -17,11 +17,14 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname, '../..');
 const url = process.argv[2] || 'http://localhost:4199/';
-const src = fs.readFileSync(path.join(root, 'src/data/trails.ts'), 'utf8');
+const ri = process.argv.indexOf('--resort');
+const resort = ri > 0 ? process.argv[ri + 1] : 'killington';
+const dir = path.join(root, 'src/data/resorts', resort);
+const src = fs.readFileSync(path.join(dir, 'trails.ts'), 'utf8');
 const names = Object.fromEntries(
   [...src.matchAll(/\{ id:\s*'([^']+)',\s*name:\s*(['"])(.*?)\2, difficulty/g)].map((m) => [m[1], m[3]]),
 );
-const paths = JSON.parse(fs.readFileSync(path.join(root, 'src/data/trailPaths.json'), 'utf8')).trails;
+const paths = JSON.parse(fs.readFileSync(path.join(dir, 'trailPaths.json'), 'utf8')).trails;
 
 const cases = [];
 for (const [id, p] of Object.entries(paths)) {
@@ -45,8 +48,9 @@ for (const [id, p] of Object.entries(paths)) {
 (async () => {
   const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {});
   const page = await browser.newPage({ viewport: { width: 2600, height: 1700 } });
-  await page.goto(url);
-  await page.getByText('Trail Map').click().catch(() => {});
+  const u = new URL(url);
+  u.searchParams.set('resort', resort);
+  await page.goto(u.toString());
   await page.waitForTimeout(3000);
   const box = await page.locator('svg[viewBox^="0 0 1000"]').boundingBox();
   const misses = [];

@@ -4,11 +4,14 @@
 // Marketplace). Connecting it to the project sets KV_REST_API_URL and
 // KV_REST_API_TOKEN (or the UPSTASH_REDIS_REST_* equivalents). Without them
 // the endpoint answers 503 and the app keeps votes on the device.
-import { handleConditions, type VoteStore } from './_lib/conditions';
+import { DEFAULT_RESORT, handleConditions, type VoteStore } from './_lib/conditions';
 
-const HASH = 'myskiruns:conditions';
+// Killington keeps the hash it had before other resorts were added.
+const hashFor = (resort: string) =>
+  resort === DEFAULT_RESORT ? 'myskiruns:conditions' : `myskiruns:conditions:${resort}`;
 
-function upstashStore(): VoteStore | null {
+function upstashStore(resort: string): VoteStore | null {
+  const HASH = hashFor(resort);
   const url = process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL;
   const token = process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN;
   if (!url || !token) return null;
@@ -39,9 +42,9 @@ function upstashStore(): VoteStore | null {
 }
 
 export async function GET(req: Request) {
-  return handleConditions(req, upstashStore());
+  return handleConditions(req, upstashStore);
 }
 
 export async function POST(req: Request) {
-  return handleConditions(req, upstashStore());
+  return handleConditions(req, upstashStore);
 }

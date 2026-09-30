@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Trip } from '../../hooks/useTrips';
-import { trails, peaks } from '../../data/trails';
+import type { Resort } from '../../resorts';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_UI_COLORS } from '../../types';
 import { DIFFICULTY_ORDER, summarizeTrip, summaryText } from './summary';
 import styles from './TripSummary.module.css';
@@ -8,6 +8,7 @@ import styles from './TripSummary.module.css';
 interface TripSummaryProps {
   trip: Trip;
   trips: Trip[];
+  resort: Resort;
   onClose: () => void;
   /** show a trail on the map */
   onLocateTrail: (id: string) => void;
@@ -19,8 +20,9 @@ const timeLabel = (d: Date) => d.toLocaleTimeString(undefined, { hour: 'numeric'
 
 /** Recap of one trip: totals, new trails, difficulty mix, progress by peak
  * and a day-by-day log, with a share/copy button. */
-export function TripSummary({ trip, trips, onClose, onLocateTrail }: TripSummaryProps) {
-  const s = useMemo(() => summarizeTrip(trip, trips, trails, peaks), [trip, trips]);
+export function TripSummary({ trip, trips, resort, onClose, onLocateTrail }: TripSummaryProps) {
+  const { trails, peaks } = resort;
+  const s = useMemo(() => summarizeTrip(trip, trips, trails, peaks), [trip, trips, trails, peaks]);
   const [shareStatus, setShareStatus] = useState('');
   const closeRef = useRef<HTMLButtonElement>(null);
 
@@ -32,7 +34,7 @@ export function TripSummary({ trip, trips, onClose, onLocateTrail }: TripSummary
   }, [onClose]);
 
   const share = async () => {
-    const text = summaryText(trip, s, trails.length);
+    const text = summaryText(trip, s, trails.length, resort.name);
     try {
       if (navigator.share) {
         await navigator.share({ title: trip.name, text });

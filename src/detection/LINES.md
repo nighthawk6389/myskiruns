@@ -82,10 +82,10 @@ two FNs where the line ink is literally absent under forest texture
 (chromatically identical to shadow — verified by pixel transects).
 
 Consumers:
-- `npm run lines:png` → `public/trail-lines.png`, the app's 〰 overlay.
-- `scripts/tracePolylines.mjs` → `src/data/linePolylines.json`, the line
+- `npm run lines:png` → `public/maps/killington-lines.png`, the app's 〰 overlay.
+- `scripts/tracePolylines.mjs` → `src/data/resorts/killington/linePolylines.json`, the line
   pieces that the review workflow assigns to trails
-  (`npm run trails:apply` → `src/data/trailPaths.json`).
+  (`npm run trails:apply` → `src/data/resorts/killington/trailPaths.json`).
 
 **Scope of these numbers:** they say whether a pixel is on *some* trail
 line. They say nothing about whether the line gets the right *name*; that
@@ -112,12 +112,12 @@ wrong:
 detection → word clustering → PCA baseline angle → counter-rotated crops →
 tesseract.js (local langdata; the CDN is proxy-blocked). Result: **103 labels in pass 1
 (mean confidence 90.4), 125 after the verified pass 2** (`enrichAnchors.mjs`), positions verified 16/16 on zoomed spot-checks
-(`src/data/labelAnchors.json`).
+(`src/data/resorts/killington/labelAnchors.json`).
 
 `scripts/reconcileTrails.mjs` fuzzy-matches labels to the roster (Levenshtein
 plus containment, because OCR truncates words that touch trail lines):
 
-- **54 trails matched to name anchors** in pass 1 (76 after pass 2) (`src/data/trailAnchors.json`);
+- **54 trails matched to name anchors** in pass 1 (76 after pass 2) (`src/data/resorts/killington/trailAnchors.json`);
   these anchors seeded the (since removed) automatic placement.
 - **11 missing trails added to `data/trails.ts`** after hand-curation of the
   OCR proposals (Blue Heaven, Helter Skelter, Full House, Frolic, The Jug,

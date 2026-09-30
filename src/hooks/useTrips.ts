@@ -8,6 +8,8 @@ export interface Run {
 
 export interface Trip {
   id: string;
+  /** resort id (src/resorts.ts); trips from before resorts are Killington */
+  resortId?: string;
   name: string;
   /** YYYY-MM-DD */
   startDate: string;
@@ -28,9 +30,12 @@ const LEGACY_KEY = 'killington-skied-trails';
 const today = () => new Date().toISOString().slice(0, 10);
 const newId = () => `trip-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
 
-export function defaultTripName(date: string): string {
+export const LEGACY_RESORT = 'killington';
+export const tripResort = (t: Trip) => t.resortId ?? LEGACY_RESORT;
+
+export function defaultTripName(date: string, resortName = 'Killington'): string {
   const d = new Date(`${date}T12:00:00`);
-  return `Killington · ${d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}`;
+  return `${resortName} · ${d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}`;
 }
 
 function isTripsState(v: unknown): v is TripsState {
@@ -66,7 +71,13 @@ function load(): TripsState {
   return { version: 1, trips: [], activeTripId: null };
 }
 
-export function useTrips() {
+const latest = (trips: Trip[]) =>
+  trips.reduce<Trip | null>((best, t) => (!best || t.startDate >= best.startDate ? t : best), null);
+
+/** Trips at one resort. Every resort's trips share one stored list; the
+ * active trip is the selected one if it is at this resort, else this
+ * resort's latest. */
+export function useTrips(resortId: string = LEGACY_RESORT, resortName = 'Killington') {
   const [state, setState] = useState<TripsState>(load);
 
   useEffect(() => {
@@ -77,7 +88,8 @@ export function useTrips() {
     }
   }, [state]);
 
-  const activeTrip = state.trips.find((t) => t.id === state.activeTripId) ?? null;
+  const resortTrips = useMemo(() => state.trips.filter((t) => tripResort(t) === resortId), [state.trips, resortId]);
+  const activeTrip = resortTrips.find((t) => t.id === state.activeTripId) ?? latest(resortTrips);
 
   const skiedThisTrip = useMemo(
     () => new Set(activeTrip?.runs.map((r) => r.trailId) ?? []),
@@ -85,20 +97,21 @@ export function useTrips() {
   );
 
   const skiedEver = useMemo(
-    () => new Set(state.trips.flatMap((t) => t.runs.map((r) => r.trailId))),
-    [state.trips],
+    () => new Set(resortTrips.flatMap((t) => t.runs.map((r) => r.trailId))),
+    [resortTrips],
   );
 
   const createTrip = useCallback((name: string, startDate: string) => {
     const trip: Trip = {
       id: newId(),
-      name: name.trim() || defaultTripName(startDate),
+      resortId,
+      name: name.trim() || defaultTripName(startDate, resortName),
       startDate,
       createdAt: new Date().toISOString(),
       runs: [],
     };
     setState((s) => ({ ...s, trips: [...s.trips, trip], activeTripId: trip.id }));
-  }, []);
+  }, [resortId, resortName]);
 
   const selectTrip = useCallback((id: string) => {
     setState((s) => ({ ...s, activeTripId: id }));
@@ -109,9 +122,10 @@ export function useTrips() {
   }, []);
 
   const deleteTrip = useCallback((id: string) => {
+    // with the active trip gone, this resort's latest trip becomes active
     setState((s) => {
       const trips = s.trips.filter((t) => t.id !== id);
-      const activeTripId = s.activeTripId === id ? (trips.at(-1)?.id ?? null) : s.activeTripId;
+      const activeTripId = s.activeTripId === id ? null : s.activeTripId;
       return { ...s, trips, activeTripId };
     });
   }, []);
@@ -121,10 +135,18 @@ export function useTrips() {
   const toggleRun = useCallback((trailId: string) => {
     setState((s) => {
       let trips = s.trips;
-      let activeTripId = s.activeTripId;
-      if (!trips.some((t) => t.id === activeTripId)) {
+      const here = trips.filter((t) => tripResort(t) === resortId);
+      let activeTripId = (here.find((t) => t.id === s.activeTripId) ?? latest(here))?.id ?? null;
+      if (!activeTripId) {
         const date = today();
-        const trip: Trip = { id: newId(), name: defaultTripName(date), startDate: date, createdAt: new Date().toISOString(), runs: [] };
+        const trip: Trip = {
+          id: newId(),
+          resortId,
+          name: defaultTripName(date, resortName),
+          startDate: date,
+          createdAt: new Date().toISOString(),
+          runs: [],
+        };
         trips = [...trips, trip];
         activeTripId = trip.id;
       }
@@ -140,7 +162,7 @@ export function useTrips() {
       });
       return { ...s, trips, activeTripId };
     });
-  }, []);
+  }, [resortId, resortName]);
 
   const exportJson = useCallback(
     () => JSON.stringify({ app: 'myskiruns', exportedAt: new Date().toISOString(), ...state }, null, 2),
@@ -163,7 +185,10 @@ export function useTrips() {
   }, [state.trips]);
 
   return {
-    trips: state.trips,
+    /** this resort's trips */
+    trips: resortTrips,
+    /** every resort's trips (the trip summary needs them to tell "new") */
+    allTrips: state.trips,
     activeTrip,
     skiedThisTrip,
     skiedEver,
