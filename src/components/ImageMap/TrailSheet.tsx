@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import type { Trail } from '../../types';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_UI_COLORS } from '../../types';
 import type { Conditions } from '../../hooks/useConditions';
+import { CONDITION_TAGS, MAX_TAGS, topTags } from '../../conditionTags';
 import styles from './ImageMap.module.css';
 
 export interface SheetTrail {
@@ -46,6 +47,8 @@ export function TrailSheet({ candidates, skiedTrails, skiedEver, onMark, onHover
         const color = DIFFICULTY_UI_COLORS[trail.difficulty];
         const counts = conditions.countsFor(trail.id);
         const mine = conditions.myVote(trail.id);
+        const myTags = conditions.myTags(trail.id);
+        const reported = topTags(counts.tags);
         return (
           <div
             key={trail.id}
@@ -84,10 +87,38 @@ export function TrailSheet({ candidates, skiedTrails, skiedEver, onMark, onHover
                 </button>
                 <span className={styles.conditionsNote}>today</span>
               </div>
+              {reported.length > 0 && (
+                <div className={styles.tagSummary}>
+                  {reported.map(({ tag, count }) => (
+                    <span key={tag.key}>
+                      {tag.emoji} {tag.label}
+                      {count > 1 && <b> {count}</b>}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
             <button className={skied ? styles.sheetUndo : styles.sheetMark} onClick={() => armed.current && onMark(trail)}>
               {skied ? 'Remove' : 'Skied it'}
             </button>
+            {(mine || myTags.length > 0) && (
+              <div className={styles.tagPicker} role="group" aria-label={`What's ${trail.name} like? Pick up to ${MAX_TAGS}`}>
+                <span className={styles.tagPrompt}>What's it like?</span>
+                {CONDITION_TAGS.map((tag) => {
+                  const on = myTags.includes(tag.key);
+                  return (
+                    <button
+                      key={tag.key}
+                      className={`${styles.tagChip} ${on ? (tag.good === false ? styles.tagBad : tag.good ? styles.tagGood : styles.tagOn) : ''}`}
+                      onClick={() => armed.current && conditions.toggleTag(trail.id, tag.key)}
+                      aria-pressed={on}
+                    >
+                      {tag.emoji} {tag.label}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
         );
       })}

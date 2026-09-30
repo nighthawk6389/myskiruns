@@ -1,11 +1,16 @@
 import { useCallback, useEffect, useState } from 'react';
+import { MAX_TAGS } from '../conditionTags';
 
 export type Vote = 1 | -1;
 
 export interface Counts {
   up: number;
   down: number;
+  /** condition tag -> how many reports carry it */
+  tags: Record<string, number>;
 }
+
+const EMPTY: Counts = { up: 0, down: 0, tags: {} };
 
 /** 'shared': counts come from everyone via /api/conditions.
  * 'local': the server isn't set up or can't be reached; only this device's
@@ -18,8 +23,10 @@ const VOTES_KEY = 'myskiruns.votes';
 const WINDOW_MS = 24 * 60 * 60 * 1000;
 const REFRESH_MS = 5 * 60 * 1000;
 
+/** This device's report on a trail: a vote (0 = none) plus condition tags. */
 interface MyVote {
-  vote: Vote;
+  vote: Vote | 0;
+  tags?: string[];
   at: number;
 }
 
@@ -78,31 +85,33 @@ export function useConditions() {
     };
   }, []);
 
-  /** Vote on a trail; voting the same way again takes the vote back. */
-  const vote = useCallback(
-    (trailId: string, v: Vote) => {
-      const prev = mine[trailId]?.vote;
-      const next = prev === v ? 0 : v;
+  /** Replace this device's report on a trail, updating counts optimistically
+   * and sending it to the server. */
+  const report = useCallback(
+    (trailId: string, next: { vote: Vote | 0; tags: string[] }) => {
+      const prev = mine[trailId] ?? { vote: 0 as const, tags: [] };
       setMine((m) => {
         const copy = { ...m };
-        if (next) copy[trailId] = { vote: next, at: Date.now() };
+        if (next.vote || next.tags.length) copy[trailId] = { ...next, at: Date.now() };
         else delete copy[trailId];
         return copy;
       });
-      // optimistic update of the shared counts
       setShared((s) => {
         if (!s) return s;
-        const c = { ...(s[trailId] ?? { up: 0, down: 0 }) };
-        if (prev === 1) c.up--;
-        if (prev === -1) c.down--;
-        if (next === 1) c.up++;
-        if (next === -1) c.down++;
+        const old = s[trailId] ?? EMPTY;
+        const c: Counts = { up: old.up, down: old.down, tags: { ...old.tags } };
+        if (prev.vote === 1) c.up--;
+        if (prev.vote === -1) c.down--;
+        if (next.vote === 1) c.up++;
+        if (next.vote === -1) c.down++;
+        for (const t of prev.tags ?? []) c.tags[t] = Math.max(0, (c.tags[t] ?? 0) - 1);
+        for (const t of next.tags) c.tags[t] = (c.tags[t] ?? 0) + 1;
         return { ...s, [trailId]: c };
       });
       request({
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ trailId, deviceId: deviceId(), vote: next }),
+        body: JSON.stringify({ trailId, deviceId: deviceId(), ...next }),
       })
         .then((trails) => {
           setShared(trails);
@@ -113,19 +122,45 @@ export function useConditions() {
     [mine],
   );
 
+  /** Vote on a trail; voting the same way again takes the vote back. */
+  const vote = useCallback(
+    (trailId: string, v: Vote) => {
+      const cur = mine[trailId];
+      report(trailId, { vote: cur?.vote === v ? 0 : v, tags: cur?.tags ?? [] });
+    },
+    [mine, report],
+  );
+
+  /** Add or remove a condition tag on this device's report (max MAX_TAGS). */
+  const toggleTag = useCallback(
+    (trailId: string, tag: string) => {
+      const cur = mine[trailId];
+      const tags = cur?.tags ?? [];
+      const next = tags.includes(tag) ? tags.filter((t) => t !== tag) : [...tags, tag].slice(-MAX_TAGS);
+      report(trailId, { vote: cur?.vote ?? 0, tags: next });
+    },
+    [mine, report],
+  );
+
   /** Counts for a trail: everyone's when shared, else just this device's. */
   const countsFor = useCallback(
     (trailId: string): Counts => {
-      if (shared) return shared[trailId] ?? { up: 0, down: 0 };
-      const v = mine[trailId]?.vote;
-      return { up: v === 1 ? 1 : 0, down: v === -1 ? 1 : 0 };
+      if (shared) return shared[trailId] ?? EMPTY;
+      const r = mine[trailId];
+      if (!r) return EMPTY;
+      return {
+        up: r.vote === 1 ? 1 : 0,
+        down: r.vote === -1 ? 1 : 0,
+        tags: Object.fromEntries((r.tags ?? []).map((t) => [t, 1])),
+      };
     },
     [shared, mine],
   );
 
-  const myVote = useCallback((trailId: string): Vote | null => mine[trailId]?.vote ?? null, [mine]);
+  const myVote = useCallback((trailId: string): Vote | null => mine[trailId]?.vote || null, [mine]);
+  const myTags = useCallback((trailId: string): string[] => mine[trailId]?.tags ?? [], [mine]);
 
-  return { mode, vote, countsFor, myVote };
+  return { mode, vote, toggleTag, countsFor, myVote, myTags };
 }
 
 export type Conditions = ReturnType<typeof useConditions>;

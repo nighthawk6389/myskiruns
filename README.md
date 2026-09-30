@@ -48,6 +48,16 @@ each iteration taught us, and how to scale it to many maps.
   the app keeps votes on the device (the sheet says so). Each device sends a
   random id so it has one vote per trail; nothing identifies the person.
   `vite` / `vite preview` serve the same API from memory for local testing.
+- **Condition tags.** After voting, pick up to three tags for what the trail
+  is like (groomed, powder, soft, moguls, hardpack, icy, slushy, thin cover,
+  crowded; list in `src/conditionTags.ts`). The sheet shows the most-reported
+  tags, and "Good conditions today" shows each trail's top tag. Tags are
+  stored with the vote, in the same 24-hour window.
+- **Trip summary.** "Summary" in the stats panel (or ⋯ → Trip summary) shows
+  trails skied, trails new to you (not logged on an earlier trip), days,
+  the difficulty mix and toughest trails, progress by peak, and a
+  day-by-day log with times; tap a run to see it on the map. "Share summary"
+  uses the phone's share sheet, or copies a text recap.
 - **Works offline and installs to the home screen.** A service worker
   (`public/sw.js`, production builds only) caches the app and the trail map,
   so it opens without signal on the mountain; on a phone use "Add to Home

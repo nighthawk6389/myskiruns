@@ -7,6 +7,7 @@ import { TrailPath } from './TrailPath';
 import { TrailHotspot } from './TrailHotspot';
 import { TrailSheet, type SheetTrail } from './TrailSheet';
 import type { Conditions } from '../../hooks/useConditions';
+import { topTags } from '../../conditionTags';
 import styles from './ImageMap.module.css';
 
 const MAP_SRC = '/killington-trail-map.jpg';
@@ -567,9 +568,13 @@ export function ImageMap({
           </div>
           {(() => {
             const c = conditions.countsFor(hoveredTrailData.id);
-            return c.up + c.down > 0 ? (
+            const tags = topTags(c.tags)
+              .map(({ tag, count }) => `${tag.emoji} ${tag.label}${count > 1 ? ` ${count}` : ''}`)
+              .join(' · ');
+            return c.up + c.down > 0 || tags ? (
               <div className={styles.tooltipDetail}>
                 Today: 👍 {c.up} · 👎 {c.down}
+                {tags && <> · {tags}</>}
               </div>
             ) : null;
           })()}
