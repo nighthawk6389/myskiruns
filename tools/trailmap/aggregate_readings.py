@@ -44,6 +44,8 @@ def main() -> None:
     ap.add_argument('--polylines', required=True)
     ap.add_argument('--proposals', required=True, help='output: trailProposals.json')
     ap.add_argument('--review-data', required=True, help='output: data.json for the review page')
+    ap.add_argument('--labels', help='labels.json from seed_roster.py: glades printed with no line become '
+                    'label markers automatically')
     a = ap.parse_args()
 
     index = json.load(open(f'{a.tiles}/index.json'))
@@ -120,6 +122,8 @@ def main() -> None:
 
     new_trails = [dict(id=k, name=v['name'], difficulty=(v['colors'].most_common(1) or [('blue', 0)])[0][0] or 'blue',
                        peak='new on map', isNew=True) for k, v in new.items()]
+    labels = json.load(open(a.labels)) if a.labels else {}
+    glades = {t_id for t_id in re.findall(r"id: '([^']+)'[^}]*isGlade: true", open(a.roster).read())}
     trails, proposals = [], {}
     for t in roster + new_trails:
         e = {k: t[k] for k in ('id', 'name', 'difficulty', 'peak')}
@@ -134,6 +138,19 @@ def main() -> None:
                 {'newTrail': True, 'name': t['name'], 'difficulty': e['difficulty']} if t.get('isNew') else {})
         if hints.get(t['id']):
             e['hint'] = hints[t['id']]
+        pos = (labels.get(t['id']) or {}).get('positions')
+        if not p and t['id'] in glades and pos:
+            # Auto-accepted: glades are printed as a label + icon with no line
+            # (all 22 at Killington and 11 at Stowe held up in review).
+            label = [round(100 * pos[0][0] / W, 2), round(100 * pos[0][1] / H, 2)]
+            proposals[t['id']] = {'noLine': True, 'label': label, 'confidence': 'high'}
+            e['proposal'] = {'polylines': [], 'confidence': 'high', 'noLine': True}
+            e['hint'] = [pos[0]]
+            e['auto'] = True
+        elif p and e['proposal']['confidence'] == 'high':
+            # every reader who saw these pieces named them the same: accepted
+            # unless the reviewer opens it (Stowe: 101/101 held up)
+            e['auto'] = True
         trails.append(e)
 
     junk = {int(k) for k, c in votes.items() if c.most_common(1)[0][0][0] == '#NOT_A_TRAIL'}

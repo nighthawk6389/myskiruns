@@ -53,7 +53,7 @@ def main() -> None:
         e = {'id': pid, 'name': t['name'], 'difficulty': t['difficulty'], 'peak': t['peak']}
         if pid.startswith('new-'):
             e['isNew'] = True
-        for k in ('proposal', 'hint', 'recheck'):
+        for k in ('proposal', 'hint', 'recheck', 'auto'):
             if old.get(pid, {}).get(k):
                 e[k] = old[pid][k]
         if t['id'] in recheck:

@@ -6,234 +6,1974 @@
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:18:41.770Z",
    "labelAt": [
     20.21,
     40.89
-   ],
-   "by": "claude"
+   ]
   },
   "bypass": {
-   "status": "no-line",
+   "status": "confirmed",
    "polylines": [],
-   "drawn": [],
+   "drawn": [
+    [
+     2054,
+     516
+    ],
+    [
+     2084,
+     520
+    ],
+    [
+     2100,
+     531
+    ],
+    [
+     2110,
+     542
+    ],
+    [
+     2130,
+     556
+    ],
+    [
+     2171,
+     569
+    ],
+    [
+     2175,
+     585
+    ],
+    [
+     2156,
+     600
+    ],
+    [
+     2136,
+     614
+    ]
+   ],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:19:41.964Z",
    "labelAt": [
     49.41,
     21.15
-   ],
-   "by": "claude"
+   ]
   },
   "centerline": {
-   "status": "no-line",
+   "status": "confirmed",
    "polylines": [],
-   "drawn": [],
+   "drawn": [
+    [
+     1622,
+     695
+    ],
+    [
+     1611,
+     713
+    ],
+    [
+     1586,
+     735
+    ],
+    [
+     1566,
+     757
+    ],
+    [
+     1552,
+     778
+    ]
+   ],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:20:11.148Z",
    "labelAt": [
     36.42,
     29.53
-   ],
-   "by": "claude"
+   ]
   },
   "christiana": {
-   "status": "no-line",
+   "status": "confirmed",
    "polylines": [],
-   "drawn": [],
+   "drawn": [
+    [
+     1356,
+     967
+    ],
+    [
+     1343,
+     968
+    ],
+    [
+     1320,
+     973
+    ],
+    [
+     1295,
+     975
+    ],
+    [
+     1284,
+     974
+    ],
+    [
+     1266,
+     970
+    ]
+   ],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:28:33.003Z",
    "labelAt": [
     30.13,
     37.29
-   ],
-   "by": "claude"
+   ]
   },
   "christie-glades": {
    "status": "no-line",
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:10:15.808Z",
    "labelAt": [
     30.75,
     35.68
-   ],
-   "by": "claude"
+   ]
   },
   "lookout-glades": {
    "status": "no-line",
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:16:52.466Z",
    "labelAt": [
     42.66,
     31.69
-   ],
-   "by": "claude"
+   ]
   },
   "mary-mason-glades": {
    "status": "no-line",
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:22:05.460Z",
    "labelAt": [
     51.61,
     41.95
-   ],
-   "by": "claude"
+   ]
   },
   "national-drop-in": {
-   "status": "no-line",
+   "status": "confirmed",
    "polylines": [],
-   "drawn": [],
+   "drawn": [
+    [
+     1912,
+     588
+    ],
+    [
+     1924,
+     613
+    ],
+    [
+     1942,
+     631
+    ]
+   ],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:22:34.774Z",
    "labelAt": [
     44.05,
     24.17
-   ],
-   "by": "claude"
+   ]
   },
   "nosedive-glades": {
    "status": "no-line",
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:23:06.258Z",
    "labelAt": [
     52.53,
     27.38
-   ],
-   "by": "claude"
+   ]
   },
   "s-53-glades": {
    "status": "no-line",
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:23:18.118Z",
    "labelAt": [
     44.83,
     31.45
-   ],
-   "by": "claude"
+   ]
   },
   "stowe-derby-trail": {
-   "status": "no-line",
+   "status": "confirmed",
    "polylines": [],
-   "drawn": [],
+   "drawn": [
+    [
+     509,
+     1644
+    ],
+    [
+     505,
+     1636
+    ],
+    [
+     468,
+     1640
+    ],
+    [
+     443,
+     1652
+    ],
+    [
+     400,
+     1688
+    ],
+    [
+     353,
+     1708
+    ],
+    [
+     301,
+     1746
+    ],
+    [
+     275,
+     1763
+    ],
+    [
+     259,
+     1778
+    ],
+    [
+     263,
+     1789
+    ],
+    [
+     276,
+     1820
+    ],
+    [
+     278,
+     1867
+    ],
+    [
+     274,
+     1922
+    ],
+    [
+     246,
+     1959
+    ],
+    [
+     218,
+     1982
+    ],
+    [
+     186,
+     2000
+    ],
+    [
+     176,
+     2008
+    ],
+    [
+     139,
+     2032
+    ],
+    [
+     144,
+     2049
+    ],
+    [
+     177,
+     2069
+    ],
+    [
+     255,
+     2096
+    ],
+    [
+     348,
+     2096
+    ],
+    [
+     407,
+     2101
+    ]
+   ],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:24:37.525Z",
    "labelAt": [
     9.57,
     64.24
-   ],
-   "by": "claude"
+   ]
   },
   "sunrise-glades": {
    "status": "no-line",
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:24:42.278Z",
    "labelAt": [
     24.9,
     36.82
-   ],
-   "by": "claude"
+   ]
   },
   "tres-amigos-glades": {
    "status": "no-line",
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:24:53.128Z",
    "labelAt": [
     38.73,
     33.45
-   ],
-   "by": "claude"
+   ]
   },
   "waterfall": {
-   "status": "no-line",
+   "status": "confirmed",
    "polylines": [],
-   "drawn": [],
+   "drawn": [
+    [
+     2903,
+     520
+    ],
+    [
+     2889,
+     537
+    ],
+    [
+     2865,
+     630
+    ]
+   ],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:26:31.448Z",
    "labelAt": [
     65.43,
     22.01
-   ],
-   "by": "claude"
+   ]
   },
   "whitewater-glades": {
    "status": "no-line",
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:26:33.970Z",
    "labelAt": [
     65.43,
     34.78
-   ],
-   "by": "claude"
+   ]
   },
   "meadows-east-glades": {
    "status": "no-line",
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:27:08.549Z",
    "labelAt": [
     74.94,
     53.94
-   ],
-   "by": "claude"
+   ]
   },
   "ridge-glades": {
    "status": "no-line",
    "polylines": [],
    "drawn": [],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:27:10.366Z",
    "labelAt": [
     78.27,
     45.2
-   ],
-   "by": "claude"
+   ]
   },
   "west-smugglers": {
-   "status": "no-line",
+   "status": "confirmed",
    "polylines": [],
-   "drawn": [],
+   "drawn": [
+    [
+     3202,
+     1145
+    ],
+    [
+     3198,
+     1132
+    ],
+    [
+     3168,
+     1135
+    ],
+    [
+     3128,
+     1147
+    ],
+    [
+     3097,
+     1159
+    ],
+    [
+     3070,
+     1162
+    ]
+   ],
    "mapDifficulty": null,
-   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
-   "at": "2026-09-30T01:00:00.000Z",
+   "note": "",
+   "at": "2026-09-30T01:28:08.595Z",
    "labelAt": [
     72.14,
     45.08
+   ]
+  },
+  "base-camp-road": {
+   "status": "confirmed",
+   "polylines": [
+    111
    ],
-   "by": "claude"
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:26:37.471Z"
+  },
+  "catwalk": {
+   "status": "confirmed",
+   "polylines": [
+    132
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:26:38.911Z"
+  },
+  "chapel-lane": {
+   "status": "confirmed",
+   "polylines": [
+    0
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:08:04.611Z"
+  },
+  "chin-clip-runout": {
+   "status": "confirmed",
+   "polylines": [
+    65
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:08:27.665Z"
+  },
+  "chin-clip": {
+   "status": "confirmed",
+   "polylines": [
+    56
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:08:20.569Z"
+  },
+  "cliff-trail": {
+   "status": "confirmed",
+   "polylines": [
+    134
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:10:27.196Z"
+  },
+  "competition-hill": {
+   "status": "confirmed",
+   "polylines": [
+    139,
+    140
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:26:40.698Z"
+  },
+  "crossover": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1186,
+     954
+    ],
+    [
+     1097,
+     963
+    ],
+    [
+     1074,
+     974
+    ],
+    [
+     1042,
+     988
+    ],
+    [
+     1025,
+     1002
+    ],
+    [
+     991,
+     1007
+    ],
+    [
+     950,
+     1018
+    ],
+    [
+     935,
+     1023
+    ],
+    [
+     922,
+     1036
+    ],
+    [
+     900,
+     1046
+    ],
+    [
+     884,
+     1057
+    ],
+    [
+     862,
+     1070
+    ],
+    [
+     860,
+     1075
+    ],
+    [
+     865,
+     1087
+    ],
+    [
+     906,
+     1144
+    ],
+    [
+     949,
+     1170
+    ],
+    [
+     1002,
+     1185
+    ],
+    [
+     1125,
+     1208
+    ],
+    [
+     1311,
+     1235
+    ],
+    [
+     1351,
+     1249
+    ],
+    [
+     1391,
+     1263
+    ],
+    [
+     1428,
+     1270
+    ],
+    [
+     1527,
+     1271
+    ],
+    [
+     1651,
+     1262
+    ],
+    [
+     1696,
+     1258
+    ],
+    [
+     1736,
+     1261
+    ],
+    [
+     1760,
+     1270
+    ],
+    [
+     1813,
+     1264
+    ],
+    [
+     1901,
+     1254
+    ],
+    [
+     1933,
+     1250
+    ],
+    [
+     1991,
+     1248
+    ],
+    [
+     2039,
+     1233
+    ],
+    [
+     2130,
+     1234
+    ],
+    [
+     2198,
+     1228
+    ],
+    [
+     2247,
+     1213
+    ],
+    [
+     2269,
+     1199
+    ],
+    [
+     2329,
+     1192
+    ],
+    [
+     2356,
+     1187
+    ],
+    [
+     2424,
+     1199
+    ],
+    [
+     2473,
+     1208
+    ],
+    [
+     2505,
+     1206
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:13:05.934Z"
+  },
+  "dalton": {
+   "status": "confirmed",
+   "polylines": [
+    144,
+    145
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:13:09.526Z"
+  },
+  "duck-walk": {
+   "status": "confirmed",
+   "polylines": [
+    143
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:13:22.550Z"
+  },
+  "east-run": {
+   "status": "confirmed",
+   "polylines": [
+    84
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:26:42.285Z"
+  },
+  "easy-mile": {
+   "status": "confirmed",
+   "polylines": [
+    9,
+    10
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:13:34.373Z"
+  },
+  "easy-street": {
+   "status": "confirmed",
+   "polylines": [
+    83,
+    133
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:26:44.482Z"
+  },
+  "football-fields": {
+   "status": "confirmed",
+   "polylines": [
+    149
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:26:46.079Z"
+  },
+  "freddies-chute": {
+   "status": "confirmed",
+   "polylines": [
+    110
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:26:47.877Z"
+  },
+  "glades-return": {
+   "status": "confirmed",
+   "polylines": [
+    151
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:13:38.710Z"
+  },
+  "goat": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     2081,
+     696
+    ],
+    [
+     2116,
+     741
+    ],
+    [
+     2147,
+     772
+    ],
+    [
+     2153,
+     792
+    ],
+    [
+     2163,
+     815
+    ],
+    [
+     2190,
+     844
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:14:15.101Z"
+  },
+  "gondolier": {
+   "status": "confirmed",
+   "polylines": [
+    57,
+    156
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:14:18.351Z"
+  },
+  "gulch": {
+   "status": "confirmed",
+   "polylines": [
+    96,
+    97
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:14:22.619Z"
+  },
+  "hacketts-highway": {
+   "status": "confirmed",
+   "polylines": [
+    103,
+    104
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:14:27.477Z"
+  },
+  "haychute": {
+   "status": "confirmed",
+   "polylines": [
+    50,
+    51
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:14:30.621Z"
+  },
+  "hayride-loop": {
+   "status": "confirmed",
+   "polylines": [
+    101
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:14:50.222Z"
+  },
+  "hayride": {
+   "status": "confirmed",
+   "polylines": [
+    45
+   ],
+   "drawn": [
+    [
+     1551,
+     858
+    ],
+    [
+     1574,
+     927
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:14:47.611Z"
+  },
+  "high-road": {
+   "status": "confirmed",
+   "polylines": [
+    136
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:14:52.271Z"
+  },
+  "home-run": {
+   "status": "confirmed",
+   "polylines": [
+    163,
+    164
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:14:54.622Z"
+  },
+  "houghtons": {
+   "status": "confirmed",
+   "polylines": [
+    35,
+    36
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:14:57.174Z"
+  },
+  "inspiration": {
+   "status": "confirmed",
+   "polylines": [
+    114,
+    115
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:26:49.644Z"
+  },
+  "jakes-ride": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1057,
+     1197
+    ],
+    [
+     1142,
+     1219
+    ],
+    [
+     1279,
+     1235
+    ],
+    [
+     1327,
+     1243
+    ],
+    [
+     1377,
+     1259
+    ],
+    [
+     1410,
+     1265
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:16:05.747Z"
+  },
+  "last-exit": {
+   "status": "confirmed",
+   "polylines": [
+    138
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:16:07.705Z"
+  },
+  "liftline": {
+   "status": "confirmed",
+   "polylines": [
+    53,
+    54
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:16:19.668Z"
+  },
+  "lookout-loop": {
+   "status": "confirmed",
+   "polylines": [
+    124
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:16:55.938Z"
+  },
+  "lookout": {
+   "status": "confirmed",
+   "polylines": [
+    117,
+    148
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:16:24.827Z"
+  },
+  "lord-loop": {
+   "status": "confirmed",
+   "polylines": [
+    2
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:17:00.463Z"
+  },
+  "lord": {
+   "status": "confirmed",
+   "polylines": [
+    18
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:16:58.894Z"
+  },
+  "lower-cliff-trail": {
+   "status": "confirmed",
+   "polylines": [
+    169
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:17:03.490Z"
+  },
+  "lower-goat": {
+   "status": "confirmed",
+   "polylines": [
+    131,
+    171
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:17:07.014Z"
+  },
+  "lower-gondolier": {
+   "status": "confirmed",
+   "polylines": [
+    64,
+    170
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:17:09.534Z"
+  },
+  "lower-gulch": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1475,
+     1324
+    ],
+    [
+     1501,
+     1344
+    ],
+    [
+     1535,
+     1363
+    ],
+    [
+     1581,
+     1391
+    ],
+    [
+     1601,
+     1411
+    ],
+    [
+     1600,
+     1437
+    ],
+    [
+     1599,
+     1463
+    ],
+    [
+     1612,
+     1485
+    ],
+    [
+     1659,
+     1507
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:17:43.273Z"
+  },
+  "lower-hayride": {
+   "status": "confirmed",
+   "polylines": [
+    27,
+    28,
+    29,
+    44
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:17:45.503Z"
+  },
+  "lower-liftline": {
+   "status": "confirmed",
+   "polylines": [
+    32,
+    33,
+    34
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:17:47.255Z"
+  },
+  "lower-lookout": {
+   "status": "confirmed",
+   "polylines": [
+    30,
+    31
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:17:51.867Z"
+  },
+  "lower-lord": {
+   "status": "confirmed",
+   "polylines": [
+    152
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:17:53.786Z"
+  },
+  "lower-main-street": {
+   "status": "confirmed",
+   "polylines": [
+    90
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:26:55.345Z"
+  },
+  "lower-national": {
+   "status": "confirmed",
+   "polylines": [
+    41,
+    42
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:17:55.711Z"
+  },
+  "lower-north-slope": {
+   "status": "confirmed",
+   "polylines": [
+    24,
+    25
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:17:57.530Z"
+  },
+  "lower-nosedive": {
+   "status": "confirmed",
+   "polylines": [
+    38,
+    40
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:18:00.041Z"
+  },
+  "lower-perry-merrill": {
+   "status": "confirmed",
+   "polylines": [
+    59
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:18:02.581Z"
+  },
+  "lower-ridgeview": {
+   "status": "confirmed",
+   "polylines": [
+    165
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:18:05.499Z"
+  },
+  "lower-rimrock": {
+   "status": "confirmed",
+   "polylines": [
+    135
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:18:07.048Z"
+  },
+  "lower-smugglers": {
+   "status": "confirmed",
+   "polylines": [
+    71,
+    158
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:26:57.382Z"
+  },
+  "lower-standard": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1275,
+     1245
+    ],
+    [
+     1311,
+     1259
+    ],
+    [
+     1332,
+     1280
+    ],
+    [
+     1358,
+     1319
+    ],
+    [
+     1385,
+     1373
+    ],
+    [
+     1413,
+     1415
+    ],
+    [
+     1437,
+     1447
+    ],
+    [
+     1484,
+     1490
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:20:40.447Z"
+  },
+  "lower-starr": {
+   "status": "confirmed",
+   "polylines": [
+    118,
+    119,
+    120
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:20:42.257Z"
+  },
+  "lower-sterling": {
+   "status": "confirmed",
+   "polylines": [
+    92
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:26:59.113Z"
+  },
+  "lower-switchback": {
+   "status": "confirmed",
+   "polylines": [
+    60
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:20:43.885Z"
+  },
+  "lower-t-line": {
+   "status": "confirmed",
+   "polylines": [
+    19,
+    20,
+    21
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:20:45.633Z"
+  },
+  "lower-toll-road": {
+   "status": "confirmed",
+   "polylines": [
+    8,
+    11,
+    166
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:20:50.804Z"
+  },
+  "lower-tyro": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1153,
+     1232
+    ],
+    [
+     1177,
+     1260
+    ],
+    [
+     1177,
+     1298
+    ],
+    [
+     1147,
+     1318
+    ],
+    [
+     1127,
+     1344
+    ],
+    [
+     1120,
+     1376
+    ],
+    [
+     1141,
+     1415
+    ],
+    [
+     1190,
+     1431
+    ],
+    [
+     1225,
+     1438
+    ],
+    [
+     1269,
+     1444
+    ],
+    [
+     1305,
+     1441
+    ],
+    [
+     1392,
+     1474
+    ],
+    [
+     1418,
+     1487
+    ],
+    [
+     1450,
+     1506
+    ],
+    [
+     1489,
+     1510
+    ],
+    [
+     1517,
+     1511
+    ],
+    [
+     1555,
+     1518
+    ],
+    [
+     1619,
+     1539
+    ],
+    [
+     1649,
+     1544
+    ],
+    [
+     1682,
+     1543
+    ],
+    [
+     1711,
+     1534
+    ],
+    [
+     1791,
+     1505
+    ],
+    [
+     1832,
+     1489
+    ],
+    [
+     1909,
+     1472
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:21:57.028Z"
+  },
+  "lower-west-run": {
+   "status": "confirmed",
+   "polylines": [
+    73
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:00.441Z"
+  },
+  "maiden-lane": {
+   "status": "confirmed",
+   "polylines": [
+    102
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:21:58.494Z"
+  },
+  "main-street-headwall": {
+   "status": "confirmed",
+   "polylines": [
+    87
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:01.726Z"
+  },
+  "main-street-race": {
+   "status": "confirmed",
+   "polylines": [
+    91
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:03.556Z"
+  },
+  "meadows": {
+   "status": "confirmed",
+   "polylines": [
+    80,
+    82
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:06.792Z"
+  },
+  "midway": {
+   "status": "confirmed",
+   "polylines": [
+    37,
+    105,
+    106,
+    107
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:22:08.108Z"
+  },
+  "mtn-glen": {
+   "status": "confirmed",
+   "polylines": [
+    12,
+    13
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:22:10.319Z"
+  },
+  "national": {
+   "status": "confirmed",
+   "polylines": [
+    48,
+    52
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:22:12.431Z"
+  },
+  "north-slope": {
+   "status": "confirmed",
+   "polylines": [
+    23,
+    26
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:22:36.405Z"
+  },
+  "nose-dive": {
+   "status": "confirmed",
+   "polylines": [
+    39
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:22:56.633Z"
+  },
+  "perry-merrill": {
+   "status": "confirmed",
+   "polylines": [
+    61,
+    62
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:23:08.324Z"
+  },
+  "phils-zuggy": {
+   "status": "confirmed",
+   "polylines": [
+    47
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:23:10.278Z"
+  },
+  "ridge-run": {
+   "status": "confirmed",
+   "polylines": [
+    85
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:12.134Z"
+  },
+  "ridge-view": {
+   "status": "confirmed",
+   "polylines": [
+    1
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:23:11.495Z"
+  },
+  "rimrock": {
+   "status": "confirmed",
+   "polylines": [
+    137
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:23:12.839Z"
+  },
+  "ryans-folly": {
+   "status": "confirmed",
+   "polylines": [
+    146
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:23:14.405Z"
+  },
+  "s-53": {
+   "status": "confirmed",
+   "polylines": [
+    125
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:23:15.668Z"
+  },
+  "sepps-run": {
+   "status": "confirmed",
+   "polylines": [
+    142
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:23:19.638Z"
+  },
+  "shftrs-shot": {
+   "status": "confirmed",
+   "polylines": [
+    123
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:23:20.936Z"
+  },
+  "side-street": {
+   "status": "confirmed",
+   "polylines": [
+    86
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:13.876Z"
+  },
+  "slalom-hill": {
+   "status": "confirmed",
+   "polylines": [
+    75,
+    76,
+    78
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:17.245Z"
+  },
+  "smugglers": {
+   "status": "confirmed",
+   "polylines": [
+    72,
+    150
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:18.929Z"
+  },
+  "spruce-line": {
+   "status": "confirmed",
+   "polylines": [
+    147,
+    157
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:20.170Z"
+  },
+  "standard": {
+   "status": "confirmed",
+   "polylines": [
+    109
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:23:22.174Z"
+  },
+  "starr": {
+   "status": "confirmed",
+   "polylines": [
+    141
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:23:23.329Z"
+  },
+  "sterling": {
+   "status": "confirmed",
+   "polylines": [
+    93
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:21.714Z"
+  },
+  "sunrise": {
+   "status": "confirmed",
+   "polylines": [
+    108,
+    155
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:24:39.050Z"
+  },
+  "switchback": {
+   "status": "confirmed",
+   "polylines": [
+    58
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:24:44.361Z"
+  },
+  "t-line": {
+   "status": "confirmed",
+   "polylines": [
+    16,
+    22
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:24:46.342Z"
+  },
+  "toll-road": {
+   "status": "confirmed",
+   "polylines": [
+    3,
+    4,
+    5,
+    7
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:24:48.200Z"
+  },
+  "tollhouse": {
+   "status": "confirmed",
+   "polylines": [
+    159,
+    160
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:24:50.003Z"
+  },
+  "townhouse": {
+   "status": "confirmed",
+   "polylines": [
+    161,
+    162
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:24:51.388Z"
+  },
+  "tyro": {
+   "status": "confirmed",
+   "polylines": [
+    99,
+    100
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:24:54.500Z"
+  },
+  "upper-goat": {
+   "status": "confirmed",
+   "polylines": [
+    126,
+    127
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:24:56.501Z"
+  },
+  "upper-gondolier": {
+   "status": "confirmed",
+   "polylines": [
+    66
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:24:58.253Z"
+  },
+  "upper-hayride": {
+   "status": "confirmed",
+   "polylines": [
+    43,
+    154
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:24:59.338Z"
+  },
+  "upper-liftline": {
+   "status": "confirmed",
+   "polylines": [
+    122
+   ],
+   "drawn": [
+    [
+     1948,
+     547
+    ],
+    [
+     1948,
+     562
+    ],
+    [
+     1952,
+     589
+    ],
+    [
+     1953,
+     617
+    ],
+    [
+     1952,
+     644
+    ],
+    [
+     1957,
+     663
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:25:11.917Z"
+  },
+  "upper-lord": {
+   "status": "confirmed",
+   "polylines": [
+    6
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:25:13.490Z"
+  },
+  "upper-main-street": {
+   "status": "confirmed",
+   "polylines": [
+    88,
+    89
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:23.153Z"
+  },
+  "upper-meadows": {
+   "status": "confirmed",
+   "polylines": [
+    81
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:24.963Z"
+  },
+  "upper-national": {
+   "status": "confirmed",
+   "polylines": [
+    49
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:25:15.946Z"
+  },
+  "upper-nosedive": {
+   "status": "confirmed",
+   "polylines": [
+    55,
+    113
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:25:17.986Z"
+  },
+  "upper-perry-merrill": {
+   "status": "confirmed",
+   "polylines": [
+    63
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:25:19.669Z"
+  },
+  "upper-smugglers": {
+   "status": "confirmed",
+   "polylines": [
+    69,
+    70
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:26.526Z"
+  },
+  "upper-starr": {
+   "status": "confirmed",
+   "polylines": [
+    46
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:25:21.823Z"
+  },
+  "upper-sterling": {
+   "status": "confirmed",
+   "polylines": [
+    94
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:27.903Z"
+  },
+  "upper-t-line": {
+   "status": "confirmed",
+   "polylines": [
+    17
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:25:24.178Z"
+  },
+  "west-run": {
+   "status": "confirmed",
+   "polylines": [
+    74
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:29.107Z"
+  },
+  "west-slope": {
+   "status": "confirmed",
+   "polylines": [
+    77,
+    79
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:27:30.554Z"
+  },
+  "whirlaway": {
+   "status": "confirmed",
+   "polylines": [
+    95
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "",
+   "at": "2026-09-30T01:28:12.443Z"
   }
  }
 }

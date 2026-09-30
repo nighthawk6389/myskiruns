@@ -44,7 +44,8 @@ main{position:relative;min-height:0;display:flex;flex-direction:column}
 .pl{fill:none;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
 .pl.idle{stroke:var(--line-idle);stroke-opacity:.35;stroke-width:1.5;stroke-dasharray:4 3}
 .pl.other{stroke:var(--line-other);stroke-opacity:.8;stroke-width:2.5}
-.pl.sel{stroke:var(--accent);stroke-width:5;stroke-opacity:.95}
+/* magenta: no trail map we've seen uses it for trails (orange is freestyle terrain at Stowe) */
+.pl.sel{stroke:#d61f8f;stroke-width:5;stroke-opacity:.95}
 .pl.hit{stroke:#000;stroke-opacity:0;stroke-width:18;pointer-events:stroke;cursor:pointer}
 .drawn{fill:none;stroke:var(--accent);stroke-width:4;stroke-dasharray:8 5;vector-effect:non-scaling-stroke}
 .drawn-pt{fill:var(--accent);stroke:#fff;stroke-width:2;vector-effect:non-scaling-stroke}
@@ -102,7 +103,7 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
     <section class="card" id="card">
       <h2 id="tname">—</h2>
       <div class="meta" id="tmeta"></div>
-      <p class="hint" id="thint">Tap a line to add or remove it. Orange = this trail. Green = already confirmed for another trail.</p>
+      <p class="hint" id="thint">Tap a line to add or remove it. Magenta = this trail. Green = already confirmed for another trail.</p>
       <div class="actions">
         <button class="primary" id="b-ok">Correct — save</button>
         <button id="b-draw" aria-pressed="false">Draw missing line</button>
@@ -210,8 +211,11 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
   const nameOf=id=>trails.find(t=>t.id===id)?.name ?? id;
   const statusLabel={confirmed:'done','no-line':'no line','not-on-map':'not on map',skip:'skipped'};
   // a trail needs action when it has no decision, was skipped, or Claude
-  // re-opened it (t.recheck) after the last save
+  // re-opened it (t.recheck) after the last save. Auto-accepted trails
+  // (t.auto: every reader agreed, or a glade printed with no line) are
+  // applied as proposed unless someone opens and saves them.
   function needs(t){ const r=reviews[t.id];
+    if(!r && t.auto && !t.recheck) return false;
     return !r || r.status==='skip' || (!!t.recheck && r.at < t.recheck.since); }
   function visible(t){ const r=reviews[t.id];
     if(filter==='todo') return needs(t);
@@ -225,14 +229,17 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
       const d=document.createElement('span'); d.className='dot '+t.difficulty;
       const n=document.createElement('span'); n.textContent=t.name+(t.isNew?' (new)':'');
       const s=document.createElement('span'); s.className='st'+(r?.status==='confirmed'?' done':r?' flag':'');
-      s.textContent=(t.recheck && needs(t) && r) ? 'please recheck' : r?statusLabel[r.status]:(t.proposal?.polylines?.length?t.proposal.confidence:'no guess');
+      s.textContent=(t.recheck && needs(t) && r) ? 'please recheck' : r?statusLabel[r.status]
+        :t.auto?'auto':(t.proposal?.polylines?.length?t.proposal.confidence:'no guess');
       if(needs(t) && r) s.className='st flag';
       b.append(d,n,s); b.onclick=()=>select(t.id); li.append(b); ul.append(li);
     }
     const open=trails.filter(needs).length;
-    $('progress').textContent = open===0
+    const auto=trails.filter(t=>t.auto && !reviews[t.id]).length;
+    const autoNote=auto ? ` (${auto} accepted automatically; “All” shows them)` : '';
+    $('progress').textContent = (open===0
       ? `All ${trails.length} trails are done. Edits still save.`
-      : `${open} of ${trails.length} trails need action`;
+      : `${open} of ${trails.length} trails need action`)+autoNote;
     $('barfill').style.width=(100*(trails.length-open)/trails.length)+'%';
   }
   function select(id){
@@ -246,6 +253,7 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
     add('List says',current.difficulty.replace('-',' ')); add('Area',current.peak.replace('-',' '));
     if(current.proposal?.mapName) add('Read on map as',current.proposal.mapName);
     if(current.proposal) add('Guess confidence',current.proposal.confidence);
+    if(current.auto && !r) add('Status','accepted automatically; save to change it');
     if(current.proposal?.note) add('Reader note',current.proposal.note);
     if(r) add('Saved',statusLabel[r.status]);
     if(current.recheck && needs(current)) add('Why recheck',current.recheck.why);
@@ -280,7 +288,7 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
 
   // ---------- start
   fitBox(0,0,W,H); renderList();
-  select((trails.find(t=>!t.recheck && t.proposal?.polylines?.length) ?? trails[0]).id);
+  select((trails.find(needs) ?? trails[0]).id);
   db=window.claude ? await window.claude.use('db') : null;
   if(!db){ say('Read-only view: decisions can’t be saved here.',true); return; }
   db.collection('reviews').onSnapshot(snap=>{
