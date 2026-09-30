@@ -33,6 +33,8 @@ approaches all stalled at ~40% (see "What we tried").
 | file | what it does |
 |---|---|
 | `tools/trailmap/extract_pdf_image.py` | Lossless raster from the resort PDF; reports any vector text/lines |
+| `tools/trailmap/extract_pdf_vectors.py` | Map image + numbered pieces straight from a PDF's vector trail strokes |
+| `tools/trailmap/pdf_symbols.py` | Difficulty symbols from a vector PDF; `--check` compares them with the trail list |
 | `scripts/lib/lineDetector.mjs`, `scripts/evaluateLines.mjs` | Colored-line detector and its ground-truth scorer |
 | `scripts/tracePolylines.mjs` | Detection mask → numbered line pieces (`src/data/resorts/killington/linePolylines.json`) |
 | `tools/trailmap/render_tiles.py` | Zoomed tiles with every piece drawn and numbered, for the readers |
@@ -67,6 +69,11 @@ Download the resort's trail map PDF (not the web JPG) and run
   `--append` adds another colour, e.g. orange freestyle lines, later).
   Find the colours by tallying stroke colours/widths with pymupdf and
   drawing them on a blank page; lifts were the thicker maroon strokes.
+  Okemo 2025-26 is built the same way (256 pieces: 0.74 pt green, blue and
+  black strokes plus orange park lines; lifts are 1.11 pt red). Its legend's
+  hatch pattern is 1.0 pt black strokes (keep them out with `--max-width`),
+  and the extractor drops small closed loops (a legend icon had come out as
+  a piece). Check the whole map on zoomed crops with the pieces drawn on.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.
@@ -146,6 +153,20 @@ cut with `split_pieces.py` (the names go in as a "certain" reading). Stowe:
 unanimous line, 18 printed with no line (11 glades) pre-filled as label
 markers for the reviewer to confirm. Watch for trail names that start with a
 reader verdict word (LIFTLINE was once dropped as a LIFT).
+Okemo: 6 readers over 33 tiles (one per column), ~1.5M tokens, ~69 min
+because the runner ran two at a time → 128 trails, 108 with a unanimous
+line, 9 printed with no line. Unlike Stowe, Okemo prints a symbol with every
+glade (in a box with the tree icon), so read the key before assuming the
+glade default; terrain parks print only an orange pill, so they get the
+default (blue).
+
+**Check the symbols by a second method.** On a vector map,
+`pdf_symbols.py --check labels.json --trails trails.ts` pulls every circle,
+square and diamond out of the PDF's fills and lists the trails whose
+difficulty has no matching symbol by its label (Okemo: 120/127; the other 7
+print no symbol, or draw the circle differently). Then look at every
+diamond trail on a zoomed crop: single vs double diamond is the easy
+misread (Okemo: 29 single and 9 double, all as read).
 
 ### 3b. Accept the easy ones, trace the hard ones (before the review)
 
@@ -158,6 +179,11 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
   proposals and glades printed with no line (marker at the label) are
   marked `auto`; the review page leaves them out of "Needs action" (they
   show under All as "auto") and `trails:apply` uses them as proposed.
+- **Readers' own confidence counts.** Readers work by column, so most
+  pieces are seen by one reader and are "unanimous" by default.
+  `aggregate_readings.py` caps a trail at the best confidence its readers
+  gave the winning name, so a lone "medium" or "low" goes to the trace pass
+  and the reviewer instead of being auto-accepted (Okemo: 9 trails).
 - **Trace pass** (`prompts/4-trace.md`, ~5 trails per reader) for trails
   with no line and for medium/low or split proposals; load the result with
   `traces_to_reviews.py` so the reviewer confirms instead of drawing.
