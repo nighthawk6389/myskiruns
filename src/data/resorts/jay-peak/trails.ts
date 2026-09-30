@@ -7,7 +7,9 @@ import type { Trail, PeakData } from '../../../types';
 // the majority (Ullr's Dream: blue, one green label up top; Northway: blue,
 // one black) and a tie takes the harder (Jet, U.N., Green Mountain Boys:
 // one blue label, one black). Glades are the names that say so (Glade,
-// Woods); the 5 terrain parks print no symbol and default to blue. Sis Boom
+// Woods) and the trails whose label sits in painted trees with no cut
+// (checked on crops; they get a marker, not a line). The 5 terrain parks
+// print no symbol and default to blue. Sis Boom
 // Bah is printed only in the Side View inset. "Lower Lift Linee" on the map
 // is Lower Lift Line. x/y/baseY/width are unused layout fields.
 export const peaks: PeakData[] = [
@@ -89,7 +91,7 @@ export const trails: Trail[] = [
   { id: 'the-boulevard', name: 'The Boulevard', difficulty: 'green', peak: 'jay-peak' },
   { id: 'the-gully', name: 'The Gully', difficulty: 'blue', peak: 'jay-peak', isTerrainPark: true },
   { id: 'the-rusch', name: 'The Rusch', difficulty: 'blue', peak: 'jay-peak', isTerrainPark: true },
-  { id: 'timbuktu', name: 'Timbuktu', difficulty: 'black', peak: 'jay-peak' },
+  { id: 'timbuktu', name: 'Timbuktu', difficulty: 'black', peak: 'jay-peak', isGlade: true },
   { id: 'tuckermans-chute', name: "Tuckerman's Chute", difficulty: 'black', peak: 'jay-peak' },
   { id: 'u-n', name: 'U.N.', difficulty: 'black', peak: 'jay-peak' },
   { id: 'ullrs-dream', name: "Ullr's Dream", difficulty: 'blue', peak: 'jay-peak' },

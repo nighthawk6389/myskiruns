@@ -6,7 +6,7 @@
    "drawn": [],
    "mapDifficulty": null,
    "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill",
-   "at": "2026-09-30T12:00:48.000Z",
+   "at": "2026-09-30T12:25:34.000Z",
    "by": "claude",
    "labelAt": [
     24.74,
@@ -19,7 +19,7 @@
    "drawn": [],
    "mapDifficulty": null,
    "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill",
-   "at": "2026-09-30T12:00:48.000Z",
+   "at": "2026-09-30T12:25:34.000Z",
    "by": "claude",
    "labelAt": [
     28.14,
@@ -32,7 +32,7 @@
    "drawn": [],
    "mapDifficulty": null,
    "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill",
-   "at": "2026-09-30T12:00:48.000Z",
+   "at": "2026-09-30T12:25:34.000Z",
    "by": "claude",
    "labelAt": [
     24.44,
@@ -45,7 +45,7 @@
    "drawn": [],
    "mapDifficulty": null,
    "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill",
-   "at": "2026-09-30T12:00:48.000Z",
+   "at": "2026-09-30T12:25:34.000Z",
    "by": "claude",
    "labelAt": [
     26.8,
@@ -58,7 +58,7 @@
    "drawn": [],
    "mapDifficulty": null,
    "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill",
-   "at": "2026-09-30T12:00:48.000Z",
+   "at": "2026-09-30T12:25:34.000Z",
    "by": "claude",
    "labelAt": [
     29.78,
@@ -71,12 +71,687 @@
    "drawn": [],
    "mapDifficulty": null,
    "note": "NO CUT: printed only in the SIDE VIEW inset (not on the main painting); marker at its inset label",
-   "at": "2026-09-30T12:00:48.000Z",
+   "at": "2026-09-30T12:25:34.000Z",
    "by": "claude",
    "labelAt": [
     88.47,
     5.25
    ]
+  },
+  "willard": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     246,
+     898
+    ],
+    [
+     232,
+     908
+    ],
+    [
+     220,
+     920
+    ],
+    [
+     211,
+     933
+    ],
+    [
+     203,
+     946
+    ],
+    [
+     195,
+     960
+    ],
+    [
+     186,
+     976
+    ],
+    [
+     174,
+     992
+    ],
+    [
+     164,
+     1010
+    ],
+    [
+     159,
+     1030
+    ],
+    [
+     160,
+     1050
+    ],
+    [
+     166,
+     1066
+    ],
+    [
+     178,
+     1080
+    ],
+    [
+     192,
+     1092
+    ],
+    [
+     205,
+     1104
+    ],
+    [
+     216,
+     1117
+    ],
+    [
+     226,
+     1132
+    ],
+    [
+     233,
+     1150
+    ],
+    [
+     236,
+     1170
+    ],
+    [
+     234,
+     1192
+    ],
+    [
+     229,
+     1215
+    ],
+    [
+     227,
+     1238
+    ],
+    [
+     231,
+     1258
+    ],
+    [
+     242,
+     1275
+    ],
+    [
+     260,
+     1288
+    ],
+    [
+     282,
+     1298
+    ],
+    [
+     305,
+     1308
+    ],
+    [
+     330,
+     1318
+    ],
+    [
+     355,
+     1332
+    ],
+    [
+     380,
+     1348
+    ],
+    [
+     402,
+     1363
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Blue-square label (162,1058) sits in the open cut down the far west (image-left) edge of the Stateside area, between the boundary woods/Timbuktu glade and two brown-tree islands (x~205-320,y~905-1130 and x~250-370,y~1130-1320). Traced from the point of the upper island (254,904), where the Hotshot D",
+   "at": "2026-09-30T12:25:34.000Z",
+   "by": "claude"
+  },
+  "timbuktu": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "NO CUT: the diamond (149,771) sits in a uniformly sparse-tree glade (painted like Stateside Glade) between the yellow boundary (x~100-130) and the dense tree edge along the Hotshot Derick cut (x~250), from the summit ridge (y~580) down to where it opens into the top of Willard (~(190,950)). No open ",
+   "at": "2026-09-30T12:25:34.000Z",
+   "by": "claude",
+   "labelAt": [
+    5.08,
+    32.66
+   ]
+  },
+  "hotshot-derick": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     262,
+     570
+    ],
+    [
+     255,
+     590
+    ],
+    [
+     252,
+     610
+    ],
+    [
+     257,
+     630
+    ],
+    [
+     266,
+     650
+    ],
+    [
+     272,
+     670
+    ],
+    [
+     272,
+     690
+    ],
+    [
+     267,
+     710
+    ],
+    [
+     257,
+     730
+    ],
+    [
+     258,
+     750
+    ],
+    [
+     260,
+     775
+    ],
+    [
+     256,
+     795
+    ],
+    [
+     249,
+     815
+    ],
+    [
+     245,
+     835
+    ],
+    [
+     245,
+     855
+    ],
+    [
+     249,
+     875
+    ],
+    [
+     253,
+     895
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Diamond (243,840) sits on a narrow open cut between the dense east edge of the Timbuktu glade and the tree islands west of Haynes. No other label on that cut: followed it up to the ridge traverse under the boundary at (262,570) and down to the point of the brown-tree island at (254,904), where it sp",
+   "at": "2026-09-30T12:25:34.000Z",
+   "by": "claude"
+  },
+  "haynes": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     385,
+     500
+    ],
+    [
+     370,
+     515
+    ],
+    [
+     362,
+     535
+    ],
+    [
+     357,
+     555
+    ],
+    [
+     352,
+     580
+    ],
+    [
+     350,
+     605
+    ],
+    [
+     353,
+     630
+    ],
+    [
+     350,
+     650
+    ],
+    [
+     344,
+     670
+    ],
+    [
+     337,
+     690
+    ],
+    [
+     330,
+     705
+    ],
+    [
+     325,
+     725
+    ],
+    [
+     323,
+     750
+    ],
+    [
+     326,
+     775
+    ],
+    [
+     330,
+     800
+    ],
+    [
+     333,
+     825
+    ],
+    [
+     335,
+     850
+    ],
+    [
+     338,
+     875
+    ],
+    [
+     345,
+     900
+    ],
+    [
+     345,
+     925
+    ],
+    [
+     346,
+     948
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Diamond (329,712) sits in the cut between the big tree island (x~270-345) and the tree column west of U.N. Traced from the summit bowl at (385,500) down that cut past the label, then between the small islands (x~270-300) and the tree clusters (x~350-410) into the open meadow above the lower islands ",
+   "at": "2026-09-30T12:25:34.000Z",
+   "by": "claude"
+  },
+  "mont-lentrepide": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     348,
+     955
+    ],
+    [
+     354,
+     985
+    ],
+    [
+     357,
+     1010
+    ],
+    [
+     358,
+     1040
+    ],
+    [
+     358,
+     1070
+    ],
+    [
+     358,
+     1100
+    ],
+    [
+     358,
+     1136
+    ],
+    [
+     362,
+     1170
+    ],
+    [
+     364,
+     1200
+    ],
+    [
+     367,
+     1225
+    ],
+    [
+     373,
+     1250
+    ],
+    [
+     380,
+     1275
+    ],
+    [
+     385,
+     1300
+    ],
+    [
+     395,
+     1322
+    ],
+    [
+     412,
+     1342
+    ],
+    [
+     432,
+     1360
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Blue square (357,1136) sits mid-way in the wide cut between the brown-tree islands (right edge x~315-345) and the narrow tree column west of U.N. (x~400-420). Traced from the meadow where Haynes ends (~(348,955)) down the centre of that cut past the label into the base run-out near the Jet Triple Ch",
+   "at": "2026-09-30T12:25:34.000Z",
+   "by": "claude"
+  },
+  "u-n": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     428,
+     500
+    ],
+    [
+     432,
+     520
+    ],
+    [
+     427,
+     545
+    ],
+    [
+     425,
+     575
+    ],
+    [
+     424,
+     605
+    ],
+    [
+     422,
+     640
+    ],
+    [
+     421,
+     675
+    ],
+    [
+     419,
+     710
+    ],
+    [
+     424,
+     745
+    ],
+    [
+     428,
+     780
+    ],
+    [
+     430,
+     815
+    ],
+    [
+     430,
+     850
+    ],
+    [
+     432,
+     885
+    ],
+    [
+     433,
+     920
+    ],
+    [
+     436,
+     955
+    ],
+    [
+     439,
+     990
+    ],
+    [
+     441,
+     1025
+    ],
+    [
+     442,
+     1060
+    ],
+    [
+     444,
+     1100
+    ],
+    [
+     447,
+     1140
+    ],
+    [
+     452,
+     1180
+    ],
+    [
+     456,
+     1215
+    ],
+    [
+     459,
+     1250
+    ],
+    [
+     464,
+     1285
+    ],
+    [
+     466,
+     1315
+    ],
+    [
+     475,
+     1345
+    ],
+    [
+     485,
+     1368
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Both labels (diamond (421,618) up top; square (438,1024) lower, printed as a BLUE square) sit on one continuous lane just west of the Jet lift line, between the tree column along the lift (x~445-465 upper, ~455-490 lower) and the islands to its west. Traced from the summit bowl (428,500) straight do",
+   "at": "2026-09-30T12:25:34.000Z",
+   "by": "claude"
+  },
+  "jet": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     492,
+     482
+    ],
+    [
+     495,
+     510
+    ],
+    [
+     494,
+     550
+    ],
+    [
+     493,
+     590
+    ],
+    [
+     494,
+     630
+    ],
+    [
+     495,
+     670
+    ],
+    [
+     495,
+     710
+    ],
+    [
+     497,
+     750
+    ],
+    [
+     498,
+     790
+    ],
+    [
+     500,
+     830
+    ],
+    [
+     503,
+     870
+    ],
+    [
+     507,
+     910
+    ],
+    [
+     510,
+     950
+    ],
+    [
+     514,
+     990
+    ],
+    [
+     512,
+     1030
+    ],
+    [
+     515,
+     1070
+    ],
+    [
+     517,
+     1110
+    ],
+    [
+     521,
+     1150
+    ],
+    [
+     526,
+     1190
+    ],
+    [
+     531,
+     1230
+    ],
+    [
+     532,
+     1270
+    ],
+    [
+     531,
+     1310
+    ],
+    [
+     530,
+     1345
+    ],
+    [
+     530,
+     1372
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Both labels (diamond on the red lift line at (482,554); square at (536,1080), printed BLUE for the lower part) are on the Jet Triple Chair lift-line cut. Traced down the centre of the open snow along the lift (a few px east of the red line) from the summit (492,482) to the bottom terminal (~(530,137",
+   "at": "2026-09-30T12:25:34.000Z",
+   "by": "claude"
+  },
+  "heavens-road": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     524,
+     962
+    ],
+    [
+     548,
+     977
+    ],
+    [
+     566,
+     984
+    ],
+    [
+     584,
+     990
+    ],
+    [
+     602,
+     1000
+    ],
+    [
+     622,
+     1013
+    ],
+    [
+     642,
+     1022
+    ],
+    [
+     662,
+     1033
+    ],
+    [
+     682,
+     1047
+    ],
+    [
+     700,
+     1060
+    ],
+    [
+     718,
+     1072
+    ],
+    [
+     730,
+     1084
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Blue square (583,993) sits in the diagonal open band that leaves the east side of the Jet lift-line cut at ~(524,962) and runs down-right (ESE) under a thin diagonal row of brown trees to ~(730,1084), where it meets the lower Kitzbuehel cut (the parallel band above that tree row, continuing from Kit",
+   "at": "2026-09-30T12:25:34.000Z",
+   "by": "claude"
   }
  }
 }
