@@ -102,11 +102,25 @@ python3 tools/trailmap/render_tiles.py --image map.png \
   --polylines src/data/resorts/killington/linePolylines.json --out work/tiles
 ```
 
-Then ask Claude Code to "use a workflow" with one sub-agent per group of 5–8
-neighbouring tiles, each given `prompts/1-name-lines.md` filled in (legend,
-roster, paths). Each reader writes `result_<n>.json` naming every piece it sees
-(or LIFT / NOT_A_TRAIL / UNKNOWN / SPLIT), and lists labels whose line wasn't
-detected.
+Then run the readers as a Claude Code workflow (the user must opt in to
+multi-agent runs — say "use a workflow"). The workflow is saved in the repo:
+
+- `.claude/workflows/trailmap-readers.js` (workflow name `trailmap-readers`)
+  runs one reader per group of neighbouring tiles; each reader reads
+  `prompts/0-new-map.md` itself and fills in the values the workflow passes
+  (resort, tile paths, zoom, legend, areas, output file). Group tiles by
+  column so readers can follow lines across tile edges. Example args:
+  `tools/trailmap/runs/stowe-readers.json` (Stowe: 25 tiles in 6 groups).
+- `.claude/workflows/trailmap-trace.js` (`trailmap-trace`) runs the trace
+  pass (step 3b), ~5 trails per reader; example args
+  `tools/trailmap/runs/stowe-trace.json`.
+
+Write the legend for each map from its printed key and a few zoomed crops
+before running (the args carry it). Each reader writes `result_<n>.json`
+naming every piece it sees (or LIFT / NOT_A_TRAIL / UNKNOWN / SPLIT) and
+listing every printed label. Killington used the older
+`prompts/1-name-lines.md` (roster already known); a new map uses
+`0-new-map.md`.
 
 ```bash
 python3 tools/trailmap/aggregate_readings.py --tiles work/tiles \
