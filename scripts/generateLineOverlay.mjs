@@ -1,5 +1,5 @@
 // Render the detected trail lines to a transparent PNG the app can overlay
-// on the trail map (public/trail-lines.png), plus refresh the docs snapshot.
+// on the trail map (public/maps/killington-lines.png), plus refresh the docs snapshot.
 //
 //   node scripts/generateLineOverlay.mjs
 import sharp from 'sharp';
@@ -9,8 +9,8 @@ import { detectTrailLines, CLS } from './lib/lineDetector.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
-const MAP = resolve(root, 'public/killington-trail-map.jpg');
-const OUT = resolve(root, 'public/trail-lines.png');
+const MAP = resolve(root, 'public/maps/killington.jpg');
+const OUT = resolve(root, 'public/maps/killington-lines.png');
 
 const det = await detectTrailLines(MAP);
 const { width: W, height: H, lineMask } = det;

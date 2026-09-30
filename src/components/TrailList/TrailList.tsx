@@ -1,12 +1,13 @@
-import type { Trail } from '../../types';
+import type { PeakData, Trail } from '../../types';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_UI_COLORS } from '../../types';
-import { peaks } from '../../data/trails';
 import type { Conditions } from '../../hooks/useConditions';
 import { topTags } from '../../conditionTags';
 import styles from './TrailList.module.css';
 
 interface TrailListProps {
   trails: Trail[];
+  /** the resort's areas, in list order */
+  peaks: PeakData[];
   skiedTrails: Set<string>;
   skiedEver: Set<string>;
   searchQuery: string;
@@ -25,6 +26,7 @@ const TOP_GOOD = 5;
 
 export function TrailList({
   trails,
+  peaks,
   skiedTrails,
   skiedEver,
   searchQuery,

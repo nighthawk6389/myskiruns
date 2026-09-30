@@ -1,18 +1,18 @@
 // Merge review decisions exported from the Killington Trail Check page into
-// src/data/trailReviews.json.
+// src/data/resorts/killington/trailReviews.json.
 //
-//   node scripts/importReviews.mjs <dir-of-exported-review-json-files>
+//   node scripts/importReviews.mjs <dir-of-exported-review-json-files> [--resort killington]
 //
 // Each file is one `reviews` document named <page-id>.json. The page uses
 // `new-…` ids for trails added from the map (new-racer-s-edge -> racers-edge).
 // A decision replaces the stored one only when it is newer, trails no longer
 // in trails.ts are ignored, and a stored label position is kept when the page
 // doesn't send one. Run `npm run trails:apply` afterwards.
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { basename, dirname, join, resolve } from 'node:path';
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { basename, join } from 'node:path';
+import { resortPaths } from './lib/resort.mjs';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const R = resortPaths();
 const dir = process.argv[2];
 if (!dir) {
   console.error('usage: node scripts/importReviews.mjs <dir>');
@@ -20,12 +20,12 @@ if (!dir) {
 }
 
 const roster = new Set(
-  [...readFileSync(resolve(root, 'src/data/trails.ts'), 'utf8').matchAll(/\{ id: '([^']+)', name:/g)].map((m) => m[1]),
+  [...readFileSync(R.trails, 'utf8').matchAll(/\{ id: '([^']+)', name:/g)].map((m) => m[1]),
 );
 const pageToRoster = (id) => (id.startsWith('new-') ? id.slice(4).replace(/-s(-|$)/g, 's$1') : id);
 
-const path = resolve(root, 'src/data/trailReviews.json');
-const doc = JSON.parse(readFileSync(path, 'utf8'));
+const path = R.reviews;
+const doc = existsSync(path) ? JSON.parse(readFileSync(path, 'utf8')) : { reviews: {} };
 const counts = { updated: [], unchanged: 0, ignored: [] };
 for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
   const raw = JSON.parse(readFileSync(join(dir, file), 'utf8'));

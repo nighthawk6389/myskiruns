@@ -2,8 +2,8 @@
 and flag trails for the reviewer to re-check.
 
     python3 tools/trailmap/refresh_review_data.py \\
-        --review-data work/review/data.json --roster src/data/trails.ts \\
-        --reviews src/data/trailReviews.json --page-ids work/review/page_ids.txt \\
+        --review-data work/review/data.json --roster src/data/resorts/killington/trails.ts \\
+        --reviews src/data/resorts/killington/trailReviews.json --page-ids work/review/page_ids.txt \\
         --recheck recheck.json
 
 --recheck is {"trail-id": "why the reviewer should look again"}; those trails

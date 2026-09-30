@@ -1,9 +1,9 @@
 """Render zoomed crops of trail overlays on the source map for visual checks.
 
     python3 tools/trailmap/render_crops.py --image map.png \\
-        --paths src/data/trailPaths.json --out work/crops breakaway great-northern
+        --paths src/data/resorts/killington/trailPaths.json --out work/crops breakaway great-northern
     python3 tools/trailmap/render_crops.py --image map.png \\
-        --paths src/data/trailPaths.json --out work/crops --pair upper-skyelark skyelark
+        --paths src/data/resorts/killington/trailPaths.json --out work/crops --pair upper-skyelark skyelark
 
 Each trail is drawn in orange (a second trail with --pair in cyan) over a
 crop of its bounding box. Use it to audit a random sample (is the orange line

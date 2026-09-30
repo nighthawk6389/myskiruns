@@ -1,11 +1,11 @@
 import { defineConfig, type Connect } from 'vite'
 import react from '@vitejs/plugin-react'
-import { handleConditions, memoryStore } from './api/_lib/conditions'
+import { handleConditions, memoryStores } from './api/_lib/conditions'
 
 // `vite` / `vite preview` serve /api/conditions from memory so the shared
 // conditions votes work locally; on Vercel, api/conditions.ts serves it.
 function localConditionsApi(): Connect.NextHandleFunction {
-  const store = memoryStore()
+  const stores = memoryStores()
   return (req, res, next) => {
     if (!req.url?.startsWith('/api/conditions')) return next()
     const chunks: Buffer[] = []
@@ -16,7 +16,7 @@ function localConditionsApi(): Connect.NextHandleFunction {
         headers: { 'content-type': 'application/json' },
         body: req.method === 'POST' ? Buffer.concat(chunks).toString() : undefined,
       })
-      const response = await handleConditions(request, store)
+      const response = await handleConditions(request, stores)
       res.statusCode = response.status
       res.setHeader('content-type', 'application/json')
       res.end(await response.text())

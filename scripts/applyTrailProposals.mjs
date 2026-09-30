@@ -1,12 +1,13 @@
 // Build the app's clickable trail paths from per-trail line proposals and
 // human review decisions.
 //
-//   node scripts/applyTrailProposals.mjs
+//   node scripts/applyTrailProposals.mjs [--resort killington]
 //
-// Inputs:  src/data/linePolylines.json   detected line pieces (percent coords)
-//          src/data/trailProposals.json  proposed pieces per trail (tile reading)
-//          src/data/trailReviews.json    review decisions; override proposals
-// Output:  src/data/trailPaths.json      {trails: {id: {segments, source}}}
+// Inputs (src/data/resorts/<resort>/):
+//   linePolylines.json   detected line pieces (percent coords)
+//   trailProposals.json  proposed pieces per trail (tile reading)
+//   trailReviews.json    review decisions; override proposals
+// Output: trailPaths.json  {trails: {id: {segments, source}}}
 //
 // A review with status "confirmed" uses its own pieces plus any hand-drawn
 // line (source "verified"); "no-line" (e.g. a glade drawn only as a label)
@@ -14,19 +15,17 @@
 // "not-on-map" removes the trail from the map. Unreviewed trails use
 // high/medium-confidence proposals (source "proposed"). Everything else gets
 // no overlay rather than a guess.
-import { readFileSync, writeFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'node:path';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { jpegSize, resortPaths } from './lib/resort.mjs';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const read = (p) => JSON.parse(readFileSync(resolve(root, p), 'utf8'));
-const W = 4572;
-const H = 2704;
+const R = resortPaths();
+const read = (p) => JSON.parse(readFileSync(p, 'utf8'));
+const { width: W, height: H } = jpegSize(R.map);
 const MAX_DRAWN_STEP = 400; // source px
 
-const pieces = new Map(read('src/data/linePolylines.json').polylines.map((p) => [p.id, p.points]));
-const proposals = read('src/data/trailProposals.json').trails;
-const reviews = read('src/data/trailReviews.json').reviews;
+const pieces = new Map(read(R.polylines).polylines.map((p) => [p.id, p.points]));
+const proposals = existsSync(R.proposals) ? read(R.proposals).trails : {};
+const reviews = existsSync(R.reviews) ? read(R.reviews).reviews : {};
 
 // Detected pieces break at junctions, markers and inline labels, so one
 // trail arrives as several polylines with small gaps. Join them so the trail
@@ -291,7 +290,7 @@ for (const id of new Set([...Object.keys(proposals), ...Object.keys(reviews)])) 
 }
 
 writeFileSync(
-  resolve(root, 'src/data/trailPaths.json'),
+  R.paths,
   JSON.stringify({
     _note: 'Clickable trail overlays (percent coords). source: verified = human-reviewed; proposed = from tile reading, not yet reviewed.',
     trails: out,

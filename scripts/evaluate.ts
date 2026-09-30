@@ -20,7 +20,7 @@ import type { GroundTruthPoint } from '../src/detection/types.ts';
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
 
-const img = decodeJpeg(resolve(root, 'public/killington-trail-map.jpg'));
+const img = decodeJpeg(resolve(root, 'public/maps/killington.jpg'));
 const gt: GroundTruthPoint[] = JSON.parse(
   readFileSync(resolve(root, 'src/detection/groundTruth.json'), 'utf8'),
 ).points;

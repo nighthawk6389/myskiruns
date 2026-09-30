@@ -92,13 +92,13 @@ recall green 29/29, blue 23/24, black 17/19. Docs and methodology:
 `scripts/extractLabels.mjs` OCRs the rotated trail-name labels (103 labels
 in pass 1, 125 after the verified pass 2). `scripts/reconcileTrails.mjs` matches them to the
 roster: 54 trails gained name anchors; **11 trails that were missing from
-`src/data/trails.ts` were added** (Blue Heaven, Helter Skelter, Full House,
+`src/data/resorts/killington/trails.ts` were added** (Blue Heaven, Helter Skelter, Full House,
 Frolic, The Jug, Shorty, Bearly, Killink, Gateway, Highlander, Sassafras) and
 Field Goal's difficulty was corrected to green — fixing "trails aren't
 labeled / labeled incorrectly" at the data source.
 
 ### 4. Detection-driven app assets
-- `public/trail-lines.png` — difficulty-colored line overlay (〰 toggle,
+- `public/maps/killington-lines.png` — difficulty-colored line overlay (〰 toggle,
   shown only with `?lines` in the URL).
 
 ### 5. Clickable trail paths
@@ -112,6 +112,18 @@ labeled / labeled incorrectly" at the data source.
   audit below. Paths now come from the propose-then-review workflow.
 - The app renders each path as a clickable polyline (hover = name, click =
   toggle skied).
+
+## Resorts
+
+Each resort has its own folder, `src/data/resorts/<id>/` (`trails.ts`,
+`linePolylines.json`, `trailProposals.json`, `trailReviews.json`, generated
+`trailPaths.json`), a map at `public/maps/<id>.jpg`, and an entry in
+`src/resorts.ts`. With more than one resort the header shows a resort
+picker (also `?resort=<id>` in the URL). Trips belong to a resort (older
+trips are Killington's), and condition votes are stored per resort. The
+pipeline scripts take `--resort <id>` (default `killington`), e.g.
+`npm run trails:apply -- --resort stowe`. To add a resort, follow
+`docs/trail-map-playbook.md`.
 
 ## Scripts
 
@@ -134,15 +146,15 @@ naming is now done in two steps:
    parallel) named each piece from the labels printed along it and its
    continuity through junctions, or marked it lift / not-a-trail / unknown,
    and listed labels whose line was not detected. Result:
-   `src/data/trailProposals.json` — 82 trails at high confidence; 57 pieces
+   `src/data/resorts/killington/trailProposals.json` — 82 trails at high confidence; 57 pieces
    flagged as not trails (building outlines, icons, text); 92% of the real
    trail-line length now carries a name (was 53%).
 2. **Review.** The *Killington Trail Check* page shows each trail's proposed
    lines on the map; a person confirms, taps lines to add/remove, draws lines
    the detector missed, or marks "no line" / "not on this map". Decisions are
-   exported to `src/data/trailReviews.json`.
+   exported to `src/data/resorts/killington/trailReviews.json`.
 
-`npm run trails:apply` merges both into `src/data/trailPaths.json`: reviews
+`npm run trails:apply` merges both into `src/data/resorts/killington/trailPaths.json`: reviews
 win, unreviewed trails use high/medium proposals, and trails with neither get
 **no overlay** (no more guessed dots).
 
@@ -231,7 +243,7 @@ per-trail ground truth for the actual goal.
 
 Note: `TrailMapForWeb-compressed.pdf` (commit `4d4a326`) is a flattened
 raster (one JPEG-2000 image, authored in Illustrator, no vector layers). Its
-image is sharper than `public/killington-trail-map.jpg`, which was resampled
+image is sharper than `public/maps/killington.jpg`, which was resampled
 and re-encoded with 4:2:0 chroma subsampling — prefer it as pipeline input.
 
 ## What's left
@@ -260,5 +272,5 @@ node scripts/reconcileTrails.mjs      # labels -> trailAnchors.json
 node scripts/tracePolylines.mjs       # detection -> linePolylines.json
 # naming: tiles + readers produce trailProposals.json; review page -> trailReviews.json
 npm run trails:apply                  # -> trailPaths.json (what the app draws)
-npm run lines:png                     # -> public/trail-lines.png
+npm run lines:png                     # -> public/maps/killington-lines.png
 ```

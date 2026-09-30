@@ -31,6 +31,16 @@
   color: var(--text-primary);
 }
 
+.resortSelect {
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .main {
   display: flex;
   flex: 1;

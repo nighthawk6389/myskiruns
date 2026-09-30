@@ -34,14 +34,14 @@ approaches all stalled at ~40% (see "What we tried").
 |---|---|
 | `tools/trailmap/extract_pdf_image.py` | Lossless raster from the resort PDF; reports any vector text/lines |
 | `scripts/lib/lineDetector.mjs`, `scripts/evaluateLines.mjs` | Colored-line detector and its ground-truth scorer |
-| `scripts/tracePolylines.mjs` | Detection mask → numbered line pieces (`src/data/linePolylines.json`) |
+| `scripts/tracePolylines.mjs` | Detection mask → numbered line pieces (`src/data/resorts/killington/linePolylines.json`) |
 | `tools/trailmap/render_tiles.py` | Zoomed tiles with every piece drawn and numbered, for the readers |
 | `tools/trailmap/prompts/*.md` | Reader prompts: name pieces, symbols + missing, whole-map search |
 | `tools/trailmap/aggregate_readings.py` | Readers' votes → per-trail proposals + review-page data |
 | `tools/trailmap/review/index.html` | The review page (Claude artifact with a database) |
 | `tools/trailmap/refresh_review_data.py` | Rebuild page data after fixes; flag trails for recheck |
-| `scripts/importReviews.mjs` (`npm run reviews:import`) | Review-page export → `src/data/trailReviews.json` |
-| `scripts/applyTrailProposals.mjs` (`npm run trails:apply`) | Reviews + proposals → `src/data/trailPaths.json` (what the app draws) |
+| `scripts/importReviews.mjs` (`npm run reviews:import`) | Review-page export → `src/data/resorts/killington/trailReviews.json` |
+| `scripts/applyTrailProposals.mjs` (`npm run trails:apply`) | Reviews + proposals → `src/data/resorts/killington/trailPaths.json` (what the app draws) |
 | `tools/trailmap/render_crops.py` | Zoomed crops of overlays for audits and split checks |
 | `tools/trailmap/hover_check.cjs` | Browser check that each overlay shows its own name |
 
@@ -91,7 +91,7 @@ misses (Killington's reviewer hand-drew ~45 stretches).
 
 ```bash
 python3 tools/trailmap/render_tiles.py --image map.png \
-  --polylines src/data/linePolylines.json --out work/tiles
+  --polylines src/data/resorts/killington/linePolylines.json --out work/tiles
 ```
 
 Then ask Claude Code to "use a workflow" with one sub-agent per group of 5–8
@@ -102,9 +102,9 @@ detected.
 
 ```bash
 python3 tools/trailmap/aggregate_readings.py --tiles work/tiles \
-  --readings 'work/tiles/result_*.json' --roster src/data/trails.ts \
-  --polylines src/data/linePolylines.json \
-  --proposals src/data/trailProposals.json --review-data work/review/data.json
+  --readings 'work/tiles/result_*.json' --roster src/data/resorts/killington/trails.ts \
+  --polylines src/data/resorts/killington/linePolylines.json \
+  --proposals src/data/resorts/killington/trailProposals.json --review-data work/review/data.json
 ```
 
 Killington: 6 readers, 37 tiles, ~25 min, ~780k sub-agent tokens. Result: 82
@@ -186,7 +186,7 @@ flagged for recheck:
 
 ```bash
 python3 tools/trailmap/refresh_review_data.py --review-data work/review/data.json \
-  --roster src/data/trails.ts --reviews src/data/trailReviews.json \
+  --roster src/data/resorts/killington/trails.ts --reviews src/data/resorts/killington/trailReviews.json \
   --page-ids work/page_ids.txt --recheck recheck.json
 ```
 
@@ -262,10 +262,12 @@ Lessons:
 
 In rough order of payoff:
 
-1. **One data folder per resort** (`src/data/resorts/<id>/`: `trails.ts`,
-   `linePolylines.json`, `trailProposals.json`, `trailReviews.json`,
-   `trailPaths.json`, `legend.json`, map image) and resort-aware scripts.
-   Today the scripts assume Killington's paths and image size.
+1. **One data folder per resort** — done: `src/data/resorts/<id>/`
+   (`trails.ts`, `linePolylines.json`, `trailProposals.json`,
+   `trailReviews.json`, `trailPaths.json`), map at `public/maps/<id>.jpg`,
+   registered in `src/resorts.ts`. `tracePolylines`, `trails:apply`,
+   `reviews:import` and `hover_check.cjs` take `--resort <id>`; the image
+   size comes from the map file. Still to do: a `legend.json` per map.
 2. **A per-map legend file** (trail colors, lift color, boundary, highlight
    bands, symbols, text styles) feeding both the detector's color gates and
    the reader prompts.

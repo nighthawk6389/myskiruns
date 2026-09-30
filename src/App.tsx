@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef } from 'react';
-import { trails } from './data/trails';
+import { RESORTS, getResort, type Resort } from './resorts';
 import { useTrips } from './hooks/useTrips';
 import { useTrailFilter } from './hooks/useTrailFilter';
 import { useConditions } from './hooks/useConditions';
@@ -11,9 +11,39 @@ import { TripBar } from './components/TripBar/TripBar';
 import { TripSummary } from './components/TripSummary/TripSummary';
 import styles from './App.module.css';
 
+const RESORT_KEY = 'myskiruns.resort';
+
+/** The resort from ?resort=<id>, else the last one used on this device. */
+function initialResort(): Resort {
+  const fromUrl = new URLSearchParams(location.search).get('resort');
+  try {
+    return getResort(fromUrl ?? localStorage.getItem(RESORT_KEY));
+  } catch {
+    return getResort(fromUrl);
+  }
+}
+
 function App() {
+  const [resort, setResort] = useState(initialResort);
+  const chooseResort = (id: string) => {
+    const next = getResort(id);
+    setResort(next);
+    try {
+      localStorage.setItem(RESORT_KEY, next.id);
+    } catch {
+      // private mode: the choice lasts this session
+    }
+  };
+  // everything below is per resort: remounting resets map view, filters,
+  // conditions and the trip in view
+  return <ResortApp key={resort.id} resort={resort} onChooseResort={chooseResort} />;
+}
+
+function ResortApp({ resort, onChooseResort }: { resort: Resort; onChooseResort: (id: string) => void }) {
+  const { trails } = resort;
   const {
     trips,
+    allTrips,
     activeTrip,
     skiedThisTrip: skiedTrails,
     skiedEver,
@@ -24,7 +54,7 @@ function App() {
     toggleRun: toggle,
     exportJson,
     importJson,
-  } = useTrips();
+  } = useTrips(resort.id, resort.name);
   const {
     activeDifficulties,
     filterMode,
@@ -38,7 +68,7 @@ function App() {
 
   const [hoveredTrail, setHoveredTrail] = useState<string | null>(null);
   const mapRef = useRef<ImageMapHandle>(null);
-  const conditions = useConditions();
+  const conditions = useConditions(resort.id);
   const [summaryOpen, setSummaryOpen] = useState(false);
 
   const filteredTrailIds = useMemo(
@@ -51,7 +81,22 @@ function App() {
       <header className={styles.header}>
         <div className={styles.headerLeft}>
           <span className={styles.logo}>⛷</span>
-          <h1 className={styles.title}>Killington Trail Tracker</h1>
+          {RESORTS.length > 1 ? (
+            <select
+              className={styles.resortSelect}
+              value={resort.id}
+              onChange={(e) => onChooseResort(e.target.value)}
+              aria-label="Resort"
+            >
+              {RESORTS.map((r) => (
+                <option key={r.id} value={r.id}>
+                  {r.name}
+                </option>
+              ))}
+            </select>
+          ) : (
+            <h1 className={styles.title}>{resort.name} Trail Tracker</h1>
+          )}
         </div>
         <div className={styles.headerRight}>
           <TripBar
@@ -79,6 +124,7 @@ function App() {
         <div className={styles.mapArea}>
           <ImageMap
             ref={mapRef}
+            resort={resort}
             filteredTrailIds={filteredTrailIds}
             skiedTrails={skiedTrails}
             skiedEver={skiedEver}
@@ -100,6 +146,7 @@ function App() {
           />
           <TrailList
             trails={filteredTrails}
+            peaks={resort.peaks}
             skiedTrails={skiedTrails}
             skiedEver={skiedEver}
             searchQuery={searchQuery}
@@ -120,7 +167,8 @@ function App() {
       {summaryOpen && activeTrip && (
         <TripSummary
           trip={activeTrip}
-          trips={trips}
+          trips={allTrips}
+          resort={resort}
           onClose={() => setSummaryOpen(false)}
           onLocateTrail={(id) => mapRef.current?.focusTrail(id)}
         />

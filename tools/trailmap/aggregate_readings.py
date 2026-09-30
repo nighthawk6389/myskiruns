@@ -2,8 +2,8 @@
 
     python3 tools/trailmap/aggregate_readings.py \\
         --tiles work/tiles --readings 'work/readings/result_*.json' \\
-        --roster src/data/trails.ts --polylines src/data/linePolylines.json \\
-        --proposals src/data/trailProposals.json --review-data work/review/data.json
+        --roster src/data/resorts/killington/trails.ts --polylines src/data/resorts/killington/linePolylines.json \\
+        --proposals src/data/resorts/killington/trailProposals.json --review-data work/review/data.json
 
 Each reading file (written by a reader, see prompts/1-name-lines.md) has
   {"lines":[{id, mapName, rosterId, color, confidence, note}],

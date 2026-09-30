@@ -1,8 +1,7 @@
 import { useState, useMemo, useCallback, useEffect, useImperativeHandle, useRef } from 'react';
 import type { Trail } from '../../types';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_COLORS, DIFFICULTY_UI_COLORS } from '../../types';
-import { peaks, getTrailsByPeak } from '../../data/trails';
-import trailPathsData from '../../data/trailPaths.json';
+import type { Resort } from '../../resorts';
 import { TrailPath } from './TrailPath';
 import { TrailHotspot } from './TrailHotspot';
 import { TrailSheet, type SheetTrail } from './TrailSheet';
@@ -10,7 +9,6 @@ import type { Conditions } from '../../hooks/useConditions';
 import { topTags } from '../../conditionTags';
 import styles from './ImageMap.module.css';
 
-const MAP_SRC = '/killington-trail-map.jpg';
 const MAX_ZOOM = 6;
 // how far from a tap a trail still counts as "tapped", in screen px
 const PICK_RADIUS_TOUCH = 24;
@@ -38,28 +36,27 @@ interface ImageMapProps {
   /** show the "tap a trail" hint (nothing marked on this trip yet) */
   showHint: boolean;
   conditions: Conditions;
+  /** whose map, trails and overlays to show; remount (key) when it changes */
+  resort: Resort;
   ref?: React.Ref<ImageMapHandle>;
 }
 
-// Trails are drawn from trailPaths.json (scripts/applyTrailProposals.mjs).
-// A trail with no verified or proposed line gets no overlay; it can still be
-// toggled from the list. Glades printed only as a label get a marker there.
-const TRAIL_PATHS = (
-  trailPathsData as {
-    trails: Record<string, { segments: number[][][]; label?: number[]; source: string }>;
-  }
-).trails;
-
-const TRAIL_LENGTH = new Map(
-  Object.entries(TRAIL_PATHS).map(([id, p]) => [
-    id,
-    p.segments.reduce(
-      (sum, seg) =>
-        sum + seg.slice(1).reduce((s, q, i) => s + Math.hypot(q[0] - seg[i][0], q[1] - seg[i][1]), 0),
-      0,
-    ),
-  ]),
-);
+// Trails are drawn from the resort's trailPaths.json
+// (scripts/applyTrailProposals.mjs). A trail with no verified or proposed line
+// gets no overlay; it can still be toggled from the list. Glades printed only
+// as a label get a marker there.
+function pathLengths(paths: Resort['paths']) {
+  return new Map(
+    Object.entries(paths).map(([id, p]) => [
+      id,
+      p.segments.reduce(
+        (sum, seg) =>
+          sum + seg.slice(1).reduce((s, q, i) => s + Math.hypot(q[0] - seg[i][0], q[1] - seg[i][1]), 0),
+        0,
+      ),
+    ]),
+  );
+}
 
 interface NameAnchor {
   x: number;
@@ -124,6 +121,7 @@ export function ImageMap({
   onHoverTrail,
   showHint,
   conditions,
+  resort,
   ref,
 }: ImageMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -141,11 +139,12 @@ export function ImageMap({
   const [sheet, setSheet] = useState<SheetTrail[] | null>(null);
   const [toast, setToast] = useState<{ trail: Trail; skied: boolean } | null>(null);
 
-  const allTrails = useMemo(() => {
-    const result: Trail[] = [];
-    for (const peak of peaks) result.push(...getTrailsByPeak(peak.id));
-    return result;
-  }, []);
+  const TRAIL_PATHS = resort.paths;
+  const TRAIL_LENGTH = useMemo(() => pathLengths(resort.paths), [resort.paths]);
+  const allTrails = useMemo(
+    () => resort.peaks.flatMap((peak) => resort.trails.filter((t) => t.peak === peak.id)),
+    [resort],
+  );
   const trailById = useMemo(() => new Map(allTrails.map((t) => [t.id, t])), [allTrails]);
 
   // the map is laid out at "fit" size; zoom and pan are a transform on top
@@ -220,7 +219,7 @@ export function ImageMap({
           .map(([id, p]) => [id, nameAnchor(p.segments, vH)] as const)
           .filter((e): e is readonly [string, NameAnchor] => !!e[1]),
       ),
-    [vH],
+    [vH, TRAIL_PATHS],
   );
 
   // Names go where the line is long enough on screen to hold them and they
@@ -272,7 +271,7 @@ export function ImageMap({
       }
       return hits.sort((a, b) => a.distance - b.distance).slice(0, 4);
     },
-    [cv.k, cv.tx, cv.ty, fitW, fitH, trailById, filteredTrailIds],
+    [cv.k, cv.tx, cv.ty, fitW, fitH, trailById, filteredTrailIds, TRAIL_PATHS],
   );
 
   // one finger or the mouse pans, two fingers pinch, a still press is a tap
@@ -402,13 +401,13 @@ export function ImageMap({
       {imageError && (
         <div className={styles.placeholder}>
           <div className={styles.placeholderTitle}>Trail map image missing</div>
-          <div className={styles.placeholderCode}>public/killington-trail-map.jpg</div>
+          <div className={styles.placeholderCode}>public{resort.mapSrc}</div>
         </div>
       )}
       <div className={`${styles.stage} ${smooth ? styles.smooth : ''}`} style={stageStyle}>
         <img
-          src={MAP_SRC}
-          alt="Killington trail map"
+          src={resort.mapSrc}
+          alt={`${resort.name} trail map`}
           className={styles.mapImage}
           draggable={false}
           onLoad={(e) => {
@@ -419,7 +418,7 @@ export function ImageMap({
           onError={() => setImageError(true)}
           style={{ visibility: imageLoaded ? 'visible' : 'hidden' }}
         />
-        {showLines && <img src="/trail-lines.png" alt="" className={styles.overlay} draggable={false} />}
+        {showLines && <img src={resort.mapSrc.replace(/\.jpg$/, '-lines.png')} alt="" className={styles.overlay} draggable={false} />}
         {imageLoaded && (
           <svg className={styles.overlay} viewBox={`0 0 1000 ${vH}`}>
             {[...allTrails]

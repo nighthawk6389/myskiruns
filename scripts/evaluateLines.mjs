@@ -13,7 +13,7 @@ import { detectTrailLines, DEFAULT_PARAMS, CLS } from './lib/lineDetector.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
-const MAP = resolve(root, 'public/killington-trail-map.jpg');
+const MAP = resolve(root, 'public/maps/killington.jpg');
 
 const gt = JSON.parse(readFileSync(resolve(root, 'src/detection/groundTruthLines.json'), 'utf8')).points;
 // Prediction radius against the CENTERLINE skeleton: a point labeled "on the

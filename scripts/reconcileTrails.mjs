@@ -2,12 +2,12 @@
 //
 //   node scripts/reconcileTrails.mjs [--apply]
 //
-// Reads src/data/labelAnchors.json (produced by scripts/extractLabels.mjs),
+// Reads src/data/resorts/killington/labelAnchors.json (produced by scripts/extractLabels.mjs),
 // fuzzy-matches label text against data/trails.ts names, and:
-//   - writes src/data/trailAnchors.json: per-trail name-anchor positions
+//   - writes src/data/resorts/killington/trailAnchors.json: per-trail name-anchor positions
 //   - reports map labels that match no roster entry (missing trails), with
 //     difficulty inferred from the nearest detected line's color class
-//   - with --apply, appends the missing trails to src/data/trails.ts
+//   - with --apply, appends the missing trails to src/data/resorts/killington/trails.ts
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
@@ -16,9 +16,9 @@ import { detectTrailLines, CLS } from './lib/lineDetector.mjs';
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
 
-const labels = JSON.parse(readFileSync(resolve(root, 'src/data/labelAnchors.json'), 'utf8')).labels;
+const labels = JSON.parse(readFileSync(resolve(root, 'src/data/resorts/killington/labelAnchors.json'), 'utf8')).labels;
 
-const trailSrc = readFileSync(resolve(root, 'src/data/trails.ts'), 'utf8');
+const trailSrc = readFileSync(resolve(root, 'src/data/resorts/killington/trails.ts'), 'utf8');
 const trails = [];
 for (const m of trailSrc.matchAll(/\{ id:\s*'([^']+)',\s*name:\s*'([^']+)'[^}]*?difficulty:\s*'([^']+)'[^}]*?peak:\s*'([^']+)'/g)) {
   trails.push({ id: m[1], name: m[2], difficulty: m[3], peak: m[4] });
@@ -45,7 +45,7 @@ function sim(a, b) {
 }
 
 // difficulty from the nearest detected line's class around a point
-const det = await detectTrailLines(resolve(root, 'public/killington-trail-map.jpg'));
+const det = await detectTrailLines(resolve(root, 'public/maps/killington.jpg'));
 const CLASS_DIFF = { [CLS.green]: 'green', [CLS.blue]: 'blue', [CLS.black]: 'black' };
 function nearestLineClass(nx, ny, rad = 60) {
   const cx = Math.round(nx * det.width), cy = Math.round(ny * det.height);
@@ -65,7 +65,7 @@ function nearestLineClass(nx, ny, rad = 60) {
 }
 
 // peak region containment
-const regionSrc = readFileSync(resolve(root, 'src/data/peakRegions.ts'), 'utf8');
+const regionSrc = readFileSync(resolve(root, 'src/data/resorts/killington/peakRegions.ts'), 'utf8');
 const regions = [];
 for (const m of regionSrc.matchAll(/'([\w-]+)':\s*\{\s*cx:\s*([\d.]+),\s*cy:\s*([\d.]+),\s*w:\s*([\d.]+),\s*h:\s*([\d.]+)/g)) {
   regions.push({ id: m[1], cx: +m[2], cy: +m[3], w: +m[4], h: +m[5] });
@@ -120,7 +120,7 @@ for (const lab of labels) {
 }
 
 writeFileSync(
-  resolve(root, 'src/data/trailAnchors.json'),
+  resolve(root, 'src/data/resorts/killington/trailAnchors.json'),
   JSON.stringify({ _note: 'OCR-derived name anchors: normalized label centroid per matched trail id', anchors }, null, 1),
 );
 
@@ -153,6 +153,6 @@ if (process.argv.includes('--apply') && missingDedup.length) {
     );
   const marker = '\n  // === ADDED FROM MAP OCR (see src/detection/LINES.md) ===\n';
   const updated = trailSrc.replace(/\n\];/, `${marker}${lines.join('\n')}\n];`);
-  writeFileSync(resolve(root, 'src/data/trails.ts'), updated);
-  console.log(`\napplied: ${lines.length} trails appended to src/data/trails.ts`);
+  writeFileSync(resolve(root, 'src/data/resorts/killington/trails.ts'), updated);
+  console.log(`\napplied: ${lines.length} trails appended to src/data/resorts/killington/trails.ts`);
 }
