@@ -1,0 +1,1094 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "black-out": {
+   "polylines": [
+    96,
+    97,
+    98
+   ],
+   "confidence": "high",
+   "mapName": "BLACK OUT",
+   "note": "continuation of 97 after a gap where the BLACK RIDGE TRIPLE lift label covers the line | after the BLACK OUT text | ends at the diamond of BLACK OUT"
+  },
+  "blind-faith": {
+   "polylines": [
+    41,
+    42
+   ],
+   "confidence": "high",
+   "mapName": "BLIND FAITH",
+   "note": "from the diamond of the BLIND FAITH label down to Cat Nap | from the BLIND FAITH label up to Rim Rock (48)"
+  },
+  "boomerang": {
+   "polylines": [
+    127,
+    128
+   ],
+   "confidence": "high",
+   "mapName": "BOOMERANG",
+   "note": "starts at the Lower Mountain Road lift crossing (~2624,1194), runs beside the Solitude Express Quad into the square of the BOOMERANG label just east of my tiles (~2811,1494) | Leads into the square of the BOOMERANG label; starts at the Lower Mountain Road crossing of the Solitude Express Quad lift l"
+  },
+  "broken-arrow": {
+   "noLine": true,
+   "label": [
+    48.99,
+    47.9
+   ],
+   "confidence": "high"
+  },
+  "buckhorn": {
+   "polylines": [
+    76,
+    77
+   ],
+   "confidence": "high",
+   "mapName": "BUCKHORN",
+   "note": "from the summit patrol hut down to the circle of the BUCKHORN label | from the summit to the BUCKHORN dot | after the BUCKHORN text, down to the Summit Lodge"
+  },
+  "cat-nap": {
+   "polylines": [
+    31,
+    32
+   ],
+   "confidence": "high",
+   "mapName": "CAT NAP",
+   "note": "from the square of the CAT NAP label down to the slow zone | from the CAT NAP label up to Rim Rock (47)"
+  },
+  "challenger": {
+   "polylines": [
+    61,
+    62
+   ],
+   "confidence": "high",
+   "mapName": "CHALLENGER",
+   "note": "from the diamond of the CHALLENGER label down-left to Upper Fall Line | ends at the diamond of CHALLENGER | after the CHALLENGER text, up to the Turkey Shoot junction on 210"
+  },
+  "chute": {
+   "polylines": [
+    88,
+    89
+   ],
+   "confidence": "high",
+   "mapName": "CHUTE",
+   "note": "after the CHUTE text | ends at the square of CHUTE"
+  },
+  "coleman-brook": {
+   "polylines": [
+    134,
+    135
+   ],
+   "confidence": "high",
+   "mapName": "COLEMAN BROOK",
+   "note": "after the COLEMAN BROOK label end, down to the hub near JACKSON GORE JUNCTION (~2817,1079) | Continues from the end of the COLEMAN BROOK label to the Sidewinder / Green Link junction. | from the Solitude summit into the circle of COLEMAN BROOK | Leads into the circle of the COLEMAN BROOK label (ligh"
+  },
+  "countdown": {
+   "polylines": [
+    55,
+    56
+   ],
+   "confidence": "high",
+   "mapName": "COUNTDOWN",
+   "note": "ends at the square of the COUNTDOWN label (label itself is just right of my tiles, in t002); runs down-left to the bottom of Upper Fall Line | line before the square of COUNTDOWN | after the COUNTDOWN text, up to the Summit Lodge"
+  },
+  "cutters-folly": {
+   "polylines": [
+    110,
+    111
+   ],
+   "confidence": "high",
+   "mapName": "CUTTER'S FOLLY",
+   "note": "ends at the square of CUTTER'S FOLLY | leads into the square of CUTTER'S FOLLY from beside the Evergreen Summit Express | after the CUTTER'S FOLLY label end, to the Express Lane / Upper-Lower Sapphire junction (~2200,928)"
+  },
+  "daybreak": {
+   "polylines": [
+    161,
+    162
+   ],
+   "confidence": "high",
+   "mapName": "DAYBREAK",
+   "note": "Continues from the end of the DAYBREAK label down to the Morning Star Triple base. | continues after the DAYBREAK label (west of the tile, ~3055,1880) to the Morning Star Triple bottom terminal slow zone | From the Solitude Express Quad base into the circle of the DAYBREAK label."
+  },
+  "double-diamond": {
+   "polylines": [
+    4,
+    5
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLE DIAMOND",
+   "note": "glade line inside the dark-grey DOUBLE DIAMOND band, below its label (left arm of the U-shaped band shared with OUTRAGE) | glade line inside the DOUBLE DIAMOND band, above its label; starts at the Rim Rock ridge line (49)"
+  },
+  "double-dipper": {
+   "polylines": [
+    237
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLE DIPPER",
+   "note": "after the DOUBLE DIPPER label, down into the slow zone at Lower Mountain Road"
+  },
+  "dream-weaver": {
+   "polylines": [
+    29,
+    30
+   ],
+   "confidence": "high",
+   "mapName": "DREAM WEAVER",
+   "note": "continues from the DREAM WEAVER label up the ridge to the summit | from the circle of the DREAM WEAVER label down to the slow zone at the Sunshine Quad / South Face Express bottom"
+  },
+  "easy-rider": {
+   "polylines": [
+    138,
+    139
+   ],
+   "confidence": "high",
+   "mapName": "EASY RIDER",
+   "note": "ends at the EASY RIDER dot (2158,594) | from the tip of the light-green band (~1924,545) into the circle of EASY RIDER | after the EASY RIDER label end to the junction with Upper Mountain Road (~2520,740)"
+  },
+  "easy-street": {
+   "polylines": [
+    72,
+    73
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "short piece below the EASY STREET label, meets Home Stretch | after the EASY STREET text; meets Home Stretch (70) at a corner | short piece above the EASY STREET label, from the slow zone | leads into the top of the EASY STREET text"
+  },
+  "everglade": {
+   "polylines": [
+    14,
+    15
+   ],
+   "confidence": "high",
+   "mapName": "EVERGLADE",
+   "note": "white-cased line along the long Everglade band; ends at the EVERGLADE square+glade label (~2423,751), continuing after it as 14. Its top starts beside the upper WHISTLER label icons (band fork); Whistler itself goes down 27/13 | right-hand fork of the glade band that starts at the upper WHISTLER lab"
+  },
+  "exhibition": {
+   "polylines": [
+    129,
+    130
+   ],
+   "confidence": "high",
+   "mapName": "EXHIBITION",
+   "note": "after the EXHIBITION label end, down toward Green Link | beside the Solitude Express Quad from the summit into the diamond of EXHIBITION"
+  },
+  "express-lane": {
+   "polylines": [
+    119,
+    120
+   ],
+   "confidence": "high",
+   "mapName": "EXPRESS LANE",
+   "note": "short stub from the EXPRESS LANE label end to the Solitude summit / lift top | below the square of EXPRESS LANE (label inline), to the junction with Cutter's Folly / Sapphire (~2206,928)"
+  },
+  "fairway": {
+   "polylines": [
+    148,
+    149
+   ],
+   "confidence": "high",
+   "mapName": "FAIRWAY",
+   "note": "short piece before the circle of the FAIRWAY label (148 continues after the label) | ends at the FAIRWAY dot | after the FAIRWAY text"
+  },
+  "fall-line": {
+   "polylines": [
+    53,
+    54
+   ],
+   "confidence": "high",
+   "mapName": "FALL LINE",
+   "note": "from the square of the FALL LINE label down to the slow zone | above the FALL LINE label up to the Upper Fall Line / Countdown junction"
+  },
+  "fast-lane": {
+   "polylines": [
+    82,
+    83
+   ],
+   "confidence": "high",
+   "mapName": "FAST LANE",
+   "note": "below the diamond of FAST LANE | above the FAST LANE text"
+  },
+  "forrest-bump": {
+   "polylines": [
+    10,
+    11
+   ],
+   "confidence": "high",
+   "mapName": "FORREST BUMP",
+   "note": "glade line inside the FORREST BUMP band, below its label | glade line inside the FORREST BUMP band, above its label"
+  },
+  "gordons-garden": {
+   "polylines": [
+    252,
+    253
+   ],
+   "confidence": "high",
+   "mapName": "GORDON'S GARDEN",
+   "note": "after the GORDON'S GARDEN text, up to where Homeward Bound (225) resumes | orange terrain-park line from the end of the GORDON'S GARDEN label (just west of my tiles, ~1874,1886) to the Homeward Bound / Kettle Brook junction (~2060,1808) | before the orange pill; starts right after the lower HOMEWARD"
+  },
+  "green-link": {
+   "polylines": [
+    229,
+    230
+   ],
+   "confidence": "high",
+   "mapName": "GREEN LINK",
+   "note": "one stroke from the circle of GREEN LINK west-southwest (Ridge Runner, Heaven's Gate and Exhibition end on it), hairpin at ~(2352,1240), back east to join Lower Mountain Road under its label at ~(2515,1214); the LOWER MOUNTAIN ROAD label is on the separate line 231-234, not on this return leg | Whit"
+  },
+  "halfpipe": {
+   "polylines": [
+    250,
+    251
+   ],
+   "confidence": "high",
+   "mapName": "HALFPIPE",
+   "note": "after the HALFPIPE text | orange terrain-park stub after the HALFPIPE label | above the orange pill of HALFPIPE | orange terrain-park stub before the pill of HALFPIPE"
+  },
+  "heavens-gate": {
+   "polylines": [
+    121,
+    122
+   ],
+   "confidence": "high",
+   "mapName": "HEAVEN'S GATE",
+   "note": "after the HEAVEN'S GATE label end, down to Green Link | from the Express Lane label end at the summit to the square of HEAVEN'S GATE"
+  },
+  "home-stretch": {
+   "polylines": [
+    70,
+    71
+   ],
+   "confidence": "high",
+   "mapName": "HOME STRETCH",
+   "note": "short piece from the HOME STRETCH label end to the bottom of Easy Street | continues the HOME STRETCH text (same angle) up to the corner where Easy Street (72) ends | short piece from the circle of the HOME STRETCH label to Sachem (66)"
+  },
+  "homeward-bound": {
+   "polylines": [
+    154,
+    225,
+    226
+   ],
+   "confidence": "high",
+   "mapName": "HOMEWARD BOUND",
+   "note": "ends at the dot of the lower HOMEWARD BOUND label | ends at the dot of the upper HOMEWARD BOUND label (2109,1777) | from the Gordon's Garden / Kettle Brook junction (~2066,1802) into the circle of HOMEWARD BOUND | after the HOMEWARD BOUND label end, up to the top of the lift above it"
+  },
+  "hotdog-hill": {
+   "polylines": [
+    0,
+    1
+   ],
+   "confidence": "high",
+   "mapName": "HOTDOG HILL",
+   "note": "leads into the HOTDOG HILL dot from the lower left (inside the lilac ski & ride school patch) | continues after the HOTDOG HILL text"
+  },
+  "jack-a-lope": {
+   "polylines": [
+    163,
+    164,
+    165
+   ],
+   "confidence": "medium",
+   "mapName": "JACK-A-LOPE",
+   "note": "No label on it: one stroke from the Solitude base area down under the MORNING STAR TRIPLE lift label; after a road gap it continues as 165 into the JACK-A-LOPE circle. PROMENADE (175) tees into it at ~[3179,1711]. | Continues from the end of the JACK-A-LOPE label east to the Moonshadow line, where 1"
+  },
+  "jolly-green-giant": {
+   "polylines": [
+    104,
+    105
+   ],
+   "confidence": "high",
+   "mapName": "JOLLY GREEN GIANT",
+   "note": "after the JOLLY GREEN GIANT text, down to the Sidekick / Black Out junction | ends at the square of JOLLY GREEN GIANT"
+  },
+  "kettle-brook": {
+   "polylines": [
+    155,
+    156,
+    157
+   ],
+   "confidence": "medium",
+   "mapName": "KETTLE BROOK",
+   "note": "ends at the KETTLE BROOK dot | after the KETTLE BROOK text, up to Homeward Bound | after the KETTLE BROOK label end, up to the Homeward Bound / Gordon's Garden junction (~2065,1808) | continues 155 westward after a ~15 px gap and ends under the lower HOMEWARD BOUND text; no label of its own"
+  },
+  "ledges": {
+   "polylines": [
+    74,
+    75
+   ],
+   "confidence": "high",
+   "mapName": "LEDGES",
+   "note": "from the LEDGES label down to the Sachem Quad bottom | after the LEDGES text | above the diamond of the LEDGES label, beside the Sachem Quad | ends at the diamond of LEDGES"
+  },
+  "ledgewood": {
+   "polylines": [
+    158,
+    159
+   ],
+   "confidence": "high",
+   "mapName": "LEDGEWOOD",
+   "note": "ends at the LEDGEWOOD dot | from under the KETTLE BROOK text into the circle of LEDGEWOOD | after the LEDGEWOOD text, up to Homeward Bound | after the LEDGEWOOD label end, up to Homeward Bound (~2208,1760); Snow Track (160) branches off it"
+  },
+  "lift-line": {
+   "polylines": [
+    152,
+    153
+   ],
+   "confidence": "high",
+   "mapName": "LIFT LINE",
+   "note": "after the LIFT LINE text | ends at the LIFT LINE dot"
+  },
+  "line-drive": {
+   "polylines": [
+    188,
+    189
+   ],
+   "confidence": "high",
+   "mapName": "LINE DRIVE",
+   "note": "Continues from the end of the LINE DRIVE label into the slow zone at the Morning Star Triple base. | continues after the LINE DRIVE label into the slow zone at the Morning Star Triple bottom | Leads into the square of the LINE DRIVE label, alongside the Morning Star Triple lift line. | from Jack-a-L"
+  },
+  "link": {
+   "polylines": [
+    208,
+    209
+   ],
+   "confidence": "high",
+   "mapName": "LINK",
+   "note": "from the slow zone to the square of the LINK label (the SCOOTER label ends just above this square) | ends at the square of LINK; passes just under the end of the SCOOTER text (Scooter has no line of its own) | continues after the LINK label | after the LINK text"
+  },
+  "loose-spruce": {
+   "polylines": [
+    8,
+    9
+   ],
+   "confidence": "high",
+   "mapName": "LOOSE SPRUCE",
+   "note": "glade line inside the LOOSE SPRUCE band, lower part | glade line inside the LOOSE SPRUCE band, upper part"
+  },
+  "lower-arrow": {
+   "polylines": [
+    204,
+    205
+   ],
+   "confidence": "high",
+   "mapName": "LOWER ARROW",
+   "note": "from Lower Mountain Road (below Upper Arrow 18) down to the top of the vertical LOWER ARROW label | below the circle of LOWER ARROW, down to Lower Mountain Road"
+  },
+  "lower-chief": {
+   "polylines": [
+    90,
+    91
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CHIEF",
+   "note": "after the LOWER CHIEF text | ends at the square of LOWER CHIEF"
+  },
+  "lower-moonshadow": {
+   "polylines": [
+    184,
+    187
+   ],
+   "confidence": "high",
+   "mapName": "LOWER MOONSHADOW",
+   "note": "short piece from that crossing to the top end of the LOWER MOONSHADOW label | continues below the \u25a0 of LOWER MOONSHADOW into the slow zone at the Morning Star Triple bottom"
+  },
+  "lower-mountain-road": {
+   "polylines": [
+    140,
+    202,
+    203,
+    231,
+    232,
+    234
+   ],
+   "confidence": "medium",
+   "mapName": "LOWER MOUNTAIN ROAD",
+   "note": "west of the LOWER MOUNTAIN ROAD dot (1817,1714), down to the base | after the LOWER MOUNTAIN ROAD text, up toward the terrain park | from the foot of Lower Arrow (~2177,1606) into the end of the second LOWER MOUNTAIN ROAD label (label just west of my tiles at ~1907,1714) | ends at the dot of the upp"
+  },
+  "lower-sapphire": {
+   "polylines": [
+    112,
+    113,
+    114
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SAPPHIRE",
+   "note": "continuation of 113 below the Ridge Runner crossing, into the slow zone at Lower Mountain Road | after the LOWER SAPPHIRE label end, down to Ridge Runner | from the Express Lane / Cutter's Folly / Upper Sapphire junction (~2210,930) to the square of LOWER SAPPHIRE"
+  },
+  "lower-timberline": {
+   "polylines": [
+    106,
+    107
+   ],
+   "confidence": "high",
+   "mapName": "LOWER TIMBERLINE",
+   "note": "from the Timberline junction to the square of LOWER TIMBERLINE (2169,1086) | from the junction at the end of Upper Timberline (~2100,985) to the square of LOWER TIMBERLINE | after the LOWER TIMBERLINE label to the Evergreen Summit Express bottom terminal"
+  },
+  "lower-wild-thing": {
+   "polylines": [
+    39,
+    40
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WILD THING",
+   "note": "from the LOWER WILD THING label up to the Rim Rock crossing; collinear with 242 (UPPER WILD THING) above the crossing | from the diamond of the LOWER WILD THING label down to the South Face Express bottom"
+  },
+  "lower-world-cup": {
+   "polylines": [
+    86,
+    87
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WORLD CUP",
+   "note": "below the square of LOWER WORLD CUP | from the Upper World Cup / Chute junction down to the top of the LOWER WORLD CUP text"
+  },
+  "moments-rest": {
+   "polylines": [
+    43,
+    44
+   ],
+   "confidence": "high",
+   "mapName": "MOMENT'S REST",
+   "note": "continues below the MOMENT'S REST label down to Rim Rock (47) | short piece from the bottom of the Double Diamond/Outrage glade band to the square of the MOMENT'S REST label"
+  },
+  "moon-dog": {
+   "polylines": [
+    235,
+    236
+   ],
+   "confidence": "high",
+   "mapName": "MOON DOG",
+   "note": "short piece below the square of the MOON DOG label, down to Rim Rock (49) | short piece above the MOON DOG label, up to the summit"
+  },
+  "mountain-road": {
+   "polylines": [
+    141,
+    142
+   ],
+   "confidence": "high",
+   "mapName": "MOUNTAIN ROAD",
+   "note": "from the Upper Mountain Road / Easy Rider junction (~2520,740) into the circle of the MOUNTAIN ROAD label (inline; the road continues east of my tiles) | Leads into the circle of the upper MOUNTAIN ROAD label. | Runs from the end of the upper MOUNTAIN ROAD label through Jackson Gore Junction to the "
+  },
+  "muellers-run": {
+   "polylines": [
+    63,
+    64
+   ],
+   "confidence": "high",
+   "mapName": "MUELLERS' RUN",
+   "note": "from the diamond of the MUELLERS' RUN label down to the top of the SCOOTER label | below the diamond of MUELLERS' RUN; ends just above the SCOOTER label | short piece above the MUELLERS' RUN label, up to Countdown (55) | after the MUELLERS' RUN text, up to Countdown"
+  },
+  "noreaster": {
+   "polylines": [
+    84,
+    85
+   ],
+   "confidence": "high",
+   "mapName": "NOR'EASTER",
+   "note": "after the NOR'EASTER text down to Lower Mountain Road; no other label along it | ends at the diamond of NOR'EASTER"
+  },
+  "off-the-rim": {
+   "polylines": [
+    33,
+    34
+   ],
+   "confidence": "high",
+   "mapName": "OFF THE RIM",
+   "note": "from the square of the OFF THE RIM label down-left until it meets Dream Weaver (30) | from the OFF THE RIM label up to Rim Rock (48)"
+  },
+  "open-slope": {
+   "polylines": [
+    150,
+    151
+   ],
+   "confidence": "high",
+   "mapName": "OPEN SLOPE",
+   "note": "separate line starting just below the FAIRWAY circle and running up-right to the circle of the OPEN SLOPE label (label outside my tiles, in t302); the FAIRWAY text is aligned with 149/148, not with this line | from beside the Fairway dot to the OPEN SLOPE dot | after the OPEN SLOPE text, up along th"
+  },
+  "outrage": {
+   "polylines": [
+    6,
+    7
+   ],
+   "confidence": "high",
+   "mapName": "OUTRAGE",
+   "note": "glade line inside the dark-grey OUTRAGE band, below its label (right arm of the U-shaped band) | glade line inside the OUTRAGE band, above its label"
+  },
+  "progression-park": {
+   "polylines": [
+    246,
+    247
+   ],
+   "confidence": "high",
+   "mapName": "PROGRESSION PARK",
+   "note": "after the PROGRESSION PARK text | orange terrain-park stub after the PROGRESSION PARK label | above the orange pill of PROGRESSION PARK | orange terrain-park stub before the pill of PROGRESSION PARK"
+  },
+  "promenade": {
+   "polylines": [
+    175,
+    176
+   ],
+   "confidence": "high",
+   "mapName": "PROMENADE",
+   "note": "Continues from the end of the PROMENADE label, loops round and ends on 163 (Jack-a-Lope). | continues after the PROMENADE label (label west of the tile edge, \u25cf ~3161,1627) to the Morning Star Triple / 163 junction | Short piece leading into the circle of the PROMENADE label."
+  },
+  "punch-line": {
+   "polylines": [
+    37,
+    38
+   ],
+   "confidence": "high",
+   "mapName": "PUNCH LINE",
+   "note": "from the diamond of the PUNCH LINE label down to the slow zone | from the PUNCH LINE label up to Rim Rock (48)"
+  },
+  "ridge-runner": {
+   "polylines": [
+    227,
+    228
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE RUNNER",
+   "note": "horizontal line from the UPPER ARROW square eastward; interrupted by the LOWER TIMBERLINE label and the lift, then a short dash into the RIDGE RUNNER dot (2253,1143) | from the Upper Arrow square (~2112,1134) east to the RIDGE RUNNER label; broken where it crosses Lower Timberline and the Evergreen "
+  },
+  "rim-rock": {
+   "polylines": [
+    47,
+    48,
+    49
+   ],
+   "confidence": "high",
+   "mapName": "RIM ROCK",
+   "note": "continues from the lower RIM ROCK label down into the slow zone at the Glades Peak Quad bottom | between the upper RIM ROCK label (square) and the lower RIM ROCK label (square) | one continuous stroke from the upper RIM ROCK label along the ridge to the summit patrol hut; Upper Wild Thing, Moon Dog,"
+  },
+  "rising-star": {
+   "polylines": [
+    177,
+    178,
+    179
+   ],
+   "confidence": "high",
+   "mapName": "RISING STAR",
+   "note": "Leaves the circle of the RISING STAR label (label reads upward). | Short piece above the end of the RISING STAR label, up to the Upper Moonshadow line. | short piece from the Upper Moonshadow junction (182/183) to the top end of the RISING STAR label | Tiny continuation of 177 after a road gap, endi"
+  },
+  "rossi-run": {
+   "polylines": [
+    240,
+    241
+   ],
+   "confidence": "high",
+   "mapName": "ROSSI RUN",
+   "note": "from the circle of the ROSSI RUN label around Southface Village to the Sunshine Quad base | from the ROSSI RUN label up to Suncatcher (51)"
+  },
+  "roundhouse-run": {
+   "polylines": [
+    146,
+    147
+   ],
+   "confidence": "high",
+   "mapName": "ROUNDHOUSE RUN",
+   "note": "from the Solitude summit into the circle of ROUNDHOUSE RUN | Continues from the end of the ROUNDHOUSE RUN label to Jackson Gore Junction."
+  },
+  "rum-run": {
+   "polylines": [
+    206,
+    207,
+    245
+   ],
+   "confidence": "medium",
+   "mapName": "RUM RUN",
+   "note": "after the RUM RUN text | ends at the square of RUM RUN | white-cased blue line in a thin blue band directly above the RUM RUN label; ends where 206 starts"
+  },
+  "sachem": {
+   "polylines": [
+    65,
+    66,
+    67,
+    68,
+    69
+   ],
+   "confidence": "high",
+   "mapName": "SACHEM",
+   "note": "from the lower SACHEM label down to a road crossing; continues as 69 | starts right after the upper SACHEM label (~1350,1460, left of these tiles); continues across a road as 69 | from the circle of the upper SACHEM label down through Okemo Trailside to the circle of the lower SACHEM label; Home Str"
+  },
+  "screamin-demon": {
+   "polylines": [
+    123,
+    124
+   ],
+   "confidence": "high",
+   "mapName": "SCREAMIN' DEMON",
+   "note": "after the SCREAMIN' DEMON label end | Starts at the end of the SCREAMIN' DEMON label, runs down into the slow zone onto VILLAGE RUN (180). | starts on Lower Mountain Road just below the ROAD end of its label, leads into the square of SCREAMIN' DEMON"
+  },
+  "searles-way": {
+   "polylines": [
+    101,
+    102,
+    103
+   ],
+   "confidence": "medium",
+   "mapName": "SEARLE'S WAY",
+   "note": "after the SEARLE'S WAY text; the SIDEKICK label starts beside its lower end | ends at the diamond of SEARLE'S WAY | short unlabeled connector from Nor'Easter (85) joining Searle's Way (102) at (1791,785), above the SEARLE'S WAY label"
+  },
+  "sels-choice": {
+   "polylines": [
+    99,
+    100
+   ],
+   "confidence": "high",
+   "mapName": "SEL'S CHOICE",
+   "note": "after the SEL'S CHOICE text | after the SEL'S CHOICE label end | ends at the diamond of SEL'S CHOICE | leads into the diamond of SEL'S CHOICE"
+  },
+  "sideout": {
+   "polylines": [
+    133
+   ],
+   "confidence": "high",
+   "mapName": "SIDEOUT",
+   "note": "From the square of the SIDEOUT label down-left across the lift line (gap in the closed area) into the slow zone."
+  },
+  "sidewinder": {
+   "polylines": [
+    131,
+    132
+   ],
+   "confidence": "high",
+   "mapName": "SIDEWINDER",
+   "note": "Continues from the end of the SIDEWINDER label down to the Solitude Express Quad base; 182 branches east from it at ~[3030,1383]. | Leads into the square of the SIDEWINDER label from the junction at the bottom of Coleman Brook / end of Green Link."
+  },
+  "ski-school-slope": {
+   "polylines": [
+    233
+   ],
+   "confidence": "high",
+   "mapName": "SKI SCHOOL SLOPE",
+   "note": "line directly above the SKI SCHOOL SLOPE label, beside carpet 4"
+  },
+  "snow-track": {
+   "polylines": [
+    160
+   ],
+   "confidence": "high",
+   "mapName": "SNOW TRACK",
+   "note": "branches off Ledgewood (159) into the circle of SNOW TRACK; no drawn line after the label"
+  },
+  "sprint": {
+   "polylines": [
+    45,
+    46
+   ],
+   "confidence": "high",
+   "mapName": "SPRINT",
+   "note": "short piece from the SPRINT label end to the Glades Peak Quad line | short piece from the bottom of the Moment's Rest label to the square of the SPRINT label"
+  },
+  "stump-jumper": {
+   "polylines": [
+    35,
+    36
+   ],
+   "confidence": "high",
+   "mapName": "STUMP JUMPER",
+   "note": "from the diamond of the STUMP JUMPER label down to the slow zone | from the STUMP JUMPER label up to Rim Rock (48)"
+  },
+  "suncatcher": {
+   "polylines": [
+    51,
+    52
+   ],
+   "confidence": "high",
+   "mapName": "SUNCATCHER",
+   "note": "leaves the slow zone (separate stroke from Dream Weaver 30) and runs into the upper end of the SUNCATCHER label; Rossi Run (241) branches off it | from the circle of the SUNCATCHER label down to the Sunshine Quad base (Southface Village)"
+  },
+  "sweet-solitude": {
+   "polylines": [
+    136,
+    137
+   ],
+   "confidence": "high",
+   "mapName": "SWEET SOLITUDE",
+   "note": "ends at the SWEET SOLITUDE dot (2234,692) | from the tip of the light-green band (~1931,560) into the circle of SWEET SOLITUDE; the unnamed spur 239 leaves it at ~(2045,609) | after the SWEET SOLITUDE label end to the summit first-aid cross"
+  },
+  "the-narrows": {
+   "polylines": [
+    243,
+    244
+   ],
+   "confidence": "high",
+   "mapName": "THE NARROWS",
+   "note": "after THE NARROWS label, in its band | before THE NARROWS label, in its band"
+  },
+  "the-plunge": {
+   "polylines": [
+    125,
+    126
+   ],
+   "confidence": "high",
+   "mapName": "THE PLUNGE",
+   "note": "after THE PLUNGE label end | Starts at the end of the black-diamond THE PLUNGE label (~[2500,1450], outside my tiles) and runs down to VILLAGE RUN (180). | leads into the diamond of THE PLUNGE"
+  },
+  "the-shadows": {
+   "polylines": [
+    20,
+    21
+   ],
+   "confidence": "high",
+   "mapName": "THE SHADOWS",
+   "note": "glade line inside the dark-grey THE SHADOWS band, below the label | glade line inside the dark-grey THE SHADOWS band, above the label"
+  },
+  "the-zone": {
+   "polylines": [
+    248,
+    249
+   ],
+   "confidence": "high",
+   "mapName": "THE ZONE",
+   "note": "after THE ZONE text | orange terrain-park stub after THE ZONE label | above the orange pill of THE ZONE | orange terrain-park stub before the pill of THE ZONE"
+  },
+  "tomahawk": {
+   "polylines": [
+    117,
+    118
+   ],
+   "confidence": "high",
+   "mapName": "TOMAHAWK",
+   "note": "ends at the square of TOMAHAWK | blue trail: leads into the square of the blue TOMAHAWK label; passes beside the FISHER CAT SLIDE kids-zone label (not a trail) | blue trail: after the blue TOMAHAWK label, ends at Express Lane (~2256,887); the orange TOMAHAWK terrain-park line (255/254) is its fall-l"
+  },
+  "tomahawk-park": {
+   "polylines": [
+    254,
+    255
+   ],
+   "confidence": "medium",
+   "mapName": "TOMAHAWK PARK",
+   "note": "ORANGE terrain-park line after the orange TOMAHAWK label (pill), not the blue trail; same printed name as the blue TOMAHAWK trail (118/117), whose line it continues below Express Lane | orange TOMAHAWK terrain-park section below Express Lane, split from the blue Tomahawk trail | ORANGE terrain-park "
+  },
+  "tree-dancer": {
+   "polylines": [
+    2,
+    3
+   ],
+   "confidence": "high",
+   "mapName": "TREE DANCER",
+   "note": "glade line inside the blue-violet TREE DANCER band, above the label (label inline; continues as 3) | White-cased blue line inside the blue-violet TREE DANCER glade band, above the label (label + square + glade icon at ~[2677,1005]). | glade line after the TREE DANCER square+tree icon, inside its ban"
+  },
+  "triplesec": {
+   "polylines": [
+    57,
+    58
+   ],
+   "confidence": "high",
+   "mapName": "TRIPLESEC",
+   "note": "from the diamond of the TRIPLESEC label down to Upper Fall Line (59) | ends at the diamond of TRIPLESEC | from Buckhorn down to the upper end of the TRIPLESEC label | from Buckhorn down to the end of the TRIPLESEC text"
+  },
+  "turkey-shoot": {
+   "polylines": [
+    210,
+    238
+   ],
+   "confidence": "medium",
+   "mapName": "TURKEY SHOOT",
+   "note": "from Buckhorn down to Countdown; the two-line TURKEY SHOOT label sits at its junction with 238 and 62 (diamond touches 210, text runs parallel to 238) | from the Summit Lodge down-left to 210; the TURKEY SHOOT text is printed right above and parallel to it (could instead be Challenger's top: roughly"
+  },
+  "upper-arrow": {
+   "polylines": [
+    18,
+    19
+   ],
+   "confidence": "high",
+   "mapName": "UPPER ARROW",
+   "note": "branches off the Timberline junction below 108 and ends at the UPPER ARROW square (2098,1140) | from the junction at the end of Upper Timberline (~2095,985) to the square of UPPER ARROW | after the UPPER ARROW label end, down to Lower Mountain Road (Lower Arrow 204 continues below). No glade icon/ba"
+  },
+  "upper-chief": {
+   "polylines": [
+    80,
+    81
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CHIEF",
+   "note": "after the UPPER CHIEF text, down to the Chute / Lower Chief junction | from Countdown down to the diamond of UPPER CHIEF"
+  },
+  "upper-fall-line": {
+   "polylines": [
+    59,
+    60
+   ],
+   "confidence": "high",
+   "mapName": "UPPER FALL LINE",
+   "note": "from the diamond of the UPPER FALL LINE label down to the Countdown junction | short piece above the UPPER FALL LINE label, from the summit ridge | above the top of the UPPER FALL LINE label"
+  },
+  "upper-moonshadow": {
+   "polylines": [
+    182,
+    183,
+    185,
+    186
+   ],
+   "confidence": "medium",
+   "mapName": "UPPER MOONSHADOW",
+   "note": "No label on it: branches east off SIDEWINDER (131) and continues smoothly, across a road gap where RISING STAR (178) starts, as 183 and 185 into the UPPER MOONSHADOW label. | Continuation of the Upper Moonshadow line between two road gaps, leading to 185 and the label. | continues 182 (from Sidewind"
+  },
+  "upper-mountain-road": {
+   "polylines": [
+    143,
+    144,
+    145
+   ],
+   "confidence": "high",
+   "mapName": "UPPER MOUNTAIN ROAD",
+   "note": "short piece from the summit patrol hut to the circle of the UPPER MOUNTAIN ROAD label | from the summit to the first UPPER MOUNTAIN ROAD dot | between the two UPPER MOUNTAIN ROAD labels | after the UPPER MOUNTAIN ROAD label end, along the ridge and down to the junction with Easy Rider (~2520,740)"
+  },
+  "upper-sapphire": {
+   "polylines": [
+    115,
+    116
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SAPPHIRE",
+   "note": "ends at the square of UPPER SAPPHIRE | from just below the green spur 239 (~1975,630) to the square of UPPER SAPPHIRE | after the UPPER SAPPHIRE label end, to the junction at ~(2208,910)"
+  },
+  "upper-timberline": {
+   "polylines": [
+    108,
+    109
+   ],
+   "confidence": "high",
+   "mapName": "UPPER TIMBERLINE",
+   "note": "after the UPPER TIMBERLINE text, down to the junction where 19 and 107 split | after the UPPER TIMBERLINE label end, to the junction where Upper Arrow (19) and Lower Timberline (107) start | ends at the square of UPPER TIMBERLINE"
+  },
+  "upper-wild-thing": {
+   "polylines": [
+    50,
+    242
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WILD THING",
+   "note": "short piece above the UPPER WILD THING label, up to Rim Rock (49) | from the double diamond of the UPPER WILD THING label down to the Rim Rock crossing; 39 (LOWER WILD THING) continues below the crossing"
+  },
+  "upper-world-cup": {
+   "polylines": [
+    78,
+    79
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WORLD CUP",
+   "note": "from the diamond of the UPPER WORLD CUP label down to the blue trails near Red Fox Woods | below the diamond of UPPER WORLD CUP | from Countdown down to the top of the UPPER WORLD CUP label | from Countdown (below its square) down to the top of the UPPER WORLD CUP text"
+  },
+  "village-run": {
+   "polylines": [
+    180,
+    181
+   ],
+   "confidence": "high",
+   "mapName": "VILLAGE RUN",
+   "note": "after the VILLAGE RUN label end | Continues from the end of the VILLAGE RUN label (~[2560,1590], outside my tiles) through the slow zone to the Solitude Express Quad base; The Plunge, Screamin' Demon, Boomerang and Sideout end onto it. | from the corner of Lower Mountain Road at the foot of the SWIT"
+  },
+  "wardance": {
+   "polylines": [
+    94,
+    95
+   ],
+   "confidence": "high",
+   "mapName": "WARDANCE",
+   "note": "after the WARDANCE text (race area) | ends at the diamond of WARDANCE (cased line in the hatched race area)"
+  },
+  "whispering-pines": {
+   "polylines": [
+    16,
+    17
+   ],
+   "confidence": "high",
+   "mapName": "WHISPERING PINES",
+   "note": "cased line in the Whispering Pines band; ends at the WHISPERING PINES label (~2305,595), which continues as 16 | glade line inside the WHISPERING PINES band from its top (~1948,484) to the label | glade line after the WHISPERING PINES label, inside its band, ends at Easy Rider"
+  },
+  "whistler": {
+   "polylines": [
+    12,
+    13,
+    26,
+    27
+   ],
+   "confidence": "high",
+   "mapName": "WHISTLER",
+   "note": "in the lower Whistler band below Sweet Solitude; runs into the lower WHISTLER square+glade label (~2178,720); continuation of 27 across 137 | lower Whistler glade band above the lower WHISTLER label; continues 27 after it crosses the Sweet Solitude line | short line from Easy Rider (139) into the up"
+  },
+  "willies-way": {
+   "polylines": [
+    92,
+    93
+   ],
+   "confidence": "high",
+   "mapName": "WILLIE'S WAY",
+   "note": "from beside Lower Chief to the top of the WILLIE'S WAY text | below the square of WILLIE'S WAY"
+  },
+  "zip": {
+   "polylines": [
+    200,
+    201
+   ],
+   "confidence": "high",
+   "mapName": "ZIP",
+   "note": "ends at the ZIP dot | after the ZIP text"
+  },
+  "big-bang": {
+   "polylines": [
+    217,
+    218
+   ],
+   "confidence": "high",
+   "mapName": "BIG BANG",
+   "note": "branches off Tuckered Out below the summit, ends at the \u25c6\u25c6 of BIG BANG | continues after the BIG BANG label, merges into Eclipse (215) at ~3990,1160 | Runs from the end of the BIG BANG label (double diamond at 3765,771, in column 5) down to where it ends on ECLIPSE's line (215) at about (3987,1153)."
+  },
+  "black-hole": {
+   "polylines": [
+    22,
+    23
+   ],
+   "confidence": "high",
+   "mapName": "BLACK HOLE",
+   "note": "thin line inside the dark-grey BLACK HOLE glade band, above its label | inside the BLACK HOLE glade band, below its label/\u25c6\u25c6/glade icon"
+  },
+  "blue-moon": {
+   "polylines": [
+    192,
+    193
+   ],
+   "confidence": "high",
+   "mapName": "BLUE MOON",
+   "note": "Continues from the end of the BLUE MOON label to the Upper/Lower Limelight junction. | From Jackson Gore Junction into the square of the BLUE MOON label."
+  },
+  "eclipse": {
+   "polylines": [
+    215,
+    216
+   ],
+   "confidence": "high",
+   "mapName": "ECLIPSE",
+   "note": "short piece from the foot of the Black Hole band to the \u25c6 of ECLIPSE (inline label; 215 continues after it) | continues after the ECLIPSE label down the east side to the slow zone ~4047,1558; Big Bang (217) merges in at ~3990,1160, no other label below | One unbroken PDF stroke from the end of the E"
+  },
+  "expresso": {
+   "polylines": [
+    173,
+    174
+   ],
+   "confidence": "high",
+   "mapName": "EXPRESSO",
+   "note": "from the Quantum Six bottom-terminal slow zone to the \u25cf of EXPRESSO; 173 continues after the label | Runs from the EXPRESSO green circle (3981,1691) down to the Quantum Six bottom terminal slow zone (3946,1719). | Runs from the top of the Coleman Brook Express Quad (4083,1598) to the upper end of th"
+  },
+  "fast-track": {
+   "polylines": [
+    168
+   ],
+   "confidence": "high",
+   "mapName": "FAST TRACK",
+   "note": "from the Quantum Six bottom-terminal slow zone down to the \u25cf of FAST TRACK (~4019,1877); Spur Line (171) joins at ~4005,1785 | One stroke from the slow zone just below the Quantum Six bottom terminal (3945,1735), under the red 'QUAD' lift text, into the FAST TRACK green circle (4014,1868). SPUR LINE"
+  },
+  "inn-bound": {
+   "polylines": [
+    169,
+    170
+   ],
+   "confidence": "low",
+   "mapName": "INN BOUND",
+   "note": "AMBIGUOUS: sits between the end of the FAST TRACK label (~4063,1965) and the end of the INN BOUND label (~4014,2013) with no junction; 168-169-170 were drawn as one PDF path. Could equally be FAST TRACK (its continuation after the label); chose INN BOUND because the yellow slow zone that carries the"
+  },
+  "lower-limelight": {
+   "polylines": [
+    190,
+    191
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LIMELIGHT",
+   "note": "From the Blue Moon / Upper Limelight junction to the square of the LOWER LIMELIGHT label. | from the Upper Limelight / Blue Moon junction to the \u25a0 of LOWER LIMELIGHT | continues after the LOWER LIMELIGHT label down to the slow zone at the Quantum Six bottom terminal"
+  },
+  "quantum-leap": {
+   "polylines": [
+    213,
+    214
+   ],
+   "confidence": "high",
+   "mapName": "QUANTUM LEAP",
+   "note": "black line along the Quantum Six lift line from the summit to the \u25c6 of QUANTUM LEAP (~3786,1252); crosses Vortex (211) and the lift, no other label along it | continues after the QUANTUM LEAP label beside the lift down to the Quantum Six bottom terminal | Runs from the end of the QUANTUM LEAP label "
+  },
+  "rolling-thunder": {
+   "polylines": [
+    198,
+    199
+   ],
+   "confidence": "high",
+   "mapName": "ROLLING THUNDER",
+   "note": "branches off White Lightning (197), ends at the \u25c6\u25c6 of ROLLING THUNDER | continues after the ROLLING THUNDER label, ends ~3787,1461"
+  },
+  "southern-crossing": {
+   "polylines": [
+    166,
+    167
+   ],
+   "confidence": "high",
+   "mapName": "SOUTHERN CROSSING",
+   "note": "short piece from the Moonshadow crossing to the \u25cf of SOUTHERN CROSSING (Jack-a-Lope ends at that crossing) | continues after the SOUTHERN CROSSING label past the coaster to the Jackson Gore base (~3839,2100)"
+  },
+  "spur-line": {
+   "polylines": [
+    171,
+    172
+   ],
+   "confidence": "high",
+   "mapName": "SPUR LINE",
+   "note": "from the \u25cf of SPUR LINE (label beside the Coleman Brook lift, x>4019) down to Fast Track (168) | Continues SPUR LINE below its green circle (4039,1724). It stops at (4017,1776), where the red 'QUAD' of the lift label covers it. It most likely joins FAST TRACK (168), which passes under that same text"
+  },
+  "sunset-strip": {
+   "polylines": [
+    222,
+    223,
+    224
+   ],
+   "confidence": "medium",
+   "mapName": "SUNSET STRIP",
+   "note": "Continues from the end of the SUNSET STRIP label up to Jackson Gore Peak; UPPER LIMELIGHT (195) branches off it near the top. | from the summit down-left to the end of the SUNSET STRIP label; continues west of it as 223 | Leads into the circle of the SUNSET STRIP label from the south-west. Its lower"
+  },
+  "supernova": {
+   "polylines": [
+    24,
+    25,
+    28
+   ],
+   "confidence": "high",
+   "mapName": "SUPERNOVA",
+   "note": "White-cased black line in the left arm of the dark-grey glade band that ends at the SUPERNOVA label (~[3474,1250], outside my tiles; two diamonds + glade icon, checked at 8x). No other label on the band. | thin line inside the left arm of the dark-grey SUPERNOVA glade band (V-shaped band), down to i"
+  },
+  "tuckered-out": {
+   "polylines": [
+    219,
+    220,
+    221
+   ],
+   "confidence": "high",
+   "mapName": "TUCKERED OUT",
+   "note": "from the summit east to the first \u25a0TUCKERED OUT label (label ~3977,756); continues after it as 220 | Runs from the top of Jackson Gore Peak (3553,626) straight into the upper TUCKERED OUT label (blue square at 3918,743). No junction on it: BIG BANG's line (218) starts on its own ~40 px below, it doe"
+  },
+  "upper-limelight": {
+   "polylines": [
+    194,
+    195
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LIMELIGHT",
+   "note": "Leaves the diamond at the start of the UPPER LIMELIGHT label, down to the Blue Moon / Lower Limelight junction. | continues after the \u25c6 of UPPER LIMELIGHT to the Blue Moon / Lower Limelight junction ~3270,1025 | From Sunset Strip just below Jackson Gore Peak down to the end of the UPPER LIMELIGHT la"
+  },
+  "vortex": {
+   "polylines": [
+    211,
+    212
+   ],
+   "confidence": "high",
+   "mapName": "VORTEX",
+   "note": "from the summit down to the \u25c6 of VORTEX | continues after the VORTEX label, crosses the Quantum Six lift and Quantum Leap (214), ends ~3707,1008"
+  },
+  "white-lightning": {
+   "polylines": [
+    196,
+    197
+   ],
+   "confidence": "high",
+   "mapName": "WHITE LIGHTNING",
+   "note": "branches off Upper Limelight just above its label, ends at the \u25c6 of WHITE LIGHTNING | continues after the WHITE LIGHTNING label, ends ~3704,1187"
+  }
+ }
+}

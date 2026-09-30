@@ -17,6 +17,10 @@ the review page can zoom to a label whose line wasn't detected.
 
 Proposal confidence per trail = weakest of its pieces' vote shares:
 high (unanimous), medium (>= 60%), low; 'missed' = label seen but no piece.
+It is capped by the readers' own confidence: a piece whose winning name no
+reader gave at high confidence makes the trail medium (or low), so it is not
+auto-accepted. (Readers work by column, so most pieces have one reader and
+are "unanimous" by default; Okemo's readers flagged ~10 such pieces.)
 """
 import argparse
 import collections
@@ -25,6 +29,8 @@ import json
 import re
 
 WEIGHT = {'certain': 10, 'high': 3, 'medium': 2, 'low': 1}
+# how sure the most confident reader of a piece's winning name was
+SURE = {'certain': 2, 'high': 2, 'medium': 1, 'low': 0}
 # reader verdicts that are not trail names (compare the word before any ':',
 # so a trail called LIFTLINE is not taken for a LIFT)
 VERDICTS = {'LIFT', 'NOT_A_TRAIL', 'UNKNOWN', 'SPLIT', 'UNNAMED'}
@@ -71,6 +77,7 @@ def main() -> None:
 
     votes = collections.defaultdict(collections.Counter)
     info = collections.defaultdict(list)
+    sure = collections.defaultdict(lambda: collections.defaultdict(int))
     missed = []
     for f in sorted(glob.glob(a.readings)):
         r = json.load(open(f))
@@ -85,10 +92,11 @@ def main() -> None:
                 key = (name, roster_id(L))
             votes[L['id']][key] += WEIGHT.get(L.get('confidence'), 1)
             info[L['id']].append(L)
+            sure[L['id']][key] = max(sure[L['id']][key], SURE.get(L.get('confidence'), 0))
         missed += r.get('missed', [])
 
     new = {}
-    props = collections.defaultdict(lambda: {'polylines': [], 'share': [], 'mapName': None, 'notes': []})
+    props = collections.defaultdict(lambda: {'polylines': [], 'share': [], 'sure': [], 'mapName': None, 'notes': []})
     for pid, c in votes.items():
         (name, rid), w = c.most_common(1)[0]
         if name.startswith('#') or pid in unnamed:
@@ -101,6 +109,7 @@ def main() -> None:
         p = props[tid]
         p['polylines'].append(pid)
         p['share'].append(w / sum(c.values()))
+        p['sure'].append(sure[pid][(name, rid)])
         p['mapName'] = name
         p['notes'] += [L['note'] for L in info[pid] if L.get('note')]
 
@@ -123,7 +132,8 @@ def main() -> None:
         if not p['polylines']:
             return 'missed'
         low = min(p['share'])
-        return 'high' if low >= 0.99 else 'medium' if low >= 0.6 else 'low'
+        level = 2 if low >= 0.99 else 1 if low >= 0.6 else 0
+        return ('low', 'medium', 'high')[min(level, min(p['sure']))]
 
     new_trails = [dict(id=k, name=v['name'], difficulty=(v['colors'].most_common(1) or [('blue', 0)])[0][0] or 'blue',
                        peak='new on map', isNew=True) for k, v in new.items()]
