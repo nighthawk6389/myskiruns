@@ -48,6 +48,12 @@ def main() -> None:
     tiles = {t['tile']: t for t in index['tiles']}
     roster = [dict(id=i, name=n, difficulty=d, peak=p) for i, _q, n, d, p in ROSTER_RE.findall(open(a.roster).read())]
     roster_ids = {t['id'] for t in roster}
+    # readers of a new map (prompts/0-new-map.md) give no rosterId: match the
+    # printed name to a roster name instead
+    by_name = {slug(t['name'].replace("'", '')): t['id'] for t in roster}
+    def roster_id(rec):
+        rid = rec.get('rosterId')
+        return rid if rid in roster_ids else by_name.get(slug((rec.get('mapName') or '').replace("'", '').replace('’', '')))
     polys = json.load(open(a.polylines))['polylines']
 
     votes = collections.defaultdict(collections.Counter)
@@ -60,7 +66,7 @@ def main() -> None:
             if not name or name.startswith(('LIFT', 'NOT_A_TRAIL', 'UNKNOWN', 'SPLIT')):
                 key = ('#' + (name.split(':')[0] or 'UNKNOWN'), None)
             else:
-                key = (name, L.get('rosterId') if L.get('rosterId') in roster_ids else None)
+                key = (name, roster_id(L))
             votes[L['id']][key] += WEIGHT.get(L.get('confidence'), 1)
             info[L['id']].append(L)
         missed += r.get('missed', [])
@@ -84,7 +90,7 @@ def main() -> None:
 
     hints = collections.defaultdict(list)
     for m in missed:
-        rid = m.get('rosterId') if m.get('rosterId') in roster_ids else None
+        rid = roster_id(m)
         tid = rid or 'new-' + slug(m.get('mapName'))
         if not rid:
             new.setdefault(tid, {'name': (m.get('mapName') or '?').title(), 'colors': collections.Counter()})
