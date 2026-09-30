@@ -5,6 +5,8 @@ import * as stowe from './data/resorts/stowe/trails';
 import stowePaths from './data/resorts/stowe/trailPaths.json';
 import * as okemo from './data/resorts/okemo/trails';
 import okemoPaths from './data/resorts/okemo/trailPaths.json';
+import * as sugarbush from './data/resorts/sugarbush/trails';
+import sugarbushPaths from './data/resorts/sugarbush/trailPaths.json';
 import * as jayPeak from './data/resorts/jay-peak/trails';
 import jayPeakPaths from './data/resorts/jay-peak/trailPaths.json';
 
@@ -53,6 +55,14 @@ export const RESORTS: Resort[] = [
     peaks: okemo.peaks,
     trails: okemo.trails,
     paths: (okemoPaths as { trails: Record<string, TrailPath> }).trails,
+  },
+  {
+    id: 'sugarbush',
+    name: 'Sugarbush',
+    mapSrc: '/maps/sugarbush.jpg',
+    peaks: sugarbush.peaks,
+    trails: sugarbush.trails,
+    paths: (sugarbushPaths as { trails: Record<string, TrailPath> }).trails,
   },
   {
     id: 'jay-peak',

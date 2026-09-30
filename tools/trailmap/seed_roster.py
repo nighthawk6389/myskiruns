@@ -42,6 +42,9 @@ def slug(s: str) -> str:
 def title(n: str) -> str:
     words = []
     for w in n.split(' '):
+        if re.fullmatch(r'(?:[A-Z]\.)+[A-Z]', w):  # initials (F.I.S.): norm() took the last dot
+            words.append(w + '.')
+            continue
         # keep S-53, T-LINE style tokens readable; lowercase after apostrophes
         parts = w.split('-')
         words.append('-'.join(p[:1] + p[1:].lower() for p in parts))
