@@ -1,6 +1,14 @@
 {
  "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
  "trails": {
+  "birch-glades": {
+   "noLine": true,
+   "label": [
+    20.21,
+    40.89
+   ],
+   "confidence": "high"
+  },
   "chapel-lane": {
    "polylines": [
     0
@@ -24,6 +32,14 @@
    "confidence": "high",
    "mapName": "CHIN CLIP RUNOUT",
    "note": "From the bottom of Chin Clip (~2805,1082) past CHIN CLIP RUNOUT square to the Midway flats (~2622,1201). | blue continuation of Chin Clip line; CHIN CLIP RUNOUT label+square at src ~(2761,1145), just west of tile"
+  },
+  "christie-glades": {
+   "noLine": true,
+   "label": [
+    30.75,
+    35.68
+   ],
+   "confidence": "high"
   },
   "cliff-trail": {
    "polylines": [
@@ -199,6 +215,14 @@
    "confidence": "high",
    "mapName": "LOOKOUT",
    "note": "below the LOOKOUT label | above the Lookout diamonds; no other label"
+  },
+  "lookout-glades": {
+   "noLine": true,
+   "label": [
+    42.66,
+    31.69
+   ],
+   "confidence": "high"
   },
   "lookout-loop": {
    "polylines": [
@@ -412,6 +436,14 @@
    "mapName": "MAIDEN LANE",
    "note": "Through MAIDEN LANE diamond."
   },
+  "mary-mason-glades": {
+   "noLine": true,
+   "label": [
+    51.61,
+    41.95
+   ],
+   "confidence": "high"
+  },
   "midway": {
    "polylines": [
     37,
@@ -457,6 +489,14 @@
    "confidence": "medium",
    "mapName": "NOSE DIVE",
    "note": "blue segment between the end of black Nosedive and the Lower Nosedive square | From the junction at the bottom of the black Upper Nosedive line (~2330,804) past NOSE DIVE square to (~2256,978)."
+  },
+  "nosedive-glades": {
+   "noLine": true,
+   "label": [
+    52.53,
+    27.38
+   ],
+   "confidence": "high"
   },
   "perry-merrill": {
    "polylines": [
@@ -506,6 +546,14 @@
    "mapName": "S-53",
    "note": "passes the S-53 diamond"
   },
+  "s-53-glades": {
+   "noLine": true,
+   "label": [
+    44.83,
+    31.45
+   ],
+   "confidence": "high"
+  },
   "sepps-run": {
    "polylines": [
     142
@@ -546,6 +594,14 @@
    "confidence": "high",
    "mapName": "SUNRISE",
    "note": "From SUNRISE square down to Lower Lord junction. | Short piece just above inline SUNRISE label."
+  },
+  "sunrise-glades": {
+   "noLine": true,
+   "label": [
+    24.9,
+    36.82
+   ],
+   "confidence": "high"
   },
   "switchback": {
    "polylines": [
@@ -592,6 +648,14 @@
    "confidence": "high",
    "mapName": "TOWNHOUSE",
    "note": "down to TOWNHOUSE green dot | below TOWNHOUSE label (inline)"
+  },
+  "tres-amigos-glades": {
+   "noLine": true,
+   "label": [
+    38.73,
+    33.45
+   ],
+   "confidence": "high"
   },
   "tyro": {
    "polylines": [
@@ -681,6 +745,14 @@
    "confidence": "high",
    "mapName": "UPPER T-LINE",
    "note": "Through UPPER T-LINE square."
+  },
+  "whitewater-glades": {
+   "noLine": true,
+   "label": [
+    65.43,
+    34.78
+   ],
+   "confidence": "high"
   },
   "base-camp-road": {
    "polylines": [
@@ -806,6 +878,22 @@
    "confidence": "high",
    "mapName": "MEADOWS",
    "note": "Green line from the base (~2828,1595) NE under the Meadows Quad label toward the MEADOWS circle/label (~2994,1484, outside my tiles). | continuation after inline MEADOWS label | from end of Upper Meadows through Meadows circle to label"
+  },
+  "meadows-east-glades": {
+   "noLine": true,
+   "label": [
+    74.94,
+    53.94
+   ],
+   "confidence": "high"
+  },
+  "ridge-glades": {
+   "noLine": true,
+   "label": [
+    78.27,
+    45.2
+   ],
+   "confidence": "high"
   },
   "ridge-run": {
    "polylines": [
