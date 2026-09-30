@@ -1,0 +1,93 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "beaver-pond-glade": {
+   "noLine": true,
+   "label": [
+    71.65,
+    38.79
+   ],
+   "confidence": "high"
+  },
+  "bonaventure-glade": {
+   "noLine": true,
+   "label": [
+    29.15,
+    46.28
+   ],
+   "confidence": "high"
+  },
+  "buck-woods": {
+   "noLine": true,
+   "label": [
+    35.43,
+    56.94
+   ],
+   "confidence": "high"
+  },
+  "doe-woods": {
+   "noLine": true,
+   "label": [
+    31.3,
+    57.91
+   ],
+   "confidence": "high"
+  },
+  "everglade": {
+   "noLine": true,
+   "label": [
+    56.07,
+    33.33
+   ],
+   "confidence": "high"
+  },
+  "expo-glade": {
+   "noLine": true,
+   "label": [
+    48.62,
+    44.08
+   ],
+   "confidence": "high"
+  },
+  "hells-woods": {
+   "noLine": true,
+   "label": [
+    23.52,
+    37.52
+   ],
+   "confidence": "high"
+  },
+  "kitz-woods": {
+   "noLine": true,
+   "label": [
+    21.32,
+    28.05
+   ],
+   "confidence": "high"
+  },
+  "north-glade": {
+   "noLine": true,
+   "label": [
+    55.72,
+    52.88
+   ],
+   "confidence": "high"
+  },
+  "show-off-glade": {
+   "noLine": true,
+   "label": [
+    29.52,
+    48.9
+   ],
+   "confidence": "high"
+  },
+  "stateside-glade": {
+   "noLine": true,
+   "label": [
+    15.79,
+    48.27
+   ],
+   "confidence": "high"
+  }
+ }
+}

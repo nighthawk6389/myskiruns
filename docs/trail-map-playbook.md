@@ -74,6 +74,20 @@ Download the resort's trail map PDF (not the web JPG) and run
   hatch pattern is 1.0 pt black strokes (keep them out with `--max-width`),
   and the extractor drops small closed loops (a legend icon had come out as
   a piece). Check the whole map on zoomed crops with the pieces drawn on.
+  Sugarbush 2025-26 too (0.75 pt strokes), except three odd trails: two
+  drawn in pure black or at 1.0 pt (`--append` with `--min-width`) and one
+  as a filled outline (`--filled`); tally every stroke colour/width before
+  trusting the first extraction.
+- **Labels as real text (Jay Peak 2025-26):** a painted map that draws
+  *no trail lines at all*, but every trail name is PDF text (one font and
+  size range) with its difficulty symbol drawn just before it. The trail
+  list then comes straight from `page.get_text('dict')` spans plus the
+  nearest symbol fill (no readers): drop the non-trail spans (lodges,
+  first aid), dedupe labels drawn twice (halo + fill), and look for names
+  printed only in an inset. With no pieces, every overlay is a trace
+  along the painted cut (step 3b), and glades, parks and inset-only names
+  are markers at the label. `render_tiles.py` tiles the whole image when
+  there are no pieces.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.

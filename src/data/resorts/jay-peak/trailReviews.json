@@ -1,0 +1,82 @@
+{
+ "reviews": {
+  "rabbit-hole": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill",
+   "at": "2026-09-30T12:00:48.000Z",
+   "by": "claude",
+   "labelAt": [
+    24.74,
+    56.01
+   ]
+  },
+  "rabbit-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill",
+   "at": "2026-09-30T12:00:48.000Z",
+   "by": "claude",
+   "labelAt": [
+    28.14,
+    59.31
+   ]
+  },
+  "shakedown": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill",
+   "at": "2026-09-30T12:00:48.000Z",
+   "by": "claude",
+   "labelAt": [
+    24.44,
+    63.16
+   ]
+  },
+  "the-gully": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill",
+   "at": "2026-09-30T12:00:48.000Z",
+   "by": "claude",
+   "labelAt": [
+    26.8,
+    54.06
+   ]
+  },
+  "the-rusch": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill",
+   "at": "2026-09-30T12:00:48.000Z",
+   "by": "claude",
+   "labelAt": [
+    29.78,
+    52.41
+   ]
+  },
+  "sis-boom-bah": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "NO CUT: printed only in the SIDE VIEW inset (not on the main painting); marker at its inset label",
+   "at": "2026-09-30T12:00:48.000Z",
+   "by": "claude",
+   "labelAt": [
+    88.47,
+    5.25
+   ]
+  }
+ }
+}

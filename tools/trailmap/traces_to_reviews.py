@@ -10,6 +10,11 @@ also added to the recheck file so the review page opens it pre-filled with
 Reviews hold whole pieces: a trace that uses only part of a piece (its
 `partial`) is warned about; cut that piece with split_pieces.py and put the
 part's id in the trace first (Okemo: Turkey Shoot on piece 210).
+
+With --labels (labels.json from seed_roster.py) and --image, a trace with no
+pieces and no points (a reader found no cut to follow: a glade painted as
+trees, a park drawn as an area) becomes a "no-line" review with a marker at
+the trail's first label instead (Jay Peak, whose map draws no lines).
 """
 import argparse
 import datetime
@@ -23,7 +28,13 @@ def main():
     ap.add_argument('--traces', required=True)
     ap.add_argument('--reviews', required=True)
     ap.add_argument('--recheck', required=True, help='JSON {trailId: why}; created or extended')
+    ap.add_argument('--labels', help='labels.json from seed_roster.py: empty traces become label markers')
+    ap.add_argument('--image', help='the map image (with --labels), for its size')
     a = ap.parse_args()
+    labels = json.load(open(a.labels)) if a.labels else {}
+    if a.labels:
+        from PIL import Image
+        W, H = Image.open(a.image).size
     doc = json.load(open(a.reviews)) if os.path.exists(a.reviews) else {'reviews': {}}
     recheck = json.load(open(a.recheck)) if os.path.exists(a.recheck) else {}
     now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.000Z')
@@ -40,6 +51,9 @@ def main():
                 'status': 'confirmed', 'polylines': t.get('pieces') or [], 'drawn': t.get('traced') or [],
                 'mapDifficulty': None, 'note': (t.get('note') or '')[:300], 'at': now, 'by': 'claude',
             }
+            if not t.get('pieces') and not t.get('traced') and labels.get(t['id'], {}).get('positions'):
+                x, y = labels[t['id']]['positions'][0]
+                doc['reviews'][t['id']].update(status='no-line', labelAt=[round(100 * x / W, 2), round(100 * y / H, 2)])
             recheck[t['id']] = f"Traced by a reader ({t.get('confidence')} confidence): {(t.get('note') or '')[:200]}"
             added.append(t['id'])
             if any(t.get('partial', {}).values()):

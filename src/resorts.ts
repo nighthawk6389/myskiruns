@@ -5,6 +5,8 @@ import * as stowe from './data/resorts/stowe/trails';
 import stowePaths from './data/resorts/stowe/trailPaths.json';
 import * as okemo from './data/resorts/okemo/trails';
 import okemoPaths from './data/resorts/okemo/trailPaths.json';
+import * as jayPeak from './data/resorts/jay-peak/trails';
+import jayPeakPaths from './data/resorts/jay-peak/trailPaths.json';
 
 /** A trail's overlay: line segments and/or a label marker, in percent of the
  * map image (see scripts/applyTrailProposals.mjs). */
@@ -51,6 +53,14 @@ export const RESORTS: Resort[] = [
     peaks: okemo.peaks,
     trails: okemo.trails,
     paths: (okemoPaths as { trails: Record<string, TrailPath> }).trails,
+  },
+  {
+    id: 'jay-peak',
+    name: 'Jay Peak',
+    mapSrc: '/maps/jay-peak.jpg',
+    peaks: jayPeak.peaks,
+    trails: jayPeak.trails,
+    paths: (jayPeakPaths as { trails: Record<string, TrailPath> }).trails,
   },
 ];
 

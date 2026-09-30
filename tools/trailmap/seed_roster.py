@@ -6,11 +6,13 @@ map (prompts/0-new-map.md), instead of from memory.
         --trails src/data/resorts/stowe/trails.ts --labels work/labels.json
 
 Per printed name (normalised): difficulty = majority of the reported symbols
-(circle/square/diamond/double-diamond), else the majority colour of the line
-pieces named after it; glade = majority of reports; area = majority; label
+(circle/square/diamond/double-diamond; a tie goes to the harder one), else
+the majority colour of the line pieces named after it; glade = majority of
+reports; park = any report on a park pill or a freestyle line; area = majority; label
 position(s) = reports clustered within 200 source px (a name printed twice
-far apart keeps both). Names that only appear on line pieces are included
-too. Writes trails.ts (sorted by area, then name) and labels.json
+far apart keeps both); display name = the reports' `printed` spelling if
+given (a PDF's own text), else title case. Names that only appear on line
+pieces are included too. Writes trails.ts (sorted by area, then name) and labels.json
 ({id: {name, positions, symbols, colors}}) for review hints and glade markers.
 Everything here is a proposal: the human review decides.
 """
@@ -20,6 +22,7 @@ import glob
 import json
 import math
 import re
+import unicodedata
 
 SYMBOL = {'circle': 'green', 'square': 'blue', 'diamond': 'black', 'double-diamond': 'double-black'}
 SKIP = ('LIFT', 'NOT_A_TRAIL', 'UNKNOWN', 'SPLIT')
@@ -32,6 +35,7 @@ def norm(name: str) -> str:
 
 
 def slug(s: str) -> str:
+    s = ''.join(c for c in unicodedata.normalize('NFKD', s) if not unicodedata.combining(c))  # ANDRÉ -> andre
     return re.sub(r'[^a-z0-9]+', '-', s.lower().replace("'", '')).strip('-')
 
 
@@ -59,7 +63,8 @@ def main() -> None:
 
     info = collections.defaultdict(lambda: {'symbols': collections.Counter(), 'glade': collections.Counter(),
                                             'area': collections.Counter(), 'colors': collections.Counter(),
-                                            'positions': []})
+                                            'positions': [], 'printed': collections.Counter(),
+                                            'park': collections.Counter()})
     for f in sorted(glob.glob(a.readings)):
         r = json.load(open(f))
         for lab in r.get('labels', []):
@@ -69,6 +74,9 @@ def main() -> None:
             e = info[n]
             e['symbols'][lab.get('symbol') or 'none-visible'] += 1
             e['glade'][bool(lab.get('glade'))] += 1
+            e['park'][bool(lab.get('park'))] += 1
+            if lab.get('printed'):  # the name in the map's own case (a PDF's text), else title()
+                e['printed'][lab['printed']] += 1
             if lab.get('area') in area_ids:
                 e['area'][lab['area']] += 1
             if lab.get('labelSrc'):
@@ -81,10 +89,11 @@ def main() -> None:
 
     trails, labels = [], {}
     for n, e in info.items():
-        sym = [(s, c) for s, c in e['symbols'].most_common() if s in SYMBOL]
+        sym = sorted(((s, c) for s, c in e['symbols'].items() if s in SYMBOL),
+                     key=lambda sc: (-sc[1], -list(SYMBOL).index(sc[0])))
         colors = [(c, k) for c, k in e['colors'].most_common() if c in ('green', 'blue', 'black')]
         glade = e['glade'][True] > e['glade'][False]
-        park = e['colors'].most_common(1)[0][0] == 'freestyle' if e['colors'] else False
+        park = (e['colors'].most_common(1)[0][0] == 'freestyle' if e['colors'] else False) or e['park'][True] > 0
         difficulty = (SYMBOL[sym[0][0]] if sym else colors[0][0] if colors
                       else a.glade_difficulty if glade else 'blue')
         clusters = []
@@ -98,7 +107,7 @@ def main() -> None:
                 clusters.append({'pts': [p], 'mean': list(p)})
         tid = slug(n)
         trails.append({
-            'id': tid, 'name': title(n), 'difficulty': difficulty,
+            'id': tid, 'name': e['printed'].most_common(1)[0][0] if e['printed'] else title(n), 'difficulty': difficulty,
             'peak': e['area'].most_common(1)[0][0] if e['area'] else area_ids[0],
             'glade': glade, 'park': park,
         })
