@@ -133,6 +133,31 @@ unanimous line, 18 printed with no line (11 glades) pre-filled as label
 markers for the reviewer to confirm. Watch for trail names that start with a
 reader verdict word (LIFTLINE was once dropped as a LIFT).
 
+### 3b. Accept the easy ones, trace the hard ones (before the review)
+
+What the Stowe review showed: all 101 unanimous proposals and all 11 glades
+were accepted unchanged, while the reviewer's time went to (a) short trails
+printed with a name but no line and (b) traverses and trails that share
+pieces (Crossover, Jake's Ride), which they redrew by hand. So:
+
+- **Auto-accept** (`aggregate_readings.py --labels labels.json`): unanimous
+  proposals and glades printed with no line (marker at the label) are
+  marked `auto`; the review page leaves them out of "Needs action" (they
+  show under All as "auto") and `trails:apply` uses them as proposed.
+- **Trace pass** (`prompts/4-trace.md`, ~5 trails per reader) for trails
+  with no line and for medium/low or split proposals; load the result with
+  `traces_to_reviews.py` so the reviewer confirms instead of drawing.
+  Stowe, blind vs. the reviewer's drawings (`score_traces.py`): 8/13 within
+  25 px, ~3 min and ~200k tokens for 3 readers. It gets fall-line cuts and
+  multi-piece runs right; the misses were two traverses traced down the
+  fall line (prompt since fixed), one trail stopped early and one boundary
+  between two names read differently.
+- The label's text direction does **not** give a trail's direction (Stowe:
+  40-90° off the reviewer's lines); don't use it.
+- `trails:apply` snaps a hand-drawn stretch onto a line piece no other
+  trail uses when >= 90% of the piece lies within 15 px of the stroke, so
+  hand-traced traverses end up on the exact line.
+
 ### 4. Human review
 
 Publish `tools/trailmap/review/` (the page, `data.json`, and the map image as

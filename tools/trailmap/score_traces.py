@@ -57,6 +57,9 @@ def main():
 
     passed = total = 0
     for f in sorted(glob.glob(a.traces)):
+        doc = json.load(open(f))
+        if not isinstance(doc, dict) or 'trails' not in doc:
+            continue  # not a trace file
         for t in json.load(open(f))['trails']:
             path = os.path.join(a.reviews, t['id'] + '.json')
             if not os.path.exists(path):
