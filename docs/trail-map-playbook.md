@@ -89,6 +89,15 @@ Download the resort's trail map PDF (not the web JPG) and run
   along the painted cut (step 3b), and glades, parks and inset-only names
   are markers at the label. `render_tiles.py` tiles the whole image when
   there are no pieces.
+  Jay Peak's trace pass: 9 tracer groups, 71 trails, ~3.9M tokens and ~4 h
+  of wall-clock in all (the base-area group alone ran over 2 h: slow zones,
+  parks and lifts crowd it). Every trace was checked on a zoomed crop;
+  65 kept as lines; 6 whose label sits in painted trees with no cut became
+  markers (4 were the tracers' own NO CUT calls; Tuckerman's Chute and
+  Deliverance were low-confidence guesses rejected on the crop, one of them
+  running 30 px from another trail's line). A session limit killed 8 of the
+  first 12 tracer runs mid-way; re-run those groups as fresh workflows
+  with their own output directory (resume replays the failures).
 - **Both at once (Whiteface 2025-26):** vector trail strokes *and* every
   name as text in the trail's colour, with its symbol beside it. No readers
   were needed: each name was matched to the stroke it is printed along, or
