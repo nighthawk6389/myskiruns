@@ -89,6 +89,16 @@ Download the resort's trail map PDF (not the web JPG) and run
   along the painted cut (step 3b), and glades, parks and inset-only names
   are markers at the label. `render_tiles.py` tiles the whole image when
   there are no pieces.
+- **Both at once (Whiteface 2025-26):** vector trail strokes *and* every
+  name as text in the trail's colour, with its symbol beside it. No readers
+  were needed: each name was matched to the stroke it is printed along, or
+  whose ends sit at the two ends of the text (this map prints most names in
+  a gap of their own line), names spread along unlabelled continuations,
+  and ~40 unclear pieces were settled on zoomed crops (four strokes cut
+  where two trails meet). Where the name fills the gap, the overlay gets a
+  stretch drawn along the name's own characters (`page.get_texttrace()`),
+  so trails whose only "line" is their label still get one. The official
+  PDF sat behind a bot check; skimap.org had the same file.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.

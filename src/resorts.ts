@@ -9,6 +9,8 @@ import * as sugarbush from './data/resorts/sugarbush/trails';
 import sugarbushPaths from './data/resorts/sugarbush/trailPaths.json';
 import * as jayPeak from './data/resorts/jay-peak/trails';
 import jayPeakPaths from './data/resorts/jay-peak/trailPaths.json';
+import * as whiteface from './data/resorts/whiteface/trails';
+import whitefacePaths from './data/resorts/whiteface/trailPaths.json';
 
 /** A trail's overlay: line segments and/or a label marker, in percent of the
  * map image (see scripts/applyTrailProposals.mjs). */
@@ -71,6 +73,14 @@ export const RESORTS: Resort[] = [
     peaks: jayPeak.peaks,
     trails: jayPeak.trails,
     paths: (jayPeakPaths as { trails: Record<string, TrailPath> }).trails,
+  },
+  {
+    id: 'whiteface',
+    name: 'Whiteface',
+    mapSrc: '/maps/whiteface.jpg',
+    peaks: whiteface.peaks,
+    trails: whiteface.trails,
+    paths: (whitefacePaths as { trails: Record<string, TrailPath> }).trails,
   },
 ];
 
