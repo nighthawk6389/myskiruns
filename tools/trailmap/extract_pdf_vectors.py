@@ -60,9 +60,13 @@ def main():
     ap.add_argument('--scale', type=float, default=2.5, help='image px per PDF point')
     ap.add_argument('--color', action='append', required=True, help='class=r,g,b (0-1, 2 decimals)')
     ap.add_argument('--max-width', type=float, default=1.0, help='ignore thicker strokes (lifts)')
+    ap.add_argument('--min-width', type=float, default=0.0,
+                    help='ignore thinner strokes (with --append: pick up one odd width of a colour)')
     ap.add_argument('--min-length', type=float, default=4.0, help='drop pieces shorter than this (points)')
     ap.add_argument('--max-icon', type=float, default=10.0,
                     help='drop closed runs smaller than this (points): icons such as legend symbols')
+    ap.add_argument('--filled', action='store_true',
+                    help='also take filled paths whose outline is a trail colour (Sugarbush draws one line so)')
     ap.add_argument('--image', help='write the map image here (omit with --append)')
     ap.add_argument('--append', action='store_true',
                     help='add pieces for these colours to an existing --out, keeping its ids')
@@ -85,7 +89,9 @@ def main():
 
     pieces = []
     for d in page.get_drawings():
-        if d['type'] != 's' or not d.get('color') or (d.get('width') or 0) > a.max_width:
+        width = d.get('width') or 0
+        kinds = ('s', 'fs') if a.filled else ('s',)
+        if d['type'] not in kinds or not d.get('color') or not a.min_width <= width <= a.max_width:
             continue
         cls = classes.get(tuple(round(v, 2) for v in d['color']))
         if not cls:
