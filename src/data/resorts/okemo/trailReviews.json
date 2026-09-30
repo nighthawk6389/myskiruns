@@ -1,0 +1,489 @@
+{
+ "reviews": {
+  "galaxy-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Printed with no line: a beginner area by carpets 2 and 3 at the Clock Tower base; a marker at the label. The trace reader found no distinct run.",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude",
+   "labelAt": [
+    33.42,
+    74.92
+   ]
+  },
+  "kettle-brook": {
+   "status": "confirmed",
+   "polylines": [
+    156,
+    155,
+    157
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Starts at the junction where upper Homeward Bound (225) ends and Gordon's Garden (252) begins (~2063,1808). 156 runs down to the end of the KETTLE BROOK label (2045,1910), which reads back to its circle (1935,1954). 155 then 157 continue west below the Gordon's Garden park (crossing the Vermont Fami",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "lower-mountain-road": {
+   "status": "confirmed",
+   "polylines": [
+    140,
+    234,
+    231,
+    232,
+    203,
+    202
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Begins at the open hub at the foot of Coleman Brook (~2815,1100) where Mountain Road ends: 140 (collinear with the dash after the lower MOUNTAIN ROAD label) -> under the Solitude Express Quad -> 234 -> upper LOWER MOUNTAIN ROAD label (2557,1207 to circle 2388,1290) -> 231 west across the Upper/Lower",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "mountain-road": {
+   "status": "confirmed",
+   "polylines": [
+    142,
+    141
+   ],
+   "drawn": [
+    [
+     2953,
+     1031
+    ],
+    [
+     2930,
+     1046
+    ],
+    [
+     2906,
+     1060
+    ],
+    [
+     2882,
+     1074
+    ],
+    [
+     2864,
+     1086
+    ],
+    [
+     2850,
+     1093
+    ],
+    [
+     2828,
+     1100
+    ],
+    [
+     2806,
+     1107
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Upper Mountain Road (143) and Easy Rider (138) end at a junction (~2527,738); Mountain Road starts there: 142 into the circle of the upper MOUNTAIN ROAD label (2751,861); after the label, 141 goes through Jackson Gore Junction (~2900,965) and bends into the second MOUNTAIN ROAD label (2957,1037 to c",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "switchback": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     2293,
+     1319
+    ],
+    [
+     2298,
+     1342
+    ],
+    [
+     2304,
+     1368
+    ],
+    [
+     2310,
+     1394
+    ],
+    [
+     2316,
+     1418
+    ],
+    [
+     2321,
+     1436
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "No drawn line. The vertical SWITCHBACK label sits on open snow at the east edge of the tree island between Lower Mountain Road's upper leg (231) and its lower leg. Its circle (2296,1328) is just below the upper leg and its text ends (2323,1430) at the hairpin corner of 232, where Village Run (181) s",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "turkey-shoot": {
+   "status": "confirmed",
+   "polylines": [
+    238,
+    256
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Piece 210 split at the Challenger/Turkey Shoot junction (~1599,552): the lower part (256) is Turkey Shoot, the upper curve from Buckhorn stays 210 (Challenger). Uses 238 (Summit Lodge down-left to 210) plus only the LOWER part of 210, from where 238 joins it down to Countdown. 210's upper curve from",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "rum-run": {
+   "status": "confirmed",
+   "polylines": [
+    207,
+    206,
+    245
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "207+206 are certain: the RUM RUN label interrupts this line, and the painted cut runs from the summit plateau (~1729,500) to Upper Mountain Road (~1838,470). 245 is uncertain. It is a white-cased blue line in its own thin blue band just above the label, running from UMR near the lodge pointer and ho",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "sundog": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1341,
+     335
+    ],
+    [
+     1348,
+     350
+    ],
+    [
+     1353,
+     368
+    ],
+    [
+     1358,
+     385
+    ],
+    [
+     1361,
+     395
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "No drawn line. The vertical SUNDOG label (green circle at the top, beside the summit fire tower) lies on a painted open corridor that runs from the summit down to Rim Rock (49), which it meets at ~1361,395. The trace follows that corridor and label. OpenStreetMap agrees: Sun Dog runs from the summit",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "scooter": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1430,
+     909
+    ],
+    [
+     1440,
+     922
+    ],
+    [
+     1446,
+     945
+    ],
+    [
+     1452,
+     967
+    ],
+    [
+     1457,
+     985
+    ],
+    [
+     1459,
+     996
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "No drawn line. The vertical SCOOTER label runs down an open strip beside a tree island, from the end of Muellers' Run 63 (~1427,906), where Drop Off also arrives, to Link at the LINK square (~1459,996, end of 208). The trace follows the label. OpenStreetMap agrees: Scooter runs down to Link.",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "drop-off": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1542,
+     886
+    ],
+    [
+     1515,
+     891
+    ],
+    [
+     1488,
+     898
+    ],
+    [
+     1462,
+     906
+    ],
+    [
+     1433,
+     911
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "No drawn line. DROP OFF is printed across the slope in a painted cut that links Upper World Cup to the Muellers' Run end. The trace runs from Upper World Cup (~1542,886, behind its label, between the letters of WORLD) down-left to the Muellers'/Scooter junction (~1433,911). It is a traverse, not a f",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "sidekick": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1897,
+     1074
+    ],
+    [
+     1907,
+     1080
+    ],
+    [
+     1926,
+     1087
+    ],
+    [
+     1946,
+     1095
+    ],
+    [
+     1966,
+     1102
+    ],
+    [
+     1977,
+     1109
+    ],
+    [
+     1981,
+     1127
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "No drawn line; a short traverse, not a fall-line run (label is shallow). The SIDEKICK label runs ESE across the open ridge top from Searle's Way's lower bend (101 at ~1897,1074; diamond 1907,1080) to the top of Black Out (98, 1980,1130), just above the Black Ridge Triple top (1958,1113); Jolly Green",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "searles-way": {
+   "status": "confirmed",
+   "polylines": [
+    102,
+    103,
+    101
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Whole pieces. 102 starts in a cut ~30 px west of Jolly Green Giant (1801,730; no line drawn to JGG) and is joined at (1791,785) by the unlabeled black connector 103 from Nor'Easter (its west end 9 px from 85); 102 runs into the SEARLE'S WAY diamond (1818,903); after the text (to 1886,990) 101 contin",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "rt-103": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     2200,
+     926
+    ],
+    [
+     2185,
+     937
+    ],
+    [
+     2165,
+     952
+    ],
+    [
+     2145,
+     967
+    ],
+    [
+     2125,
+     982
+    ],
+    [
+     2107,
+     991
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "No drawn line; a cross-slope connector. The RT. 103 label (square 2140,971 to the '3' at 2183,939) lies in open snow; its axis runs up-right into the Cutter's Folly / Upper Sapphire / Express Lane / Lower Sapphire junction (~2200,926) and down-left, under the Evergreen Summit Express, into the Upper",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "tomahawk": {
+   "status": "confirmed",
+   "polylines": [
+    118,
+    117
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Blue trail, whole pieces. 118 starts just below the unlabeled green spur 239 off Sweet Solitude (2004,630; spur not included), passes the FISHER CAT SLIDE kids-zone icon into the TOMAHAWK square (2115,735); after the text (to 2182,800, where the Whistler glade band merges in) 117 runs to Express Lan",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "tomahawk-park": {
+   "status": "confirmed",
+   "polylines": [
+    255,
+    254
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Orange terrain-park line only, whole pieces. 255 starts ~35 px below Express Lane (2290,928), on the extension of blue Tomahawk (117) across Express Lane; orange pill (2323,983) and orange TOMAHAWK text to ~2372,1062; 254 continues to 2411,1122, ~25 px above Ridge Runner (227), where the park ends. ",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "jack-a-lope": {
+   "status": "confirmed",
+   "polylines": [
+    163,
+    165,
+    164
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Whole run is drawn: 163 from the Solitude base (open snow by the Morning Star Triple top, ~3109,1684) under the lift label, road gap, 165 into the label dot, 164 to the Moonshadow crossing (~3462,1815) where Southern Crossing (167) starts. Promenade (175) tees into 163 at ~3179,1712.",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "upper-moonshadow": {
+   "status": "confirmed",
+   "polylines": [
+    182,
+    183,
+    185,
+    186
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Whole run is drawn: 182 branches east off the Sidewinder slope (~3029,1382), road gap where Rising Star (178) leaves (~3255,1430), 183, road gap (~3362,1486), 185 into the label square, 186 below the label to the Jack-a-Lope/Southern Crossing crossing (~3466,1809); Lower Moonshadow (187) follows.",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "sunset-strip": {
+   "status": "confirmed",
+   "polylines": [
+    222,
+    223,
+    224
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "222 from the Jackson Gore summit (~3501,641; Upper Limelight 195 branches off it) to the label; 223 from the label dot down-left through the slow zone, forking at ~3072,888: 224 to Jackson Gore Junction/top of Blue Moon (~2976,947), 223's tail onto Blue Moon by its label (~3027,966). Legs unnamed.",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "fast-track": {
+   "status": "confirmed",
+   "polylines": [
+    168
+   ],
+   "drawn": [
+    [
+     4014,
+     1868
+    ],
+    [
+     4020,
+     1880
+    ],
+    [
+     4027,
+     1894
+    ],
+    [
+     4036,
+     1908
+    ],
+    [
+     4044,
+     1923
+    ],
+    [
+     4051,
+     1940
+    ],
+    [
+     4057,
+     1952
+    ],
+    [
+     4063,
+     1964
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "168 plus a trace along the FAST TRACK label to its end at a road crossing (4063,1964); 169 goes to Inn Bound (a naming call). 168 runs from the Quantum Six base slow zone (3945,1735), under the QUAD lift text where Spur Line joins, to the circle (4019,1877). The trace keeps the label as Fast Track.",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "inn-bound": {
+   "status": "confirmed",
+   "polylines": [
+    169,
+    170
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "169+170, from the FAST TRACK label end (4063,1965) to the base at the Coleman Brook quad bottom (3863,2171); the join bridges the label gap. 169 is a naming call with no junction. There a road crosses the trail, the narrow cut opens onto the wide base slope, and the base slow zone begins.",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  },
+  "bright-star-basin": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Printed with no line: a learning area by carpets 6 and 7 at the Jackson Gore base; a marker at the label. The trace reader found no distinct run.",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude",
+   "labelAt": [
+    91.54,
+    77.91
+   ]
+  },
+  "tree-tap": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Printed with no line: a terrain park printed as an orange name and pill; a marker at the label. The trace reader found no distinct run.",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude",
+   "labelAt": [
+    90.44,
+    76.23
+   ]
+  },
+  "challenger": {
+   "status": "confirmed",
+   "polylines": [
+    61,
+    62,
+    210
+   ],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Piece 210 was split where Turkey Shoot (238) meets it: its upper curve from Buckhorn is Challenger's lead-in; the lower part is Turkey Shoot.",
+   "at": "2026-09-30T08:49:35.000Z",
+   "by": "claude"
+  }
+ },
+ "_note": "Human review decisions (tools/trailmap/review). by: claude = proposed by Claude, flagged for recheck."
+}

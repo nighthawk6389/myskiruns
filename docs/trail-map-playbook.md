@@ -197,6 +197,14 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
   93%), Stowe Derby goes further (48% → 71%); traces still run somewhat
   longer than the reviewer drew, and the Crossover / Jake's Ride boundary
   is read the same way (a naming call), so they stay pre-fills.
+  Okemo (before its review): 5 readers, 22 trails (9 printed with no line,
+  10 medium/low, both halves of a split, 2 boundary neighbours), ~980k
+  tokens, ~42 min two at a time. One trail used only part of a piece
+  (Turkey Shoot on 210): cut it with `split_pieces.py` before
+  `traces_to_reviews.py`, which stores whole pieces. Three names turned out
+  to be areas with no run (two carpet learning areas and a small park);
+  they became label markers (`no-line` + `labelAt`) rather than invented
+  lines.
 - **Unnamed connectors:** short pieces the map prints no name for are
   checked on a crop and recorded in `linePolylines.json` `_unnamed`
   ({id: why}); the aggregator hides them on the review page instead of

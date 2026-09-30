@@ -58,11 +58,12 @@
   "challenger": {
    "polylines": [
     61,
-    62
+    62,
+    210
    ],
-   "confidence": "high",
+   "confidence": "medium",
    "mapName": "CHALLENGER",
-   "note": "from the diamond of the CHALLENGER label down-left to Upper Fall Line | ends at the diamond of CHALLENGER | after the CHALLENGER text, up to the Turkey Shoot junction on 210"
+   "note": "from the diamond of the CHALLENGER label down-left to Upper Fall Line | ends at the diamond of CHALLENGER | after the CHALLENGER text, up to the Turkey Shoot junction on 210 | from Buckhorn down to Countdown; the two-line TURKEY SHOOT label sits at its junction with 238 and 62 (diamond touches 210, "
   },
   "chute": {
    "polylines": [
@@ -779,12 +780,12 @@
   },
   "turkey-shoot": {
    "polylines": [
-    210,
-    238
+    238,
+    256
    ],
    "confidence": "medium",
    "mapName": "TURKEY SHOOT",
-   "note": "from Buckhorn down to Countdown; the two-line TURKEY SHOOT label sits at its junction with 238 and 62 (diamond touches 210, text runs parallel to 238) | from the Summit Lodge down-left to 210; the TURKEY SHOOT text is printed right above and parallel to it (could instead be Challenger's top: roughly"
+   "note": "from the Summit Lodge down-left to 210; the TURKEY SHOOT text is printed right above and parallel to it (could instead be Challenger's top: roughly in line with 62 but offset ~13 px) | split of piece 210"
   },
   "upper-arrow": {
    "polylines": [
