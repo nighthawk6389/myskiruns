@@ -24,7 +24,10 @@ import glob
 import json
 import re
 
-WEIGHT = {'high': 3, 'medium': 2, 'low': 1}
+WEIGHT = {'certain': 10, 'high': 3, 'medium': 2, 'low': 1}
+# reader verdicts that are not trail names (compare the word before any ':',
+# so a trail called LIFTLINE is not taken for a LIFT)
+VERDICTS = {'LIFT', 'NOT_A_TRAIL', 'UNKNOWN', 'SPLIT'}
 ROSTER_RE = re.compile(
     r"\{ id:\s*'([^']+)',\s*name:\s*(['\"])(.*?)\2,[^}]*?difficulty:\s*'([^']+)'[^}]*?peak:\s*'([^']+)'")
 
@@ -54,7 +57,10 @@ def main() -> None:
     def roster_id(rec):
         rid = rec.get('rosterId')
         return rid if rid in roster_ids else by_name.get(slug((rec.get('mapName') or '').replace("'", '').replace('’', '')))
-    polys = json.load(open(a.polylines))['polylines']
+    poly_doc = json.load(open(a.polylines))
+    polys = poly_doc['polylines']
+    # pieces cut by split_pieces.py: their names come from its reading
+    was_split = {int(k) for k in poly_doc.get('_splits', {})}
 
     votes = collections.defaultdict(collections.Counter)
     info = collections.defaultdict(list)
@@ -63,7 +69,10 @@ def main() -> None:
         r = json.load(open(f))
         for L in r.get('lines', []):
             name = (L.get('mapName') or '').strip().upper()
-            if not name or name.startswith(('LIFT', 'NOT_A_TRAIL', 'UNKNOWN', 'SPLIT')):
+            verdict = name.split(':')[0].strip()
+            if verdict == 'SPLIT' and L['id'] in was_split:
+                continue
+            if not name or verdict in VERDICTS:
                 key = ('#' + (name.split(':')[0] or 'UNKNOWN'), None)
             else:
                 key = (name, roster_id(L))

@@ -59,6 +59,14 @@ Download the resort's trail map PDF (not the web JPG) and run
   instead: exact names, positions and line geometry, no CV needed. Worth
   asking the resort for the layered Illustrator/PDF file — Killington's PDF
   metadata shows it was made in Illustrator and flattened.
+- **Vector trail lines (Stowe 2025-26):** the painted background was one
+  raster and every trail line, label and symbol a vector on top (outlined
+  text, so no words). `extract_pdf_vectors.py` renders the map area to
+  `public/maps/<id>.jpg` and writes each trail-coloured stroke as a
+  numbered piece — exact geometry, no detector, no tuning (165 pieces;
+  `--append` adds another colour, e.g. orange freestyle lines, later).
+  Find the colours by tallying stroke colours/widths with pymupdf and
+  drawing them on a blank page; lifts were the thicker maroon strokes.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.
@@ -114,6 +122,16 @@ list, and 92% of the real trail-line length named (automatic matching had
 reached 53% coverage and ~40% correct names).
 
 Spot-check a few proposals with `render_crops.py` before the human review.
+
+**A resort with no trail list yet (Stowe):** use `prompts/0-new-map.md`,
+which also records every printed label's symbol, glade icon and area, then
+`seed_roster.py` builds `trails.ts` from those labels before
+`aggregate_readings.py` runs. Pieces a reader reports as "SPLIT: A / B" are
+cut with `split_pieces.py` (the names go in as a "certain" reading). Stowe:
+6 readers over 25 tiles, ~15 min, ~620k tokens → 125 trails, 101 with a
+unanimous line, 18 printed with no line (11 glades) pre-filled as label
+markers for the reviewer to confirm. Watch for trail names that start with a
+reader verdict word (LIFTLINE was once dropped as a LIFT).
 
 ### 4. Human review
 

@@ -50,6 +50,8 @@ def main() -> None:
     ap.add_argument('--areas', required=True, help='id=Name=elevation,...  (first is the default)')
     ap.add_argument('--trails', required=True, help='output trails.ts')
     ap.add_argument('--labels', required=True, help='output labels.json')
+    ap.add_argument('--glade-difficulty', default='black',
+                    help='for glades printed with no symbol (the review can change it)')
     a = ap.parse_args()
 
     areas = [dict(zip(('id', 'name', 'elevation'), s.split('='))) for s in a.areas.split(',')]
@@ -73,7 +75,7 @@ def main() -> None:
                 e['positions'].append(lab['labelSrc'])
         for line in r.get('lines', []):
             n = norm(line.get('mapName'))
-            if not n or n.startswith(SKIP):
+            if not n or n.split(':')[0].strip() in SKIP:
                 continue
             info[n]['colors'][line.get('color')] += 1
 
@@ -81,7 +83,10 @@ def main() -> None:
     for n, e in info.items():
         sym = [(s, c) for s, c in e['symbols'].most_common() if s in SYMBOL]
         colors = [(c, k) for c, k in e['colors'].most_common() if c in ('green', 'blue', 'black')]
-        difficulty = SYMBOL[sym[0][0]] if sym else colors[0][0] if colors else 'blue'
+        glade = e['glade'][True] > e['glade'][False]
+        park = e['colors'].most_common(1)[0][0] == 'freestyle' if e['colors'] else False
+        difficulty = (SYMBOL[sym[0][0]] if sym else colors[0][0] if colors
+                      else a.glade_difficulty if glade else 'blue')
         clusters = []
         for p in e['positions']:
             for c in clusters:
@@ -95,7 +100,7 @@ def main() -> None:
         trails.append({
             'id': tid, 'name': title(n), 'difficulty': difficulty,
             'peak': e['area'].most_common(1)[0][0] if e['area'] else area_ids[0],
-            'glade': e['glade'][True] > e['glade'][False],
+            'glade': glade, 'park': park,
         })
         labels[tid] = {'mapName': n, 'positions': [[round(v) for v in c['mean']] for c in clusters],
                        'symbols': dict(e['symbols']), 'colors': dict(e['colors']),
@@ -113,7 +118,7 @@ def main() -> None:
         f.write('];\n\nexport const trails: Trail[] = [\n')
         for t in trails:
             name = f'"{t["name"]}"' if "'" in t['name'] else f"'{t['name']}'"
-            extra = ', isGlade: true' if t['glade'] else ''
+            extra = (', isGlade: true' if t['glade'] else '') + (', isTerrainPark: true' if t['park'] else '')
             f.write(f"  {{ id: '{t['id']}', name: {name}, difficulty: '{t['difficulty']}', peak: '{t['peak']}'{extra} }},\n")
         f.write('];\n')
     json.dump(labels, open(a.labels, 'w'), indent=1)

@@ -1,0 +1,239 @@
+{
+ "_note": "Human review decisions (tools/trailmap/review). by: claude = proposed by Claude, flagged for recheck.",
+ "reviews": {
+  "birch-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    20.21,
+    40.89
+   ],
+   "by": "claude"
+  },
+  "bypass": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    49.41,
+    21.15
+   ],
+   "by": "claude"
+  },
+  "centerline": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    36.42,
+    29.53
+   ],
+   "by": "claude"
+  },
+  "christiana": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    30.13,
+    37.29
+   ],
+   "by": "claude"
+  },
+  "christie-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    30.75,
+    35.68
+   ],
+   "by": "claude"
+  },
+  "lookout-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    42.66,
+    31.69
+   ],
+   "by": "claude"
+  },
+  "mary-mason-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    51.61,
+    41.95
+   ],
+   "by": "claude"
+  },
+  "national-drop-in": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    44.05,
+    24.17
+   ],
+   "by": "claude"
+  },
+  "nosedive-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    52.53,
+    27.38
+   ],
+   "by": "claude"
+  },
+  "s-53-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    44.83,
+    31.45
+   ],
+   "by": "claude"
+  },
+  "stowe-derby-trail": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    9.57,
+    64.24
+   ],
+   "by": "claude"
+  },
+  "sunrise-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    24.9,
+    36.82
+   ],
+   "by": "claude"
+  },
+  "tres-amigos-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    38.73,
+    33.45
+   ],
+   "by": "claude"
+  },
+  "waterfall": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    65.43,
+    22.01
+   ],
+   "by": "claude"
+  },
+  "whitewater-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    65.43,
+    34.78
+   ],
+   "by": "claude"
+  },
+  "meadows-east-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    74.94,
+    53.94
+   ],
+   "by": "claude"
+  },
+  "ridge-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    78.27,
+    45.2
+   ],
+   "by": "claude"
+  },
+  "west-smugglers": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "No drawn line on the map; marker at the printed label (readers + crop).",
+   "at": "2026-09-30T01:00:00.000Z",
+   "labelAt": [
+    72.14,
+    45.08
+   ],
+   "by": "claude"
+  }
+ }
+}

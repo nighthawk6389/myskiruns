@@ -2,7 +2,7 @@
 // and works on the mountain without signal. Pages are network-first (so a new
 // deploy is picked up when online); everything else is cache-first.
 const CACHE = 'myskiruns-v3';
-const PRECACHE = ['/', '/maps/killington.jpg', '/manifest.webmanifest', '/icon-192.png'];
+const PRECACHE = ['/', '/maps/killington.jpg', '/maps/stowe.jpg', '/manifest.webmanifest', '/icon-192.png'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting()));

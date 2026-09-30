@@ -1,0 +1,922 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "chapel-lane": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "CHAPEL LANE",
+   "note": "starts at chapel icon (~851,999), runs east past CHAPEL LANE green dot to meet line 14 at ~(1061,971) | Runs from Chapel Lane green circle east to join piece 14."
+  },
+  "chin-clip": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "CHIN CLIP",
+   "note": "Black line from CHIN CLIP diamond/label (~2965,727) curving down to the top of Chin Clip Runout (~2805,1082). | black line through Chin Clip diamond, from below The Waffle down to where it turns blue (~src 2805,992)"
+  },
+  "chin-clip-runout": {
+   "polylines": [
+    65
+   ],
+   "confidence": "high",
+   "mapName": "CHIN CLIP RUNOUT",
+   "note": "From the bottom of Chin Clip (~2805,1082) past CHIN CLIP RUNOUT square to the Midway flats (~2622,1201). | blue continuation of Chin Clip line; CHIN CLIP RUNOUT label+square at src ~(2761,1145), just west of tile"
+  },
+  "cliff-trail": {
+   "polylines": [
+    134
+   ],
+   "confidence": "high",
+   "mapName": "CLIFF TRAIL",
+   "note": "split of piece 134"
+  },
+  "crossover": {
+   "polylines": [
+    67,
+    68,
+    168
+   ],
+   "confidence": "high",
+   "mapName": "CROSSOVER",
+   "note": "east of the CROSSOVER label and green circle | Green line from the CROSSOVER green circle (~2189,1229; label just west) east past the orange yield triangle to the Midway flats (~2506,1210). | split of piece 15"
+  },
+  "dalton": {
+   "polylines": [
+    144,
+    145
+   ],
+   "confidence": "high",
+   "mapName": "DALTON",
+   "note": "from the Dalton square | leads to the DALTON label"
+  },
+  "duck-walk": {
+   "polylines": [
+    143
+   ],
+   "confidence": "high",
+   "mapName": "DUCK WALK",
+   "note": "Through DUCK WALK square."
+  },
+  "easy-mile": {
+   "polylines": [
+    9,
+    10
+   ],
+   "confidence": "high",
+   "mapName": "EASY MILE",
+   "note": "from Jake's Ride junction ~(971,1192) down parallel to lift, EASY MILE label along it | Top of Easy Mile beside the lift; EASY MILE label just below. | continuation of Easy Mile line parallel to Toll House Double below the Lower Toll Road crossing, to ~(643,1809)"
+  },
+  "glades-return": {
+   "polylines": [
+    151
+   ],
+   "confidence": "high",
+   "mapName": "GLADES RETURN",
+   "note": "passes the GLADES RETURN square at ~2356,712 | From the black Upper Nosedive line (~2241,739) NE past GLADES RETURN square to Rimrock (~2415,679)."
+  },
+  "goat": {
+   "polylines": [
+    128,
+    129,
+    130
+   ],
+   "confidence": "medium",
+   "mapName": "GOAT",
+   "note": "between the Goat/Midway-connector crossing and the Lower Goat diamonds | Black line ending at the LOWER GOAT double-diamond symbol (~2185,841); upstream it carries the GOAT label (~2150,735). The Lower Goat name starts at this symbol. | split of piece 130"
+  },
+  "gondolier": {
+   "polylines": [
+    57,
+    156
+   ],
+   "confidence": "high",
+   "mapName": "GONDOLIER",
+   "note": "Tiny line fragment between the gondola and the GONDOLIER label (~2826,722-2821,745); part of the Gondolier line interrupted by the label. | short dash beside gondola directly above rotated GONDOLIER label | split of piece 57"
+  },
+  "gulch": {
+   "polylines": [
+    96,
+    97
+   ],
+   "confidence": "high",
+   "mapName": "GULCH",
+   "note": "Top of Gulch to GULCH square. | Below GULCH label to Crossover."
+  },
+  "hacketts-highway": {
+   "polylines": [
+    103,
+    104
+   ],
+   "confidence": "high",
+   "mapName": "HACKETT'S HIGHWAY",
+   "note": "Short top piece ending at the double diamond. | Black line beside lift under HACKETT'S HIGHWAY label. | black line along the left side of the lift"
+  },
+  "haychute": {
+   "polylines": [
+    50,
+    51
+   ],
+   "confidence": "high",
+   "mapName": "HAYCHUTE",
+   "note": "after the HAYCHUTE label | to the Haychute diamonds"
+  },
+  "hayride": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "HAYRIDE",
+   "note": "Below HAYRIDE label. | below the HAYRIDE label"
+  },
+  "hayride-loop": {
+   "polylines": [
+    101
+   ],
+   "confidence": "high",
+   "mapName": "HAYRIDE LOOP",
+   "note": "Through HAYRIDE LOOP square."
+  },
+  "high-road": {
+   "polylines": [
+    136
+   ],
+   "confidence": "high",
+   "mapName": "HIGH ROAD",
+   "note": "From Cliff Trail (~2659,662) past HIGH ROAD square to (~2752,716)."
+  },
+  "home-run": {
+   "polylines": [
+    163,
+    164
+   ],
+   "confidence": "high",
+   "mapName": "HOME RUN",
+   "note": "to HOME RUN green dot | continuation after HOME RUN label '(ski back to condo route)' to the condos"
+  },
+  "houghtons": {
+   "polylines": [
+    35,
+    36
+   ],
+   "confidence": "high",
+   "mapName": "HOUGHTON'S",
+   "note": "From Crossover/lift junction SW to HOUGHTON'S square near Lower Tyro; Lower T-Line (20/21) branches off it. | continues through the junction to the HOUGHTON'S square and label at ~1258,1427 | From upper HOUGHTON'S square (~1990,1030) down to Crossover at the lift; continues as piece 35. | passes the"
+  },
+  "jakes-ride": {
+   "polylines": [
+    15,
+    167
+   ],
+   "confidence": "medium",
+   "mapName": "JAKE'S RIDE",
+   "note": "green; carries a CROSSOVER label at ~1400,1268 | split of piece 15 | split of piece 14"
+  },
+  "last-exit": {
+   "polylines": [
+    138
+   ],
+   "confidence": "high",
+   "mapName": "LAST EXIT",
+   "note": "From LAST EXIT square (east edge) SW to its junction with the Upper Gondolier line (~2885,751). | through Last Exit square, joins Upper Gondolier line"
+  },
+  "liftline": {
+   "polylines": [
+    53,
+    54
+   ],
+   "confidence": "high",
+   "mapName": "LIFTLINE",
+   "note": "to the Liftline diamonds | below the LIFTLINE label"
+  },
+  "lookout": {
+   "polylines": [
+    117,
+    148
+   ],
+   "confidence": "high",
+   "mapName": "LOOKOUT",
+   "note": "below the LOOKOUT label | above the Lookout diamonds; no other label"
+  },
+  "lookout-loop": {
+   "polylines": [
+    124
+   ],
+   "confidence": "high",
+   "mapName": "LOOKOUT LOOP",
+   "note": "From LOOKOUT LOOP square around lift top."
+  },
+  "lord": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "LORD",
+   "note": "From LORD square west to lift base area."
+  },
+  "lord-loop": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "LORD LOOP",
+   "note": "LORD LOOP label printed beside this line; it ends at the UPPER LORD square, so it could instead be the top of Upper Lord"
+  },
+  "lower-cliff-trail": {
+   "polylines": [
+    169
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CLIFF TRAIL",
+   "note": "split of piece 134"
+  },
+  "lower-goat": {
+   "polylines": [
+    131,
+    171
+   ],
+   "confidence": "high",
+   "mapName": "LOWER GOAT",
+   "note": "Short black line directly below the LOWER GOAT label (~2221,875 to ~2218,943). | split of piece 130"
+  },
+  "lower-gondolier": {
+   "polylines": [
+    64,
+    170
+   ],
+   "confidence": "high",
+   "mapName": "LOWER GONDOLIER",
+   "note": "From LOWER GONDOLIER square (~2653,1102) down to the Midway flats near the gondola (~2604,1187). | split of piece 57"
+  },
+  "lower-gulch": {
+   "polylines": [
+    173,
+    174,
+    175
+   ],
+   "confidence": "high",
+   "mapName": "LOWER GULCH",
+   "note": "orange freestyle line at the LOWER GULCH pill | continuation of 175 | continuation after the LOWER GULCH label"
+  },
+  "lower-hayride": {
+   "polylines": [
+    27,
+    28,
+    29,
+    44
+   ],
+   "confidence": "high",
+   "mapName": "LOWER HAYRIDE",
+   "note": "Blue continuation below Hayride (black) past Hayride Loop join to LOWER HAYRIDE square. | blue continuation after black Hayride ends, down to the Lower Hayride square (29) | continues Lower Hayride past the Crossover | below the LOWER HAYRIDE label | ends at the Lower Hayride square"
+  },
+  "lower-liftline": {
+   "polylines": [
+    32,
+    33,
+    34
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LIFTLINE",
+   "note": "blue continuation of Liftline down to the Lower Liftline square | continues past the Crossover | Only the east tip is in my tiles; followed west in source it is the line coming down from the LOWER LIFTLINE square (~2092,1183) east of Fourrunner Quad, ending ~(2218,1342). | from the Lower Liftline sq"
+  },
+  "lower-lookout": {
+   "polylines": [
+    30,
+    31
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LOOKOUT",
+   "note": "continues Lower Lookout past the Crossover | after the inline LOWER LOOKOUT label (square to the left of the lift)"
+  },
+  "lower-lord": {
+   "polylines": [
+    152
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LORD",
+   "note": "Through LOWER LORD green circle."
+  },
+  "lower-national": {
+   "polylines": [
+    41,
+    42
+   ],
+   "confidence": "high",
+   "mapName": "LOWER NATIONAL",
+   "note": "continues Lower National past the Crossover | Continuation of 42 (Lower National) below the Crossover junction (~2230,1215) down to (~2268,1302). | passes the Lower National square; black changes to blue here | Line below the end of black NATIONAL (52) passing LOWER NATIONAL square/label (~2150,1050"
+  },
+  "lower-north-slope": {
+   "polylines": [
+    24,
+    25
+   ],
+   "confidence": "high",
+   "mapName": "LOWER NORTH SLOPE",
+   "note": "From Crossover/lift junction to LOWER NORTH SLOPE square. | junction down to the Lower North Slope square | inline after the LOWER NORTH SLOPE label"
+  },
+  "lower-nosedive": {
+   "polylines": [
+    38,
+    40
+   ],
+   "confidence": "high",
+   "mapName": "LOWER NOSEDIVE",
+   "note": "passes the Lower Nosedive square | From Nose Dive end (~2256,978) through LOWER NOSEDIVE square down to the Crossover (green) crossing (~2313,1226). | continues past the Crossover | Continuation of 38 below the Crossover crossing down to the ticket-office icon (~2310,1292); no other label."
+  },
+  "lower-perry-merrill": {
+   "polylines": [
+    59
+   ],
+   "confidence": "high",
+   "mapName": "LOWER PERRY MERRILL",
+   "note": "Left branch at the fork (~2660,880) below Perry Merrill, past LOWER PERRY MERRILL square (~2599,1040) down to the Midway flats (~2503,1201)."
+  },
+  "lower-ridgeview": {
+   "polylines": [
+    165
+   ],
+   "confidence": "high",
+   "mapName": "LOWER RIDGEVIEW",
+   "note": "split of piece 1"
+  },
+  "lower-rimrock": {
+   "polylines": [
+    135
+   ],
+   "confidence": "high",
+   "mapName": "LOWER RIMROCK",
+   "note": "From the Cliff Trail junction (~2545,712) past LOWER RIMROCK square to (~2733,794)."
+  },
+  "lower-standard": {
+   "polylines": [
+    172,
+    176
+   ],
+   "confidence": "high",
+   "mapName": "LOWER STANDARD",
+   "note": "orange freestyle line from the LOWER STANDARD label (checked on a crop) | continuation of 172 down the slope"
+  },
+  "lower-starr": {
+   "polylines": [
+    118,
+    119,
+    120
+   ],
+   "confidence": "high",
+   "mapName": "LOWER STARR",
+   "note": "continues past the Crossover | after the LOWER STARR label | ends at the Lower Starr square"
+  },
+  "lower-switchback": {
+   "polylines": [
+    60
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SWITCHBACK",
+   "note": "Leaves Lower Perry Merrill (~2557,1090) west past LOWER SWITCHBACK square and down to (~2445,1194)."
+  },
+  "lower-t-line": {
+   "polylines": [
+    19,
+    20,
+    21
+   ],
+   "confidence": "high",
+   "mapName": "LOWER T-LINE",
+   "note": "Start of Lower T-Line, label printed along it. | just before the LOWER T-LINE label | Short connector continuing T-Line (22) across Crossover into Lower T-Line (20). | T-Line continuation between the Crossover and Houghton's crossings, before the Lower T-Line label | from the Lower T-Line square dow"
+  },
+  "lower-toll-road": {
+   "polylines": [
+    8,
+    11,
+    166
+   ],
+   "confidence": "high",
+   "mapName": "LOWER TOLL ROAD",
+   "note": "loop east of the Easy Mile/Toll House lift between the two lift crossings | continuation of Lower Toll Road after its second lift crossing, west past Tollhouse/Mtn Glen junction (~563,1666), through an unlabeled green dot ~(359,1767), down to Toll House base ~(465,2068); no label on this piece itsel"
+  },
+  "lower-tyro": {
+   "polylines": [
+    98
+   ],
+   "confidence": "low",
+   "mapName": "LOWER TYRO",
+   "note": "From Jake's/Tyro junction through LOWER TYRO green circle, then long runout east along the bottom to Sunrise Six base (~1909,1472); runout itself unlabeled. | passes the TYRO green circle (~1127,1363) and continues to the base"
+  },
+  "maiden-lane": {
+   "polylines": [
+    102
+   ],
+   "confidence": "high",
+   "mapName": "MAIDEN LANE",
+   "note": "Through MAIDEN LANE diamond."
+  },
+  "midway": {
+   "polylines": [
+    37,
+    105,
+    106,
+    107
+   ],
+   "confidence": "high",
+   "mapName": "MIDWAY",
+   "note": "blue continuation of Midway with an unlabeled blue square and snowflake at ~2126,970; could be a separately named lower section | down to the Midway diamond | unlabeled connector from the Nosedive area that crosses Goat and feeds into Midway | Black line starting at the Nosedive/Glades Return area ("
+  },
+  "mtn-glen": {
+   "polylines": [
+    12,
+    13
+   ],
+   "confidence": "high",
+   "mapName": "MTN. GLEN",
+   "note": "MTN. GLEN green dot/label on it | upper part of Mtn Glen from the Tollhouse junction ~(577,1662) east across the lift and Easy Mile line into piece 12; no label on it"
+  },
+  "national": {
+   "polylines": [
+    48,
+    52
+   ],
+   "confidence": "high",
+   "mapName": "NATIONAL",
+   "note": "from the junction to the National diamonds | below the NATIONAL label | Black line from NATIONAL label (double diamond, ~2020,738) down to its end (~2189,945) where blue Lower National starts."
+  },
+  "north-slope": {
+   "polylines": [
+    23,
+    26
+   ],
+   "confidence": "high",
+   "mapName": "NORTH SLOPE",
+   "note": "From near Maiden Lane top, crosses under lift, ends at NORTH SLOPE square; NORTH SLOPE label printed right after along piece 26. | Carries NORTH SLOPE label, down to Crossover near lift. | below the NORTH SLOPE label, down to the junction by the Crossover"
+  },
+  "nose-dive": {
+   "polylines": [
+    39
+   ],
+   "confidence": "medium",
+   "mapName": "NOSE DIVE",
+   "note": "blue segment between the end of black Nosedive and the Lower Nosedive square | From the junction at the bottom of the black Upper Nosedive line (~2330,804) past NOSE DIVE square to (~2256,978)."
+  },
+  "perry-merrill": {
+   "polylines": [
+    61,
+    62
+   ],
+   "confidence": "high",
+   "mapName": "PERRY MERRILL",
+   "note": "Continuation of 62 after it crosses under the gondola and the Gondolier line (~2707,927); passes an UNLABELED blue square (~2769,1000) and ends at the Lower Gondolier snowflake (~2670,1115) then runs to the Midway flats. No label of its own; could be UNKNOWN. | From the PERRY MERRILL square/snowflak"
+  },
+  "phils-zuggy": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "PHIL'S ZUGGY"
+  },
+  "ridge-view": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE VIEW",
+   "note": "split of piece 1"
+  },
+  "rimrock": {
+   "polylines": [
+    137
+   ],
+   "confidence": "high",
+   "mapName": "RIMROCK",
+   "note": "passes the RIMROCK square at ~2323,655 | From the west past RIMROCK square (~2323,655) east to the Cliff Trail junction (~2525,709)."
+  },
+  "ryans-folly": {
+   "polylines": [
+    146
+   ],
+   "confidence": "high",
+   "mapName": "RYAN'S FOLLY",
+   "note": "from Lower Toll Road east past RYAN'S FOLLY green dot to Jake's Ride junction | Through RYAN'S FOLLY green circle."
+  },
+  "s-53": {
+   "polylines": [
+    125
+   ],
+   "confidence": "high",
+   "mapName": "S-53",
+   "note": "passes the S-53 diamond"
+  },
+  "sepps-run": {
+   "polylines": [
+    142
+   ],
+   "confidence": "high",
+   "mapName": "SEPP'S RUN",
+   "note": "from the Sepp's Run square to the Crossover | Line from SEPP'S RUN square (~2135,1142) SE down to the Crossover green circle (~2192,1215); only its tip is in my tiles."
+  },
+  "shftrs-shot": {
+   "polylines": [
+    123
+   ],
+   "confidence": "high",
+   "mapName": "SHFTR'S SHOT",
+   "note": "Through SHFTR'S SHOT diamond."
+  },
+  "standard": {
+   "polylines": [
+    109
+   ],
+   "confidence": "high",
+   "mapName": "STANDARD",
+   "note": "Through STANDARD square to Crossover."
+  },
+  "starr": {
+   "polylines": [
+    141
+   ],
+   "confidence": "high",
+   "mapName": "STARR",
+   "note": "below the STARR label"
+  },
+  "sunrise": {
+   "polylines": [
+    108,
+    155
+   ],
+   "confidence": "high",
+   "mapName": "SUNRISE",
+   "note": "From SUNRISE square down to Lower Lord junction. | Short piece just above inline SUNRISE label."
+  },
+  "switchback": {
+   "polylines": [
+    58
+   ],
+   "confidence": "high",
+   "mapName": "SWITCHBACK",
+   "note": "From the Upper Perry Merrill curve (~2809,611) east past the SWITCHBACK square (~2903,583) toward Upper Gondolier. | from Upper Gondolier square west through Switchback square to junction with Upper Perry Merrill line"
+  },
+  "t-line": {
+   "polylines": [
+    16,
+    22
+   ],
+   "confidence": "high",
+   "mapName": "T-LINE",
+   "note": "Upper T-Line from Upper T-Line junction to T-Line square. | Below T-LINE label to Crossover."
+  },
+  "toll-road": {
+   "polylines": [
+    3,
+    4,
+    5,
+    7
+   ],
+   "confidence": "high",
+   "mapName": "TOLL ROAD",
+   "note": "Switchback continuing directly from piece 4 (Toll Road) at the Sunrise crossing; no label on it, continuous with Toll Road. | Carries the upper TOLL ROAD label + blue square. | continuation of Toll Road westward to the second TOLL ROAD label/square | Upper Toll Road from summit area to Toll Road squ"
+  },
+  "tollhouse": {
+   "polylines": [
+    159,
+    160
+   ],
+   "confidence": "high",
+   "mapName": "TOLLHOUSE",
+   "note": "from junction down to TOLLHOUSE green dot | below TOLLHOUSE label (inline)"
+  },
+  "townhouse": {
+   "polylines": [
+    161,
+    162
+   ],
+   "confidence": "high",
+   "mapName": "TOWNHOUSE",
+   "note": "down to TOWNHOUSE green dot | below TOWNHOUSE label (inline)"
+  },
+  "tyro": {
+   "polylines": [
+    99,
+    100
+   ],
+   "confidence": "high",
+   "mapName": "TYRO",
+   "note": "blue line continuing from the TYRO label (inline) down toward Duck Walk/Lower Tyro | Below TYRO label to Jake's Ride. | Top of Tyro to TYRO square."
+  },
+  "upper-goat": {
+   "polylines": [
+    126,
+    127
+   ],
+   "confidence": "high",
+   "mapName": "UPPER GOAT"
+  },
+  "upper-gondolier": {
+   "polylines": [
+    66
+   ],
+   "confidence": "high",
+   "mapName": "UPPER GONDOLIER",
+   "note": "Continuation of the Upper Gondolier line (square/label ~2965,560 in t004) curving west and down past the Last Exit junction and an unlabeled square (~2867,774) to the Gondolier square (~2809,807). Lower part may be GONDOLIER. | starts below The Waffle, through Upper Gondolier square, winds down, pas"
+  },
+  "upper-hayride": {
+   "polylines": [
+    43,
+    154
+   ],
+   "confidence": "high",
+   "mapName": "UPPER HAYRIDE",
+   "note": "Carries UPPER HAYRIDE label + diamond. | passes the Upper Hayride diamond | Short link between Upper Hayride (43) and the HAYRIDE diamond; could be start of Hayride. | between the Upper Hayride diamond and the Hayride diamond; could be counted as the start of Hayride"
+  },
+  "upper-liftline": {
+   "polylines": [
+    122
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LIFTLINE"
+  },
+  "upper-lord": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LORD",
+   "note": "Starts below UPPER LORD label/square, runs under LOOKOUT LOOP text, ends at the LORD label where piece 18 (Lord) starts; Lookout Loop's own square is on piece 124. Lower end could be considered Lord. | inline after the UPPER LORD label; runs west below LOOKOUT LOOP toward LORD"
+  },
+  "upper-national": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "UPPER NATIONAL"
+  },
+  "upper-nosedive": {
+   "polylines": [
+    55,
+    113
+   ],
+   "confidence": "high",
+   "mapName": "UPPER NOSEDIVE",
+   "note": "starts just below the UPPER NOSEDIVE label and continues without a label to the right; may be labeled NOSEDIVE outside these tiles | Black line running from the UPPER NOSEDIVE label (~2070,590, outside my tiles) past Nosedive Glades to its end (~2330,803) where blue Nose Dive (39) starts."
+  },
+  "upper-perry-merrill": {
+   "polylines": [
+    63
+   ],
+   "confidence": "high",
+   "mapName": "UPPER PERRY MERRILL",
+   "note": "From the summit (~2892,510) past UPPER PERRY MERRILL square, down the S-curve past the Switchback junction and straight down to the PERRY MERRILL square junction (~2733,818). Lower third (below Switchback junction) could equally be called PERRY MERRILL. | continuation of line carrying UPPER PERRY ME"
+  },
+  "upper-starr": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "UPPER STARR",
+   "note": "runs from the Upper Starr diamonds to the Starr diamonds"
+  },
+  "upper-t-line": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "UPPER T-LINE",
+   "note": "Through UPPER T-LINE square."
+  },
+  "base-camp-road": {
+   "polylines": [
+    111
+   ],
+   "confidence": "high",
+   "mapName": "BASE CAMP ROAD",
+   "note": "blue line crossing Sensation Quad east to BASE CAMP ROAD (walking required) label+square at src ~(3586,1335), outside tile; a walking road/connector | label says (walking required)"
+  },
+  "catwalk": {
+   "polylines": [
+    132
+   ],
+   "confidence": "high",
+   "mapName": "CATWALK",
+   "note": "from Meadows lift top area west, through Catwalk circle, down to Easy Street start"
+  },
+  "competition-hill": {
+   "polylines": [
+    139,
+    140
+   ],
+   "confidence": "high",
+   "mapName": "COMPETITION HILL",
+   "note": "From the lower end of the COMPETITION HILL label (~2867,1512) down SW to the base (~2753,1566), in the pink race area. | continuation after inline COMPETITION HILL label | from Competition Hill square up-right"
+  },
+  "east-run": {
+   "polylines": [
+    84
+   ],
+   "confidence": "high",
+   "mapName": "EAST RUN",
+   "note": "through East Run square down to base area"
+  },
+  "easy-street": {
+   "polylines": [
+    83,
+    133
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "Green line from (~2877,1596) NE toward the EASY STREET label/circle (~3021,1530, outside my tiles). | continuation after inline EASY STREET label | starts at bottom of Catwalk, through Easy Street circle to label"
+  },
+  "football-fields": {
+   "polylines": [
+    149
+   ],
+   "confidence": "high",
+   "mapName": "FOOTBALL FIELDS",
+   "note": "from Football Fields square down to base"
+  },
+  "freddies-chute": {
+   "polylines": [
+    110
+   ],
+   "confidence": "high",
+   "mapName": "FREDDIE'S CHUTE",
+   "note": "black line through Freddie's Chute diamond, parallel to lift"
+  },
+  "inspiration": {
+   "polylines": [
+    114,
+    115
+   ],
+   "confidence": "high",
+   "mapName": "INSPIRATION",
+   "note": "Green arc from under Adventure Triple (~2888,1666) curving to the INSPIRATION green circle/label (~3025,1739). | from west of label through Inspiration circle | from Adventure Triple top around to INSPIRATION label (inline)"
+  },
+  "lower-main-street": {
+   "polylines": [
+    90
+   ],
+   "confidence": "high",
+   "mapName": "LOWER MAIN STREET",
+   "note": "short blue line ending at base of rotated LOWER MAIN STREET label (label inline; square+snowflake at src ~3431,1376)"
+  },
+  "lower-smugglers": {
+   "polylines": [
+    71,
+    158
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SMUGGLERS",
+   "note": "blue continuation of Smugglers from the summit junction (src ~3353,1043), crosses the lift and ends at the top of the LOWER SMUGGLERS label; line resumes as 158 after the label | starts at Lower Smugglers square after the inline label"
+  },
+  "lower-sterling": {
+   "polylines": [
+    92
+   ],
+   "confidence": "high",
+   "mapName": "LOWER STERLING",
+   "note": "from Sensation base east through Lower Sterling square (src ~3570,1467) | below Base Camp Road crossing, past Lower Sterling label"
+  },
+  "lower-west-run": {
+   "polylines": [
+    73
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WEST RUN",
+   "note": "through Lower West Run square down to just above Slalom Hill line"
+  },
+  "main-street-headwall": {
+   "polylines": [
+    87
+   ],
+   "confidence": "high",
+   "mapName": "MAIN STREET HEADWALL",
+   "note": "continuation west/down from Main Street Headwall diamond (src ~3573,976), ends in open slope at src ~(3460,1143) | passes the Main Street Headwall diamond, curves down-left and ends above the yellow slow zone near Side Street"
+  },
+  "main-street-race": {
+   "polylines": [
+    91
+   ],
+   "confidence": "high",
+   "mapName": "MAIN STREET RACE",
+   "note": "black line in pink race corridor, continuation down from MAIN STREET RACE diamond; passes a second unlabeled diamond+snowflake at src ~(3464,1329) and ends where the LOWER MAIN STREET square begins | from junction at bottom of Upper Main Street down through the pink race area along Sensation Quad"
+  },
+  "meadows": {
+   "polylines": [
+    80,
+    82
+   ],
+   "confidence": "high",
+   "mapName": "MEADOWS",
+   "note": "Green line from the base (~2828,1595) NE under the Meadows Quad label toward the MEADOWS circle/label (~2994,1484, outside my tiles). | continuation after inline MEADOWS label | from end of Upper Meadows through Meadows circle to label"
+  },
+  "ridge-run": {
+   "polylines": [
+    85
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE RUN",
+   "note": "through Ridge Run square, ends joining Side Street"
+  },
+  "side-street": {
+   "polylines": [
+    86
+   ],
+   "confidence": "high",
+   "mapName": "SIDE STREET",
+   "note": "through both SIDE STREET squares (upper and lower label) down to base | box sits on the blue Side Street line in the yellow slow zone; not the end of 87"
+  },
+  "slalom-hill": {
+   "polylines": [
+    75,
+    76,
+    78
+   ],
+   "confidence": "high",
+   "mapName": "SLALOM HILL",
+   "note": "Upper part of Slalom Hill line: starts at the top end of the SLALOM HILL label (~2849,1332) and runs NE across the top of the slope. | starts at end of SLALOM HILL label, runs east | From SLALOM HILL square (~2764,1406) down SW to the base (~2713,1564) inside the pink race area. | unlabeled continua"
+  },
+  "smugglers": {
+   "polylines": [
+    72,
+    150
+   ],
+   "confidence": "high",
+   "mapName": "SMUGGLERS",
+   "note": "inline label: continues below SMUGGLERS label down to the Spruce summit junction | continuation past the Smugglers label curving down toward Side Street | starts at Smugglers diamond, runs east out of tile | from Smugglers diamond east to junction with Upper Smugglers"
+  },
+  "spruce-line": {
+   "polylines": [
+    147,
+    157
+   ],
+   "confidence": "high",
+   "mapName": "SPRUCE LINE",
+   "note": "short top piece from summit to the double-diamond | below the double-diamond, crosses under Sensation Quad, passes a glade icon, ends at junction with Whirlaway/Sterling"
+  },
+  "sterling": {
+   "polylines": [
+    93
+   ],
+   "confidence": "high",
+   "mapName": "STERLING",
+   "note": "from junction past Sterling label down to Base Camp Road crossing"
+  },
+  "upper-main-street": {
+   "polylines": [
+    88,
+    89
+   ],
+   "confidence": "high",
+   "mapName": "UPPER MAIN STREET",
+   "note": "line from Spruce Peak summit running west then curving down into the Upper Main Street line; no other label on it | from Upper Main Street diamond down to junction with Main Street Headwall/Race"
+  },
+  "upper-meadows": {
+   "polylines": [
+    81
+   ],
+   "confidence": "high",
+   "mapName": "UPPER MEADOWS",
+   "note": "from Upper Meadows square down to top of Meadows"
+  },
+  "upper-smugglers": {
+   "polylines": [
+    69,
+    70
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SMUGGLERS",
+   "note": "starts at Upper Smugglers diamond, runs NE toward summit | short piece west of the Upper Smugglers label dropping to the Smugglers line"
+  },
+  "upper-sterling": {
+   "polylines": [
+    94
+   ],
+   "confidence": "high",
+   "mapName": "UPPER STERLING",
+   "note": "from summit past Upper Sterling label, loops east along boundary and back west to the junction above Sterling"
+  },
+  "west-run": {
+   "polylines": [
+    74
+   ],
+   "confidence": "high",
+   "mapName": "WEST RUN",
+   "note": "from summit through West Run square, then south"
+  },
+  "west-slope": {
+   "polylines": [
+    77,
+    79
+   ],
+   "confidence": "high",
+   "mapName": "WEST SLOPE",
+   "note": "Short line from WEST SLOPE square+snowflake (~2870,1375) up NE to (~2932,1350). | from West Slope square up-right; label inline continues as 79 | From the lower end of the WEST SLOPE label (~2834,1453) down SW to the base (~2769,1573). | segment below/after the WEST SLOPE label heading down-left"
+  },
+  "whirlaway": {
+   "polylines": [
+    95
+   ],
+   "confidence": "high",
+   "mapName": "WHIRLAWAY",
+   "note": "through Whirlaway diamond down to the Sterling junction"
+  }
+ }
+}

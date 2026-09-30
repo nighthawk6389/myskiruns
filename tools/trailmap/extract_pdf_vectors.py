@@ -61,7 +61,9 @@ def main():
     ap.add_argument('--color', action='append', required=True, help='class=r,g,b (0-1, 2 decimals)')
     ap.add_argument('--max-width', type=float, default=1.0, help='ignore thicker strokes (lifts)')
     ap.add_argument('--min-length', type=float, default=4.0, help='drop pieces shorter than this (points)')
-    ap.add_argument('--image', required=True)
+    ap.add_argument('--image', help='write the map image here (omit with --append)')
+    ap.add_argument('--append', action='store_true',
+                    help='add pieces for these colours to an existing --out, keeping its ids')
     ap.add_argument('--out', required=True)
     a = ap.parse_args()
 
@@ -73,10 +75,11 @@ def main():
         classes[tuple(round(float(v), 2) for v in rgb.split(','))] = name
 
     page = pymupdf.open(a.pdf)[a.page]
-    pix = page.get_pixmap(matrix=pymupdf.Matrix(a.scale, a.scale), clip=pymupdf.Rect(x0, y0, x1, y1))
-    img = Image.open(io.BytesIO(pix.tobytes('png'))).convert('RGB')
-    img.save(a.image, quality=88, optimize=True, progressive=True)
-    print(f'wrote {a.image} ({img.width}x{img.height})')
+    if a.image:
+        pix = page.get_pixmap(matrix=pymupdf.Matrix(a.scale, a.scale), clip=pymupdf.Rect(x0, y0, x1, y1))
+        img = Image.open(io.BytesIO(pix.tobytes('png'))).convert('RGB')
+        img.save(a.image, quality=88, optimize=True, progressive=True)
+        print(f'wrote {a.image} ({img.width}x{img.height})')
 
     pieces = []
     for d in page.get_drawings():
@@ -102,22 +105,25 @@ def main():
         if run:
             pieces.append((cls, run))
 
-    out = []
+    doc = json.load(open(a.out)) if a.append else {'_source': 'PDF vector strokes (tools/trailmap/extract_pdf_vectors.py)'}
+    out = doc.get('polylines', []) if a.append else []
+    first_new = max((p['id'] for p in out), default=-1) + 1
     for cls, run in pieces:
         length = sum(math.hypot(q[0] - p[0], q[1] - p[1]) for p, q in zip(run, run[1:]))
         if length < a.min_length:
             continue
         pts = simplify(run, 0.25)
         out.append({
-            'id': len(out),
+            'id': first_new + sum(1 for p in out if p['id'] >= first_new),
             'cls': cls,
             'lengthPx': round(length * a.scale),
             'points': [[round(100 * (x - x0) / cw, 2), round(100 * (y - y0) / ch, 2)] for x, y in pts],
         })
+    doc['polylines'] = out
     with open(a.out, 'w') as f:
-        json.dump({'_source': 'PDF vector strokes (tools/trailmap/extract_pdf_vectors.py)', 'polylines': out}, f)
+        json.dump(doc, f)
     from collections import Counter
-    print(f'wrote {a.out}: {len(out)} pieces', dict(Counter(p["cls"] for p in out)))
+    print(f'wrote {a.out}: {len(out)} pieces (new from id {first_new})', dict(Counter(p["cls"] for p in out)))
 
 
 if __name__ == '__main__':
