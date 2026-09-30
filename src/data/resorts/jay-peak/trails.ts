@@ -8,7 +8,7 @@ import type { Trail, PeakData } from '../../../types';
 // one black) and a tie takes the harder (Jet, U.N., Green Mountain Boys:
 // one blue label, one black). Glades are the names that say so (Glade,
 // Woods) and the trails whose label sits in painted trees with no cut
-// (checked on crops; they get a marker, not a line). The 5 terrain parks
+// (Timbuktu, Valhalla, André's Paradise: checked on crops; a marker, not a line). The 5 terrain parks
 // print no symbol and default to blue. Sis Boom
 // Bah is printed only in the Side View inset. "Lower Lift Linee" on the map
 // is Lower Lift Line. x/y/baseY/width are unused layout fields.
@@ -19,7 +19,7 @@ export const peaks: PeakData[] = [
 export const trails: Trail[] = [
   { id: '601', name: '601', difficulty: 'black', peak: 'jay-peak' },
   { id: 'alligator-alley', name: 'Alligator Alley', difficulty: 'blue', peak: 'jay-peak' },
-  { id: 'andres-paradise', name: "André's Paradise", difficulty: 'black', peak: 'jay-peak' },
+  { id: 'andres-paradise', name: "André's Paradise", difficulty: 'black', peak: 'jay-peak', isGlade: true },
   { id: 'angels-wiggle', name: "Angel's Wiggle", difficulty: 'blue', peak: 'jay-peak' },
   { id: 'beaver-pond-glade', name: 'Beaver Pond Glade', difficulty: 'black', peak: 'jay-peak', isGlade: true },
   { id: 'bonaventure-glade', name: 'Bonaventure Glade', difficulty: 'black', peak: 'jay-peak', isGlade: true },
