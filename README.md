@@ -1,12 +1,15 @@
-# myskiruns — Killington Trail Tracker
+# myskiruns — ski trail tracker
 
-A React + TypeScript app for tracking which Killington trails you've skied,
-with hotspots overlaid on the actual resort trail map. The interesting part of
-this repo is the **computer-vision pipeline** that reads the trail map image:
-it detects the colored trail lines, OCRs the trail-name labels, audits the
-trail roster, and turns trails into clickable paths. Line detection is solid;
-assigning the right *name* to each line is not solved yet — see
-"Honest end-to-end status" below.
+A React + TypeScript app for tracking which trails you've skied, on the
+resorts' own trail maps: every trail is a clickable, correctly named overlay on
+the map. Eleven resorts so far (Killington, Stowe, Okemo, Sugarbush, Jay Peak,
+Whiteface, Winter Park, Breckenridge, Copper Mountain, Keystone, Vail). The
+interesting part of this repo is the **trail-map pipeline** that puts those
+overlays on a map: from a resort's PDF (vector lines, text, outlined glyphs) or
+its raster images (line detection), through naming every line, to an audit of
+every overlay on zoomed crops. It started on Killington's flattened raster map,
+where fully automatic naming stalled at ~40% (the history is below); the
+working process is [`docs/trail-map-playbook.md`](docs/trail-map-playbook.md).
 
 ## Running
 
@@ -17,13 +20,17 @@ npm run build      # typecheck + production build
 ```
 
 **Doing this for another resort?** Follow
-[`docs/trail-map-playbook.md`](docs/trail-map-playbook.md): the full workflow
-(source image → line detection → AI tile reading → human review → symbols and
-missing-trail search → apply and verify), the tools in `tools/trailmap/`, what
-each iteration taught us, and how to scale it to many maps.
+[`docs/trail-map-playbook.md`](docs/trail-map-playbook.md): which route fits
+which kind of map source, the resorts done so far and how, the full workflow
+(source → lines → names → trail list → audit on crops → apply and verify), the
+tools in `tools/trailmap/`, the gotchas, and what each iteration taught us.
 
 ## Using the app
 
+- **Resorts.** Pick the resort in the header (or `?resort=<id>`); the app
+  remembers it on the device. Vail's map comes as three panels (Front Side,
+  Back Bowls, Blue Sky Basin) with a switcher on the map (or `?panel=<id>`);
+  picking a trail in the list opens the panel it is drawn on.
 - **Trips.** What you ski is logged per trip ("Presidents Day weekend").
   Pick or start a trip in the header; mark a trail skied on the current
   trip from the map, or with its check box in the list. With no trip yet,
@@ -149,6 +156,12 @@ checked on zoomed crops instead, see the playbook).
 | `npm run detect:eval` / `detect:overlay` | v1 surface-detector equivalents |
 | `node scripts/extractLabels.mjs` | OCR the map labels |
 | `node scripts/reconcileTrails.mjs [--apply]` | match labels to roster, propose missing trails |
+| `npm run trails:apply -- --resort <id> [--panel <p>]` | proposals + reviews → `trailPaths.json` (what the app draws) |
+| `npm run reviews:import -- <export dir> --resort <id>` | review-page export → `trailReviews.json` |
+| `tools/trailmap/resorts/vail/regen.sh` | rebuild all of Vail's data from its readings and decisions |
+
+The Python tools for a new map (PDF extraction, raster detection, tiles,
+crops, audits) are listed in the playbook's "Tools in this repo".
 
 ## Current approach: propose, then human review (Sept 2026)
 
@@ -262,22 +275,24 @@ and re-encoded with 4:2:0 chroma subsampling — prefer it as pipeline input.
 
 ## What's left
 
-1. **Per-trail ground truth for the real goal**: for each of the 130 trails,
-   its line (or "no line: glade/area"), human-verified. It is both the
-   shipping data and the test set. Fastest route: a review mode that shows
-   each proposed overlay for ✓/✗ and snaps a click to the detected polylines.
-2. **Stop shipping region guesses** (or mark them unverified) and extend
-   anchored trails along their own unlabeled continuations instead.
-3. **Roster authority**: the map disagrees with `trails.ts` difficulties
-   (Chute, Royal Flush, East Fall, Reason drawn blue; Bear View green;
-   Breakaway black); ~18 map trails are still missing; some roster entries
-   (Mountain Training Station, Snow Play, Start Park) may not be lines.
-4. **Glades/parks** (14 roster entries) often have a marker + tree icon but
-   no line — decide how they should be clickable.
+1. **A person's confirmation** for the eight resorts Claude checked on crops
+   instead of the review page (Sugarbush through Vail), if the owner wants
+   it: the Trail Check page can be published for any resort (playbook,
+   step 4).
+2. **Shared tooling** (playbook, "Scaling to many maps"): one label-to-piece
+   matcher for PDF maps (each PDF resort had its own scratch copy), a
+   per-map legend file, readers run from a script.
+3. Killington (359/361) and Stowe (351/353) hover misses are stretches two
+   trails share, where either name is right.
+4. Vail: Cookshack's second diamond has no line of its own (the trail's
+   overlay is the line it is printed beside).
 5. Known detector edge cases (3 FN / 1 FP) in `src/detection/LINES.md`.
-   (The synthetic schematic view was removed in the UI review.)
 
 ## Regenerating the data (order matters)
+
+Killington's data, from its original pipeline (the other resorts were built
+by the playbook's routes; Vail's whole dataset is rebuilt by
+`tools/trailmap/resorts/vail/regen.sh`):
 
 ```bash
 node scripts/extractLabels.mjs        # OCR -> labelAnchors.json (keeps pass-2 labels)

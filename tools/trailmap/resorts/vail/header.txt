@@ -1,0 +1,18 @@
+// Vail's 2025-26 trail map is three raster panels (Front Side, Back Bowls,
+// Blue Sky Basin; no vector PDF). Each panel's green, blue and black lines
+// were detected from the image (tools/trailmap/raster_lines.py) and every
+// piece was named on zoomed crops from the name and symbol printed with it;
+// the per-panel overlays are in panels/<panel>/ (a few Back Bowls roads are
+// drawn on two or three panels). Names are as printed. Difficulty is the
+// symbol printed with each name, plus the unnamed symbols Vail prints on a
+// run's line where its rating changes; a run with several ratings takes the
+// majority, the harder one on a tie (Born Free, Ledges, Northface Catwalk,
+// Riva Ridge, Simba, Skid Road: blue; Bwana, Northstar, Safari, The
+// Preserve: black; Cady's Cafe, Prima: double-black). No symbol printed: the
+// bowls (Game Creek, Sun Down, Sun Up, China, Tea Cup, Siberia, Pete's,
+// Earl's) are rated black; Minnie Ha Ha (a family learning area) green; Cold
+// Feet and Upper Lion's Way take their line's colour (green); the two terrain
+// parks (Golden Peak Terrain Park, Jake's Ride) seed_roster's default (blue).
+// Names with no drawn line (open slopes, glades, bowls, parks) are markers at the
+// name. Elevations are the highest printed on each panel. x/y/baseY/width are
+// unused layout fields.

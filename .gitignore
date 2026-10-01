@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 __pycache__/
+
+# pipeline working files (downloaded maps, intermediate json, crops)
+work/
