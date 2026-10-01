@@ -71,6 +71,8 @@ def main():
                     help='instead take lines drawn as a thin filled outline in a trail colour (a stroke converted '
                          'to a fill: its first side, up to the end cap); use with --append and only the colours '
                          'no text is printed in (black glyphs are fills too) (Sugarbush: Snowball)')
+    ap.add_argument('--exclude', action='append', default=[],
+                    help='x0,y0,x1,y1 in PDF points: drop runs lying wholly inside (a legend or panel printed on the map)')
     ap.add_argument('--image', help='write the map image here (omit with --append)')
     ap.add_argument('--append', action='store_true',
                     help='add pieces for these colours to an existing --out, keeping its ids')
@@ -78,6 +80,7 @@ def main():
     a = ap.parse_args()
 
     x0, y0, x1, y1 = map(float, a.clip.split(','))
+    excludes = [tuple(map(float, e.split(','))) for e in a.exclude]
     cw, ch = x1 - x0, y1 - y0
     classes = {}
     for spec in a.color:
@@ -141,6 +144,8 @@ def main():
             continue  # a closed loop this small is an icon (Okemo's legend), not a trail
         if not any(x0 <= x <= x1 and y0 <= y <= y1 for x, y in run):
             continue  # outside the map area (Winter Park's legend line icons)
+        if any(all(e[0] <= x <= e[2] and e[1] <= y <= e[3] for x, y in run) for e in excludes):
+            continue  # inside a legend or panel printed over the map (Breckenridge)
         pts = simplify(run, 0.25)
         out.append({
             'id': first_new + sum(1 for p in out if p['id'] >= first_new),

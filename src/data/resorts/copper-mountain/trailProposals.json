@@ -1,0 +1,891 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "17-glade": {
+   "noLine": true,
+   "label": [
+    32.24,
+    49.45
+   ],
+   "confidence": "high"
+  },
+  "american-flyer": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "AMERICAN FLYER",
+   "note": "PDF label + checked crop"
+  },
+  "andys-encore": {
+   "polylines": [
+    11,
+    25
+   ],
+   "confidence": "high",
+   "mapName": "ANDY'S ENCORE",
+   "note": "PDF label + checked crop"
+  },
+  "bariloche": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "BARILOCHE",
+   "note": "PDF label + checked crop"
+  },
+  "bee-traverse": {
+   "polylines": [
+    58,
+    59
+   ],
+   "confidence": "high",
+   "mapName": "BEE TRAVERSE",
+   "note": "PDF label + checked crop"
+  },
+  "bittersweet": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "BITTERSWEET",
+   "note": "PDF label + checked crop"
+  },
+  "black-bear-glade": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "BLACK BEAR GLADE",
+   "note": "PDF label + checked crop"
+  },
+  "boulderado": {
+   "polylines": [
+    112
+   ],
+   "confidence": "high",
+   "mapName": "BOULDERADO",
+   "note": "PDF label + checked crop"
+  },
+  "bouncer": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "BOUNCER",
+   "note": "PDF label + checked crop"
+  },
+  "brennans-grin": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "BRENNAN'S GRIN",
+   "note": "PDF label + checked crop"
+  },
+  "bridgeway": {
+   "polylines": [
+    98
+   ],
+   "confidence": "high",
+   "mapName": "BRIDGEWAY",
+   "note": "PDF label + checked crop"
+  },
+  "buffalo-stampede": {
+   "polylines": [
+    113
+   ],
+   "confidence": "high",
+   "mapName": "BUFFALO STAMPEDE",
+   "note": "PDF label + checked crop"
+  },
+  "buzzards-alley": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "BUZZARD'S ALLEY",
+   "note": "PDF label + checked crop"
+  },
+  "cdls-trail-20": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "CDL'S TRAIL #20",
+   "note": "PDF label + checked crop"
+  },
+  "cabin-chute": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "CABIN CHUTE",
+   "note": "PDF label + checked crop"
+  },
+  "cache-glades": {
+   "noLine": true,
+   "label": [
+    42.11,
+    39.62
+   ],
+   "confidence": "high"
+  },
+  "carefree": {
+   "polylines": [
+    29,
+    108
+   ],
+   "confidence": "high",
+   "mapName": "CAREFREE",
+   "note": "PDF label + checked crop"
+  },
+  "clear-cut": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "CLEAR CUT",
+   "note": "PDF label + checked crop"
+  },
+  "collage": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "COLLAGE",
+   "note": "PDF label + checked crop"
+  },
+  "colmans-retreat": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "COLMAN'S RETREAT",
+   "note": "PDF label + checked crop"
+  },
+  "copperfield": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "COPPERFIELD",
+   "note": "PDF label + checked crop"
+  },
+  "copperopolis": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "COPPEROPOLIS",
+   "note": "PDF label + checked crop"
+  },
+  "coppertone": {
+   "polylines": [
+    105,
+    106
+   ],
+   "confidence": "high",
+   "mapName": "COPPERTONE",
+   "note": "PDF label + checked crop"
+  },
+  "denverite": {
+   "polylines": [
+    31,
+    117
+   ],
+   "confidence": "high",
+   "mapName": "DENVERITE",
+   "note": "PDF label + checked crop"
+  },
+  "drain-pipe": {
+   "polylines": [
+    68
+   ],
+   "confidence": "high",
+   "mapName": "DRAIN PIPE",
+   "note": "PDF label + checked crop"
+  },
+  "ez-road": {
+   "polylines": [
+    118
+   ],
+   "confidence": "high",
+   "mapName": "EZ ROAD",
+   "note": "PDF label + checked crop"
+  },
+  "easy-feelin": {
+   "polylines": [
+    84
+   ],
+   "confidence": "high",
+   "mapName": "EASY FEELIN'",
+   "note": "PDF label + checked crop"
+  },
+  "endeavor": {
+   "polylines": [
+    65
+   ],
+   "confidence": "high",
+   "mapName": "ENDEAVOR",
+   "note": "PDF label + checked crop"
+  },
+  "fair-play": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "FAIR PLAY",
+   "note": "PDF label + checked crop"
+  },
+  "fairway": {
+   "polylines": [
+    101
+   ],
+   "confidence": "high",
+   "mapName": "FAIRWAY",
+   "note": "PDF label + checked crop"
+  },
+  "far-east": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "FAR EAST",
+   "note": "PDF label + checked crop"
+  },
+  "far-west": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "FAR WEST",
+   "note": "PDF label + checked crop"
+  },
+  "formidable": {
+   "polylines": [
+    60
+   ],
+   "confidence": "high",
+   "mapName": "FORMIDABLE",
+   "note": "PDF label + checked crop"
+  },
+  "foul-play": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "FOUL PLAY",
+   "note": "PDF label + checked crop"
+  },
+  "franks-fave": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "FRANK'S FAVE",
+   "note": "PDF label + checked crop"
+  },
+  "free-fall-glade": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "FREE FALL GLADE",
+   "note": "PDF label + checked crop"
+  },
+  "gold-digger": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "GOLD DIGGER",
+   "note": "PDF label + checked crop"
+  },
+  "guthries-chute": {
+   "polylines": [
+    72
+   ],
+   "confidence": "high",
+   "mapName": "GUTHRIE'S CHUTE",
+   "note": "PDF label + checked crop"
+  },
+  "hallelujah": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "HALLELUJAH",
+   "note": "PDF label + checked crop"
+  },
+  "hallelujah-ridge": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "HALLELUJAH RIDGE",
+   "note": "PDF label + checked crop"
+  },
+  "hidden-vein": {
+   "polylines": [
+    94,
+    95
+   ],
+   "confidence": "high",
+   "mapName": "HIDDEN VEIN",
+   "note": "PDF label + checked crop"
+  },
+  "high-point": {
+   "polylines": [
+    86,
+    96
+   ],
+   "confidence": "high",
+   "mapName": "HIGH POINT",
+   "note": "PDF label + checked crop"
+  },
+  "high-point-bypass": {
+   "polylines": [
+    119
+   ],
+   "confidence": "high",
+   "mapName": "HIGH POINT BYPASS",
+   "note": "PDF label + checked crop"
+  },
+  "highline": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "HIGHLINE",
+   "note": "PDF label + checked crop"
+  },
+  "hodsons-cut": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "HODSON'S CUT",
+   "note": "PDF label + checked crop"
+  },
+  "home-run": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "HOME RUN",
+   "note": "PDF label + checked crop"
+  },
+  "i-dropper": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "I-DROPPER",
+   "note": "PDF label + checked crop"
+  },
+  "i-way": {
+   "polylines": [
+    76
+   ],
+   "confidence": "high",
+   "mapName": "I-WAY",
+   "note": "PDF label + checked crop"
+  },
+  "jacques-pique": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "JACQUE'S PIQUE",
+   "note": "PDF label + checked crop"
+  },
+  "kaboom": {
+   "polylines": [
+    55
+   ],
+   "confidence": "high",
+   "mapName": "KABOOM",
+   "note": "PDF label + checked crop"
+  },
+  "kokomo-glade": {
+   "noLine": true,
+   "label": [
+    70.8,
+    66.65
+   ],
+   "confidence": "high"
+  },
+  "leap-frog": {
+   "polylines": [
+    103,
+    104,
+    107,
+    109
+   ],
+   "confidence": "high",
+   "mapName": "LEAP FROG",
+   "note": "PDF label + checked crop"
+  },
+  "liberty": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "LIBERTY",
+   "note": "PDF label + checked crop"
+  },
+  "lillie-g-traverse": {
+   "polylines": [
+    70,
+    71
+   ],
+   "confidence": "high",
+   "mapName": "LILLIE G TRAVERSE",
+   "note": "PDF label + checked crop"
+  },
+  "little-burn": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE BURN",
+   "note": "PDF label + checked crop"
+  },
+  "little-trees": {
+   "polylines": [
+    66
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE TREES",
+   "note": "PDF label + checked crop"
+  },
+  "looking-glass": {
+   "polylines": [
+    62
+   ],
+   "confidence": "high",
+   "mapName": "LOOKING GLASS",
+   "note": "PDF label + checked crop"
+  },
+  "loverly": {
+   "polylines": [
+    89,
+    122
+   ],
+   "confidence": "high",
+   "mapName": "LOVERLY",
+   "note": "PDF label + checked crop"
+  },
+  "lyman-lane": {
+   "polylines": [
+    124
+   ],
+   "confidence": "high",
+   "mapName": "LYMAN LANE",
+   "note": "PDF label + checked crop"
+  },
+  "main-vein": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "MAIN VEIN",
+   "note": "PDF label + checked crop"
+  },
+  "mine-dump": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "MINE DUMP",
+   "note": "PDF label + checked crop"
+  },
+  "minor-matter": {
+   "polylines": [
+    79,
+    81,
+    82,
+    99,
+    100
+   ],
+   "confidence": "high",
+   "mapName": "MINOR MATTER",
+   "note": "PDF label + checked crop"
+  },
+  "oh-no": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "OH NO",
+   "note": "PDF label + checked crop"
+  },
+  "ore-deal": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "ORE DEAL",
+   "note": "PDF label + checked crop"
+  },
+  "overlode": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "OVERLODE",
+   "note": "PDF label + checked crop"
+  },
+  "pine-cone-alley": {
+   "polylines": [
+    121
+   ],
+   "confidence": "high",
+   "mapName": "PINE CONE ALLEY",
+   "note": "PDF label + checked crop"
+  },
+  "prospector": {
+   "polylines": [
+    87
+   ],
+   "confidence": "high",
+   "mapName": "PROSPECTOR",
+   "note": "PDF label + checked crop"
+  },
+  "ptarmigan": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "PTARMIGAN",
+   "note": "PDF label + checked crop"
+  },
+  "rams-run": {
+   "polylines": [
+    114
+   ],
+   "confidence": "high",
+   "mapName": "RAM'S RUN",
+   "note": "PDF label + checked crop"
+  },
+  "revenge": {
+   "polylines": [
+    64
+   ],
+   "confidence": "high",
+   "mapName": "REVENGE",
+   "note": "PDF label + checked crop"
+  },
+  "rhapsody": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "RHAPSODY",
+   "note": "PDF label + checked crop"
+  },
+  "rosis-run": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "ROSI'S RUN",
+   "note": "PDF label + checked crop"
+  },
+  "roundabout": {
+   "polylines": [
+    74
+   ],
+   "confidence": "high",
+   "mapName": "ROUNDABOUT",
+   "note": "PDF label + checked crop"
+  },
+  "sail-away-glade": {
+   "noLine": true,
+   "label": [
+    42.96,
+    47.27
+   ],
+   "confidence": "high"
+  },
+  "sawtooth": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "SAWTOOTH",
+   "note": "PDF label + checked crop"
+  },
+  "scooter": {
+   "polylines": [
+    91
+   ],
+   "confidence": "high",
+   "mapName": "SCOOTER",
+   "note": "PDF label + checked crop"
+  },
+  "see-ski": {
+   "polylines": [
+    85
+   ],
+   "confidence": "high",
+   "mapName": "SEE & SKI",
+   "note": "PDF label + checked crop"
+  },
+  "skid-road": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "SKID ROAD",
+   "note": "PDF label + checked crop"
+  },
+  "slip-not": {
+   "polylines": [
+    61
+   ],
+   "confidence": "high",
+   "mapName": "SLIP NOT",
+   "note": "PDF label + checked crop"
+  },
+  "slot-car-track": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "SLOT CAR TRACK",
+   "note": "PDF label + checked crop"
+  },
+  "sluice": {
+   "polylines": [
+    88
+   ],
+   "confidence": "high",
+   "mapName": "SLUICE",
+   "note": "PDF label + checked crop"
+  },
+  "sno-deal": {
+   "polylines": [
+    30,
+    90
+   ],
+   "confidence": "high",
+   "mapName": "SNO DEAL",
+   "note": "PDF label + checked crop"
+  },
+  "soliloquy": {
+   "polylines": [
+    75,
+    110
+   ],
+   "confidence": "high",
+   "mapName": "SOLILOQUY",
+   "note": "PDF label + checked crop"
+  },
+  "spaulding-ridge": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "SPAULDING RIDGE",
+   "note": "PDF label + checked crop"
+  },
+  "spillway": {
+   "polylines": [
+    67
+   ],
+   "confidence": "high",
+   "mapName": "SPILLWAY",
+   "note": "PDF label + checked crop"
+  },
+  "tempo": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "TEMPO",
+   "note": "PDF label + checked crop"
+  },
+  "the-moz": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "THE MOZ",
+   "note": "PDF label + checked crop"
+  },
+  "the-taco": {
+   "polylines": [
+    115
+   ],
+   "confidence": "high",
+   "mapName": "THE TACO",
+   "note": "PDF label + checked crop"
+  },
+  "timber-ridge": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "TIMBER RIDGE",
+   "note": "PDF label + checked crop"
+  },
+  "timber-road": {
+   "polylines": [
+    123
+   ],
+   "confidence": "high",
+   "mapName": "TIMBER ROAD",
+   "note": "PDF label + checked crop"
+  },
+  "too-much": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "TOO MUCH",
+   "note": "PDF label + checked crop"
+  },
+  "treble-cliff": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "TREBLE CLIFF",
+   "note": "PDF label + checked crop"
+  },
+  "triple-treat": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "TRIPLE TREAT",
+   "note": "PDF label + checked crop"
+  },
+  "triple-zero": {
+   "polylines": [
+    69
+   ],
+   "confidence": "high",
+   "mapName": "TRIPLE ZERO",
+   "note": "PDF label + checked crop"
+  },
+  "union-gap": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "UNION GAP",
+   "note": "PDF label + checked crop"
+  },
+  "union-park": {
+   "polylines": [
+    73
+   ],
+   "confidence": "high",
+   "mapName": "UNION PARK",
+   "note": "PDF label + checked crop"
+  },
+  "union-peak": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "UNION PEAK",
+   "note": "PDF label + checked crop"
+  },
+  "upper-sluice": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SLUICE",
+   "note": "PDF label + checked crop"
+  },
+  "ute-overlook": {
+   "polylines": [
+    63
+   ],
+   "confidence": "high",
+   "mapName": "UTE OVERLOOK",
+   "note": "PDF label + checked crop"
+  },
+  "vein-glory": {
+   "polylines": [
+    97
+   ],
+   "confidence": "high",
+   "mapName": "VEIN GLORY",
+   "note": "PDF label + checked crop"
+  },
+  "west-encore": {
+   "polylines": [
+    111
+   ],
+   "confidence": "high",
+   "mapName": "WEST ENCORE",
+   "note": "PDF label + checked crop"
+  },
+  "west-ten-mile": {
+   "polylines": [
+    125
+   ],
+   "confidence": "high",
+   "mapName": "WEST TEN MILE",
+   "note": "PDF label + checked crop"
+  },
+  "west-village-traverse": {
+   "polylines": [
+    120
+   ],
+   "confidence": "high",
+   "mapName": "WEST VILLAGE TRAVERSE",
+   "note": "PDF label + checked crop"
+  },
+  "western-slope": {
+   "polylines": [
+    116
+   ],
+   "confidence": "high",
+   "mapName": "WESTERN SLOPE",
+   "note": "PDF label + checked crop"
+  },
+  "wheeler-creek": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "WHEELER CREEK",
+   "note": "PDF label + checked crop"
+  },
+  "windsong": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "WINDSONG",
+   "note": "PDF label + checked crop"
+  },
+  "woodwinds": {
+   "polylines": [
+    78,
+    80
+   ],
+   "confidence": "high",
+   "mapName": "WOODWINDS",
+   "note": "PDF label + checked crop"
+  },
+  "woodwinds-traverse": {
+   "polylines": [
+    83,
+    92,
+    93,
+    102
+   ],
+   "confidence": "high",
+   "mapName": "WOODWINDS TRAVERSE",
+   "note": "PDF label + checked crop"
+  }
+ }
+}

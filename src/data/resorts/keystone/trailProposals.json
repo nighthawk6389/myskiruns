@@ -1,0 +1,1004 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "acapulco-road": {
+   "polylines": [
+    96
+   ],
+   "confidence": "high",
+   "mapName": "ACAPULCO ROAD",
+   "note": "PDF label + checked crop"
+  },
+  "ambush": {
+   "polylines": [
+    59
+   ],
+   "confidence": "high",
+   "mapName": "AMBUSH",
+   "note": "PDF label + checked crop"
+  },
+  "anticipation": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "ANTICIPATION",
+   "note": "PDF label + checked crop"
+  },
+  "bachelor": {
+   "polylines": [
+    78
+   ],
+   "confidence": "high",
+   "mapName": "BACHELOR",
+   "note": "PDF label + checked crop"
+  },
+  "badger": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "BADGER",
+   "note": "PDF label + checked crop"
+  },
+  "bald-mountain-glades": {
+   "polylines": [
+    124
+   ],
+   "confidence": "high",
+   "mapName": "BALD MOUNTAIN GLADES",
+   "note": "PDF label + checked crop"
+  },
+  "ballhooter": {
+   "polylines": [
+    105
+   ],
+   "confidence": "high",
+   "mapName": "BALLHOOTER",
+   "note": "PDF label + checked crop"
+  },
+  "beger": {
+   "polylines": [
+    83
+   ],
+   "confidence": "high",
+   "mapName": "BEGER",
+   "note": "PDF label + checked crop"
+  },
+  "bighorn": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "BIGHORN",
+   "note": "PDF label + checked crop"
+  },
+  "bingo": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "BINGO",
+   "note": "PDF label + checked crop"
+  },
+  "black-hawk": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "BLACK HAWK",
+   "note": "PDF label + checked crop"
+  },
+  "black-jack": {
+   "polylines": [
+    133
+   ],
+   "confidence": "high",
+   "mapName": "BLACK JACK",
+   "note": "PDF label + checked crop"
+  },
+  "bobtail": {
+   "polylines": [
+    87
+   ],
+   "confidence": "high",
+   "mapName": "BOBTAIL",
+   "note": "PDF label + checked crop"
+  },
+  "brahma": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "BRAHMA",
+   "note": "PDF label + checked crop"
+  },
+  "buck-shot": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "BUCK SHOT",
+   "note": "PDF label + checked crop"
+  },
+  "buffalo": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "BUFFALO",
+   "note": "PDF label + checked crop"
+  },
+  "bullet": {
+   "polylines": [
+    55
+   ],
+   "confidence": "high",
+   "mapName": "BULLET",
+   "note": "PDF label + checked crop"
+  },
+  "bullet-glades": {
+   "noLine": true,
+   "label": [
+    59.57,
+    45.67
+   ],
+   "confidence": "high"
+  },
+  "bushwhacker": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "BUSHWHACKER",
+   "note": "PDF label + checked crop"
+  },
+  "cat-dancer": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "CAT DANCER",
+   "note": "PDF label + checked crop"
+  },
+  "cat-south-glades": {
+   "polylines": [
+    131
+   ],
+   "confidence": "high",
+   "mapName": "CAT SOUTH GLADES",
+   "note": "PDF label + checked crop"
+  },
+  "christmas-tree": {
+   "polylines": [
+    125
+   ],
+   "confidence": "high",
+   "mapName": "CHRISTMAS TREE",
+   "note": "PDF label + checked crop"
+  },
+  "conquest": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "CONQUEST",
+   "note": "PDF label + checked crop"
+  },
+  "coyote-caper": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "COYOTE CAPER",
+   "note": "PDF label + checked crop"
+  },
+  "crap-game": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "CRAP GAME",
+   "note": "PDF label + checked crop"
+  },
+  "cross-cut": {
+   "polylines": [
+    79
+   ],
+   "confidence": "high",
+   "mapName": "CROSS-CUT",
+   "note": "PDF label + checked crop"
+  },
+  "dercums-dash": {
+   "polylines": [
+    86
+   ],
+   "confidence": "high",
+   "mapName": "DERCUM'S DASH",
+   "note": "PDF label + checked crop"
+  },
+  "diamond-back": {
+   "polylines": [
+    63
+   ],
+   "confidence": "high",
+   "mapName": "DIAMOND BACK",
+   "note": "PDF label + checked crop"
+  },
+  "eagles-nest": {
+   "polylines": [
+    121
+   ],
+   "confidence": "high",
+   "mapName": "EAGLE'S NEST",
+   "note": "PDF label + checked crop"
+  },
+  "elk-run": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "ELK RUN",
+   "note": "PDF label + checked crop"
+  },
+  "flying-dutchman": {
+   "polylines": [
+    74
+   ],
+   "confidence": "high",
+   "mapName": "FLYING DUTCHMAN",
+   "note": "PDF label + checked crop"
+  },
+  "foxtrot": {
+   "polylines": [
+    123
+   ],
+   "confidence": "high",
+   "mapName": "FOXTROT",
+   "note": "PDF label + checked crop"
+  },
+  "foxtrot-glades": {
+   "polylines": [
+    117
+   ],
+   "confidence": "high",
+   "mapName": "FOXTROT GLADES",
+   "note": "PDF label + checked crop"
+  },
+  "fredas": {
+   "polylines": [
+    97
+   ],
+   "confidence": "high",
+   "mapName": "FREDA'S",
+   "note": "PDF label + checked crop"
+  },
+  "frenchman": {
+   "polylines": [
+    76
+   ],
+   "confidence": "high",
+   "mapName": "FRENCHMAN",
+   "note": "PDF label + checked crop"
+  },
+  "gassy-thompson": {
+   "polylines": [
+    104
+   ],
+   "confidence": "high",
+   "mapName": "GASSY THOMPSON",
+   "note": "PDF label + checked crop"
+  },
+  "geronimo": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "GERONIMO",
+   "note": "PDF label + checked crop"
+  },
+  "glades": {
+   "noLine": true,
+   "label": [
+    68.37,
+    43.04
+   ],
+   "confidence": "high"
+  },
+  "go-devil": {
+   "polylines": [
+    130
+   ],
+   "confidence": "high",
+   "mapName": "GO DEVIL",
+   "note": "PDF label + checked crop"
+  },
+  "goalpost-gully": {
+   "polylines": [
+    126
+   ],
+   "confidence": "high",
+   "mapName": "GOALPOST GULLY",
+   "note": "PDF label + checked crop"
+  },
+  "grays": {
+   "polylines": [
+    111
+   ],
+   "confidence": "high",
+   "mapName": "GRAY'S",
+   "note": "PDF label + checked crop"
+  },
+  "gun-barrel": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "GUN BARREL",
+   "note": "PDF label + checked crop"
+  },
+  "haywood": {
+   "polylines": [
+    91
+   ],
+   "confidence": "high",
+   "mapName": "HAYWOOD",
+   "note": "PDF label + checked crop"
+  },
+  "hoodoo": {
+   "polylines": [
+    98,
+    99
+   ],
+   "confidence": "high",
+   "mapName": "HOODOO",
+   "note": "PDF label + checked crop"
+  },
+  "idabelle": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "IDABELLE",
+   "note": "PDF label + checked crop"
+  },
+  "inas-way": {
+   "polylines": [
+    85
+   ],
+   "confidence": "high",
+   "mapName": "INA'S WAY",
+   "note": "PDF label + checked crop"
+  },
+  "indy-face": {
+   "polylines": [
+    10,
+    11
+   ],
+   "confidence": "high",
+   "mapName": "INDY FACE",
+   "note": "PDF label + checked crop"
+  },
+  "jackface": {
+   "polylines": [
+    66
+   ],
+   "confidence": "high",
+   "mapName": "JACKFACE",
+   "note": "PDF label + checked crop"
+  },
+  "jackwhacker": {
+   "polylines": [
+    75
+   ],
+   "confidence": "high",
+   "mapName": "JACKWHACKER",
+   "note": "PDF label + checked crop"
+  },
+  "jacques-st-james": {
+   "polylines": [
+    80
+   ],
+   "confidence": "high",
+   "mapName": "JACQUES ST. JAMES",
+   "note": "PDF label + checked crop"
+  },
+  "janes-journey": {
+   "polylines": [
+    116
+   ],
+   "confidence": "high",
+   "mapName": "JANE'S JOURNEY",
+   "note": "PDF label + checked crop"
+  },
+  "jaybird": {
+   "polylines": [
+    89
+   ],
+   "confidence": "high",
+   "mapName": "JAYBIRD",
+   "note": "PDF label + checked crop"
+  },
+  "last-alamo": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "LAST ALAMO",
+   "note": "PDF label + checked crop"
+  },
+  "last-chance": {
+   "polylines": [
+    102
+   ],
+   "confidence": "high",
+   "mapName": "LAST CHANCE",
+   "note": "PDF label + checked crop"
+  },
+  "last-hoot": {
+   "polylines": [
+    103
+   ],
+   "confidence": "high",
+   "mapName": "LAST HOOT",
+   "note": "PDF label + checked crop"
+  },
+  "liberty": {
+   "polylines": [
+    13,
+    14
+   ],
+   "confidence": "high",
+   "mapName": "LIBERTY",
+   "note": "PDF label + checked crop"
+  },
+  "liberty-trees": {
+   "polylines": [
+    12,
+    16
+   ],
+   "confidence": "high",
+   "mapName": "LIBERTY TREES",
+   "note": "PDF label + checked crop"
+  },
+  "lodgepole": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "LODGEPOLE",
+   "note": "PDF label + checked crop"
+  },
+  "lower-go-devil": {
+   "polylines": [
+    107
+   ],
+   "confidence": "high",
+   "mapName": "LOWER GO DEVIL",
+   "note": "PDF label + checked crop"
+  },
+  "lower-prospector": {
+   "polylines": [
+    60
+   ],
+   "confidence": "high",
+   "mapName": "LOWER PROSPECTOR",
+   "note": "PDF label + checked crop"
+  },
+  "midland": {
+   "polylines": [
+    82
+   ],
+   "confidence": "high",
+   "mapName": "MIDLAND",
+   "note": "PDF label + checked crop"
+  },
+  "midnight-ride": {
+   "polylines": [
+    17,
+    20
+   ],
+   "confidence": "high",
+   "mapName": "MIDNIGHT RIDE",
+   "note": "PDF label + checked crop"
+  },
+  "mine-shaft": {
+   "polylines": [
+    62
+   ],
+   "confidence": "high",
+   "mapName": "MINE SHAFT",
+   "note": "PDF label + checked crop"
+  },
+  "miners": {
+   "polylines": [
+    114
+   ],
+   "confidence": "high",
+   "mapName": "MINERS",
+   "note": "PDF label + checked crop"
+  },
+  "missouri": {
+   "polylines": [
+    68
+   ],
+   "confidence": "high",
+   "mapName": "MISSOURI",
+   "note": "PDF label + checked crop"
+  },
+  "modest-girl": {
+   "polylines": [
+    90
+   ],
+   "confidence": "high",
+   "mapName": "MODEST GIRL",
+   "note": "PDF label + checked crop"
+  },
+  "mouse-trap": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "MOUSE TRAP",
+   "note": "PDF label + checked crop"
+  },
+  "mozart": {
+   "polylines": [
+    61
+   ],
+   "confidence": "high",
+   "mapName": "MOZART",
+   "note": "PDF label + checked crop"
+  },
+  "mr-toads-wild-ride": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "MR. TOAD'S WILD RIDE",
+   "note": "PDF label + checked crop"
+  },
+  "narrow-gauge": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "NARROW GAUGE",
+   "note": "PDF label + checked crop"
+  },
+  "nuchu": {
+   "polylines": [
+    119,
+    122
+   ],
+   "confidence": "high",
+   "mapName": "NUCHU",
+   "note": "PDF label + checked crop"
+  },
+  "oh-bob": {
+   "polylines": [
+    44,
+    45
+   ],
+   "confidence": "high",
+   "mapName": "OH, BOB",
+   "note": "PDF label + checked crop"
+  },
+  "orfint-boy": {
+   "polylines": [
+    88
+   ],
+   "confidence": "high",
+   "mapName": "ORFINT BOY",
+   "note": "PDF label + checked crop"
+  },
+  "patriot": {
+   "polylines": [
+    15,
+    19
+   ],
+   "confidence": "high",
+   "mapName": "PATRIOT",
+   "note": "PDF label + checked crop"
+  },
+  "paymaster": {
+   "polylines": [
+    95
+   ],
+   "confidence": "high",
+   "mapName": "PAYMASTER",
+   "note": "PDF label + checked crop"
+  },
+  "pika-glades": {
+   "polylines": [
+    110
+   ],
+   "confidence": "high",
+   "mapName": "PIKA GLADES",
+   "note": "PDF label + checked crop"
+  },
+  "porcupine": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "PORCUPINE",
+   "note": "PDF label + checked crop"
+  },
+  "powder-cap": {
+   "polylines": [
+    58
+   ],
+   "confidence": "high",
+   "mapName": "POWDER CAP",
+   "note": "PDF label + checked crop"
+  },
+  "prospector": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "PROSPECTOR",
+   "note": "PDF label + checked crop"
+  },
+  "ptarmigan": {
+   "polylines": [
+    113
+   ],
+   "confidence": "high",
+   "mapName": "PTARMIGAN",
+   "note": "PDF label + checked crop"
+  },
+  "puma-bowl": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "PUMA BOWL",
+   "note": "PDF label + checked crop"
+  },
+  "quandary": {
+   "polylines": [
+    128
+   ],
+   "confidence": "high",
+   "mapName": "QUANDARY",
+   "note": "PDF label + checked crop"
+  },
+  "red": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "RED",
+   "note": "PDF label + checked crop"
+  },
+  "revolution": {
+   "polylines": [
+    18,
+    21
+   ],
+   "confidence": "high",
+   "mapName": "REVOLUTION",
+   "note": "PDF label + checked crop"
+  },
+  "richter": {
+   "polylines": [
+    106
+   ],
+   "confidence": "high",
+   "mapName": "RICHTER",
+   "note": "PDF label + checked crop"
+  },
+  "ripperoos-glade": {
+   "noLine": true,
+   "label": [
+    29.48,
+    56.64
+   ],
+   "confidence": "high"
+  },
+  "river-run": {
+   "polylines": [
+    67
+   ],
+   "confidence": "high",
+   "mapName": "RIVER RUN",
+   "note": "PDF label + checked crop"
+  },
+  "roulette": {
+   "polylines": [
+    132
+   ],
+   "confidence": "high",
+   "mapName": "ROULETTE",
+   "note": "PDF label + checked crop"
+  },
+  "santa-fe": {
+   "polylines": [
+    65
+   ],
+   "confidence": "high",
+   "mapName": "SANTA FE",
+   "note": "PDF label + checked crop"
+  },
+  "schoolmarm": {
+   "polylines": [
+    84,
+    92,
+    93
+   ],
+   "confidence": "high",
+   "mapName": "SCHOOLMARM",
+   "note": "PDF label + checked crop"
+  },
+  "silver-spoon": {
+   "polylines": [
+    94
+   ],
+   "confidence": "high",
+   "mapName": "SILVER SPOON",
+   "note": "PDF label + checked crop"
+  },
+  "silverheels": {
+   "polylines": [
+    120
+   ],
+   "confidence": "high",
+   "mapName": "SILVERHEELS",
+   "note": "PDF label + checked crop"
+  },
+  "silvermaster": {
+   "polylines": [
+    100
+   ],
+   "confidence": "high",
+   "mapName": "SILVERMASTER",
+   "note": "PDF label + checked crop"
+  },
+  "snake-pit": {
+   "polylines": [
+    134
+   ],
+   "confidence": "high",
+   "mapName": "SNAKE PIT",
+   "note": "PDF label + checked crop"
+  },
+  "spillway": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "SPILLWAY",
+   "note": "PDF label + checked crop"
+  },
+  "spring-dipper": {
+   "polylines": [
+    64,
+    69
+   ],
+   "confidence": "high",
+   "mapName": "SPRING DIPPER",
+   "note": "PDF label + checked crop"
+  },
+  "starfire": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "STARFIRE",
+   "note": "PDF label + checked crop"
+  },
+  "swandyke": {
+   "polylines": [
+    73
+   ],
+   "confidence": "high",
+   "mapName": "SWANDYKE",
+   "note": "PDF label + checked crop"
+  },
+  "ten-mile": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "TEN MILE",
+   "note": "PDF label + checked crop"
+  },
+  "tenderfoot-glades": {
+   "polylines": [
+    118
+   ],
+   "confidence": "high",
+   "mapName": "TENDERFOOT GLADES",
+   "note": "PDF label + checked crop"
+  },
+  "the-corral": {
+   "polylines": [
+    127
+   ],
+   "confidence": "high",
+   "mapName": "THE CORRAL",
+   "note": "PDF label + checked crop"
+  },
+  "the-edge": {
+   "polylines": [
+    81
+   ],
+   "confidence": "high",
+   "mapName": "THE EDGE",
+   "note": "PDF label + checked crop"
+  },
+  "the-grizz": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "THE GRIZZ",
+   "note": "PDF label + checked crop"
+  },
+  "the-stadium": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "THE STADIUM",
+   "note": "PDF label + checked crop"
+  },
+  "the-trap": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "THE TRAP",
+   "note": "PDF label + checked crop"
+  },
+  "the-willows": {
+   "polylines": [
+    129
+   ],
+   "confidence": "high",
+   "mapName": "THE WILLOWS",
+   "note": "PDF label + checked crop"
+  },
+  "the-wolf-den": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "THE WOLF DEN",
+   "note": "PDF label + checked crop"
+  },
+  "thorne": {
+   "polylines": [
+    52,
+    115
+   ],
+   "confidence": "high",
+   "mapName": "THORNE",
+   "note": "PDF label + checked crop"
+  },
+  "timberwolf": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "TIMBERWOLF",
+   "note": "PDF label + checked crop"
+  },
+  "torreys": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "TORREYS",
+   "note": "PDF label + checked crop"
+  },
+  "two-if-by-sea": {
+   "polylines": [
+    8,
+    9
+   ],
+   "confidence": "high",
+   "mapName": "TWO IF BY SEA",
+   "note": "PDF label + checked crop"
+  },
+  "two-sled": {
+   "polylines": [
+    101
+   ],
+   "confidence": "high",
+   "mapName": "TWO SLED",
+   "note": "PDF label + checked crop"
+  },
+  "uneva": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "UNEVA",
+   "note": "PDF label + checked crop"
+  },
+  "upper-frenchman": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "UPPER FRENCHMAN",
+   "note": "PDF label + checked crop"
+  },
+  "ute": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "UTE",
+   "note": "PDF label + checked crop"
+  },
+  "victory-chutes": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "VICTORY CHUTES",
+   "note": "PDF label + checked crop"
+  },
+  "whipsaw": {
+   "polylines": [
+    70,
+    71
+   ],
+   "confidence": "high",
+   "mapName": "WHIPSAW",
+   "note": "PDF label + checked crop"
+  },
+  "wild-card": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "WILD CARD",
+   "note": "PDF label + checked crop"
+  },
+  "wild-irishman": {
+   "polylines": [
+    72
+   ],
+   "confidence": "high",
+   "mapName": "WILD IRISHMAN",
+   "note": "PDF label + checked crop"
+  },
+  "wildcat": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "WILDCAT",
+   "note": "PDF label + checked crop"
+  },
+  "wildfire": {
+   "polylines": [
+    109
+   ],
+   "confidence": "high",
+   "mapName": "WILDFIRE",
+   "note": "PDF label + checked crop"
+  },
+  "witchita": {
+   "polylines": [
+    112
+   ],
+   "confidence": "high",
+   "mapName": "WITCHITA",
+   "note": "PDF label + checked crop"
+  },
+  "wolverine": {
+   "polylines": [
+    108
+   ],
+   "confidence": "high",
+   "mapName": "WOLVERINE",
+   "note": "PDF label + checked crop"
+  }
+ }
+}

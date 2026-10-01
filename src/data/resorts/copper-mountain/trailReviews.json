@@ -1,0 +1,316 @@
+{
+ "reviews": {
+  "sail-away-glade": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    42.96,
+    47.27
+   ]
+  },
+  "upper-enchanted-forest": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    43.44,
+    25.89
+   ]
+  },
+  "17-glade": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    32.24,
+    49.45
+   ]
+  },
+  "cache-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    42.11,
+    39.62
+   ]
+  },
+  "resolution-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    25.72,
+    36.41
+   ]
+  },
+  "union-meadows": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    69.52,
+    16.95
+   ]
+  },
+  "superpipe": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    41.47,
+    74.96
+   ]
+  },
+  "reds-backyard": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    50.83,
+    67.32
+   ]
+  },
+  "kokos-progression-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    67.27,
+    73.23
+   ]
+  },
+  "peace-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    53.03,
+    64.14
+   ]
+  },
+  "family-cross-adventure-zone": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    52.75,
+    40.95
+   ]
+  },
+  "central-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    51.37,
+    60.38
+   ]
+  },
+  "pipe-dream": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    55.46,
+    52.51
+   ]
+  },
+  "green-acres-progression-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    35.39,
+    74.04
+   ]
+  },
+  "upper-skid-road": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    44.77,
+    56.79
+   ]
+  },
+  "green-acres": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    31.3,
+    76.4
+   ]
+  },
+  "spaulding-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    31.17,
+    22.42
+   ]
+  },
+  "copper-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    60.8,
+    9.01
+   ]
+  },
+  "union-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    50.75,
+    19.35
+   ]
+  },
+  "lower-enchanted-forest": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    43.47,
+    30.43
+   ]
+  },
+  "miners-progression-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    63.87,
+    77.18
+   ]
+  },
+  "jackstraw-trees": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    68.29,
+    57.02
+   ]
+  },
+  "kokomo-glade": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    70.8,
+    66.65
+   ]
+  },
+  "log-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:14:43.000Z",
+   "by": "claude",
+   "labelAt": [
+    72.41,
+    48.97
+   ]
+  }
+ }
+}

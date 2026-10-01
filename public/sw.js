@@ -1,8 +1,8 @@
 // Offline support: the app shell and trail map are cached so the app opens
 // and works on the mountain without signal. Pages are network-first (so a new
 // deploy is picked up when online); everything else is cache-first.
-const CACHE = 'myskiruns-v6';
-const PRECACHE = ['/', '/maps/killington.jpg', '/maps/stowe.jpg', '/maps/okemo.jpg', '/maps/sugarbush.jpg', '/maps/jay-peak.jpg', '/maps/whiteface.jpg', '/maps/winter-park.jpg', '/manifest.webmanifest', '/icon-192.png'];
+const CACHE = 'myskiruns-v9';
+const PRECACHE = ['/', '/maps/killington.jpg', '/maps/stowe.jpg', '/maps/okemo.jpg', '/maps/sugarbush.jpg', '/maps/jay-peak.jpg', '/maps/whiteface.jpg', '/maps/winter-park.jpg', '/maps/breckenridge.jpg', '/maps/copper-mountain.jpg', '/maps/keystone.jpg', '/manifest.webmanifest', '/icon-192.png'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting()));
