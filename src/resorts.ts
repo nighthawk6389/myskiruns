@@ -19,6 +19,10 @@ import * as copperMountain from './data/resorts/copper-mountain/trails';
 import copperMountainPaths from './data/resorts/copper-mountain/trailPaths.json';
 import * as keystone from './data/resorts/keystone/trails';
 import keystonePaths from './data/resorts/keystone/trailPaths.json';
+import * as vail from './data/resorts/vail/trails';
+import vailFrontSidePaths from './data/resorts/vail/panels/front-side/trailPaths.json';
+import vailBackBowlsPaths from './data/resorts/vail/panels/back-bowls/trailPaths.json';
+import vailBlueSkyPaths from './data/resorts/vail/panels/blue-sky/trailPaths.json';
 
 /** A trail's overlay: line segments and/or a label marker, in percent of the
  * map image (see scripts/applyTrailProposals.mjs). */
@@ -28,99 +32,119 @@ export interface TrailPath {
   source: string;
 }
 
-export interface Resort {
+/** One trail map image and the overlays drawn on it. */
+export interface MapPanel {
   id: string;
+  /** shown on the panel switcher when a resort has several panels */
   name: string;
   /** trail map image under public/ */
   mapSrc: string;
-  /** areas (peaks) in the order the trail list groups them */
-  peaks: PeakData[];
-  trails: Trail[];
   paths: Record<string, TrailPath>;
 }
 
+export interface Resort {
+  id: string;
+  name: string;
+  /** the trail map: one image, or several panels (Vail: Front Side, Back
+   * Bowls, Blue Sky Basin), each with its own overlays; a trail may be drawn
+   * on more than one */
+  maps: MapPanel[];
+  /** areas (peaks) in the order the trail list groups them */
+  peaks: PeakData[];
+  trails: Trail[];
+}
+
+const pathsOf = (doc: unknown) => (doc as { trails: Record<string, TrailPath> }).trails;
+
+/** A resort drawn on a single map image. */
+const oneMap = (mapSrc: string, paths: unknown): MapPanel[] => [{ id: 'map', name: 'Trail map', mapSrc, paths: pathsOf(paths) }];
+
 // To add a resort: put its data in src/data/resorts/<id>/ and its map in
-// public/maps/<id>.jpg (docs/trail-map-playbook.md), then list it here.
+// public/maps/<id>.jpg (docs/trail-map-playbook.md), then list it here. A
+// resort drawn on several panels keeps one trail list and, per panel, its
+// overlays in src/data/resorts/<id>/panels/<panel>/ and its map in
+// public/maps/<id>-<panel>.jpg.
 export const RESORTS: Resort[] = [
   {
     id: 'killington',
     name: 'Killington',
-    mapSrc: '/maps/killington.jpg',
+    maps: oneMap('/maps/killington.jpg', killingtonPaths),
     peaks: killington.peaks,
     trails: killington.trails,
-    paths: (killingtonPaths as { trails: Record<string, TrailPath> }).trails,
   },
   {
     id: 'stowe',
     name: 'Stowe',
-    mapSrc: '/maps/stowe.jpg',
+    maps: oneMap('/maps/stowe.jpg', stowePaths),
     peaks: stowe.peaks,
     trails: stowe.trails,
-    paths: (stowePaths as { trails: Record<string, TrailPath> }).trails,
   },
   {
     id: 'okemo',
     name: 'Okemo',
-    mapSrc: '/maps/okemo.jpg',
+    maps: oneMap('/maps/okemo.jpg', okemoPaths),
     peaks: okemo.peaks,
     trails: okemo.trails,
-    paths: (okemoPaths as { trails: Record<string, TrailPath> }).trails,
   },
   {
     id: 'sugarbush',
     name: 'Sugarbush',
-    mapSrc: '/maps/sugarbush.jpg',
+    maps: oneMap('/maps/sugarbush.jpg', sugarbushPaths),
     peaks: sugarbush.peaks,
     trails: sugarbush.trails,
-    paths: (sugarbushPaths as { trails: Record<string, TrailPath> }).trails,
   },
   {
     id: 'jay-peak',
     name: 'Jay Peak',
-    mapSrc: '/maps/jay-peak.jpg',
+    maps: oneMap('/maps/jay-peak.jpg', jayPeakPaths),
     peaks: jayPeak.peaks,
     trails: jayPeak.trails,
-    paths: (jayPeakPaths as { trails: Record<string, TrailPath> }).trails,
   },
   {
     id: 'whiteface',
     name: 'Whiteface',
-    mapSrc: '/maps/whiteface.jpg',
+    maps: oneMap('/maps/whiteface.jpg', whitefacePaths),
     peaks: whiteface.peaks,
     trails: whiteface.trails,
-    paths: (whitefacePaths as { trails: Record<string, TrailPath> }).trails,
   },
   {
     id: 'winter-park',
     name: 'Winter Park',
-    mapSrc: '/maps/winter-park.jpg',
+    maps: oneMap('/maps/winter-park.jpg', winterParkPaths),
     peaks: winterPark.peaks,
     trails: winterPark.trails,
-    paths: (winterParkPaths as { trails: Record<string, TrailPath> }).trails,
   },
   {
     id: 'breckenridge',
     name: 'Breckenridge',
-    mapSrc: '/maps/breckenridge.jpg',
+    maps: oneMap('/maps/breckenridge.jpg', breckenridgePaths),
     peaks: breckenridge.peaks,
     trails: breckenridge.trails,
-    paths: (breckenridgePaths as { trails: Record<string, TrailPath> }).trails,
   },
   {
     id: 'copper-mountain',
     name: 'Copper Mountain',
-    mapSrc: '/maps/copper-mountain.jpg',
+    maps: oneMap('/maps/copper-mountain.jpg', copperMountainPaths),
     peaks: copperMountain.peaks,
     trails: copperMountain.trails,
-    paths: (copperMountainPaths as { trails: Record<string, TrailPath> }).trails,
   },
   {
     id: 'keystone',
     name: 'Keystone',
-    mapSrc: '/maps/keystone.jpg',
+    maps: oneMap('/maps/keystone.jpg', keystonePaths),
     peaks: keystone.peaks,
     trails: keystone.trails,
-    paths: (keystonePaths as { trails: Record<string, TrailPath> }).trails,
+  },
+  {
+    id: 'vail',
+    name: 'Vail',
+    maps: [
+      { id: 'front-side', name: 'Front Side', mapSrc: '/maps/vail-front-side.jpg', paths: pathsOf(vailFrontSidePaths) },
+      { id: 'back-bowls', name: 'Back Bowls', mapSrc: '/maps/vail-back-bowls.jpg', paths: pathsOf(vailBackBowlsPaths) },
+      { id: 'blue-sky', name: 'Blue Sky Basin', mapSrc: '/maps/vail-blue-sky.jpg', paths: pathsOf(vailBlueSkyPaths) },
+    ],
+    peaks: vail.peaks,
+    trails: vail.trails,
   },
 ];
 

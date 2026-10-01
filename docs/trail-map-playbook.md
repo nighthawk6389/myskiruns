@@ -37,6 +37,8 @@ approaches all stalled at ~40% (see "What we tried").
 | `tools/trailmap/pdf_symbols.py` | Difficulty symbols from a vector PDF; `--check` compares them with the trail list |
 | `tools/trailmap/pdf_labels.py` | Trail-name labels from a PDF's text (decodes fonts with no Unicode map) |
 | `tools/trailmap/pdf_glyphs.py` | Trail-name labels and symbols from a PDF whose names are outlined glyphs (no text) |
+| `tools/trailmap/raster_lines.py` | Numbered line pieces from a raster map (no PDF): colour masks, linked dashes, skeleton |
+| `tools/trailmap/raster_symbols.py` | Difficulty symbols (square, circle, diamond, double, EX) from a raster map |
 | `scripts/lib/lineDetector.mjs`, `scripts/evaluateLines.mjs` | Colored-line detector and its ground-truth scorer |
 | `scripts/tracePolylines.mjs` | Detection mask → numbered line pieces (`src/data/resorts/killington/linePolylines.json`) |
 | `tools/trailmap/render_tiles.py` | Zoomed tiles with every piece drawn and numbered, for the readers |
@@ -197,6 +199,44 @@ Download the resort's trail map PDF (not the web JPG) and run
     gold kids' adventure zones are markers.
   - The map image is the vector layer matted over Vail's CDN raster
     (`20251028_KY_winter-trail_map_001`), as at Breckenridge.
+- **Raster panels, no PDF (Vail 2025-26):** Vail publishes no vector map,
+  only three paintings on its image CDN
+  (`20251001_VL_winter-{front-side,back-bowls,blue-sky}-trail_map_001`,
+  PNG at `wid=4990`; the `-logos` copies add a header band), so the resort
+  has three map panels (see "Several panels" below).
+  - Lines: `raster_lines.py` masks each trail colour strictly and drops text
+    (glyph-sized parts crowded by other glyphs, unless thin like a stretch of
+    line), symbols, icon fills and sign-box outlines. Dashed roads are linked
+    by growing their dashes and arrows until consecutive marks merge (a run
+    needs four or more). The mask is skeletonized and the pieces are joined
+    straight through junctions. Back Bowls and Blue Sky draw everything
+    bigger: `--k 1.75` and `--k 2.7` scale the mark sizes.
+  - Symbols: `raster_symbols.py`. A double diamond is a black blob with a
+    waist, or two diamonds side by side. Check every one on a contact sheet:
+    a single diamond touching the end of its own line passed as a double
+    twice, and icons and the village's bus-route marks passed as singles.
+  - Vail prints a run's symbol on its line with the name beside it, and the
+    line resumes past the name. Where a run's rating changes it prints the
+    new symbol on the line with no name; those count toward the run's
+    difficulty (majority, harder on a tie).
+  - Naming: about a third of the pieces matched a symbol automatically; the
+    rest were settled on zoomed review tiles. Record each decision as a
+    point on the piece, not its id: ids change whenever the extraction is
+    re-tuned.
+  - Stretches the detector broke (a name printed in the line, dashes
+    through slow-zone hatching, the stub from a symbol to its parent line)
+    were traced on crops, snapped to the line's colour mask and appended to
+    `linePolylines.json` as pieces (listed in `_traced`).
+  - Bowls print a name and no symbol: markers, rated black.
+- **Several panels:** a resort drawn on more than one map keeps one
+  `trails.ts` and, per panel, `panels/<panel>/` with its own
+  `linePolylines`, `trailProposals`, `trailReviews` and `trailPaths`; the map
+  is `public/maps/<resort>-<panel>.jpg`. `trails:apply`, `hover_check.cjs`
+  and the other `resortPaths()` scripts take `--panel <id>`. Give each trail
+  the panel it belongs to as its area (`peak`), so the trail list groups by
+  panel and picking a trail opens that panel. A run drawn at the edge of
+  another panel (Vail's Back Bowls roads along Blue Sky's bottom edge) gets
+  an overlay on both.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.
@@ -354,9 +394,10 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
 
 ### 4. Human review
 
-Sugarbush, Jay Peak, Whiteface, Winter Park, Breckenridge, Copper Mountain
-and Keystone skipped this step at the owner's call (the readers' labelling had
-held up on three maps; the last five needed no readers at all). In its place Claude checked every
+Sugarbush, Jay Peak, Whiteface, Winter Park, Breckenridge, Copper Mountain,
+Keystone and Vail skipped this step at the owner's call (the readers' labelling had
+held up on three maps; the next five needed no readers at all, and Claude
+named Vail's raster pieces itself on zoomed tiles). In its place Claude checked every
 overlay itself: vector maps on full-resolution region crops with each
 overlay drawn in its own colour and tagged with its name
 (`region_audit.py`), traced trails one by one on zoomed crops,

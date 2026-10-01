@@ -125,10 +125,19 @@ pipeline scripts take `--resort <id>` (default `killington`), e.g.
 `npm run trails:apply -- --resort stowe`. To add a resort, follow
 `docs/trail-map-playbook.md`.
 
+A resort whose map comes as several panels (Vail: Front Side, Back Bowls,
+Blue Sky Basin) keeps one `trails.ts` and, per panel,
+`panels/<panel>/{linePolylines,trailProposals,trailReviews,trailPaths}.json`
+with its map at `public/maps/<id>-<panel>.jpg`; its `src/resorts.ts` entry
+lists the panels in `maps`. The map shows one panel at a time with a switcher
+(also `?panel=<id>`), and picking a trail from the list opens the panel it is
+drawn on. The pipeline scripts take `--panel <id>` as well, e.g.
+`npm run trails:apply -- --resort vail --panel back-bowls`.
+
 Resorts so far: Killington, Stowe and Okemo (reviewed on the Trail Check
 page); Sugarbush, Jay Peak, Whiteface, Winter Park, Breckenridge, Copper
-Mountain and Keystone (2025-26 maps, no review page: every overlay checked
-on zoomed crops instead, see the playbook).
+Mountain, Keystone and Vail (2025-26 maps, no review page: every overlay
+checked on zoomed crops instead, see the playbook).
 
 ## Scripts
 

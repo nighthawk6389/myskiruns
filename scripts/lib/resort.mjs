@@ -1,5 +1,5 @@
 // Which resort a pipeline script works on: `--resort <id>` (default
-// killington), and where that resort's files live.
+// killington), optionally `--panel <id>`, and where that resort's files live.
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -12,18 +12,32 @@ export function resortArg(argv = process.argv) {
   return id;
 }
 
-/** Absolute paths of a resort's data files and map image. */
-export function resortPaths(id = resortArg()) {
+/** `--panel <id>` for a resort drawn on several map panels (Vail), or null. */
+export function panelArg(argv = process.argv) {
+  const i = argv.indexOf('--panel');
+  if (i < 0) return null;
+  const id = argv[i + 1];
+  if (!/^[a-z0-9-]+$/.test(id ?? '')) throw new Error(`bad --panel ${id}`);
+  return id;
+}
+
+/** Absolute paths of a resort's data files and map image. A resort drawn on
+ * several map panels keeps one trail list (trails.ts) and, per panel, its own
+ * line pieces, proposals, reviews and paths in panels/<panel>/, with the map
+ * in public/maps/<resort>-<panel>.jpg. */
+export function resortPaths(id = resortArg(), panel = panelArg()) {
   const dir = resolve(root, 'src/data/resorts', id);
+  const pdir = panel ? resolve(dir, 'panels', panel) : dir;
   return {
     id,
+    panel,
     dir,
     trails: resolve(dir, 'trails.ts'),
-    polylines: resolve(dir, 'linePolylines.json'),
-    proposals: resolve(dir, 'trailProposals.json'),
-    reviews: resolve(dir, 'trailReviews.json'),
-    paths: resolve(dir, 'trailPaths.json'),
-    map: resolve(root, 'public/maps', `${id}.jpg`),
+    polylines: resolve(pdir, 'linePolylines.json'),
+    proposals: resolve(pdir, 'trailProposals.json'),
+    reviews: resolve(pdir, 'trailReviews.json'),
+    paths: resolve(pdir, 'trailPaths.json'),
+    map: resolve(root, 'public/maps', panel ? `${id}-${panel}.jpg` : `${id}.jpg`),
   };
 }
 

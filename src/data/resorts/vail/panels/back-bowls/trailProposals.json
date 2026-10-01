@@ -1,0 +1,487 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "apres-vous": {
+   "polylines": [
+    38,
+    63
+   ],
+   "confidence": "high",
+   "mapName": "APRES VOUS",
+   "note": "checked on a crop"
+  },
+  "bolshoi-ballroom": {
+   "polylines": [
+    91,
+    92,
+    98
+   ],
+   "confidence": "high",
+   "mapName": "BOLSHOI BALLROOM",
+   "note": "checked on a crop"
+  },
+  "campbells": {
+   "polylines": [
+    53,
+    94
+   ],
+   "confidence": "high",
+   "mapName": "CAMPBELL'S",
+   "note": "checked on a crop"
+  },
+  "chicken-yard": {
+   "polylines": [
+    37,
+    87
+   ],
+   "confidence": "high",
+   "mapName": "CHICKEN YARD",
+   "note": "checked on a crop"
+  },
+  "cows-face": {
+   "polylines": [
+    84,
+    114
+   ],
+   "confidence": "high",
+   "mapName": "COW'S FACE",
+   "note": "checked on a crop"
+  },
+  "dragons-teeth": {
+   "polylines": [
+    49,
+    79
+   ],
+   "confidence": "high",
+   "mapName": "DRAGON'S TEETH",
+   "note": "checked on a crop"
+  },
+  "emperors-choice": {
+   "polylines": [
+    42,
+    90
+   ],
+   "confidence": "high",
+   "mapName": "EMPEROR'S CHOICE",
+   "note": "checked on a crop"
+  },
+  "forever": {
+   "polylines": [
+    55,
+    72,
+    106,
+    108
+   ],
+   "confidence": "high",
+   "mapName": "FOREVER",
+   "note": "checked on a crop"
+  },
+  "genghis-khan": {
+   "polylines": [
+    50,
+    58
+   ],
+   "confidence": "high",
+   "mapName": "GENGHIS KHAN",
+   "note": "checked on a crop"
+  },
+  "gilletts-dream": {
+   "polylines": [
+    30,
+    116
+   ],
+   "confidence": "high",
+   "mapName": "GILLETT'S DREAM",
+   "note": "checked on a crop"
+  },
+  "gorky-park": {
+   "polylines": [
+    89,
+    107
+   ],
+   "confidence": "high",
+   "mapName": "GORKY PARK",
+   "note": "checked on a crop"
+  },
+  "headwall": {
+   "polylines": [
+    82,
+    122
+   ],
+   "confidence": "high",
+   "mapName": "HEADWALL",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "inner-mongolia-bowl": {
+   "polylines": [
+    54,
+    81,
+    95
+   ],
+   "confidence": "high",
+   "mapName": "INNER MONGOLIA BOWL",
+   "note": "checked on a crop"
+  },
+  "jade-glade": {
+   "polylines": [
+    80,
+    97
+   ],
+   "confidence": "high",
+   "mapName": "JADE GLADE",
+   "note": "checked on a crop"
+  },
+  "marmot-valley": {
+   "polylines": [
+    112,
+    130
+   ],
+   "confidence": "high",
+   "mapName": "MARMOT VALLEY",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "milts-face": {
+   "polylines": [
+    104,
+    110
+   ],
+   "confidence": "high",
+   "mapName": "MILT'S FACE",
+   "note": "checked on a crop"
+  },
+  "morning-side-ridge": {
+   "polylines": [
+    59,
+    126
+   ],
+   "confidence": "high",
+   "mapName": "MORNING SIDE RIDGE",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "morning-thunder": {
+   "polylines": [
+    113,
+    127
+   ],
+   "confidence": "high",
+   "mapName": "MORNING THUNDER",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "never": {
+   "polylines": [
+    101,
+    103
+   ],
+   "confidence": "high",
+   "mapName": "NEVER",
+   "note": "checked on a crop"
+  },
+  "o-s": {
+   "polylines": [
+    56,
+    128
+   ],
+   "confidence": "high",
+   "mapName": "O.S.",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "orient-express": {
+   "polylines": [
+    41,
+    46
+   ],
+   "confidence": "high",
+   "mapName": "ORIENT EXPRESS",
+   "note": "checked on a crop"
+  },
+  "outer-mongolia-bowl": {
+   "polylines": [
+    43,
+    115
+   ],
+   "confidence": "high",
+   "mapName": "OUTER MONGOLIA BOWL",
+   "note": "checked on a crop"
+  },
+  "over-yonder": {
+   "polylines": [
+    66,
+    85
+   ],
+   "confidence": "high",
+   "mapName": "OVER YONDER",
+   "note": "checked on a crop"
+  },
+  "poppyfields": {
+   "polylines": [
+    8,
+    25
+   ],
+   "confidence": "high",
+   "mapName": "POPPYFIELDS",
+   "note": "checked on a crop"
+  },
+  "poppyfields-east": {
+   "polylines": [
+    31,
+    34
+   ],
+   "confidence": "high",
+   "mapName": "POPPYFIELDS EAST",
+   "note": "checked on a crop"
+  },
+  "poppyfields-west": {
+   "polylines": [
+    1,
+    131
+   ],
+   "confidence": "high",
+   "mapName": "POPPYFIELDS WEST",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "ptarmigan-ridge": {
+   "polylines": [
+    88,
+    100
+   ],
+   "confidence": "high",
+   "mapName": "PTARMIGAN RIDGE",
+   "note": "checked on a crop"
+  },
+  "rasputins-revenge": {
+   "polylines": [
+    48,
+    65
+   ],
+   "confidence": "high",
+   "mapName": "RASPUTIN'S REVENGE",
+   "note": "checked on a crop"
+  },
+  "red-square": {
+   "polylines": [
+    51,
+    109
+   ],
+   "confidence": "high",
+   "mapName": "RED SQUARE",
+   "note": "checked on a crop"
+  },
+  "red-zinger": {
+   "polylines": [
+    3,
+    10
+   ],
+   "confidence": "high",
+   "mapName": "RED ZINGER",
+   "note": "checked on a crop"
+  },
+  "rickys-ridge": {
+   "polylines": [
+    111,
+    125
+   ],
+   "confidence": "high",
+   "mapName": "RICKY'S RIDGE",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "seldom": {
+   "polylines": [
+    40,
+    102
+   ],
+   "confidence": "high",
+   "mapName": "SELDOM",
+   "note": "checked on a crop"
+  },
+  "shangri-la": {
+   "polylines": [
+    52,
+    62,
+    76
+   ],
+   "confidence": "high",
+   "mapName": "SHANGRI-LA",
+   "note": "checked on a crop"
+  },
+  "shangri-la-glade": {
+   "noLine": true,
+   "label": [
+    61.02,
+    62.38
+   ],
+   "confidence": "high"
+  },
+  "silk-road": {
+   "polylines": [
+    0,
+    7,
+    12,
+    14,
+    15,
+    23,
+    24,
+    27,
+    29,
+    32,
+    33,
+    120,
+    123
+   ],
+   "confidence": "high",
+   "mapName": "SILK ROAD",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "sleepytime-road": {
+   "polylines": [
+    5,
+    9,
+    16,
+    19,
+    21,
+    26,
+    35,
+    118,
+    129
+   ],
+   "confidence": "high",
+   "mapName": "SLEEPYTIME ROAD",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "straight-shot": {
+   "polylines": [
+    67,
+    121
+   ],
+   "confidence": "high",
+   "mapName": "STRAIGHT SHOT",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "sun-down-catwalk": {
+   "polylines": [
+    39,
+    73
+   ],
+   "confidence": "high",
+   "mapName": "SUN DOWN CATWALK",
+   "note": "checked on a crop"
+  },
+  "sun-up-catwalk": {
+   "polylines": [
+    2,
+    17
+   ],
+   "confidence": "high",
+   "mapName": "SUN UP CATWALK",
+   "note": "checked on a crop"
+  },
+  "sweet-n-sour": {
+   "polylines": [
+    57,
+    61
+   ],
+   "confidence": "high",
+   "mapName": "SWEET N SOUR",
+   "note": "checked on a crop"
+  },
+  "tea-cup-glades": {
+   "polylines": [
+    64,
+    77,
+    99
+   ],
+   "confidence": "high",
+   "mapName": "TEA CUP GLADES",
+   "note": "checked on a crop"
+  },
+  "the-slot": {
+   "polylines": [
+    13,
+    22
+   ],
+   "confidence": "high",
+   "mapName": "THE SLOT",
+   "note": "checked on a crop"
+  },
+  "wfo": {
+   "polylines": [
+    83,
+    86
+   ],
+   "confidence": "high",
+   "mapName": "WFO",
+   "note": "checked on a crop"
+  },
+  "widges": {
+   "polylines": [
+    71,
+    124
+   ],
+   "confidence": "high",
+   "mapName": "WIDGE'S",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "windows": {
+   "polylines": [
+    45,
+    60
+   ],
+   "confidence": "high",
+   "mapName": "WINDOWS",
+   "note": "checked on a crop"
+  },
+  "wow": {
+   "polylines": [
+    74,
+    75
+   ],
+   "confidence": "high",
+   "mapName": "WOW",
+   "note": "checked on a crop"
+  },
+  "yonder": {
+   "polylines": [
+    69,
+    96
+   ],
+   "confidence": "high",
+   "mapName": "YONDER",
+   "note": "checked on a crop"
+  },
+  "yonder-gully": {
+   "polylines": [
+    70,
+    93
+   ],
+   "confidence": "high",
+   "mapName": "YONDER GULLY",
+   "note": "checked on a crop"
+  },
+  "china-spur": {
+   "polylines": [
+    11,
+    20
+   ],
+   "confidence": "high",
+   "mapName": "CHINA SPUR",
+   "note": "checked on a crop"
+  },
+  "cloud-9": {
+   "polylines": [
+    6,
+    117
+   ],
+   "confidence": "high",
+   "mapName": "CLOUD 9",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "kellys-toll-road": {
+   "polylines": [
+    18,
+    119
+   ],
+   "confidence": "high",
+   "mapName": "KELLY'S TOLL ROAD",
+   "note": "checked on a crop | traced along the painted line"
+  }
+ }
+}

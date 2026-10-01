@@ -1,0 +1,160 @@
+{
+ "reviews": {
+  "first-step": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (open slope or glade): marker at its symbol",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    30.76,
+    26.52
+   ]
+  },
+  "kangaroo-cornice": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (open slope or glade): marker at its symbol",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    55.07,
+    27.53
+   ]
+  },
+  "look-ma": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (open slope or glade): marker at its symbol",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    48.58,
+    36.78
+   ]
+  },
+  "challenge": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (open slope or glade): marker at its symbol",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    50.14,
+    37.9
+   ]
+  },
+  "the-pump-house": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (open slope or glade): marker at its symbol",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    47.37,
+    48.27
+   ]
+  },
+  "mudslide": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (open slope or glade): marker at its symbol",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    47.01,
+    67.04
+   ]
+  },
+  "frontside-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (open slope or glade): marker at its symbol",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    48.72,
+    65.0
+   ]
+  },
+  "pepis-face": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (open slope or glade): marker at its symbol",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    53.47,
+    80.49
+   ]
+  },
+  "golden-peak-terrain-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A terrain park drawn as an area: marker at its name",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    26.05,
+    65.07
+   ]
+  },
+  "jakes-ride": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A terrain park drawn as an area: marker at its name",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    27.56,
+    69.85
+   ]
+  },
+  "minnie-ha-ha": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (open slope or glade): marker at its symbol",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    68.06,
+    48.96
+   ]
+  },
+  "game-creek-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A bowl named on the map with no line drawn: marker at its name",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    72.06,
+    6.13
+   ]
+  }
+ }
+}
