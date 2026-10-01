@@ -45,6 +45,7 @@ approaches all stalled at ~40% (see "What we tried").
 | `scripts/importReviews.mjs` (`npm run reviews:import`) | Review-page export → `src/data/resorts/killington/trailReviews.json` |
 | `scripts/applyTrailProposals.mjs` (`npm run trails:apply`) | Reviews + proposals → `src/data/resorts/killington/trailPaths.json` (what the app draws) |
 | `tools/trailmap/render_crops.py` | Zoomed crops of overlays for audits and split checks |
+| `tools/trailmap/region_audit.py` | Every overlay tagged with its name over map regions, to audit a whole map |
 | `tools/trailmap/hover_check.cjs` | Browser check that each overlay shows its own name |
 
 Python tools need `pip install pymupdf pillow`; the hover check needs
@@ -74,6 +75,39 @@ Download the resort's trail map PDF (not the web JPG) and run
   hatch pattern is 1.0 pt black strokes (keep them out with `--max-width`),
   and the extractor drops small closed loops (a legend icon had come out as
   a piece). Check the whole map on zoomed crops with the pieces drawn on.
+  Sugarbush 2025-26 too (0.75 pt strokes), except three odd trails: two
+  drawn in pure black or at 1.0 pt (`--append` with `--min-width`) and one
+  as a filled outline (`--filled`); tally every stroke colour/width before
+  trusting the first extraction.
+- **Labels as real text (Jay Peak 2025-26):** a painted map that draws
+  *no trail lines at all*, but every trail name is PDF text (one font and
+  size range) with its difficulty symbol drawn just before it. The trail
+  list then comes straight from `page.get_text('dict')` spans plus the
+  nearest symbol fill (no readers): drop the non-trail spans (lodges,
+  first aid), dedupe labels drawn twice (halo + fill), and look for names
+  printed only in an inset. With no pieces, every overlay is a trace
+  along the painted cut (step 3b), and glades, parks and inset-only names
+  are markers at the label. `render_tiles.py` tiles the whole image when
+  there are no pieces.
+  Jay Peak's trace pass: 9 tracer groups, 71 trails, ~3.9M tokens and ~4 h
+  of wall-clock in all (the base-area group alone ran over 2 h: slow zones,
+  parks and lifts crowd it). Every trace was checked on a zoomed crop;
+  65 kept as lines; 6 whose label sits in painted trees with no cut became
+  markers (4 were the tracers' own NO CUT calls; Tuckerman's Chute and
+  Deliverance were low-confidence guesses rejected on the crop, one of them
+  running 30 px from another trail's line). A session limit killed 8 of the
+  first 12 tracer runs mid-way; re-run those groups as fresh workflows
+  with their own output directory (resume replays the failures).
+- **Both at once (Whiteface 2025-26):** vector trail strokes *and* every
+  name as text in the trail's colour, with its symbol beside it. No readers
+  were needed: each name was matched to the stroke it is printed along, or
+  whose ends sit at the two ends of the text (this map prints most names in
+  a gap of their own line), names spread along unlabelled continuations,
+  and ~40 unclear pieces were settled on zoomed crops (four strokes cut
+  where two trails meet). Where the name fills the gap, the overlay gets a
+  stretch drawn along the name's own characters (`page.get_texttrace()`),
+  so trails whose only "line" is their label still get one. The official
+  PDF sat behind a bot check; skimap.org had the same file.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.
@@ -159,6 +193,12 @@ line, 9 printed with no line. Unlike Stowe, Okemo prints a symbol with every
 glade (in a box with the tree icon), so read the key before assuming the
 glade default; terrain parks print only an orange pill, so they get the
 default (blue).
+Sugarbush: 5 readers over 26 tiles, ~1.2M tokens, ~53 min → 138 trails:
+110 on their lines, 27 glades ("wooded areas": tree icon, no line, no
+symbol, so the black default; Sugarbush itself counts them as their own
+category). The readers also caught what the extraction missed: Snowball is
+drawn as a filled outline (`extract_pdf_vectors.py --outlined`), and three
+pieces run past the next trail's symbol (SPLIT, cut with `split_pieces.py`).
 
 **Check the symbols by a second method.** On a vector map,
 `pdf_symbols.py --check labels.json --trails trails.ts` pulls every circle,
@@ -166,7 +206,10 @@ square and diamond out of the PDF's fills and lists the trails whose
 difficulty has no matching symbol by its label (Okemo: 120/127; the other 7
 print no symbol, or draw the circle differently). Then look at every
 diamond trail on a zoomed crop: single vs double diamond is the easy
-misread (Okemo: 29 single and 9 double, all as read).
+misread (Okemo: 29 single and 9 double, all as read). Sugarbush draws its
+diamonds inside the outlined label glyphs, so `pdf_symbols.py` finds its
+squares and circles but no diamonds: there the crop check is the only
+second method (30 single and 8 double, all as read).
 
 ### 3b. Accept the easy ones, trace the hard ones (before the review)
 
@@ -221,6 +264,14 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
   hand-traced traverses end up on the exact line.
 
 ### 4. Human review
+
+Sugarbush and Jay Peak skipped this step at the owner's call (the readers'
+labelling had held up on three maps). In its place Claude checked every
+overlay itself: vector maps on full-resolution region crops with each
+overlay drawn in its own colour and tagged with its name
+(`region_audit.py`), traced trails one by one on zoomed crops,
+and every diamond on a crop; then the hover check. Keep the review page for
+maps where the readers disagree or the lines are raster-detected.
 
 Publish `tools/trailmap/review/` (the page, `data.json`, and the map image as
 `map.jpg`) as a Claude artifact with the `db` capability. The reviewer, per

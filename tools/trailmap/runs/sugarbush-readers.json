@@ -1,0 +1,47 @@
+{
+ "_note": "Args used for Sugarbush (2025-26 map) with the trailmap-readers workflow: 5 readers, 26 tiles (one per column; the sparse Slide Brook and far-right columns joined their neighbours). Paths were a scratch dir; sourceImage was a lossless PNG render of the same PDF clip and scale as public/maps/sugarbush.jpg.",
+ "resort": "Sugarbush Resort, Vermont, 2025-26 winter map",
+ "tilesDir": "work/sugarbush/tiles",
+ "sourceImage": "work/sugarbush/sugarbush_source.png",
+ "zoom": 1.7,
+ "legend": "Trail difficulty = the color of the drawn trail line (green / blue / black) and the symbol printed just before the name: green circle = easier, blue square = more difficult, one black diamond = most difficult, TWO black diamonds (a small pair) = expert. Trail names are black capital text with a white halo, printed along or beside their own line, often rotated; a small snowflake icon before a name marks snowmaking, not a difficulty. GLADES ('wooded areas') are red cross-hatched patches with the glade's name and a black tree icon; they usually have no drawn line and print no difficulty symbol (then report symbol 'none-visible' and glade true). Red lines with white capital text are LIFTS (e.g. SUPER BRAVO EXPRESS QUAD, HEAVEN'S GATE QUAD, SLIDE BROOK EXPRESS QUAD, SUMMIT QUAD); short red lines with a small skier icon are surface lifts and carpets (e.g. WELCOME MAT, SCHOOLHOUSE LIFT, KBRA T-BAR, EASY UP). Red dashed lines = ski area boundary. Orange rounded bars/pills are terrain-park features: a trail name printed on one is still a trail (mention the park in the note). Light-yellow shaded areas = slow zones / learning areas. Dark boxes with white icons are lodges and services (ALLYN'S LODGE, GLEN HOUSE, VALLEY HOUSE LODGE, CASTLEROCK WARMING HUT, MT ELLEN BASE LODGE) - not trails. Peak names with elevations (LINCOLN PEAK, GADD PEAK, CASTLEROCK, NORTH LYNX, MT. ELLEN, INVERNESS) are area names, and SLIDE BROOK BASIN (guide services, no lift service) is a backcountry area - none of these are trails. Camera icons are photo spots. Roads through the village at the bottom (SUGARBUSH ACCESS ROAD, GERMAN FLATS ROAD) are not trails.",
+ "areas": "\"lincoln-peak\" = Lincoln Peak: the whole left mountain complex - Lincoln Peak, Gadd Peak, Castlerock and North Lynx summits down to Lincoln Peak Village (Super Bravo, Heaven's Gate, Valley House, Castlerock Double, North Lynx Triple, Gate House and Village lifts), including Village Run to the condos; \"mt-ellen\" = Mt. Ellen: the right mountain across Slide Brook Basin - Mt. Ellen summit and Inverness down to the Mt Ellen Base Lodge (Summit Quad, North Ridge, Green Mountain Express, Sunshine, Inverness lifts, KBRA T-bar)",
+ "groups": [
+  [
+   "t000",
+   "t100",
+   "t200",
+   "t300"
+  ],
+  [
+   "t001",
+   "t101",
+   "t201",
+   "t301"
+  ],
+  [
+   "t002",
+   "t102",
+   "t202",
+   "t302"
+  ],
+  [
+   "t003",
+   "t103",
+   "t203",
+   "t303",
+   "t004",
+   "t104",
+   "t204",
+   "t304"
+  ],
+  [
+   "t005",
+   "t105",
+   "t205",
+   "t305",
+   "t106",
+   "t206"
+  ]
+ ]
+}

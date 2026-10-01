@@ -1,0 +1,1114 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "allyns-traverse": {
+   "polylines": [
+    115
+   ],
+   "confidence": "high",
+   "mapName": "ALLYN'S TRAVERSE",
+   "note": "split of piece 25"
+  },
+  "bailout": {
+   "polylines": [
+    108
+   ],
+   "confidence": "high",
+   "mapName": "BAILOUT",
+   "note": "starts beside Lower Castlerock Run (1437,1299); label with blue square on a light-blue band; crosses under the Heaven's Gate lift to (1263,1475) just above Downspout | BAILOUT printed inline (blue square ~1317,1356), label just left of my tiles"
+  },
+  "big-birch": {
+   "noLine": true,
+   "label": [
+    31.53,
+    55.18
+   ],
+   "confidence": "high"
+  },
+  "birch-run": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "BIRCH RUN",
+   "note": "left of North Lynx Triple, BIRCH RUN printed inline (blue square); ends where CASTLEROCK CONNECTION starts | Blue line along the NW side of the North Lynx Triple from the summit patrol hut to the base; BIRCH RUN label (blue square + snowflake) printed along it."
+  },
+  "birdland": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "BIRDLAND",
+   "note": "From the Super Bravo top (848,1334) down the right side of the Super Bravo lift to (950,1616), where the black LOWER BIRDLAND stroke starts. BIRDLAND label (snowflake + blue square) along it. | blue line on the right of the Super Bravo lift from its top (848,1334); label (snowflake, blue square) alo"
+  },
+  "castlerock-connection": {
+   "polylines": [
+    107
+   ],
+   "confidence": "high",
+   "mapName": "CASTLEROCK CONNECTION",
+   "note": "from the Castlerock Double base (1521,1719) east to the arrowhead (1821,1660); label with blue square along it; mostly right of my tiles | CASTLEROCK CONNECTION printed inline (blue square at its west end); North Lynx base west to the Castlerock Double base"
+  },
+  "castlerock-run": {
+   "polylines": [
+    105
+   ],
+   "confidence": "high",
+   "mapName": "CASTLEROCK RUN",
+   "note": "label with one diamond on it; from the Castlerock summit down to the Troll Road junction (1528,1180); only its foot is inside t001 | from the Castlerock Warming Hut down, CASTLEROCK RUN printed inline (single diamond); ends at the TROLL ROAD junction where LOWER CASTLEROCK RUN begins"
+  },
+  "castlerock-runout": {
+   "polylines": [
+    104
+   ],
+   "confidence": "high",
+   "mapName": "CASTLEROCK RUNOUT",
+   "note": "from the Castlerock Double base (arrowhead at (1507,1747)) down to Lincoln Peak Village; CASTLEROCK RUNOUT label (blue square) along its lower half | CASTLEROCK RUNOUT label (blue square ~1202,2115) is on its lower half, left of my tiles; the upper half from the Castlerock Double base (arrow) is the"
+  },
+  "cats-meow": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "CAT'S MEOW",
+   "note": "From the open slope below Racer's Edge (577,2210) to the base (892,2317). Blue-square CAT'S MEOW label along it. | label (blue square) on it at ~(765,2311), mostly left of t301; ends at the Valley House Lodge base area"
+  },
+  "christmas-tree-woods": {
+   "noLine": true,
+   "label": [
+    21.28,
+    64.01
+   ],
+   "confidence": "high"
+  },
+  "coffee-run": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "COFFEE RUN",
+   "note": "label (snowflake, green circle) along it; from the Super Bravo base slow zone down to Lincoln Peak Village"
+  },
+  "cotillion": {
+   "polylines": [
+    103
+   ],
+   "confidence": "high",
+   "mapName": "COTILLION",
+   "note": "COTILLION printed inline (single diamond); crosses LIFT LINE/LOWER LIFT LINE and runs on to CASTLEROCK CONNECTION"
+  },
+  "deeper-sleeper": {
+   "noLine": true,
+   "label": [
+    37.06,
+    64.21
+   ],
+   "confidence": "high"
+  },
+  "domino": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "DOMINO",
+   "note": "starts beside Lower Organgrinder (1043,1430); label with one diamond on it (the diamond just below the LEW'S LINE tree icon); ends at Heaven's Gate Traverse (1233,1580), continuing as LOWER DOMINO (22)"
+  },
+  "domino-chute": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "DOMINO CHUTE",
+   "note": "Two-line label DOMINO / CHUTE (snowflake + one blue square) centred on this short line, (897,1312)->(992,1396), just below Lower Jester. Not the black DOMINO trail further right. | short line under the two-line label (snowflake, blue square), from below Allyn's Lodge back into Lower Jester (992,1396"
+  },
+  "downspout": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "DOWNSPOUT",
+   "note": "Only the start, beside the lodge (940,1292), is in my tiles. The DOWNSPOUT label (snowflake + blue square) is outside them at ~(1100,1380), along this line. Runs to (1353,1546) at the Heaven's Gate Quad. | leaves Lower Jester at (940,1293) by Allyn's Lodge; label (snowflake, blue square) along it; e"
+  },
+  "easy-rider": {
+   "polylines": [
+    59
+   ],
+   "confidence": "high",
+   "mapName": "EASY RIDER",
+   "note": "long green line beside the Schoolhouse Lift; the EASY RIDER label (snowflake, green circle at ~(1613,2242)) sits on it just right of t301 | EASY RIDER printed inline (green circle) above Village Quad; runs on to the Schoolhouse Lift area with no other label"
+  },
+  "eden": {
+   "noLine": true,
+   "label": [
+    9.55,
+    66.02
+   ],
+   "confidence": "high"
+  },
+  "egans-woods": {
+   "noLine": true,
+   "label": [
+    19.52,
+    54.55
+   ],
+   "confidence": "high"
+  },
+  "first-time": {
+   "polylines": [
+    58
+   ],
+   "confidence": "high",
+   "mapName": "FIRST TIME",
+   "note": "green line just below the Welcome Mat carpet; label (snowflake, green circle) along it | FIRST TIME printed along it (green circle), beside the WELCOME MAT carpet"
+  },
+  "fisher-cat": {
+   "noLine": true,
+   "label": [
+    29.96,
+    56.63
+   ],
+   "confidence": "high"
+  },
+  "gangstas-grotto": {
+   "noLine": true,
+   "label": [
+    15.16,
+    58.74
+   ],
+   "confidence": "high"
+  },
+  "gondolier": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "GONDOLIER",
+   "note": "label (snowflake, green circle) along it; from the Super Bravo base slow zone down to Lincoln Peak Village"
+  },
+  "grand-stand": {
+   "noLine": true,
+   "label": [
+    23.91,
+    42.4
+   ],
+   "confidence": "high"
+  },
+  "header": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "HEADER",
+   "note": "from Lower Jester (1286,1890) to Castlerock Runout (1379,1933); label with blue square along it"
+  },
+  "heavens-gate-traverse": {
+   "polylines": [
+    27,
+    28
+   ],
+   "confidence": "high",
+   "mapName": "HEAVEN'S GATE TRAVERSE",
+   "note": "From the Snowball/Valley House Traverse junction (586,1459), with the HEAVEN'S GATE TRAVERSE label (snowflake + blue square) along it, to (1064,1579). The second HEAVEN'S GATE / TRAVERSE label covers the continuation east of there. | first (west) label (blue square) on it at (594-833,1456-1526); fro"
+  },
+  "hi-lo-road": {
+   "polylines": [
+    113
+   ],
+   "confidence": "high",
+   "mapName": "HI & LO ROAD",
+   "note": "U-shaped loop off CASTLEROCK RUN with HI & LO ROAD (single diamond) printed inside it"
+  },
+  "hot-shot": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "HOT SHOT",
+   "note": "HOT SHOT printed inline (blue square); from the North Lynx base (info/first-aid icons) down to where the line turns black (WATER FALL, 40)"
+  },
+  "in-road": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "IN ROAD",
+   "note": "label (green circle) on it; text continues right of t301 | IN ROAD printed inline (green circle)"
+  },
+  "jester": {
+   "polylines": [
+    25,
+    26
+   ],
+   "confidence": "high",
+   "mapName": "JESTER",
+   "note": "Short link from the Jester junction (800,1234) down-right to the front of Allyn's Lodge (864,1293), where Lower Jester (20) begins. In the PDF this stroke comes right after the Jester stroke and before the JESTER label. | unlabeled connector from the Jester fork (800,1234) past the Allyn's Lodge ico"
+  },
+  "lews-line": {
+   "noLine": true,
+   "label": [
+    26.15,
+    49.18
+   ],
+   "confidence": "high"
+  },
+  "lift-line": {
+   "polylines": [
+    102
+   ],
+   "confidence": "high",
+   "mapName": "LIFT LINE",
+   "note": "LIFT LINE printed inline (double diamond) just right of Castlerock Double; summit down to where COTILLION crosses (~1652,1357), then continues as LOWER LIFT LINE (100)"
+  },
+  "lixis-twist": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "LIXI'S TWIST",
+   "note": "Short black line (496,1529)->(524,1775), with a single diamond and the LIXI'S TWIST label on it. Lower Twist (14) continues from its bottom."
+  },
+  "lower-birdland": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "LOWER BIRDLAND",
+   "note": "black line beside the Super Bravo lift below Birdland (36); label with one diamond along it; ends at the Super Bravo base"
+  },
+  "lower-castlerock-run": {
+   "polylines": [
+    101
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CASTLEROCK RUN",
+   "note": "starts at the foot of Castlerock Run where Troll Road leaves (1520,1189); label with one diamond (at the label's lower end) along it; ends at the Castlerock Double base (1533,1620) | LOWER CASTLEROCK RUN printed inline; single diamond after the name at the line's lower end"
+  },
+  "lower-domino": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "LOWER DOMINO",
+   "note": "starts just below Heaven's Gate Traverse (1248,1593), continuing Domino (33); label with blue square along it"
+  },
+  "lower-downspout": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "LOWER DOWNSPOUT",
+   "note": "continues Downspout (31) from the Heaven's Gate lift base; label (snowflake, blue square) along it; ends joining Lower Jester (20) at (1382,1782) | LOWER DOWNSPOUT printed along it (blue square at its top, ~1404,1569); runs from the 16/31 junction down to the LOWER JESTER junction (piece 20)"
+  },
+  "lower-jester": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "LOWER JESTER",
+   "note": "Only its start, under the Allyn's Lodge icons at (864,1293), is in my tiles. Traced on the source: it runs right, then down past two LOWER JESTER labels at ~(995,1590) and ~(1330,1800) to (1153,1967) near the Super Bravo base. The PDF draws it as one stroke with those two labels. | starts at Allyn's"
+  },
+  "lower-lift-line": {
+   "polylines": [
+    100
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LIFT LINE",
+   "note": "continues 102 below the Cotillion crossing (1653,1358) down the right side of the Castlerock Double; LOWER LIFT LINE label (one diamond at its lower end) along it; mostly right of t101/t201 | LOWER LIFT LINE printed inline (single diamond); continuation of LIFT LINE below the COTILLION crossing, dow"
+  },
+  "lower-moonshine": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "LOWER MOONSHINE",
+   "note": "Continues Moonshine from (528,1818) to the base (948,2159). LOWER MOONSHINE label (blue square) along it. | continues from the MOONSHINE label end (528,1818); LOWER MOONSHINE label (blue square) on it at (758,1963)-(902,2115); ends at the Valley House base"
+  },
+  "lower-organgrinder": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "LOWER ORGANGRINDER",
+   "note": "continues Organgrinder (9) below the Downspout crossing; label (snowflake, one diamond) on it; ends at the Super Bravo base (1100,1916)"
+  },
+  "lower-paradise": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "LOWER PARADISE",
+   "note": "forks off Paradise at (1228,1120) with one diamond; label along it; joins LWR RIPCORD (16) at (1283,1362)"
+  },
+  "lower-snowball": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SNOWBALL",
+   "note": "From the camera junction at the bottom of Snowball (309,1742), around the left edge, then down-right with the LOWER SNOWBALL label (blue square) to (510,2148), where Racer's Edge starts. Spring Road branches off at (462,2105)."
+  },
+  "lower-twist": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "LOWER TWIST",
+   "note": "Continues Lixi's Twist from (533,1785) to (892,1975). Single-diamond LOWER TWIST label on it. | label with one diamond on it at ~(700,1850), left of t201; ends at the Valley House Quad base (892,1975)"
+  },
+  "lwr-hot-shot": {
+   "polylines": [
+    55
+   ],
+   "confidence": "high",
+   "mapName": "LWR HOT SHOT",
+   "note": "printed 'LWR HOT SHOT'; label (snowflake, blue square) along it, beside the Gate House Express | LWR HOT SHOT printed inline (blue square) beside Gate House Express Quad"
+  },
+  "lwr-pushover": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "LWR PUSHOVER",
+   "note": "LWR PUSHOVER printed inline (green circle); continuation of PUSHOVER below the OVER SHOT/SLOWPOKE junction"
+  },
+  "lwr-ripcord": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "LWR RIPCORD",
+   "note": "printed 'LWR RIPCORD'; begins where Sigi's Ripcord (5) and Paradise (8) end (1201,1235) and runs down the right side of the Heaven's Gate lift to its base (1361,1531); Lower Paradise (17) joins at the snowflake (1283,1365) right above the label's diamond"
+  },
+  "middle-earth": {
+   "polylines": [
+    99
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE EARTH",
+   "note": "from Castlerock summit east along the ridge, then down with MIDDLE EARTH printed inline (single diamond), continuous to CASTLEROCK CONNECTION with no other label"
+  },
+  "moonshine": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "MOONSHINE",
+   "note": "Starts at the snowflake on the Snowball line (390,1593) and ends at (529,1820), where Lower Moonshine (19) starts. MOONSHINE label along it."
+  },
+  "morning-star": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "MORNING STAR",
+   "note": "straight line just right of North Lynx Triple, MORNING STAR printed inline (single diamond); summit to base | Straight black line along the SE side of the North Lynx Triple from the summit patrol hut to the lift bottom; MORNING STAR label (one diamond) printed along it."
+  },
+  "murphys-glade": {
+   "polylines": [
+    10,
+    11
+   ],
+   "confidence": "high",
+   "mapName": "MURPHY'S GLADE",
+   "note": "Main line from below the Valley House Traverse (737,1372) to (930,1629). The MURPHY'S GLADE label (blue square) runs along its lower part. The PDF draws it and piece 11 as that label's two strokes. | two parallel lines at the MURPHY'S GLADE label: 11 (east) and this one (west) merge at (822,1487); b"
+  },
+  "organgrinder": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "ORGANGRINDER",
+   "note": "label (snowflake, one diamond) on it; summit down to the Downspout crossing (1006,1286), continues as LOWER ORGANGRINDER (18)"
+  },
+  "out-road": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "OUT ROAD",
+   "note": "the piece traces the blue edge of a two-tone green/blue road stroke; OUT ROAD label with green circle on it | OUT ROAD (green circle) is drawn as a green line with a thin blue line alongside; this piece follows the blue edge of that same line"
+  },
+  "out-to-lunch": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "OUT TO LUNCH",
+   "note": "from the end of LWR PUSHOVER, curves down then runs along OUT TO LUNCH (green circle); no other label"
+  },
+  "over-shot": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "OVER SHOT",
+   "note": "printed OVER SHOT (two words, blue square); from the PUSHOVER junction west to the WATER FALL/LWR HOT SHOT junction"
+  },
+  "paradise": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "PARADISE",
+   "note": "label with two diamonds on it; Lower Paradise (17) forks off at (1228,1120); the last ~85px continue unlabeled to the lift line (1204,1203) where Sigi's Ripcord also ends and 16 / 7 begin"
+  },
+  "paradise-extension": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "PARADISE EXTENSION",
+   "note": "two-line label with one diamond along it; from just left of the Heaven's Gate lift (1178,1252) down to Downspout (1130,1394)"
+  },
+  "pushover": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "PUSHOVER",
+   "note": "PUSHOVER printed inline (green circle) on the green line in the yellow slow zone; continues as LWR PUSHOVER (54)"
+  },
+  "pushover-chute": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "PUSHOVER CHUTE",
+   "note": "PUSHOVER CHUTE (blue square) printed along it; short blue line ending at PUSHOVER"
+  },
+  "race-course-woods": {
+   "noLine": true,
+   "label": [
+    8.72,
+    72.32
+   ],
+   "confidence": "high"
+  },
+  "racers-edge": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "RACER'S EDGE",
+   "note": "A straight line from the end of Lower Snowball (506,2147) to the base (903,2286). Snowflake + square + name along it. | label (snowflake, blue square, race icon) on it at ~(630,2190), left of t301; ends at the Valley House Lodge base area"
+  },
+  "ruffed-up": {
+   "noLine": true,
+   "label": [
+    28.66,
+    51.86
+   ],
+   "confidence": "high"
+  },
+  "rumble": {
+   "polylines": [
+    97
+   ],
+   "confidence": "high",
+   "mapName": "RUMBLE",
+   "note": "leaves LIFT LINE near the top, RUMBLE printed inline (double diamond), ends on COTILLION"
+  },
+  "sap-line": {
+   "noLine": true,
+   "label": [
+    19.82,
+    67.09
+   ],
+   "confidence": "high"
+  },
+  "second-thoughts": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "SECOND THOUGHTS",
+   "note": "short line with SECOND THOUGHTS (blue square) printed directly below it; the only line there"
+  },
+  "sigis-ripcord": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "SIGI'S RIPCORD",
+   "note": "label with two diamonds on it; ends at (1201,1228) where Paradise (8) also ends and LWR RIPCORD (16) begins"
+  },
+  "sleeper": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "SLEEPER",
+   "note": "carries both SLEEPER labels (upper ~(1670,1770), lower (1505,1940)); below the Sleeper Rd junction (1411,2004) it continues unlabeled down to the Lincoln Peak Village base (1275,2256) | two SLEEPER labels (both blue square) along it; continues past the SLEEPER RD junction to the Lincoln Peak base wi"
+  },
+  "sleeper-chutes": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "SLEEPER CHUTES",
+   "note": "SLEEPER CHUTES printed inline (single diamond); leaves near the top of SLEEPER and rejoins it lower down"
+  },
+  "sleeper-rd": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "SLEEPER RD",
+   "note": "leaves Sleeper (47) at (1413,2004) heading east; label with blue square on it | SLEEPER RD printed inline (blue square at its west end); from SLEEPER (47) east to the WATER FALL/LWR HOT SHOT/OVER SHOT junction"
+  },
+  "slowpoke": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "SLOWPOKE",
+   "note": "blue line running along an orange terrain-park pill with SLOWPOKE (blue square) printed on it; from the PUSHOVER/LWR PUSHOVER junction down to SUGARBEAR RD"
+  },
+  "snowball": {
+   "polylines": [
+    114
+   ],
+   "confidence": "high",
+   "mapName": "SNOWBALL",
+   "note": "Snowball is drawn as a filled outline, not a stroke (extract_pdf_vectors.py --outlined); reader 0 read its label and line on the source image"
+  },
+  "spillsville": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "SPILLSVILLE",
+   "note": "The label (single diamond) is outside my tiles, at ~(1060,1120); read on the source image. Leaves Jester at (843,1055), crosses Organgrinder and runs down the left side of Heaven's Gate Quad to (1156,1238). | leaves the Jester line at (843,1055), crosses Organgrinder, SPILLSVILLE label (one diamond)"
+  },
+  "spring-fling": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "SPRING FLING",
+   "note": "A straight line from the camera junction at the bottom of Snowball (308,1740) to the base near Valley House Lodge (924,2212), with the SPRING FLING label on it. | label (snowflake, blue square) on it at ~(490,1875), left of my tiles; straight line down to the Valley House Lodge base area"
+  },
+  "spring-road": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "SPRING ROAD",
+   "note": "Label printed along the whole short line. It branches right off Lower Snowball at (462,2105) and ends at (675,2098)."
+  },
+  "steins-run": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "STEIN'S RUN",
+   "note": "Double-diamond STEIN'S RUN label along it at ~(825,1720). Starts on Heaven's Gate Traverse at (637,1483), runs down past the STEIN'S WOODS glade label (the glade is the hatched strip beside it, not this line) to (1071,1961). | label with snowflake + two diamonds on it at (835,1724); runs from Heaven"
+  },
+  "steins-woods": {
+   "noLine": true,
+   "label": [
+    17.54,
+    53.44
+   ],
+   "confidence": "high"
+  },
+  "sugarbear-forest": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "SUGARBEAR FOREST",
+   "note": "short line from Sugarbear Rd down to the SUGARBEAR FOREST green circle (1520,2237) | short green line from SUGARBEAR RD down past the SUGARBEAR FOREST label (green circle; bold lettering but no glade icon/hatch)"
+  },
+  "sugarbear-rd": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "SUGARBEAR RD",
+   "note": "label (snowflake, green circle) along it; label straddles the right edge of t301 | SUGARBEAR RD printed inline (green circle)"
+  },
+  "sunrise": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "SUNRISE",
+   "note": "from the North Lynx summit, curves down then runs straight along the SUNRISE label (single diamond) to the North Lynx base; no other label on it | North Lynx: black line SE of MORNING STAR, curling at the top by the summit patrol hut, down to the North Lynx base; SUNRISE label (one diamond + snowfla"
+  },
+  "the-mall": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "THE MALL",
+   "note": "Black line running down the left side of the Valley House Quad lift, from the lift top (567,1479) to the base (1038,2159). Single-diamond THE MALL label near the top. This is a trail stroke in the PDF, not the lift. | label with one diamond on it at ~(700,1680), left of t101/t201; runs beside the Va"
+  },
+  "troll-road": {
+   "polylines": [
+    109
+   ],
+   "confidence": "high",
+   "mapName": "TROLL ROAD",
+   "note": "from the Castlerock Run / Lower Castlerock Run junction (1537,1195): both TROLL ROAD labels (blue square) lie on its switchbacks under the Castlerock Double; ends at Castlerock Connection (1650,1608); only its start is inside t001 | two TROLL ROAD labels (both blue square) along this winding line, f"
+  },
+  "valley-house-traverse": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "VALLEY HOUSE TRAVERSE",
+   "note": "Label printed along it (snowflake + blue square at its lower-left end). Runs inside a light-blue flat-zone band from the Super Bravo top/Info kiosk at Allyn's Lodge (802,1314) down-left to the Snowball / Heaven's Gate Traverse junction (553,1445). | label (blue square) printed along it on a light-bl"
+  },
+  "village-run": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "VILLAGE RUN",
+   "note": "VILLAGE RUN (blue square) with the caption TO CONDOS and an arrow; from the North Lynx base east then down to the condos | From the North Lynx base (below the Slide Brook Express bottom) down past the condo roads to (2094,2364); VILLAGE RUN label (blue square) and a 'TO CONDOS' arrow printed along i"
+  },
+  "water-fall": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "WATER FALL",
+   "note": "printed WATER FALL with a word gap (could be spelled WATERFALL); black middle section of the line beside Gate House Express Quad: blue HOT SHOT (57) above, LWR HOT SHOT (55) below; single diamond"
+  },
+  "wild-turkey": {
+   "noLine": true,
+   "label": [
+    32.45,
+    55.22
+   ],
+   "confidence": "high"
+  },
+  "witch-hazel": {
+   "noLine": true,
+   "label": [
+    32.54,
+    60.92
+   ],
+   "confidence": "high"
+  },
+  "wood-lot": {
+   "noLine": true,
+   "label": [
+    29.56,
+    51.66
+   ],
+   "confidence": "high"
+  },
+  "black-diamond-rush": {
+   "polylines": [
+    112
+   ],
+   "confidence": "high",
+   "mapName": "BLACK DIAMOND RUSH",
+   "note": "Black line along the west side of the Summit Quad from the summit patrol hut (2961,894) to the RIM RUN / LOWER RIM RUN junction (3045,1070); two-line label BLACK DIAMOND / RUSH (two diamonds) printed along it."
+  },
+  "brambles": {
+   "polylines": [
+    96
+   ],
+   "confidence": "high",
+   "mapName": "BRAMBLES",
+   "note": "From the Inverness summit (4007,1466) through the square (4045,1499) and inline 'BRAMBLES' text, down west of Brambles Woods to (3910,1943)."
+  },
+  "brambles-woods": {
+   "noLine": true,
+   "label": [
+    94.74,
+    56.19
+   ],
+   "confidence": "high"
+  },
+  "bravinator-woods": {
+   "noLine": true,
+   "label": [
+    77.64,
+    38.64
+   ],
+   "confidence": "high"
+  },
+  "bravo": {
+   "polylines": [
+    74
+   ],
+   "confidence": "high",
+   "mapName": "BRAVO",
+   "note": "Black line along the east side of the North Ridge Express from the top (3284,1029) to the lift bottom (3382,1317); BRAVO label (one diamond) at its top. | Lift-line trail on the right of the NORTH RIDGE EXPRESS QUAD; 'BRAVO' text inline with one diamond at (3291,1047). Lower end runs under the lift'"
+  },
+  "bravo-woods": {
+   "noLine": true,
+   "label": [
+    75.79,
+    38.71
+   ],
+   "confidence": "high"
+  },
+  "crackerjack": {
+   "polylines": [
+    94
+   ],
+   "confidence": "high",
+   "mapName": "CRACKERJACK",
+   "note": "split of piece 94"
+  },
+  "easy-does-it": {
+   "polylines": [
+    110
+   ],
+   "confidence": "high",
+   "mapName": "EASY DOES IT",
+   "note": "Short green line beside the EASY UP carpet; tiny inline 'EASY DOES IT' text with a snowflake at the bottom and a small circle at its top end (3771,2149)."
+  },
+  "elbow": {
+   "polylines": [
+    73
+   ],
+   "confidence": "high",
+   "mapName": "ELBOW",
+   "note": "From the lookout at the RIM RUN hook (3240,1018) down along the ELBOW label (blue square + snowflake). LWR ELBOW branches right at (3239,1226); the lower ~quarter below that junction is unlabeled and curves across LOOKIN' GOOD and the Summit Quad bottom into the Glen House slow zone (3181,1307) - re"
+  },
+  "ellens-woods": {
+   "noLine": true,
+   "label": [
+    77.78,
+    70.18
+   ],
+   "confidence": "high"
+  },
+  "encore": {
+   "polylines": [
+    93
+   ],
+   "confidence": "high",
+   "mapName": "ENCORE",
+   "note": "From the Glen House area (3337,1392), curving right to the ENCORE diamond, then down west of the Green Mountain Express to its bottom (3496,1691); one diamond. | From the plaza (3337,1392) through the ENCORE diamond (3388,1420) and inline text, down parallel to HAMMERHEAD on its right to (3496,1691)"
+  },
+  "exterminator": {
+   "polylines": [
+    72
+   ],
+   "confidence": "high",
+   "mapName": "EXTERMINATOR",
+   "note": "From the top (3305,1020) to the junction (3411,1171) where WAY BACK (60) branches and LWR EXTERMINATOR (111) continues; EXTERMINATOR label (two diamonds) printed along it. | Thin black line under the 'EXTERMINATOR' text from the double diamond (~3322,1047) down to the LWR EXTERMINATOR single diamond"
+  },
+  "exterminator-woods": {
+   "noLine": true,
+   "label": [
+    79.99,
+    39.42
+   ],
+   "confidence": "high"
+  },
+  "f-i-s": {
+   "polylines": [
+    71
+   ],
+   "confidence": "high",
+   "mapName": "F.I.S.",
+   "note": "Short black line from RIM RUN's ridge leg (3051,927) down to its return leg (3099,1043); F.I.S. label (two diamonds + snowflake) printed inline."
+  },
+  "graduation": {
+   "polylines": [
+    92
+   ],
+   "confidence": "high",
+   "mapName": "GRADUATION",
+   "note": "Starts under the 'WOODS' of the GRADUATION WOODS label (3445,2012), inline along the thin 'GRADUATION' text, circle printed just after the name (3540,2131), ends where RIEMERGASSE's label begins (3555,2128)."
+  },
+  "graduation-woods": {
+   "noLine": true,
+   "label": [
+    80.08,
+    68.27
+   ],
+   "confidence": "high"
+  },
+  "hammerhead": {
+   "polylines": [
+    91
+   ],
+   "confidence": "high",
+   "mapName": "HAMMERHEAD",
+   "note": "From the Glen House area (3313,1412) down between THE CLIFFS and ENCORE to the Green Mountain Express bottom (3493,1704); HAMMERHEAD label (one diamond) printed inline. | From the Glen House plaza (3313,1412) through the HAMMERHEAD diamond (3344,1444) and inline text down to the lower slow zone (349"
+  },
+  "inverness": {
+   "polylines": [
+    90
+   ],
+   "confidence": "high",
+   "mapName": "INVERNESS",
+   "note": "Straight blue line just east of the INVERNESS QUAD, inline 'INVERNESS' text with square + snowflake at its lower end (3958,1619); from the Inverness summit (3989,1478) to the base (3858,2049)."
+  },
+  "joes-cruiser": {
+   "polylines": [
+    89
+   ],
+   "confidence": "high",
+   "mapName": "JOE'S CRUISER",
+   "note": "From the North Ridge Express bottom (3395,1375) through the JOE'S CRUISER label (blue square + snowflake at ~(3483,1414), just right of my tiles) down to the Green Mountain Express bottom area (3568,1709). | Starts under the North Ridge lift (3395,1375), inline through square + snowflake (3485,1416)"
+  },
+  "lookin-good": {
+   "polylines": [
+    70
+   ],
+   "confidence": "high",
+   "mapName": "LOOKIN' GOOD",
+   "note": "Straight blue line along the east side of the Summit Quad from the end of UPPER LOOKIN' GOOD (3087,1094) to the Glen House slow zone (3229,1339); LOOKIN' GOOD label (blue square + snowflake) printed beside it."
+  },
+  "lower-crackerjack": {
+   "polylines": [
+    88,
+    117
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CRACKERJACK",
+   "note": "Continuation of 94 under the rest of the inline 'LOWER CRACKERJACK' text to the base (3746,2156). | split of piece 94"
+  },
+  "lower-f-i-s": {
+   "polylines": [
+    68
+   ],
+   "confidence": "high",
+   "mapName": "LOWER F.I.S.",
+   "note": "From LOWER RIM RUN (3027,1229) down the far west side to the Mt Ellen base (3579,2170); LOWER F.I.S. printed twice along it (one diamond each, ~(3060,1330) and ~(3082,1876)); SPIN OUT and SOUTH BOUND join it; it passes the Moose Run Woods and Ellen's Woods glades and crosses under the Slide Brook Ex"
+  },
+  "lower-rim-run": {
+   "polylines": [
+    67
+   ],
+   "confidence": "high",
+   "mapName": "LOWER RIM RUN",
+   "note": "Starts where RIM RUN (64) and BLACK DIAMOND RUSH (112) end at the Summit Quad, crosses the lift, curves down the west side past the LOWER RIM RUN label (blue square + snowflake at 3002,1144) and runs east to the Glen House slow zone (3225,1367). ROB ROY's square sits on it where Rob Roy joins; no ot"
+  },
+  "lwr-elbow": {
+   "polylines": [
+    69
+   ],
+   "confidence": "high",
+   "mapName": "LWR ELBOW",
+   "note": "Branches off ELBOW at (3239,1226) at the LWR ELBOW blue square + snowflake and runs along its label to the bottom of the North Ridge Express (3365,1324). | Blue line inline under the 'LWR ELBOW' text (square + snowflake at 3250,1240) ending at the North Ridge lift label box (3365,1324). WAY BACK (60"
+  },
+  "lwr-exterminator": {
+   "polylines": [
+    111
+   ],
+   "confidence": "high",
+   "mapName": "LWR EXTERMINATOR",
+   "note": "Continues EXTERMINATOR past the WAY BACK junction (3411,1171); LWR EXTERMINATOR label (one diamond at ~(3442,1190), just right of my tiles) printed along it; ends on green line 83 at (3524,1347). | From the LWR EXTERMINATOR single diamond (3442,1190) inline along 'LWR EXTERMINATOR' text to the North"
+  },
+  "lwr-northstar": {
+   "polylines": [
+    87,
+    116
+   ],
+   "confidence": "high",
+   "mapName": "LWR NORTHSTAR",
+   "note": "From the Northridge Expressway junction (3578,1564) down through the rest of the inline 'LWR NORTHSTAR' text to the slow zone (3568,1740). | split of piece 85"
+  },
+  "mainstream": {
+   "polylines": [
+    86
+   ],
+   "confidence": "high",
+   "mapName": "MAINSTREAM",
+   "note": "Branches off Lwr Northstar (3573,1599); inline 'MAINSTREAM' text reading upward with its circle at the lower end (3544,1716), ends in the slow zone (3546,1733)."
+  },
+  "moose-run-woods": {
+   "noLine": true,
+   "label": [
+    72.7,
+    56.06
+   ],
+   "confidence": "high"
+  },
+  "northridge-expressway": {
+   "polylines": [
+    84
+   ],
+   "confidence": "high",
+   "mapName": "NORTHRIDGE EXPRESSWAY",
+   "note": "From the Inverness summit (3902,1444) west along the inline 'NORTHRIDGE EXPRESSWAY' text (circle + snowflake at its west end 3633,1524) to the junction with Lwr Northstar (3586,1581)."
+  },
+  "northstar": {
+   "polylines": [
+    85
+   ],
+   "confidence": "high",
+   "mapName": "NORTHSTAR",
+   "note": "split of piece 85"
+  },
+  "northway": {
+   "polylines": [
+    83
+   ],
+   "confidence": "high",
+   "mapName": "NORTHWAY",
+   "note": "Starts at the edge of the slow zone east of the North Ridge lift base (3452,1348), runs east along the light-blue band through the inline 'NORTHWAY' text (circle 3653,1377) to the Inverness summit (3898,1434)."
+  },
+  "panorama": {
+   "polylines": [
+    66
+   ],
+   "confidence": "high",
+   "mapName": "PANORAMA",
+   "note": "From the summit patrol hut under the camera pointer through the PANORAMA label (blue square + snowflake), then down-right to merge into RIM RUN at (3061,914)."
+  },
+  "riemergasse": {
+   "polylines": [
+    82
+   ],
+   "confidence": "medium",
+   "mapName": "RIEMERGASSE",
+   "note": "Straight green line drawn on the orange terrain-park pill of the SUNSHINE QUAD (left of the red lift line, under the lift's red label and chair icon). No text is inline on it; the only trail label aligned with it is 'RIEMERGASSE' (snowflake, no difficulty symbol) printed parallel ~15 px to its SW, b"
+  },
+  "rim-run": {
+   "polylines": [
+    64
+   ],
+   "confidence": "high",
+   "mapName": "RIM RUN",
+   "note": "From the Mt Ellen summit patrol hut along the ridge (RIM RUN label, blue square + snowflake; PANORAMA merges and F.I.S. leaves on the way), hooks at the lookout/camera and returns down-left to the Summit Quad (3073,1071) where BLACK DIAMOND RUSH ends and LOWER RIM RUN (67) begins. The return leg car"
+  },
+  "rob-roy": {
+   "polylines": [
+    65
+   ],
+   "confidence": "high",
+   "mapName": "ROB ROY",
+   "note": "Short connector from just below the Summit Quad chair icon (between the lift and LOOKIN' GOOD) down to LOWER RIM RUN; two-line ROB / ROY label printed along it, its blue square at the bottom where it meets Lower Rim Run."
+  },
+  "semi-tough": {
+   "polylines": [
+    81
+   ],
+   "confidence": "high",
+   "mapName": "SEMI TOUGH",
+   "note": "From beside the ski-school icon (3911,1545) down through the inline 'SEMI TOUGH' text (square at its lower end 3825,1728) to the KBRA T-bar bottom (3811,1998)."
+  },
+  "semi-tough-woods": {
+   "noLine": true,
+   "label": [
+    86.82,
+    57.03
+   ],
+   "confidence": "high"
+  },
+  "snowflake": {
+   "polylines": [
+    80
+   ],
+   "confidence": "high",
+   "mapName": "SNOWFLAKE",
+   "note": "Inline 'SNOWFLAKE' text with circle at its start (3577,2206); runs along the boundary to the base (3721,2293)."
+  },
+  "south-bound": {
+   "polylines": [
+    63
+   ],
+   "confidence": "high",
+   "mapName": "SOUTH BOUND",
+   "note": "From the Glen House slow zone (3218,1379) down-left to LOWER F.I.S. (3089,1448); two-line SOUTH / BOUND label (one diamond) printed inline."
+  },
+  "spin-out": {
+   "polylines": [
+    62
+   ],
+   "confidence": "high",
+   "mapName": "SPIN OUT",
+   "note": "From LOWER RIM RUN (3144,1296) down-left to LOWER F.I.S. (3089,1424); SPIN OUT label (one diamond) printed inline."
+  },
+  "straight-shot": {
+   "polylines": [
+    79
+   ],
+   "confidence": "high",
+   "mapName": "STRAIGHT SHOT",
+   "note": "Straight green line just left of the Green Mountain Express lift, under the chair icon, inline through snowflake + circle (3612,1954) and 'STRAIGHT SHOT' text, ending near the base (3730,2114)."
+  },
+  "sugar-run": {
+   "polylines": [
+    78
+   ],
+   "confidence": "high",
+   "mapName": "SUGAR RUN",
+   "note": "Straight green line along the second orange terrain-park pill; 'SUGAR RUN' and its circle (3579,2047) are printed on the pill. Extends slightly past the pill's lower end (3742,2193)."
+  },
+  "the-cliffs": {
+   "polylines": [
+    95
+   ],
+   "confidence": "high",
+   "mapName": "THE CLIFFS",
+   "note": "Straight black line just west of the Green Mountain Express from Glen House (3281,1431) to the bottom (3472,1748); THE CLIFFS label (one diamond + snowflake) printed inline. | Straight black line just left (west) of the Green Mountain Express lift, inline 'THE CLIFFS' text with snowflake + one diamo"
+  },
+  "tumbler": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "TUMBLER",
+   "note": "From the Glen House slow zone (3259,1421) curving down west of THE CLIFFS to the Green Mountain Express bottom slow zone (3458,1789); TUMBLER label (one diamond) printed inline. The TUMBLER WOODS glade label beside it is a separate glade with no line. | From the Glen House plaza (3259,1421) down thr"
+  },
+  "tumbler-woods": {
+   "noLine": true,
+   "label": [
+    75.72,
+    54.95
+   ],
+   "confidence": "high"
+  },
+  "upper-lookin-good": {
+   "polylines": [
+    61
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LOOKIN' GOOD",
+   "note": "Starts by the lookout at the RIM RUN hook and runs down-left to the Summit Quad, where LOOKIN' GOOD (70) continues; the two-line UPPER / LOOKIN' GOOD label (blue square) is printed inline on this line, not on the parallel RIM RUN return leg (64) just above it."
+  },
+  "walts-trail": {
+   "polylines": [
+    76
+   ],
+   "confidence": "high",
+   "mapName": "WALT'S TRAIL",
+   "note": "Starts at the Inverness summit (3920,1454), curves SW with no junction or other label to the inline 'WALT'S TRAIL' text (circle at its lower end 3652,1748), then continues down along the west side of Semi Tough Woods to the base near the KBRA T-bar bottom (3809,2031). The upper stretch is unlabeled "
+  },
+  "walts-woods": {
+   "noLine": true,
+   "label": [
+    85.05,
+    54.28
+   ],
+   "confidence": "high"
+  },
+  "way-back": {
+   "polylines": [
+    60
+   ],
+   "confidence": "high",
+   "mapName": "WAY BACK",
+   "note": "Starts at the EXTERMINATOR/LWR EXTERMINATOR junction (3403,1176), runs through the two-line WAY / BACK label (blue square + snowflake), crosses under the North Ridge Express and BRAVO, crosses the LWR ELBOW line and ends in the Glen House slow zone (3310,1342); the short part after the lift crossing"
+  },
+  "way-back-woods": {
+   "noLine": true,
+   "label": [
+    79.62,
+    43.61
+   ],
+   "confidence": "high"
+  },
+  "which-way": {
+   "polylines": [
+    75
+   ],
+   "confidence": "high",
+   "mapName": "WHICH WAY",
+   "note": "From the North Ridge Express bottom (3376,1377) through the WHICH WAY label (blue square + snowflake at ~(3461,1454), just right of my tiles) down to the Green Mountain Express bottom (3541,1715) next to MAINSTREAM's start. | Starts left of the North Ridge lift (3376,1377), crosses under it, inline "
+  }
+ }
+}

@@ -1,0 +1,1852 @@
+{
+ "reviews": {
+  "hoyts-high": {
+   "status": "confirmed",
+   "polylines": [
+    28,
+    29
+   ],
+   "drawn": [
+    [
+     2827,
+     975
+    ],
+    [
+     2855,
+     968
+    ],
+    [
+     2882,
+     961
+    ],
+    [
+     2911,
+     951
+    ],
+    [
+     2934,
+     940
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "lookout-below": {
+   "status": "confirmed",
+   "polylines": [
+    26,
+    27
+   ],
+   "drawn": [
+    [
+     2438,
+     1436
+    ],
+    [
+     2465,
+     1427
+    ],
+    [
+     2491,
+     1419
+    ],
+    [
+     2516,
+     1412
+    ],
+    [
+     2548,
+     1404
+    ],
+    [
+     2583,
+     1396
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "blazers-bluff": {
+   "status": "confirmed",
+   "polylines": [
+    5,
+    6
+   ],
+   "drawn": [
+    [
+     2219,
+     1233
+    ],
+    [
+     2248,
+     1218
+    ],
+    [
+     2276,
+     1202
+    ],
+    [
+     2298,
+     1183
+    ],
+    [
+     2314,
+     1153
+    ],
+    [
+     2314,
+     1143
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "upper-northway": {
+   "status": "confirmed",
+   "polylines": [
+    9,
+    10
+   ],
+   "drawn": [
+    [
+     1567,
+     887
+    ],
+    [
+     1596,
+     895
+    ],
+    [
+     1620,
+     902
+    ],
+    [
+     1654,
+     911
+    ],
+    [
+     1686,
+     919
+    ],
+    [
+     1717,
+     927
+    ],
+    [
+     1731,
+     931
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "upper-empire": {
+   "status": "confirmed",
+   "polylines": [
+    40,
+    41
+   ],
+   "drawn": [
+    [
+     1608,
+     1047
+    ],
+    [
+     1634,
+     1060
+    ],
+    [
+     1657,
+     1071
+    ],
+    [
+     1688,
+     1085
+    ],
+    [
+     1714,
+     1097
+    ],
+    [
+     1731,
+     1106
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "upper-mackenzie": {
+   "status": "confirmed",
+   "polylines": [
+    21,
+    22
+   ],
+   "drawn": [
+    [
+     1528,
+     1082
+    ],
+    [
+     1554,
+     1096
+    ],
+    [
+     1576,
+     1110
+    ],
+    [
+     1603,
+     1137
+    ],
+    [
+     1614,
+     1160
+    ],
+    [
+     1617,
+     1187
+    ],
+    [
+     1634,
+     1217
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "upper-wilderness": {
+   "status": "confirmed",
+   "polylines": [
+    15,
+    16
+   ],
+   "drawn": [
+    [
+     1490,
+     1091
+    ],
+    [
+     1498,
+     1120
+    ],
+    [
+     1509,
+     1144
+    ],
+    [
+     1529,
+     1175
+    ],
+    [
+     1549,
+     1199
+    ],
+    [
+     1571,
+     1227
+    ],
+    [
+     1584,
+     1248
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "lower-wilderness": {
+   "status": "confirmed",
+   "polylines": [
+    13,
+    14
+   ],
+   "drawn": [
+    [
+     1617,
+     1450
+    ],
+    [
+     1623,
+     1478
+    ],
+    [
+     1630,
+     1505
+    ],
+    [
+     1638,
+     1540
+    ],
+    [
+     1646,
+     1570
+    ],
+    [
+     1655,
+     1605
+    ],
+    [
+     1660,
+     1629
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "slide-view-glades": {
+   "status": "confirmed",
+   "polylines": [
+    44,
+    45
+   ],
+   "drawn": [
+    [
+     1566,
+     1058
+    ],
+    [
+     1590,
+     1071
+    ],
+    [
+     1620,
+     1090
+    ],
+    [
+     1651,
+     1110
+    ],
+    [
+     1683,
+     1128
+    ],
+    [
+     1720,
+     1141
+    ],
+    [
+     1733,
+     1142
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "upper-thruway": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1440,
+     1474
+    ],
+    [
+     1444,
+     1445
+    ],
+    [
+     1447,
+     1419
+    ],
+    [
+     1452,
+     1382
+    ],
+    [
+     1459,
+     1343
+    ],
+    [
+     1464,
+     1314
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "upper-parkway": {
+   "status": "confirmed",
+   "polylines": [
+    24,
+    25
+   ],
+   "drawn": [
+    [
+     1368,
+     1214
+    ],
+    [
+     1379,
+     1242
+    ],
+    [
+     1389,
+     1266
+    ],
+    [
+     1398,
+     1297
+    ],
+    [
+     1399,
+     1336
+    ],
+    [
+     1391,
+     1365
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "upper-skyward": {
+   "status": "confirmed",
+   "polylines": [
+    4
+   ],
+   "drawn": [
+    [
+     2439,
+     716
+    ],
+    [
+     2453,
+     689
+    ],
+    [
+     2469,
+     669
+    ],
+    [
+     2490,
+     646
+    ],
+    [
+     2512,
+     626
+    ],
+    [
+     2532,
+     606
+    ],
+    [
+     2540,
+     597
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "lower-skyward": {
+   "status": "confirmed",
+   "polylines": [
+    2,
+    3
+   ],
+   "drawn": [
+    [
+     2125,
+     1253
+    ],
+    [
+     2142,
+     1229
+    ],
+    [
+     2158,
+     1206
+    ],
+    [
+     2177,
+     1181
+    ],
+    [
+     2194,
+     1157
+    ],
+    [
+     2212,
+     1136
+    ],
+    [
+     2220,
+     1127
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "yellow-dot": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     2180,
+     1079
+    ],
+    [
+     2208,
+     1086
+    ],
+    [
+     2233,
+     1095
+    ],
+    [
+     2190,
+     1099
+    ],
+    [
+     2215,
+     1107
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "wildway": {
+   "status": "confirmed",
+   "polylines": [
+    19
+   ],
+   "drawn": [
+    [
+     1467,
+     1154
+    ],
+    [
+     1490,
+     1169
+    ],
+    [
+     1514,
+     1184
+    ],
+    [
+     1522,
+     1192
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "upper-valley": {
+   "status": "confirmed",
+   "polylines": [
+    97
+   ],
+   "drawn": [
+    [
+     1733,
+     1662
+    ],
+    [
+     1755,
+     1642
+    ],
+    [
+     1773,
+     1625
+    ],
+    [
+     1799,
+     1602
+    ],
+    [
+     1818,
+     1585
+    ],
+    [
+     1828,
+     1575
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "lower-valley": {
+   "status": "confirmed",
+   "polylines": [
+    95,
+    96
+   ],
+   "drawn": [
+    [
+     1284,
+     2138
+    ],
+    [
+     1306,
+     2118
+    ],
+    [
+     1325,
+     2099
+    ],
+    [
+     1348,
+     2074
+    ],
+    [
+     1365,
+     2054
+    ],
+    [
+     1373,
+     2044
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "valvehouse-road": {
+   "status": "confirmed",
+   "polylines": [
+    89,
+    111
+   ],
+   "drawn": [
+    [
+     1319,
+     2196
+    ],
+    [
+     1353,
+     2196
+    ],
+    [
+     1380,
+     2196
+    ],
+    [
+     1408,
+     2194
+    ],
+    [
+     1434,
+     2193
+    ],
+    [
+     1469,
+     2191
+    ],
+    [
+     1496,
+     2188
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "upper-boreen": {
+   "status": "confirmed",
+   "polylines": [
+    98,
+    99
+   ],
+   "drawn": [
+    [
+     1914,
+     1765
+    ],
+    [
+     1942,
+     1758
+    ],
+    [
+     1967,
+     1752
+    ],
+    [
+     1998,
+     1743
+    ],
+    [
+     2033,
+     1727
+    ],
+    [
+     2044,
+     1719
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "the-wilmington-trail": {
+   "status": "confirmed",
+   "polylines": [
+    90,
+    91,
+    92
+   ],
+   "drawn": [
+    [
+     2311,
+     1877
+    ],
+    [
+     2337,
+     1875
+    ],
+    [
+     2375,
+     1871
+    ],
+    [
+     2408,
+     1865
+    ],
+    [
+     2442,
+     1853
+    ],
+    [
+     2466,
+     1841
+    ],
+    [
+     2492,
+     1822
+    ],
+    [
+     2512,
+     1801
+    ],
+    [
+     3351,
+     1094
+    ],
+    [
+     3349,
+     1067
+    ],
+    [
+     3346,
+     1029
+    ],
+    [
+     3347,
+     995
+    ],
+    [
+     3354,
+     960
+    ],
+    [
+     3366,
+     936
+    ],
+    [
+     3387,
+     913
+    ],
+    [
+     3411,
+     897
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "excelsior": {
+   "status": "confirmed",
+   "polylines": [
+    63,
+    64
+   ],
+   "drawn": [
+    [
+     1632,
+     809
+    ],
+    [
+     1658,
+     811
+    ],
+    [
+     1690,
+     813
+    ],
+    [
+     1721,
+     815
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "lower-northway": {
+   "status": "confirmed",
+   "polylines": [
+    68,
+    165
+   ],
+   "drawn": [
+    [
+     1853,
+     1044
+    ],
+    [
+     1850,
+     1075
+    ],
+    [
+     1861,
+     1102
+    ],
+    [
+     1885,
+     1128
+    ],
+    [
+     1910,
+     1150
+    ],
+    [
+     1931,
+     1175
+    ],
+    [
+     1937,
+     1188
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "summit-express": {
+   "status": "confirmed",
+   "polylines": [
+    67
+   ],
+   "drawn": [
+    [
+     1922,
+     1282
+    ],
+    [
+     1918,
+     1313
+    ],
+    [
+     1916,
+     1347
+    ],
+    [
+     1918,
+     1373
+    ],
+    [
+     1923,
+     1401
+    ],
+    [
+     1938,
+     1435
+    ],
+    [
+     1946,
+     1445
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "low-road": {
+   "status": "confirmed",
+   "polylines": [
+    78,
+    79
+   ],
+   "drawn": [
+    [
+     1424,
+     1520
+    ],
+    [
+     1451,
+     1533
+    ],
+    [
+     1485,
+     1549
+    ],
+    [
+     1511,
+     1560
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "calamity-lane": {
+   "status": "confirmed",
+   "polylines": [
+    80
+   ],
+   "drawn": [
+    [
+     1502,
+     1589
+    ],
+    [
+     1526,
+     1613
+    ],
+    [
+     1547,
+     1635
+    ],
+    [
+     1575,
+     1663
+    ],
+    [
+     1594,
+     1680
+    ],
+    [
+     1604,
+     1689
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "drapers-drop": {
+   "status": "confirmed",
+   "polylines": [
+    76,
+    77
+   ],
+   "drawn": [
+    [
+     1315,
+     1646
+    ],
+    [
+     1325,
+     1683
+    ],
+    [
+     1332,
+     1708
+    ],
+    [
+     1341,
+     1743
+    ],
+    [
+     1353,
+     1780
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "lower-thruway": {
+   "status": "confirmed",
+   "polylines": [
+    81,
+    82
+   ],
+   "drawn": [
+    [
+     1428,
+     1589
+    ],
+    [
+     1425,
+     1618
+    ],
+    [
+     1423,
+     1646
+    ],
+    [
+     1428,
+     1678
+    ],
+    [
+     1443,
+     1715
+    ],
+    [
+     1464,
+     1738
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "parons-run": {
+   "status": "confirmed",
+   "polylines": [
+    50,
+    164
+   ],
+   "drawn": [
+    [
+     2131,
+     764
+    ],
+    [
+     2156,
+     757
+    ],
+    [
+     2180,
+     748
+    ],
+    [
+     2215,
+     736
+    ],
+    [
+     2241,
+     725
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "johns-bypass": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1983,
+     875
+    ],
+    [
+     2006,
+     889
+    ],
+    [
+     2033,
+     907
+    ],
+    [
+     2060,
+     927
+    ],
+    [
+     2083,
+     942
+    ],
+    [
+     2104,
+     955
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "webers-way": {
+   "status": "confirmed",
+   "polylines": [
+    56
+   ],
+   "drawn": [
+    [
+     2202,
+     1047
+    ],
+    [
+     2229,
+     1031
+    ],
+    [
+     2252,
+     1019
+    ],
+    [
+     2286,
+     1000
+    ],
+    [
+     2314,
+     985
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "victoria-shoot": {
+   "status": "confirmed",
+   "polylines": [
+    59
+   ],
+   "drawn": [
+    [
+     2022,
+     1392
+    ],
+    [
+     2037,
+     1365
+    ],
+    [
+     2051,
+     1336
+    ],
+    [
+     2060,
+     1307
+    ],
+    [
+     2064,
+     1279
+    ],
+    [
+     2064,
+     1252
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "empire-cut": {
+   "status": "confirmed",
+   "polylines": [
+    72
+   ],
+   "drawn": [
+    [
+     1845,
+     1248
+    ],
+    [
+     1858,
+     1217
+    ],
+    [
+     1869,
+     1189
+    ],
+    [
+     1881,
+     1155
+    ],
+    [
+     1884,
+     1143
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "lower-switchbacks": {
+   "status": "confirmed",
+   "polylines": [
+    54
+   ],
+   "drawn": [
+    [
+     2257,
+     861
+    ],
+    [
+     2279,
+     875
+    ],
+    [
+     2301,
+     885
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "dannys-bridge": {
+   "status": "confirmed",
+   "polylines": [
+    112
+   ],
+   "drawn": [
+    [
+     1524,
+     2175
+    ],
+    [
+     1535,
+     2149
+    ],
+    [
+     1544,
+     2124
+    ],
+    [
+     1555,
+     2088
+    ],
+    [
+     1562,
+     2059
+    ],
+    [
+     1566,
+     2031
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "brookside": {
+   "status": "confirmed",
+   "polylines": [
+    109,
+    110
+   ],
+   "drawn": [
+    [
+     1375,
+     2397
+    ],
+    [
+     1404,
+     2370
+    ],
+    [
+     1421,
+     2350
+    ],
+    [
+     1440,
+     2322
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "off-broadway": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     1865,
+     1654
+    ],
+    [
+     1887,
+     1618
+    ],
+    [
+     1900,
+     1582
+    ],
+    [
+     1911,
+     1554
+    ],
+    [
+     1924,
+     1527
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "lower-mackenzie": {
+   "status": "confirmed",
+   "polylines": [
+    20
+   ],
+   "drawn": [
+    [
+     1676,
+     1653
+    ],
+    [
+     1683,
+     1623
+    ],
+    [
+     1686,
+     1596
+    ],
+    [
+     1687,
+     1559
+    ],
+    [
+     1687,
+     1534
+    ],
+    [
+     1688,
+     1507
+    ],
+    [
+     1692,
+     1475
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "2200-road": {
+   "status": "confirmed",
+   "polylines": [
+    117
+   ],
+   "drawn": [
+    [
+     1550,
+     1257
+    ],
+    [
+     1576,
+     1269
+    ],
+    [
+     1609,
+     1284
+    ],
+    [
+     1635,
+     1297
+    ],
+    [
+     1648,
+     1303
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "easy-way": {
+   "status": "confirmed",
+   "polylines": [
+    149
+   ],
+   "drawn": [
+    [
+     2042,
+     1469
+    ],
+    [
+     2054,
+     1492
+    ],
+    [
+     2068,
+     1526
+    ],
+    [
+     2080,
+     1556
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "easy-street": {
+   "status": "confirmed",
+   "polylines": [
+    138,
+    139
+   ],
+   "drawn": [
+    [
+     1884,
+     1715
+    ],
+    [
+     1909,
+     1709
+    ],
+    [
+     1941,
+     1700
+    ],
+    [
+     1972,
+     1691
+    ],
+    [
+     1996,
+     1683
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "boreen-loop": {
+   "status": "confirmed",
+   "polylines": [
+    137
+   ],
+   "drawn": [
+    [
+     1711,
+     1860
+    ],
+    [
+     1735,
+     1850
+    ],
+    [
+     1771,
+     1837
+    ],
+    [
+     1801,
+     1823
+    ],
+    [
+     1826,
+     1807
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "mixing-bowl": {
+   "status": "confirmed",
+   "polylines": [
+    148
+   ],
+   "drawn": [
+    [
+     687,
+     2592
+    ],
+    [
+     718,
+     2604
+    ],
+    [
+     759,
+     2622
+    ],
+    [
+     787,
+     2636
+    ],
+    [
+     798,
+     2642
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "porcupine-pass": {
+   "status": "confirmed",
+   "polylines": [
+    131,
+    132
+   ],
+   "drawn": [
+    [
+     1443,
+     2638
+    ],
+    [
+     1469,
+     2643
+    ],
+    [
+     1506,
+     2649
+    ],
+    [
+     1540,
+     2653
+    ],
+    [
+     1574,
+     2657
+    ],
+    [
+     1597,
+     2660
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "bobcat-chute": {
+   "status": "confirmed",
+   "polylines": [
+    126,
+    127
+   ],
+   "drawn": [
+    [
+     2091,
+     2502
+    ],
+    [
+     2113,
+     2482
+    ],
+    [
+     2133,
+     2466
+    ],
+    [
+     2157,
+     2447
+    ],
+    [
+     2180,
+     2430
+    ],
+    [
+     2200,
+     2417
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "round-a-bout": {
+   "status": "confirmed",
+   "polylines": [],
+   "drawn": [
+    [
+     746,
+     2524
+    ],
+    [
+     770,
+     2551
+    ],
+    [
+     790,
+     2574
+    ],
+    [
+     812,
+     2597
+    ],
+    [
+     829,
+     2611
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "boreen": {
+   "status": "confirmed",
+   "polylines": [
+    119,
+    120,
+    121
+   ],
+   "drawn": [
+    [
+     1659,
+     2008
+    ],
+    [
+     1675,
+     2030
+    ],
+    [
+     1692,
+     2049
+    ],
+    [
+     1701,
+     2059
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "moose-cut": {
+   "status": "confirmed",
+   "polylines": [
+    150,
+    151
+   ],
+   "drawn": [
+    [
+     1612,
+     2434
+    ],
+    [
+     1644,
+     2435
+    ],
+    [
+     1670,
+     2436
+    ],
+    [
+     1705,
+     2438
+    ],
+    [
+     1717,
+     2439
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "wolf-run": {
+   "status": "confirmed",
+   "polylines": [
+    152,
+    153
+   ],
+   "drawn": [
+    [
+     724,
+     2258
+    ],
+    [
+     746,
+     2239
+    ],
+    [
+     768,
+     2224
+    ],
+    [
+     793,
+     2212
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "flying-squirrel": {
+   "status": "confirmed",
+   "polylines": [
+    156,
+    157
+   ],
+   "drawn": [
+    [
+     2381,
+     2218
+    ],
+    [
+     2407,
+     2230
+    ],
+    [
+     2447,
+     2250
+    ],
+    [
+     2472,
+     2264
+    ],
+    [
+     2495,
+     2279
+    ],
+    [
+     2513,
+     2290
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "coyote-cut": {
+   "status": "confirmed",
+   "polylines": [
+    158,
+    159
+   ],
+   "drawn": [
+    [
+     1865,
+     2529
+    ],
+    [
+     1889,
+     2547
+    ],
+    [
+     1909,
+     2563
+    ],
+    [
+     1934,
+     2585
+    ],
+    [
+     1954,
+     2603
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "fox-island": {
+   "status": "confirmed",
+   "polylines": [
+    146,
+    147
+   ],
+   "drawn": [
+    [
+     1183,
+     2392
+    ],
+    [
+     1208,
+     2379
+    ],
+    [
+     1229,
+     2362
+    ],
+    [
+     1249,
+     2335
+    ],
+    [
+     1255,
+     2321
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  },
+  "ausable-run": {
+   "status": "confirmed",
+   "polylines": [
+    160,
+    161
+   ],
+   "drawn": [
+    [
+     667,
+     2228
+    ],
+    [
+     685,
+     2206
+    ],
+    [
+     706,
+     2189
+    ],
+    [
+     743,
+     2170
+    ],
+    [
+     770,
+     2162
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
+   "at": "2026-09-30T15:32:40.000Z",
+   "by": "claude"
+  }
+ }
+}

@@ -41,8 +41,9 @@ def main() -> None:
     polys = json.load(open(a.polylines))['polylines']
     for p in polys:
         p['px'] = [(x * W / 100, y * H / 100) for x, y in p['points']]
-    xs = [q[0] for p in polys for q in p['px']]
-    ys = [q[1] for p in polys for q in p['px']]
+    # a map with no drawn lines (Jay Peak) has no pieces: tile the whole image
+    xs = [q[0] for p in polys for q in p['px']] or [50, W - 50]
+    ys = [q[1] for p in polys for q in p['px']] or [50, H - 50]
     X0, X1, Y0, Y1 = int(min(xs)) - 50, int(max(xs)) + 50, int(min(ys)) - 50, int(max(ys)) + 50
     try:
         font = ImageFont.truetype(a.font, 17)
@@ -55,7 +56,7 @@ def main() -> None:
         for c, tx in enumerate(range(X0, X1, tw - a.overlap)):
             box = (max(0, tx), max(0, ty), min(W, tx + tw), min(H, ty + th))
             inside = [p for p in polys if any(box[0] <= x < box[2] and box[1] <= y < box[3] for x, y in p['px'])]
-            if not inside:
+            if polys and not inside:
                 continue
             name = f't{r}{c:02d}'
             crop = img.crop(box).resize((int((box[2] - box[0]) * S), int((box[3] - box[1]) * S)), Image.LANCZOS)

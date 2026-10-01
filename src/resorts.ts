@@ -5,6 +5,12 @@ import * as stowe from './data/resorts/stowe/trails';
 import stowePaths from './data/resorts/stowe/trailPaths.json';
 import * as okemo from './data/resorts/okemo/trails';
 import okemoPaths from './data/resorts/okemo/trailPaths.json';
+import * as sugarbush from './data/resorts/sugarbush/trails';
+import sugarbushPaths from './data/resorts/sugarbush/trailPaths.json';
+import * as jayPeak from './data/resorts/jay-peak/trails';
+import jayPeakPaths from './data/resorts/jay-peak/trailPaths.json';
+import * as whiteface from './data/resorts/whiteface/trails';
+import whitefacePaths from './data/resorts/whiteface/trailPaths.json';
 
 /** A trail's overlay: line segments and/or a label marker, in percent of the
  * map image (see scripts/applyTrailProposals.mjs). */
@@ -51,6 +57,30 @@ export const RESORTS: Resort[] = [
     peaks: okemo.peaks,
     trails: okemo.trails,
     paths: (okemoPaths as { trails: Record<string, TrailPath> }).trails,
+  },
+  {
+    id: 'sugarbush',
+    name: 'Sugarbush',
+    mapSrc: '/maps/sugarbush.jpg',
+    peaks: sugarbush.peaks,
+    trails: sugarbush.trails,
+    paths: (sugarbushPaths as { trails: Record<string, TrailPath> }).trails,
+  },
+  {
+    id: 'jay-peak',
+    name: 'Jay Peak',
+    mapSrc: '/maps/jay-peak.jpg',
+    peaks: jayPeak.peaks,
+    trails: jayPeak.trails,
+    paths: (jayPeakPaths as { trails: Record<string, TrailPath> }).trails,
+  },
+  {
+    id: 'whiteface',
+    name: 'Whiteface',
+    mapSrc: '/maps/whiteface.jpg',
+    peaks: whiteface.peaks,
+    trails: whiteface.trails,
+    paths: (whitefacePaths as { trails: Record<string, TrailPath> }).trails,
   },
 ];
 

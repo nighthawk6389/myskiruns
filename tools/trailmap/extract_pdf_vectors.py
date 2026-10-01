@@ -60,9 +60,17 @@ def main():
     ap.add_argument('--scale', type=float, default=2.5, help='image px per PDF point')
     ap.add_argument('--color', action='append', required=True, help='class=r,g,b (0-1, 2 decimals)')
     ap.add_argument('--max-width', type=float, default=1.0, help='ignore thicker strokes (lifts)')
+    ap.add_argument('--min-width', type=float, default=0.0,
+                    help='ignore thinner strokes (with --append: pick up one odd width of a colour)')
     ap.add_argument('--min-length', type=float, default=4.0, help='drop pieces shorter than this (points)')
     ap.add_argument('--max-icon', type=float, default=10.0,
                     help='drop closed runs smaller than this (points): icons such as legend symbols')
+    ap.add_argument('--filled', action='store_true',
+                    help='also take filled paths whose outline is a trail colour (Sugarbush draws one line so)')
+    ap.add_argument('--outlined', action='store_true',
+                    help='instead take lines drawn as a thin filled outline in a trail colour (a stroke converted '
+                         'to a fill: its first side, up to the end cap); use with --append and only the colours '
+                         'no text is printed in (black glyphs are fills too) (Sugarbush: Snowball)')
     ap.add_argument('--image', help='write the map image here (omit with --append)')
     ap.add_argument('--append', action='store_true',
                     help='add pieces for these colours to an existing --out, keeping its ids')
@@ -85,13 +93,27 @@ def main():
 
     pieces = []
     for d in page.get_drawings():
-        if d['type'] != 's' or not d.get('color') or (d.get('width') or 0) > a.max_width:
-            continue
-        cls = classes.get(tuple(round(v, 2) for v in d['color']))
+        width = d.get('width') or 0
+        items = d['items']
+        if a.outlined:
+            if d['type'] != 'f' or not d.get('fill') or max(d['rect'].width, d['rect'].height) < a.min_length:
+                continue
+            cls = classes.get(tuple(round(v, 2) for v in d['fill']))
+            side = []
+            for it in items:
+                if side and it[0] == 'l' and math.dist(it[1], it[2]) < 2:
+                    break  # the end cap: the rest of the outline is the line's other side
+                side.append(it)
+            items = side
+        else:
+            kinds = ('s', 'fs') if a.filled else ('s',)
+            if d['type'] not in kinds or not d.get('color') or not a.min_width <= width <= a.max_width:
+                continue
+            cls = classes.get(tuple(round(v, 2) for v in d['color']))
         if not cls:
             continue
         run = []
-        for it in d['items']:
+        for it in items:
             if it[0] == 'l':
                 start, seg = it[1], [(it[2].x, it[2].y)]
             elif it[0] == 'c':
