@@ -139,6 +139,8 @@ def main():
         xs, ys = [p[0] for p in run], [p[1] for p in run]
         if math.dist(run[0], run[-1]) < 0.5 and math.hypot(max(xs) - min(xs), max(ys) - min(ys)) < a.max_icon:
             continue  # a closed loop this small is an icon (Okemo's legend), not a trail
+        if not any(x0 <= x <= x1 and y0 <= y <= y1 for x, y in run):
+            continue  # outside the map area (Winter Park's legend line icons)
         pts = simplify(run, 0.25)
         out.append({
             'id': first_new + sum(1 for p in out if p['id'] >= first_new),

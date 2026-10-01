@@ -126,8 +126,9 @@ pipeline scripts take `--resort <id>` (default `killington`), e.g.
 `docs/trail-map-playbook.md`.
 
 Resorts so far: Killington, Stowe and Okemo (reviewed on the Trail Check
-page); Sugarbush, Jay Peak and Whiteface (2025-26 maps, no review page:
-every overlay checked on zoomed crops instead, see the playbook).
+page); Sugarbush, Jay Peak, Whiteface and Winter Park (2025-26 maps, no
+review page: every overlay checked on zoomed crops instead, see the
+playbook).
 
 ## Scripts
 
