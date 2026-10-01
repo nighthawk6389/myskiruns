@@ -35,6 +35,7 @@ approaches all stalled at ~40% (see "What we tried").
 | `tools/trailmap/extract_pdf_image.py` | Lossless raster from the resort PDF; reports any vector text/lines |
 | `tools/trailmap/extract_pdf_vectors.py` | Map image + numbered pieces straight from a PDF's vector trail strokes |
 | `tools/trailmap/pdf_symbols.py` | Difficulty symbols from a vector PDF; `--check` compares them with the trail list |
+| `tools/trailmap/pdf_labels.py` | Trail-name labels from a PDF's text (decodes fonts with no Unicode map) |
 | `scripts/lib/lineDetector.mjs`, `scripts/evaluateLines.mjs` | Colored-line detector and its ground-truth scorer |
 | `scripts/tracePolylines.mjs` | Detection mask → numbered line pieces (`src/data/resorts/killington/linePolylines.json`) |
 | `tools/trailmap/render_tiles.py` | Zoomed tiles with every piece drawn and numbered, for the readers |
@@ -48,8 +49,8 @@ approaches all stalled at ~40% (see "What we tried").
 | `tools/trailmap/region_audit.py` | Every overlay tagged with its name over map regions, to audit a whole map |
 | `tools/trailmap/hover_check.cjs` | Browser check that each overlay shows its own name |
 
-Python tools need `pip install pymupdf pillow`; the hover check needs
-Playwright.
+Python tools need `pip install pymupdf pillow` (`pdf_labels.py` also
+`fonttools`); the hover check needs Playwright.
 
 ## Step by step
 
@@ -108,6 +109,24 @@ Download the resort's trail map PDF (not the web JPG) and run
   stretch drawn along the name's own characters (`page.get_texttrace()`),
   so trails whose only "line" is their label still get one. The official
   PDF sat behind a bot check; skimap.org had the same file.
+- **Text with no Unicode map (Winter Park 2025-26):** strokes and names as
+  text like Whiteface, but the name font is a subset with no ToUnicode map,
+  so `get_text()` gives U+FFFD for every character. `get_texttrace()` still
+  gives each glyph's index in the subset, and the subset's CFF charset
+  names it `gidNNNNN`, its index in the full font: in the usual Adobe order
+  space is 1, 0-9 are 17-26, A-Z 34-59. `pdf_labels.py` decodes that and
+  lists the glyphs it can't; check those on a rendered label (here a hyphen
+  and an opening quote: `--glyph 316=- --glyph '63=‘'`). The legend has five
+  tiers: advanced intermediate (a blue square holding a black diamond, its
+  trails drawn as black lines) became black and EX (two diamonds with a
+  white E and X inside, told apart from the black rounded-square icons by
+  those letters) double-black. Lines run straight into their names, so a
+  piece whose end sits on a name's own text line, just before its first or
+  after its last character, continues that trail (163 of 232 pieces). The
+  PDF's drawing order groups each trail's labels with its pieces (Z to A),
+  which settled most of the rest, but it is off by one at group boundaries
+  in places: the crop decides. 58 names have no line (parks, bowls, painted
+  chutes, the Cirque's numbered runs from its key): markers.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.
@@ -265,8 +284,9 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
 
 ### 4. Human review
 
-Sugarbush and Jay Peak skipped this step at the owner's call (the readers'
-labelling had held up on three maps). In its place Claude checked every
+Sugarbush, Jay Peak, Whiteface and Winter Park skipped this step at the
+owner's call (the readers' labelling had held up on three maps; the last two
+needed no readers at all). In its place Claude checked every
 overlay itself: vector maps on full-resolution region crops with each
 overlay drawn in its own colour and tagged with its name
 (`region_audit.py`), traced trails one by one on zoomed crops,
