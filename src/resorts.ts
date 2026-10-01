@@ -17,6 +17,8 @@ import * as breckenridge from './data/resorts/breckenridge/trails';
 import breckenridgePaths from './data/resorts/breckenridge/trailPaths.json';
 import * as copperMountain from './data/resorts/copper-mountain/trails';
 import copperMountainPaths from './data/resorts/copper-mountain/trailPaths.json';
+import * as keystone from './data/resorts/keystone/trails';
+import keystonePaths from './data/resorts/keystone/trailPaths.json';
 
 /** A trail's overlay: line segments and/or a label marker, in percent of the
  * map image (see scripts/applyTrailProposals.mjs). */
@@ -111,6 +113,14 @@ export const RESORTS: Resort[] = [
     peaks: copperMountain.peaks,
     trails: copperMountain.trails,
     paths: (copperMountainPaths as { trails: Record<string, TrailPath> }).trails,
+  },
+  {
+    id: 'keystone',
+    name: 'Keystone',
+    mapSrc: '/maps/keystone.jpg',
+    peaks: keystone.peaks,
+    trails: keystone.trails,
+    paths: (keystonePaths as { trails: Record<string, TrailPath> }).trails,
   },
 ];
 

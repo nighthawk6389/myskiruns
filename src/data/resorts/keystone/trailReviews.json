@@ -1,0 +1,580 @@
+{
+ "reviews": {
+  "revolution": {
+   "status": "confirmed",
+   "polylines": [
+    18,
+    21
+   ],
+   "drawn": [
+    [
+     2540,
+     441
+    ],
+    [
+     2563,
+     430
+    ],
+    [
+     2581,
+     414
+    ],
+    [
+     2595,
+     406
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude"
+  },
+  "midnight-ride": {
+   "status": "confirmed",
+   "polylines": [
+    17,
+    20
+   ],
+   "drawn": [
+    [
+     2569,
+     395
+    ],
+    [
+     2591,
+     382
+    ],
+    [
+     2612,
+     365
+    ],
+    [
+     2635,
+     352
+    ],
+    [
+     2642,
+     349
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude"
+  },
+  "patriot": {
+   "status": "confirmed",
+   "polylines": [
+    15,
+    19
+   ],
+   "drawn": [
+    [
+     2638,
+     314
+    ],
+    [
+     2656,
+     298
+    ],
+    [
+     2672,
+     285
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude"
+  },
+  "liberty": {
+   "status": "confirmed",
+   "polylines": [
+    13,
+    14
+   ],
+   "drawn": [
+    [
+     2570,
+     331
+    ],
+    [
+     2594,
+     315
+    ],
+    [
+     2606,
+     305
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude"
+  },
+  "liberty-trees": {
+   "status": "confirmed",
+   "polylines": [
+    12,
+    16
+   ],
+   "drawn": [
+    [
+     2490,
+     402
+    ],
+    [
+     2504,
+     378
+    ],
+    [
+     2510,
+     351
+    ],
+    [
+     2525,
+     331
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude"
+  },
+  "indy-face": {
+   "status": "confirmed",
+   "polylines": [
+    10,
+    11
+   ],
+   "drawn": [
+    [
+     2135,
+     289
+    ],
+    [
+     2152,
+     304
+    ],
+    [
+     2171,
+     320
+    ],
+    [
+     2181,
+     328
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude"
+  },
+  "two-if-by-sea": {
+   "status": "confirmed",
+   "polylines": [
+    8,
+    9
+   ],
+   "drawn": [
+    [
+     2060,
+     310
+    ],
+    [
+     2080,
+     327
+    ],
+    [
+     2101,
+     340
+    ],
+    [
+     2118,
+     356
+    ],
+    [
+     2124,
+     361
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude"
+  },
+  "two-sled": {
+   "status": "confirmed",
+   "polylines": [
+    101
+   ],
+   "drawn": [
+    [
+     1300,
+     1730
+    ],
+    [
+     1330,
+     1736
+    ],
+    [
+     1357,
+     1740
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude"
+  },
+  "go-devil": {
+   "status": "confirmed",
+   "polylines": [
+    130
+   ],
+   "drawn": [
+    [
+     1470,
+     1883
+    ],
+    [
+     1500,
+     1870
+    ],
+    [
+     1520,
+     1862
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude"
+  },
+  "independence-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    53.9,
+    7.83
+   ]
+  },
+  "glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    68.37,
+    43.04
+   ]
+  },
+  "bullet-glades": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    59.57,
+    45.67
+   ]
+  },
+  "erickson-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    73.93,
+    9.38
+   ]
+  },
+  "north-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    80.46,
+    8.04
+   ]
+  },
+  "the-black-forest": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    86.02,
+    15.3
+   ]
+  },
+  "south-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    89.61,
+    9.13
+   ]
+  },
+  "south-bowl-trees": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    90.22,
+    14.43
+   ]
+  },
+  "tele-trees": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    93.58,
+    13.35
+   ]
+  },
+  "wombat-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    92.13,
+    11.11
+   ]
+  },
+  "the-windows": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    58.89,
+    21.25
+   ]
+  },
+  "endeavor": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    42.13,
+    34.88
+   ]
+  },
+  "ski-daddle": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    42.23,
+    36.8
+   ]
+  },
+  "scout": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    41.55,
+    31.75
+   ]
+  },
+  "i-70": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    36.69,
+    62.12
+   ]
+  },
+  "packsaddle-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    29.6,
+    65.37
+   ]
+  },
+  "easy-street": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    33.61,
+    55.52
+   ]
+  },
+  "park-lane": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    35.57,
+    58.55
+   ]
+  },
+  "main-street": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    34.57,
+    60.5
+   ]
+  },
+  "the-alley": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    35.78,
+    56.75
+   ]
+  },
+  "bergman-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    66.18,
+    8.48
+   ]
+  },
+  "lost-mine": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    31.44,
+    53.32
+   ]
+  },
+  "ripperoos-forest": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    24.18,
+    58.69
+   ]
+  },
+  "ripperoos-glade": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    29.48,
+    56.64
+   ]
+  },
+  "murphys-mine": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (a bowl, open area, park or kids zone): marker at the label",
+   "at": "2026-10-01T16:45:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    42.37,
+    34.27
+   ]
+  }
+ }
+}

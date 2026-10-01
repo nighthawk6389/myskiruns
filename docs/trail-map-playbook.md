@@ -36,6 +36,7 @@ approaches all stalled at ~40% (see "What we tried").
 | `tools/trailmap/extract_pdf_vectors.py` | Map image + numbered pieces straight from a PDF's vector trail strokes |
 | `tools/trailmap/pdf_symbols.py` | Difficulty symbols from a vector PDF; `--check` compares them with the trail list |
 | `tools/trailmap/pdf_labels.py` | Trail-name labels from a PDF's text (decodes fonts with no Unicode map) |
+| `tools/trailmap/pdf_glyphs.py` | Trail-name labels and symbols from a PDF whose names are outlined glyphs (no text) |
 | `scripts/lib/lineDetector.mjs`, `scripts/evaluateLines.mjs` | Colored-line detector and its ground-truth scorer |
 | `scripts/tracePolylines.mjs` | Detection mask → numbered line pieces (`src/data/resorts/killington/linePolylines.json`) |
 | `tools/trailmap/render_tiles.py` | Zoomed tiles with every piece drawn and numbered, for the readers |
@@ -172,6 +173,30 @@ Download the resort's trail map PDF (not the web JPG) and run
   map image mattes the vector layer, rendered at 3 px/pt, over the painting
   upscaled with Lanczos instead of the renderer's blocky upscale. Names set
   apart from their symbol were settled on crops.
+- **Outlined names, stroked lines (Keystone 2025-26):** names are outlined
+  glyphs as at Copper, but the trail lines are plain 1.5 pt strokes
+  (`extract_pdf_vectors.py`, plus a pass at 1 pt for two thinner lines).
+  `tools/trailmap/pdf_glyphs.py` does the glyph work as a tool:
+  - `collect` the fills in the name colours;
+  - `sheet` draws each unread shape upright between its grey neighbours;
+  - `read` records `shape=char`;
+  - `labels` joins the runs and finds the symbols.
+  The shape table is keyed by signature and size (o/O, s/S share a shape).
+  Re-run on Copper, it reproduced every checked label.
+
+  Keystone specifics:
+  - The font is condensed, so a word gap is measured between outlines along
+    the reading direction (`--space 0.75`).
+  - Its capital I is the l shape: a word-initial l is an I.
+  - Comma and apostrophe are one shape turned over, told apart by which side
+    of the line they sit on.
+  - A label recoloured this season sits over its old copy; keep the last drawn.
+  - Most names are printed on their own line, and a few in a gap of it
+    (stretches).
+  - Names printed in other colours are zones: the orange park runs and the
+    gold kids' adventure zones are markers.
+  - The map image is the vector layer matted over Vail's CDN raster
+    (`20251028_KY_winter-trail_map_001`), as at Breckenridge.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.
@@ -329,9 +354,9 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
 
 ### 4. Human review
 
-Sugarbush, Jay Peak, Whiteface, Winter Park, Breckenridge and Copper
-Mountain skipped this step at the owner's call (the readers' labelling had
-held up on three maps; the last four needed no readers at all). In its place Claude checked every
+Sugarbush, Jay Peak, Whiteface, Winter Park, Breckenridge, Copper Mountain
+and Keystone skipped this step at the owner's call (the readers' labelling had
+held up on three maps; the last five needed no readers at all). In its place Claude checked every
 overlay itself: vector maps on full-resolution region crops with each
 overlay drawn in its own colour and tagged with its name
 (`region_audit.py`), traced trails one by one on zoomed crops,
