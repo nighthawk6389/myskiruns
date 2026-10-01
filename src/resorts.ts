@@ -13,6 +13,8 @@ import * as whiteface from './data/resorts/whiteface/trails';
 import whitefacePaths from './data/resorts/whiteface/trailPaths.json';
 import * as winterPark from './data/resorts/winter-park/trails';
 import winterParkPaths from './data/resorts/winter-park/trailPaths.json';
+import * as breckenridge from './data/resorts/breckenridge/trails';
+import breckenridgePaths from './data/resorts/breckenridge/trailPaths.json';
 
 /** A trail's overlay: line segments and/or a label marker, in percent of the
  * map image (see scripts/applyTrailProposals.mjs). */
@@ -91,6 +93,14 @@ export const RESORTS: Resort[] = [
     peaks: winterPark.peaks,
     trails: winterPark.trails,
     paths: (winterParkPaths as { trails: Record<string, TrailPath> }).trails,
+  },
+  {
+    id: 'breckenridge',
+    name: 'Breckenridge',
+    mapSrc: '/maps/breckenridge.jpg',
+    peaks: breckenridge.peaks,
+    trails: breckenridge.trails,
+    paths: (breckenridgePaths as { trails: Record<string, TrailPath> }).trails,
   },
 ];
 

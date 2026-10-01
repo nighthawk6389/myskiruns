@@ -127,6 +127,26 @@ Download the resort's trail map PDF (not the web JPG) and run
   which settled most of the rest, but it is off by one at group boundaries
   in places: the crop decides. 58 names have no line (parks, bowls, painted
   chutes, the Cirque's numbered runs from its key): markers.
+- **Text, painted background at low resolution (Breckenridge 2025-26):**
+  strokes and Unicode text like Whiteface, but the PDF's painted background
+  is a small 1482x962 image. Vail's image CDN (scene7) serves the same
+  painting sharper (`<name>?req=imageprops` gives its size; request
+  `?wid=<width>&hei=<height>`), so the map image is the PDF's vector layer
+  matted over it: render the page twice with the background image swapped
+  for flat white and flat black (`page.replace_image`), alpha =
+  1 - (white - black) / 255, colour = black render / alpha. Vail's trail-map
+  pages and PDFs return an error page to curl; open the page in headless
+  Chromium and fetch the PDF from inside the page (`fetch` in
+  `page.evaluate`). The text holds many copies of each name: curved labels
+  also as one object per letter, objects holding several names, and two-line
+  names both as separate lines and joined; keep one per position and drop
+  any label whose characters all belong to other, shorter labels. Lines are
+  drawn into their names (the legend's "-◆ Name-"), so a piece ends at the
+  name's symbol or text end; the drawing order does not group lines with
+  names here. EX is two diamonds holding a white E and X. Chute names inside
+  a bowl print no symbol of their own and take the bowl's. Legend, lift-stats
+  and ad panels sit on the map: `extract_pdf_vectors.py --exclude` keeps
+  their line samples out.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.
@@ -284,9 +304,9 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
 
 ### 4. Human review
 
-Sugarbush, Jay Peak, Whiteface and Winter Park skipped this step at the
-owner's call (the readers' labelling had held up on three maps; the last two
-needed no readers at all). In its place Claude checked every
+Sugarbush, Jay Peak, Whiteface, Winter Park and Breckenridge skipped this
+step at the owner's call (the readers' labelling had held up on three maps;
+the last three needed no readers at all). In its place Claude checked every
 overlay itself: vector maps on full-resolution region crops with each
 overlay drawn in its own colour and tagged with its name
 (`region_audit.py`), traced trails one by one on zoomed crops,

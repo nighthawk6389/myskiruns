@@ -1,0 +1,1439 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "4-oclock": {
+   "polylines": [
+    275,
+    276
+   ],
+   "confidence": "high",
+   "mapName": "4 O'CLOCK",
+   "note": "PDF label + checked crop"
+  },
+  "9-lives": {
+   "polylines": [
+    59,
+    60
+   ],
+   "confidence": "high",
+   "mapName": "9 LIVES",
+   "note": "PDF label + checked crop"
+  },
+  "a-chair-line": {
+   "polylines": [
+    167,
+    168,
+    169
+   ],
+   "confidence": "high",
+   "mapName": "A CHAIR LINE",
+   "note": "PDF label + checked crop"
+  },
+  "adios": {
+   "polylines": [
+    9,
+    10
+   ],
+   "confidence": "high",
+   "mapName": "ADIOS",
+   "note": "PDF label + checked crop"
+  },
+  "alpine-alley": {
+   "polylines": [
+    343,
+    344,
+    345
+   ],
+   "confidence": "high",
+   "mapName": "ALPINE ALLEY",
+   "note": "PDF label + checked crop"
+  },
+  "amen": {
+   "polylines": [
+    12,
+    13
+   ],
+   "confidence": "high",
+   "mapName": "AMEN",
+   "note": "PDF label + checked crop"
+  },
+  "american": {
+   "polylines": [
+    128,
+    129
+   ],
+   "confidence": "high",
+   "mapName": "AMERICAN",
+   "note": "PDF label + checked crop"
+  },
+  "angels-rest": {
+   "polylines": [
+    217,
+    218
+   ],
+   "confidence": "high",
+   "mapName": "ANGEL'S REST",
+   "note": "PDF label + checked crop"
+  },
+  "barton-breezeway": {
+   "polylines": [
+    190,
+    191
+   ],
+   "confidence": "high",
+   "mapName": "BARTON BREEZEWAY",
+   "note": "PDF label + checked crop"
+  },
+  "behold": {
+   "polylines": [
+    295,
+    296
+   ],
+   "confidence": "high",
+   "mapName": "BEHOLD",
+   "note": "PDF label + checked crop"
+  },
+  "blackhawk": {
+   "polylines": [
+    84,
+    85
+   ],
+   "confidence": "high",
+   "mapName": "BLACKHAWK",
+   "note": "PDF label + checked crop"
+  },
+  "bliss": {
+   "polylines": [
+    198,
+    199
+   ],
+   "confidence": "high",
+   "mapName": "BLISS",
+   "note": "PDF label + checked crop"
+  },
+  "bonanza": {
+   "polylines": [
+    3,
+    143,
+    144
+   ],
+   "confidence": "high",
+   "mapName": "BONANZA",
+   "note": "PDF label + checked crop"
+  },
+  "boreas": {
+   "polylines": [
+    289,
+    290
+   ],
+   "confidence": "high",
+   "mapName": "BOREAS",
+   "note": "PDF label + checked crop"
+  },
+  "breathless": {
+   "polylines": [
+    187,
+    188
+   ],
+   "confidence": "high",
+   "mapName": "BREATHLESS",
+   "note": "PDF label + checked crop"
+  },
+  "briar-rose": {
+   "polylines": [
+    132,
+    133
+   ],
+   "confidence": "high",
+   "mapName": "BRIAR ROSE",
+   "note": "PDF label + checked crop"
+  },
+  "brills-thrill": {
+   "polylines": [
+    328,
+    329
+   ],
+   "confidence": "high",
+   "mapName": "BRILL'S THRILL",
+   "note": "PDF label + checked crop"
+  },
+  "bronc": {
+   "polylines": [
+    97,
+    98
+   ],
+   "confidence": "high",
+   "mapName": "BRONC",
+   "note": "PDF label + checked crop"
+  },
+  "c-j-s": {
+   "polylines": [
+    175,
+    176
+   ],
+   "confidence": "high",
+   "mapName": "C.J.'S",
+   "note": "PDF label + checked crop"
+  },
+  "callies-alley": {
+   "polylines": [
+    287,
+    288
+   ],
+   "confidence": "high",
+   "mapName": "CALLIE'S ALLEY",
+   "note": "PDF label + checked crop"
+  },
+  "cashier": {
+   "polylines": [
+    136,
+    137,
+    138,
+    139
+   ],
+   "confidence": "high",
+   "mapName": "CASHIER",
+   "note": "PDF label + checked crop"
+  },
+  "centennial": {
+   "polylines": [
+    101,
+    102
+   ],
+   "confidence": "high",
+   "mapName": "CENTENNIAL",
+   "note": "PDF label + checked crop"
+  },
+  "chi": {
+   "polylines": [
+    309,
+    310
+   ],
+   "confidence": "high",
+   "mapName": "CHI",
+   "note": "PDF label + checked crop"
+  },
+  "cimarron": {
+   "polylines": [
+    95,
+    96
+   ],
+   "confidence": "high",
+   "mapName": "CIMARRON",
+   "note": "PDF label + checked crop"
+  },
+  "claimjumper": {
+   "polylines": [
+    255,
+    256,
+    257
+   ],
+   "confidence": "high",
+   "mapName": "CLAIMJUMPER",
+   "note": "PDF label + checked crop"
+  },
+  "columbia": {
+   "polylines": [
+    146,
+    147
+   ],
+   "confidence": "high",
+   "mapName": "COLUMBIA",
+   "note": "PDF label + checked crop"
+  },
+  "columbine": {
+   "polylines": [
+    258,
+    259
+   ],
+   "confidence": "high",
+   "mapName": "COLUMBINE",
+   "note": "PDF label + checked crop"
+  },
+  "contact": {
+   "polylines": [
+    303,
+    304
+   ],
+   "confidence": "high",
+   "mapName": "CONTACT",
+   "note": "PDF label + checked crop"
+  },
+  "corsair": {
+   "polylines": [
+    109,
+    110,
+    111
+   ],
+   "confidence": "high",
+   "mapName": "CORSAIR",
+   "note": "PDF label + checked crop"
+  },
+  "country-boy": {
+   "polylines": [
+    140,
+    141,
+    142
+   ],
+   "confidence": "high",
+   "mapName": "COUNTRY BOY",
+   "note": "PDF label + checked crop"
+  },
+  "crescendo": {
+   "polylines": [
+    266,
+    267,
+    268,
+    269
+   ],
+   "confidence": "high",
+   "mapName": "CRESCENDO",
+   "note": "PDF label + checked crop"
+  },
+  "crosscut": {
+   "polylines": [
+    233,
+    234
+   ],
+   "confidence": "high",
+   "mapName": "CROSSCUT",
+   "note": "PDF label + checked crop"
+  },
+  "crystal": {
+   "polylines": [
+    103,
+    104
+   ],
+   "confidence": "high",
+   "mapName": "CRYSTAL",
+   "note": "PDF label + checked crop"
+  },
+  "dark-rider": {
+   "polylines": [
+    82,
+    83,
+    349
+   ],
+   "confidence": "high",
+   "mapName": "DARK RIDER",
+   "note": "PDF label + checked crop"
+  },
+  "daydream": {
+   "polylines": [
+    194,
+    195
+   ],
+   "confidence": "high",
+   "mapName": "DAYDREAM",
+   "note": "PDF label + checked crop"
+  },
+  "debbies-alley": {
+   "polylines": [
+    181,
+    182
+   ],
+   "confidence": "high",
+   "mapName": "DEBBIE'S ALLEY",
+   "note": "PDF label + checked crop"
+  },
+  "deja-vu": {
+   "polylines": [
+    200
+   ],
+   "confidence": "high",
+   "mapName": "DEJA VU",
+   "note": "PDF label + checked crop"
+  },
+  "delirium": {
+   "polylines": [
+    203,
+    204,
+    207,
+    208,
+    209
+   ],
+   "confidence": "high",
+   "mapName": "DELIRIUM",
+   "note": "PDF label + checked crop"
+  },
+  "devils-crotch": {
+   "polylines": [
+    68,
+    69
+   ],
+   "confidence": "high",
+   "mapName": "DEVIL'S CROTCH",
+   "note": "PDF label + checked crop"
+  },
+  "double-barrel": {
+   "polylines": [
+    11,
+    346
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLE BARREL",
+   "note": "PDF label + checked crop"
+  },
+  "doublejack": {
+   "polylines": [
+    99,
+    100
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLEJACK",
+   "note": "PDF label + checked crop"
+  },
+  "dukes-run": {
+   "polylines": [
+    262,
+    263
+   ],
+   "confidence": "high",
+   "mapName": "DUKE'S RUN",
+   "note": "PDF label + checked crop"
+  },
+  "dyersville": {
+   "polylines": [
+    245,
+    246
+   ],
+   "confidence": "high",
+   "mapName": "DYERSVILLE",
+   "note": "PDF label + checked crop"
+  },
+  "e-lift-line": {
+   "polylines": [
+    74,
+    75,
+    76
+   ],
+   "confidence": "high",
+   "mapName": "E LIFT LINE",
+   "note": "PDF label + checked crop"
+  },
+  "e-s-p": {
+   "polylines": [
+    305,
+    306
+   ],
+   "confidence": "high",
+   "mapName": "E.S.P",
+   "note": "PDF label + checked crop"
+  },
+  "eagles-nest": {
+   "polylines": [
+    332,
+    333
+   ],
+   "confidence": "high",
+   "mapName": "EAGLE'S NEST",
+   "note": "PDF label + checked crop"
+  },
+  "easy-street": {
+   "polylines": [
+    61,
+    62
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "PDF label + checked crop"
+  },
+  "echo": {
+   "polylines": [
+    297,
+    298
+   ],
+   "confidence": "high",
+   "mapName": "ECHO",
+   "note": "PDF label + checked crop"
+  },
+  "elan": {
+   "polylines": [
+    86,
+    87
+   ],
+   "confidence": "high",
+   "mapName": "ELAN",
+   "note": "PDF label + checked crop"
+  },
+  "eldorado": {
+   "polylines": [
+    151,
+    152,
+    153
+   ],
+   "confidence": "high",
+   "mapName": "ELDORADO",
+   "note": "PDF label + checked crop"
+  },
+  "epiphany": {
+   "polylines": [
+    307,
+    308
+   ],
+   "confidence": "high",
+   "mapName": "EPIPHANY",
+   "note": "PDF label + checked crop"
+  },
+  "euphoria": {
+   "polylines": [
+    201,
+    202
+   ],
+   "confidence": "high",
+   "mapName": "EUPHORIA",
+   "note": "PDF label + checked crop"
+  },
+  "felicity": {
+   "polylines": [
+    318,
+    319
+   ],
+   "confidence": "high",
+   "mapName": "FELICITY",
+   "note": "PDF label + checked crop"
+  },
+  "flapjack": {
+   "polylines": [
+    92,
+    93,
+    94
+   ],
+   "confidence": "high",
+   "mapName": "FLAPJACK",
+   "note": "PDF label + checked crop"
+  },
+  "forget-me-not": {
+   "polylines": [
+    51,
+    52
+   ],
+   "confidence": "high",
+   "mapName": "FORGET-ME-NOT",
+   "note": "PDF label + checked crop"
+  },
+  "fort-mary-b": {
+   "polylines": [
+    228,
+    229
+   ],
+   "confidence": "high",
+   "mapName": "FORT MARY B",
+   "note": "PDF label + checked crop"
+  },
+  "frontier": {
+   "polylines": [
+    161,
+    162,
+    163
+   ],
+   "confidence": "high",
+   "mapName": "FRONTIER",
+   "note": "PDF label + checked crop"
+  },
+  "frostys-freeway": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "FROSTY'S FREEWAY",
+   "note": "PDF label + checked crop"
+  },
+  "gold-king": {
+   "polylines": [
+    118,
+    119,
+    120
+   ],
+   "confidence": "high",
+   "mapName": "GOLD KING",
+   "note": "PDF label + checked crop"
+  },
+  "gondola-ski-back": {
+   "polylines": [
+    249,
+    351
+   ],
+   "confidence": "high",
+   "mapName": "GONDOLA SKI BACK",
+   "note": "PDF label + checked crop"
+  },
+  "goodbye-girl": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "GOODBYE GIRL",
+   "note": "PDF label + checked crop"
+  },
+  "grits": {
+   "polylines": [
+    105,
+    106
+   ],
+   "confidence": "high",
+   "mapName": "GRITS",
+   "note": "PDF label + checked crop"
+  },
+  "high-anxiety": {
+   "polylines": [
+    283,
+    284
+   ],
+   "confidence": "high",
+   "mapName": "HIGH ANXIETY",
+   "note": "PDF label + checked crop"
+  },
+  "hombre": {
+   "polylines": [
+    25,
+    26
+   ],
+   "confidence": "high",
+   "mapName": "HOMBRE",
+   "note": "PDF label + checked crop"
+  },
+  "humbug": {
+   "polylines": [
+    334,
+    335
+   ],
+   "confidence": "high",
+   "mapName": "HUMBUG",
+   "note": "PDF label + checked crop"
+  },
+  "imperial-ridge": {
+   "polylines": [
+    63,
+    64
+   ],
+   "confidence": "high",
+   "mapName": "IMPERIAL RIDGE",
+   "note": "PDF label + checked crop"
+  },
+  "inferno": {
+   "polylines": [
+    72,
+    73
+   ],
+   "confidence": "high",
+   "mapName": "INFERNO",
+   "note": "PDF label + checked crop"
+  },
+  "intuition": {
+   "polylines": [
+    185,
+    186,
+    189
+   ],
+   "confidence": "high",
+   "mapName": "INTUITION",
+   "note": "PDF label + checked crop"
+  },
+  "irie": {
+   "polylines": [
+    311,
+    312
+   ],
+   "confidence": "high",
+   "mapName": "IRIE",
+   "note": "PDF label + checked crop"
+  },
+  "joker": {
+   "polylines": [
+    338,
+    339
+   ],
+   "confidence": "high",
+   "mapName": "JOKER",
+   "note": "PDF label + checked crop"
+  },
+  "king": {
+   "polylines": [
+    336,
+    337
+   ],
+   "confidence": "high",
+   "mapName": "KING",
+   "note": "PDF label + checked crop"
+  },
+  "kings-way": {
+   "polylines": [
+    166
+   ],
+   "confidence": "high",
+   "mapName": "KING'S WAY",
+   "note": "PDF label + checked crop"
+  },
+  "lincoln-meadows": {
+   "polylines": [
+    222,
+    223
+   ],
+   "confidence": "high",
+   "mapName": "LINCOLN MEADOWS",
+   "note": "PDF label + checked crop"
+  },
+  "little-johnny": {
+   "polylines": [
+    277,
+    278,
+    279,
+    280
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE JOHNNY",
+   "note": "PDF label + checked crop"
+  },
+  "lobo": {
+   "polylines": [
+    17,
+    18
+   ],
+   "confidence": "high",
+   "mapName": "LOBO",
+   "note": "PDF label + checked crop"
+  },
+  "lost-horizon": {
+   "polylines": [
+    205,
+    206
+   ],
+   "confidence": "high",
+   "mapName": "LOST HORIZON",
+   "note": "PDF label + checked crop"
+  },
+  "lower-4-oclock": {
+   "polylines": [
+    250,
+    251
+   ],
+   "confidence": "high",
+   "mapName": "LOWER 4 O'CLOCK",
+   "note": "PDF label + checked crop"
+  },
+  "lower-american": {
+   "polylines": [
+    170,
+    171
+   ],
+   "confidence": "high",
+   "mapName": "LOWER AMERICAN",
+   "note": "PDF label + checked crop"
+  },
+  "lower-forget-me-not": {
+   "polylines": [
+    53,
+    54
+   ],
+   "confidence": "high",
+   "mapName": "LOWER FORGET-ME-NOT",
+   "note": "PDF label + checked crop"
+  },
+  "lower-lehman": {
+   "polylines": [
+    156,
+    157
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LEHMAN",
+   "note": "PDF label + checked crop"
+  },
+  "lower-peerless": {
+   "polylines": [
+    123,
+    124,
+    125
+   ],
+   "confidence": "high",
+   "mapName": "LOWER PEERLESS",
+   "note": "PDF label + checked crop"
+  },
+  "lower-sawmill": {
+   "polylines": [
+    272,
+    273
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SAWMILL",
+   "note": "PDF label + checked crop"
+  },
+  "lower-sundown": {
+   "polylines": [
+    148,
+    172
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SUNDOWN",
+   "note": "PDF label + checked crop"
+  },
+  "lowest-4-oclock": {
+   "polylines": [
+    252,
+    253
+   ],
+   "confidence": "high",
+   "mapName": "LOWEST 4 O'CLOCK",
+   "note": "PDF label + checked crop"
+  },
+  "lulu": {
+   "polylines": [
+    330,
+    331
+   ],
+   "confidence": "high",
+   "mapName": "LULU",
+   "note": "PDF label + checked crop"
+  },
+  "mach-1": {
+   "polylines": [
+    38,
+    39
+   ],
+   "confidence": "high",
+   "mapName": "MACH 1",
+   "note": "PDF label + checked crop"
+  },
+  "magic-carpet": {
+   "polylines": [
+    177,
+    178
+   ],
+   "confidence": "high",
+   "mapName": "MAGIC CARPET",
+   "note": "PDF label + checked crop"
+  },
+  "mine-shaft": {
+   "polylines": [
+    70,
+    71
+   ],
+   "confidence": "high",
+   "mapName": "MINE SHAFT",
+   "note": "PDF label + checked crop"
+  },
+  "monte-cristo": {
+   "polylines": [
+    212,
+    213,
+    214
+   ],
+   "confidence": "high",
+   "mapName": "MONTE CRISTO",
+   "note": "PDF label + checked crop"
+  },
+  "mule": {
+   "polylines": [
+    326,
+    327
+   ],
+   "confidence": "high",
+   "mapName": "MULE",
+   "note": "PDF label + checked crop"
+  },
+  "mustang": {
+   "polylines": [
+    80,
+    81,
+    348
+   ],
+   "confidence": "high",
+   "mapName": "MUSTANG",
+   "note": "PDF label + checked crop"
+  },
+  "nirvana": {
+   "polylines": [
+    192,
+    193
+   ],
+   "confidence": "high",
+   "mapName": "NIRVANA",
+   "note": "PDF label + checked crop"
+  },
+  "no-name": {
+   "polylines": [
+    27,
+    28
+   ],
+   "confidence": "high",
+   "mapName": "NO NAME",
+   "note": "PDF label + checked crop"
+  },
+  "northstar": {
+   "polylines": [
+    260,
+    261
+   ],
+   "confidence": "high",
+   "mapName": "NORTHSTAR",
+   "note": "PDF label + checked crop"
+  },
+  "outlaw": {
+   "polylines": [
+    321,
+    322
+   ],
+   "confidence": "high",
+   "mapName": "OUTLAW",
+   "note": "PDF label + checked crop"
+  },
+  "park-lane": {
+   "polylines": [
+    1,
+    2
+   ],
+   "confidence": "high",
+   "mapName": "PARK LANE",
+   "note": "PDF label + checked crop"
+  },
+  "pathfinder": {
+   "polylines": [
+    264,
+    265
+   ],
+   "confidence": "high",
+   "mapName": "PATHFINDER",
+   "note": "PDF label + checked crop"
+  },
+  "peak-6-parkway": {
+   "polylines": [
+    215,
+    216
+   ],
+   "confidence": "high",
+   "mapName": "PEAK 6 PARKWAY",
+   "note": "PDF label + checked crop"
+  },
+  "peak-8-transfer": {
+   "polylines": [
+    115,
+    116,
+    117
+   ],
+   "confidence": "high",
+   "mapName": "PEAK 8 TRANSFER",
+   "note": "PDF label + checked crop"
+  },
+  "peerless": {
+   "polylines": [
+    121,
+    122
+   ],
+   "confidence": "high",
+   "mapName": "PEERLESS",
+   "note": "PDF label + checked crop"
+  },
+  "pika": {
+   "polylines": [
+    45,
+    46
+   ],
+   "confidence": "high",
+   "mapName": "PIKA",
+   "note": "PDF label + checked crop"
+  },
+  "pioneer": {
+   "polylines": [
+    224,
+    225
+   ],
+   "confidence": "high",
+   "mapName": "PIONEER",
+   "note": "PDF label + checked crop"
+  },
+  "powerline": {
+   "polylines": [
+    241,
+    242
+   ],
+   "confidence": "high",
+   "mapName": "POWERLINE",
+   "note": "PDF label + checked crop"
+  },
+  "psychopath": {
+   "polylines": [
+    5,
+    6
+   ],
+   "confidence": "high",
+   "mapName": "PSYCHOPATH",
+   "note": "PDF label + checked crop"
+  },
+  "ptarmigan": {
+   "polylines": [
+    47,
+    48
+   ],
+   "confidence": "high",
+   "mapName": "PTARMIGAN",
+   "note": "PDF label + checked crop"
+  },
+  "quandary": {
+   "polylines": [
+    65,
+    66
+   ],
+   "confidence": "high",
+   "mapName": "QUANDARY",
+   "note": "PDF label + checked crop"
+  },
+  "queen": {
+   "polylines": [
+    340,
+    341
+   ],
+   "confidence": "high",
+   "mapName": "QUEEN",
+   "note": "PDF label + checked crop"
+  },
+  "quiver": {
+   "polylines": [
+    90,
+    91
+   ],
+   "confidence": "high",
+   "mapName": "QUIVER",
+   "note": "PDF label + checked crop"
+  },
+  "rapture": {
+   "polylines": [
+    316,
+    317
+   ],
+   "confidence": "high",
+   "mapName": "RAPTURE",
+   "note": "PDF label + checked crop"
+  },
+  "red-rover": {
+   "polylines": [
+    154,
+    155
+   ],
+   "confidence": "high",
+   "mapName": "RED ROVER",
+   "note": "PDF label + checked crop"
+  },
+  "rendezvous": {
+   "polylines": [
+    35,
+    36
+   ],
+   "confidence": "high",
+   "mapName": "RENDEZVOUS",
+   "note": "PDF label + checked crop"
+  },
+  "respite": {
+   "polylines": [
+    293,
+    294
+   ],
+   "confidence": "high",
+   "mapName": "RESPITE",
+   "note": "PDF label + checked crop"
+  },
+  "reverie": {
+   "polylines": [
+    196,
+    197
+   ],
+   "confidence": "high",
+   "mapName": "REVERIE",
+   "note": "PDF label + checked crop"
+  },
+  "rips-ravine": {
+   "polylines": [
+    320
+   ],
+   "confidence": "high",
+   "mapName": "RIP'S RAVINE",
+   "note": "PDF label + checked crop"
+  },
+  "rounders": {
+   "polylines": [
+    281,
+    282
+   ],
+   "confidence": "high",
+   "mapName": "ROUNDERS",
+   "note": "PDF label + checked crop"
+  },
+  "rustler": {
+   "polylines": [
+    324,
+    325
+   ],
+   "confidence": "high",
+   "mapName": "RUSTLER",
+   "note": "PDF label + checked crop"
+  },
+  "sanctuary": {
+   "polylines": [
+    291,
+    292
+   ],
+   "confidence": "high",
+   "mapName": "SANCTUARY",
+   "note": "PDF label + checked crop"
+  },
+  "savor": {
+   "polylines": [
+    301,
+    302
+   ],
+   "confidence": "high",
+   "mapName": "SAVOR",
+   "note": "PDF label + checked crop"
+  },
+  "sawmill": {
+   "polylines": [
+    41,
+    43
+   ],
+   "confidence": "high",
+   "mapName": "SAWMILL",
+   "note": "PDF label + checked crop"
+  },
+  "shock": {
+   "polylines": [
+    112,
+    113
+   ],
+   "confidence": "high",
+   "mapName": "SHOCK",
+   "note": "PDF label + checked crop"
+  },
+  "silverthorne": {
+   "polylines": [
+    158,
+    159,
+    160
+   ],
+   "confidence": "high",
+   "mapName": "SILVERTHORNE",
+   "note": "PDF label + checked crop"
+  },
+  "sizzler": {
+   "polylines": [
+    134,
+    135
+   ],
+   "confidence": "high",
+   "mapName": "SIZZLER",
+   "note": "PDF label + checked crop"
+  },
+  "snowbirds": {
+   "polylines": [
+    14,
+    15
+   ],
+   "confidence": "high",
+   "mapName": "SNOWBIRDS",
+   "note": "PDF label + checked crop"
+  },
+  "snowflake": {
+   "polylines": [
+    271
+   ],
+   "confidence": "high",
+   "mapName": "SNOWFLAKE",
+   "note": "PDF label + checked crop"
+  },
+  "solitude": {
+   "polylines": [
+    21,
+    22
+   ],
+   "confidence": "high",
+   "mapName": "SOLITUDE",
+   "note": "PDF label + checked crop"
+  },
+  "southern-cross": {
+   "polylines": [
+    31,
+    32
+   ],
+   "confidence": "high",
+   "mapName": "SOUTHERN CROSS",
+   "note": "PDF label + checked crop"
+  },
+  "spitfire": {
+   "polylines": [
+    107,
+    108
+   ],
+   "confidence": "high",
+   "mapName": "SPITFIRE",
+   "note": "PDF label + checked crop"
+  },
+  "springmeier": {
+   "polylines": [
+    238,
+    239
+   ],
+   "confidence": "high",
+   "mapName": "SPRINGMEIER",
+   "note": "PDF label + checked crop"
+  },
+  "spruce": {
+   "polylines": [
+    285,
+    286
+   ],
+   "confidence": "high",
+   "mapName": "SPRUCE",
+   "note": "PDF label + checked crop"
+  },
+  "stampede": {
+   "polylines": [
+    323
+   ],
+   "confidence": "high",
+   "mapName": "STAMPEDE",
+   "note": "PDF label + checked crop"
+  },
+  "sublime": {
+   "polylines": [
+    313,
+    314
+   ],
+   "confidence": "high",
+   "mapName": "SUBLIME",
+   "note": "PDF label + checked crop"
+  },
+  "sundown": {
+   "polylines": [
+    149,
+    150
+   ],
+   "confidence": "high",
+   "mapName": "SUNDOWN",
+   "note": "PDF label + checked crop"
+  },
+  "sundown-access": {
+   "polylines": [
+    164,
+    165
+   ],
+   "confidence": "high",
+   "mapName": "SUNDOWN ACCESS",
+   "note": "PDF label + checked crop"
+  },
+  "swan-city": {
+   "polylines": [
+    226,
+    227
+   ],
+   "confidence": "high",
+   "mapName": "SWAN CITY",
+   "note": "PDF label + checked crop"
+  },
+  "swinger": {
+   "polylines": [
+    236,
+    237
+   ],
+   "confidence": "high",
+   "mapName": "SWINGER",
+   "note": "PDF label + checked crop"
+  },
+  "tiger": {
+   "polylines": [
+    33,
+    34
+   ],
+   "confidence": "high",
+   "mapName": "TIGER",
+   "note": "PDF label + checked crop"
+  },
+  "toms-baby": {
+   "polylines": [
+    77,
+    78
+   ],
+   "confidence": "high",
+   "mapName": "TOM'S BABY",
+   "note": "PDF label + checked crop"
+  },
+  "toms-mom": {
+   "polylines": [
+    67,
+    274
+   ],
+   "confidence": "high",
+   "mapName": "TOM'S MOM",
+   "note": "PDF label + checked crop"
+  },
+  "too-much": {
+   "polylines": [
+    23,
+    24
+   ],
+   "confidence": "high",
+   "mapName": "TOO MUCH",
+   "note": "PDF label + checked crop"
+  },
+  "trinity": {
+   "polylines": [
+    88,
+    89
+   ],
+   "confidence": "high",
+   "mapName": "TRINITY",
+   "note": "PDF label + checked crop"
+  },
+  "trygves": {
+   "polylines": [
+    247,
+    248
+   ],
+   "confidence": "high",
+   "mapName": "TRYGVE'S",
+   "note": "PDF label + checked crop"
+  },
+  "tunnel": {
+   "polylines": [
+    29,
+    30
+   ],
+   "confidence": "high",
+   "mapName": "TUNNEL",
+   "note": "PDF label + checked crop"
+  },
+  "twister": {
+   "polylines": [
+    243,
+    244
+   ],
+   "confidence": "high",
+   "mapName": "TWISTER",
+   "note": "PDF label + checked crop"
+  },
+  "upper-4-oclock": {
+   "polylines": [
+    7,
+    8
+   ],
+   "confidence": "high",
+   "mapName": "UPPER 4 O'CLOCK",
+   "note": "PDF label + checked crop"
+  },
+  "upper-lehman": {
+   "polylines": [
+    130,
+    131
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LEHMAN",
+   "note": "PDF label + checked crop"
+  },
+  "vertigo": {
+   "polylines": [
+    179,
+    180
+   ],
+   "confidence": "high",
+   "mapName": "VERTIGO",
+   "note": "PDF label + checked crop"
+  },
+  "volunteer": {
+   "polylines": [
+    126,
+    127
+   ],
+   "confidence": "high",
+   "mapName": "VOLUNTEER",
+   "note": "PDF label + checked crop"
+  },
+  "wackys-chute": {
+   "polylines": [
+    55,
+    56
+   ],
+   "confidence": "high",
+   "mapName": "WACKY'S CHUTE",
+   "note": "PDF label + checked crop"
+  },
+  "wanderlust": {
+   "polylines": [
+    210,
+    211
+   ],
+   "confidence": "high",
+   "mapName": "WANDERLUST",
+   "note": "PDF label + checked crop"
+  },
+  "way-out": {
+   "polylines": [
+    19,
+    20
+   ],
+   "confidence": "high",
+   "mapName": "WAY OUT",
+   "note": "PDF label + checked crop"
+  },
+  "whiff": {
+   "polylines": [
+    299,
+    300
+   ],
+   "confidence": "high",
+   "mapName": "WHIFF",
+   "note": "PDF label + checked crop"
+  },
+  "whiskey-river": {
+   "polylines": [
+    183,
+    184
+   ],
+   "confidence": "high",
+   "mapName": "WHISKEY RIVER",
+   "note": "PDF label + checked crop"
+  },
+  "white-crown": {
+   "polylines": [
+    49,
+    50
+   ],
+   "confidence": "high",
+   "mapName": "WHITE CROWN",
+   "note": "PDF label + checked crop"
+  },
+  "wirepatch": {
+   "polylines": [
+    219,
+    220,
+    221
+   ],
+   "confidence": "high",
+   "mapName": "WIREPATCH",
+   "note": "PDF label + checked crop"
+  },
+  "y-chute": {
+   "polylines": [
+    173,
+    174
+   ],
+   "confidence": "high",
+   "mapName": "Y-CHUTE",
+   "note": "PDF label + checked crop"
+  },
+  "yugen": {
+   "polylines": [
+    315,
+    347
+   ],
+   "confidence": "high",
+   "mapName": "YUGEN",
+   "note": "PDF label + checked crop"
+  },
+  "zoot-chute": {
+   "polylines": [
+    57,
+    58
+   ],
+   "confidence": "high",
+   "mapName": "ZOOT CHUTE",
+   "note": "PDF label + checked crop"
+  }
+ }
+}
