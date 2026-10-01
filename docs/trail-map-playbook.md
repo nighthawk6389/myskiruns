@@ -147,6 +147,31 @@ Download the resort's trail map PDF (not the web JPG) and run
   a bowl print no symbol of their own and take the bowl's. Legend, lift-stats
   and ad panels sit on the map: `extract_pdf_vectors.py --exclude` keeps
   their line samples out.
+- **Outlined names and outlined lines (Copper Mountain 2025-26):** no text
+  at all. Every name is a set of filled glyph outlines, and most trail lines
+  are strokes converted to filled outlines; a few are plain strokes, and the
+  Tucker Mountain lines are clip paths filled with a fading image. Names:
+  group the glyph fills by shape, using the outline's item kinds plus its
+  chord lengths over their total (unchanged by rotation and size). Render
+  one example per group upright on a contact sheet (rotate by the direction
+  to the next glyph) and read each group's letter once. Key that table by
+  the shape signature; cluster ids shift whenever a threshold changes.
+  Glyphs are drawn in reading order, so a label is a run of consecutive
+  same-colour glyphs under ~9 pt apart, and a word gap is an outline gap
+  well over the label's median letter gap. Glyphs drawn twice leave
+  fragment copies: keep the longest, and of equal copies the last drawn. A
+  name recoloured for this season is drawn over its old colour (Sno Deal,
+  Carefree). Symbols are fills too: square, diamond, double diamond (an
+  8-line outline), EX (a double diamond holding white E and X fills) and
+  circle (four curves). Lines: rasterise each outline at 6 px/pt and thin
+  it to a 1 px skeleton (Zhang-Suen). Build the pixel graph without the
+  diagonal steps a 4-neighbour path already joins (otherwise every
+  staircase forks), prune spurs under 2.5 pt and trace polylines between
+  forks. Drop the logo, highway shields, arrows and icons by `seqno`. The
+  embedded painting is only 1817x1465 and no sharper copy turned up, so the
+  map image mattes the vector layer, rendered at 3 px/pt, over the painting
+  upscaled with Lanczos instead of the renderer's blocky upscale. Names set
+  apart from their symbol were settled on crops.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.
@@ -304,9 +329,9 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
 
 ### 4. Human review
 
-Sugarbush, Jay Peak, Whiteface, Winter Park and Breckenridge skipped this
-step at the owner's call (the readers' labelling had held up on three maps;
-the last three needed no readers at all). In its place Claude checked every
+Sugarbush, Jay Peak, Whiteface, Winter Park, Breckenridge and Copper
+Mountain skipped this step at the owner's call (the readers' labelling had
+held up on three maps; the last four needed no readers at all). In its place Claude checked every
 overlay itself: vector maps on full-resolution region crops with each
 overlay drawn in its own colour and tagged with its name
 (`region_audit.py`), traced trails one by one on zoomed crops,
