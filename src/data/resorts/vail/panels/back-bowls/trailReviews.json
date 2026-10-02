@@ -1,0 +1,82 @@
+{
+ "reviews": {
+  "headwall-ridge": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn (open slope or glade): marker at its symbol",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    31.1,
+    23.87
+   ]
+  },
+  "sun-down-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A bowl named on the map with no line drawn: marker at its name",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    15.67,
+    28.35
+   ]
+  },
+  "sun-up-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A bowl named on the map with no line drawn: marker at its name",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    35.07,
+    29.88
+   ]
+  },
+  "china-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A bowl named on the map with no line drawn: marker at its name",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    59.68,
+    27.66
+   ]
+  },
+  "tea-cup-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A bowl named on the map with no line drawn: marker at its name",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    51.26,
+    54.29
+   ]
+  },
+  "siberia-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A bowl named on the map with no line drawn: marker at its name",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    78.82,
+    37.62
+   ]
+  }
+ }
+}

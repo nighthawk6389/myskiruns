@@ -1,7 +1,7 @@
 import { useState, useMemo, useCallback, useEffect, useImperativeHandle, useRef } from 'react';
 import type { Trail } from '../../types';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_COLORS, DIFFICULTY_UI_COLORS } from '../../types';
-import type { Resort } from '../../resorts';
+import type { Resort, TrailPath as Overlay } from '../../resorts';
 import { TrailPath } from './TrailPath';
 import { TrailHotspot } from './TrailHotspot';
 import { TrailSheet, type SheetTrail } from './TrailSheet';
@@ -42,10 +42,10 @@ interface ImageMapProps {
 }
 
 // Trails are drawn from the resort's trailPaths.json
-// (scripts/applyTrailProposals.mjs). A trail with no verified or proposed line
-// gets no overlay; it can still be toggled from the list. Glades printed only
-// as a label get a marker there.
-function pathLengths(paths: Resort['paths']) {
+// (scripts/applyTrailProposals.mjs), one per map panel. A trail with no
+// verified or proposed line gets no overlay; it can still be toggled from the
+// list. Glades printed only as a label get a marker there.
+function pathLengths(paths: Record<string, Overlay>) {
   return new Map(
     Object.entries(paths).map(([id, p]) => [
       id,
@@ -112,6 +112,36 @@ interface View {
   ty: number;
 }
 
+/** The view kept on the map: never smaller than the whole map, never panned
+ * off it. fitW/fitH: the map's size at zoom 1; w/h: the map area's. */
+function clampView(v: View, fitW: number, fitH: number, w: number, h: number): View {
+  const k = Math.min(MAX_ZOOM, Math.max(1, v.k));
+  const mw = fitW * k;
+  const mh = fitH * k;
+  const tx = mw <= w ? (w - mw) / 2 : Math.min(0, Math.max(w - mw, v.tx));
+  const ty = mh <= h ? (h - mh) / 2 : Math.min(0, Math.max(h - mh, v.ty));
+  return { k, tx, ty };
+}
+
+/** The view that shows a trail's overlay: in the middle ~60% of the map
+ * area, never closer than 4x. */
+function viewOfTrail(path: Overlay, fitW: number, fitH: number, w: number, h: number): View {
+  const pts = path.label ? [path.label] : path.segments.flat();
+  const xs = pts.map((q) => (q[0] * fitW) / 100);
+  const ys = pts.map((q) => (q[1] * fitH) / 100);
+  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
+  const k = Math.min(4, Math.max(1.5, Math.min((w * 0.6) / (x1 - x0 || 1), (h * 0.5) / (y1 - y0 || 1))));
+  // on phones the sheet covers the bottom of the screen, so aim higher
+  const cy = w <= PHONE_MAX_W ? h * 0.4 : h / 2;
+  return { k, tx: w / 2 - ((x0 + x1) / 2) * k, ty: cy - ((y0 + y1) / 2) * k };
+}
+
+/** The panel to open first: ?panel=<id> when the resort has it, else its first. */
+function initialPanel(resort: Resort): string {
+  const want = typeof location !== 'undefined' ? new URLSearchParams(location.search).get('panel') : null;
+  return (resort.maps.find((m) => m.id === want) ?? resort.maps[0]).id;
+}
+
 export function ImageMap({
   filteredTrailIds,
   skiedTrails,
@@ -139,8 +169,15 @@ export function ImageMap({
   const [sheet, setSheet] = useState<SheetTrail[] | null>(null);
   const [toast, setToast] = useState<{ trail: Trail; skied: boolean } | null>(null);
 
-  const TRAIL_PATHS = resort.paths;
-  const TRAIL_LENGTH = useMemo(() => pathLengths(resort.paths), [resort.paths]);
+  // a resort drawn on several panels (Vail) shows one at a time
+  const panels = resort.maps;
+  const [panelId, setPanelId] = useState(() => initialPanel(resort));
+  const panel = panels.find((p) => p.id === panelId) ?? panels[0];
+  // a trail picked on another panel, to zoom to once that panel has loaded
+  const pendingFocus = useRef<string | null>(null);
+
+  const TRAIL_PATHS = panel.paths;
+  const TRAIL_LENGTH = useMemo(() => pathLengths(panel.paths), [panel.paths]);
   const allTrails = useMemo(
     () => resort.peaks.flatMap((peak) => resort.trails.filter((t) => t.peak === peak.id)),
     [resort],
@@ -152,17 +189,7 @@ export function ImageMap({
   const fitH = fitW / aspect;
   const vH = Math.round(1000 / aspect);
 
-  const clamp = useCallback(
-    (v: View): View => {
-      const k = Math.min(MAX_ZOOM, Math.max(1, v.k));
-      const w = fitW * k;
-      const h = fitH * k;
-      const tx = w <= box.w ? (box.w - w) / 2 : Math.min(0, Math.max(box.w - w, v.tx));
-      const ty = h <= box.h ? (box.h - h) / 2 : Math.min(0, Math.max(box.h - h, v.ty));
-      return { k, tx, ty };
-    },
-    [fitW, fitH, box.w, box.h],
-  );
+  const clamp = useCallback((v: View): View => clampView(v, fitW, fitH, box.w, box.h), [fitW, fitH, box.w, box.h]);
 
   // phones: the map area is taller than the fitted map, so start zoomed in
   // to fill its height (centered) instead of showing empty bands
@@ -356,23 +383,39 @@ export function ImageMap({
     setToast({ trail, skied: willBeSkied });
   };
 
+  /** Show another panel; its view starts over once its image has loaded. */
+  const switchPanel = (id: string) => {
+    setPanelId(id);
+    setImageLoaded(false);
+    setImageError(false);
+    setView(null);
+    setSmooth(false);
+  };
+
   const focusTrail = (id: string) => {
-    const path = TRAIL_PATHS[id];
     const trail = trailById.get(id);
     if (!trail) return;
     onHoverTrail(id);
     setSheet([{ trail, distance: 0 }]);
-    if (!path || !fitW) return;
-    const pts = path.label ? [path.label] : path.segments.flat();
-    const xs = pts.map((q) => (q[0] * fitW) / 100);
-    const ys = pts.map((q) => (q[1] * fitH) / 100);
-    const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
-    // fit the trail in the middle ~60% of the map area, never closer than 4x
-    const k = Math.min(4, Math.max(1.5, Math.min((box.w * 0.6) / (x1 - x0 || 1), (box.h * 0.5) / (y1 - y0 || 1))));
-    // on phones the sheet covers the bottom of the screen, so aim higher
-    const cy = box.w <= PHONE_MAX_W ? box.h * 0.4 : box.h / 2;
+    // several panels: show the trail where it is drawn (this panel if it is,
+    // else the panel of its area, else any), zooming once that one has loaded
+    const there = TRAIL_PATHS[id]
+      ? panel
+      : (panels.find((p) => p.id === trail.peak && p.paths[id]) ?? panels.find((p) => p.paths[id]));
+    if (there && there !== panel) {
+      pendingFocus.current = id;
+      switchPanel(there.id);
+      return;
+    }
+    const path = TRAIL_PATHS[id];
+    if (!path) return;
+    if (!imageLoaded) {
+      pendingFocus.current = id; // its size isn't known yet: zoom once it loads
+      return;
+    }
+    if (!fitW) return;
     setSmooth(true);
-    setView(clamp({ k, tx: box.w / 2 - ((x0 + x1) / 2) * k, ty: cy - ((y0 + y1) / 2) * k }));
+    setView(clamp(viewOfTrail(path, fitW, fitH, box.w, box.h)));
   };
   useImperativeHandle(ref, () => ({ focusTrail }));
 
@@ -419,24 +462,35 @@ export function ImageMap({
       {imageError && (
         <div className={styles.placeholder}>
           <div className={styles.placeholderTitle}>Trail map image missing</div>
-          <div className={styles.placeholderCode}>public{resort.mapSrc}</div>
+          <div className={styles.placeholderCode}>public{panel.mapSrc}</div>
         </div>
       )}
       <div className={`${styles.stage} ${smooth ? styles.smooth : ''}`} style={stageStyle}>
         <img
-          src={resort.mapSrc}
-          alt={`${resort.name} trail map`}
+          key={panel.id}
+          src={panel.mapSrc}
+          alt={`${resort.name} trail map${panels.length > 1 ? `, ${panel.name}` : ''}`}
           className={styles.mapImage}
           draggable={false}
           onLoad={(e) => {
             const img = e.currentTarget;
-            if (img.naturalWidth && img.naturalHeight) setAspect(img.naturalWidth / img.naturalHeight);
+            const a = img.naturalWidth && img.naturalHeight ? img.naturalWidth / img.naturalHeight : aspect;
+            setAspect(a);
             setImageLoaded(true);
+            // a trail picked from the list before this map had loaded (or on
+            // another panel): zoom to it now that the map's size is known
+            const id = pendingFocus.current;
+            pendingFocus.current = null;
+            const path = id ? panel.paths[id] : undefined;
+            if (path && box.w && box.h) {
+              const fw = Math.min(box.w, box.h * a);
+              setView(clampView(viewOfTrail(path, fw, fw / a, box.w, box.h), fw, fw / a, box.w, box.h));
+            }
           }}
           onError={() => setImageError(true)}
           style={{ visibility: imageLoaded ? 'visible' : 'hidden' }}
         />
-        {showLines && <img src={resort.mapSrc.replace(/\.jpg$/, '-lines.png')} alt="" className={styles.overlay} draggable={false} />}
+        {showLines && <img src={panel.mapSrc.replace(/\.jpg$/, '-lines.png')} alt="" className={styles.overlay} draggable={false} />}
         {imageLoaded && (
           <svg className={styles.overlay} viewBox={`0 0 1000 ${vH}`}>
             {[...allTrails]
@@ -505,6 +559,27 @@ export function ImageMap({
         )}
       </div>
 
+      {panels.length > 1 && (
+        <div className={styles.panelTabs} role="group" aria-label="Trail map" data-map-ui>
+          {panels.map((p) => (
+            <button
+              key={p.id}
+              className={`${styles.panelTab} ${p === panel ? styles.panelTabOn : ''}`}
+              aria-pressed={p === panel}
+              onClick={() => {
+                if (p === panel) return;
+                pendingFocus.current = null;
+                switchPanel(p.id);
+                setSheet(null);
+                onHoverTrail(null);
+              }}
+            >
+              {p.name}
+            </button>
+          ))}
+        </div>
+      )}
+
       <div className={styles.zoomControls} data-map-ui>
         {SHOW_LINES_TOGGLE && (
           <button
@@ -555,7 +630,7 @@ export function ImageMap({
       </div>
 
       {showHint && imageLoaded && !sheet && !toast && (
-        <div className={styles.hint} aria-hidden="true">
+        <div className={`${styles.hint} ${panels.length > 1 ? styles.hintLow : ''}`} aria-hidden="true">
           Tap a trail on the map to mark it skied
         </div>
       )}

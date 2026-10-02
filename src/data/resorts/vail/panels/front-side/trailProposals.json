@@ -1,0 +1,1079 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "38": {
+   "polylines": [
+    315,
+    338
+   ],
+   "confidence": "high",
+   "mapName": "38",
+   "note": "checked on a crop"
+  },
+  "avanti": {
+   "polylines": [
+    11,
+    21,
+    57,
+    131,
+    136
+   ],
+   "confidence": "high",
+   "mapName": "AVANTI",
+   "note": "checked on a crop"
+  },
+  "baccarat": {
+   "polylines": [
+    111,
+    130
+   ],
+   "confidence": "high",
+   "mapName": "BACCARAT",
+   "note": "checked on a crop"
+  },
+  "bear-tree": {
+   "polylines": [
+    16,
+    31,
+    83,
+    92
+   ],
+   "confidence": "high",
+   "mapName": "BEAR TREE",
+   "note": "checked on a crop"
+  },
+  "bens-face": {
+   "polylines": [
+    385
+   ],
+   "confidence": "high",
+   "mapName": "BEN'S FACE",
+   "note": "traced along the painted line"
+  },
+  "berries": {
+   "polylines": [
+    267,
+    275
+   ],
+   "confidence": "high",
+   "mapName": "BERRIES",
+   "note": "checked on a crop"
+  },
+  "blue-ox": {
+   "polylines": [
+    260,
+    314
+   ],
+   "confidence": "high",
+   "mapName": "BLUE OX",
+   "note": "checked on a crop"
+  },
+  "boomer": {
+   "polylines": [
+    216,
+    231
+   ],
+   "confidence": "high",
+   "mapName": "BOOMER",
+   "note": "checked on a crop"
+  },
+  "born-free": {
+   "polylines": [
+    75,
+    100,
+    128,
+    157,
+    173,
+    175,
+    185,
+    198,
+    369
+   ],
+   "confidence": "high",
+   "mapName": "BORN FREE",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "brisk-walk": {
+   "polylines": [
+    154,
+    200,
+    240,
+    249,
+    357,
+    370,
+    372
+   ],
+   "confidence": "high",
+   "mapName": "BRISK WALK",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "bwana": {
+   "polylines": [
+    6,
+    105,
+    108,
+    125,
+    269
+   ],
+   "confidence": "high",
+   "mapName": "BWANA",
+   "note": "checked on a crop"
+  },
+  "bwana-loop": {
+   "polylines": [
+    186,
+    191,
+    210
+   ],
+   "confidence": "high",
+   "mapName": "BWANA LOOP",
+   "note": "checked on a crop"
+  },
+  "cadys-cafe": {
+   "polylines": [
+    306,
+    310,
+    360
+   ],
+   "confidence": "high",
+   "mapName": "CADY'S CAFE",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "cappuccino": {
+   "polylines": [
+    44,
+    117
+   ],
+   "confidence": "high",
+   "mapName": "CAPPUCCINO",
+   "note": "checked on a crop"
+  },
+  "cascade-way": {
+   "polylines": [
+    85,
+    140,
+    358,
+    374
+   ],
+   "confidence": "high",
+   "mapName": "CASCADE WAY",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "chaos-canyon": {
+   "polylines": [
+    35,
+    386
+   ],
+   "confidence": "high",
+   "mapName": "CHAOS CANYON",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "cheetah": {
+   "polylines": [
+    81,
+    121
+   ],
+   "confidence": "high",
+   "mapName": "CHEETAH",
+   "note": "checked on a crop"
+  },
+  "choker-cut-off": {
+   "polylines": [
+    41,
+    124
+   ],
+   "confidence": "high",
+   "mapName": "CHOKER CUT OFF",
+   "note": "checked on a crop"
+  },
+  "christmas": {
+   "polylines": [
+    19,
+    37
+   ],
+   "confidence": "high",
+   "mapName": "CHRISTMAS",
+   "note": "checked on a crop"
+  },
+  "club-walk": {
+   "polylines": [
+    145,
+    150
+   ],
+   "confidence": "high",
+   "mapName": "CLUB WALK",
+   "note": "checked on a crop"
+  },
+  "cold-feet": {
+   "polylines": [
+    149
+   ],
+   "confidence": "high",
+   "mapName": "COLD FEET",
+   "note": "checked on a crop"
+  },
+  "columbine": {
+   "polylines": [
+    84,
+    116
+   ],
+   "confidence": "high",
+   "mapName": "COLUMBINE",
+   "note": "checked on a crop"
+  },
+  "compromise": {
+   "polylines": [
+    384
+   ],
+   "confidence": "high",
+   "mapName": "COMPROMISE",
+   "note": "traced along the painted line"
+  },
+  "cookshack": {
+   "polylines": [
+    334
+   ],
+   "confidence": "high",
+   "mapName": "COOKSHACK",
+   "note": "checked on a crop"
+  },
+  "coyote-crossing": {
+   "polylines": [
+    171,
+    202,
+    229
+   ],
+   "confidence": "high",
+   "mapName": "COYOTE CROSSING",
+   "note": "checked on a crop"
+  },
+  "cubs-way": {
+   "polylines": [
+    143,
+    146,
+    206,
+    212,
+    241,
+    250,
+    380
+   ],
+   "confidence": "high",
+   "mapName": "CUB'S WAY",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "dealers-choice": {
+   "polylines": [
+    67,
+    113
+   ],
+   "confidence": "high",
+   "mapName": "DEALER'S CHOICE",
+   "note": "checked on a crop"
+  },
+  "deuces-wild": {
+   "polylines": [
+    303,
+    304
+   ],
+   "confidence": "high",
+   "mapName": "DEUCES WILD",
+   "note": "checked on a crop"
+  },
+  "eagles-nest-ridge": {
+   "polylines": [
+    158,
+    168,
+    177,
+    211,
+    220,
+    222,
+    224,
+    377
+   ],
+   "confidence": "high",
+   "mapName": "EAGLE'S NEST RIDGE",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "fall-line": {
+   "polylines": [
+    253,
+    316
+   ],
+   "confidence": "high",
+   "mapName": "FALL LINE",
+   "note": "checked on a crop"
+  },
+  "faro": {
+   "polylines": [
+    320,
+    347
+   ],
+   "confidence": "high",
+   "mapName": "FARO",
+   "note": "checked on a crop"
+  },
+  "flap-jack": {
+   "polylines": [
+    151,
+    195,
+    196
+   ],
+   "confidence": "high",
+   "mapName": "FLAP JACK",
+   "note": "checked on a crop"
+  },
+  "gs-alley": {
+   "polylines": [
+    257,
+    337
+   ],
+   "confidence": "high",
+   "mapName": "GS ALLEY",
+   "note": "checked on a crop"
+  },
+  "game-trail": {
+   "polylines": [
+    233,
+    242,
+    363
+   ],
+   "confidence": "high",
+   "mapName": "GAME TRAIL",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "gandy-dancer": {
+   "polylines": [
+    273,
+    325
+   ],
+   "confidence": "high",
+   "mapName": "GANDY DANCER",
+   "note": "checked on a crop"
+  },
+  "giant-steps": {
+   "polylines": [
+    276,
+    297
+   ],
+   "confidence": "high",
+   "mapName": "GIANT STEPS",
+   "note": "checked on a crop"
+  },
+  "gitalong-road": {
+   "polylines": [
+    144,
+    156,
+    159,
+    183,
+    187,
+    201,
+    218,
+    219,
+    236,
+    244,
+    248
+   ],
+   "confidence": "high",
+   "mapName": "GITALONG ROAD",
+   "note": "checked on a crop"
+  },
+  "golden-peak-race": {
+   "polylines": [
+    293,
+    321,
+    341
+   ],
+   "confidence": "high",
+   "mapName": "GOLDEN PEAK RACE",
+   "note": "checked on a crop"
+  },
+  "gopher-hill": {
+   "polylines": [
+    172,
+    227
+   ],
+   "confidence": "high",
+   "mapName": "GOPHER HILL",
+   "note": "checked on a crop"
+  },
+  "hairbag-alley": {
+   "polylines": [
+    331,
+    339
+   ],
+   "confidence": "high",
+   "mapName": "HAIRBAG ALLEY",
+   "note": "checked on a crop"
+  },
+  "head-first": {
+   "polylines": [
+    272,
+    278,
+    375,
+    379
+   ],
+   "confidence": "high",
+   "mapName": "HEAD FIRST",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "highline": {
+   "polylines": [
+    277,
+    305,
+    330
+   ],
+   "confidence": "high",
+   "mapName": "HIGHLINE",
+   "note": "checked on a crop"
+  },
+  "hunky-dory": {
+   "polylines": [
+    90,
+    99
+   ],
+   "confidence": "high",
+   "mapName": "HUNKY DORY",
+   "note": "checked on a crop"
+  },
+  "klickity-klack": {
+   "polylines": [
+    271,
+    284
+   ],
+   "confidence": "high",
+   "mapName": "KLICKITY KLACK",
+   "note": "checked on a crop"
+  },
+  "ledges": {
+   "polylines": [
+    39,
+    350,
+    367,
+    383
+   ],
+   "confidence": "high",
+   "mapName": "LEDGES",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "lindseys": {
+   "polylines": [
+    268,
+    282,
+    335
+   ],
+   "confidence": "high",
+   "mapName": "LINDSEY'S",
+   "note": "checked on a crop"
+  },
+  "lionshead-catwalk": {
+   "polylines": [
+    182,
+    188,
+    194,
+    353,
+    354
+   ],
+   "confidence": "high",
+   "mapName": "LIONSHEAD CATWALK",
+   "note": "checked on a crop"
+  },
+  "lodgepole": {
+   "polylines": [
+    38,
+    40
+   ],
+   "confidence": "high",
+   "mapName": "LODGEPOLE",
+   "note": "checked on a crop"
+  },
+  "lodgepole-gulch": {
+   "polylines": [
+    15,
+    58
+   ],
+   "confidence": "high",
+   "mapName": "LODGEPOLE GULCH",
+   "note": "checked on a crop"
+  },
+  "log-chute": {
+   "polylines": [
+    308,
+    345
+   ],
+   "confidence": "high",
+   "mapName": "LOG CHUTE",
+   "note": "checked on a crop"
+  },
+  "lost-boy": {
+   "polylines": [
+    184,
+    208,
+    232
+   ],
+   "confidence": "high",
+   "mapName": "LOST BOY",
+   "note": "checked on a crop"
+  },
+  "lower-lions-way": {
+   "polylines": [
+    215,
+    352
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LION'S WAY",
+   "note": "checked on a crop"
+  },
+  "mid-vail-express": {
+   "polylines": [
+    126
+   ],
+   "confidence": "high",
+   "mapName": "MID-VAIL EXPRESS",
+   "note": "checked on a crop"
+  },
+  "mill-creek-road": {
+   "polylines": [
+    176,
+    199
+   ],
+   "confidence": "high",
+   "mapName": "MILL CREEK ROAD",
+   "note": "checked on a crop"
+  },
+  "minnies": {
+   "polylines": [
+    317,
+    349
+   ],
+   "confidence": "high",
+   "mapName": "MINNIE'S",
+   "note": "checked on a crop"
+  },
+  "n-rim": {
+   "polylines": [
+    346
+   ],
+   "confidence": "high",
+   "mapName": "N. RIM",
+   "note": "checked on a crop"
+  },
+  "northface-catwalk": {
+   "polylines": [
+    86,
+    132,
+    147,
+    213,
+    237
+   ],
+   "confidence": "high",
+   "mapName": "NORTHFACE CATWALK",
+   "note": "checked on a crop"
+  },
+  "northstar": {
+   "polylines": [
+    60,
+    280,
+    283
+   ],
+   "confidence": "high",
+   "mapName": "NORTHSTAR",
+   "note": "checked on a crop"
+  },
+  "northwoods": {
+   "polylines": [
+    70,
+    104
+   ],
+   "confidence": "high",
+   "mapName": "NORTHWOODS",
+   "note": "checked on a crop"
+  },
+  "old-9-line": {
+   "polylines": [
+    307,
+    371
+   ],
+   "confidence": "high",
+   "mapName": "OLD 9 LINE",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "ouzo": {
+   "polylines": [
+    301,
+    313
+   ],
+   "confidence": "high",
+   "mapName": "OUZO",
+   "note": "checked on a crop"
+  },
+  "ouzo-glade": {
+   "polylines": [
+    258,
+    342
+   ],
+   "confidence": "high",
+   "mapName": "OUZO GLADE",
+   "note": "checked on a crop"
+  },
+  "overeasy": {
+   "polylines": [
+    153,
+    239
+   ],
+   "confidence": "high",
+   "mapName": "OVEREASY",
+   "note": "checked on a crop"
+  },
+  "pickeroon": {
+   "polylines": [
+    340,
+    368
+   ],
+   "confidence": "high",
+   "mapName": "PICKEROON",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "pika": {
+   "polylines": [
+    161,
+    164,
+    169,
+    223
+   ],
+   "confidence": "high",
+   "mapName": "PIKA",
+   "note": "checked on a crop"
+  },
+  "pony-express": {
+   "polylines": [
+    18,
+    23
+   ],
+   "confidence": "high",
+   "mapName": "PONY EXPRESS",
+   "note": "checked on a crop"
+  },
+  "post-road": {
+   "polylines": [
+    148,
+    178,
+    189,
+    190,
+    226,
+    243,
+    373
+   ],
+   "confidence": "high",
+   "mapName": "POST ROAD",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "powerline-glade": {
+   "polylines": [
+    298,
+    351
+   ],
+   "confidence": "high",
+   "mapName": "POWERLINE GLADE",
+   "note": "checked on a crop"
+  },
+  "practice-parkway": {
+   "polylines": [
+    155,
+    165,
+    166,
+    221,
+    228,
+    234
+   ],
+   "confidence": "high",
+   "mapName": "PRACTICE PARKWAY",
+   "note": "checked on a crop"
+  },
+  "pride": {
+   "polylines": [
+    10,
+    50,
+    68,
+    74,
+    112
+   ],
+   "confidence": "high",
+   "mapName": "PRIDE",
+   "note": "checked on a crop"
+  },
+  "prima": {
+   "polylines": [
+    110,
+    266,
+    285,
+    289
+   ],
+   "confidence": "high",
+   "mapName": "PRIMA",
+   "note": "checked on a crop"
+  },
+  "prima-cornice": {
+   "polylines": [
+    254,
+    318
+   ],
+   "confidence": "high",
+   "mapName": "PRIMA CORNICE",
+   "note": "checked on a crop"
+  },
+  "pronto": {
+   "polylines": [
+    263,
+    264
+   ],
+   "confidence": "high",
+   "mapName": "PRONTO",
+   "note": "checked on a crop"
+  },
+  "ramshorn": {
+   "polylines": [
+    22,
+    32,
+    56,
+    79,
+    98
+   ],
+   "confidence": "high",
+   "mapName": "RAMSHORN",
+   "note": "checked on a crop"
+  },
+  "riva-catwalk": {
+   "polylines": [
+    65,
+    94,
+    129
+   ],
+   "confidence": "high",
+   "mapName": "RIVA CATWALK",
+   "note": "checked on a crop"
+  },
+  "riva-glade": {
+   "polylines": [
+    286,
+    359,
+    366
+   ],
+   "confidence": "high",
+   "mapName": "RIVA GLADE",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "riva-ridge": {
+   "polylines": [
+    59,
+    76,
+    265,
+    343,
+    362
+   ],
+   "confidence": "high",
+   "mapName": "RIVA RIDGE",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "rogers-run": {
+   "polylines": [
+    292,
+    333
+   ],
+   "confidence": "high",
+   "mapName": "ROGER'S RUN",
+   "note": "checked on a crop"
+  },
+  "ruders-run": {
+   "polylines": [
+    0,
+    13,
+    45
+   ],
+   "confidence": "high",
+   "mapName": "RUDER'S RUN",
+   "note": "checked on a crop"
+  },
+  "s-look-ma": {
+   "polylines": [
+    322,
+    361
+   ],
+   "confidence": "high",
+   "mapName": "S. LOOK MA",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "s-rim": {
+   "polylines": [
+    302,
+    355
+   ],
+   "confidence": "high",
+   "mapName": "S. RIM",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "safari": {
+   "polylines": [
+    66,
+    119,
+    332,
+    336
+   ],
+   "confidence": "high",
+   "mapName": "SAFARI",
+   "note": "checked on a crop"
+  },
+  "showboat": {
+   "polylines": [
+    14,
+    96
+   ],
+   "confidence": "high",
+   "mapName": "SHOWBOAT",
+   "note": "checked on a crop"
+  },
+  "simba": {
+   "polylines": [
+    28,
+    64,
+    78,
+    101,
+    107,
+    299
+   ],
+   "confidence": "high",
+   "mapName": "SIMBA",
+   "note": "checked on a crop"
+  },
+  "skid-road": {
+   "polylines": [
+    34,
+    71,
+    118,
+    160,
+    238
+   ],
+   "confidence": "high",
+   "mapName": "SKID ROAD",
+   "note": "checked on a crop"
+  },
+  "slifer-express": {
+   "polylines": [
+    80,
+    120
+   ],
+   "confidence": "high",
+   "mapName": "SLIFER EXPRESS",
+   "note": "checked on a crop"
+  },
+  "snag-park": {
+   "polylines": [
+    25,
+    46
+   ],
+   "confidence": "high",
+   "mapName": "SNAG PARK",
+   "note": "checked on a crop"
+  },
+  "sourdough": {
+   "polylines": [
+    152,
+    162,
+    356
+   ],
+   "confidence": "high",
+   "mapName": "SOURDOUGH",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "spruce-face": {
+   "polylines": [
+    51,
+    387
+   ],
+   "confidence": "high",
+   "mapName": "SPRUCE FACE",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "swingsville": {
+   "polylines": [
+    225,
+    252
+   ],
+   "confidence": "high",
+   "mapName": "SWINGSVILLE",
+   "note": "checked on a crop"
+  },
+  "the-meadows": {
+   "polylines": [
+    180,
+    207,
+    217,
+    245
+   ],
+   "confidence": "high",
+   "mapName": "THE MEADOWS",
+   "note": "checked on a crop"
+  },
+  "the-preserve": {
+   "polylines": [
+    4,
+    20,
+    328
+   ],
+   "confidence": "high",
+   "mapName": "THE PRESERVE",
+   "note": "checked on a crop"
+  },
+  "the-skipper": {
+   "polylines": [
+    300,
+    381
+   ],
+   "confidence": "high",
+   "mapName": "THE SKIPPER",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "the-woods": {
+   "polylines": [
+    52,
+    97
+   ],
+   "confidence": "high",
+   "mapName": "THE WOODS",
+   "note": "checked on a crop"
+  },
+  "timberline-catwalk": {
+   "polylines": [
+    163,
+    205,
+    209
+   ],
+   "confidence": "high",
+   "mapName": "TIMBERLINE CATWALK",
+   "note": "checked on a crop"
+  },
+  "tin-pants": {
+   "polylines": [
+    179,
+    181
+   ],
+   "confidence": "high",
+   "mapName": "TIN PANTS",
+   "note": "checked on a crop"
+  },
+  "tourist-trap": {
+   "polylines": [
+    281,
+    382
+   ],
+   "confidence": "high",
+   "mapName": "TOURIST TRAP",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "trans-montane": {
+   "polylines": [
+    192,
+    203,
+    230,
+    246
+   ],
+   "confidence": "high",
+   "mapName": "TRANS MONTANE",
+   "note": "checked on a crop"
+  },
+  "upper-lions-way": {
+   "polylines": [
+    214
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LION'S WAY",
+   "note": "checked on a crop"
+  },
+  "vail-village-catwalk": {
+   "polylines": [
+    142,
+    170,
+    204,
+    251,
+    378
+   ],
+   "confidence": "high",
+   "mapName": "VAIL VILLAGE CATWALK",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "whippersnapper": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "WHIPPERSNAPPER",
+   "note": "checked on a crop"
+  },
+  "whiskey-jack": {
+   "polylines": [
+    12,
+    133,
+    139
+   ],
+   "confidence": "high",
+   "mapName": "WHISKEY JACK",
+   "note": "checked on a crop"
+  },
+  "whistle-pig": {
+   "polylines": [
+    82,
+    89,
+    137
+   ],
+   "confidence": "high",
+   "mapName": "WHISTLE PIG",
+   "note": "checked on a crop"
+  },
+  "wildcard": {
+   "polylines": [
+    255,
+    376
+   ],
+   "confidence": "high",
+   "mapName": "WILDCARD",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "windisch-way": {
+   "polylines": [
+    167,
+    193,
+    247
+   ],
+   "confidence": "high",
+   "mapName": "WINDISCH WAY",
+   "note": "checked on a crop"
+  },
+  "windows-road": {
+   "polylines": [
+    291,
+    295,
+    364,
+    365
+   ],
+   "confidence": "high",
+   "mapName": "WINDOWS ROAD",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "zot": {
+   "polylines": [
+    319,
+    323
+   ],
+   "confidence": "high",
+   "mapName": "ZOT",
+   "note": "checked on a crop"
+  },
+  "silk-road": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "SILK ROAD",
+   "note": "checked on a crop"
+  }
+ }
+}

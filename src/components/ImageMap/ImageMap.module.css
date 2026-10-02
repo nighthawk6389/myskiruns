@@ -95,6 +95,51 @@ svg.overlay {
   color: var(--text-primary);
 }
 
+/* a resort drawn on several panels (Vail): which one is shown */
+.panelTabs {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid var(--border);
+  z-index: 6;
+}
+
+.panelTab {
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 7px;
+  background: none;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.panelTab:hover {
+  color: var(--text-primary);
+}
+
+.panelTab:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+
+.panelTab.panelTabOn {
+  background: var(--gold);
+  color: #1e1b0f;
+}
+
+/* below the panel tabs */
+.hint.hintLow {
+  top: 60px;
+}
+
 .zoomControls {
   position: absolute;
   bottom: 16px;
@@ -396,6 +441,24 @@ svg.overlay {
     font-size: 12px;
     white-space: normal;
     max-width: calc(100% - 64px);
+  }
+
+  .hint.hintLow {
+    top: 54px;
+  }
+
+  .panelTabs {
+    top: 8px;
+    left: 8px;
+    /* clear of the zoom buttons; scrolls sideways on the narrowest phones */
+    max-width: calc(100% - 58px);
+    overflow-x: auto;
+    touch-action: pan-x;
+  }
+
+  .panelTab {
+    padding: 6px 9px;
+    font-size: 12px;
   }
 
   .zoomControls {

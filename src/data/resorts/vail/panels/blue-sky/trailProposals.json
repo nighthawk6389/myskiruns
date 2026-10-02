@@ -1,0 +1,250 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "marmot-valley": {
+   "polylines": [
+    48,
+    52,
+    54,
+    61,
+    82,
+    96
+   ],
+   "confidence": "high",
+   "mapName": "MARMOT VALLEY",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "poppyfields": {
+   "polylines": [
+    21,
+    22,
+    30,
+    33
+   ],
+   "confidence": "high",
+   "mapName": "POPPYFIELDS",
+   "note": "checked on a crop"
+  },
+  "silk-road": {
+   "polylines": [
+    0,
+    9,
+    28,
+    38,
+    39
+   ],
+   "confidence": "high",
+   "mapName": "SILK ROAD",
+   "note": "checked on a crop"
+  },
+  "sleepytime-road": {
+   "polylines": [
+    16,
+    17,
+    23,
+    36,
+    42,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95
+   ],
+   "confidence": "high",
+   "mapName": "SLEEPYTIME ROAD",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "big-rock-park": {
+   "polylines": [
+    5,
+    25,
+    26
+   ],
+   "confidence": "high",
+   "mapName": "BIG ROCK PARK",
+   "note": "checked on a crop"
+  },
+  "cjs-glade": {
+   "polylines": [
+    68,
+    69
+   ],
+   "confidence": "high",
+   "mapName": "CJ'S GLADE",
+   "note": "checked on a crop"
+  },
+  "champagne-glade": {
+   "polylines": [
+    53,
+    76,
+    79
+   ],
+   "confidence": "high",
+   "mapName": "CHAMPAGNE GLADE",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "china-spur": {
+   "polylines": [
+    4,
+    7,
+    81
+   ],
+   "confidence": "high",
+   "mapName": "CHINA SPUR",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "cloud-9": {
+   "polylines": [
+    3,
+    11,
+    14,
+    19,
+    34,
+    43,
+    83,
+    84
+   ],
+   "confidence": "high",
+   "mapName": "CLOUD 9",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "encore": {
+   "polylines": [
+    46,
+    64
+   ],
+   "confidence": "high",
+   "mapName": "ENCORE",
+   "note": "checked on a crop"
+  },
+  "grand-review": {
+   "polylines": [
+    8,
+    13,
+    24,
+    85
+   ],
+   "confidence": "high",
+   "mapName": "GRAND REVIEW",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "heavy-metal": {
+   "polylines": [
+    71,
+    72
+   ],
+   "confidence": "high",
+   "mapName": "HEAVY METAL",
+   "note": "checked on a crop"
+  },
+  "hornsilver": {
+   "polylines": [
+    60,
+    73,
+    78
+   ],
+   "confidence": "high",
+   "mapName": "HORNSILVER",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "in-the-wuides": {
+   "polylines": [
+    41,
+    44,
+    80
+   ],
+   "confidence": "high",
+   "mapName": "IN THE WUIDES",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "iron-mask": {
+   "polylines": [
+    49,
+    77
+   ],
+   "confidence": "high",
+   "mapName": "IRON MASK",
+   "note": "checked on a crop"
+  },
+  "kellys-toll-road": {
+   "polylines": [
+    10,
+    37,
+    45,
+    89
+   ],
+   "confidence": "high",
+   "mapName": "KELLY'S TOLL ROAD",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "little-ollie": {
+   "polylines": [
+    51,
+    66
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE OLLIE",
+   "note": "checked on a crop"
+  },
+  "lovers-leap": {
+   "polylines": [
+    55,
+    67
+   ],
+   "confidence": "high",
+   "mapName": "LOVER'S LEAP",
+   "note": "checked on a crop"
+  },
+  "resolution": {
+   "polylines": [
+    50,
+    74,
+    87
+   ],
+   "confidence": "high",
+   "mapName": "RESOLUTION",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "skree-field": {
+   "polylines": [
+    47,
+    65
+   ],
+   "confidence": "high",
+   "mapName": "SKREE FIELD",
+   "note": "checked on a crop"
+  },
+  "steep-deep": {
+   "polylines": [
+    70,
+    88
+   ],
+   "confidence": "high",
+   "mapName": "STEEP & DEEP",
+   "note": "checked on a crop | traced along the painted line"
+  },
+  "the-divide": {
+   "polylines": [
+    57,
+    75
+   ],
+   "confidence": "high",
+   "mapName": "THE DIVIDE",
+   "note": "checked on a crop"
+  },
+  "the-star": {
+   "polylines": [
+    12,
+    15,
+    18,
+    27,
+    40,
+    86
+   ],
+   "confidence": "high",
+   "mapName": "THE STAR",
+   "note": "checked on a crop | traced along the painted line"
+  }
+ }
+}

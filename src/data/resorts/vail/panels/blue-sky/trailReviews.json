@@ -1,0 +1,30 @@
+{
+ "reviews": {
+  "petes-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A bowl named on the map with no line drawn: marker at its name",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    39.68,
+    18.18
+   ]
+  },
+  "earls-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A bowl named on the map with no line drawn: marker at its name",
+   "at": "2026-10-01T21:59:19.000Z",
+   "by": "claude",
+   "labelAt": [
+    78.16,
+    21.34
+   ]
+  }
+ }
+}

@@ -1,9 +1,10 @@
 # Trail map playbook: from a resort map image to clickable, named trails
 
-This is the process that turned the Killington 2025-26 trail map into 135
-clickable trails with the right names and difficulties, written so it can be
-repeated (and sped up) for other resorts. It records what worked, what didn't,
-and what each step cost.
+This is the process that put clickable, correctly named trails on eleven
+resorts' 2025-26 trail maps, starting with Killington (135 trails), written so
+it can be repeated (and sped up) for other resorts. It records what worked,
+what didn't, and what each step cost. Start with **Pick a route**: the source
+you can get decides most of the work.
 
 **Goal (definition of done):** every trail in the resort's trail list has an
 overlay that lies on that trail's own drawn line along its full length, or a
@@ -11,7 +12,60 @@ marker at its label if it has no drawn line (many glades); tapping anywhere on
 it shows that trail's name; its difficulty matches the symbol printed on the
 map; and the list contains exactly the trails printed on this season's map.
 
-## The short version
+## Pick a route by what the source gives you
+
+Run `extract_pdf_image.py map.pdf map.png` on the resort's PDF first: it
+reports any vector text and drawings. Then tally the PDF's stroke and fill
+colours and widths with pymupdf (`page.get_drawings()`) and draw each class on
+a blank page to see what it is.
+
+| the source gives you | route | done this way |
+|---|---|---|
+| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; match each name to the stroke it is printed along, settle the rest on crops yourself (step 3c); no readers | Whiteface, Winter Park (text with no Unicode map), Breckenridge |
+| vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone |
+| lines as filled outlines, names as outlined glyphs | rasterise the outline fills and thin them to centre lines (Copper notes in step 1); `pdf_glyphs.py` | Copper Mountain |
+| vector strokes, names you can't extract | numbered tiles read by parallel readers (step 3) | Stowe, Okemo, Sugarbush |
+| a painting with no lines, names as text | the trace pass along the painted cuts (step 3b) | Jay Peak |
+| only raster images | `raster_lines.py` + `raster_symbols.py` (or `lineDetector.mjs`), pieces named on review tiles (3c) or by readers | Vail (three panels), Killington |
+
+A low-resolution painting under good vectors: `matte_pdf_layer.py` mattes the
+vector layer over a sharper copy of the painting (Breckenridge, Keystone) or a
+smooth upscale of the embedded one (Copper).
+
+## Resorts so far
+
+| resort | source | trails (lines + markers) | named and checked by |
+|---|---|---|---|
+| Killington | flattened raster PDF | 135 (113 + 22) | `lineDetector.mjs`, 6 readers, human review page |
+| Stowe | PDF strokes, outlined text | 125 (114 + 11) | readers, human review |
+| Okemo | PDF strokes | 128 (124 + 4) | readers, trace pass, human review of 23 |
+| Sugarbush | PDF strokes, outlined labels | 138 (111 + 27) | readers; Claude checked every overlay on crops |
+| Jay Peak | painting with no lines, names as text | 88 (65 + 23) | trace pass; crops |
+| Whiteface | PDF strokes + text | 98 (96 + 2) | names matched to strokes; crops |
+| Winter Park | PDF strokes + text with no Unicode map | 172 (114 + 58) | `pdf_labels.py`, matching; crops |
+| Breckenridge | PDF strokes + text, low-resolution painting | 197 (157 + 40) | matching; image matted over scene7; crops |
+| Copper Mountain | PDF outlined lines + outlined glyphs | 128 (104 + 24) | skeletonised outlines, glyph sheets; crops |
+| Keystone | PDF strokes + outlined glyphs | 145 (120 + 25) | `pdf_glyphs.py`, matching; image matted over scene7; crops |
+| Vail | three raster panels from scene7 | 194 (173 + 21) | `raster_lines.py`, named on review tiles; crops |
+
+Where each resort's decisions live: each piece's name is in
+`trailProposals.json` (a vector extraction is deterministic, so a PDF map's
+piece ids are stable), stretches and markers in `trailReviews.json`
+(`"by": "claude"` unless a person decided). Only Vail's pipeline is in the
+repo, in `tools/trailmap/resorts/vail/`: its raster piece ids change whenever
+the detector is re-tuned, so its decisions are kept as points and
+`regen.sh` rebuilds every Vail file from them (byte for byte). The one-off
+scripts that built the PDF maps were not kept; step 1 records their methods,
+and their shape was the same as Vail's.
+
+**To fix one trail on any resort** without re-running a pipeline: add a review
+for it to its `trailReviews.json` (`status: confirmed` with `polylines` ids
+and/or `drawn` points in source px, or `no-line` with `labelAt` in percent;
+leave out `"by": "claude"`), then
+`npm run trails:apply -- --resort <id> [--panel <panel>]`. A person's review
+outranks every automatic source, and Vail's `regen.sh` keeps it.
+
+## The short version (Killington: raster map, readers, human review)
 
 1. **Get the best source image** (lossless, from the resort PDF). 5 min.
 2. **Detect the colored trail lines** and cut them into numbered pieces
@@ -28,6 +82,14 @@ map; and the list contains exactly the trails printed on this season's map.
 Steps 3, 5 and the checks are the reusable core; the old fully automatic
 approaches all stalled at ~40% (see "What we tried").
 
+**The PDF-first version** (Whiteface onward): get the
+PDF or the CDN painting (step 1); extract the pieces and names; match names to
+pieces automatically and settle the rest on crops yourself, recording each
+decision (step 3c); seed the trail list from the printed names and symbols
+(`seed_roster.py`); build proposals, stretches and markers
+(`aggregate_readings.py`, `traces_to_reviews.py`); `trails:apply`; then audit
+every overlay on crops and run the hover check (step 4).
+
 ## Tools in this repo
 
 | file | what it does |
@@ -37,21 +99,31 @@ approaches all stalled at ~40% (see "What we tried").
 | `tools/trailmap/pdf_symbols.py` | Difficulty symbols from a vector PDF; `--check` compares them with the trail list |
 | `tools/trailmap/pdf_labels.py` | Trail-name labels from a PDF's text (decodes fonts with no Unicode map) |
 | `tools/trailmap/pdf_glyphs.py` | Trail-name labels and symbols from a PDF whose names are outlined glyphs (no text) |
+| `tools/trailmap/matte_pdf_layer.py` | A PDF's vector layer matted over a sharper copy (or smooth upscale) of its painting |
+| `tools/trailmap/raster_lines.py` | Numbered line pieces from a raster map (no PDF): colour masks, linked dashes, skeleton |
+| `tools/trailmap/raster_symbols.py` | Difficulty symbols (square, circle, diamond, double, EX) from a raster map |
 | `scripts/lib/lineDetector.mjs`, `scripts/evaluateLines.mjs` | Colored-line detector and its ground-truth scorer |
-| `scripts/tracePolylines.mjs` | Detection mask → numbered line pieces (`src/data/resorts/killington/linePolylines.json`) |
+| `scripts/tracePolylines.mjs` | Detection mask → numbered line pieces (`src/data/resorts/<id>/linePolylines.json`) |
+| `tools/trailmap/grid_crop.py` | Zoomed crop with a labelled pixel grid, optionally pieces (`id:name`), overlays and symbols: for reading coordinates and review tiles |
+| `tools/trailmap/snap_trace.py` | Rough points read off a grid crop → a stretch on the painted line, for lines the detection missed |
+| `tools/trailmap/symbol_audit.py` | Symbols off their trail's overlay or at an overlay end, and a contact sheet of every diamond |
+| `tools/trailmap/resorts/vail/` | Vail's pipeline: readings, point-keyed decisions, `regen.sh` (see its README) |
 | `tools/trailmap/render_tiles.py` | Zoomed tiles with every piece drawn and numbered, for the readers |
 | `tools/trailmap/prompts/*.md` | Reader prompts: name pieces, symbols + missing, whole-map search |
 | `tools/trailmap/aggregate_readings.py` | Readers' votes → per-trail proposals + review-page data |
 | `tools/trailmap/review/index.html` | The review page (Claude artifact with a database) |
 | `tools/trailmap/refresh_review_data.py` | Rebuild page data after fixes; flag trails for recheck |
-| `scripts/importReviews.mjs` (`npm run reviews:import`) | Review-page export → `src/data/resorts/killington/trailReviews.json` |
-| `scripts/applyTrailProposals.mjs` (`npm run trails:apply`) | Reviews + proposals → `src/data/resorts/killington/trailPaths.json` (what the app draws) |
+| `scripts/importReviews.mjs` (`npm run reviews:import`) | Review-page export → `src/data/resorts/<id>/trailReviews.json` |
+| `scripts/applyTrailProposals.mjs` (`npm run trails:apply`) | Reviews + proposals → `src/data/resorts/<id>/trailPaths.json` (what the app draws) |
 | `tools/trailmap/render_crops.py` | Zoomed crops of overlays for audits and split checks |
 | `tools/trailmap/region_audit.py` | Every overlay tagged with its name over map regions, to audit a whole map |
 | `tools/trailmap/hover_check.cjs` | Browser check that each overlay shows its own name |
 
 Python tools need `pip install pymupdf pillow` (`pdf_labels.py` also
-`fonttools`); the hover check needs Playwright.
+`fonttools`; the raster tools `numpy opencv-python-headless scikit-image`);
+the hover check needs Playwright (in this sandbox:
+`PLAYWRIGHT_PATH=$(npm root -g)/playwright`). The pipeline scripts take
+`--resort <id>` and, for a resort drawn on several panels, `--panel <id>`.
 
 ## Step by step
 
@@ -59,6 +131,30 @@ Python tools need `pip install pymupdf pillow` (`pdf_labels.py` also
 
 Download the resort's trail map PDF (not the web JPG) and run
 `extract_pdf_image.py map.pdf map.png`.
+
+Getting the source in this sandbox:
+- **Vail Resorts' sites** (vail.com, breckenridge.com, keystoneresort.com, …)
+  return an error page to curl. Open the trail-map page in headless Chromium
+  through the agent proxy and fetch the PDF from inside the page (`fetch` in
+  `page.evaluate`), or list the links and responses that mention pdf or map.
+  Playwright's Chromium needs `proxy: { server: process.env.HTTPS_PROXY }`
+  and `--ignore-certificate-errors-spki-list=<pin>`, where the pin is
+  `openssl x509 -in /root/.ccr/agent-proxy-ca.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | base64`.
+  Load Playwright from `$(npm root -g)/playwright`.
+- **Their image CDN (scene7) works with plain curl** and serves the full
+  paintings losslessly:
+  `https://scene7.vailresorts.com/is/image/vailresorts/<name>?req=imageprops`
+  gives the size, `?fmt=png-alpha&wid=<width>&qlt=100` the image. Names seen:
+  `20251028_KY_winter-trail_map_001` (Keystone),
+  `20251001_VL_winter-{front-side,back-bowls,blue-sky}-trail_map_001` (Vail;
+  the `-logos` copies add a header band). Find a resort's name in the image
+  URLs of its trail-map page.
+- **skimap.org** often has the PDF when the resort's own sits behind a bot
+  check (Whiteface). Third-party "PDFs" can be just the rasters again
+  (SnowStash's Vail PDF is the same three panels).
+- **Out of reach here:** OpenStreetMap's Overpass API (connections reset), so
+  there is no cross-check of names against OSM. Vail's terrain-status feed
+  lists no trails out of season, so it can't seed a trail list in October.
 
 - If it reports **text words and vector drawings**, stop and extract those
   instead: exact names, positions and line geometry, no CV needed. Worth
@@ -197,6 +293,50 @@ Download the resort's trail map PDF (not the web JPG) and run
     gold kids' adventure zones are markers.
   - The map image is the vector layer matted over Vail's CDN raster
     (`20251028_KY_winter-trail_map_001`), as at Breckenridge.
+- **Raster panels, no PDF (Vail 2025-26):** Vail publishes no vector map,
+  only three paintings on its image CDN
+  (`20251001_VL_winter-{front-side,back-bowls,blue-sky}-trail_map_001`,
+  PNG at `wid=4990`; the `-logos` copies add a header band), so the resort
+  has three map panels (see "Several panels" below).
+  - Lines: `raster_lines.py` masks each trail colour strictly and drops text
+    (glyph-sized parts crowded by other glyphs, unless thin like a stretch of
+    line), symbols, icon fills and sign-box outlines. Dashed roads are linked
+    by growing their dashes and arrows until consecutive marks merge (a run
+    needs four or more). The mask is skeletonized and the pieces are joined
+    straight through junctions. Back Bowls and Blue Sky draw everything
+    bigger: `--k 1.75` and `--k 2.7` scale the mark sizes.
+  - Symbols: `raster_symbols.py`. A double diamond is a black blob with a
+    waist, or two diamonds side by side. Check every one on a contact sheet:
+    a single diamond touching the end of its own line passed as a double
+    twice, and icons and the village's bus-route marks passed as singles.
+  - Vail prints a run's symbol on its line with the name beside it, and the
+    line resumes past the name. Where a run's rating changes it prints the
+    new symbol on the line with no name; those count toward the run's
+    difficulty (majority, harder on a tie).
+  - Naming: about a third of the pieces matched a symbol automatically; the
+    rest were settled on zoomed review tiles (step 3c). Record each decision
+    as a point on the piece, not its id: ids change whenever the extraction
+    is re-tuned. The same goes for the symbol readings (keyed by centre).
+  - Stretches the detector broke (a name printed in the line, dashes
+    through slow-zone hatching, the stub from a symbol to its parent line)
+    were traced on crops, snapped to the painted line (`snap_trace.py`) and
+    appended to `linePolylines.json` as pieces (listed in `_traced`).
+  - Bowls print a name and no symbol: markers, rated black.
+  - Everything is in `tools/trailmap/resorts/vail/`: the readings
+    (`names.py`), the decisions (`decisions.py`, with the crop that settled
+    each), and `regen.sh`, which downloads the panels and rebuilds every Vail
+    data file and map image byte for byte. Its README is the template for
+    another raster resort.
+- **Several panels:** a resort drawn on more than one map keeps one
+  `trails.ts` and, per panel, `panels/<panel>/` with its own
+  `linePolylines`, `trailProposals`, `trailReviews` and `trailPaths`; the map
+  is `public/maps/<resort>-<panel>.jpg`. `trails:apply`, `hover_check.cjs`
+  and the other `resortPaths()` scripts take `--panel <id>`. Make the areas
+  (`peaks`) the panels, with the same ids, and give each trail its panel as
+  its area: the trail list groups by area, and picking a trail that isn't
+  drawn on the open panel opens its area's panel (or any panel that draws
+  it). A run drawn at the edge of another panel (Vail's Back Bowls roads
+  along Blue Sky's bottom edge) gets an overlay on both.
 - Otherwise use the extracted PNG. Killington's repo JPG was a resampled,
   4:2:0 chroma-subsampled copy (PSNR 20.6 dB vs. the PDF raster), which blurs
   2–4 px colored lines and small text.
@@ -352,16 +492,66 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
   trail uses when >= 90% of the piece lies within 15 px of the stroke, so
   hand-traced traverses end up on the exact line.
 
+### 3c. Naming the pieces yourself (no readers)
+
+From Whiteface on, the PDF gave the names as text or glyphs, and Claude named
+every piece itself; Vail did the same with raster-detected pieces. The loop:
+
+1. **Auto-match** names to pieces from where the map prints them, preferring
+   pieces of the symbol's colour:
+   - a name printed along a piece (most of its glyph centres within ~7 pt of
+     it) names that piece (Whiteface, Keystone);
+   - a piece ending at a name's own symbol, or at the far end of its text and
+     pointing along it, continues that trail (Winter Park, Breckenridge: their
+     lines run into the names);
+   - Vail draws the symbol on the line with the name beside it: a piece
+     through the symbol, starting at it, or whose top end lies the way the
+     text runs takes the name (`resorts/vail/build.py`);
+   - then names spread along unlabelled continuations (an end that meets
+     exactly one other piece of the same colour).
+2. **Review tiles:** `grid_crop.py --pieces … --names … --symbols … --grid 0
+   --zoom 1.5` in ~850x650 px boxes over the whole map, each piece tagged
+   `id:name` and each undecided one `id?`. Settle doubtful pieces on closer
+   crops: plain, and with the grid to read coordinates off.
+3. **Record each decision as a point** on the piece, with a comment naming the
+   crop that settled it (Vail: `add.py` writes `decisions.py`). Record what
+   isn't a trail too, and why: icons, creek edges, a bus route, connectors the
+   map prints no name for.
+4. **One line, two trails:** cut the piece where the second trail starts
+   (Vail `CUTS`; for a PDF map's pieces, `split_pieces.py`).
+5. **Missing stretches:** read a few rough points off a grid crop and
+   `snap_trace.py` puts them on the painted line; add the result as a traced
+   piece.
+6. Rebuild, then run the crop audit (step 4).
+
+Vail: 550 pieces, about a third matched automatically, the rest settled on
+about 30 review tiles and many closer crops, plus 67 traced stretches.
+
 ### 4. Human review
 
-Sugarbush, Jay Peak, Whiteface, Winter Park, Breckenridge, Copper Mountain
-and Keystone skipped this step at the owner's call (the readers' labelling had
-held up on three maps; the last five needed no readers at all). In its place Claude checked every
-overlay itself: vector maps on full-resolution region crops with each
-overlay drawn in its own colour and tagged with its name
-(`region_audit.py`), traced trails one by one on zoomed crops,
-and every diamond on a crop; then the hover check. Keep the review page for
-maps where the readers disagree or the lines are raster-detected.
+Sugarbush, Jay Peak, Whiteface, Winter Park, Breckenridge, Copper Mountain,
+Keystone and Vail skipped this step at the owner's call: the readers' labelling
+had held up on three maps, the next five needed no readers at all, and Claude
+named Vail's raster pieces itself on zoomed tiles. In its place Claude checks
+every overlay itself:
+
+1. `region_audit.py` over each map (e.g. `--grid 5x3 --zoom 1.3`), with every
+   overlay drawn in its own colour and tagged with its name. Look for lines
+   with no overlay, overlays on the wrong line, and gaps.
+2. `symbol_audit.py --mode off` and `--mode ends` with the named symbols. It
+   lists every symbol that lies off its trail's overlay or at one of its ends.
+   Each is either fine (the run starts or ends at its symbol) or a missing
+   stub or stretch. On Vail it found 33 gaps after the region audit had
+   passed: a short stub doesn't show at 1.3x.
+3. `symbol_audit.py --mode diamonds`: every diamond on one sheet with its name
+   and type, for the single-vs-double check.
+4. Anything unclear on `grid_crop.py`; fix it with a decision or a traced
+   stretch, rebuild, and look again.
+5. The hover check, per panel on a multi-panel map (step 7). After an app
+   change, also drive the UI in a browser (desktop and phone sizes).
+
+The review page is still there for maps where the readers disagree, or when the
+owner wants a person to confirm.
 
 Publish `tools/trailmap/review/` (the page, `data.json`, and the map image as
 `map.jpg`) as a Claude artifact with the `db` capability. The reviewer, per
@@ -443,11 +633,24 @@ each pre-filled with Claude's geometry. Killington: 8 trails, then 6.
 
 ### 7. Apply and verify
 
+**Register the resort in the app.**
+1. Put its map at `public/maps/<id>.jpg`. Save it as a JPEG at quality ~82;
+   a 4,000–5,000 px wide map comes to 2–4 MB. Overlays are stored in percent,
+   so a panel drawn at a large scale can be saved smaller (Vail's
+   `images.py`).
+2. Import its `trails.ts` and `trailPaths.json` in `src/resorts.ts`, with
+   `maps: oneMap(...)`, or one `maps` entry per panel.
+3. Add the image(s) to `PRECACHE` in `public/sw.js` and bump `CACHE`, so
+   phones fetch the new list.
+
+Then:
+
 ```bash
-npm run reviews:import -- <export dir> && npm run trails:apply
+npm run reviews:import -- <export dir> && npm run trails:apply -- --resort <id>
 npx tsc -b && npx eslint . && npm run build
-npx vite preview --port 4199 &
-node tools/trailmap/hover_check.cjs http://localhost:4199/ --resort <id>
+(npx vite preview --port 4199 --strictPort > work/preview.log 2>&1 &)   # its own subshell
+PLAYWRIGHT_PATH=$(npm root -g)/playwright node tools/trailmap/hover_check.cjs http://localhost:4199/ --resort <id> [--panel <p>]
+ps aux | grep "vite preview" | grep -v grep | awk '{print $2}' | xargs -r kill   # stop it by PID
 ```
 
 The hover check hovers 3 points along every line and each glade marker in the
@@ -455,8 +658,13 @@ real app. The map names the NEAREST trail to the pointer (the same test a tap
 uses), not whichever trail is drawn on top: that took Killington from
 344/361 to 359/361 and Stowe from 343/353 to 351/353. The remaining misses
 are stretches two trails genuinely share (Great Eastern / Home Stretch,
-Jake's Ride / Crossover), where either name is right. It checks rendering against the reviewed geometry — it is not
-evidence the geometry is right (only the review is).
+Jake's Ride / Crossover), where either name is right. It checks rendering
+against the reviewed geometry; it is not evidence the geometry is right (the
+review or the crop audit is). It samples only three points on each trail's
+longest segment, so it can't catch a missing stub or a wrong short piece.
+
+Every resort after a change to shared app code (the map, `src/resorts.ts`):
+run it for all of them; each should match its previous score.
 
 ## What we tried, and what it taught us
 
@@ -504,7 +712,37 @@ Lessons:
 - Judge distances on crops at ≥ 1× zoom; judgments on shrunken images were
   wrong often enough to mislead.
 - In this sandbox `pkill -f <pattern>` can kill the shell running it when the
-  pattern also appears later in the same command line.
+  pattern also appears later in the same command line. Stop a server by PID.
+- **Raster piece ids are not stable.** Re-tuning `raster_lines.py` renumbers
+  every piece, and re-tuning `raster_symbols.py` renumbers the symbols. Key
+  every decision by a point on the map (Vail's `decisions.py`, `names.py`);
+  `aggregate_readings.py`'s inputs can be rebuilt from those. A PDF map's
+  vector extraction is deterministic, so its ids are stable.
+- **Symbol detection over-counts.** A single diamond touching the end of its
+  own line came out as a double (twice on Vail). Bus-stop dots, a sign's
+  border and an info box's icon came out as symbols. Check every symbol on a
+  contact sheet before trusting the difficulties.
+- **Vail-style labels:** the symbol sits on the line and the name beside it,
+  sometimes printed uphill. The line can resume past the name (Northwoods,
+  Prima, S. Rim's hook) or the run can simply start at its symbol (N. Rim,
+  Gandy Dancer): check each on a crop. A symbol printed on a run's line with
+  no name marks a change of rating and counts toward that run's difficulty.
+- **Dashes through slow zones.** Pale hatching between a road's dashes breaks
+  the "four marks in a row" linking; trace those stretches.
+- **`trails:apply` can bridge the wrong way.** It joins a trail's parts when
+  their ends point at each other, and on a loop or switchback that can draw a
+  straight bridge across the slope (Vail Village Catwalk). Trace the real
+  connecting stretch and the bridge goes away.
+- **Regenerate without losing people's work.** Drop only the `"by": "claude"`
+  reviews before re-adding Claude's. Deleting `trailReviews.json` (as the
+  early scratch scripts did) would lose a person's decisions. Vail's
+  `regen.sh` does it right and keeps unchanged timestamps, so a re-run with
+  no changes leaves the files identical.
+- **Several panels:** a trail's marker goes on the panel where its name is
+  printed, so `aggregate_readings.py` and `traces_to_reviews.py` get that
+  panel's labels only, while `seed_roster.py` gets all of them. A run drawn
+  on two panels gets an overlay on each but one area, its home panel (Vail's
+  `SHARED`): the list groups it there.
 
 ## Scaling to many maps
 
@@ -514,22 +752,31 @@ In rough order of payoff:
    (`trails.ts`, `linePolylines.json`, `trailProposals.json`,
    `trailReviews.json`, `trailPaths.json`), map at `public/maps/<id>.jpg`,
    registered in `src/resorts.ts`. `tracePolylines`, `trails:apply`,
-   `reviews:import` and `hover_check.cjs` take `--resort <id>`; the image
-   size comes from the map file. Still to do: a `legend.json` per map.
-2. **A per-map legend file** (trail colors, lift color, boundary, highlight
+   `reviews:import` and `hover_check.cjs` take `--resort <id>` (and
+   `--panel <id>` for a map in several panels, kept in `panels/<panel>/`);
+   the image size comes from the map file. Still to do: a `legend.json` per
+   map.
+2. **One label-to-piece matcher for PDF maps.** Whiteface, Winter Park,
+   Breckenridge, Copper Mountain and Keystone each had a scratch copy of the
+   same matching rules (step 3c), fed by `pdf_labels.py` or `pdf_glyphs.py`.
+   Give those two tools one label format and the matcher becomes a tool;
+   Vail's `build.py` and `reading.py` show the rest of the shape (readings and
+   decisions in, `seed_roster` / `aggregate_readings` / `traces_to_reviews`
+   inputs out).
+3. **A per-map legend file** (trail colors, lift color, boundary, highlight
    bands, symbols, text styles) feeding both the detector's color gates and
    the reader prompts.
-3. **Run the readers from a script** (`ANTHROPIC_API_KEY` + the prompt
+4. **Run the readers from a script** (`ANTHROPIC_API_KEY` + the prompt
    templates, images attached) instead of an interactive Claude session, so a
    new map is one command. Keep the vote aggregation as is.
-4. **Start the trail list from the map, not from memory.** Seed it from the
-   readers' printed names and symbols (steps 3 and 5 already produce both),
-   then have the human confirm; most of Killington's list corrections came
-   from a list written before looking at the map.
-5. **Auto-accept only unanimous, high-confidence proposals** whose piece
-   colors match the printed symbol, and send the rest to review; measure on
-   Killington's reviewed data first (it's ground truth now) to pick the
-   threshold.
-6. **Skip OCR** for new maps; the readers superseded it.
-7. **Reuse the review page** as a template artifact per resort, and ask the
+5. **Start the trail list from the map, not from memory** — done since
+   Stowe: `seed_roster.py` builds `trails.ts` from the printed names and
+   symbols (most of Killington's list corrections came from a list written
+   before looking at the map).
+6. **Auto-accept only unanimous, high-confidence proposals** — done since
+   Stowe (`aggregate_readings.py`, step 3b). Still open: also require the
+   pieces' colour to match the printed symbol.
+7. **Skip OCR** for new maps — done: the readers, and on PDF maps the text
+   and glyphs themselves, superseded it.
+8. **Reuse the review page** as a template artifact per resort, and ask the
    resort for vector sources — a layered PDF removes steps 2–3 entirely.

@@ -1,7 +1,11 @@
 // Browser check that every trail overlay shows its own name.
 //
 //   npm run build && npx vite preview --port 4199 &
-//   node tools/trailmap/hover_check.cjs http://localhost:4199/ [--resort killington]
+//   node tools/trailmap/hover_check.cjs http://localhost:4199/ [--resort killington] [--panel front-side]
+//
+// A resort drawn on several map panels (Vail) is checked one panel at a time
+// (--panel: its overlays in panels/<panel>/trailPaths.json, opened with
+// ?panel=<panel>).
 //
 // Hovers 3 points (1/4, 1/2, 3/4 along the longest segment) of every line
 // trail and each glade marker, in the real app, and compares the tooltip with
@@ -19,12 +23,14 @@ const root = path.resolve(__dirname, '../..');
 const url = process.argv[2] || 'http://localhost:4199/';
 const ri = process.argv.indexOf('--resort');
 const resort = ri > 0 ? process.argv[ri + 1] : 'killington';
+const pi = process.argv.indexOf('--panel');
+const panel = pi > 0 ? process.argv[pi + 1] : null;
 const dir = path.join(root, 'src/data/resorts', resort);
 const src = fs.readFileSync(path.join(dir, 'trails.ts'), 'utf8');
 const names = Object.fromEntries(
   [...src.matchAll(/\{ id:\s*'([^']+)',\s*name:\s*(['"])(.*?)\2, difficulty/g)].map((m) => [m[1], m[3]]),
 );
-const paths = JSON.parse(fs.readFileSync(path.join(dir, 'trailPaths.json'), 'utf8')).trails;
+const paths = JSON.parse(fs.readFileSync(path.join(dir, panel ? `panels/${panel}` : '', 'trailPaths.json'), 'utf8')).trails;
 
 const cases = [];
 for (const [id, p] of Object.entries(paths)) {
@@ -50,6 +56,7 @@ for (const [id, p] of Object.entries(paths)) {
   const page = await browser.newPage({ viewport: { width: 2600, height: 1700 } });
   const u = new URL(url);
   u.searchParams.set('resort', resort);
+  if (panel) u.searchParams.set('panel', panel);
   await page.goto(u.toString());
   await page.waitForTimeout(3000);
   const box = await page.locator('svg[viewBox^="0 0 1000"]').boundingBox();
