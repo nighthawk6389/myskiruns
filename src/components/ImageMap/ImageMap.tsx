@@ -1,4 +1,5 @@
 import { useState, useMemo, useCallback, useEffect, useImperativeHandle, useRef } from 'react';
+import { keepForOffline, startOffline } from '../../offline';
 import type { Trail } from '../../types';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_COLORS, DIFFICULTY_UI_COLORS } from '../../types';
 import type { Resort, TrailPath as Overlay } from '../../resorts';
@@ -161,6 +162,8 @@ export function ImageMap({
   // connection is back. 'missing': the file isn't there.
   const [imageError, setImageError] = useState<'offline' | 'missing' | null>(null);
   const [imageTry, setImageTry] = useState(0);
+  // the first panel on screen has loaded: time to cache the others
+  const [firstMapLoaded, setFirstMapLoaded] = useState(false);
   // true aspect of the loaded map image; the overlay viewBox follows it
   const [aspect, setAspect] = useState(4572 / 2704);
   // null until the user moves the map: the default view for the screen size
@@ -209,6 +212,9 @@ export function ImageMap({
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
+
+  // every panel of this resort's map, cached for use without signal
+  useEffect(() => (firstMapLoaded ? keepForOffline(panels.map((p) => p.mapSrc)) : undefined), [firstMapLoaded, panels]);
 
   useEffect(() => {
     if (imageError !== 'offline') return;
@@ -499,6 +505,8 @@ export function ImageMap({
             const a = img.naturalWidth && img.naturalHeight ? img.naturalWidth / img.naturalHeight : aspect;
             setAspect(a);
             setImageLoaded(true);
+            setFirstMapLoaded(true);
+            startOffline();
             // a trail picked from the list before this map had loaded (or on
             // another panel): zoom to it now that the map's size is known
             const id = pendingFocus.current;
