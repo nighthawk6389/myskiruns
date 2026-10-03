@@ -1,5 +1,5 @@
-import { useState, useMemo, useRef } from 'react';
-import { RESORTS, getResort, type Resort } from './resorts';
+import { Component, Suspense, use, useDeferredValue, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { RESORTS, loadResort, resortEntry, type Resort } from './resorts';
 import { useTrips } from './hooks/useTrips';
 import { useTrailFilter } from './hooks/useTrailFilter';
 import { useConditions } from './hooks/useConditions';
@@ -9,37 +9,125 @@ import { TrailList } from './components/TrailList/TrailList';
 import { ImageMap, type ImageMapHandle } from './components/ImageMap/ImageMap';
 import { TripBar } from './components/TripBar/TripBar';
 import { TripSummary } from './components/TripSummary/TripSummary';
+import { keepForOffline } from './offline';
 import styles from './App.module.css';
 
 const RESORT_KEY = 'myskiruns.resort';
 
 /** The resort from ?resort=<id>, else the last one used on this device. */
-function initialResort(): Resort {
+function initialResortId(): string {
   const fromUrl = new URLSearchParams(location.search).get('resort');
+  let saved: string | null = null;
   try {
-    return getResort(fromUrl ?? localStorage.getItem(RESORT_KEY));
+    saved = localStorage.getItem(RESORT_KEY);
   } catch {
-    return getResort(fromUrl);
+    // storage blocked: the URL or the default
   }
+  return resortEntry(fromUrl ?? saved).id;
 }
 
 function App() {
-  const [resort, setResort] = useState(initialResort);
+  const [resortId, setResortId] = useState(initialResortId);
+  // the resort on screen: while the next one's data loads, the current one stays
+  const shownId = useDeferredValue(resortId);
   const chooseResort = (id: string) => {
-    const next = getResort(id);
-    setResort(next);
+    const next = resortEntry(id).id;
+    setResortId(next);
     try {
-      localStorage.setItem(RESORT_KEY, next.id);
+      localStorage.setItem(RESORT_KEY, next);
     } catch {
       // private mode: the choice lasts this session
     }
   };
-  // everything below is per resort: remounting resets map view, filters,
-  // conditions and the trip in view
-  return <ResortApp key={resort.id} resort={resort} onChooseResort={chooseResort} />;
+  const picker = <ResortPicker value={resortId} onChange={chooseResort} busy={resortId !== shownId} />;
+  return (
+    <Suspense fallback={<Splash picker={picker}>Loading {resortEntry(shownId).name}…</Splash>}>
+      <LoadError key={shownId} resortId={shownId} picker={picker}>
+        <LoadedResort id={shownId} picker={picker} />
+      </LoadError>
+    </Suspense>
+  );
 }
 
-function ResortApp({ resort, onChooseResort }: { resort: Resort; onChooseResort: (id: string) => void }) {
+function LoadedResort({ id, picker }: { id: string; picker: ReactNode }) {
+  const resort = use(loadResort(id));
+  // everything below is per resort: remounting resets map view, filters,
+  // conditions and the trip in view
+  return <ResortApp key={resort.id} resort={resort} picker={picker} />;
+}
+
+function ResortPicker({ value, onChange, busy }: { value: string; onChange: (id: string) => void; busy: boolean }) {
+  if (RESORTS.length < 2) return <h1 className={styles.title}>{resortEntry(value).name} Trail Tracker</h1>;
+  return (
+    <select
+      className={styles.resortSelect}
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      aria-label="Resort"
+      aria-busy={busy}
+    >
+      {RESORTS.map((r) => (
+        <option key={r.id} value={r.id}>
+          {r.name}
+        </option>
+      ))}
+    </select>
+  );
+}
+
+/** The header and a message, while a resort loads or when it can't. */
+function Splash({ picker, children }: { picker: ReactNode; children: ReactNode }) {
+  return (
+    <div className={styles.app}>
+      <header className={styles.header}>
+        <div className={styles.headerLeft}>
+          <span className={styles.logo}>⛷</span>
+          {picker}
+        </div>
+      </header>
+      <div className={styles.splash}>{children}</div>
+    </div>
+  );
+}
+
+/** Reload the page on a resort: the browser remembers a failed script load for
+ * as long as the page is open, so trying again in place would fail again. */
+function reopen(resortId: string) {
+  const url = new URL(location.href);
+  url.searchParams.set('resort', resortId);
+  url.searchParams.delete('panel');
+  location.assign(url);
+}
+
+/** A resort's data that couldn't be loaded: offline, and the resort was never
+ * opened on this device (its data is cached once it has been). */
+class LoadError extends Component<
+  { resortId: string; picker: ReactNode; children: ReactNode },
+  { failed: boolean }
+> {
+  state = { failed: false };
+
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+
+  render() {
+    if (!this.state.failed) return this.props.children;
+    return (
+      <Splash picker={this.props.picker}>
+        <p>
+          Couldn&apos;t load {resortEntry(this.props.resortId).name}: it needs a connection the first time it&apos;s
+          opened.
+        </p>
+        <button className={styles.retry} onClick={() => reopen(this.props.resortId)}>
+          Try again
+        </button>
+      </Splash>
+    );
+  }
+}
+
+function ResortApp({ resort, picker }: { resort: Resort; picker: ReactNode }) {
   const { trails } = resort;
   const {
     trips,
@@ -71,6 +159,9 @@ function ResortApp({ resort, onChooseResort }: { resort: Resort; onChooseResort:
   const conditions = useConditions(resort.id);
   const [summaryOpen, setSummaryOpen] = useState(false);
 
+  // every panel of this resort's map, cached for use without signal
+  useEffect(() => keepForOffline(resort.maps.map((m) => m.mapSrc)), [resort]);
+
   const filteredTrailIds = useMemo(
     () => new Set(filteredTrails.map((t) => t.id)),
     [filteredTrails]
@@ -81,22 +172,7 @@ function ResortApp({ resort, onChooseResort }: { resort: Resort; onChooseResort:
       <header className={styles.header}>
         <div className={styles.headerLeft}>
           <span className={styles.logo}>⛷</span>
-          {RESORTS.length > 1 ? (
-            <select
-              className={styles.resortSelect}
-              value={resort.id}
-              onChange={(e) => onChooseResort(e.target.value)}
-              aria-label="Resort"
-            >
-              {RESORTS.map((r) => (
-                <option key={r.id} value={r.id}>
-                  {r.name}
-                </option>
-              ))}
-            </select>
-          ) : (
-            <h1 className={styles.title}>{resort.name} Trail Tracker</h1>
-          )}
+          {picker}
         </div>
         <div className={styles.headerRight}>
           <TripBar

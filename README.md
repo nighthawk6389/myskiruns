@@ -66,10 +66,16 @@ tools in `tools/trailmap/`, the gotchas, and what each iteration taught us.
   day-by-day log with times; tap a run to see it on the map. "Share summary"
   uses the phone's share sheet, or copies a text recap.
 - **Works offline and installs to the home screen.** A service worker
-  (`public/sw.js`, production builds only) caches the app and the trail map,
-  so it opens without signal on the mountain; on a phone use "Add to Home
-  Screen". On narrow screens the progress and trail list sit below the map
-  and scroll together, with the search box pinned.
+  (`public/sw.js`, production builds only) caches the app with every resort's
+  trail data when it installs, and each trail map the first time it's shown
+  (all panels of a resort once it's opened), so it opens without signal on
+  the mountain; on a phone use "Add to Home Screen". A first visit downloads
+  about 4 MB, most of it the open resort's map, instead of every resort's map
+  (37 MB): each resort's data is its own chunk (`src/resorts.ts`), the other
+  resorts' data (~210 KB gzipped) is cached in the background, and a deploy
+  keeps the maps a phone already has (revalidated, not downloaded again).
+  On narrow screens the progress and trail list sit below the map and
+  scroll together, with the search box pinned.
 - **Your trips stay on this device** (browser `localStorage`, key
   `myskiruns.trips`). Use ⋯ → Export backup / Import backup to move or keep
   it; importing adds trips that aren't already on the device. Data from the

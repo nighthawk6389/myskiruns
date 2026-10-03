@@ -157,7 +157,10 @@ export function ImageMap({
   const containerRef = useRef<HTMLDivElement>(null);
   const [box, setBox] = useState({ w: 0, h: 0 });
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageError, setImageError] = useState(false);
+  // 'offline': no connection and this map isn't cached yet; it loads once the
+  // connection is back. 'missing': the file isn't there.
+  const [imageError, setImageError] = useState<'offline' | 'missing' | null>(null);
+  const [imageTry, setImageTry] = useState(0);
   // true aspect of the loaded map image; the overlay viewBox follows it
   const [aspect, setAspect] = useState(4572 / 2704);
   // null until the user moves the map: the default view for the screen size
@@ -206,6 +209,16 @@ export function ImageMap({
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (imageError !== 'offline') return;
+    const retry = () => {
+      setImageError(null);
+      setImageTry((n) => n + 1);
+    };
+    window.addEventListener('online', retry);
+    return () => window.removeEventListener('online', retry);
+  }, [imageError]);
 
   const zoomAt = useCallback(
     (factor: number, cx: number, cy: number) => {
@@ -387,7 +400,7 @@ export function ImageMap({
   const switchPanel = (id: string) => {
     setPanelId(id);
     setImageLoaded(false);
-    setImageError(false);
+    setImageError(null);
     setView(null);
     setSmooth(false);
   };
@@ -459,7 +472,16 @@ export function ImageMap({
         setMouseHover(null);
       }}
     >
-      {imageError && (
+      {imageError === 'offline' && (
+        <div className={styles.placeholder}>
+          <div className={styles.placeholderTitle}>No connection</div>
+          <div className={styles.placeholderText}>
+            This map isn&apos;t saved on this device yet. It loads when you&apos;re back online, and stays
+            available offline after that. The trail list works now.
+          </div>
+        </div>
+      )}
+      {imageError === 'missing' && (
         <div className={styles.placeholder}>
           <div className={styles.placeholderTitle}>Trail map image missing</div>
           <div className={styles.placeholderCode}>public{panel.mapSrc}</div>
@@ -467,7 +489,7 @@ export function ImageMap({
       )}
       <div className={`${styles.stage} ${smooth ? styles.smooth : ''}`} style={stageStyle}>
         <img
-          key={panel.id}
+          key={`${panel.id}-${imageTry}`}
           src={panel.mapSrc}
           alt={`${resort.name} trail map${panels.length > 1 ? `, ${panel.name}` : ''}`}
           className={styles.mapImage}
@@ -487,7 +509,7 @@ export function ImageMap({
               setView(clampView(viewOfTrail(path, fw, fw / a, box.w, box.h), fw, fw / a, box.w, box.h));
             }
           }}
-          onError={() => setImageError(true)}
+          onError={() => setImageError(navigator.onLine ? 'missing' : 'offline')}
           style={{ visibility: imageLoaded ? 'visible' : 'hidden' }}
         />
         {showLines && <img src={panel.mapSrc.replace(/\.jpg$/, '-lines.png')} alt="" className={styles.overlay} draggable={false} />}

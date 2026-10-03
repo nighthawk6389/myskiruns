@@ -58,7 +58,9 @@ for (const [id, p] of Object.entries(paths)) {
   u.searchParams.set('resort', resort);
   if (panel) u.searchParams.set('panel', panel);
   await page.goto(u.toString());
-  await page.waitForTimeout(3000);
+  // the overlay appears once the resort's data and its map image have loaded
+  await page.locator('svg[viewBox^="0 0 1000"]').waitFor({ timeout: 30000 });
+  await page.waitForTimeout(500);
   const box = await page.locator('svg[viewBox^="0 0 1000"]').boundingBox();
   const misses = [];
   for (const c of cases) {
