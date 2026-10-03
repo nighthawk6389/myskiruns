@@ -89,20 +89,28 @@
     font-size: 16px;
   }
 
-  .header {
-    flex-wrap: nowrap;
-  }
-
   /* the trip is the context that matters on a phone; the app name is on the
      home-screen icon */
   .title {
     display: none;
   }
 
+  /* two rows: the resort, then the trip bar across the full width (side by
+     side, the resort picker squeezed the trip picker to a sliver) */
+  .headerLeft,
   .headerRight {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .headerRight {
+    justify-content: flex-start;
+  }
+
+  .resortSelect {
     flex: 1;
     min-width: 0;
-    justify-content: flex-start;
+    font-size: 16px;
   }
 
   .main {
