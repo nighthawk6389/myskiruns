@@ -13,6 +13,10 @@ const CACHE = `myskiruns-${BUILD.version}`;
 const PRECACHE = ['/', '/manifest.webmanifest', '/icon-192.png', ...BUILD.assets];
 
 const isMap = (url) => new URL(url).pathname.startsWith('/maps/');
+// Our files don't vary by request headers, but a server may still send
+// `Vary: Origin` (Vite's preview does): then a precached script, stored without
+// an Origin header, wouldn't match the page's request for it, which has one.
+const MATCH = { ignoreVary: true };
 
 /** Copy the maps an earlier version cached into this one, so a deploy doesn't
  * cost a phone its offline maps. Each is revalidated (a map can change between
@@ -22,9 +26,9 @@ async function carryOverMaps(cache) {
     if (key === CACHE) continue;
     const old = await caches.open(key);
     for (const req of await old.keys()) {
-      if (!isMap(req.url) || (await cache.match(req))) continue;
+      if (!isMap(req.url) || (await cache.match(req, MATCH))) continue;
       const fresh = await fetch(req, { cache: 'no-cache' }).catch(() => null);
-      const res = fresh && fresh.ok ? fresh : await old.match(req);
+      const res = fresh && fresh.ok ? fresh : await old.match(req, MATCH);
       if (res) await cache.put(req, res);
     }
   }
@@ -63,13 +67,13 @@ self.addEventListener('fetch', (event) => {
           caches.open(CACHE).then((c) => c.put('/', copy));
           return res;
         })
-        .catch(() => caches.match('/')),
+        .catch(() => caches.match('/', MATCH)),
     );
     return;
   }
 
   event.respondWith(
-    caches.match(req).then(
+    caches.match(req, MATCH).then(
       (hit) =>
         hit ||
         fetch(req).then((res) => {
