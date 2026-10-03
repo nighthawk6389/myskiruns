@@ -75,6 +75,8 @@ tools in `tools/trailmap/`, the gotchas, and what each iteration taught us.
   (37 MB): each resort's data is its own chunk (`src/resorts.ts`), the other
   resorts' data (~210 KB gzipped) is cached in the background, and a deploy
   keeps the maps a phone already has (revalidated, not downloaded again).
+  The worker installs once the first map is on screen, so its background
+  downloads don't slow that map down on a weak connection.
   On narrow screens the progress and trail list sit below the map and
   scroll together, with the search box pinned.
 - **Your trips are kept on the device** (browser `localStorage`, key

@@ -1,4 +1,4 @@
-import { Component, Suspense, use, useDeferredValue, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { Component, Suspense, use, useDeferredValue, useMemo, useRef, useState, type ReactNode } from 'react';
 import { RESORTS, loadResort, resortEntry, type Resort } from './resorts';
 import { useTrips } from './hooks/useTrips';
 import { useTrailFilter } from './hooks/useTrailFilter';
@@ -9,7 +9,6 @@ import { TrailList } from './components/TrailList/TrailList';
 import { ImageMap, type ImageMapHandle } from './components/ImageMap/ImageMap';
 import { TripBar } from './components/TripBar/TripBar';
 import { TripSummary } from './components/TripSummary/TripSummary';
-import { keepForOffline } from './offline';
 import styles from './App.module.css';
 
 const RESORT_KEY = 'myskiruns.resort';
@@ -158,9 +157,6 @@ function ResortApp({ resort, picker }: { resort: Resort; picker: ReactNode }) {
   const mapRef = useRef<ImageMapHandle>(null);
   const conditions = useConditions(resort.id);
   const [summaryOpen, setSummaryOpen] = useState(false);
-
-  // every panel of this resort's map, cached for use without signal
-  useEffect(() => keepForOffline(resort.maps.map((m) => m.mapSrc)), [resort]);
 
   const filteredTrailIds = useMemo(
     () => new Set(filteredTrails.map((t) => t.id)),
