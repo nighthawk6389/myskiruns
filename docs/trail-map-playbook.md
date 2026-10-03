@@ -638,10 +638,13 @@ each pre-filled with Claude's geometry. Killington: 8 trails, then 6.
    a 4,000–5,000 px wide map comes to 2–4 MB. Overlays are stored in percent,
    so a panel drawn at a large scale can be saved smaller (Vail's
    `images.py`).
-2. Import its `trails.ts` and `trailPaths.json` in `src/resorts.ts`, with
-   `maps: oneMap(...)`, or one `maps` entry per panel.
-3. Add the image(s) to `PRECACHE` in `public/sw.js` and bump `CACHE`, so
-   phones fetch the new list.
+2. List it in `src/resorts.ts`: `oneMap('<id>', '<Name>', ...)` with
+   loaders for its `trails.ts` and `trailPaths.json`, or (several panels) a
+   `load` that returns one `maps` entry per panel. Each resort's data becomes
+   its own chunk, loaded when the resort is opened.
+3. Nothing to add for offline use: the service worker's precache list and
+   version are filled in by `vite build`, and maps are cached as they're
+   viewed.
 
 Then:
 

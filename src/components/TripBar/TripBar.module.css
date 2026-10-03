@@ -71,6 +71,24 @@
   background: var(--bg-tertiary);
 }
 
+.menu .accountItem {
+  margin-top: 4px;
+  padding-top: 9px;
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 6px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.accountEmail {
+  font-size: 11px;
+  color: var(--text-secondary);
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .menu button:disabled {
   color: var(--text-muted);
   cursor: default;

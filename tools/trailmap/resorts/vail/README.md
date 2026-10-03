@@ -102,5 +102,4 @@ Copy this folder and change, in order:
    (`grid_crop.py --pieces --names --grid 0`), recording decisions with
    `add.py` until `build.py` reports 0 undecided.
 4. `reading.py`, `header.txt`, `regen.sh`. Register the resort in
-   `src/resorts.ts`: `maps` lists one entry per panel. Add its images to
-   `public/sw.js`.
+   `src/resorts.ts`: its `load` returns one `maps` entry per panel.

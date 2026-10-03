@@ -1,6 +1,8 @@
 import { useRef, useState } from 'react';
 import type { Trip } from '../../hooks/useTrips';
 import { defaultTripName } from '../../hooks/useTrips';
+import { useAccount } from '../../account/account';
+import { AccountDialog } from '../Account/AccountDialog';
 import styles from './TripBar.module.css';
 
 interface TripBarProps {
@@ -27,6 +29,8 @@ export function TripBar({ trips, activeTrip, onSelect, onCreate, onUpdate, onDel
   const [name, setName] = useState('');
   const [date, setDate] = useState(today());
   const [message, setMessage] = useState('');
+  const [accountOpen, setAccountOpen] = useState(false);
+  const account = useAccount();
   const fileRef = useRef<HTMLInputElement>(null);
 
   const openNew = () => {
@@ -131,9 +135,21 @@ export function TripBar({ trips, activeTrip, onSelect, onCreate, onUpdate, onDel
             <button role="menuitem" onClick={remove} disabled={!activeTrip}>Delete trip</button>
             <button role="menuitem" onClick={exportFile} disabled={!trips.length}>Export backup</button>
             <button role="menuitem" onClick={() => fileRef.current?.click()}>Import backup</button>
+            {account.status !== 'off' && (
+              <button
+                role="menuitem"
+                className={styles.accountItem}
+                onClick={() => { setMode('idle'); setAccountOpen(true); }}
+                disabled={account.status === 'loading'}
+              >
+                {account.status === 'signed-in' ? 'Account & sync' : 'Sign in to back up & sync'}
+                {account.status === 'signed-in' && <span className={styles.accountEmail}>{account.email}</span>}
+              </button>
+            )}
           </div>
         )}
       </div>
+      {accountOpen && <AccountDialog onClose={() => setAccountOpen(false)} />}
       <input
         ref={fileRef}
         type="file"

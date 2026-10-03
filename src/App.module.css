@@ -126,3 +126,30 @@
     overscroll-behavior: contain;
   }
 }
+
+/* while a resort's data loads, or when it can't */
+.splash {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.retry {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.resortSelect[aria-busy='true'] {
+  opacity: 0.6;
+}
