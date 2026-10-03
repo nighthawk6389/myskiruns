@@ -17,6 +17,7 @@ working process is [`docs/trail-map-playbook.md`](docs/trail-map-playbook.md).
 npm install
 npm run dev        # app at localhost:5173
 npm run build      # typecheck + production build
+npm test           # trip merge/sync rules (tests/)
 ```
 
 **Doing this for another resort?** Follow
@@ -76,10 +77,78 @@ tools in `tools/trailmap/`, the gotchas, and what each iteration taught us.
   keeps the maps a phone already has (revalidated, not downloaded again).
   On narrow screens the progress and trail list sit below the map and
   scroll together, with the search box pinned.
-- **Your trips stay on this device** (browser `localStorage`, key
+- **Your trips are kept on the device** (browser `localStorage`, key
   `myskiruns.trips`). Use ⋯ → Export backup / Import backup to move or keep
-  it; importing adds trips that aren't already on the device. Data from the
-  pre-trips version is carried into a trip called "Earlier runs".
+  them; importing adds trips that aren't already on the device (a trip
+  deleted here comes back as a copy). Data from the pre-trips version is
+  carried into a trip called "Earlier runs".
+- **Accounts (optional): back up and sync.** ⋯ → "Sign in to back up &
+  sync": enter your email, then the code emailed to you (no password). Your
+  trips are saved in your account and kept in step on every device you sign
+  in on: a sync runs on sign-in, a few seconds after each change, when the
+  app comes back online or to the foreground, and every 5 minutes while it's
+  open. Changes made offline on a phone sync once it has signal, and
+  changes on two devices merge rather than overwrite (the rules are in
+  `src/trips/log.ts`). Signing out keeps the trips on the device; "Delete
+  account" removes the account and the trips saved in it. Signed out, or with
+  accounts not set up (below), the app works as before. Setting it up:
+  [Accounts](#accounts-setting-up-sign-in-and-sync).
+
+## Accounts: setting up sign-in and sync
+
+The same setup as Deconstructed Papers: Supabase Auth sends a one-time code by
+email (no passwords), through Resend as Supabase's mail server; the trips live
+in one Supabase table. Until the environment variables below are set, the app
+shows no account features.
+
+1. **A Supabase project.** A new one keeps this app's users and email wording
+   apart from Deconstructed Papers. Free projects pause after a week without
+   use (the app keeps working on the device; sign-in and sync resume after
+   you restore the project in the dashboard).
+2. **The table.** In the SQL editor, run
+   [`supabase/migrations/001_trip_logs.sql`](supabase/migrations/001_trip_logs.sql):
+   one row per person (`trips`, a JSON list, and a `version`), readable and
+   writable only by that person (row-level security), deleted with them.
+3. **Email codes.** Authentication → Sign In / Providers → Email: on, new
+   sign-ups allowed. Authentication → Emails → Templates: put the code,
+   `{{ .Token }}`, in both "Magic Link" and "Confirm signup" (a first sign-in
+   uses the second), e.g. *Your My Ski Runs sign-in code is {{ .Token }}.*
+   The code is what works in the home-screen app; a link, if a template keeps
+   one, signs in the browser it opens in (Authentication → URL Configuration
+   → Site URL: the app's address).
+4. **Resend as the mail server.** Authentication → Emails → SMTP settings:
+   host `smtp.resend.com`, port `465`, user `resend`, password a Resend API
+   key, sender an address on a domain verified in Resend (Supabase's
+   built-in mailer allows only a couple of emails an hour and is meant for
+   testing).
+5. **Vercel environment variables** (Project Settings → Environment
+   Variables; copy them from Supabase → Project Settings → API keys), then
+   redeploy. `VITE_` values are built into the app; the service key stays on
+   the server:
+
+   | variable | value |
+   |---|---|
+   | `VITE_SUPABASE_URL` | the project URL |
+   | `VITE_SUPABASE_ANON_KEY` | the anon (publishable) key |
+   | `SUPABASE_SERVICE_ROLE_KEY` | the service_role (secret) key: used only by `api/account.ts` to delete an account |
+
+   Connecting the project with Vercel's Supabase integration instead sets
+   `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` /
+   `SUPABASE_SERVICE_ROLE_KEY`, which work too. `.env.example` lists them for
+   local runs (`.env.local`).
+
+How it fits together:
+- `src/account/account.ts`: sign-in (supabase-js, loaded only when accounts
+  are set up), the session, and when to sync.
+- `src/trips/sync.ts`: one sync: read the account's row, merge, save it only
+  if its `version` hasn't moved (else read and merge again).
+- `src/trips/log.ts`: the merge. A trip's name and date come from the copy
+  edited last; a run is kept if it was marked after it was last unmarked; a
+  deleted trip stays in the log, hidden, so the deletion reaches other
+  devices. `npm test` checks these rules, and that random changes on three
+  devices give the same result whatever order they sync in.
+- `api/account.ts`: deletes the account with the service key (the row goes
+  with it).
 
 ## What was done
 
@@ -165,6 +234,9 @@ checked on zoomed crops instead, see the playbook).
 | `npm run trails:apply -- --resort <id> [--panel <p>]` | proposals + reviews → `trailPaths.json` (what the app draws) |
 | `npm run reviews:import -- <export dir> --resort <id>` | review-page export → `trailReviews.json` |
 | `tools/trailmap/resorts/vail/regen.sh` | rebuild all of Vail's data from its readings and decisions |
+| `npm test` | the trip merge and sync rules (`tests/tripLog.test.ts`, Node's test runner) |
+| `node scripts/mockSupabase.cjs` | a stand-in Supabase project, for trying accounts without one |
+| `node tools/accounts_check.cjs` | browser check: two devices sign in, sync, edit offline, delete (header has the setup) |
 
 The Python tools for a new map (PDF extraction, raster detection, tiles,
 crops, audits) are listed in the playbook's "Tools in this repo".

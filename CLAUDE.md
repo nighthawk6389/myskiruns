@@ -56,7 +56,14 @@ the already-assigned path (that is circular).
   change those, not the generated files.
 - Record naming decisions about raster-detected pieces as points on the map,
   not piece ids: ids change whenever the detector is re-tuned.
-- Before finishing: `npx tsc -b && npx eslint .`
+- Trips sync between devices by merging (`src/trips/log.ts`), never by
+  overwriting a copy: merging must stay order-independent (commutative,
+  associative, idempotent) and removals stay as markers (`unmarked`,
+  `deletedAt`). `npm test` checks this on random three-device histories.
+- Accounts are optional: with no Supabase variables the app must work as
+  before, with no sign-in shown (README, "Accounts").
+- Before finishing: `npx tsc -b && npx eslint .` (and `npm test` after
+  touching `src/trips/` or `src/account/`)
 - `api/` runs on Vercel as Node ESM (`"type": "module"`): relative imports
   need explicit `.js` extensions or the function fails to load (500 on every
   request). `npx vercel build` reports a missing one as TS2835.
@@ -68,4 +75,11 @@ the already-assigned path (that is circular).
   step 1, has the command. Vail Resorts' sites need headless Chromium; their
   scene7 image CDN works with plain curl.
 - Start `vite preview` in its own subshell and stop it by PID: `pkill -f` can
-  kill the shell that runs it.
+  kill the shell that runs it (any pattern in your own command line matches).
+- Offline checks: Playwright's offline mode doesn't stop a service worker's
+  own requests, so stop the server as well. `vite preview` sends
+  `Vary: Origin`; that is how a precached-script miss showed up (the worker
+  now matches with `ignoreVary`).
+- Accounts without a Supabase project: `scripts/mockSupabase.cjs` stands in
+  for one, and `tools/accounts_check.cjs` drives two devices through sign-in
+  and sync (its header has the commands).

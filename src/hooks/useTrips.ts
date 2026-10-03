@@ -1,34 +1,8 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo, useSyncExternalStore } from 'react';
+import { addTrips, deleteTrip as deleteFromLog, editTrip, isLive, readTrips, toggleRun as toggleInLog, type Trip } from '../trips/log';
+import { getTripsState, isTripsState, newTripId, setTripsState, subscribeTrips, today } from '../trips/store';
 
-export interface Run {
-  trailId: string;
-  /** ISO timestamp of when the run was logged */
-  at: string;
-}
-
-export interface Trip {
-  id: string;
-  /** resort id (src/resorts.ts); trips from before resorts are Killington */
-  resortId?: string;
-  name: string;
-  /** YYYY-MM-DD */
-  startDate: string;
-  createdAt: string;
-  runs: Run[];
-}
-
-interface TripsState {
-  version: 1;
-  trips: Trip[];
-  activeTripId: string | null;
-}
-
-const STORAGE_KEY = 'myskiruns.trips';
-// the pre-trips app stored a flat list of skied trail ids here
-const LEGACY_KEY = 'killington-skied-trails';
-
-const today = () => new Date().toISOString().slice(0, 10);
-const newId = () => `trip-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
+export type { Run, Trip } from '../trips/log';
 
 export const LEGACY_RESORT = 'killington';
 export const tripResort = (t: Trip) => t.resortId ?? LEGACY_RESORT;
@@ -38,57 +12,18 @@ export function defaultTripName(date: string, resortName = 'Killington'): string
   return `${resortName} · ${d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}`;
 }
 
-function isTripsState(v: unknown): v is TripsState {
-  const s = v as TripsState;
-  return !!s && s.version === 1 && Array.isArray(s.trips);
-}
-
-function load(): TripsState {
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      const parsed = JSON.parse(stored);
-      if (isTripsState(parsed)) return parsed;
-    }
-    const legacy = localStorage.getItem(LEGACY_KEY);
-    if (legacy) {
-      const ids: string[] = JSON.parse(legacy);
-      if (Array.isArray(ids) && ids.length) {
-        const now = new Date().toISOString();
-        const trip: Trip = {
-          id: newId(),
-          name: 'Earlier runs',
-          startDate: today(),
-          createdAt: now,
-          runs: ids.map((trailId) => ({ trailId, at: now })),
-        };
-        return { version: 1, trips: [trip], activeTripId: trip.id };
-      }
-    }
-  } catch {
-    // unreadable storage: start fresh rather than crash
-  }
-  return { version: 1, trips: [], activeTripId: null };
-}
-
 const latest = (trips: Trip[]) =>
   trips.reduce<Trip | null>((best, t) => (!best || t.startDate >= best.startDate ? t : best), null);
 
-/** Trips at one resort. Every resort's trips share one stored list; the
- * active trip is the selected one if it is at this resort, else this
- * resort's latest. */
+/** Trips at one resort. Every resort's trips share one stored list
+ * (src/trips/store.ts); the active trip is the selected one if it is at this
+ * resort, else this resort's latest. */
 export function useTrips(resortId: string = LEGACY_RESORT, resortName = 'Killington') {
-  const [state, setState] = useState<TripsState>(load);
+  const state = useSyncExternalStore(subscribeTrips, getTripsState);
+  // deleted trips stay in the stored log so a sync can carry the deletion
+  const liveTrips = useMemo(() => state.trips.filter(isLive), [state.trips]);
 
-  useEffect(() => {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-    } catch {
-      // storage full or blocked; the in-memory state still works this session
-    }
-  }, [state]);
-
-  const resortTrips = useMemo(() => state.trips.filter((t) => tripResort(t) === resortId), [state.trips, resortId]);
+  const resortTrips = useMemo(() => liveTrips.filter((t) => tripResort(t) === resortId), [liveTrips, resortId]);
   const activeTrip = resortTrips.find((t) => t.id === state.activeTripId) ?? latest(resortTrips);
 
   const skiedThisTrip = useMemo(
@@ -101,68 +36,59 @@ export function useTrips(resortId: string = LEGACY_RESORT, resortName = 'Killing
     [resortTrips],
   );
 
+  const newTrip = useCallback(
+    (name: string, startDate: string): Trip => {
+      const now = new Date().toISOString();
+      return {
+        id: newTripId(),
+        resortId,
+        name: name.trim() || defaultTripName(startDate, resortName),
+        startDate,
+        createdAt: now,
+        updatedAt: now,
+        runs: [],
+      };
+    },
+    [resortId, resortName],
+  );
+
   const createTrip = useCallback((name: string, startDate: string) => {
-    const trip: Trip = {
-      id: newId(),
-      resortId,
-      name: name.trim() || defaultTripName(startDate, resortName),
-      startDate,
-      createdAt: new Date().toISOString(),
-      runs: [],
-    };
-    setState((s) => ({ ...s, trips: [...s.trips, trip], activeTripId: trip.id }));
-  }, [resortId, resortName]);
+    const trip = newTrip(name, startDate);
+    setTripsState((s) => ({ ...s, trips: addTrips(s.trips, [trip]), activeTripId: trip.id }));
+  }, [newTrip]);
 
   const selectTrip = useCallback((id: string) => {
-    setState((s) => ({ ...s, activeTripId: id }));
+    setTripsState((s) => ({ ...s, activeTripId: id }));
   }, []);
 
   const updateTrip = useCallback((id: string, patch: Partial<Pick<Trip, 'name' | 'startDate'>>) => {
-    setState((s) => ({ ...s, trips: s.trips.map((t) => (t.id === id ? { ...t, ...patch } : t)) }));
+    setTripsState((s) => ({ ...s, trips: editTrip(s.trips, id, patch, new Date().toISOString()) }));
   }, []);
 
   const deleteTrip = useCallback((id: string) => {
     // with the active trip gone, this resort's latest trip becomes active
-    setState((s) => {
-      const trips = s.trips.filter((t) => t.id !== id);
-      const activeTripId = s.activeTripId === id ? null : s.activeTripId;
-      return { ...s, trips, activeTripId };
-    });
+    setTripsState((s) => ({
+      ...s,
+      trips: deleteFromLog(s.trips, id, new Date().toISOString()),
+      activeTripId: s.activeTripId === id ? null : s.activeTripId,
+    }));
   }, []);
 
   /** Mark a trail skied on the active trip, or unmark it if it already is.
    * With no trip yet, starts one for today. */
   const toggleRun = useCallback((trailId: string) => {
-    setState((s) => {
+    setTripsState((s) => {
       let trips = s.trips;
-      const here = trips.filter((t) => tripResort(t) === resortId);
+      const here = trips.filter((t) => isLive(t) && tripResort(t) === resortId);
       let activeTripId = (here.find((t) => t.id === s.activeTripId) ?? latest(here))?.id ?? null;
       if (!activeTripId) {
-        const date = today();
-        const trip: Trip = {
-          id: newId(),
-          resortId,
-          name: defaultTripName(date, resortName),
-          startDate: date,
-          createdAt: new Date().toISOString(),
-          runs: [],
-        };
-        trips = [...trips, trip];
+        const trip = newTrip('', today());
+        trips = addTrips(trips, [trip]);
         activeTripId = trip.id;
       }
-      trips = trips.map((t) => {
-        if (t.id !== activeTripId) return t;
-        const skied = t.runs.some((r) => r.trailId === trailId);
-        return {
-          ...t,
-          runs: skied
-            ? t.runs.filter((r) => r.trailId !== trailId)
-            : [...t.runs, { trailId, at: new Date().toISOString() }],
-        };
-      });
-      return { ...s, trips, activeTripId };
+      return { ...s, trips: toggleInLog(trips, activeTripId, trailId, new Date().toISOString()), activeTripId };
     });
-  }, [resortId, resortName]);
+  }, [resortId, newTrip]);
 
   const exportJson = useCallback(
     () => JSON.stringify({ app: 'myskiruns', exportedAt: new Date().toISOString(), ...state }, null, 2),
@@ -170,25 +96,28 @@ export function useTrips(resortId: string = LEGACY_RESORT, resortName = 'Killing
   );
 
   /** Merge trips from an exported file; trips already on this device (same id) are kept.
-   * Returns the number of trips added, or throws if the file isn't an export. */
+   * A trip deleted here comes back as a copy. Returns the number of trips
+   * added, or throws if the file isn't an export. */
   const importJson = useCallback((text: string): number => {
     const parsed = JSON.parse(text);
     if (!isTripsState(parsed)) throw new Error('This file is not a My Ski Runs export.');
-    const have = new Set(state.trips.map((t) => t.id));
-    const incoming = parsed.trips.filter((t) => !have.has(t.id));
-    setState((s) => ({
+    const here = new Map(getTripsState().trips.map((t) => [t.id, t]));
+    const incoming = readTrips(parsed.trips)
+      .filter((t) => isLive(t) && !(here.has(t.id) && isLive(here.get(t.id)!)))
+      .map((t) => (here.has(t.id) ? { ...t, id: newTripId() } : t));
+    setTripsState((s) => ({
       ...s,
-      trips: [...s.trips, ...incoming.filter((t) => !s.trips.some((x) => x.id === t.id))],
+      trips: addTrips(s.trips, incoming),
       activeTripId: s.activeTripId ?? incoming[0]?.id ?? null,
     }));
     return incoming.length;
-  }, [state.trips]);
+  }, []);
 
   return {
     /** this resort's trips */
     trips: resortTrips,
     /** every resort's trips (the trip summary needs them to tell "new") */
-    allTrips: state.trips,
+    allTrips: liveTrips,
     activeTrip,
     skiedThisTrip,
     skiedEver,
