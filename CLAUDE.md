@@ -77,7 +77,9 @@ the already-assigned path (that is circular).
 - Start `vite preview` in its own subshell and stop it by PID: `pkill -f` can
   kill the shell that runs it (any pattern in your own command line matches).
 - Offline checks: Playwright's offline mode doesn't stop a service worker's
-  own requests, so stop the server as well. `vite preview` sends
+  own requests, so stop the server as well. Its network throttling doesn't
+  slow them either: to time a slow connection, throttle at the server, one
+  link shared by page and worker. `vite preview` sends
   `Vary: Origin`; that is how a precached-script miss showed up (the worker
   now matches with `ignoreVary`).
 - Accounts without a Supabase project: `scripts/mockSupabase.cjs` stands in
