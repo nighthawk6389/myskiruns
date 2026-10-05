@@ -1,0 +1,11 @@
+// Hunter Mountain's 2025-26 trail map is one vector PDF page (huntermtn.com):
+// every trail is a thin line in its difficulty colour that runs into its name,
+// printed as text in a gap of the line with its symbol at the uphill end. The
+// lines and names come straight from the PDF; each line piece was named by
+// the name it runs into (tools/trailmap/pdf_resort.py) and checked on zoomed
+// crops (tools/trailmap/resorts/hunter/decisions.py). Names are as printed;
+// difficulty is the printed symbol (every single and double diamond checked on
+// a crop). The three glades print a tree icon and no line, and Learning Zone
+// (a beginner area) prints no line: markers at their names. Park Avenue, Park
+// Avenue West and Lower 42nd Street carry the freestyle-terrain pill. x/y/
+// baseY/width are unused layout fields.

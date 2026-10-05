@@ -1,0 +1,17 @@
+{
+ "reviews": {
+  "learning-zone": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A beginner area at the Hunter East base, named with no line: marker at its name",
+   "at": "2026-10-05T21:34:11.000Z",
+   "by": "claude",
+   "labelAt": [
+    17.85,
+    96.02
+   ]
+  }
+ }
+}

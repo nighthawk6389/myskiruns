@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort map image to clickable, named trails
 
-This is the process that put clickable, correctly named trails on eleven
+This is the process that put clickable, correctly named trails on twelve
 resorts' 2025-26 trail maps, starting with Killington (135 trails), written so
 it can be repeated (and sped up) for other resorts. It records what worked,
 what didn't, and what each step cost. Start with **Pick a route**: the source
@@ -21,7 +21,7 @@ a blank page to see what it is.
 
 | the source gives you | route | done this way |
 |---|---|---|
-| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; match each name to the stroke it is printed along, settle the rest on crops yourself (step 3c); no readers | Whiteface, Winter Park (text with no Unicode map), Breckenridge |
+| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; match each name to the stroke it is printed along (`pdf_resort.py`), settle the rest on crops yourself (step 3c); no readers | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain |
 | vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone |
 | lines as filled outlines, names as outlined glyphs | rasterise the outline fills and thin them to centre lines (Copper notes in step 1); `pdf_glyphs.py` | Copper Mountain |
 | vector strokes, names you can't extract | numbered tiles read by parallel readers (step 3) | Stowe, Okemo, Sugarbush |
@@ -47,16 +47,20 @@ smooth upscale of the embedded one (Copper).
 | Copper Mountain | PDF outlined lines + outlined glyphs | 128 (104 + 24) | skeletonised outlines, glyph sheets; crops |
 | Keystone | PDF strokes + outlined glyphs | 145 (120 + 25) | `pdf_glyphs.py`, matching; image matted over scene7; crops |
 | Vail | three raster panels from scene7 | 194 (173 + 21) | `raster_lines.py`, named on review tiles; crops |
+| Hunter Mountain | PDF strokes + text, vector painting | 70 (66 + 4) | `pdf_resort.py` matching, 2 pieces settled on crops; crops |
 
 Where each resort's decisions live: each piece's name is in
 `trailProposals.json` (a vector extraction is deterministic, so a PDF map's
 piece ids are stable), stretches and markers in `trailReviews.json`
-(`"by": "claude"` unless a person decided). Only Vail's pipeline is in the
-repo, in `tools/trailmap/resorts/vail/`: its raster piece ids change whenever
-the detector is re-tuned, so its decisions are kept as points and
-`regen.sh` rebuilds every Vail file from them (byte for byte). The one-off
-scripts that built the PDF maps were not kept; step 1 records their methods,
-and their shape was the same as Vail's.
+(`"by": "claude"` unless a person decided). Vail's and Hunter Mountain's
+pipelines are in the repo, in `tools/trailmap/resorts/<id>/`: decisions are
+kept as points (Vail's raster piece ids change whenever the detector is
+re-tuned) and `regen.sh` rebuilds every file of the resort from them (byte
+for byte). Hunter's is the template for a PDF map: `resort.py` says how the
+map prints things, `decisions.py` holds what the crops settled, and
+`tools/trailmap/pdf_resort.py` does the matching and runs the pipeline. The
+one-off scripts that built the PDF maps before Hunter were not kept; step 1
+records their methods.
 
 **To fix one trail on any resort** without re-running a pipeline: add a review
 for it to its `trailReviews.json` (`status: confirmed` with `polylines` ids
@@ -108,6 +112,9 @@ every overlay on crops and run the hover check (step 4).
 | `tools/trailmap/snap_trace.py` | Rough points read off a grid crop → a stretch on the painted line, for lines the detection missed |
 | `tools/trailmap/symbol_audit.py` | Symbols off their trail's overlay or at an overlay end, and a contact sheet of every diamond |
 | `tools/trailmap/resorts/vail/` | Vail's pipeline: readings, point-keyed decisions, `regen.sh` (see its README) |
+| `tools/trailmap/pdf_resort.py` | A PDF map's names → pieces (auto-match + `decisions.py`), stretches along names printed in a line's gap, then the whole pipeline into `src/data/resorts/<id>/`; `add` records decisions as points |
+| `tools/trailmap/resorts/hunter/` | Hunter Mountain's pipeline (`resort.py`, `decisions.py`, `header.txt`, `regen.sh`): the template for a PDF map |
+| `tools/trailmap/fetch_pdf.cjs` | Downloads a PDF from inside the resort's page in headless Chromium (Vail Resorts' sites refuse curl) |
 | `tools/trailmap/render_tiles.py` | Zoomed tiles with every piece drawn and numbered, for the readers |
 | `tools/trailmap/prompts/*.md` | Reader prompts: name pieces, symbols + missing, whole-map search |
 | `tools/trailmap/aggregate_readings.py` | Readers' votes → per-trail proposals + review-page data |
@@ -327,6 +334,32 @@ Getting the source in this sandbox:
     each), and `regen.sh`, which downloads the panels and rebuilds every Vail
     data file and map image byte for byte. Its README is the template for
     another raster resort.
+- **Text names in a gap of each line, vector painting (Hunter Mountain
+  2025-26):** the painting is vectors too (246,000 drawings: rendering the
+  page takes ~30 s), and every trail is a 0.38 pt stroke in its difficulty
+  colour (lifts are thicker maroon strokes) that runs into its name: the
+  name is printed in a gap of the line, with its symbol at the uphill end.
+  `tools/trailmap/resorts/hunter/` builds it with `pdf_resort.py`:
+  - Names: FuturaPTCond-Medium 3.8 pt text. A name is drawn twice (halo),
+    curved names also one object per letter, and two names that sit together
+    are also drawn as one object (TAYLOR'S RUN WHICH WAY GLADES): keep one
+    copy of each, keep the parts. Four names are printed in two parts (UPPER
+    EAST / SIDE DRIVE, MAD / BOX, ...): `JOIN` in `resort.py`.
+  - Symbols have rounded corners, and a double diamond is one outline
+    (`pdf_symbols.py --rounded`): 73 symbols, one per name.
+  - Matching: each name end (just past its first or last character, or its
+    symbol) takes the nearest piece end within 4 pt, preferring the symbol's
+    colour. A piece with one end at a name's text and the other at the next
+    name's symbol belongs to the first (the line goes on from its label until
+    the next trail starts). Then continuations. That named 127 of 129 pieces;
+    2 were settled on crops (Park Avenue West's line below its two-line
+    label, Belt Parkway Bypass's line set beside its name), and Upper
+    Crossover's line is its label alone.
+  - Each name printed in a gap gets a stretch along its own characters, from
+    the symbol, so the overlay runs through the label (66 stretches).
+  - Glades print a tree icon, a diamond and no line: markers. Extract the
+    pieces with `--min-length 0.8`: ten real stubs (the line between a
+    symbol and the next trail) are under 4 pt.
 - **Several panels:** a resort drawn on more than one map keeps one
   `trails.ts` and, per panel, `panels/<panel>/` with its own
   `linePolylines`, `trailProposals`, `trailReviews` and `trailPaths`; the map
@@ -495,7 +528,11 @@ pieces (Crossover, Jake's Ride), which they redrew by hand. So:
 ### 3c. Naming the pieces yourself (no readers)
 
 From Whiteface on, the PDF gave the names as text or glyphs, and Claude named
-every piece itself; Vail did the same with raster-detected pieces. The loop:
+every piece itself; Vail did the same with raster-detected pieces. On a PDF
+map, `tools/trailmap/pdf_resort.py <id> build` does the auto-match and writes
+the review-tile inputs (`names.json`: `id:name`, `~` a stretch, `?`
+undecided); `pdf_resort.py <id> add "crop" 123=NAME` records a decision. The
+loop:
 
 1. **Auto-match** names to pieces from where the map prints them, preferring
    pieces of the symbol's colour:
@@ -759,13 +796,12 @@ In rough order of payoff:
    `--panel <id>` for a map in several panels, kept in `panels/<panel>/`);
    the image size comes from the map file. Still to do: a `legend.json` per
    map.
-2. **One label-to-piece matcher for PDF maps.** Whiteface, Winter Park,
+2. **One label-to-piece matcher for PDF maps** — done from Hunter Mountain
+   on: `tools/trailmap/pdf_resort.py` takes `pdf_labels.py`'s or
+   `pdf_glyphs.py`'s labels (one format) and a resort folder (`resort.py`,
+   `decisions.py`) and runs the whole pipeline. Whiteface, Winter Park,
    Breckenridge, Copper Mountain and Keystone each had a scratch copy of the
-   same matching rules (step 3c), fed by `pdf_labels.py` or `pdf_glyphs.py`.
-   Give those two tools one label format and the matcher becomes a tool;
-   Vail's `build.py` and `reading.py` show the rest of the shape (readings and
-   decisions in, `seed_roster` / `aggregate_readings` / `traces_to_reviews`
-   inputs out).
+   same rules and could be moved onto it.
 3. **A per-map legend file** (trail colors, lift color, boundary, highlight
    bands, symbols, text styles) feeding both the detector's color gates and
    the reader prompts.

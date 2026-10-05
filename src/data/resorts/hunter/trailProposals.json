@@ -1,0 +1,686 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "7th-avenue": {
+   "polylines": [
+    72,
+    73,
+    176
+   ],
+   "confidence": "high",
+   "mapName": "7TH AVENUE",
+   "note": "end of 7TH AVENUE | symbol of 7TH AVENUE | along its printed name"
+  },
+  "annapurna": {
+   "polylines": [
+    0,
+    1,
+    177
+   ],
+   "confidence": "high",
+   "mapName": "ANNAPURNA",
+   "note": "end of ANNAPURNA | symbol of ANNAPURNA | along its printed name"
+  },
+  "b-flat": {
+   "polylines": [
+    51,
+    52,
+    193
+   ],
+   "confidence": "high",
+   "mapName": "B FLAT",
+   "note": "symbol of B FLAT | end of B FLAT | along its printed name"
+  },
+  "belt-parkway": {
+   "polylines": [
+    76,
+    77,
+    78,
+    79,
+    159,
+    163,
+    164
+   ],
+   "confidence": "high",
+   "mapName": "BELT PARKWAY",
+   "note": "symbol of BELT PARKWAY | end of BELT PARKWAY | along its printed name"
+  },
+  "belt-parkway-bypass": {
+   "polylines": [
+    80
+   ],
+   "confidence": "high",
+   "mapName": "BELT PARKWAY BYPASS",
+   "note": "checked on a crop"
+  },
+  "bleecker-street": {
+   "polylines": [
+    34,
+    128,
+    141
+   ],
+   "confidence": "high",
+   "mapName": "BLEECKER STREET",
+   "note": "symbol of BLEECKER STREET | end of BLEECKER STREET | along its printed name"
+  },
+  "boston-road": {
+   "polylines": [
+    107,
+    108,
+    166
+   ],
+   "confidence": "high",
+   "mapName": "BOSTON ROAD",
+   "note": "end of BOSTON ROAD | symbol of BOSTON ROAD | along its printed name"
+  },
+  "briar-patch": {
+   "polylines": [
+    105,
+    106,
+    165
+   ],
+   "confidence": "high",
+   "mapName": "BRIAR PATCH",
+   "note": "end of BRIAR PATCH | symbol of BRIAR PATCH | along its printed name"
+  },
+  "buckys-run": {
+   "polylines": [
+    124,
+    125,
+    167
+   ],
+   "confidence": "high",
+   "mapName": "BUCKY\u2019S RUN",
+   "note": "end of BUCKY\u2019S RUN | symbol of BUCKY\u2019S RUN | along its printed name"
+  },
+  "central-park": {
+   "polylines": [
+    103,
+    104,
+    153
+   ],
+   "confidence": "high",
+   "mapName": "CENTRAL PARK",
+   "note": "end of CENTRAL PARK | symbol of CENTRAL PARK | along its printed name"
+  },
+  "central-park-north": {
+   "polylines": [
+    109,
+    110,
+    133
+   ],
+   "confidence": "high",
+   "mapName": "CENTRAL PARK NORTH",
+   "note": "end of CENTRAL PARK NORTH | symbol of CENTRAL PARK NORTH | along its printed name"
+  },
+  "clairs-way": {
+   "polylines": [
+    4,
+    5,
+    6,
+    173,
+    174
+   ],
+   "confidence": "high",
+   "mapName": "CLAIR\u2019S WAY",
+   "note": "end of CLAIR\u2019S WAY | symbol of CLAIR\u2019S WAY | along its printed name"
+  },
+  "drop-off": {
+   "polylines": [
+    17,
+    18,
+    187
+   ],
+   "confidence": "high",
+   "mapName": "DROP OFF",
+   "note": "end of DROP OFF | symbol of DROP OFF | along its printed name"
+  },
+  "eisenhower-drive": {
+   "polylines": [
+    37,
+    38,
+    135
+   ],
+   "confidence": "high",
+   "mapName": "EISENHOWER DRIVE",
+   "note": "end of EISENHOWER DRIVE | symbol of EISENHOWER DRIVE | along its printed name"
+  },
+  "empire-trail": {
+   "polylines": [
+    39,
+    40,
+    156
+   ],
+   "confidence": "high",
+   "mapName": "EMPIRE TRAIL",
+   "note": "end of EMPIRE TRAIL | symbol of EMPIRE TRAIL | along its printed name"
+  },
+  "fifth-avenue": {
+   "polylines": [
+    55,
+    56,
+    155
+   ],
+   "confidence": "high",
+   "mapName": "FIFTH AVENUE",
+   "note": "end of FIFTH AVENUE | symbol of FIFTH AVENUE | along its printed name"
+  },
+  "fordham-road": {
+   "polylines": [
+    114,
+    115,
+    154
+   ],
+   "confidence": "high",
+   "mapName": "FORDHAM ROAD",
+   "note": "end of FORDHAM ROAD | symbol of FORDHAM ROAD | along its printed name"
+  },
+  "gateway": {
+   "polylines": [
+    47,
+    48,
+    188
+   ],
+   "confidence": "high",
+   "mapName": "GATEWAY",
+   "note": "end of GATEWAY | symbol of GATEWAY | along its printed name"
+  },
+  "gramercy-park": {
+   "polylines": [
+    123,
+    150
+   ],
+   "confidence": "high",
+   "mapName": "GRAMERCY PARK",
+   "note": "symbol of GRAMERCY PARK | along its printed name"
+  },
+  "grand-concourse": {
+   "polylines": [
+    111,
+    112,
+    140
+   ],
+   "confidence": "high",
+   "mapName": "GRAND CONCOURSE",
+   "note": "end of GRAND CONCOURSE | symbol of GRAND CONCOURSE | along its printed name"
+  },
+  "gun-hill-road": {
+   "polylines": [
+    65,
+    66,
+    157
+   ],
+   "confidence": "high",
+   "mapName": "GUN HILL ROAD",
+   "note": "end of GUN HILL ROAD | symbol of GUN HILL ROAD | along its printed name"
+  },
+  "hellgate": {
+   "polylines": [
+    19,
+    20,
+    182
+   ],
+   "confidence": "high",
+   "mapName": "HELLGATE",
+   "note": "end of HELLGATE | symbol of HELLGATE | along its printed name"
+  },
+  "herald-square": {
+   "polylines": [
+    49,
+    50,
+    152
+   ],
+   "confidence": "high",
+   "mapName": "HERALD SQUARE",
+   "note": "end of HERALD SQUARE | symbol of HERALD SQUARE | along its printed name"
+  },
+  "jimmy-huega": {
+   "polylines": [
+    13,
+    14,
+    171
+   ],
+   "confidence": "high",
+   "mapName": "JIMMY HUEGA",
+   "note": "end of JIMMY HUEGA | symbol of JIMMY HUEGA | along its printed name"
+  },
+  "kmc-drive": {
+   "polylines": [
+    59,
+    60,
+    178
+   ],
+   "confidence": "high",
+   "mapName": "KMC DRIVE",
+   "note": "end of KMC DRIVE | symbol of KMC DRIVE | along its printed name"
+  },
+  "kennedy-drive": {
+   "polylines": [
+    63,
+    64,
+    151
+   ],
+   "confidence": "high",
+   "mapName": "KENNEDY DRIVE",
+   "note": "end of KENNEDY DRIVE | symbol of KENNEDY DRIVE | along its printed name"
+  },
+  "lower-42nd-street": {
+   "polylines": [
+    69,
+    70,
+    71,
+    136
+   ],
+   "confidence": "high",
+   "mapName": "LOWER 42ND STREET",
+   "note": "end of LOWER 42ND STREET | symbol of LOWER 42ND STREET | continuation | along its printed name"
+  },
+  "lower-broadway": {
+   "polylines": [
+    41,
+    42,
+    147
+   ],
+   "confidence": "high",
+   "mapName": "LOWER BROADWAY",
+   "note": "end of LOWER BROADWAY | symbol of LOWER BROADWAY | along its printed name"
+  },
+  "lower-crossover": {
+   "polylines": [
+    30,
+    31,
+    142
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CROSSOVER",
+   "note": "end of LOWER CROSSOVER | symbol of LOWER CROSSOVER | along its printed name"
+  },
+  "lower-east-side-drive": {
+   "polylines": [
+    23,
+    130
+   ],
+   "confidence": "high",
+   "mapName": "LOWER EAST SIDE DRIVE",
+   "note": "end of LOWER EAST SIDE DRIVE | along its printed name"
+  },
+  "lower-highlands": {
+   "polylines": [
+    97,
+    98,
+    139
+   ],
+   "confidence": "high",
+   "mapName": "LOWER HIGHLANDS",
+   "note": "end of LOWER HIGHLANDS | symbol of LOWER HIGHLANDS | along its printed name"
+  },
+  "lower-k27": {
+   "polylines": [
+    26,
+    27,
+    179
+   ],
+   "confidence": "high",
+   "mapName": "LOWER K27",
+   "note": "end of LOWER K27 | symbol of LOWER K27 | along its printed name"
+  },
+  "lower-sleepy-hollow": {
+   "polylines": [
+    83,
+    84,
+    132
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SLEEPY HOLLOW",
+   "note": "end of LOWER SLEEPY HOLLOW | symbol of LOWER SLEEPY HOLLOW | along its printed name"
+  },
+  "macombs": {
+   "polylines": [
+    116,
+    117,
+    190
+   ],
+   "confidence": "high",
+   "mapName": "MACOMBS",
+   "note": "end of MACOMBS | symbol of MACOMBS | along its printed name"
+  },
+  "mad-box": {
+   "polylines": [
+    113
+   ],
+   "confidence": "high",
+   "mapName": "MAD BOX",
+   "note": "symbol of MAD BOX"
+  },
+  "madison-avenue": {
+   "polylines": [
+    61,
+    62,
+    146
+   ],
+   "confidence": "high",
+   "mapName": "MADISON AVENUE",
+   "note": "end of MADISON AVENUE | symbol of MADISON AVENUE | along its printed name"
+  },
+  "madison-square": {
+   "polylines": [
+    126,
+    127,
+    145
+   ],
+   "confidence": "high",
+   "mapName": "MADISON SQUARE",
+   "note": "end of MADISON SQUARE | symbol of MADISON SQUARE | along its printed name"
+  },
+  "milky-way": {
+   "polylines": [
+    28,
+    29,
+    181
+   ],
+   "confidence": "high",
+   "mapName": "MILKY WAY",
+   "note": "end of MILKY WAY | symbol of MILKY WAY | along its printed name"
+  },
+  "minya-konka": {
+   "polylines": [
+    32,
+    33,
+    175
+   ],
+   "confidence": "high",
+   "mapName": "MINYA KONKA",
+   "note": "end of MINYA KONKA | symbol of MINYA KONKA | along its printed name"
+  },
+  "mossy-brook": {
+   "polylines": [
+    53,
+    54,
+    168
+   ],
+   "confidence": "high",
+   "mapName": "MOSSY BROOK",
+   "note": "end of MOSSY BROOK | symbol of MOSSY BROOK | along its printed name"
+  },
+  "overlook": {
+   "polylines": [
+    9,
+    10,
+    186
+   ],
+   "confidence": "high",
+   "mapName": "OVERLOOK",
+   "note": "end of OVERLOOK | symbol of OVERLOOK | along its printed name"
+  },
+  "park-avenue": {
+   "polylines": [
+    43,
+    44,
+    169
+   ],
+   "confidence": "high",
+   "mapName": "PARK AVENUE",
+   "note": "end of PARK AVENUE | symbol of PARK AVENUE | along its printed name"
+  },
+  "park-avenue-west": {
+   "polylines": [
+    45,
+    46
+   ],
+   "confidence": "high",
+   "mapName": "PARK AVENUE WEST",
+   "note": "checked on a crop | symbol of PARK AVENUE WEST"
+  },
+  "racers-edge": {
+   "polylines": [
+    35,
+    36,
+    158
+   ],
+   "confidence": "high",
+   "mapName": "RACER\u2019S EDGE",
+   "note": "end of RACER\u2019S EDGE | symbol of RACER\u2019S EDGE | along its printed name"
+  },
+  "rip-van-winkle": {
+   "polylines": [
+    99,
+    100,
+    149
+   ],
+   "confidence": "high",
+   "mapName": "RIP VAN WINKLE",
+   "note": "end of RIP VAN WINKLE | symbol of RIP VAN WINKLE | along its printed name"
+  },
+  "rips-return": {
+   "polylines": [
+    89,
+    90,
+    162
+   ],
+   "confidence": "high",
+   "mapName": "RIP\u2019S RETURN",
+   "note": "end of RIP\u2019S RETURN | symbol of RIP\u2019S RETURN | along its printed name"
+  },
+  "rusk-road": {
+   "polylines": [
+    91,
+    92,
+    184
+   ],
+   "confidence": "high",
+   "mapName": "RUSK ROAD",
+   "note": "end of RUSK ROAD | symbol of RUSK ROAD | along its printed name"
+  },
+  "taylors-run": {
+   "polylines": [
+    120,
+    161
+   ],
+   "confidence": "high",
+   "mapName": "TAYLOR\u2019S RUN",
+   "note": "end of TAYLOR\u2019S RUN | along its printed name"
+  },
+  "the-battery": {
+   "polylines": [
+    57,
+    58,
+    170
+   ],
+   "confidence": "high",
+   "mapName": "THE BATTERY",
+   "note": "end of THE BATTERY | symbol of THE BATTERY | along its printed name"
+  },
+  "the-cliff": {
+   "polylines": [
+    15,
+    16,
+    183
+   ],
+   "confidence": "high",
+   "mapName": "THE CLIFF",
+   "note": "end of THE CLIFF | symbol of THE CLIFF | along its printed name"
+  },
+  "the-colonels-alternative": {
+   "polylines": [
+    118,
+    119,
+    129
+   ],
+   "confidence": "high",
+   "mapName": "THE COLONEL\u2019S ALTERNATIVE",
+   "note": "end of THE COLONEL\u2019S ALTERNATIVE | symbol of THE COLONEL\u2019S ALTERNATIVE | along its printed name"
+  },
+  "the-milky-glades": {
+   "noLine": true,
+   "label": [
+    47.25,
+    51.11
+   ],
+   "confidence": "high"
+  },
+  "times-square": {
+   "polylines": [
+    74,
+    75,
+    160
+   ],
+   "confidence": "high",
+   "mapName": "TIMES SQUARE",
+   "note": "end of TIMES SQUARE | symbol of TIMES SQUARE | along its printed name"
+  },
+  "twilight": {
+   "polylines": [
+    11,
+    12,
+    185
+   ],
+   "confidence": "high",
+   "mapName": "TWILIGHT",
+   "note": "end of TWILIGHT | symbol of TWILIGHT | along its printed name"
+  },
+  "upper-42nd-street": {
+   "polylines": [
+    67,
+    68,
+    137
+   ],
+   "confidence": "high",
+   "mapName": "UPPER 42ND STREET",
+   "note": "end of UPPER 42ND STREET | symbol of UPPER 42ND STREET | along its printed name"
+  },
+  "upper-crossover": {
+   "polylines": [
+    143
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CROSSOVER",
+   "note": "along its printed name"
+  },
+  "upper-east-side-drive": {
+   "polylines": [
+    24,
+    25,
+    194
+   ],
+   "confidence": "high",
+   "mapName": "UPPER EAST SIDE DRIVE",
+   "note": "end of UPPER EAST SIDE DRIVE | symbol of UPPER EAST SIDE DRIVE | along its printed name"
+  },
+  "upper-hemlocks": {
+   "polylines": [
+    95,
+    96,
+    144
+   ],
+   "confidence": "high",
+   "mapName": "UPPER HEMLOCKS",
+   "note": "symbol of UPPER HEMLOCKS | end of UPPER HEMLOCKS | along its printed name"
+  },
+  "upper-highlands": {
+   "polylines": [
+    93,
+    94,
+    138
+   ],
+   "confidence": "high",
+   "mapName": "UPPER HIGHLANDS",
+   "note": "symbol of UPPER HIGHLANDS | end of UPPER HIGHLANDS | along its printed name"
+  },
+  "upper-k27": {
+   "polylines": [
+    21,
+    22,
+    180
+   ],
+   "confidence": "high",
+   "mapName": "UPPER K27",
+   "note": "end of UPPER K27 | symbol of UPPER K27 | along its printed name"
+  },
+  "upper-sleepy-hollow": {
+   "polylines": [
+    85,
+    86,
+    131
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SLEEPY HOLLOW",
+   "note": "end of UPPER SLEEPY HOLLOW | symbol of UPPER SLEEPY HOLLOW | along its printed name"
+  },
+  "upper-taylors-run": {
+   "polylines": [
+    121,
+    122,
+    134
+   ],
+   "confidence": "high",
+   "mapName": "UPPER TAYLOR\u2019S RUN",
+   "note": "end of UPPER TAYLOR\u2019S RUN | symbol of UPPER TAYLOR\u2019S RUN | along its printed name"
+  },
+  "way-in": {
+   "polylines": [
+    7,
+    8,
+    192
+   ],
+   "confidence": "high",
+   "mapName": "WAY IN",
+   "note": "end of WAY IN | symbol of WAY IN | along its printed name"
+  },
+  "way-out": {
+   "polylines": [
+    87,
+    88,
+    191
+   ],
+   "confidence": "high",
+   "mapName": "WAY OUT",
+   "note": "end of WAY OUT | symbol of WAY OUT | along its printed name"
+  },
+  "west-side-glide": {
+   "polylines": [
+    101,
+    102,
+    148
+   ],
+   "confidence": "high",
+   "mapName": "WEST SIDE GLIDE",
+   "note": "end of WEST SIDE GLIDE | symbol of WEST SIDE GLIDE | along its printed name"
+  },
+  "westway": {
+   "polylines": [
+    2,
+    3,
+    189
+   ],
+   "confidence": "high",
+   "mapName": "WESTWAY",
+   "note": "end of WESTWAY | symbol of WESTWAY | along its printed name"
+  },
+  "which-way-glades": {
+   "noLine": true,
+   "label": [
+    74.58,
+    48.33
+   ],
+   "confidence": "high"
+  },
+  "white-cloud": {
+   "polylines": [
+    81,
+    82,
+    172
+   ],
+   "confidence": "high",
+   "mapName": "WHITE CLOUD",
+   "note": "end of WHITE CLOUD | symbol of WHITE CLOUD | along its printed name"
+  },
+  "woodstock-glades": {
+   "noLine": true,
+   "label": [
+    77.72,
+    68.17
+   ],
+   "confidence": "high"
+  }
+ }
+}

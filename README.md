@@ -2,8 +2,9 @@
 
 A React + TypeScript app for tracking which trails you've skied, on the
 resorts' own trail maps: every trail is a clickable, correctly named overlay on
-the map. Eleven resorts so far (Killington, Stowe, Okemo, Sugarbush, Jay Peak,
-Whiteface, Winter Park, Breckenridge, Copper Mountain, Keystone, Vail). The
+the map. Twelve resorts so far (Killington, Stowe, Okemo, Sugarbush, Jay Peak,
+Whiteface, Winter Park, Breckenridge, Copper Mountain, Keystone, Vail, Hunter
+Mountain). The
 interesting part of this repo is the **trail-map pipeline** that puts those
 overlays on a map: from a resort's PDF (vector lines, text, outlined glyphs) or
 its raster images (line detection), through naming every line, to an audit of
@@ -220,8 +221,8 @@ drawn on. The pipeline scripts take `--panel <id>` as well, e.g.
 
 Resorts so far: Killington, Stowe and Okemo (reviewed on the Trail Check
 page); Sugarbush, Jay Peak, Whiteface, Winter Park, Breckenridge, Copper
-Mountain, Keystone and Vail (2025-26 maps, no review page: every overlay
-checked on zoomed crops instead, see the playbook).
+Mountain, Keystone, Vail and Hunter Mountain (2025-26 maps, no review page:
+every overlay checked on zoomed crops instead, see the playbook).
 
 ## Scripts
 
@@ -236,6 +237,7 @@ checked on zoomed crops instead, see the playbook).
 | `npm run trails:apply -- --resort <id> [--panel <p>]` | proposals + reviews → `trailPaths.json` (what the app draws) |
 | `npm run reviews:import -- <export dir> --resort <id>` | review-page export → `trailReviews.json` |
 | `tools/trailmap/resorts/vail/regen.sh` | rebuild all of Vail's data from its readings and decisions |
+| `tools/trailmap/resorts/hunter/regen.sh` | rebuild all of Hunter Mountain's data from its PDF and decisions (`tools/trailmap/pdf_resort.py`) |
 | `npm test` | the trip merge and sync rules (`tests/tripLog.test.ts`, Node's test runner) |
 | `node scripts/mockSupabase.cjs` | a stand-in Supabase project, for trying accounts without one |
 | `node tools/accounts_check.cjs` | browser check: two devices sign in, sync, edit offline, delete (header has the setup) |
@@ -355,13 +357,14 @@ and re-encoded with 4:2:0 chroma subsampling — prefer it as pipeline input.
 
 ## What's left
 
-1. **A person's confirmation** for the eight resorts Claude checked on crops
-   instead of the review page (Sugarbush through Vail), if the owner wants
-   it: the Trail Check page can be published for any resort (playbook,
-   step 4).
-2. **Shared tooling** (playbook, "Scaling to many maps"): one label-to-piece
-   matcher for PDF maps (each PDF resort had its own scratch copy), a
-   per-map legend file, readers run from a script.
+1. **A person's confirmation** for the nine resorts Claude checked on crops
+   instead of the review page (Sugarbush through Hunter Mountain), if the
+   owner wants it: the Trail Check page can be published for any resort
+   (playbook, step 4).
+2. **Shared tooling** (playbook, "Scaling to many maps"): the label-to-piece
+   matcher for PDF maps is now `tools/trailmap/pdf_resort.py` (Hunter
+   Mountain on; the five PDF resorts before it each had a scratch copy); still
+   to do: a per-map legend file, readers run from a script.
 3. Killington (359/361) and Stowe (351/353) hover misses are stretches two
    trails share, where either name is right.
 4. Vail: Cookshack's second diamond has no line of its own (the trail's
@@ -371,8 +374,8 @@ and re-encoded with 4:2:0 chroma subsampling — prefer it as pipeline input.
 ## Regenerating the data (order matters)
 
 Killington's data, from its original pipeline (the other resorts were built
-by the playbook's routes; Vail's whole dataset is rebuilt by
-`tools/trailmap/resorts/vail/regen.sh`):
+by the playbook's routes; Vail's and Hunter Mountain's whole datasets are
+rebuilt by `tools/trailmap/resorts/<id>/regen.sh`):
 
 ```bash
 node scripts/extractLabels.mjs        # OCR -> labelAnchors.json (keeps pass-2 labels)

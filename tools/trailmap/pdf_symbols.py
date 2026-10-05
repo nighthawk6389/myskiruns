@@ -10,7 +10,9 @@ A symbol is a small filled shape in a symbol colour: a circle is a fill made of
 exactly four curves; a square or diamond is a four-cornered fill with
 near-equal sides (diamonds at most --max-diamond pt, so glade-icon frames in
 the same colour don't count); two diamonds 0.6-1.6 sizes apart are a double
-diamond. Take the colours from the printed legend's symbols (tally small fills
+diamond. With --rounded (Hunter's symbols have rounded corners) a square or
+diamond is any fill of lines and curves about as wide as tall, and a double
+diamond is one fill about 1.5x as wide as tall. Take the colours from the printed legend's symbols (tally small fills
 with pymupdf); --exclude the legend itself. Output: [{type, src, sizePt}] with
 src in map-image px, the same grid as extract_pdf_vectors.py with the same
 --clip and --scale.
@@ -75,6 +77,14 @@ def extract(a):
             if kinds != ['c'] * 4 or not 0.75 < r.width / r.height < 1.33:
                 continue
             size = (r.width + r.height) / 2
+        elif a.rounded and 'c' in kinds and 'l' in kinds:
+            # rounded corners: judged by the bounding box. A fill in the diamond colour about 1.5x as wide as
+            # tall is a double diamond drawn as one outline (Hunter)
+            ratio, size = r.width / r.height, r.height
+            if typ == 'diamond' and 1.3 < ratio < 1.8:
+                typ = 'double-diamond'
+            elif not 0.8 < ratio < 1.25 or size > (a.max_diamond if typ == 'diamond' else 7):
+                continue
         else:
             if kinds not in (['l'] * 3, ['l'] * 4, ['qu'], ['re']):
                 continue
@@ -137,6 +147,9 @@ def main():
     ap.add_argument('--square', required=True, help='fill colour of the more-difficult symbol')
     ap.add_argument('--diamond', required=True, help='fill colour of the diamond symbols')
     ap.add_argument('--max-diamond', type=float, default=2.6, help='larger dark squares are icon frames (pt)')
+    ap.add_argument('--rounded', action='store_true',
+                    help='symbols have rounded corners (lines and curves): squares and diamonds are judged by their '
+                         'bounding box, and a diamond-coloured fill 1.3-1.8x as wide as tall is a double diamond')
     ap.add_argument('--exclude', action='append', default=[], help='x0,y0,x1,y1 in PDF points, e.g. the legend')
     ap.add_argument('--out', required=True)
     ap.add_argument('--check', help="labels.json from seed_roster.py: compare with the trails' difficulties")
