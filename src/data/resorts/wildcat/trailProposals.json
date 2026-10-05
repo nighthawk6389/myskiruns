@@ -1,0 +1,386 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "als-folly": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "AL\u2019S FOLLY",
+   "note": "along AL\u2019S FOLLY"
+  },
+  "alley-cat": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "ALLEY CAT",
+   "note": "along ALLEY CAT"
+  },
+  "annies-alley": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "ANNIE\u2019S ALLEY",
+   "note": "checked on a crop"
+  },
+  "black-cat": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "BLACK CAT",
+   "note": "checked on a crop"
+  },
+  "bobcat": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "BOBCAT",
+   "note": "along BOBCAT"
+  },
+  "cat-track": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "CAT TRACK",
+   "note": "along CAT TRACK"
+  },
+  "cat-walk": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "CAT WALK",
+   "note": "along CAT WALK"
+  },
+  "catenary": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "CATENARY",
+   "note": "along CATENARY"
+  },
+  "catnap": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "CATNAP",
+   "note": "along CATNAP"
+  },
+  "cheetah": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "CHEETAH",
+   "note": "along CHEETAH"
+  },
+  "copy-cat": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "COPY CAT",
+   "note": "along COPY CAT"
+  },
+  "cougar": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "COUGAR",
+   "note": "along COUGAR"
+  },
+  "feline": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "FELINE",
+   "note": "checked on a crop"
+  },
+  "hainesville-pass": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "HAINESVILLE PASS",
+   "note": "checked on a crop"
+  },
+  "hairball": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "HAIRBALL",
+   "note": "checked on a crop"
+  },
+  "leos-leap": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "LEO\u2019S LEAP",
+   "note": "checked on a crop"
+  },
+  "lift-lion": {
+   "polylines": [
+    24,
+    28
+   ],
+   "confidence": "high",
+   "mapName": "LIFT LION",
+   "note": "along LIFT LION | checked on a crop"
+  },
+  "lower-cat-track": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CAT TRACK",
+   "note": "traced along the drawn line"
+  },
+  "lower-catapult": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CATAPULT",
+   "note": "checked on a crop"
+  },
+  "lower-catenary": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CATENARY",
+   "note": "along LOWER CATENARY"
+  },
+  "lower-lynx": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LYNX",
+   "note": "along LOWER LYNX"
+  },
+  "lower-polecat": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "LOWER POLECAT",
+   "note": "along LOWER POLECAT"
+  },
+  "lower-wildcat": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WILDCAT",
+   "note": "along LOWER WILDCAT"
+  },
+  "lynx-connection": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "LYNX CONNECTION",
+   "note": "along LYNX CONNECTION"
+  },
+  "lynx-lair": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "LYNX LAIR",
+   "note": "checked on a crop"
+  },
+  "middle-catapult": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE CATAPULT",
+   "note": "checked on a crop"
+  },
+  "middle-lynx": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE LYNX",
+   "note": "along MIDDLE LYNX"
+  },
+  "middle-polecat": {
+   "polylines": [
+    44,
+    49
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE POLECAT",
+   "note": "checked on a crop | along MIDDLE POLECAT"
+  },
+  "middle-wildcat": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE WILDCAT",
+   "note": "along MIDDLE WILDCAT"
+  },
+  "midway": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "MIDWAY",
+   "note": "along MIDWAY"
+  },
+  "ocelot-way": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "OCELOT WAY",
+   "note": "checked on a crop"
+  },
+  "panther": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "PANTHER",
+   "note": "along PANTHER"
+  },
+  "snowcat-slope": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "SNOWCAT SLOPE",
+   "note": "checked on a crop"
+  },
+  "snowcat-trail": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "SNOWCAT TRAIL",
+   "note": "checked on a crop"
+  },
+  "sphynx": {
+   "polylines": [
+    31,
+    32
+   ],
+   "confidence": "high",
+   "mapName": "SPHYNX",
+   "note": "checked on a crop"
+  },
+  "starr-line": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "STARR LINE",
+   "note": "along STARR LINE"
+  },
+  "stray-cat": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "STRAY CAT",
+   "note": "along STRAY CAT"
+  },
+  "the-chute": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "THE CHUTE",
+   "note": "along THE CHUTE"
+  },
+  "tomcat": {
+   "polylines": [
+    41,
+    42
+   ],
+   "confidence": "high",
+   "mapName": "TOMCAT",
+   "note": "along TOMCAT | checked on a crop"
+  },
+  "tomcat-schuss": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "TOMCAT SCHUSS",
+   "note": "along TOMCAT SCHUSS"
+  },
+  "top-cat": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "TOP CAT",
+   "note": "along TOP CAT"
+  },
+  "upper-catapult": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CATAPULT",
+   "note": "along UPPER CATAPULT"
+  },
+  "upper-lynx": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LYNX",
+   "note": "along UPPER LYNX"
+  },
+  "upper-polecat": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "UPPER POLECAT",
+   "note": "along UPPER POLECAT"
+  },
+  "upper-wildcat": {
+   "polylines": [
+    26,
+    27
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WILDCAT",
+   "note": "checked on a crop"
+  },
+  "wild-kitten": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "WILD KITTEN",
+   "note": "along WILD KITTEN"
+  },
+  "wildcat-pitch": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "WILDCAT PITCH",
+   "note": "checked on a crop"
+  }
+ }
+}

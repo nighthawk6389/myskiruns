@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort map image to clickable, named trails
 
-This is the process that put clickable, correctly named trails on twelve
+This is the process that put clickable, correctly named trails on thirteen
 resorts' 2025-26 trail maps, starting with Killington (135 trails), written so
 it can be repeated (and sped up) for other resorts. It records what worked,
 what didn't, and what each step cost. Start with **Pick a route**: the source
@@ -32,6 +32,12 @@ A low-resolution painting under good vectors: `matte_pdf_layer.py` mattes the
 vector layer over a sharper copy of the painting (Breckenridge, Keystone) or a
 smooth upscale of the embedded one (Copper).
 
+This season's PDF has outlined names and flattened lines, but an older export
+of the same artwork has them live (skimap.org keeps past seasons): register the
+two pages on renders, check that every old name lands on the same outlined
+name in this season's page and that this season prints no other name, then
+take the strokes, text and symbols from the old export (Wildcat).
+
 ## Resorts so far
 
 | resort | source | trails (lines + markers) | named and checked by |
@@ -48,15 +54,16 @@ smooth upscale of the embedded one (Copper).
 | Keystone | PDF strokes + outlined glyphs | 145 (120 + 25) | `pdf_glyphs.py`, matching; image matted over scene7; crops |
 | Vail | three raster panels from scene7 | 194 (173 + 21) | `raster_lines.py`, named on review tiles; crops |
 | Hunter Mountain | PDF strokes + text, vector painting | 70 (66 + 4) | `pdf_resort.py` matching, 2 pieces settled on crops; crops |
+| Wildcat Mountain | strokes + text of an older export of this season's artwork; scene7 image | 48 (47 + 1) | 31 pieces named by the name printed along them, 20 settled on crops, 9 cuts; crops |
 
 Where each resort's decisions live: each piece's name is in
 `trailProposals.json` (a vector extraction is deterministic, so a PDF map's
 piece ids are stable), stretches and markers in `trailReviews.json`
 (`"by": "claude"` unless a person decided). Vail's and Hunter Mountain's
-pipelines are in the repo, in `tools/trailmap/resorts/<id>/`: decisions are
-kept as points (Vail's raster piece ids change whenever the detector is
-re-tuned) and `regen.sh` rebuilds every file of the resort from them (byte
-for byte). Hunter's is the template for a PDF map: `resort.py` says how the
+pipelines are in the repo, in `tools/trailmap/resorts/<id>/`, and so is
+Wildcat's: decisions are kept as points (Vail's raster piece ids change
+whenever the detector is re-tuned) and `regen.sh` rebuilds every file of the
+resort from them (byte for byte). Hunter's is the template for a PDF map: `resort.py` says how the
 map prints things, `decisions.py` holds what the crops settled, and
 `tools/trailmap/pdf_resort.py` does the matching and runs the pipeline. The
 one-off scripts that built the PDF maps before Hunter were not kept; step 1
@@ -110,10 +117,12 @@ every overlay on crops and run the hover check (step 4).
 | `scripts/tracePolylines.mjs` | Detection mask → numbered line pieces (`src/data/resorts/<id>/linePolylines.json`) |
 | `tools/trailmap/grid_crop.py` | Zoomed crop with a labelled pixel grid, optionally pieces (`id:name`), overlays and symbols: for reading coordinates and review tiles |
 | `tools/trailmap/snap_trace.py` | Rough points read off a grid crop → a stretch on the painted line, for lines the detection missed |
+| `tools/trailmap/piece_sheet.py` | Contact sheets with each piece alone on its own crop, for maps where one line carries several runs |
 | `tools/trailmap/symbol_audit.py` | Symbols off their trail's overlay or at an overlay end, and a contact sheet of every diamond |
 | `tools/trailmap/resorts/vail/` | Vail's pipeline: readings, point-keyed decisions, `regen.sh` (see its README) |
 | `tools/trailmap/pdf_resort.py` | A PDF map's names → pieces (auto-match + `decisions.py`), stretches along names printed in a line's gap, then the whole pipeline into `src/data/resorts/<id>/`; `add` records decisions as points |
 | `tools/trailmap/resorts/hunter/` | Hunter Mountain's pipeline (`resort.py`, `decisions.py`, `header.txt`, `regen.sh`): the template for a PDF map |
+| `tools/trailmap/resorts/wildcat/` | Wildcat Mountain's: a map whose lines carry several runs each, named on crops |
 | `tools/trailmap/fetch_pdf.cjs` | Downloads a PDF from inside the resort's page in headless Chromium (Vail Resorts' sites refuse curl) |
 | `tools/trailmap/render_tiles.py` | Zoomed tiles with every piece drawn and numbered, for the readers |
 | `tools/trailmap/prompts/*.md` | Reader prompts: name pieces, symbols + missing, whole-map search |
@@ -360,6 +369,33 @@ Getting the source in this sandbox:
   - Glades print a tree icon, a diamond and no line: markers. Extract the
     pieces with `--min-length 0.8`: ten real stubs (the line between a
     symbol and the next trail) are under 4 pt.
+- **Names along the line, one line for several runs (Wildcat Mountain
+  2025-26):** this season's PDF outlines the names and flattens most lines
+  into the painting, but skimap.org's earlier export of the same artwork
+  (map 33684) has 3.27 pt strokes and real text. The two pages differ by a
+  23.77 pt bleed (registered on renders, scale 1.0000); every old name lands
+  on the same outlined name in this season's page, and this season prints no
+  other name (only the dining box differs). The map image is this season's
+  page from scene7 (`20251226_WC_winter-trail_map_001`, registered to the PDF
+  within 0.2 px).
+  - The map prints a run's symbol and name along its line (no gap), and one
+    stroke often carries several runs: Upper, Middle and Lower Lynx; Top Cat
+    and Starr Line; Cat Track, Middle Wildcat and Bobcat (whose join is
+    hidden under Wild Kitten's line). So `resort.py` turns the name-end
+    matching off (`MATCH_ENDS = False`); a name printed along a piece still
+    names it (31 pieces), and the rest was settled piece by piece on contact
+    sheets (`piece_sheet.py`: each piece alone on its own crop) and closer
+    crops: 20 decisions, 3 unnamed links and 9 cuts.
+  - Labels set beside their line point at it with an arrow (Hairball,
+    Sphynx, Leo's Leap, Annie's Alley). Lower Cat Track's arrow points at
+    Wild Kitten's line: its overlay is that stretch (`TRACED`).
+  - Curved names are drawn one object per letter: `pdf_resort.py` joins
+    consecutive letters of one colour into a label, taking its spacing from
+    the whole-word copy when there is one. Symbols are 10-15 pt and rotated
+    (`pdf_symbols.py --max-size 16`); the green FIRST AID CENTER lettering is
+    outlined in the trail green (`--exclude`).
+  - The tree-skiing areas print a diamond and no name, so they aren't trails
+    here; the map's own count is 48 trails, as listed. No double diamonds.
 - **Several panels:** a resort drawn on more than one map keeps one
   `trails.ts` and, per panel, `panels/<panel>/` with its own
   `linePolylines`, `trailProposals`, `trailReviews` and `trailPaths`; the map

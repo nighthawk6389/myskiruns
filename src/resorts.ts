@@ -102,6 +102,7 @@ export const RESORTS: ResortEntry[] = [
     },
   },
   oneMap('hunter', 'Hunter Mountain', () => import('./data/resorts/hunter/trails'), () => import('./data/resorts/hunter/trailPaths.json')),
+  oneMap('wildcat', 'Wildcat Mountain', () => import('./data/resorts/wildcat/trails'), () => import('./data/resorts/wildcat/trailPaths.json')),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Ski-run tracker for twelve resorts (React 19 + TS + Vite). The hard part is
+Ski-run tracker for thirteen resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
@@ -53,9 +53,10 @@ the already-assigned path (that is circular).
   outrank every automatic source, and a regeneration must keep them.
 - Vail's data (and its `trails.ts`) is rebuilt by
   `tools/trailmap/resorts/vail/regen.sh` from `names.py` + `decisions.py`,
-  and Hunter Mountain's by `tools/trailmap/resorts/hunter/regen.sh` from its
-  PDF, `resort.py` + `decisions.py` (`tools/trailmap/pdf_resort.py`): change
-  those, not the generated files. A new PDF resort gets such a folder too.
+  and Hunter's and Wildcat's by `tools/trailmap/resorts/<id>/regen.sh` from
+  their PDF, `resort.py` + `decisions.py` (`tools/trailmap/pdf_resort.py`):
+  change those, not the generated files. A new PDF resort gets such a folder
+  too.
 - Record naming decisions about raster-detected pieces as points on the map,
   not piece ids: ids change whenever the detector is re-tuned.
 - Trips sync between devices by merging (`src/trips/log.ts`), never by

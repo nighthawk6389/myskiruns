@@ -133,17 +133,20 @@ class Resort:
         R = self.R
         raw = self.load('printed.json')
         raw = raw['labels'] if isinstance(raw, dict) else raw  # pdf_glyphs.py: {labels, symbols}
-        L = [{'text': l['text'], 'pts': [self.px(p) for p in l['pts']], 'c': self.px(l['c'])} for l in raw
-             if R.is_name(l)]
+        L = [{'text': l['text'], 'pts': [self.px(p) for p in l['pts']], 'c': self.px(l['c']), 'seq': l.get('seq', 0),
+              'color': tuple(l.get('color') or ()), 'size': l.get('size', 0)} for l in raw if R.is_name(l)]
         near = 0.8 * R.SCALE  # px: two characters this close are one character drawn twice
+        L += self.letter_runs(L)
+        # one copy per printed name (a halo pass, the letters of a curved label, a recoloured copy); spaces aside
         uniq = []
-        for l in sorted(L, key=lambda l: -len(l['pts'])):
-            if not any(u['text'] == l['text'] and math.dist(u['c'], l['c']) < near for u in uniq):
+        for l in sorted(L, key=lambda l: (-len(l['pts']), bool(l.get('run')), -l['text'].count(' '))):
+            key = l['text'].replace(' ', '')
+            if not any(u['text'].replace(' ', '') == key and math.dist(u['c'], l['c']) < near for u in uniq):
                 uniq.append(l)
 
         def on(l, others):
             return all(any(math.dist(p, q) < near for o in others for q in o['pts']) for p in l['pts'])
-        # a curved label is also drawn one object per letter: drop the letters
+        # single letters left over (a curved label also drawn whole): drop the letters
         uniq = [l for l in uniq if len(l['pts']) > 2 or not on(l, [o for o in uniq if len(o['pts']) > 2])]
         # an object holding two names that are also printed apart (TAYLOR'S RUN WHICH WAY GLADES): keep the parts
         keep = []
@@ -153,15 +156,21 @@ class Resort:
             if len(parts) >= 2 and on(l, parts):
                 continue
             keep.append(l)
-        for a_text, b_text in getattr(R, 'JOIN', []):  # a name printed in two parts (two lines)
-            for a in [l for l in keep if l['text'] == a_text]:
-                gap = lambda l: min(math.dist(p, q) for p in a['pts'] for q in l['pts'])  # noqa: E731
-                b = min((l for l in keep if l['text'] == b_text), key=gap, default=None)
-                if b is None or gap(b) > 8 * R.SCALE:
+        for parts in getattr(R, 'JOIN', []):  # a name printed in parts (two or three lines), in reading order
+            for first in [l for l in keep if l['text'] == parts[0]]:
+                chain = [first]
+                for t in parts[1:]:
+                    gap = lambda l: min(math.dist(p, q) for p in chain[-1]['pts'] for q in l['pts'])  # noqa: E731
+                    nxt = min((l for l in keep if l['text'] == t and l not in chain), key=gap, default=None)
+                    if nxt is None or gap(nxt) > getattr(R, 'JOIN_GAP', 8) * R.SCALE:
+                        break
+                    chain.append(nxt)
+                if len(chain) < len(parts):
                     continue
-                keep.remove(a); keep.remove(b)
-                pts = a['pts'] + b['pts']
-                keep.append({'text': f'{a_text} {b_text}', 'pts': pts,
+                for l in chain:
+                    keep.remove(l)
+                pts = [p for l in chain for p in l['pts']]
+                keep.append({'text': ' '.join(parts), 'pts': pts,
                              'c': (sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts))})
         drop = getattr(R, 'DROP', [])
         out = []
@@ -173,7 +182,57 @@ class Resort:
         for e in getattr(R, 'EXTRA', []):  # names printed some other way (another font, a sign): name, x, y
             out.append({'name': e[0], 'pts': [tuple(e[1:3])], 'c': tuple(e[1:3]), 'printed': None,
                         'symbol': e[3] if len(e) > 3 else None})
+        return sorted(out, key=lambda n: (round(n['c'][1]), round(n['c'][0]), n['name']))  # a stable order
+
+    def letter_runs(self, L):
+        """A curved label is also drawn one object per letter: join consecutive single letters of one colour (by
+        drawing order) into labels, with a space where the gap between two letters is well over the run's usual."""
+        runs, run = [], []
+        for l in sorted((l for l in L if len(l['pts']) == 1 and len(l['text'].strip()) == 1), key=lambda l: l['seq']):
+            if run and (l['color'] != run[-1]['color']
+                        or math.dist(l['pts'][0], run[-1]['pts'][0]) > 1.6 * (l['size'] or 4) * self.R.SCALE):
+                runs.append(run)
+                run = []
+            run.append(l)
+        runs.append(run)
+        out = []
+        for run in runs:
+            if len(run) < 3:
+                continue
+            pts = [l['pts'][0] for l in run]
+            text = self.spaced(pts, L) or self.guess_spaces(run)
+            out.append({'text': text, 'pts': pts, 'c': (sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts)),
+                        'seq': run[0]['seq'], 'color': run[0]['color'], 'size': run[0]['size'], 'run': True})
         return out
+
+    def spaced(self, pts, L):
+        """The text of a whole label whose characters lie on these letters, spaces included (the letters of a
+        curved name are often also drawn as one object, or inside a longer one), or None."""
+        near = 0.8 * self.R.SCALE
+        for o in L:
+            if len(o['pts']) < len(pts) or len(o['pts']) != len(o['text'].replace(' ', '')):
+                continue
+            idx = []
+            for p in pts:
+                j = min(range(len(o['pts'])), key=lambda j: math.dist(p, o['pts'][j]))
+                if math.dist(p, o['pts'][j]) >= near:
+                    break
+                idx.append(j)
+            if len(idx) == len(pts) and idx == list(range(idx[0], idx[0] + len(idx))):
+                where = [i for i, ch in enumerate(o['text']) if ch != ' ']  # text index of each drawn character
+                return o['text'][where[idx[0]]:where[idx[-1]] + 1]
+        return None
+
+    @staticmethod
+    def guess_spaces(run):
+        """Letters with no whole copy: a space where a gap is well over the run's usual one."""
+        pts = [l['pts'][0] for l in run]
+        gaps = [math.dist(a, b) for a, b in zip(pts, pts[1:])]
+        usual = sorted(gaps)[len(gaps) // 2]
+        text = run[0]['text'].strip()
+        for g, l in zip(gaps, run[1:]):
+            text += (' ' if g > 1.3 * usual else '') + l['text'].strip()
+        return text
 
     def symbols(self, names):
         """Each symbol to the nearest name end within reach (one each). Returns the named symbols and the rest."""
@@ -183,7 +242,7 @@ class Resort:
         else:  # pdf_glyphs.py's symbols, in PDF points
             syms = [{'t': s['t'], 'c': self.px(s['c']), 'r': 1.5 * self.R.SCALE}
                     for s in self.load('printed.json')['symbols']]
-        joined = {f'{a} {b}' for a, b in getattr(self.R, 'JOIN', [])}
+        joined = {' '.join(parts) for parts in getattr(self.R, 'JOIN', [])}
         cands = []
         for i, s in enumerate(syms):
             for j, n in enumerate(names):
@@ -220,22 +279,55 @@ class Resort:
             if pid is None:
                 print('  cut: no piece at', on)
                 continue
-            p = P[pid]
-            pts = p['pt']
-            best = (math.inf, 1, None)
-            for i in range(1, len(pts)):
-                (ax, ay), (bx, by) = pts[i - 1], pts[i]
-                dx, dy = bx - ax, by - ay
-                t = max(0, min(1, ((q[0] - ax) * dx + (q[1] - ay) * dy) / ((dx * dx + dy * dy) or 1e-9)))
-                c = (ax + t * dx, ay + t * dy)
-                if math.dist(c, q) < best[0]:
-                    best = (math.dist(c, q), i, c)
-            _, i, c = best
-            first, second = pts[:i] + [c], [c] + pts[i:]
-            p['pt'], p['points'], p['lengthPx'] = first, self.pct(first), round(length(first))
-            P.append({'id': len(P), 'cls': p['cls'], 'lengthPx': round(length(second)), 'points': self.pct(second),
-                      'pt': second})
+            self.split(P, P[pid], q)
         return P
+
+    @staticmethod
+    def nearest_on(pts, q):
+        """(distance, index of the segment's end point, the nearest point) of polyline pts to q."""
+        best = (math.inf, 1, pts[0])
+        for i in range(1, len(pts)):
+            (ax, ay), (bx, by) = pts[i - 1], pts[i]
+            dx, dy = bx - ax, by - ay
+            t = max(0, min(1, ((q[0] - ax) * dx + (q[1] - ay) * dy) / ((dx * dx + dy * dy) or 1e-9)))
+            c = (ax + t * dx, ay + t * dy)
+            if math.dist(c, q) < best[0]:
+                best = (math.dist(c, q), i, c)
+        return best
+
+    def split(self, P, p, q):
+        """Cut piece p where it passes nearest q; the second part becomes a new piece (appended)."""
+        _, i, c = self.nearest_on(p['pt'], q)
+        first, second = p['pt'][:i] + [c], [c] + p['pt'][i:]
+        p['pt'], p['points'], p['lengthPx'] = first, self.pct(first), round(length(first))
+        P.append({'id': len(P), 'cls': p['cls'], 'lengthPx': round(length(second)), 'points': self.pct(second),
+                  'pt': second})
+
+    def cut_at_symbols(self, P, names):
+        """Maps that print a run's symbol on (or just beside) its line, with the name after it
+        (resort.CUT_AT_SYMBOLS): cut the nearest line of the symbol's colour where it passes the symbol, so the
+        stretch from a symbol down to the next is one piece. Returns [(name index, the cut point)]."""
+        off = getattr(self.R, 'SYMBOL_OFF_LINE', 1.5) * self.R.SCALE  # how far beside its line a symbol may sit
+        at = []
+        for j, n in enumerate(names):
+            s = n.get('sym')
+            if not s:
+                continue
+            want = CLS.get(n.get('symbol'))
+            near = sorted((self.nearest_on(p['pt'], s['c'])[0], p['id']) for p in P if p['cls'] == want)
+            if not near or near[0][0] > s['r'] + off:
+                near = sorted((self.nearest_on(p['pt'], s['c'])[0], p['id']) for p in P)
+                if not near or near[0][0] > s['r'] + 1.5 * self.R.SCALE:
+                    continue
+            p = P[near[0][1]]
+            _d, _i, c = self.nearest_on(p['pt'], s['c'])
+            ends = sorted((math.dist(c, p['pt'][k]), k) for k in (0, -1))
+            if ends[0][0] <= s['r']:
+                c = p['pt'][ends[0][1]]  # the line already ends at the symbol
+            else:
+                self.split(P, p, s['c'])
+            at.append((j, c))
+        return at
 
     def terminals(self, n):
         """A name's two ends: [(point, has its symbol)] for its first and last character, each pushed out
@@ -266,12 +358,15 @@ class Resort:
         R, D = self.R, self.D
         names = self.names()
         syms, loose = self.symbols(names)
+        self.names_all = names
         P = self.pieces()
         reach = R.END_REACH * R.SCALE
         two_line = set(getattr(R, 'TWO_LINE', ()))  # names printed on two lines: no stretch along them
+        on_line = getattr(R, 'CUT_AT_SYMBOLS', False)
+        sym_cuts = self.cut_at_symbols(P, names) if on_line else []
         cands = []  # (score, piece id, piece end, name index, name end)
         for j, n in enumerate(names):
-            if not n['printed']:
+            if not n['printed'] or on_line or not getattr(R, 'MATCH_ENDS', True):  # names on their line
                 continue
             want = CLS.get(n.get('symbol'))
             for m, (t, _sym) in enumerate(self.terminals(n)):
@@ -311,6 +406,25 @@ class Resort:
                 if close >= 0.6 * len(n['pts']) and length(p['pt']) > 0.5 * length(n['pts']):
                     assign[p['id']].add(n['name'])
                     why[p['id']] = f"along {n['name']}"
+        if on_line:
+            # the piece leaving a named symbol toward its name starts that run
+            for j, c in sym_cuts:
+                n = names[j]
+                toward = (n['c'][0] - c[0], n['c'][1] - c[1])
+                best = None
+                for p in P:
+                    for k in (0, -1):
+                        if math.dist(p['pt'][k], c) > 1.0:
+                            continue
+                        pts = p['pt'] if k == 0 else p['pt'][::-1]
+                        ahead = next((q for q in pts if math.dist(q, c) > 6 * R.SCALE), pts[-1])
+                        v = (ahead[0] - c[0], ahead[1] - c[1])
+                        cos = (v[0] * toward[0] + v[1] * toward[1]) / ((math.hypot(*v) * math.hypot(*toward)) or 1)
+                        if best is None or cos > best[0]:
+                            best = (cos, p['id'])
+                if best and best[0] > 0 and not (assign.get(best[1], set()) - {n['name']}):
+                    assign[best[1]].add(n['name'])
+                    why[best[1]] = f"from the symbol of {n['name']}"
         fixed = set()
         for q, name in D.CHECKED:
             pid = self.resolve(P, q)
@@ -331,6 +445,8 @@ class Resort:
             out = []
             for k in (0, -1):
                 e = P[pid]['pt'][k]
+                if any(math.dist(e, c) < 1.0 for _j, c in sym_cuts):
+                    continue  # a run starts at its symbol: no continuation across it
                 at = {i for f, i in ends if i != pid and math.dist(f, e) < 1.0 * R.SCALE}
                 if len(at) == 1:
                     out.append(next(iter(at)))
@@ -389,11 +505,13 @@ class Resort:
         print('  names on no line:', sorted({n["name"] for n in names} - named))
         return left, several
 
-    @staticmethod
-    def colour_of_assign(assign, P, name):
-        """A stretch's colour: that of the trail's own pieces."""
+    def colour_of_assign(self, assign, P, name):
+        """A stretch's colour: that of the trail's own pieces, else its symbol's."""
         c = collections.Counter(P[pid]['cls'] for pid, v in assign.items() if name in v)
-        return c.most_common(1)[0][0] if c else 'black'
+        if c:
+            return c.most_common(1)[0][0]
+        n = next((n for n in self.names_all if n['name'] == name), None)
+        return CLS.get(n and n.get('symbol')) or 'black'
 
     # ---- the pipeline's inputs ---------------------------------------------------------------------------
     def reading(self):
@@ -410,6 +528,7 @@ class Resort:
                            'glade': 'GLADE' in nm or nm in glades, 'park': nm in parks, 'area': R.area(n['c']),
                            'labelSrc': [round(n['c'][0]), round(n['c'][1])], 'confidence': 'certain'})
         # symbols printed with no name on a named trail's line (a change of rating): they count toward its difficulty
+        loose_off = 0
         for s in self.loose:
             d, pid = min((line_dist(s['c'], p['pt']), p['id']) for p in P)
             if pid in self.assign and d <= 2 * s['r'] + 4:
@@ -419,8 +538,13 @@ class Resort:
                                'labelSrc': [round(s['c'][0]), round(s['c'][1])], 'confidence': 'certain'})
                 print(f'  {s["t"]} at {[round(v) for v in s["c"]]} (no name printed) on {nm}')
             else:
-                print(f'  symbol {s["t"]} at {[round(v) for v in s["c"]]} with no name, on no named line '
-                      f'(nearest piece {pid}, {d:.0f} px)')
+                why = getattr(R, 'LOOSE_SYMBOLS', None)
+                if not why:
+                    print(f'  symbol {s["t"]} at {[round(v) for v in s["c"]]} with no name, on no named line '
+                          f'(nearest piece {pid}, {d:.0f} px)')
+                loose_off += 1
+        if loose_off and getattr(R, 'LOOSE_SYMBOLS', None):
+            print(f'  {loose_off} symbols with no name on no line: {R.LOOSE_SYMBOLS}')
         traced = sorted(self.traced)
         os.makedirs(self.work('tiles'), exist_ok=True)
         lines = [{'id': pid, 'mapName': next(iter(v)), 'color': P[pid]['cls'], 'confidence': 'certain',

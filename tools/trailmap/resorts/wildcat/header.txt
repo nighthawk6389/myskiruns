@@ -1,0 +1,17 @@
+// Wildcat Mountain's 2025-26 trail map (skiwildcat.com). Its PDF outlines the
+// names and flattens most lines into the painting, so the lines, names and
+// symbols come from an earlier export of the same artwork with live strokes
+// and text (skimap.org map 33684): every one of its names lands on the same
+// outlined name, in the same colour, on the 2025-26 page (the same page
+// shifted by its bleed), and the 2025-26 page prints no other trail name. The
+// map image is the 2025-26 page from Vail Resorts' image CDN. Each line piece
+// was named on zoomed crops (tools/trailmap/resorts/wildcat/decisions.py):
+// this map prints a run's symbol and name along its line, and one drawn line
+// often carries several runs (Upper, Middle and Lower Lynx; Cat Track, Middle
+// Wildcat and Bobcat), cut where the next run's symbol or name starts. Names
+// are as printed; difficulty is the printed symbol (Hairball, Upper Polecat
+// and Wildcat Pitch print theirs on the line beside the name). Lower Cat Track
+// is the stretch of Wild Kitten's line its label points to. Cat & Mouse (a
+// learning area) has no line: a marker. The map's tree-skiing areas print a
+// diamond and no name, so they aren't listed; the map counts 48 trails, as
+// here. x/y/baseY/width are unused layout fields.

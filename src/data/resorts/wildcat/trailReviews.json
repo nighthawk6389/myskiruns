@@ -1,0 +1,17 @@
+{
+ "reviews": {
+  "cat-mouse": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A learning area at the base (circle and name, an arrow to the Snowbelt lift), no line: marker at its name",
+   "at": "2026-10-05T22:16:04.000Z",
+   "by": "claude",
+   "labelAt": [
+    55.66,
+    81.4
+   ]
+  }
+ }
+}

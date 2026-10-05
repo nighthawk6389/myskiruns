@@ -64,7 +64,10 @@ def main() -> None:
             from fontTools.cffLib import CFFFontSet
             cff = CFFFontSet()
             cff.decompile(io.BytesIO(doc.extract_font(xref)[3]), None)
-            charsets[name.split('+')[-1]] = cff[cff.fontNames[0]].charset
+            try:
+                charsets[name.split('+')[-1]] = cff[cff.fontNames[0]].charset
+            except AttributeError:
+                pass  # a CID-keyed font has no glyph-name charset: its text is decoded by its Unicode map
 
     chars = collections.defaultdict(list)
     meta = {}

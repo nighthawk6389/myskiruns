@@ -67,7 +67,7 @@ def extract(a):
     for d in pymupdf.open(a.pdf)[a.page].get_drawings():
         typ = colours.get(rgb(','.join(map(str, d['fill'])))) if d['type'] in ('f', 'fs') and d.get('fill') else None
         r = d['rect']
-        if not typ or not 1.2 <= max(r.width, r.height) <= 7:
+        if not typ or not 1.2 <= max(r.width, r.height) <= a.max_size:
             continue
         cx, cy = (r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2
         if not (x0 <= cx <= x1 and y0 <= cy <= y1) or any(e[0] <= cx <= e[2] and e[1] <= cy <= e[3] for e in ex):
@@ -147,6 +147,7 @@ def main():
     ap.add_argument('--square', required=True, help='fill colour of the more-difficult symbol')
     ap.add_argument('--diamond', required=True, help='fill colour of the diamond symbols')
     ap.add_argument('--max-diamond', type=float, default=2.6, help='larger dark squares are icon frames (pt)')
+    ap.add_argument('--max-size', type=float, default=7, help='larger fills are not symbols (pt, bounding box)')
     ap.add_argument('--rounded', action='store_true',
                     help='symbols have rounded corners (lines and curves): squares and diamonds are judged by their '
                          'bounding box, and a diamond-coloured fill 1.3-1.8x as wide as tall is a double diamond')
