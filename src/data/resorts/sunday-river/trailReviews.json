@@ -1,0 +1,43 @@
+{
+ "reviews": {
+  "poma-road": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Printed in the trees between Cascades and Monday Mourning, with its diamond and no line: marker at its name",
+   "at": "2026-10-05T22:47:11.000Z",
+   "by": "claude",
+   "labelAt": [
+    19.21,
+    36.48
+   ]
+  },
+  "rocking-chair": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Printed beside Flow State's orange freestyle line, with no line of its own: marker at its name",
+   "at": "2026-10-05T22:47:11.000Z",
+   "by": "claude",
+   "labelAt": [
+    27.85,
+    43.3
+   ]
+  },
+  "enchanted-forest": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A kids' adventure area by the North Peak base, named with no line: marker at its name",
+   "at": "2026-10-05T22:47:11.000Z",
+   "by": "claude",
+   "labelAt": [
+    40.46,
+    46.19
+   ]
+  }
+ }
+}

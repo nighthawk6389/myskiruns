@@ -291,7 +291,7 @@ def labels(a):
         if s['t'] == 'diamond':
             side = max(s['rect'][2] - s['rect'][0], s['rect'][3] - s['rect'][1])
             j = next((j for j, t in enumerate(syms) if j != i and j not in used and t['t'] == 'diamond'
-                      and math.dist(t['c'], s['c']) < 0.8 * side), None)
+                      and math.dist(t['c'], s['c']) < a.double_dist * side), None)
             if j is not None:
                 used.add(j)
                 t = syms[j]
@@ -410,6 +410,9 @@ def main():
     lb.add_argument('--diamond', action='append', default=[], help='colour class of diamond symbols')
     lb.add_argument('--circle', action='append', default=[], help='colour class of circle symbols')
     lb.add_argument('--sym-min', type=float, default=2.5, help='pt; smaller even shapes are dots, not symbols')
+    lb.add_argument('--double-dist', type=float, default=0.8,
+                    help='two diamonds whose centres are closer than this many diamond widths are a double diamond '
+                         '(1.6 where a gap separates them: Sunday River)')
     lb.add_argument('--join', type=float, default=9.0, help='pt; a farther glyph starts a new label')
     lb.add_argument('--space', type=float,
                     help='pt: a word gap is a gap over this between outlines along the reading direction (condensed '

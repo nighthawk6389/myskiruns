@@ -134,7 +134,8 @@ class Resort:
         raw = self.load('printed.json')
         raw = raw['labels'] if isinstance(raw, dict) else raw  # pdf_glyphs.py: {labels, symbols}
         L = [{'text': l['text'], 'pts': [self.px(p) for p in l['pts']], 'c': self.px(l['c']), 'seq': l.get('seq', 0),
-              'color': tuple(l.get('color') or ()), 'size': l.get('size', 0)} for l in raw if R.is_name(l)]
+              'color': l['color'] if isinstance(l.get('color'), str) else tuple(l.get('color') or ()),
+              'size': l.get('size', 0)} for l in raw if R.is_name(l)]
         near = 0.8 * R.SCALE  # px: two characters this close are one character drawn twice
         L += self.letter_runs(L)
         # one copy per printed name (a halo pass, the letters of a curved label, a recoloured copy); spaces aside
@@ -170,7 +171,7 @@ class Resort:
                 for l in chain:
                     keep.remove(l)
                 pts = [p for l in chain for p in l['pts']]
-                keep.append({'text': ' '.join(parts), 'pts': pts,
+                keep.append({'text': ' '.join(parts), 'pts': pts, 'color': chain[0].get('color'),
                              'c': (sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts))})
         drop = getattr(R, 'DROP', [])
         out = []
@@ -178,7 +179,7 @@ class Resort:
             if any(t == l['text'] and (q is None or math.dist(q, l['c']) < 40) for t, q in drop):
                 continue
             out.append({'name': getattr(R, 'RENAME', {}).get(l['text'], l['text']), 'pts': l['pts'], 'c': l['c'],
-                        'printed': l['text']})
+                        'printed': l['text'], 'color': l.get('color')})
         for e in getattr(R, 'EXTRA', []):  # names printed some other way (another font, a sign): name, x, y
             out.append({'name': e[0], 'pts': [tuple(e[1:3])], 'c': tuple(e[1:3]), 'printed': None,
                         'symbol': e[3] if len(e) > 3 else None})
@@ -249,6 +250,8 @@ class Resort:
                 if n.get('symbol') is not None or not n['printed']:
                     continue
                 ends = n['pts'] if n['printed'] in joined else (n['pts'][0], n['pts'][-1])  # two lines: any end
+                if getattr(self.R, 'SYMBOL_CENTRE', False):  # symbols printed above or below the middle of a name
+                    ends = list(ends) + [n['c']]
                 d = min(math.dist(s['c'], p) for p in ends)
                 if d <= self.R.SYMBOL_REACH * self.R.SCALE:
                     cands.append((d, i, j))
@@ -396,16 +399,23 @@ class Resort:
                 why[pid] = f"{'symbol' if at_sym else 'end'} of {names[j]['name']}"
         gap = {names[j]['name'] for j, _m in used_term}  # names printed in a gap of their line
         # a piece running along a name's characters
+        short = getattr(R, 'ALONG_SHORT', False)  # also names of two or three characters (T2, OZ)
+        nearest = getattr(R, 'ALONG_NEAREST', False)  # names printed between parallel lines: the nearest only
         for j, n in enumerate(names):
-            if len(n['pts']) < 4:
+            if len(n['pts']) < (2 if short else 4):
                 continue
+            hits = []
             for p in P:
-                if p['id'] in assign:
-                    continue
-                close = sum(1 for q in n['pts'] if line_dist(q, p['pt']) < R.ALONG * R.SCALE)
-                if close >= 0.6 * len(n['pts']) and length(p['pt']) > 0.5 * length(n['pts']):
-                    assign[p['id']].add(n['name'])
-                    why[p['id']] = f"along {n['name']}"
+                if p['id'] in assign and not why.get(p['id'], '').startswith('along'):
+                    continue  # named by a name that runs into it
+                ds = [line_dist(q, p['pt']) for q in n['pts']]
+                close = sum(1 for d in ds if d < R.ALONG * R.SCALE)
+                need = 0.6 * len(n['pts']) if len(n['pts']) >= 4 else len(n['pts'])
+                if close >= need and length(p['pt']) > 0.5 * length(n['pts']):
+                    hits.append((sorted(ds)[len(ds) // 2], p['id']))
+            for _d, pid in sorted(hits)[:1] if nearest else hits:
+                assign[pid].add(n['name'])  # several names along one piece: cut it (CUTS)
+                why[pid] = f"along {n['name']}"
         if on_line:
             # the piece leaving a named symbol toward its name starts that run
             for j, c in sym_cuts:
@@ -511,6 +521,8 @@ class Resort:
         if c:
             return c.most_common(1)[0][0]
         n = next((n for n in self.names_all if n['name'] == name), None)
+        if n and n.get('color') in ('green', 'blue', 'black'):  # a name printed in its difficulty colour
+            return n['color']
         return CLS.get(n and n.get('symbol')) or 'black'
 
     # ---- the pipeline's inputs ---------------------------------------------------------------------------

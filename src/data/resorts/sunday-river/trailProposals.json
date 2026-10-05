@@ -1,0 +1,1129 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "absolutely": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "ABSOLUTELY",
+   "note": "along ABSOLUTELY"
+  },
+  "agony": {
+   "polylines": [
+    118
+   ],
+   "confidence": "high",
+   "mapName": "AGONY",
+   "note": "along AGONY"
+  },
+  "aludra": {
+   "polylines": [
+    50,
+    177
+   ],
+   "confidence": "high",
+   "mapName": "ALUDRA",
+   "note": "along ALUDRA"
+  },
+  "american-express": {
+   "polylines": [
+    20,
+    140
+   ],
+   "confidence": "high",
+   "mapName": "AMERICAN EXPRESS",
+   "note": "along AMERICAN EXPRESS"
+  },
+  "assumption": {
+   "polylines": [
+    97
+   ],
+   "confidence": "high",
+   "mapName": "ASSUMPTION",
+   "note": "along ASSUMPTION"
+  },
+  "backside": {
+   "polylines": [
+    129,
+    131
+   ],
+   "confidence": "high",
+   "mapName": "BACKSIDE",
+   "note": "along BACKSIDE | continuation"
+  },
+  "bear-paw": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "BEAR PAW",
+   "note": "along BEAR PAW"
+  },
+  "bims-whim": {
+   "polylines": [
+    92
+   ],
+   "confidence": "high",
+   "mapName": "BIM\u2019S WHIM",
+   "note": "along BIM\u2019S WHIM"
+  },
+  "black-hole": {
+   "polylines": [
+    115,
+    146
+   ],
+   "confidence": "high",
+   "mapName": "BLACK HOLE",
+   "note": "along BLACK HOLE"
+  },
+  "blind-ambition": {
+   "noLine": true,
+   "label": [
+    96.29,
+    21.0
+   ],
+   "confidence": "high"
+  },
+  "borealis": {
+   "polylines": [
+    49,
+    125
+   ],
+   "confidence": "high",
+   "mapName": "BOREALIS",
+   "note": "along BOREALIS"
+  },
+  "broadway": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "BROADWAY",
+   "note": "along BROADWAY"
+  },
+  "cascades": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "CASCADES",
+   "note": "along CASCADES"
+  },
+  "celestial": {
+   "noLine": true,
+   "label": [
+    79.62,
+    24.56
+   ],
+   "confidence": "high"
+  },
+  "cowardly-lion": {
+   "polylines": [
+    68,
+    124
+   ],
+   "confidence": "high",
+   "mapName": "COWARDLY LION",
+   "note": "along COWARDLY LION"
+  },
+  "cutback": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "CUTBACK",
+   "note": "along CUTBACK"
+  },
+  "cutoff": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "CUTOFF",
+   "note": "along CUTOFF"
+  },
+  "cyclone": {
+   "polylines": [
+    70,
+    178
+   ],
+   "confidence": "high",
+   "mapName": "CYCLONE",
+   "note": "along CYCLONE"
+  },
+  "double-blind": {
+   "noLine": true,
+   "label": [
+    95.1,
+    21.11
+   ],
+   "confidence": "high"
+  },
+  "double-dipper": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLE DIPPER",
+   "note": "along DOUBLE DIPPER"
+  },
+  "double-refraction": {
+   "polylines": [
+    82,
+    84,
+    159
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLE REFRACTION",
+   "note": "along DOUBLE REFRACTION | checked on a crop"
+  },
+  "downdraft": {
+   "polylines": [
+    101,
+    147
+   ],
+   "confidence": "high",
+   "mapName": "DOWNDRAFT",
+   "note": "along DOWNDRAFT"
+  },
+  "dream-maker": {
+   "polylines": [
+    60,
+    75
+   ],
+   "confidence": "high",
+   "mapName": "DREAM MAKER",
+   "note": "along DREAM MAKER | continuation"
+  },
+  "easy-street": {
+   "polylines": [
+    46,
+    164
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "along EASY STREET"
+  },
+  "ecstasy": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "ECSTASY",
+   "note": "along ECSTASY"
+  },
+  "emerald-city": {
+   "polylines": [
+    105,
+    152
+   ],
+   "confidence": "high",
+   "mapName": "EMERALD CITY",
+   "note": "along EMERALD CITY"
+  },
+  "escapade": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "ESCAPADE",
+   "note": "along ESCAPADE"
+  },
+  "eureka": {
+   "polylines": [
+    104,
+    144
+   ],
+   "confidence": "high",
+   "mapName": "EUREKA",
+   "note": "along EUREKA"
+  },
+  "excalibur": {
+   "polylines": [
+    37,
+    135
+   ],
+   "confidence": "high",
+   "mapName": "EXCALIBUR",
+   "note": "along EXCALIBUR"
+  },
+  "exit-right": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "EXIT RIGHT",
+   "note": "along EXIT RIGHT"
+  },
+  "firestar": {
+   "polylines": [
+    34,
+    138
+   ],
+   "confidence": "high",
+   "mapName": "FIRESTAR",
+   "note": "along FIRESTAR"
+  },
+  "flow-state": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "FLOW STATE",
+   "note": "along FLOW STATE"
+  },
+  "flying-monkey": {
+   "noLine": true,
+   "label": [
+    84.25,
+    21.22
+   ],
+   "confidence": "high"
+  },
+  "gnarnia": {
+   "polylines": [
+    108
+   ],
+   "confidence": "high",
+   "mapName": "GNARNIA",
+   "note": "along GNARNIA"
+  },
+  "goat-path": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "GOAT PATH",
+   "note": "along GOAT PATH"
+  },
+  "grand-avenue": {
+   "polylines": [
+    121
+   ],
+   "confidence": "high",
+   "mapName": "GRAND AVENUE",
+   "note": "along GRAND AVENUE"
+  },
+  "grand-rapids": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "GRAND RAPIDS",
+   "note": "along GRAND RAPIDS"
+  },
+  "green-cheese": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "GREEN CHEESE",
+   "note": "along GREEN CHEESE"
+  },
+  "heats-off": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "HEAT\u2019S OFF",
+   "note": "along HEAT\u2019S OFF"
+  },
+  "heats-on": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "HEAT\u2019S ON",
+   "note": "along HEAT\u2019S ON"
+  },
+  "hollywood": {
+   "noLine": true,
+   "label": [
+    27.42,
+    32.96
+   ],
+   "confidence": "high"
+  },
+  "jibe": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "JIBE",
+   "note": "along JIBE"
+  },
+  "jims-whim": {
+   "polylines": [
+    94
+   ],
+   "confidence": "high",
+   "mapName": "JIM\u2019S WHIM",
+   "note": "checked on a crop"
+  },
+  "jungle-road": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "JUNGLE ROAD",
+   "note": "along JUNGLE ROAD"
+  },
+  "kansas": {
+   "polylines": [
+    67,
+    123
+   ],
+   "confidence": "high",
+   "mapName": "KANSAS",
+   "note": "along KANSAS"
+  },
+  "last-mile": {
+   "polylines": [
+    64
+   ],
+   "confidence": "high",
+   "mapName": "LAST MILE",
+   "note": "along LAST MILE"
+  },
+  "last-tango": {
+   "noLine": true,
+   "label": [
+    32.35,
+    37.22
+   ],
+   "confidence": "high"
+  },
+  "lazy-river": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "LAZY RIVER",
+   "note": "along LAZY RIVER"
+  },
+  "lights-out": {
+   "polylines": [
+    66,
+    128
+   ],
+   "confidence": "high",
+   "mapName": "LIGHTS OUT",
+   "note": "along LIGHTS OUT"
+  },
+  "locke-line": {
+   "polylines": [
+    95
+   ],
+   "confidence": "high",
+   "mapName": "LOCKE LINE",
+   "note": "along LOCKE LINE"
+  },
+  "lollapalooza": {
+   "polylines": [
+    73,
+    122
+   ],
+   "confidence": "high",
+   "mapName": "LOLLAPALOOZA",
+   "note": "along LOLLAPALOOZA"
+  },
+  "lost-princess": {
+   "polylines": [
+    106,
+    143
+   ],
+   "confidence": "high",
+   "mapName": "LOST PRINCESS",
+   "note": "along LOST PRINCESS"
+  },
+  "lower-3d": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "LOWER 3D",
+   "note": "along LOWER 3D"
+  },
+  "lower-air-glow": {
+   "polylines": [
+    173,
+    175
+   ],
+   "confidence": "high",
+   "mapName": "LOWER AIR GLOW",
+   "note": "along LOWER AIR GLOW"
+  },
+  "lower-caramba": {
+   "polylines": [
+    171,
+    174
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CARAMBA",
+   "note": "along LOWER CARAMBA"
+  },
+  "lower-chondi-line": {
+   "polylines": [
+    80
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CHONDI LINE",
+   "note": "along LOWER CHONDI LINE"
+  },
+  "lower-chutzpah": {
+   "noLine": true,
+   "label": [
+    10.85,
+    40.48
+   ],
+   "confidence": "high"
+  },
+  "lower-downdraft": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "LOWER DOWNDRAFT",
+   "note": "along LOWER DOWNDRAFT"
+  },
+  "lower-hard-ball": {
+   "noLine": true,
+   "label": [
+    7.56,
+    40.3
+   ],
+   "confidence": "high"
+  },
+  "lower-lazy-river": {
+   "polylines": [
+    55
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LAZY RIVER",
+   "note": "along LOWER LAZY RIVER"
+  },
+  "lower-north-woods": {
+   "noLine": true,
+   "label": [
+    41.79,
+    41.67
+   ],
+   "confidence": "high"
+  },
+  "lower-risky-business": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "LOWER RISKY BUSINESS",
+   "note": "along LOWER RISKY BUSINESS"
+  },
+  "lower-t72": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "LOWER T72",
+   "note": "along LOWER T72"
+  },
+  "lower-upper-cut": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "LOWER UPPER CUT",
+   "note": "along LOWER UPPER CUT"
+  },
+  "lower-vortex": {
+   "polylines": [
+    172
+   ],
+   "confidence": "high",
+   "mapName": "LOWER VORTEX",
+   "note": "along LOWER VORTEX"
+  },
+  "lower-wizards-gulch": {
+   "noLine": true,
+   "label": [
+    89.42,
+    24.7
+   ],
+   "confidence": "high"
+  },
+  "mixing-bowl": {
+   "polylines": [
+    119,
+    162
+   ],
+   "confidence": "high",
+   "mapName": "MIXING BOWL",
+   "note": "along MIXING BOWL"
+  },
+  "monday-mourning": {
+   "polylines": [
+    15,
+    107
+   ],
+   "confidence": "high",
+   "mapName": "MONDAY MOURNING",
+   "note": "along MONDAY MOURNING | continuation"
+  },
+  "moonstruck": {
+   "polylines": [
+    4,
+    42
+   ],
+   "confidence": "high",
+   "mapName": "MOONSTRUCK",
+   "note": "checked on a crop | along MOONSTRUCK"
+  },
+  "northern-exposure": {
+   "polylines": [
+    114
+   ],
+   "confidence": "high",
+   "mapName": "NORTHERN EXPOSURE",
+   "note": "along NORTHERN EXPOSURE"
+  },
+  "northern-lights": {
+   "polylines": [
+    33,
+    137
+   ],
+   "confidence": "high",
+   "mapName": "NORTHERN LIGHTS",
+   "note": "along NORTHERN LIGHTS"
+  },
+  "northway": {
+   "polylines": [
+    61
+   ],
+   "confidence": "high",
+   "mapName": "NORTHWAY",
+   "note": "along NORTHWAY"
+  },
+  "obsession": {
+   "polylines": [
+    90
+   ],
+   "confidence": "high",
+   "mapName": "OBSESSION",
+   "note": "along OBSESSION"
+  },
+  "outta-here": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "OUTTA HERE",
+   "note": "along OUTTA HERE"
+  },
+  "overdraft": {
+   "polylines": [
+    31,
+    142
+   ],
+   "confidence": "high",
+   "mapName": "OVERDRAFT",
+   "note": "along OVERDRAFT"
+  },
+  "paradigm": {
+   "polylines": [
+    139
+   ],
+   "confidence": "high",
+   "mapName": "PARADIGM",
+   "note": "along PARADIGM"
+  },
+  "peak-easy": {
+   "polylines": [
+    179
+   ],
+   "confidence": "high",
+   "mapName": "PEAK EASY",
+   "note": "along its printed name"
+  },
+  "polaris": {
+   "polylines": [
+    62,
+    132
+   ],
+   "confidence": "high",
+   "mapName": "POLARIS",
+   "note": "along POLARIS"
+  },
+  "poppy-fields": {
+   "noLine": true,
+   "label": [
+    85.46,
+    20.59
+   ],
+   "confidence": "high"
+  },
+  "prism": {
+   "polylines": [
+    83,
+    157
+   ],
+   "confidence": "high",
+   "mapName": "PRISM",
+   "note": "along PRISM"
+  },
+  "quantum-leap": {
+   "polylines": [
+    102,
+    154
+   ],
+   "confidence": "high",
+   "mapName": "QUANTUM LEAP",
+   "note": "along QUANTUM LEAP"
+  },
+  "ridge-express": {
+   "polylines": [
+    74
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE EXPRESS",
+   "note": "along RIDGE EXPRESS"
+  },
+  "ridge-run": {
+   "polylines": [
+    58,
+    160
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE RUN",
+   "note": "along RIDGE RUN"
+  },
+  "right-stuff": {
+   "polylines": [
+    98
+   ],
+   "confidence": "high",
+   "mapName": "RIGHT STUFF",
+   "note": "along RIGHT STUFF"
+  },
+  "roadrunner": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "ROADRUNNER",
+   "note": "along ROADRUNNER"
+  },
+  "rogue-angel": {
+   "polylines": [
+    36,
+    134
+   ],
+   "confidence": "high",
+   "mapName": "ROGUE ANGEL",
+   "note": "along ROGUE ANGEL"
+  },
+  "roundabout": {
+   "polylines": [
+    71,
+    120
+   ],
+   "confidence": "high",
+   "mapName": "ROUNDABOUT",
+   "note": "checked on a crop | along ROUNDABOUT"
+  },
+  "ruby-palace": {
+   "polylines": [
+    117,
+    150
+   ],
+   "confidence": "high",
+   "mapName": "RUBY PALACE",
+   "note": "along RUBY PALACE"
+  },
+  "salvation": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "SALVATION",
+   "note": "along SALVATION"
+  },
+  "second-mile": {
+   "polylines": [
+    176
+   ],
+   "confidence": "high",
+   "mapName": "SECOND MILE",
+   "note": "along SECOND MILE"
+  },
+  "second-thoughts": {
+   "polylines": [
+    59,
+    158
+   ],
+   "confidence": "high",
+   "mapName": "SECOND THOUGHTS",
+   "note": "along SECOND THOUGHTS | checked on a crop"
+  },
+  "sensation": {
+   "polylines": [
+    63,
+    130
+   ],
+   "confidence": "high",
+   "mapName": "SENSATION",
+   "note": "along SENSATION"
+  },
+  "shock-wave": {
+   "polylines": [
+    110
+   ],
+   "confidence": "high",
+   "mapName": "SHOCK WAVE",
+   "note": "along SHOCK WAVE"
+  },
+  "sirius": {
+   "polylines": [
+    48,
+    126
+   ],
+   "confidence": "high",
+   "mapName": "SIRIUS",
+   "note": "along SIRIUS"
+  },
+  "sluice": {
+   "polylines": [
+    88
+   ],
+   "confidence": "high",
+   "mapName": "SLUICE",
+   "note": "along SLUICE"
+  },
+  "snowbound": {
+   "polylines": [
+    91
+   ],
+   "confidence": "high",
+   "mapName": "SNOWBOUND",
+   "note": "along SNOWBOUND"
+  },
+  "southpaw": {
+   "polylines": [
+    87
+   ],
+   "confidence": "high",
+   "mapName": "SOUTHPAW",
+   "note": "along SOUTHPAW"
+  },
+  "spectator": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "SPECTATOR",
+   "note": "along SPECTATOR"
+  },
+  "spectra": {
+   "polylines": [
+    81,
+    85,
+    86,
+    155,
+    156
+   ],
+   "confidence": "high",
+   "mapName": "SPECTRA",
+   "note": "along SPECTRA | continuation"
+  },
+  "starburst": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "STARBURST",
+   "note": "along STARBURST"
+  },
+  "starlight": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "STARLIGHT",
+   "note": "along STARLIGHT"
+  },
+  "starstruck": {
+   "noLine": true,
+   "label": [
+    2.69,
+    48.96
+   ],
+   "confidence": "high"
+  },
+  "starwood": {
+   "noLine": true,
+   "label": [
+    5.21,
+    47.0
+   ],
+   "confidence": "high"
+  },
+  "state-fair": {
+   "polylines": [
+    69,
+    127
+   ],
+   "confidence": "high",
+   "mapName": "STATE FAIR",
+   "note": "along STATE FAIR"
+  },
+  "sundance": {
+   "polylines": [
+    78,
+    79
+   ],
+   "confidence": "high",
+   "mapName": "SUNDANCE",
+   "note": "along SUNDANCE | continuation"
+  },
+  "sunday-punch": {
+   "polylines": [
+    17,
+    45
+   ],
+   "confidence": "high",
+   "mapName": "SUNDAY PUNCH",
+   "note": "along SUNDAY PUNCH | continuation"
+  },
+  "super-nova": {
+   "polylines": [
+    109,
+    148
+   ],
+   "confidence": "high",
+   "mapName": "SUPER NOVA",
+   "note": "along SUPER NOVA"
+  },
+  "t2": {
+   "polylines": [
+    93
+   ],
+   "confidence": "high",
+   "mapName": "T2",
+   "note": "along T2"
+  },
+  "tempest": {
+   "polylines": [
+    7,
+    96
+   ],
+   "confidence": "high",
+   "mapName": "TEMPEST",
+   "note": "along TEMPEST"
+  },
+  "thataway": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "THATAWAY",
+   "note": "along THATAWAY"
+  },
+  "three-mile-trail": {
+   "polylines": [
+    65
+   ],
+   "confidence": "high",
+   "mapName": "THREE MILE TRAIL",
+   "note": "along THREE MILE TRAIL"
+  },
+  "tightwire": {
+   "polylines": [
+    100
+   ],
+   "confidence": "high",
+   "mapName": "TIGHTWIRE",
+   "note": "along TIGHTWIRE"
+  },
+  "tin-woodsman": {
+   "polylines": [
+    116,
+    151
+   ],
+   "confidence": "high",
+   "mapName": "TIN WOODSMAN",
+   "note": "along TIN WOODSMAN"
+  },
+  "top-gun": {
+   "polylines": [
+    112
+   ],
+   "confidence": "high",
+   "mapName": "TOP GUN",
+   "note": "along TOP GUN"
+  },
+  "tourist-trap": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "TOURIST TRAP",
+   "note": "along TOURIST TRAP"
+  },
+  "upper-3d": {
+   "polylines": [
+    23,
+    24
+   ],
+   "confidence": "high",
+   "mapName": "UPPER 3D",
+   "note": "checked on a crop"
+  },
+  "upper-air-glow": {
+   "polylines": [
+    103,
+    145
+   ],
+   "confidence": "high",
+   "mapName": "UPPER AIR GLOW",
+   "note": "along UPPER AIR GLOW"
+  },
+  "upper-caramba": {
+   "polylines": [
+    89,
+    149
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CARAMBA",
+   "note": "along UPPER CARAMBA"
+  },
+  "upper-chutzpah": {
+   "noLine": true,
+   "label": [
+    10.56,
+    31.7
+   ],
+   "confidence": "high"
+  },
+  "upper-cut": {
+   "polylines": [
+    99
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CUT",
+   "note": "along UPPER CUT"
+  },
+  "upper-hard-ball": {
+   "noLine": true,
+   "label": [
+    8.02,
+    34.52
+   ],
+   "confidence": "high"
+  },
+  "upper-north-woods": {
+   "noLine": true,
+   "label": [
+    42.5,
+    37.44
+   ],
+   "confidence": "high"
+  },
+  "upper-risky-business": {
+   "polylines": [
+    169
+   ],
+   "confidence": "high",
+   "mapName": "UPPER RISKY BUSINESS",
+   "note": "along UPPER RISKY BUSINESS"
+  },
+  "upper-sunday-punch": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SUNDAY PUNCH",
+   "note": "along UPPER SUNDAY PUNCH"
+  },
+  "upper-t72": {
+   "polylines": [
+    170
+   ],
+   "confidence": "high",
+   "mapName": "UPPER T72",
+   "note": "along UPPER T72"
+  },
+  "upper-vortex": {
+   "polylines": [
+    113
+   ],
+   "confidence": "high",
+   "mapName": "UPPER VORTEX",
+   "note": "along UPPER VORTEX"
+  },
+  "upper-wizards-gulch": {
+   "noLine": true,
+   "label": [
+    91.92,
+    21.81
+   ],
+   "confidence": "high"
+  },
+  "village-trail": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "VILLAGE TRAIL",
+   "note": "along VILLAGE TRAIL"
+  },
+  "white-heat": {
+   "polylines": [
+    111
+   ],
+   "confidence": "high",
+   "mapName": "WHITE HEAT",
+   "note": "along WHITE HEAT"
+  },
+  "who-ville": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "WHO-VILLE",
+   "note": "along WHO-VILLE"
+  },
+  "wildfire": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "WILDFIRE",
+   "note": "along WILDFIRE"
+  },
+  "witch-way": {
+   "polylines": [
+    35,
+    136
+   ],
+   "confidence": "high",
+   "mapName": "WITCH WAY",
+   "note": "along WITCH WAY"
+  },
+  "wonderland": {
+   "polylines": [
+    54,
+    163
+   ],
+   "confidence": "high",
+   "mapName": "WONDERLAND",
+   "note": "along WONDERLAND"
+  },
+  "yetiville": {
+   "noLine": true,
+   "label": [
+    48.12,
+    45.37
+   ],
+   "confidence": "high"
+  }
+ }
+}

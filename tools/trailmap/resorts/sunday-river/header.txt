@@ -1,0 +1,19 @@
+// Sunday River's trail map from sundayriver.com's resort maps page (the
+// 2023-24 artwork, still the current map in 2025-26): one vector PDF page
+// holding the main map and three insets (North Peak backside, Merrill Hill
+// frontside, the South Ridge base lodge). Trail lines are strokes in the
+// difficulty colours, orange for freestyle terrain; names are outlined glyphs
+// on label boxes along their lines (each glyph shape read once, then decoded:
+// tools/trailmap/resorts/sunday-river/). Each line piece takes the name
+// printed along it; lines that carry an upper and a lower run were cut between
+// their labels, and the rest were settled on zoomed crops (decisions.py). A
+// trail drawn on the main map and an inset has an overlay on both. Names are
+// as printed. Difficulty: black names print a single or double diamond; green
+// and blue names print no symbol and take their line's colour. Tempest prints
+// a diamond on its upper section and blue on its lower: black. The freestyle
+// runs (orange lines, no symbol) get the default, blue. Names printed in the
+// trees with a diamond and no line are glades, markers at their names; Poma
+// Road (a diamond, no line), Rocking Chair (beside Flow State's line) and
+// Enchanted Forest (a kids' area) are markers too. Elevation is the resort's
+// published summit; the map prints none. x/y/baseY/width are unused layout
+// fields.
