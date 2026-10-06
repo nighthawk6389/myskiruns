@@ -1,0 +1,95 @@
+{
+ "reviews": {
+  "winters-way-ext": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Circle 11 below Narrow Gauge Ext. at the summit, with its double diamond and no line: marker at the circle",
+   "at": "2026-10-05T23:54:32.000Z",
+   "by": "claude",
+   "labelAt": [
+    60.29,
+    17.17
+   ]
+  },
+  "west-sluice-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Circle 20 beside the summit lift line, with no line or symbol: marker at the circle",
+   "at": "2026-10-05T23:54:32.000Z",
+   "by": "claude",
+   "labelAt": [
+    62.88,
+    18.51
+   ]
+  },
+  "adrenaline-rush": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "The back side of the summit, drawn only in the Snowfields inset as a numbered circle with no line: marker there",
+   "at": "2026-10-05T23:54:32.000Z",
+   "by": "claude",
+   "labelAt": [
+    93.1,
+    31.37
+   ]
+  },
+  "extreme-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "The back side of the summit, drawn only in the Snowfields inset as a numbered circle with no line: marker there",
+   "at": "2026-10-05T23:54:32.000Z",
+   "by": "claude",
+   "labelAt": [
+    94.38,
+    32.83
+   ]
+  },
+  "ball-and-chain": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "The back side of the summit, drawn only in the Snowfields inset as a numbered circle with no line: marker there",
+   "at": "2026-10-05T23:54:32.000Z",
+   "by": "claude",
+   "labelAt": [
+    92.31,
+    33.42
+   ]
+  },
+  "awesome": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "The back side of the summit, drawn only in the Snowfields inset as a numbered circle with no line: marker there",
+   "at": "2026-10-05T23:54:32.000Z",
+   "by": "claude",
+   "labelAt": [
+    95.27,
+    33.71
+   ]
+  },
+  "hells-gate": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "The back side of the summit, drawn only in the Snowfields inset as a numbered circle with no line: marker there",
+   "at": "2026-10-05T23:54:32.000Z",
+   "by": "claude",
+   "labelAt": [
+    96.26,
+    33.75
+   ]
+  }
+ }
+}

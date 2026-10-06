@@ -342,7 +342,7 @@ def labels(a):
         runs.append(cur)
     out = []
     for run in runs:
-        if len(run) < 2:
+        if len(run) < 2 and run[0]['col'] not in a.single:
             continue  # a lone mark, not a label
         dirs = directions(run)
         if a.space is None:
@@ -418,6 +418,8 @@ def main():
                     help='pt: a word gap is a gap over this between outlines along the reading direction (condensed '
                          'fonts; Keystone 0.75). Default: a gap well over the label\'s median outline-to-outline gap')
     lb.add_argument('--seq-gap', type=int, default=6, help='drawing-order gap that starts a new label')
+    lb.add_argument('--single', action='append', default=[],
+                    help='colour class whose lone glyphs are labels too (one-digit numbered circles: Sugarloaf)')
     a = ap.parse_args()
     {'collect': collect, 'sheet': sheet, 'read': read, 'labels': labels}[a.cmd](a)
 

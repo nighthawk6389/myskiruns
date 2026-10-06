@@ -11,7 +11,10 @@ resort's regen.sh runs it between the extraction and the pipeline.
 The resort's folder holds
   resort.py     how the map prints things: clip and scale, which text is a trail name, names printed in two parts,
                 text to drop, names printed some other way (EXTRA), display spellings, glades, parks, names with
-                no line, areas (resorts/hunter/resort.py lists every setting)
+                no line, areas (resorts/hunter/resort.py lists the basic settings). Optional ones, read with getattr
+                where they apply (the other resort folders use them): JOIN_GAP, MATCH_ENDS, ALONG_SHORT,
+                ALONG_NEAREST, SYMBOL_CENTRE, CUT_AT_SYMBOLS, SYMBOL_OFF_LINE, LOOSE_SYMBOLS, ON_CIRCLE, SYMBOL_OF,
+                DEFAULT_SYMBOL
   decisions.py  CHECKED / UNNAMED / CUTS / TRACED, all keyed by points in map px (see its docstring)
   header.txt    the comment at the top of trails.ts
   regen.sh      the extraction, then this
@@ -28,11 +31,12 @@ printed in two parts. Each symbol goes to the nearest name end (first or last ch
 
 Auto-match: a piece whose end lies at a name's end (beyond its first or last character, or at its symbol) takes
 that name: lines run into their names (the name is printed in a gap of its own line), so this names most pieces.
-A piece most of whose length runs along a name's characters takes it too. Each name end takes one piece end,
-nearest first, preferring pieces of the symbol's colour. A piece with one end at a name's text and the other at
-the next name's symbol belongs to the first: the line goes on past its label until the next trail starts. Then
-names spread along unlabelled continuations: an end that meets exactly one other piece end of the same colour.
-decisions.py overrides all of this.
+Each name end takes one piece end, nearest first, preferring pieces of the symbol's colour. A piece with one end at
+a name's text and the other at the next name's symbol belongs to the first: the line goes on past its label until
+the next trail starts. A piece most of whose length runs along a name's characters takes it too, and so does an
+unnamed piece passing under a name printed as a numbered circle (ON_CIRCLE). Then names spread along unlabelled
+continuations: an end that meets exactly one other piece end of the same colour. decisions.py overrides all of
+this.
 
 Names printed in a gap of their line also get a stretch along their own characters, from the symbol (as
 Whiteface's did), so the overlay runs through the label, and a trail whose label is all of its line has one.
@@ -244,8 +248,19 @@ class Resort:
             syms = [{'t': s['t'], 'c': self.px(s['c']), 'r': 1.5 * self.R.SCALE}
                     for s in self.load('printed.json')['symbols']]
         joined = {' '.join(parts) for parts in getattr(self.R, 'JOIN', [])}
+        used_s, used_n = set(), set()
+        for q, name in getattr(self.R, 'SYMBOL_OF', []):  # a symbol printed beside its name but out of reach
+            i = min(range(len(syms)), key=lambda i: math.dist(syms[i]['c'], q))
+            j = next((j for j, n in enumerate(names) if n['name'] == name), None)
+            if j is None or math.dist(syms[i]['c'], q) > 20:
+                print('  SYMBOL_OF: no symbol or no name', q, name)
+                continue
+            used_s.add(i); used_n.add(j)
+            names[j]['symbol'], names[j]['sym'] = syms[i]['t'], syms[i]
         cands = []
         for i, s in enumerate(syms):
+            if i in used_s:
+                continue
             for j, n in enumerate(names):
                 if n.get('symbol') is not None or not n['printed']:
                     continue
@@ -255,7 +270,6 @@ class Resort:
                 d = min(math.dist(s['c'], p) for p in ends)
                 if d <= self.R.SYMBOL_REACH * self.R.SCALE:
                     cands.append((d, i, j))
-        used_s, used_n = set(), set()
         for d, i, j in sorted(cands):
             if i in used_s or j in used_n:
                 continue
@@ -416,6 +430,15 @@ class Resort:
             for _d, pid in sorted(hits)[:1] if nearest else hits:
                 assign[pid].add(n['name'])  # several names along one piece: cut it (CUTS)
                 why[pid] = f"along {n['name']}"
+        # a name printed as a numbered circle on its own line (resort.ON_CIRCLE, pt: about the circle's radius;
+        # Sugarloaf's key numbers): the unnamed pieces passing under the circle
+        rad = getattr(R, 'ON_CIRCLE', 0) * R.SCALE
+        for n in names if rad else ():
+            if n['printed'] and len(n['pts']) == 1:
+                for p in P:
+                    if not assign.get(p['id']) and line_dist(n['c'], p['pt']) <= rad:
+                        assign[p['id']].add(n['name'])
+                        why[p['id']] = f"under the circle of {n['name']}"
         if on_line:
             # the piece leaving a named symbol toward its name starts that run
             for j, c in sym_cuts:
@@ -557,6 +580,13 @@ class Resort:
                 loose_off += 1
         if loose_off and getattr(R, 'LOOSE_SYMBOLS', None):
             print(f'  {loose_off} symbols with no name on no line: {R.LOOSE_SYMBOLS}')
+        # resort.DEFAULT_SYMBOL: the symbol of a name printed with none anywhere (for names with no line to colour them)
+        rated = {L['mapName'] for L in labels if L.get('symbol')}
+        for L in labels:
+            d = getattr(R, 'DEFAULT_SYMBOL', {}).get(L['mapName'])
+            if d and L['mapName'] not in rated:
+                L['symbol'] = d
+                print(f'  {L["mapName"]}: no symbol printed, {d} by default (resort.DEFAULT_SYMBOL)')
         traced = sorted(self.traced)
         os.makedirs(self.work('tiles'), exist_ok=True)
         lines = [{'id': pid, 'mapName': next(iter(v)), 'color': P[pid]['cls'], 'confidence': 'certain',

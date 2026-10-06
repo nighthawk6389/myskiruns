@@ -1,0 +1,1577 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "alices-winterland-glade": {
+   "noLine": true,
+   "label": [
+    44.92,
+    60.64
+   ],
+   "confidence": "high"
+  },
+  "androscoggin-glade": {
+   "noLine": true,
+   "label": [
+    6.07,
+    23.24
+   ],
+   "confidence": "high"
+  },
+  "barber-chair-glade": {
+   "noLine": true,
+   "label": [
+    65.86,
+    12.35
+   ],
+   "confidence": "high"
+  },
+  "beaver-tail": {
+   "polylines": [
+    5,
+    13,
+    248,
+    333,
+    343
+   ],
+   "confidence": "high",
+   "mapName": "BEAVER TAIL",
+   "note": "along BEAVER TAIL | end of BEAVER TAIL | symbol of BEAVER TAIL | along its printed name"
+  },
+  "binder-ext": {
+   "polylines": [
+    240,
+    241,
+    263
+   ],
+   "confidence": "high",
+   "mapName": "BINDER EXT.",
+   "note": "symbol of BINDER EXT. | end of BINDER EXT. | along its printed name"
+  },
+  "birch-hook": {
+   "polylines": [
+    24,
+    185
+   ],
+   "confidence": "high",
+   "mapName": "BIRCH HOOK",
+   "note": "under the circle of BIRCH HOOK"
+  },
+  "birler-glade-1": {
+   "noLine": true,
+   "label": [
+    39.74,
+    22.95
+   ],
+   "confidence": "high"
+  },
+  "birler-glade-2": {
+   "noLine": true,
+   "label": [
+    39.01,
+    22.95
+   ],
+   "confidence": "high"
+  },
+  "blacksmith-glade": {
+   "noLine": true,
+   "label": [
+    26.85,
+    60.18
+   ],
+   "confidence": "high"
+  },
+  "blade-glade": {
+   "noLine": true,
+   "label": [
+    55.56,
+    20.18
+   ],
+   "confidence": "high"
+  },
+  "blueberrys-grove": {
+   "noLine": true,
+   "label": [
+    43.11,
+    44.3
+   ],
+   "confidence": "high"
+  },
+  "boardwalk": {
+   "polylines": [
+    19,
+    58,
+    59,
+    331
+   ],
+   "confidence": "high",
+   "mapName": "BOARDWALK",
+   "note": "checked on a crop | end of BOARDWALK | along its printed name"
+  },
+  "boomer-glade": {
+   "noLine": true,
+   "label": [
+    47.58,
+    30.07
+   ],
+   "confidence": "high"
+  },
+  "boomscooter": {
+   "noLine": true,
+   "label": [
+    65.31,
+    58.46
+   ],
+   "confidence": "high"
+  },
+  "branding-ax-glade": {
+   "noLine": true,
+   "label": [
+    69.91,
+    30.82
+   ],
+   "confidence": "high"
+  },
+  "bridle-chain": {
+   "polylines": [
+    112,
+    168
+   ],
+   "confidence": "high",
+   "mapName": "BRIDLE CHAIN",
+   "note": "under the circle of BRIDLE CHAIN | checked on a crop"
+  },
+  "broccoli-garden": {
+   "noLine": true,
+   "label": [
+    40.1,
+    37.02
+   ],
+   "confidence": "high"
+  },
+  "bubblecuffer-ext": {
+   "polylines": [
+    260,
+    360
+   ],
+   "confidence": "high",
+   "mapName": "BUBBLECUFFER EXT.",
+   "note": "under the circle of BUBBLECUFFER EXT. | traced along the drawn line"
+  },
+  "bucksaw": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "BUCKSAW",
+   "note": "along BUCKSAW"
+  },
+  "bucksaw-x-cut": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "BUCKSAW X-CUT",
+   "note": "under the circle of BUCKSAW X-CUT"
+  },
+  "buckskin": {
+   "polylines": [
+    123,
+    124,
+    269
+   ],
+   "confidence": "high",
+   "mapName": "BUCKSKIN",
+   "note": "checked on a crop | end of BUCKSKIN | along its printed name"
+  },
+  "candy-side": {
+   "polylines": [
+    135,
+    136,
+    321
+   ],
+   "confidence": "high",
+   "mapName": "CANDY SIDE",
+   "note": "end of CANDY SIDE | symbol of CANDY SIDE | along its printed name"
+  },
+  "cant-dog-glade-1": {
+   "noLine": true,
+   "label": [
+    44.68,
+    22.03
+   ],
+   "confidence": "high"
+  },
+  "cant-dog-glade-2": {
+   "noLine": true,
+   "label": [
+    43.66,
+    22.03
+   ],
+   "confidence": "high"
+  },
+  "cant-hook-glade": {
+   "noLine": true,
+   "label": [
+    54.48,
+    19.64
+   ],
+   "confidence": "high"
+  },
+  "chipper": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "CHIPPER",
+   "note": "along CHIPPER"
+  },
+  "choker": {
+   "polylines": [
+    220,
+    221,
+    281
+   ],
+   "confidence": "high",
+   "mapName": "CHOKER",
+   "note": "end of CHOKER | symbol of CHOKER | along its printed name"
+  },
+  "cinder-hoe": {
+   "polylines": [
+    98,
+    121,
+    159,
+    171,
+    265
+   ],
+   "confidence": "high",
+   "mapName": "CINDER HOE",
+   "note": "checked on a crop | end of CINDER HOE | along its printed name"
+  },
+  "condo-x-cut": {
+   "polylines": [
+    49,
+    50,
+    323
+   ],
+   "confidence": "high",
+   "mapName": "CONDO X-CUT",
+   "note": "end of CONDO X-CUT | checked on a crop | along its printed name"
+  },
+  "cribworks": {
+   "polylines": [
+    186
+   ],
+   "confidence": "high",
+   "mapName": "CRIBWORKS",
+   "note": "under the circle of CRIBWORKS"
+  },
+  "cross-haul": {
+   "polylines": [
+    51,
+    52,
+    53,
+    328
+   ],
+   "confidence": "high",
+   "mapName": "CROSS HAUL",
+   "note": "checked on a crop | end of CROSS HAUL | along its printed name"
+  },
+  "cutter": {
+   "polylines": [
+    3,
+    14,
+    341
+   ],
+   "confidence": "high",
+   "mapName": "CUTTER",
+   "note": "along CUTTER | symbol of CUTTER | along its printed name"
+  },
+  "double-bitter": {
+   "polylines": [
+    242,
+    244,
+    292
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLE BITTER",
+   "note": "end of DOUBLE BITTER | along its printed name"
+  },
+  "drop-line": {
+   "polylines": [
+    236,
+    237,
+    324
+   ],
+   "confidence": "high",
+   "mapName": "DROP LINE",
+   "note": "checked on a crop | end of DROP LINE | along its printed name"
+  },
+  "edger-glade-1": {
+   "noLine": true,
+   "label": [
+    38.27,
+    22.95
+   ],
+   "confidence": "high"
+  },
+  "edger-glade-2": {
+   "noLine": true,
+   "label": [
+    37.52,
+    22.99
+   ],
+   "confidence": "high"
+  },
+  "feller-buncher": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "FELLER BUNCHER",
+   "note": "along FELLER BUNCHER"
+  },
+  "flume": {
+   "polylines": [
+    190,
+    191,
+    283
+   ],
+   "confidence": "high",
+   "mapName": "FLUME",
+   "note": "end of FLUME | symbol of FLUME | along its printed name"
+  },
+  "freds-pitch-glade": {
+   "noLine": true,
+   "label": [
+    44.18,
+    29.94
+   ],
+   "confidence": "high"
+  },
+  "gin-pole": {
+   "polylines": [
+    102,
+    114,
+    178,
+    180,
+    276
+   ],
+   "confidence": "high",
+   "mapName": "GIN POLE",
+   "note": "end of GIN POLE | checked on a crop | along its printed name"
+  },
+  "golden-road": {
+   "polylines": [
+    245
+   ],
+   "confidence": "high",
+   "mapName": "GOLDEN ROAD",
+   "note": "checked on a crop"
+  },
+  "gondi-glade": {
+   "noLine": true,
+   "label": [
+    56.84,
+    21.52
+   ],
+   "confidence": "high"
+  },
+  "gondola-line": {
+   "polylines": [
+    173,
+    174,
+    293
+   ],
+   "confidence": "high",
+   "mapName": "GONDOLA LINE",
+   "note": "end of GONDOLA LINE | symbol of GONDOLA LINE | along its printed name"
+  },
+  "gondola-line-ext": {
+   "polylines": [
+    259,
+    361
+   ],
+   "confidence": "high",
+   "mapName": "GONDOLA LINE EXT.",
+   "note": "under the circle of GONDOLA LINE EXT. | traced along the drawn line"
+  },
+  "good-chance-x-cut": {
+   "polylines": [
+    33,
+    249,
+    315
+   ],
+   "confidence": "high",
+   "mapName": "GOOD CHANCE X-CUT",
+   "note": "symbol of GOOD CHANCE X-CUT | along GOOD CHANCE X-CUT | along its printed name"
+  },
+  "greenhorn-glade": {
+   "noLine": true,
+   "label": [
+    84.34,
+    43.38
+   ],
+   "confidence": "high"
+  },
+  "hard-tack": {
+   "polylines": [
+    254,
+    354
+   ],
+   "confidence": "high",
+   "mapName": "HARD TACK",
+   "note": "under the circle of HARD TACK | traced along the drawn line"
+  },
+  "hatchet": {
+   "polylines": [
+    2,
+    15,
+    334
+   ],
+   "confidence": "high",
+   "mapName": "HATCHET",
+   "note": "end of HATCHET | symbol of HATCHET | along its printed name"
+  },
+  "haul-back": {
+   "polylines": [
+    194,
+    195,
+    222,
+    274
+   ],
+   "confidence": "high",
+   "mapName": "HAUL BACK",
+   "note": "end of HAUL BACK | symbol of HAUL BACK | checked on a crop | along its printed name"
+  },
+  "hayburner": {
+   "polylines": [
+    184,
+    208,
+    209,
+    300
+   ],
+   "confidence": "high",
+   "mapName": "HAYBURNER",
+   "note": "checked on a crop | end of HAYBURNER | symbol of HAYBURNER | along its printed name"
+  },
+  "haywire": {
+   "polylines": [
+    225,
+    226,
+    227,
+    228,
+    320
+   ],
+   "confidence": "high",
+   "mapName": "HAYWIRE",
+   "note": "continuation | checked on a crop | symbol of HAYWIRE | end of HAYWIRE | along its printed name"
+  },
+  "high-ball-glade": {
+   "noLine": true,
+   "label": [
+    26.51,
+    77.55
+   ],
+   "confidence": "high"
+  },
+  "high-rigger": {
+   "polylines": [
+    255,
+    353
+   ],
+   "confidence": "high",
+   "mapName": "HIGH RIGGER",
+   "note": "under the circle of HIGH RIGGER | traced along the drawn line"
+  },
+  "horseshoe": {
+   "polylines": [
+    21,
+    37
+   ],
+   "confidence": "high",
+   "mapName": "HORSESHOE",
+   "note": "checked on a crop | along HORSESHOE"
+  },
+  "ignitor": {
+   "polylines": [
+    258,
+    357
+   ],
+   "confidence": "high",
+   "mapName": "IGNITOR",
+   "note": "under the circle of IGNITOR | traced along the drawn line"
+  },
+  "jackpot-glade": {
+   "noLine": true,
+   "label": [
+    43.37,
+    39.28
+   ],
+   "confidence": "high"
+  },
+  "jagger": {
+   "polylines": [
+    257,
+    356
+   ],
+   "confidence": "high",
+   "mapName": "JAGGER",
+   "note": "under the circle of JAGGER | traced along the drawn line"
+  },
+  "jill-poke": {
+   "polylines": [
+    115,
+    116,
+    296
+   ],
+   "confidence": "high",
+   "mapName": "JILL POKE",
+   "note": "checked on a crop | end of JILL POKE | along its printed name"
+  },
+  "kennebec-glade": {
+   "noLine": true,
+   "label": [
+    9.31,
+    20.52
+   ],
+   "confidence": "high"
+  },
+  "kerf-glade": {
+   "noLine": true,
+   "label": [
+    54.46,
+    38.86
+   ],
+   "confidence": "high"
+  },
+  "kickback": {
+   "noLine": true,
+   "label": [
+    65.59,
+    31.7
+   ],
+   "confidence": "high"
+  },
+  "kings-landing": {
+   "polylines": [
+    137,
+    138,
+    302
+   ],
+   "confidence": "high",
+   "mapName": "KING\u2019S LANDING",
+   "note": "end of KING\u2019S LANDING | checked on a crop | along its printed name"
+  },
+  "knot-bumper": {
+   "polylines": [
+    6,
+    7,
+    336
+   ],
+   "confidence": "high",
+   "mapName": "KNOT BUMPER",
+   "note": "along KNOT BUMPER | symbol of KNOT BUMPER | along its printed name"
+  },
+  "l-binder": {
+   "polylines": [
+    83,
+    84,
+    349
+   ],
+   "confidence": "high",
+   "mapName": "L. BINDER",
+   "note": "symbol of L. BINDER | end of L. BINDER | along its printed name"
+  },
+  "l-boomauger": {
+   "polylines": [
+    172,
+    284
+   ],
+   "confidence": "high",
+   "mapName": "L. BOOMAUGER",
+   "note": "symbol of L. BOOMAUGER | along its printed name"
+  },
+  "l-bubblecuffer": {
+   "polylines": [
+    234,
+    235,
+    291
+   ],
+   "confidence": "high",
+   "mapName": "L. BUBBLECUFFER",
+   "note": "end of L. BUBBLECUFFER | symbol of L. BUBBLECUFFER | along its printed name"
+  },
+  "l-buckboard": {
+   "polylines": [
+    31,
+    74,
+    75,
+    348
+   ],
+   "confidence": "high",
+   "mapName": "L. BUCKBOARD",
+   "note": "checked on a crop | end of L. BUCKBOARD | along its printed name"
+  },
+  "l-comp-hill": {
+   "polylines": [
+    164,
+    165,
+    306
+   ],
+   "confidence": "high",
+   "mapName": "L. COMP HILL",
+   "note": "end of L. COMP HILL | checked on a crop | along its printed name"
+  },
+  "l-cruiser": {
+   "polylines": [
+    153,
+    154,
+    330
+   ],
+   "confidence": "high",
+   "mapName": "L. CRUISER",
+   "note": "end of L. CRUISER | along its printed name"
+  },
+  "l-double-bitter": {
+   "polylines": [
+    118,
+    160,
+    163,
+    181,
+    318
+   ],
+   "confidence": "high",
+   "mapName": "L. DOUBLE BITTER",
+   "note": "checked on a crop | end of L. DOUBLE BITTER | along its printed name"
+  },
+  "l-glancer": {
+   "polylines": [
+    41,
+    68,
+    342
+   ],
+   "confidence": "high",
+   "mapName": "L. GLANCER",
+   "note": "checked on a crop | end of L. GLANCER | along its printed name"
+  },
+  "l-narrow-gauge": {
+   "polylines": [
+    60,
+    61,
+    326
+   ],
+   "confidence": "high",
+   "mapName": "L. NARROW GAUGE",
+   "note": "end of L. NARROW GAUGE | checked on a crop | along its printed name"
+  },
+  "l-pole-line": {
+   "polylines": [
+    72,
+    73,
+    338
+   ],
+   "confidence": "high",
+   "mapName": "L. POLE LINE",
+   "note": "checked on a crop | end of L. POLE LINE | along its printed name"
+  },
+  "l-scoot": {
+   "polylines": [
+    66,
+    67,
+    347
+   ],
+   "confidence": "high",
+   "mapName": "L. SCOOT",
+   "note": "symbol of L. SCOOT | end of L. SCOOT | along its printed name"
+  },
+  "l-sheer-boom": {
+   "polylines": [
+    232,
+    233,
+    322
+   ],
+   "confidence": "high",
+   "mapName": "L. SHEER BOOM",
+   "note": "symbol of L. SHEER BOOM | end of L. SHEER BOOM | along its printed name"
+  },
+  "l-skidder": {
+   "polylines": [
+    211,
+    212,
+    304
+   ],
+   "confidence": "high",
+   "mapName": "L. SKIDDER",
+   "note": "end of L. SKIDDER | along its printed name"
+  },
+  "l-springboard": {
+   "polylines": [
+    151,
+    152,
+    335
+   ],
+   "confidence": "high",
+   "mapName": "L. SPRINGBOARD",
+   "note": "end of L. SPRINGBOARD | symbol of L. SPRINGBOARD | along its printed name"
+  },
+  "l-stubs-trail": {
+   "polylines": [
+    63,
+    350
+   ],
+   "confidence": "high",
+   "mapName": "L. STUB\u2019S TRAIL",
+   "note": "end of L. STUB\u2019S TRAIL | along its printed name"
+  },
+  "l-timberline": {
+   "polylines": [
+    69,
+    295
+   ],
+   "confidence": "high",
+   "mapName": "L. TIMBERLINE",
+   "note": "end of L. TIMBERLINE | along its printed name"
+  },
+  "l-tote-road": {
+   "polylines": [
+    44,
+    45,
+    340
+   ],
+   "confidence": "high",
+   "mapName": "L. TOTE ROAD",
+   "note": "end of L. TOTE ROAD | checked on a crop | along its printed name"
+  },
+  "l-west-mountain": {
+   "polylines": [
+    30,
+    38,
+    79,
+    346
+   ],
+   "confidence": "high",
+   "mapName": "L. WEST MOUNTAIN",
+   "note": "checked on a crop | symbol of L. WEST MOUNTAIN | end of L. WEST MOUNTAIN | along its printed name"
+  },
+  "l-whiffletree": {
+   "polylines": [
+    18,
+    70,
+    71,
+    337
+   ],
+   "confidence": "high",
+   "mapName": "L. WHIFFLETREE",
+   "note": "checked on a crop | end of L. WHIFFLETREE | along its printed name"
+  },
+  "l-winters-way": {
+   "polylines": [
+    56,
+    57,
+    332
+   ],
+   "confidence": "high",
+   "mapName": "L. WINTER\u2019S WAY",
+   "note": "end of L. WINTER\u2019S WAY | checked on a crop | along its printed name"
+  },
+  "little-androscoggin-glade": {
+   "noLine": true,
+   "label": [
+    12.13,
+    33.46
+   ],
+   "confidence": "high"
+  },
+  "logging-road": {
+   "polylines": [
+    246,
+    247
+   ],
+   "confidence": "high",
+   "mapName": "LOGGING ROAD",
+   "note": "checked on a crop"
+  },
+  "lombard-x-cut": {
+   "polylines": [
+    142,
+    143,
+    298
+   ],
+   "confidence": "high",
+   "mapName": "LOMBARD X-CUT",
+   "note": "symbol of LOMBARD X-CUT | end of LOMBARD X-CUT | along its printed name"
+  },
+  "lower-rookie-river": {
+   "noLine": true,
+   "label": [
+    48.18,
+    46.61
+   ],
+   "confidence": "high"
+  },
+  "lower-spillway": {
+   "polylines": [
+    100,
+    105,
+    113,
+    117
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SPILLWAY",
+   "note": "checked on a crop | under the circle of LOWER SPILLWAY"
+  },
+  "m-narrow-gauge": {
+   "polylines": [
+    104,
+    139
+   ],
+   "confidence": "high",
+   "mapName": "M. NARROW GAUGE",
+   "note": "along M. NARROW GAUGE | continuation"
+  },
+  "m-scoot": {
+   "polylines": [
+    39,
+    40,
+    319
+   ],
+   "confidence": "high",
+   "mapName": "M. SCOOT",
+   "note": "end of M. SCOOT | checked on a crop | along its printed name"
+  },
+  "mid-station-x-cut": {
+   "polylines": [
+    90,
+    91,
+    92,
+    93,
+    101,
+    107
+   ],
+   "confidence": "high",
+   "mapName": "MID STATION X-CUT",
+   "note": "checked on a crop | under the circle of MID STATION X-CUT"
+  },
+  "misery-whip": {
+   "polylines": [
+    197,
+    198,
+    280
+   ],
+   "confidence": "high",
+   "mapName": "MISERY WHIP",
+   "note": "end of MISERY WHIP | checked on a crop | along its printed name"
+  },
+  "moose-alley": {
+   "polylines": [
+    155,
+    156
+   ],
+   "confidence": "high",
+   "mapName": "MOOSE ALLEY",
+   "note": "checked on a crop | under the circle of MOOSE ALLEY"
+  },
+  "narrow-gauge-ext": {
+   "polylines": [
+    223
+   ],
+   "confidence": "high",
+   "mapName": "NARROW GAUGE EXT.",
+   "note": "under the circle of NARROW GAUGE EXT."
+  },
+  "natalies-birches": {
+   "polylines": [
+    25,
+    29,
+    64,
+    76,
+    351
+   ],
+   "confidence": "high",
+   "mapName": "NATALIE\u2019S BIRCHES",
+   "note": "checked on a crop | end of NATALIE\u2019S BIRCHES | along its printed name"
+  },
+  "old-winters-way": {
+   "polylines": [
+    88,
+    89
+   ],
+   "confidence": "high",
+   "mapName": "OLD WINTER\u2019S WAY",
+   "note": "under the circle of OLD WINTER\u2019S WAY | checked on a crop"
+  },
+  "peavy-x-cut": {
+   "polylines": [
+    46,
+    47,
+    309
+   ],
+   "confidence": "high",
+   "mapName": "PEAVY X-CUT",
+   "note": "symbol of PEAVY X-CUT | end of PEAVY X-CUT | along its printed name"
+  },
+  "picaroon": {
+   "noLine": true,
+   "label": [
+    55.53,
+    46.86
+   ],
+   "confidence": "high"
+  },
+  "pick-pole": {
+   "polylines": [
+    94,
+    95,
+    125,
+    126
+   ],
+   "confidence": "high",
+   "mapName": "PICK POLE",
+   "note": "checked on a crop | under the circle of PICK POLE"
+  },
+  "pinch": {
+   "polylines": [
+    110
+   ],
+   "confidence": "high",
+   "mapName": "PINCH",
+   "note": "under the circle of PINCH"
+  },
+  "powder-keg": {
+   "polylines": [
+    262,
+    358
+   ],
+   "confidence": "high",
+   "mapName": "POWDER KEG",
+   "note": "under the circle of POWDER KEG | traced along the drawn line"
+  },
+  "pulaski": {
+   "polylines": [
+    253
+   ],
+   "confidence": "high",
+   "mapName": "PULASKI",
+   "note": "along PULASKI"
+  },
+  "pure-heat": {
+   "polylines": [
+    256,
+    355
+   ],
+   "confidence": "high",
+   "mapName": "PURE HEAT",
+   "note": "under the circle of PURE HEAT | traced along the drawn line"
+  },
+  "raker-tooth-glade": {
+   "noLine": true,
+   "label": [
+    74.69,
+    41.46
+   ],
+   "confidence": "high"
+  },
+  "ram-pasture-glade": {
+   "noLine": true,
+   "label": [
+    62.48,
+    52.26
+   ],
+   "confidence": "high"
+  },
+  "ramdown": {
+   "polylines": [
+    119,
+    120,
+    277
+   ],
+   "confidence": "high",
+   "mapName": "RAMDOWN",
+   "note": "checked on a crop | end of RAMDOWN | along its printed name"
+  },
+  "red-horse-glade": {
+   "noLine": true,
+   "label": [
+    28.26,
+    50.08
+   ],
+   "confidence": "high"
+  },
+  "ripsaw": {
+   "polylines": [
+    192,
+    193,
+    279
+   ],
+   "confidence": "high",
+   "mapName": "RIPSAW",
+   "note": "checked on a crop | end of RIPSAW | along its printed name"
+  },
+  "rollway": {
+   "polylines": [
+    81,
+    297
+   ],
+   "confidence": "high",
+   "mapName": "ROLLWAY",
+   "note": "end of ROLLWAY | along its printed name"
+  },
+  "rookie-river": {
+   "noLine": true,
+   "label": [
+    50.09,
+    38.82
+   ],
+   "confidence": "high"
+  },
+  "rough-cut-glade": {
+   "noLine": true,
+   "label": [
+    29.8,
+    41.04
+   ],
+   "confidence": "high"
+  },
+  "schippers-streak": {
+   "noLine": true,
+   "label": [
+    52.08,
+    56.53
+   ],
+   "confidence": "high"
+  },
+  "sheer-boom": {
+   "polylines": [
+    243,
+    307
+   ],
+   "confidence": "high",
+   "mapName": "SHEER BOOM",
+   "note": "symbol of SHEER BOOM | along its printed name"
+  },
+  "sidewinder": {
+   "polylines": [
+    238,
+    239,
+    327
+   ],
+   "confidence": "high",
+   "mapName": "SIDEWINDER",
+   "note": "checked on a crop | end of SIDEWINDER | along its printed name"
+  },
+  "skid-road": {
+   "noLine": true,
+   "label": [
+    71.84,
+    22.24
+   ],
+   "confidence": "high"
+  },
+  "skybound": {
+   "polylines": [
+    250
+   ],
+   "confidence": "high",
+   "mapName": "SKYBOUND",
+   "note": "along SKYBOUND"
+  },
+  "slasher": {
+   "polylines": [
+    157,
+    158,
+    329
+   ],
+   "confidence": "high",
+   "mapName": "SLASHER",
+   "note": "symbol of SLASHER | end of SLASHER | along its printed name"
+  },
+  "slashfire-glade": {
+   "noLine": true,
+   "label": [
+    35.32,
+    22.95
+   ],
+   "confidence": "high"
+  },
+  "sluice": {
+   "polylines": [
+    140,
+    141,
+    286
+   ],
+   "confidence": "high",
+   "mapName": "SLUICE",
+   "note": "end of SLUICE | symbol of SLUICE | along its printed name"
+  },
+  "sluice-chute": {
+   "polylines": [
+    182
+   ],
+   "confidence": "high",
+   "mapName": "SLUICE CHUTE",
+   "note": "checked on a crop"
+  },
+  "sluice-headwall": {
+   "polylines": [
+    187
+   ],
+   "confidence": "high",
+   "mapName": "SLUICE HEADWALL",
+   "note": "under the circle of SLUICE HEADWALL"
+  },
+  "snowbrook": {
+   "polylines": [
+    26,
+    27,
+    28,
+    65,
+    77,
+    352
+   ],
+   "confidence": "high",
+   "mapName": "SNOWBROOK",
+   "note": "checked on a crop | end of SNOWBROOK | symbol of SNOWBROOK | along its printed name"
+  },
+  "spillway-x-cut": {
+   "polylines": [
+    201,
+    202,
+    267,
+    268,
+    362
+   ],
+   "confidence": "high",
+   "mapName": "SPILLWAY X-CUT",
+   "note": "checked on a crop | end of SPILLWAY X-CUT | along its printed name | traced along the drawn line"
+  },
+  "spurline": {
+   "polylines": [
+    103,
+    129,
+    130,
+    301
+   ],
+   "confidence": "high",
+   "mapName": "SPURLINE",
+   "note": "checked on a crop | end of SPURLINE | along its printed name"
+  },
+  "stubs-glade": {
+   "noLine": true,
+   "label": [
+    35.97,
+    43.47
+   ],
+   "confidence": "high"
+  },
+  "stump-shot-glade": {
+   "noLine": true,
+   "label": [
+    58.8,
+    19.47
+   ],
+   "confidence": "high"
+  },
+  "swedish-fiddle-glade": {
+   "noLine": true,
+   "label": [
+    67.92,
+    30.49
+   ],
+   "confidence": "high"
+  },
+  "sweeper-glade-1": {
+   "noLine": true,
+   "label": [
+    36.78,
+    22.95
+   ],
+   "confidence": "high"
+  },
+  "sweeper-glade-2": {
+   "noLine": true,
+   "label": [
+    36.05,
+    22.91
+   ],
+   "confidence": "high"
+  },
+  "the-landing": {
+   "polylines": [
+    54,
+    55,
+    344
+   ],
+   "confidence": "high",
+   "mapName": "THE LANDING",
+   "note": "end of THE LANDING | symbol of THE LANDING | along its printed name"
+  },
+  "the-yard": {
+   "polylines": [
+    17,
+    82,
+    345
+   ],
+   "confidence": "high",
+   "mapName": "THE YARD",
+   "note": "end of THE YARD | along its printed name"
+  },
+  "tin-pants": {
+   "polylines": [
+    111
+   ],
+   "confidence": "high",
+   "mapName": "TIN PANTS",
+   "note": "under the circle of TIN PANTS"
+  },
+  "tohaul": {
+   "polylines": [
+    144,
+    145,
+    294
+   ],
+   "confidence": "high",
+   "mapName": "TOHAUL",
+   "note": "end of TOHAUL | symbol of TOHAUL | along its printed name"
+  },
+  "tote-road": {
+   "polylines": [
+    122,
+    127,
+    128,
+    290,
+    363
+   ],
+   "confidence": "high",
+   "mapName": "TOTE ROAD",
+   "note": "checked on a crop | symbol of TOTE ROAD | end of TOTE ROAD | along its printed name | traced along the drawn line"
+  },
+  "tote-road-ext": {
+   "polylines": [
+    169,
+    170,
+    266
+   ],
+   "confidence": "high",
+   "mapName": "TOTE ROAD EXT.",
+   "note": "checked on a crop | end of TOTE ROAD EXT. | along its printed name"
+  },
+  "tote-road-x-cut": {
+   "polylines": [
+    108,
+    109,
+    299
+   ],
+   "confidence": "high",
+   "mapName": "TOTE ROAD X-CUT",
+   "note": "checked on a crop | end of TOTE ROAD X-CUT | along its printed name"
+  },
+  "twitcher": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "TWITCHER",
+   "note": "along TWITCHER"
+  },
+  "u-binder": {
+   "polylines": [
+    205,
+    206,
+    278
+   ],
+   "confidence": "high",
+   "mapName": "U. BINDER",
+   "note": "symbol of U. BINDER | end of U. BINDER | along its printed name"
+  },
+  "u-boomauger": {
+   "polylines": [
+    199,
+    200,
+    275
+   ],
+   "confidence": "high",
+   "mapName": "U. BOOMAUGER",
+   "note": "checked on a crop | end of U. BOOMAUGER | along its printed name"
+  },
+  "u-bubblecuffer": {
+   "polylines": [
+    271
+   ],
+   "confidence": "high",
+   "mapName": "U. BUBBLECUFFER",
+   "note": "along its printed name"
+  },
+  "u-buckboard": {
+   "polylines": [
+    85,
+    146,
+    147,
+    305
+   ],
+   "confidence": "high",
+   "mapName": "U. BUCKBOARD",
+   "note": "checked on a crop | symbol of U. BUCKBOARD | end of U. BUCKBOARD | along its printed name"
+  },
+  "u-competition-hill": {
+   "polylines": [
+    213,
+    229,
+    287
+   ],
+   "confidence": "high",
+   "mapName": "U. COMPETITION HILL",
+   "note": "symbol of U. COMPETITION HILL | end of U. COMPETITION HILL | along its printed name"
+  },
+  "u-cruiser": {
+   "polylines": [
+    176,
+    177,
+    310
+   ],
+   "confidence": "high",
+   "mapName": "U. CRUISER",
+   "note": "end of U. CRUISER | along its printed name"
+  },
+  "u-double-bitter": {
+   "polylines": [
+    207
+   ],
+   "confidence": "high",
+   "mapName": "U. DOUBLE BITTER",
+   "note": "under the circle of U. DOUBLE BITTER"
+  },
+  "u-glancer": {
+   "polylines": [
+    161,
+    162,
+    179,
+    317
+   ],
+   "confidence": "high",
+   "mapName": "U. GLANCER",
+   "note": "checked on a crop | end of U. GLANCER | along its printed name"
+  },
+  "u-gondola-line": {
+   "polylines": [
+    203,
+    231,
+    273
+   ],
+   "confidence": "high",
+   "mapName": "U. GONDOLA LINE",
+   "note": "end of U. GONDOLA LINE | checked on a crop | along its printed name"
+  },
+  "u-narrow-gauge": {
+   "polylines": [
+    214,
+    224,
+    230,
+    282
+   ],
+   "confidence": "high",
+   "mapName": "U. NARROW GAUGE",
+   "note": "symbol of U. NARROW GAUGE | end of U. NARROW GAUGE | checked on a crop | along its printed name"
+  },
+  "u-pole-line": {
+   "polylines": [
+    149,
+    150,
+    313
+   ],
+   "confidence": "high",
+   "mapName": "U. POLE LINE",
+   "note": "symbol of U. POLE LINE | end of U. POLE LINE | along its printed name"
+  },
+  "u-scoot": {
+   "polylines": [
+    96,
+    97,
+    166,
+    167,
+    312
+   ],
+   "confidence": "high",
+   "mapName": "U. SCOOT",
+   "note": "checked on a crop | end of U. SCOOT | symbol of U. SCOOT | along its printed name"
+  },
+  "u-skidder": {
+   "polylines": [
+    183,
+    210,
+    288
+   ],
+   "confidence": "high",
+   "mapName": "U. SKIDDER",
+   "note": "checked on a crop | end of U. SKIDDER | along its printed name"
+  },
+  "u-spillway": {
+   "polylines": [
+    215,
+    216,
+    285
+   ],
+   "confidence": "high",
+   "mapName": "U. SPILLWAY",
+   "note": "symbol of U. SPILLWAY | end of U. SPILLWAY | along its printed name"
+  },
+  "u-springboard": {
+   "polylines": [
+    86,
+    87,
+    314
+   ],
+   "confidence": "high",
+   "mapName": "U. SPRINGBOARD",
+   "note": "symbol of U. SPRINGBOARD | end of U. SPRINGBOARD | along its printed name"
+  },
+  "u-stubs-trail": {
+   "polylines": [
+    16,
+    62,
+    80,
+    311
+   ],
+   "confidence": "high",
+   "mapName": "U. STUB\u2019S TRAIL",
+   "note": "symbol of U. STUB\u2019S TRAIL | checked on a crop | end of U. STUB\u2019S TRAIL | along its printed name"
+  },
+  "u-timberline": {
+   "polylines": [
+    35,
+    36,
+    264
+   ],
+   "confidence": "high",
+   "mapName": "U. TIMBERLINE",
+   "note": "checked on a crop | end of U. TIMBERLINE | along its printed name"
+  },
+  "u-west-mountain": {
+   "polylines": [
+    131,
+    132,
+    325
+   ],
+   "confidence": "high",
+   "mapName": "U. WEST MOUNTAIN",
+   "note": "symbol of U. WEST MOUNTAIN | end of U. WEST MOUNTAIN | along its printed name"
+  },
+  "u-whiffletree": {
+   "polylines": [
+    48,
+    148,
+    308
+   ],
+   "confidence": "high",
+   "mapName": "U. WHIFFLETREE",
+   "note": "symbol of U. WHIFFLETREE | end of U. WHIFFLETREE | along its printed name"
+  },
+  "u-windrow": {
+   "polylines": [
+    133,
+    134,
+    316
+   ],
+   "confidence": "high",
+   "mapName": "U. WINDROW",
+   "note": "symbol of U. WINDROW | end of U. WINDROW | along its printed name"
+  },
+  "u-winters-way": {
+   "polylines": [
+    204,
+    270
+   ],
+   "confidence": "high",
+   "mapName": "U. WINTER\u2019S WAY",
+   "note": "symbol of U. WINTER\u2019S WAY | along its printed name"
+  },
+  "upper-sheer-boom": {
+   "polylines": [
+    217
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SHEER BOOM",
+   "note": "checked on a crop"
+  },
+  "wedge": {
+   "polylines": [
+    218,
+    219,
+    289
+   ],
+   "confidence": "high",
+   "mapName": "WEDGE",
+   "note": "symbol of WEDGE | end of WEDGE | along its printed name"
+  },
+  "west-mtn-x-cut": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "WEST MTN X-CUT",
+   "note": "along WEST MTN X-CUT"
+  },
+  "whistle-punk": {
+   "polylines": [
+    10,
+    12
+   ],
+   "confidence": "high",
+   "mapName": "WHISTLE PUNK",
+   "note": "along WHISTLE PUNK | continuation"
+  },
+  "white-nitro": {
+   "polylines": [
+    188
+   ],
+   "confidence": "high",
+   "mapName": "WHITE NITRO",
+   "note": "under the circle of WHITE NITRO"
+  },
+  "white-nitro-ext": {
+   "polylines": [
+    261,
+    359
+   ],
+   "confidence": "high",
+   "mapName": "WHITE NITRO EXT.",
+   "note": "under the circle of WHITE NITRO EXT. | traced along the drawn line"
+  },
+  "widowmaker": {
+   "polylines": [
+    189,
+    196,
+    272
+   ],
+   "confidence": "high",
+   "mapName": "WIDOWMAKER",
+   "note": "symbol of WIDOWMAKER | end of WIDOWMAKER | along its printed name"
+  },
+  "windrow": {
+   "polylines": [
+    42,
+    43,
+    339
+   ],
+   "confidence": "high",
+   "mapName": "WINDROW",
+   "note": "end of WINDROW | symbol of WINDROW | along its printed name"
+  },
+  "windrow-ext": {
+   "polylines": [
+    23,
+    303
+   ],
+   "confidence": "high",
+   "mapName": "WINDROW EXT.",
+   "note": "end of WINDROW EXT. | along its printed name"
+  },
+  "yarder": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "YARDER",
+   "note": "along YARDER"
+  }
+ }
+}
