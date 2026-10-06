@@ -9,6 +9,7 @@ import { TrailList } from './components/TrailList/TrailList';
 import { ImageMap, type ImageMapHandle } from './components/ImageMap/ImageMap';
 import { TripBar } from './components/TripBar/TripBar';
 import { TripSummary } from './components/TripSummary/TripSummary';
+import { ResortPicker } from './components/ResortPicker/ResortPicker';
 import styles from './App.module.css';
 
 const RESORT_KEY = 'myskiruns.resort';
@@ -38,7 +39,7 @@ function App() {
       // private mode: the choice lasts this session
     }
   };
-  const picker = <ResortPicker value={resortId} onChange={chooseResort} busy={resortId !== shownId} />;
+  const picker = <Picker value={resortId} onChange={chooseResort} busy={resortId !== shownId} />;
   return (
     <Suspense fallback={<Splash picker={picker}>Loading {resortEntry(shownId).name}…</Splash>}>
       <LoadError key={shownId} resortId={shownId} picker={picker}>
@@ -55,23 +56,9 @@ function LoadedResort({ id, picker }: { id: string; picker: ReactNode }) {
   return <ResortApp key={resort.id} resort={resort} picker={picker} />;
 }
 
-function ResortPicker({ value, onChange, busy }: { value: string; onChange: (id: string) => void; busy: boolean }) {
+function Picker({ value, onChange, busy }: { value: string; onChange: (id: string) => void; busy: boolean }) {
   if (RESORTS.length < 2) return <h1 className={styles.title}>{resortEntry(value).name} Trail Tracker</h1>;
-  return (
-    <select
-      className={styles.resortSelect}
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-      aria-label="Resort"
-      aria-busy={busy}
-    >
-      {RESORTS.map((r) => (
-        <option key={r.id} value={r.id}>
-          {r.name}
-        </option>
-      ))}
-    </select>
-  );
+  return <ResortPicker resorts={RESORTS} value={value} onChange={onChange} busy={busy} />;
 }
 
 /** The header and a message, while a resort loads or when it can't. */

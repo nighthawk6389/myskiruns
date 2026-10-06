@@ -19,7 +19,7 @@ working process is [`docs/trail-map-playbook.md`](docs/trail-map-playbook.md).
 npm install
 npm run dev        # app at localhost:5173
 npm run build      # typecheck + production build
-npm test           # trip merge/sync rules (tests/)
+npm test           # trip merge/sync rules, resort search (tests/)
 ```
 
 **Doing this for another resort?** Follow
@@ -204,8 +204,11 @@ labeled / labeled incorrectly" at the data source.
 Each resort has its own folder, `src/data/resorts/<id>/` (`trails.ts`,
 `linePolylines.json`, `trailProposals.json`, `trailReviews.json`, generated
 `trailPaths.json`), a map at `public/maps/<id>.jpg`, and an entry in
-`src/resorts.ts`. With more than one resort the header shows a resort
-picker (also `?resort=<id>` in the URL). Trips belong to a resort (older
+`src/resorts.ts` (with its state or province). With more than one resort
+the header shows a resort picker (also `?resort=<id>` in the URL): a search
+over the names and states, grouped by state until something is typed
+(`src/components/ResortPicker/`, the matching in `src/resortSearch.ts`,
+tested by `npm test`). Trips belong to a resort (older
 trips are Killington's), and condition votes are stored per resort. The
 pipeline scripts take `--resort <id>` (default `killington`), e.g.
 `npm run trails:apply -- --resort stowe`. To add a resort, follow
@@ -240,7 +243,7 @@ checked on zoomed crops instead, see the playbook).
 | `npm run reviews:import -- <export dir> --resort <id>` | review-page export → `trailReviews.json` |
 | `tools/trailmap/resorts/vail/regen.sh` | rebuild all of Vail's data from its readings and decisions |
 | `tools/trailmap/resorts/<id>/regen.sh` | rebuild all of Hunter Mountain's, Wildcat Mountain's, Sunday River's, Sugarloaf's or Smugglers' Notch's data from its PDF and decisions (`tools/trailmap/pdf_resort.py`) |
-| `npm test` | the trip merge and sync rules (`tests/tripLog.test.ts`, Node's test runner) |
+| `npm test` | the trip merge and sync rules and the resort search (`tests/*.test.ts`, Node's test runner) |
 | `node scripts/mockSupabase.cjs` | a stand-in Supabase project, for trying accounts without one |
 | `node tools/accounts_check.cjs` | browser check: two devices sign in, sync, edit offline, delete (header has the setup) |
 

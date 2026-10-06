@@ -31,16 +31,6 @@
   color: var(--text-primary);
 }
 
-.resortSelect {
-  padding: 4px 8px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--bg-tertiary);
-  color: var(--text-primary);
-  font-size: 18px;
-  font-weight: 700;
-}
-
 .main {
   display: flex;
   flex: 1;
@@ -103,14 +93,13 @@
     min-width: 0;
   }
 
-  .headerRight {
-    justify-content: flex-start;
+  /* the resort picker's list spans this row */
+  .headerLeft {
+    position: relative;
   }
 
-  .resortSelect {
-    flex: 1;
-    min-width: 0;
-    font-size: 16px;
+  .headerRight {
+    justify-content: flex-start;
   }
 
   .main {
@@ -156,8 +145,4 @@
   color: var(--text-primary);
   font-size: 15px;
   cursor: pointer;
-}
-
-.resortSelect[aria-busy='true'] {
-  opacity: 0.6;
 }

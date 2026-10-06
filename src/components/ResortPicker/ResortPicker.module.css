@@ -1,0 +1,144 @@
+.wrap {
+  position: relative;
+  min-width: 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.button[aria-busy='true'] {
+  opacity: 0.6;
+}
+
+.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chevron {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.panel {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 30;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.search {
+  margin: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  /* 16px: iOS zooms the page into smaller inputs */
+  font-size: 16px;
+}
+
+.list {
+  list-style: none;
+  max-height: min(420px, 60vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 4px 6px;
+}
+
+.group {
+  list-style: none;
+}
+
+.region {
+  padding: 8px 8px 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.option {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.active {
+  background: var(--bg-tertiary);
+}
+
+.optionName {
+  flex: 1;
+  min-width: 0;
+}
+
+.optionRegion {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.check {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.empty {
+  padding: 12px 10px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* phones: the button fills its row and the list drops down across the whole
+   row (the header row is the panel's containing block: App.module.css), right
+   under the button */
+@media (max-width: 760px) {
+  .wrap {
+    position: static;
+    flex: 1;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .name {
+    flex: 1;
+  }
+
+  .panel {
+    top: auto;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin-top: 6px;
+  }
+}

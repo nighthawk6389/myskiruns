@@ -36,6 +36,8 @@ export interface Resort {
 export interface ResortEntry {
   id: string;
   name: string;
+  /** state or province, for the picker's search and grouping */
+  region: string;
   load: () => Promise<Resort>;
 }
 
@@ -48,12 +50,14 @@ const pathsOf = (doc: PathsModule) => (doc.default as { trails: Record<string, T
 function oneMap(
   id: string,
   name: string,
+  region: string,
   trails: () => Promise<TrailsModule>,
   paths: () => Promise<PathsModule>,
 ): ResortEntry {
   return {
     id,
     name,
+    region,
     load: async () => {
       const [t, p] = await Promise.all([trails(), paths()]);
       const maps = [{ id: 'map', name: 'Trail map', mapSrc: `/maps/${id}.jpg`, paths: pathsOf(p) }];
@@ -63,24 +67,26 @@ function oneMap(
 }
 
 // To add a resort: put its data in src/data/resorts/<id>/ and its map in
-// public/maps/<id>.jpg (docs/trail-map-playbook.md), then list it here. A
+// public/maps/<id>.jpg (docs/trail-map-playbook.md), then list it here with
+// its state or province (the picker searches and groups by it). A
 // resort drawn on several panels keeps one trail list and, per panel, its
 // overlays in src/data/resorts/<id>/panels/<panel>/ and its map in
 // public/maps/<id>-<panel>.jpg.
 export const RESORTS: ResortEntry[] = [
-  oneMap('killington', 'Killington', () => import('./data/resorts/killington/trails'), () => import('./data/resorts/killington/trailPaths.json')),
-  oneMap('stowe', 'Stowe', () => import('./data/resorts/stowe/trails'), () => import('./data/resorts/stowe/trailPaths.json')),
-  oneMap('okemo', 'Okemo', () => import('./data/resorts/okemo/trails'), () => import('./data/resorts/okemo/trailPaths.json')),
-  oneMap('sugarbush', 'Sugarbush', () => import('./data/resorts/sugarbush/trails'), () => import('./data/resorts/sugarbush/trailPaths.json')),
-  oneMap('jay-peak', 'Jay Peak', () => import('./data/resorts/jay-peak/trails'), () => import('./data/resorts/jay-peak/trailPaths.json')),
-  oneMap('whiteface', 'Whiteface', () => import('./data/resorts/whiteface/trails'), () => import('./data/resorts/whiteface/trailPaths.json')),
-  oneMap('winter-park', 'Winter Park', () => import('./data/resorts/winter-park/trails'), () => import('./data/resorts/winter-park/trailPaths.json')),
-  oneMap('breckenridge', 'Breckenridge', () => import('./data/resorts/breckenridge/trails'), () => import('./data/resorts/breckenridge/trailPaths.json')),
-  oneMap('copper-mountain', 'Copper Mountain', () => import('./data/resorts/copper-mountain/trails'), () => import('./data/resorts/copper-mountain/trailPaths.json')),
-  oneMap('keystone', 'Keystone', () => import('./data/resorts/keystone/trails'), () => import('./data/resorts/keystone/trailPaths.json')),
+  oneMap('killington', 'Killington', 'Vermont', () => import('./data/resorts/killington/trails'), () => import('./data/resorts/killington/trailPaths.json')),
+  oneMap('stowe', 'Stowe', 'Vermont', () => import('./data/resorts/stowe/trails'), () => import('./data/resorts/stowe/trailPaths.json')),
+  oneMap('okemo', 'Okemo', 'Vermont', () => import('./data/resorts/okemo/trails'), () => import('./data/resorts/okemo/trailPaths.json')),
+  oneMap('sugarbush', 'Sugarbush', 'Vermont', () => import('./data/resorts/sugarbush/trails'), () => import('./data/resorts/sugarbush/trailPaths.json')),
+  oneMap('jay-peak', 'Jay Peak', 'Vermont', () => import('./data/resorts/jay-peak/trails'), () => import('./data/resorts/jay-peak/trailPaths.json')),
+  oneMap('whiteface', 'Whiteface', 'New York', () => import('./data/resorts/whiteface/trails'), () => import('./data/resorts/whiteface/trailPaths.json')),
+  oneMap('winter-park', 'Winter Park', 'Colorado', () => import('./data/resorts/winter-park/trails'), () => import('./data/resorts/winter-park/trailPaths.json')),
+  oneMap('breckenridge', 'Breckenridge', 'Colorado', () => import('./data/resorts/breckenridge/trails'), () => import('./data/resorts/breckenridge/trailPaths.json')),
+  oneMap('copper-mountain', 'Copper Mountain', 'Colorado', () => import('./data/resorts/copper-mountain/trails'), () => import('./data/resorts/copper-mountain/trailPaths.json')),
+  oneMap('keystone', 'Keystone', 'Colorado', () => import('./data/resorts/keystone/trails'), () => import('./data/resorts/keystone/trailPaths.json')),
   {
     id: 'vail',
     name: 'Vail',
+    region: 'Colorado',
     load: async () => {
       const [t, frontSide, backBowls, blueSky] = await Promise.all([
         import('./data/resorts/vail/trails'),
@@ -101,11 +107,11 @@ export const RESORTS: ResortEntry[] = [
       };
     },
   },
-  oneMap('hunter', 'Hunter Mountain', () => import('./data/resorts/hunter/trails'), () => import('./data/resorts/hunter/trailPaths.json')),
-  oneMap('wildcat', 'Wildcat Mountain', () => import('./data/resorts/wildcat/trails'), () => import('./data/resorts/wildcat/trailPaths.json')),
-  oneMap('sunday-river', 'Sunday River', () => import('./data/resorts/sunday-river/trails'), () => import('./data/resorts/sunday-river/trailPaths.json')),
-  oneMap('sugarloaf', 'Sugarloaf', () => import('./data/resorts/sugarloaf/trails'), () => import('./data/resorts/sugarloaf/trailPaths.json')),
-  oneMap('smugglers-notch', "Smugglers' Notch", () => import('./data/resorts/smugglers-notch/trails'), () => import('./data/resorts/smugglers-notch/trailPaths.json')),
+  oneMap('hunter', 'Hunter Mountain', 'New York', () => import('./data/resorts/hunter/trails'), () => import('./data/resorts/hunter/trailPaths.json')),
+  oneMap('wildcat', 'Wildcat Mountain', 'New Hampshire', () => import('./data/resorts/wildcat/trails'), () => import('./data/resorts/wildcat/trailPaths.json')),
+  oneMap('sunday-river', 'Sunday River', 'Maine', () => import('./data/resorts/sunday-river/trails'), () => import('./data/resorts/sunday-river/trailPaths.json')),
+  oneMap('sugarloaf', 'Sugarloaf', 'Maine', () => import('./data/resorts/sugarloaf/trails'), () => import('./data/resorts/sugarloaf/trailPaths.json')),
+  oneMap('smugglers-notch', "Smugglers' Notch", 'Vermont', () => import('./data/resorts/smugglers-notch/trails'), () => import('./data/resorts/smugglers-notch/trailPaths.json')),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];
