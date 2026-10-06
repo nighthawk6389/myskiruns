@@ -1,0 +1,163 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "adagio": {
+   "polylines": [
+    6,
+    8
+   ],
+   "confidence": "high",
+   "mapName": "ADAGIO",
+   "note": "along ADAGIO"
+  },
+  "burnt-stew-trail": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "BURNT STEW TRAIL",
+   "note": "along BURNT STEW TRAIL"
+  },
+  "crescendo": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "CRESCENDO",
+   "note": "checked on a crop"
+  },
+  "encore-ridge": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "ENCORE RIDGE",
+   "note": "end of ENCORE RIDGE"
+  },
+  "glissando": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "GLISSANDO",
+   "note": "along GLISSANDO"
+  },
+  "glissando-glades": {
+   "noLine": true,
+   "label": [
+    36.15,
+    70.45
+   ],
+   "confidence": "high"
+  },
+  "harmony-ridge": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "HARMONY RIDGE",
+   "note": "along HARMONY RIDGE"
+  },
+  "harveys": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "HARVEY\u2019S",
+   "note": "along HARVEY\u2019S"
+  },
+  "jeffs-ode-to-joy": {
+   "polylines": [
+    7,
+    9,
+    10,
+    11,
+    24
+   ],
+   "confidence": "high",
+   "mapName": "JEFF\u2019S ODE TO JOY",
+   "note": "along JEFF\u2019S ODE TO JOY | checked on a crop"
+  },
+  "kaleidoscope": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "KALEIDOSCOPE",
+   "note": "along KALEIDOSCOPE"
+  },
+  "krummholz": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "KRUMMHOLZ",
+   "note": "along KRUMMHOLZ"
+  },
+  "low-roll": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "LOW ROLL",
+   "note": "along LOW ROLL"
+  },
+  "mcconkeys": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "MCCONKEY\u2019S",
+   "note": "along McCONKEY\u2019S"
+  },
+  "pikas-traverse": {
+   "polylines": [
+    1,
+    2
+   ],
+   "confidence": "high",
+   "mapName": "PIKA\u2019S TRAVERSE",
+   "note": "along PIKA\u2019S TRAVERSE | symbol of PIKA\u2019S TRAVERSE"
+  },
+  "robertsons": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "ROBERTSON\u2019S",
+   "note": "end of ROBERTSON\u2019S"
+  },
+  "staccato-glades": {
+   "noLine": true,
+   "label": [
+    39.67,
+    48.92
+   ],
+   "confidence": "high"
+  },
+  "sun-bowl": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "SUN BOWL",
+   "note": "along SUN BOWL"
+  },
+  "the-couloir": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "THE COULOIR",
+   "note": "end of THE COULOIR"
+  },
+  "the-glades": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "THE GLADES",
+   "note": "checked on a crop"
+  }
+ }
+}

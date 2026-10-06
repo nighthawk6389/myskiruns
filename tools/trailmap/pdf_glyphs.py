@@ -271,7 +271,7 @@ def labels(a):
     syms = []
     for g in G:
         k, s, big = g['kinds'], g['sig'], max(g['rect'][2] - g['rect'][0], g['rect'][3] - g['rect'][1]) >= a.sym_min
-        even = len(s) > 0 and max(s) < 1.4 * min(s)
+        even = len(s) > 0 and max(s) < a.even * min(s)
         g['ch'] = None
         if big and k == 'llll' and even and g['col'] in a.square:
             g['sym'] = 'square'
@@ -285,6 +285,15 @@ def labels(a):
             g['ch'] = letter(table, g)
         if g.get('sym'):
             syms.append({'t': g['sym'], 'c': g['c'], 'color': g['col'], 'seq': g['seq'], 'rect': g['rect']})
+    # one symbol drawn twice at the same spot (a copy under it, or a smaller one inside): keep the larger
+    def side_of(s):
+        return max(s['rect'][2] - s['rect'][0], s['rect'][3] - s['rect'][1])
+    syms.sort(key=lambda s: -side_of(s))
+    kept = []
+    for s in syms:
+        if not any(k['t'] == s['t'] and math.dist(k['c'], s['c']) < 0.3 * side_of(k) for k in kept):
+            kept.append(s)
+    syms = sorted(kept, key=lambda s: s['seq'])
     # two diamonds side by side: a double diamond (EX with white letters inside)
     merged, used = [], set()
     for i, s in enumerate(syms):
@@ -440,6 +449,9 @@ def main():
     lb.add_argument('--diamond', action='append', default=[], help='colour class of diamond symbols')
     lb.add_argument('--circle', action='append', default=[], help='colour class of circle symbols')
     lb.add_argument('--sym-min', type=float, default=2.5, help='pt; smaller even shapes are dots, not symbols')
+    lb.add_argument('--even', type=float, default=1.4,
+                    help="a symbol's longest side over its shortest is under this (Whistler's skewed squares and "
+                         'notched double diamonds: 1.6)')
     lb.add_argument('--double-dist', type=float, default=0.8,
                     help='two diamonds whose centres are closer than this many diamond widths are a double diamond '
                          '(1.6 where a gap separates them: Sunday River)')

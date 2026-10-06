@@ -66,6 +66,27 @@ function oneMap(
   };
 }
 
+/** A resort drawn on several map panels (one trail list; per panel its overlays in
+ * src/data/resorts/<id>/panels/<panel>/ and its map in public/maps/<id>-<panel>.jpg). */
+function panels(
+  id: string,
+  name: string,
+  region: string,
+  trails: () => Promise<TrailsModule>,
+  maps: { id: string; name: string; paths: () => Promise<PathsModule> }[],
+): ResortEntry {
+  return {
+    id,
+    name,
+    region,
+    load: async () => {
+      const [t, ps] = await Promise.all([trails(), Promise.all(maps.map((m) => m.paths()))]);
+      const panelMaps = maps.map((m, i) => ({ id: m.id, name: m.name, mapSrc: `/maps/${id}-${m.id}.jpg`, paths: pathsOf(ps[i]) }));
+      return { id, name, maps: panelMaps, peaks: t.peaks, trails: t.trails };
+    },
+  };
+}
+
 // To add a resort: put its data in src/data/resorts/<id>/ and its map in
 // public/maps/<id>.jpg (docs/trail-map-playbook.md), then list it here with
 // its state or province (the picker searches and groups by it). A
@@ -83,35 +104,21 @@ export const RESORTS: ResortEntry[] = [
   oneMap('breckenridge', 'Breckenridge', 'Colorado', () => import('./data/resorts/breckenridge/trails'), () => import('./data/resorts/breckenridge/trailPaths.json')),
   oneMap('copper-mountain', 'Copper Mountain', 'Colorado', () => import('./data/resorts/copper-mountain/trails'), () => import('./data/resorts/copper-mountain/trailPaths.json')),
   oneMap('keystone', 'Keystone', 'Colorado', () => import('./data/resorts/keystone/trails'), () => import('./data/resorts/keystone/trailPaths.json')),
-  {
-    id: 'vail',
-    name: 'Vail',
-    region: 'Colorado',
-    load: async () => {
-      const [t, frontSide, backBowls, blueSky] = await Promise.all([
-        import('./data/resorts/vail/trails'),
-        import('./data/resorts/vail/panels/front-side/trailPaths.json'),
-        import('./data/resorts/vail/panels/back-bowls/trailPaths.json'),
-        import('./data/resorts/vail/panels/blue-sky/trailPaths.json'),
-      ]);
-      return {
-        id: 'vail',
-        name: 'Vail',
-        maps: [
-          { id: 'front-side', name: 'Front Side', mapSrc: '/maps/vail-front-side.jpg', paths: pathsOf(frontSide) },
-          { id: 'back-bowls', name: 'Back Bowls', mapSrc: '/maps/vail-back-bowls.jpg', paths: pathsOf(backBowls) },
-          { id: 'blue-sky', name: 'Blue Sky Basin', mapSrc: '/maps/vail-blue-sky.jpg', paths: pathsOf(blueSky) },
-        ],
-        peaks: t.peaks,
-        trails: t.trails,
-      };
-    },
-  },
+  panels('vail', 'Vail', 'Colorado', () => import('./data/resorts/vail/trails'), [
+    { id: 'front-side', name: 'Front Side', paths: () => import('./data/resorts/vail/panels/front-side/trailPaths.json') },
+    { id: 'back-bowls', name: 'Back Bowls', paths: () => import('./data/resorts/vail/panels/back-bowls/trailPaths.json') },
+    { id: 'blue-sky', name: 'Blue Sky Basin', paths: () => import('./data/resorts/vail/panels/blue-sky/trailPaths.json') },
+  ]),
   oneMap('hunter', 'Hunter Mountain', 'New York', () => import('./data/resorts/hunter/trails'), () => import('./data/resorts/hunter/trailPaths.json')),
   oneMap('wildcat', 'Wildcat Mountain', 'New Hampshire', () => import('./data/resorts/wildcat/trails'), () => import('./data/resorts/wildcat/trailPaths.json')),
   oneMap('sunday-river', 'Sunday River', 'Maine', () => import('./data/resorts/sunday-river/trails'), () => import('./data/resorts/sunday-river/trailPaths.json')),
   oneMap('sugarloaf', 'Sugarloaf', 'Maine', () => import('./data/resorts/sugarloaf/trails'), () => import('./data/resorts/sugarloaf/trailPaths.json')),
   oneMap('smugglers-notch', "Smugglers' Notch", 'Vermont', () => import('./data/resorts/smugglers-notch/trails'), () => import('./data/resorts/smugglers-notch/trailPaths.json')),
+  panels('whistler-blackcomb', 'Whistler Blackcomb', 'British Columbia', () => import('./data/resorts/whistler-blackcomb/trails'), [
+    { id: 'main', name: 'Both mountains', paths: () => import('./data/resorts/whistler-blackcomb/panels/main/trailPaths.json') },
+    { id: 'symphony', name: 'Symphony', paths: () => import('./data/resorts/whistler-blackcomb/panels/symphony/trailPaths.json') },
+    { id: 'glacier', name: 'Glacier', paths: () => import('./data/resorts/whistler-blackcomb/panels/glacier/trailPaths.json') },
+  ]),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

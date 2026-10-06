@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort map image to clickable, named trails
 
-This is the process that put clickable, correctly named trails on sixteen
+This is the process that put clickable, correctly named trails on seventeen
 resorts' current trail maps, starting with Killington (135 trails), written so
 it can be repeated (and sped up) for other resorts. It records what worked,
 what didn't, and what each step cost. Start with **Pick a route**: the source
@@ -22,7 +22,7 @@ a blank page to see what it is.
 | the source gives you | route | done this way |
 |---|---|---|
 | trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; match each name to the stroke it is printed along (`pdf_resort.py`), settle the rest on crops yourself (step 3c); no readers | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain |
-| vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch |
+| vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels) |
 | lines as filled outlines, names as outlined glyphs | rasterise the outline fills and thin them to centre lines (Copper notes in step 1); `pdf_glyphs.py` | Copper Mountain |
 | vector strokes, names you can't extract | numbered tiles read by parallel readers (step 3) | Stowe, Okemo, Sugarbush |
 | a painting with no lines, names as text | the trace pass along the painted cuts (step 3b) | Jay Peak |
@@ -58,13 +58,14 @@ take the strokes, text and symbols from the old export (Wildcat).
 | Sunday River | PDF strokes + outlined glyphs, main map and three insets | 137 (116 + 21) | glyphs read on sheets; 154 pieces named by the name along them, 19 settled on crops, 10 cuts; crops |
 | Sugarloaf | PDF strokes + outlined glyphs and text over a low-resolution painting, numbered key circles, a raster inset | 175 (127 + 48) | glyphs read on sheets; 176 pieces named by the name at their end, along them or the key circle on them, 78 settled on crops, the inset's 10 lines traced; crops |
 | Smugglers' Notch | PDF strokes + outlined glyphs on label boxes, leader lines, over a low-resolution painting | 82 (68 + 14) | glyphs read on sheets; 73 pieces named by the label on them or the leader ending on them, 26 settled on crops, 1 cut; checked against the resort's trail report; crops |
+| Whistler Blackcomb | PDF strokes + outlined glyphs and text over a low-resolution painting, a main map and two insets as three panels | 232 (209 + 23) | glyphs read on sheets; 228 pieces named by the name at their end or along them, 147 settled on crops and 23 found not to be trails, 13 cuts; meeting points checked against the resort's ArcGIS run lines; names and ratings against its trail report; every overlay audited on crops |
 
 Where each resort's decisions live: each piece's name is in
 `trailProposals.json` (a vector extraction is deterministic, so a PDF map's
 piece ids are stable), stretches and markers in `trailReviews.json`
 (`"by": "claude"` unless a person decided). Vail's and Hunter Mountain's
 pipelines are in the repo, in `tools/trailmap/resorts/<id>/`, and so are
-Wildcat's, Sunday River's, Sugarloaf's and Smugglers' Notch's: decisions are kept as points (Vail's raster piece ids change
+Wildcat's, Sunday River's, Sugarloaf's, Smugglers' Notch's and Whistler Blackcomb's (per panel): decisions are kept as points (Vail's raster piece ids change
 whenever the detector is re-tuned) and `regen.sh` rebuilds every file of the
 resort from them (byte for byte). Hunter's is the template for a PDF map: `resort.py` says how the
 map prints things, `decisions.py` holds what the crops settled, and
@@ -129,6 +130,7 @@ every overlay on crops and run the hover check (step 4).
 | `tools/trailmap/resorts/sunday-river/` | Sunday River's: outlined glyph names (`letters.json`), a main map and insets at different scales (`prepare.py`) |
 | `tools/trailmap/resorts/sugarloaf/` | Sugarloaf's: names printed as numbered circles referring to a key (`ON_CIRCLE`), a raster inset traced on crops (`TRACED`) |
 | `tools/trailmap/resorts/smugglers-notch/` | Smugglers' Notch's: names on label boxes whose colour is the rating (`COLOR_SYMBOL`), leader lines to a line or a glade's circle (`prepare.py`) |
+| `tools/trailmap/resorts/whistler-blackcomb/` | Whistler Blackcomb's: one PDF page read as three panels (`PANELS` in `resort.py`, each panel's settings and decisions in `panels/<panel>/`), glades as black lines under white dashes (`GLADE_LINES`) |
 | `tools/trailmap/fetch_pdf.cjs` | Downloads a PDF from inside the resort's page in headless Chromium (Vail Resorts' sites refuse curl) |
 | `tools/trailmap/render_tiles.py` | Zoomed tiles with every piece drawn and numbered, for the readers |
 | `tools/trailmap/prompts/*.md` | Reader prompts: name pieces, symbols + missing, whole-map search |
@@ -504,6 +506,76 @@ Getting the source in this sandbox:
   - Three mountains, grouped as the report groups them (`area()`,
     `AREA_OF` for names that cross between them). Midway prints a green box
     on Morse and a blue one lower down: `RATING` takes the report's Easy.
+- **Three panels from one page, names checked against the resort's GIS
+  (Whistler Blackcomb):** the 2025-26 PDF (fetched from inside the
+  trail-maps page: the site refuses curl) has the main map (both mountains)
+  on its second page and, on the first, two insets that draw terrain the main
+  map leaves out: the Symphony Amphitheatre and the Blackcomb Glacier (a third
+  inset repeats 7th Heaven and is left out). `resorts/whistler-blackcomb/resort.py`
+  lists the three in `PANELS`;
+  each has its own clip, scale and decisions in `panels/<panel>/`, and
+  `pdf_resort.py whistler-blackcomb` reads them all, then writes one trail
+  list (a name drawn on no panel gets one marker, on the first panel that
+  prints it) and each panel's data. `prepare.py` extracts them:
+  - Lines: 1.07 and 1.6 pt strokes in green (two shades), blue, black and
+    purple (the family areas' adventure trails and outlines); 0.8 and 0.6 pt
+    on the insets. A glade is a black line under white dashes: `prepare.py`
+    flags its pieces and `GLADE_LINES` makes their names glades. A stroke
+    drawn twice gives one piece; a stroke running on past an inset's frame is
+    cut at it. Closed outlines (Tree Fort, Magic Castle) used to collapse to
+    a point in `extract_pdf_vectors.py`'s simplification: it now splits a
+    loop at its farthest point. The terrain parks' lines are solid orange
+    strokes; the same orange dashed is an access route (and at 1.6 pt the
+    boundary, at 0.85 pt cliff hatching), so `--solid` takes them without
+    the dashed ones.
+  - Names: outlined glyphs (252 shapes read on sheets, `letters.json`) and
+    some text. Labels hidden under a later one with other text (last
+    season's names: Big Bang under Sylvain) are dropped (`hidden()`); one
+    glyph run holding two names is cut (`SPLIT`: Glacier Drive / The Bite).
+    Diamonds drawn twice made false double diamonds until `pdf_glyphs.py`
+    dropped coincident copies; notched double diamonds need `--even 1.6`,
+    small diamonds `--sym-min 2.2`, and a rounded double diamond and the
+    insets' rectangle squares are found by `odd_symbols()`.
+  - Names are printed both ways (in a gap of the line, or beside it), so
+    `NO_STRETCH_BESIDE`: no stretch along a name whose own line, as finally
+    named, runs along its characters; no stretch through a name printed on
+    two lines (it would zigzag).
+  - Names printed twice with different symbols are two runs on the report
+    (`RENAME_AT`: Seppo's / Seppo's - Lower, Mainline - Upper / Lower); names
+    printed twice with the same symbol are one (`RENAME`: Greenline's GREEN
+    LINE, Kadenwood Trail's KADENWOOD).
+  - The resort publishes its run lines as an ArcGIS layer (Ski_Runs_GDB, with
+    names and ratings). Not on the map's projection, but locally an affine
+    fit to the named lines around a junction puts them within ~20 px: where
+    two trails' pieces meet on the map, their GIS runs should meet too. Ten
+    meeting points didn't, and six were naming errors: the line below
+    Sunnyside Up's label is Sunset Boulevard's, the one beside the Harmony
+    Express Camel Humps', the blue line under Straight Shot's label White
+    Light's, Big Easy goes on below Over Easy, Sidewinder starts where Marmot
+    ends, and a loop from the Roundhouse the map doesn't name is the GIS's
+    Peak Traverse (no overlay). It also settled Secret Bowl, Jolly Green
+    Giant and Emerald Forest.
+  - Then every overlay was audited on crops, one cell per trail (its overlay,
+    the other overlays thin, its labels boxed), which found what the
+    meeting-point check can't see: the parks' own orange lines (left out of
+    the extraction until then: the parks had been markers); the short line
+    above Dave's Day Off's symbol is its top (Brownlie Basin, printed beside
+    it, is a basin with no line); the line under the park's pill is Green
+    Acres' (Coyote and Bobcat start on it); Upper Whiskey Jack's line turns
+    west at the Emerald chair into a link the map doesn't name (the GIS's
+    Pig Alley); Rabbit Tracks is printed over its own line (`LABEL_LINE`);
+    The Glades is a groomed run, not a glade (`NOT_GLADES`); Expressway is
+    a run on each mountain, two trails (`RENAME_AT` plus `DISPLAY`, and
+    each named piece now carries its trail id so the two stay apart); on
+    the Symphony inset Adagio's stroke also took in the loop from the summit
+    (Jeff's Ode to Joy's two upper routes in the GIS); and `trails:apply`
+    had bridged a free end sideways onto a parallel line (now only an end
+    pointing at the other piece, within 60°).
+  - The trail report (the resort's terrain feed) has every printed name; its
+    ratings differ for Big Easy (map blue, report green) and Harmony
+    Horseshoes (map single, report double): kept as printed. Flute Bowl,
+    North Flute Bowl and Glacier Road print two ratings: `RATING` takes the
+    report's. Hover check 614/614, 56/56, 22/22.
 - **Several panels:** a resort drawn on more than one map keeps one
   `trails.ts` and, per panel, `panels/<panel>/` with its own
   `linePolylines`, `trailProposals`, `trailReviews` and `trailPaths`; the map
@@ -752,7 +824,7 @@ npm run trails:apply
 `trails:apply` also joins each trail's pieces into continuous lines: ends
 closer than 40 source px always join; ends up to 250 px apart join when both
 pieces point at each other (the gap an inline label leaves); an end that stops
-just short of another piece is extended to touch it; remaining gaps up to
+just short of another piece, pointing at it (within 60°: not sideways onto a line running beside it), is extended to touch it; remaining gaps up to
 400 px are bridged along the map's detected line network (a route no longer
 than 1.6× the gap + 80 px), or straight if under 180 px. On Killington this
 took 382 pieces to 142 lines, with only 2 trails left in separate parts.

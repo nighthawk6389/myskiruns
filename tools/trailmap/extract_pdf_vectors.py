@@ -36,15 +36,18 @@ def bezier(p0, c1, c2, p3, n=8):
 
 
 def simplify(pts, eps):
-    """Douglas-Peucker."""
+    """Douglas-Peucker (a closed loop, whose ends meet, is split at its point farthest from them)."""
     if len(pts) < 3:
         return pts
     (ax, ay), (bx, by) = pts[0], pts[-1]
     dx, dy = bx - ax, by - ay
-    norm = math.hypot(dx, dy) or 1e-9
+    norm = math.hypot(dx, dy)
     best, idx = 0, 0
     for i in range(1, len(pts) - 1):
-        d = abs(dy * (pts[i][0] - ax) - dx * (pts[i][1] - ay)) / norm
+        if norm < 1e-9:
+            d = math.hypot(pts[i][0] - ax, pts[i][1] - ay)
+        else:
+            d = abs(dy * (pts[i][0] - ax) - dx * (pts[i][1] - ay)) / norm
         if d > best:
             best, idx = d, i
     if best <= eps:
@@ -71,6 +74,8 @@ def main():
                     help='instead take lines drawn as a thin filled outline in a trail colour (a stroke converted '
                          'to a fill: its first side, up to the end cap); use with --append and only the colours '
                          'no text is printed in (black glyphs are fills too) (Sugarbush: Snowball)')
+    ap.add_argument('--solid', action='store_true',
+                    help='skip dashed strokes (Whistler Blackcomb draws its access routes in the parks\' orange, dashed)')
     ap.add_argument('--exclude', action='append', default=[],
                     help='x0,y0,x1,y1 in PDF points: drop runs lying wholly inside (a legend or panel printed on the map)')
     ap.add_argument('--image', help='write the map image here (omit with --append)')
@@ -111,6 +116,8 @@ def main():
         else:
             kinds = ('s', 'fs') if a.filled else ('s',)
             if d['type'] not in kinds or not d.get('color') or not a.min_width <= width <= a.max_width:
+                continue
+            if a.solid and d.get('dashes') not in (None, '[] 0'):
                 continue
             cls = classes.get(tuple(round(v, 2) for v in d['color']))
         if not cls:

@@ -2,9 +2,10 @@
 
 A React + TypeScript app for tracking which trails you've skied, on the
 resorts' own trail maps: every trail is a clickable, correctly named overlay on
-the map. Sixteen resorts so far (Killington, Stowe, Okemo, Sugarbush, Jay
+the map. Seventeen resorts so far (Killington, Stowe, Okemo, Sugarbush, Jay
 Peak, Whiteface, Winter Park, Breckenridge, Copper Mountain, Keystone, Vail,
-Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Smugglers' Notch).
+Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Smugglers' Notch,
+Whistler Blackcomb).
 The
 interesting part of this repo is the **trail-map pipeline** that puts those
 overlays on a map: from a resort's PDF (vector lines, text, outlined glyphs) or
@@ -32,8 +33,10 @@ tools in `tools/trailmap/`, the gotchas, and what each iteration taught us.
 
 - **Resorts.** Pick the resort in the header (or `?resort=<id>`); the app
   remembers it on the device. Vail's map comes as three panels (Front Side,
-  Back Bowls, Blue Sky Basin) with a switcher on the map (or `?panel=<id>`);
-  picking a trail in the list opens the panel it is drawn on.
+  Back Bowls, Blue Sky Basin) and Whistler Blackcomb's as three (both
+  mountains, and insets of the Symphony Amphitheatre and the Blackcomb
+  Glacier), with a switcher on the map (or `?panel=<id>`); picking a trail in
+  the list opens the panel it is drawn on.
 - **Trips.** What you ski is logged per trip ("Presidents Day weekend").
   Pick or start a trip in the header; mark a trail skied on the current
   trip from the map, or with its check box in the list. With no trip yet,
@@ -215,7 +218,8 @@ pipeline scripts take `--resort <id>` (default `killington`), e.g.
 `docs/trail-map-playbook.md`.
 
 A resort whose map comes as several panels (Vail: Front Side, Back Bowls,
-Blue Sky Basin) keeps one `trails.ts` and, per panel,
+Blue Sky Basin; Whistler Blackcomb: main, symphony, glacier) keeps one
+`trails.ts` and, per panel,
 `panels/<panel>/{linePolylines,trailProposals,trailReviews,trailPaths}.json`
 with its map at `public/maps/<id>-<panel>.jpg`; its `src/resorts.ts` entry
 lists the panels in `maps`. The map shows one panel at a time with a switcher
@@ -226,8 +230,8 @@ drawn on. The pipeline scripts take `--panel <id>` as well, e.g.
 Resorts so far: Killington, Stowe and Okemo (reviewed on the Trail Check
 page); Sugarbush, Jay Peak, Whiteface, Winter Park, Breckenridge, Copper
 Mountain, Keystone, Vail, Hunter Mountain, Wildcat Mountain, Sunday River,
-Sugarloaf and Smugglers' Notch (current maps, no review page: every overlay
-checked on zoomed crops instead, see the playbook).
+Sugarloaf, Smugglers' Notch and Whistler Blackcomb (current maps, no review
+page: every overlay checked on zoomed crops instead, see the playbook).
 
 ## Scripts
 
@@ -242,7 +246,7 @@ checked on zoomed crops instead, see the playbook).
 | `npm run trails:apply -- --resort <id> [--panel <p>]` | proposals + reviews → `trailPaths.json` (what the app draws) |
 | `npm run reviews:import -- <export dir> --resort <id>` | review-page export → `trailReviews.json` |
 | `tools/trailmap/resorts/vail/regen.sh` | rebuild all of Vail's data from its readings and decisions |
-| `tools/trailmap/resorts/<id>/regen.sh` | rebuild all of Hunter Mountain's, Wildcat Mountain's, Sunday River's, Sugarloaf's or Smugglers' Notch's data from its PDF and decisions (`tools/trailmap/pdf_resort.py`) |
+| `tools/trailmap/resorts/<id>/regen.sh` | rebuild all of Hunter Mountain's, Wildcat Mountain's, Sunday River's, Sugarloaf's, Smugglers' Notch's or Whistler Blackcomb's data from its PDF and decisions (`tools/trailmap/pdf_resort.py`; Whistler Blackcomb's in three panels) |
 | `npm test` | the trip merge and sync rules and the resort search (`tests/*.test.ts`, Node's test runner) |
 | `node scripts/mockSupabase.cjs` | a stand-in Supabase project, for trying accounts without one |
 | `node tools/accounts_check.cjs` | browser check: two devices sign in, sync, edit offline, delete (header has the setup) |
@@ -362,14 +366,15 @@ and re-encoded with 4:2:0 chroma subsampling — prefer it as pipeline input.
 
 ## What's left
 
-1. **A person's confirmation** for the thirteen resorts Claude checked on
-   crops instead of the review page (Sugarbush through Smugglers' Notch), if the
+1. **A person's confirmation** for the fourteen resorts Claude checked on
+   crops instead of the review page (Sugarbush through Whistler Blackcomb), if the
    owner wants it: the Trail Check page can be published for any resort
    (playbook, step 4).
 2. **Shared tooling** (playbook, "Scaling to many maps"): the label-to-piece
    matcher for PDF maps is now `tools/trailmap/pdf_resort.py` (Hunter,
-   Wildcat, Sunday River, Sugarloaf and Smugglers' Notch; the five PDF resorts
-   before them each had a scratch copy); still
+   Wildcat, Sunday River, Sugarloaf, Smugglers' Notch and Whistler Blackcomb,
+   whose three panels it reads as one resort; the five PDF resorts before them
+   each had a scratch copy); still
    to do: a per-map legend file, readers run from a script.
 3. Killington (359/361) and Stowe (351/353) hover misses are stretches two
    trails share, where either name is right.
@@ -381,7 +386,8 @@ and re-encoded with 4:2:0 chroma subsampling — prefer it as pipeline input.
 
 Killington's data, from its original pipeline (the other resorts were built
 by the playbook's routes; Vail's, Hunter Mountain's, Wildcat Mountain's,
-Sunday River's, Sugarloaf's and Smugglers' Notch's whole datasets are rebuilt
+Sunday River's, Sugarloaf's, Smugglers' Notch's and Whistler Blackcomb's whole
+datasets are rebuilt
 by `tools/trailmap/resorts/<id>/regen.sh`):
 
 ```bash

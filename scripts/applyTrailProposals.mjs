@@ -32,11 +32,12 @@ const reviews = existsSync(R.reviews) ? read(R.reviews).reviews : {};
 // draws as continuous lines: ends closer than JOIN_NEAR always join; ends up
 // to JOIN_FAR apart join when both pieces point at each other (the gap left by
 // a label printed along the line); an end that stops just short of the middle
-// of another piece is extended to touch it (Y-junctions). Wider gaps are real
+// of another piece, pointing at it, is extended to touch it (Y-junctions). Wider gaps are real
 // separate sections and stay apart. Distances are source px.
 const JOIN_NEAR = 40;
 const JOIN_FAR = 250;
 const COLLINEAR = Math.cos((45 * Math.PI) / 180);
+const POINTS_AT = Math.cos((60 * Math.PI) / 180);
 
 function outward(s, atEnd) {
   const n = s.length;
@@ -105,7 +106,11 @@ function bridgeJunctions(segs) {
         const h = nearestOnSegment(p, o);
         if (h.d < hit.d) hit = h;
       }
-      if (hit.d > 1 && hit.d <= JOIN_NEAR) {
+      // (only an end pointing at the other piece, within 60 degrees: one pointing away from it or past it ends at
+      // something else, a symbol or a line running beside it)
+      const out = outward(s, atEnd);
+      const at = hit.q && ((hit.q[0] - p[0]) * out[0] + (hit.q[1] - p[1]) * out[1]) / hit.d >= POINTS_AT;
+      if (hit.d > 1 && hit.d <= JOIN_NEAR && at) {
         if (atEnd) s.push(hit.q);
         else s.unshift(hit.q);
       }

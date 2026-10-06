@@ -14,7 +14,8 @@ The resort's folder holds
                 no line, areas (resorts/hunter/resort.py lists the basic settings). Optional ones, read with getattr
                 where they apply (the other resort folders use them): JOIN_GAP, MATCH_ENDS, ALONG_SHORT,
                 ALONG_NEAREST, SYMBOL_CENTRE, CUT_AT_SYMBOLS, SYMBOL_OFF_LINE, LOOSE_SYMBOLS, ON_CIRCLE, SYMBOL_OF,
-                DEFAULT_SYMBOL, RATING, COLOR_SYMBOL, AS_PRINTED, AREA_OF
+                DEFAULT_SYMBOL, RATING, COLOR_SYMBOL, AS_PRINTED, AREA_OF, SPLIT, GLADE_LINES, NO_STRETCH_BESIDE,
+                RENAME_AT, NOT_GLADES
   decisions.py  CHECKED / UNNAMED / CUTS / TRACED, all keyed by points in map px (see its docstring)
   header.txt    the comment at the top of trails.ts
   regen.sh      the extraction, then this
@@ -50,7 +51,7 @@ Writes to the work folder: pieces_cut.json (pieces after CUTS, then the stretche
   named_syms.json         every symbol with its name ([{name, t, c, r}]: symbol_audit.py --symbols)
 """
 import collections
-import importlib
+import importlib.util
 import json
 import math
 import os
@@ -78,6 +79,13 @@ def line_dist(q, pts):
     return min(seg_dist(q, pts[i], pts[i + 1]) for i in range(len(pts) - 1))
 
 
+def doubles_back(pts):
+    """More than a sixth of the polyline runs against its overall direction (a label printed on two lines)."""
+    dx, dy = pts[-1][0] - pts[0][0], pts[-1][1] - pts[0][1]
+    back = sum(math.dist(a, b) for a, b in zip(pts, pts[1:]) if (b[0] - a[0]) * dx + (b[1] - a[1]) * dy < 0)
+    return back > length(pts) / 6
+
+
 def length(pts):
     return sum(math.dist(a, b) for a, b in zip(pts, pts[1:]))
 
@@ -94,19 +102,46 @@ def midpoint(pts):
     return tuple(round(v) for v in pts[0])
 
 
+def glade_name(R, nm):
+    """A name that calls itself a glade (Staccato Glades), unless resort.NOT_GLADES lists it: a run so named, drawn
+    as a plain run (Whistler's The Glades)."""
+    return 'GLADE' in nm.upper() and nm not in getattr(R, 'NOT_GLADES', ())
+
+
 def tid(name):
     return sr.slug(sr.norm(name))
 
 
+def load_module(path, name):
+    """A resort.py or decisions.py by its path (a resort drawn on several panels has one of each per panel)."""
+    spec = importlib.util.spec_from_file_location(name, path)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def work_root(rid):
+    env = re.sub(r'\W', '_', rid.upper()) + '_WORK'
+    return os.path.abspath(os.environ.get(env, os.path.join(REPO, 'work', rid)))
+
+
+def top_module(rid):
+    """The resort folder's own resort.py: a resort drawn on several map panels lists them there (PANELS)."""
+    return load_module(os.path.join(HERE, 'resorts', rid, 'resort.py'), re.sub(r'\W', '_', f'top_{rid}'))
+
+
 class Resort:
     def __init__(self, rid):
-        self.id = rid
-        self.dir = os.path.join(HERE, 'resorts', rid)
-        sys.path.insert(0, self.dir)
-        self.R = importlib.import_module('resort')
-        self.D = importlib.import_module('decisions')
-        env = re.sub(r'\W', '_', rid.upper()) + '_WORK'
-        self.work_dir = os.path.abspath(os.environ.get(env, os.path.join(REPO, 'work', rid)))
+        """rid: a resort id, or <resort>/<panel> for one panel of a resort drawn on several (its resort.py and
+        decisions.py in resorts/<resort>/panels/<panel>/, its working files in work/<resort>/<panel>/)."""
+        rid, _, panel = rid.partition('/')
+        self.id, self.panel = rid, panel or None
+        top = os.path.join(HERE, 'resorts', rid)
+        self.dir = os.path.join(top, 'panels', panel) if panel else top
+        tag = re.sub(r'\W', '_', f'{rid}_{panel}')
+        self.R = load_module(os.path.join(self.dir, 'resort.py'), f'resort_{tag}')
+        self.D = load_module(os.path.join(self.dir, 'decisions.py'), f'decisions_{tag}')
+        self.work_dir = os.path.join(work_root(rid), panel) if panel else work_root(rid)
         x0, y0, x1, y1 = self.R.CLIP
         self.W, self.H = round((x1 - x0) * self.R.SCALE), round((y1 - y0) * self.R.SCALE)
 
@@ -161,6 +196,15 @@ class Resort:
             if len(parts) >= 2 and on(l, parts):
                 continue
             keep.append(l)
+        for text, parts in getattr(R, 'SPLIT', {}).items():  # two names read as one run of glyphs: split it
+            for l in [l for l in keep if l['text'] == text]:
+                n = [len(p.replace(' ', '')) for p in parts]
+                assert sum(n) == len(l['pts']), ('SPLIT: the parts are not the label', text, parts)
+                keep.remove(l)
+                for k, p in enumerate(parts):
+                    pts = l['pts'][sum(n[:k]):sum(n[:k + 1])]
+                    keep.append({**l, 'text': p, 'pts': pts,
+                                 'c': (sum(q[0] for q in pts) / len(pts), sum(q[1] for q in pts) / len(pts))})
         for parts in getattr(R, 'JOIN', []):  # a name printed in parts (two or three lines), in reading order
             for first in [l for l in keep if l['text'] == parts[0]]:
                 chain = [first]
@@ -182,7 +226,12 @@ class Resort:
         for l in keep:
             if any(t == l['text'] and (q is None or math.dist(q, l['c']) < 40) for t, q in drop):
                 continue
-            out.append({'name': getattr(R, 'RENAME', {}).get(l['text'], l['text']), 'pts': l['pts'], 'c': l['c'],
+            name = getattr(R, 'RENAME', {}).get(l['text'], l['text'])
+            # resort.RENAME_AT [((x, y), text, name)]: one of several labels printing the same text, near (x, y) in
+            # map px, is a run of its own (Seppo's, printed twice, is Seppo's and Seppo's - Lower on the trail report)
+            name = next((nm for q, t, nm in getattr(R, 'RENAME_AT', []) if t == l['text']
+                         and math.dist(q, l['c']) < 40), name)
+            out.append({'name': name, 'pts': l['pts'], 'c': l['c'],
                         'printed': l['text'], 'color': l.get('color'), 'glade': l.get('glade')})
         for e in getattr(R, 'EXTRA', []):  # names printed some other way (another font, a sign): name, x, y
             out.append({'name': e[0], 'pts': [tuple(e[1:3])], 'c': tuple(e[1:3]), 'printed': None,
@@ -318,7 +367,7 @@ class Resort:
         first, second = p['pt'][:i] + [c], [c] + p['pt'][i:]
         p['pt'], p['points'], p['lengthPx'] = first, self.pct(first), round(length(first))
         P.append({'id': len(P), 'cls': p['cls'], 'lengthPx': round(length(second)), 'points': self.pct(second),
-                  'pt': second})
+                  'pt': second, **({'glade': True} if p.get('glade') else {})})
 
     def cut_at_symbols(self, P, names):
         """Maps that print a run's symbol on (or just beside) its line, with the name after it
@@ -415,17 +464,21 @@ class Resort:
         # a piece running along a name's characters
         short = getattr(R, 'ALONG_SHORT', False)  # also names of two or three characters (T2, OZ)
         nearest = getattr(R, 'ALONG_NEAREST', False)  # names printed between parallel lines: the nearest only
+
+        def runs_along(n, p):  # the piece runs along the name's characters (ds: their distances to it)
+            ds = [line_dist(q, p['pt']) for q in n['pts']]
+            close = sum(1 for d in ds if d < R.ALONG * R.SCALE)
+            need = 0.6 * len(n['pts']) if len(n['pts']) >= 4 else len(n['pts'])
+            return close >= need and length(p['pt']) > 0.5 * length(n['pts']), ds
         for j, n in enumerate(names):
             if len(n['pts']) < (2 if short else 4):
                 continue
             hits = []
             for p in P:
-                if p['id'] in assign and not why.get(p['id'], '').startswith('along'):
-                    continue  # named by a name that runs into it
-                ds = [line_dist(q, p['pt']) for q in n['pts']]
-                close = sum(1 for d in ds if d < R.ALONG * R.SCALE)
-                need = 0.6 * len(n['pts']) if len(n['pts']) >= 4 else len(n['pts'])
-                if close >= need and length(p['pt']) > 0.5 * length(n['pts']):
+                ok, ds = runs_along(n, p)
+                if ok:
+                    if p['id'] in assign and not why.get(p['id'], '').startswith('along'):
+                        continue  # named by a name that runs into it
                     hits.append((sorted(ds)[len(ds) // 2], p['id']))
             for _d, pid in sorted(hits)[:1] if nearest else hits:
                 assign[pid].add(n['name'])  # several names along one piece: cut it (CUTS)
@@ -501,10 +554,20 @@ class Resort:
         traced = {}
         glades = set(getattr(R, 'GLADES', ()))
         along = (gap | set(getattr(R, 'LABEL_LINE', ()))) - set(getattr(R, 'NO_STRETCH', ())) - glades
-        for n in names:
-            if (n['name'] in along and n['printed'] and n['printed'] not in two_line
-                    and 'GLADE' not in n['name'].upper()):
+        beside = set()  # labels (name indices) printed beside their line
+        if getattr(R, 'NO_STRETCH_BESIDE', False):  # maps printing names both ways: a line already runs beside it
+            # (the label's own line, as named after the decisions, runs along its characters; a name printed twice,
+            # once beside its line and once in a gap of it, keeps the gap's stretch)
+            label_line = set(getattr(R, 'LABEL_LINE', ()))
+            beside = {j for j, n in enumerate(names) if n['name'] not in label_line
+                      and len(n['pts']) >= (2 if short else 4) and any(
+                          assign.get(pid) == {n['name']} and runs_along(n, P[pid])[0] for pid in assign)}
+        for j, n in enumerate(names):
+            if (n['name'] in along and j not in beside and n['printed'] and n['printed'] not in two_line
+                    and not glade_name(R, n['name'])):
                 pts = self.stretch(n)
+                if doubles_back(pts):
+                    continue  # a name printed on two lines (one under the other): no line along it
                 pid = len(P)
                 P.append({'id': pid, 'cls': CLS.get(n.get('symbol')) or self.colour_of_assign(assign, P, n['name']),
                           'lengthPx': round(length(pts)), 'points': self.pct(pts), 'pt': pts})
@@ -550,7 +613,7 @@ class Resort:
         return CLS.get(n and n.get('symbol')) or 'black'
 
     # ---- the pipeline's inputs ---------------------------------------------------------------------------
-    def reading(self):
+    def reading(self, markers=True):
         R = self.R
         left, several = self.build()
         assert not several, ('pieces with several names: decide each on a crop (decisions.py CHECKED)', several)
@@ -561,6 +624,14 @@ class Resort:
         def display(nm):  # the name as the app shows it: DISPLAY, else as printed (AS_PRINTED), else title case
             return R.DISPLAY.get(nm) or (nm.replace('’', "'") if getattr(R, 'AS_PRINTED', False) else None)
         by_colour = getattr(R, 'COLOR_SYMBOL', {})  # maps that rate a run by the colour its name is printed in
+        glade_lines = set()  # resort.GLADE_LINES: glades drawn in a line style of their own (prepare.py marks them)
+        if getattr(R, 'GLADE_LINES', False):
+            drawn_as = collections.defaultdict(lambda: [0, 0])  # name -> [plain, glade] length of its own pieces
+            for pid, v in self.assign.items():
+                if pid not in self.traced:
+                    for nm in v:
+                        drawn_as[nm][bool(P[pid].get('glade'))] += P[pid]['lengthPx']
+            glade_lines = {nm for nm, (plain, glade) in drawn_as.items() if glade > plain}
 
         def area(nm, c):  # resort.AREA_OF: a name's area where its position doesn't tell
             return getattr(R, 'AREA_OF', {}).get(nm) or R.area(c)
@@ -569,7 +640,8 @@ class Resort:
             nm = n['name']
             labels.append({'mapName': nm, 'printed': display(nm),
                            'symbol': n.get('symbol') or by_colour.get(n.get('color')),
-                           'glade': 'GLADE' in nm.upper() or nm in glades or bool(n.get('glade')), 'park': nm in parks,
+                           'glade': glade_name(R, nm) or nm in glades or bool(n.get('glade')) or nm in glade_lines,
+                           'park': nm in parks,
                            'area': area(nm, n['c']), 'labelSrc': [round(n['c'][0]), round(n['c'][1])],
                            'confidence': 'certain'})
         # symbols printed with no name on a named trail's line (a change of rating): they count toward its difficulty
@@ -579,7 +651,7 @@ class Resort:
             if pid in self.assign and d <= 2 * s['r'] + 4:
                 nm = next(iter(self.assign[pid]))
                 labels.append({'mapName': nm, 'printed': display(nm), 'symbol': s['t'],
-                               'glade': 'GLADE' in nm.upper() or nm in glades, 'park': nm in parks,
+                               'glade': glade_name(R, nm) or nm in glades or nm in glade_lines, 'park': nm in parks,
                                'area': area(nm, s['c']),
                                'labelSrc': [round(s['c'][0]), round(s['c'][1])], 'confidence': 'certain'})
                 print(f'  {s["t"]} at {[round(v) for v in s["c"]]} (no name printed) on {nm}')
@@ -605,7 +677,10 @@ class Resort:
                 L['symbol'] = d
         traced = sorted(self.traced)
         os.makedirs(self.work('tiles'), exist_ok=True)
-        lines = [{'id': pid, 'mapName': next(iter(v)), 'color': P[pid]['cls'], 'confidence': 'certain',
+        # (rosterId: the trail's id, as seed_roster.py makes it; two runs one name is printed for, on two mountains,
+        # differ only in it)
+        lines = [{'id': pid, 'mapName': next(iter(v)), 'rosterId': tid(next(iter(v))), 'color': P[pid]['cls'],
+                  'confidence': 'certain',
                   'note': 'checked on a crop' if self.why.get(pid) == 'checked' else self.why.get(pid, '')}
                  for pid, v in sorted(self.assign.items())]
         json.dump({'labels': [{k: v for k, v in L.items() if v is not None} for L in labels], 'lines': lines},
@@ -616,17 +691,27 @@ class Resort:
                '_traced': [str(k) for k in traced],
                'polylines': [{k: p[k] for k in ('id', 'cls', 'lengthPx', 'points')} for p in P]}
         json.dump(doc, open(self.work('linePolylines.json'), 'w'))
-        drawn = {n for v in self.assign.values() for n in v}
+        self.labels = labels
+        self.drawn = {n for v in self.assign.values() for n in v}
+        print(len(labels), 'labels,', len(lines), 'named pieces and stretches,', len(self.unnamed), 'not trails')
+        if markers:
+            self.markers(self.drawn)
+
+    def markers(self, drawn, before=()):
+        """trace.json: a marker at its name for each name printed here with no line, unless another panel draws
+        it (drawn: every panel's named lines) or an earlier panel prints it (before); glades are left to
+        aggregate_readings.py."""
         markers = []
-        for L in labels:
+        for L in self.labels:
             nm = L['mapName']
-            if nm in drawn or L['glade'] or any(tid(nm) == m['id'] for m in markers):
+            if nm in drawn or nm in before or L['glade'] or any(tid(nm) == m['id'] for m in markers):
                 continue
             markers.append({'id': tid(nm), 'pieces': [], 'traced': [], 'confidence': 'high',
-                            'note': getattr(R, 'NO_LINE', {}).get(nm, 'Named on the map with no line drawn: marker at its name')})
+                            'note': getattr(self.R, 'NO_LINE', {}).get(
+                                nm, 'Named on the map with no line drawn: marker at its name')})
         json.dump({'trails': markers}, open(self.work('trace.json'), 'w'), indent=1)
-        print(len(labels), 'labels,', len(lines), 'named pieces and stretches,', len(self.unnamed), 'not trails,',
-              len(markers), 'markers:', ', '.join(m['id'] for m in markers))
+        print(f'  {len(markers)} markers' + (f' ({self.panel})' if self.panel else '') + ':',
+              ', '.join(m['id'] for m in markers))
 
 
 def run(*cmd):
@@ -637,26 +722,36 @@ def run(*cmd):
     return p.stdout
 
 
-def pipeline(r):
-    """The readings -> the app's data in src/data/resorts/<resort>/: trails.ts (seed_roster.py, with the
-    resort's header.txt), linePolylines.json, trailProposals.json (aggregate_readings.py), Claude's reviews in
-    trailReviews.json (traces_to_reviews.py: markers for names with no line; a person's reviews are kept, and
-    Claude's unchanged ones keep their timestamps) and trailPaths.json (npm run trails:apply)."""
-    R, T = r.R, 'tools/trailmap'
-    D = os.path.join(REPO, 'src/data/resorts', r.id)
+def roster(rid, readings, areas, header, labels):
+    """trails.ts in src/data/resorts/<resort>/ from the readings (seed_roster.py), with the resort's header.txt;
+    seed_roster.py's labels.json goes to labels. Returns the data folder."""
+    T = 'tools/trailmap'
+    D = os.path.join(REPO, 'src/data/resorts', rid)
     os.makedirs(D, exist_ok=True)
-    areas = ','.join('='.join(map(str, a)) for a in R.AREAS)
-    print(run('python3', f'{T}/seed_roster.py', '--readings', r.work('tiles/result.json'), '--areas', areas,
-              '--trails', f'{D}/trails.ts', '--labels', r.work('labels.json')).splitlines()[0])
+    areas = ','.join('='.join(map(str, a)) for a in areas)
+    print(run('python3', f'{T}/seed_roster.py', '--readings', readings, '--areas', areas,
+              '--trails', f'{D}/trails.ts', '--labels', labels).splitlines()[0])
     ts = open(f'{D}/trails.ts').read()
     head = ts[ts.index('// Seeded'):ts.index('export const peaks')]
-    ts = ts.replace(head, open(os.path.join(r.dir, 'header.txt')).read())
+    ts = ts.replace(head, open(header).read())
     open(f'{D}/trails.ts', 'w').write(ts)
+    return D
+
+
+def map_data(r, D, labels):
+    """One map image's data in D (the resort's data folder, or a panel's in it) from r's reading:
+    linePolylines.json, trailProposals.json (aggregate_readings.py), Claude's reviews in trailReviews.json
+    (traces_to_reviews.py: markers for names with no line; a person's reviews are kept, and Claude's unchanged
+    ones keep their timestamps) and trailPaths.json (npm run trails:apply). labels: seed_roster.py's labels for
+    this map (where its names are printed)."""
+    T = 'tools/trailmap'
+    trails = os.path.join(REPO, 'src/data/resorts', r.id, 'trails.ts')
+    os.makedirs(D, exist_ok=True)
     json.dump(r.load('linePolylines.json'), open(f'{D}/linePolylines.json', 'w'))
     print(run('python3', f'{T}/aggregate_readings.py', '--tiles', r.work('tiles'), '--readings',
-              r.work('tiles/result.json'), '--roster', f'{D}/trails.ts', '--polylines', f'{D}/linePolylines.json',
+              r.work('tiles/result.json'), '--roster', trails, '--polylines', f'{D}/linePolylines.json',
               '--proposals', f'{D}/trailProposals.json', '--review-data', r.work('review.json'),
-              '--labels', r.work('labels.json')).strip().splitlines()[-1])
+              '--labels', labels).strip().splitlines()[-1])
     f = f'{D}/trailReviews.json'
     d = json.load(open(f)) if os.path.exists(f) else {'reviews': {}}
     old = {k: v for k, v in d['reviews'].items() if v.get('by') == 'claude'}
@@ -665,14 +760,48 @@ def pipeline(r):
     if os.path.exists(r.work('recheck.json')):
         os.remove(r.work('recheck.json'))
     run('python3', f'{T}/traces_to_reviews.py', '--traces', r.work('trace.json'), '--reviews', f,
-        '--recheck', r.work('recheck.json'), '--labels', r.work('labels.json'), '--image', r.work('map.png'))
+        '--recheck', r.work('recheck.json'), '--labels', labels, '--image', r.work('map.png'))
     d = json.load(open(f))
     for k, v in d['reviews'].items():  # unchanged decisions keep their timestamp
         o = old.get(k)
         if v.get('by') == 'claude' and o and {**o, 'at': None} == {**v, 'at': None}:
             v['at'] = o['at']
     json.dump(d, open(f, 'w'), indent=1)
-    print(run('npm', 'run', '-s', 'trails:apply', '--', '--resort', r.id).strip().splitlines()[-1])
+    print(run('npm', 'run', '-s', 'trails:apply', '--', '--resort', r.id,
+              *(['--panel', r.panel] if r.panel else [])).strip().splitlines()[-1])
+
+
+def pipeline(r):
+    """The readings -> the app's data in src/data/resorts/<resort>/: trails.ts (roster()), then the map's
+    pieces, proposals, reviews and paths (map_data())."""
+    D = roster(r.id, r.work('tiles/result.json'), r.R.AREAS, os.path.join(r.dir, 'header.txt'), r.work('labels.json'))
+    map_data(r, D, r.work('labels.json'))
+
+
+def pipeline_panels(rid, top):
+    """A resort drawn on several map panels (its resort.py's PANELS, each panel's resort.py and decisions.py in
+    panels/<panel>/): each panel's reading, markers only for names no panel draws (on the first panel printing
+    them), one trail list from every panel's reading (AREAS and header.txt from the resort's folder), then per
+    panel its data in src/data/resorts/<resort>/panels/<panel>/ with only that panel's label positions."""
+    rs = [Resort(f'{rid}/{p}') for p, _name in top.PANELS]
+    for r in rs:
+        print(f'== {r.panel}')
+        r.reading(markers=False)
+    drawn = set().union(*(r.drawn for r in rs))
+    before = set()
+    for r in rs:
+        r.markers(drawn, before)
+        before |= {L['mapName'] for L in r.labels}
+    root = work_root(rid)
+    D = roster(rid, os.path.join(root, '*', 'tiles', 'result.json'), top.AREAS,
+               os.path.join(HERE, 'resorts', rid, 'header.txt'), os.path.join(root, 'labels.json'))
+    areas = ','.join('='.join(map(str, a)) for a in top.AREAS)
+    for r in rs:
+        print(f'== {r.panel}')
+        # this panel's label positions (seed_roster.py on its reading alone): markers go on their own panel
+        run('python3', 'tools/trailmap/seed_roster.py', '--readings', r.work('tiles/result.json'), '--areas', areas,
+            '--trails', r.work('trails.ts'), '--labels', r.work('labels.json'))
+        map_data(r, os.path.join(D, 'panels', r.panel), r.work('labels.json'))
 
 
 def add(r, comment, args):
@@ -700,8 +829,15 @@ def add(r, comment, args):
 
 
 if __name__ == '__main__':
-    r = Resort(sys.argv[1])
+    rid = sys.argv[1]
     cmd = sys.argv[2] if len(sys.argv) > 2 else 'all'
+    top = top_module(rid.partition('/')[0])
+    if '/' not in rid and hasattr(top, 'PANELS'):
+        if cmd != 'all':
+            sys.exit(f'{rid} is drawn on several panels: name one of ' + ', '.join(f'{rid}/{p}' for p, _ in top.PANELS))
+        pipeline_panels(rid, top)
+        sys.exit()
+    r = Resort(rid)
     if cmd == 'build':
         r.build()
     elif cmd == 'add':  # pdf_resort.py <resort> add "what showed it" 123=NAME 2100,1200=NAME 45=-:"why not"

@@ -96,7 +96,8 @@ def lines():
     for k, ((wmin, wmax), cols, region) in enumerate(GROUPS):
         f = os.path.join(W, f'strokes_{k}.json')
         args = ['python3', f'{T}/extract_pdf_vectors.py', PDF, '--clip', ','.join(map(str, CLIP)), '--scale',
-                str(SCALE), '--min-width', str(wmin), '--max-width', str(wmax), '--min-length', '1', '--filled', '--out', f]
+                str(SCALE), '--min-width', str(wmin), '--max-width', str(wmax), '--min-length', '1', '--filled', '--out', f,
+                '--max-icon', '20']  # the black rings of the lodges' icons (dining, shopping, tubing)
         for c in cols:
             args += ['--color', c]
         run(*args)

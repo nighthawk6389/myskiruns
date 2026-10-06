@@ -1,0 +1,1831 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "7th-avenue": {
+   "polylines": [
+    12,
+    13
+   ],
+   "confidence": "high",
+   "mapName": "7TH AVENUE",
+   "note": "checked on a crop"
+  },
+  "angel-dust": {
+   "polylines": [
+    208,
+    209,
+    370
+   ],
+   "confidence": "high",
+   "mapName": "ANGEL DUST",
+   "note": "symbol of ANGEL DUST | end of ANGEL DUST | along its printed name"
+  },
+  "arthurs-choice": {
+   "polylines": [
+    314,
+    315,
+    411
+   ],
+   "confidence": "high",
+   "mapName": "ARTHUR\u2019S CHOICE",
+   "note": "end of ARTHUR\u2019S CHOICE | checked on a crop | along its printed name"
+  },
+  "backstage-pass": {
+   "polylines": [
+    87,
+    88,
+    144,
+    424
+   ],
+   "confidence": "high",
+   "mapName": "BACKSTAGE PASS",
+   "note": "checked on a crop | symbol of BACKSTAGE PASS | along its printed name"
+  },
+  "bark-sandwich": {
+   "polylines": [
+    320
+   ],
+   "confidence": "high",
+   "mapName": "BARK SANDWICH",
+   "note": "checked on a crop"
+  },
+  "big-easy": {
+   "polylines": [
+    168,
+    346
+   ],
+   "confidence": "high",
+   "mapName": "BIG EASY",
+   "note": "symbol of BIG EASY | checked on a crop"
+  },
+  "black-magic": {
+   "polylines": [
+    204,
+    205,
+    435
+   ],
+   "confidence": "high",
+   "mapName": "BLACK MAGIC",
+   "note": "symbol of BLACK MAGIC | end of BLACK MAGIC | along its printed name"
+  },
+  "blowdown": {
+   "polylines": [
+    258,
+    259,
+    394
+   ],
+   "confidence": "high",
+   "mapName": "BLOWDOWN",
+   "note": "end of BLOWDOWN | symbol of BLOWDOWN | along its printed name"
+  },
+  "blueline": {
+   "polylines": [
+    308
+   ],
+   "confidence": "high",
+   "mapName": "BLUELINE",
+   "note": "along BLUELINE"
+  },
+  "buzz-cut": {
+   "polylines": [
+    61,
+    62,
+    415
+   ],
+   "confidence": "high",
+   "mapName": "BUZZ CUT",
+   "note": "end of BUZZ CUT | symbol of BUZZ CUT | along its printed name"
+  },
+  "catskinner": {
+   "polylines": [
+    193,
+    194,
+    195,
+    407
+   ],
+   "confidence": "high",
+   "mapName": "CATSKINNER",
+   "note": "checked on a crop | end of CATSKINNER | symbol of CATSKINNER | along its printed name"
+  },
+  "catskinner-traverse": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "CATSKINNER TRAVERSE",
+   "note": "checked on a crop"
+  },
+  "choker-park": {
+   "polylines": [
+    339
+   ],
+   "confidence": "high",
+   "mapName": "CHOKER PARK",
+   "note": "along CHOKER PARK"
+  },
+  "cloud-nine": {
+   "polylines": [
+    75,
+    76
+   ],
+   "confidence": "high",
+   "mapName": "CLOUD NINE",
+   "note": "continuation | along CLOUD NINE"
+  },
+  "come-a-long": {
+   "polylines": [
+    290,
+    423
+   ],
+   "confidence": "high",
+   "mapName": "COME-A-LONG",
+   "note": "checked on a crop | along its printed name"
+  },
+  "cougar-chute": {
+   "polylines": [
+    274
+   ],
+   "confidence": "high",
+   "mapName": "COUGAR CHUTE",
+   "note": "checked on a crop"
+  },
+  "cougar-milk": {
+   "polylines": [
+    97,
+    98
+   ],
+   "confidence": "high",
+   "mapName": "COUGAR MILK",
+   "note": "symbol of COUGAR MILK | along COUGAR MILK"
+  },
+  "countdown": {
+   "polylines": [
+    166
+   ],
+   "confidence": "high",
+   "mapName": "COUNTDOWN",
+   "note": "end of COUNTDOWN"
+  },
+  "crosscut": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "CROSSCUT",
+   "note": "along CROSSCUT"
+  },
+  "cruiser": {
+   "polylines": [
+    100,
+    162
+   ],
+   "confidence": "high",
+   "mapName": "CRUISER",
+   "note": "symbol of CRUISER | checked on a crop"
+  },
+  "cruiser-lower": {
+   "polylines": [
+    163
+   ],
+   "confidence": "high",
+   "mapName": "CRUISER - LOWER",
+   "note": "along CRUISER - LOWER"
+  },
+  "crystal-glide": {
+   "polylines": [
+    157
+   ],
+   "confidence": "high",
+   "mapName": "CRYSTAL GLIDE",
+   "note": "along CRYSTAL GLIDE"
+  },
+  "crystal-road": {
+   "polylines": [
+    289,
+    303
+   ],
+   "confidence": "high",
+   "mapName": "CRYSTAL ROAD",
+   "note": "end of CRYSTAL ROAD | along CRYSTAL ROAD"
+  },
+  "crystal-traverse": {
+   "polylines": [
+    306
+   ],
+   "confidence": "high",
+   "mapName": "CRYSTAL TRAVERSE",
+   "note": "along CRYSTAL TRAVERSE"
+  },
+  "dakine": {
+   "polylines": [
+    185,
+    261
+   ],
+   "confidence": "high",
+   "mapName": "DAKINE",
+   "note": "checked on a crop | along DAKINE"
+  },
+  "dales-way": {
+   "polylines": [
+    19,
+    58,
+    439
+   ],
+   "confidence": "high",
+   "mapName": "DALE\u2019S WAY",
+   "note": "end of DALE\u2019S WAY | along its printed name"
+  },
+  "daves-day-off": {
+   "polylines": [
+    270
+   ],
+   "confidence": "high",
+   "mapName": "DAVE\u2019S DAY OFF",
+   "note": "checked on a crop"
+  },
+  "davies-dervish": {
+   "polylines": [
+    181,
+    182
+   ],
+   "confidence": "high",
+   "mapName": "DAVIES DERVISH",
+   "note": "checked on a crop"
+  },
+  "download-road": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "DOWNLOAD ROAD",
+   "note": "checked on a crop"
+  },
+  "easy-out": {
+   "polylines": [
+    288,
+    293,
+    405
+   ],
+   "confidence": "high",
+   "mapName": "EASY OUT",
+   "note": "end of EASY OUT | symbol of EASY OUT | along its printed name"
+  },
+  "espresso": {
+   "polylines": [
+    60
+   ],
+   "confidence": "high",
+   "mapName": "ESPRESSO",
+   "note": "along ESPRESSO"
+  },
+  "everglades": {
+   "polylines": [
+    332,
+    333
+   ],
+   "confidence": "high",
+   "mapName": "EVERGLADES",
+   "note": "symbol of EVERGLADES | checked on a crop"
+  },
+  "expressway": {
+   "polylines": [
+    14,
+    15,
+    379
+   ],
+   "confidence": "high",
+   "mapName": "EXPRESSWAY",
+   "note": "end of EXPRESSWAY | symbol of EXPRESSWAY | along its printed name"
+  },
+  "freefall": {
+   "polylines": [
+    200,
+    201,
+    431
+   ],
+   "confidence": "high",
+   "mapName": "FREEFALL",
+   "note": "symbol of FREEFALL | end of FREEFALL | along its printed name"
+  },
+  "gear-jammer": {
+   "polylines": [
+    196,
+    197,
+    428
+   ],
+   "confidence": "high",
+   "mapName": "GEAR JAMMER",
+   "note": "symbol of GEAR JAMMER | end of GEAR JAMMER | along its printed name"
+  },
+  "gear-jammer-lower": {
+   "polylines": [
+    69,
+    70,
+    445
+   ],
+   "confidence": "high",
+   "mapName": "GEAR JAMMER - LOWER",
+   "note": "symbol of GEAR JAMMER - LOWER | checked on a crop | along its printed name"
+  },
+  "glacier-drive": {
+   "polylines": [
+    186,
+    337,
+    338,
+    366,
+    397
+   ],
+   "confidence": "high",
+   "mapName": "GLACIER DRIVE",
+   "note": "end of GLACIER DRIVE | symbol of GLACIER DRIVE | along its printed name"
+  },
+  "glacier-road": {
+   "polylines": [
+    94,
+    160,
+    161,
+    433
+   ],
+   "confidence": "high",
+   "mapName": "GLACIER ROAD",
+   "note": "checked on a crop | symbol of GLACIER ROAD | along its printed name"
+  },
+  "gnarly-knots": {
+   "polylines": [
+    334
+   ],
+   "confidence": "high",
+   "mapName": "GNARLY KNOTS",
+   "note": "symbol of GNARLY KNOTS"
+  },
+  "greenline": {
+   "polylines": [
+    41,
+    304,
+    347,
+    440
+   ],
+   "confidence": "high",
+   "mapName": "GREENLINE",
+   "note": "along GREENLINE | checked on a crop | along its printed name"
+  },
+  "grey-line": {
+   "polylines": [
+    340,
+    344
+   ],
+   "confidence": "high",
+   "mapName": "GREY LINE",
+   "note": "along GREY LINE | end of GREY LINE"
+  },
+  "grub-stake": {
+   "polylines": [
+    52,
+    164,
+    444
+   ],
+   "confidence": "high",
+   "mapName": "GRUB STAKE",
+   "note": "symbol of GRUB STAKE | checked on a crop | along its printed name"
+  },
+  "highest-level": {
+   "polylines": [
+    342,
+    345
+   ],
+   "confidence": "high",
+   "mapName": "HIGHEST LEVEL",
+   "note": "along HIGHEST LEVEL | end of HIGHEST LEVEL"
+  },
+  "honeycomb": {
+   "polylines": [
+    59
+   ],
+   "confidence": "high",
+   "mapName": "HONEYCOMB",
+   "note": "along HONEYCOMB"
+  },
+  "hughs-heaven": {
+   "polylines": [
+    80,
+    81,
+    367
+   ],
+   "confidence": "high",
+   "mapName": "HUGH\u2019S HEAVEN",
+   "note": "checked on a crop | symbol of HUGH\u2019S HEAVEN | along its printed name"
+  },
+  "jackpot": {
+   "polylines": [
+    348
+   ],
+   "confidence": "high",
+   "mapName": "JACKPOT",
+   "note": "checked on a crop"
+  },
+  "jersey-cream": {
+   "polylines": [
+    95,
+    96,
+    387
+   ],
+   "confidence": "high",
+   "mapName": "JERSEY CREAM",
+   "note": "end of JERSEY CREAM | symbol of JERSEY CREAM | along its printed name"
+  },
+  "jersey-cream-bowl": {
+   "polylines": [
+    255
+   ],
+   "confidence": "high",
+   "mapName": "JERSEY CREAM BOWL",
+   "note": "checked on a crop"
+  },
+  "kid-trail": {
+   "polylines": [
+    279
+   ],
+   "confidence": "high",
+   "mapName": "KID TRAIL",
+   "note": "end of KID TRAIL"
+  },
+  "last-resort": {
+   "polylines": [
+    16,
+    17,
+    395
+   ],
+   "confidence": "high",
+   "mapName": "LAST RESORT",
+   "note": "symbol of LAST RESORT | end of LAST RESORT | along its printed name"
+  },
+  "little-cub": {
+   "polylines": [
+    309,
+    310
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE CUB",
+   "note": "along LITTLE CUB | end of LITTLE CUB"
+  },
+  "log-jam": {
+   "polylines": [
+    316,
+    319
+   ],
+   "confidence": "high",
+   "mapName": "LOG JAM",
+   "note": "checked on a crop"
+  },
+  "magic-castle": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "MAGIC CASTLE",
+   "note": "checked on a crop"
+  },
+  "mainline-lower": {
+   "polylines": [
+    291,
+    446
+   ],
+   "confidence": "high",
+   "mapName": "MAINLINE - LOWER",
+   "note": "end of MAINLINE - LOWER | along its printed name"
+  },
+  "mainline-upper": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "MAINLINE - UPPER",
+   "note": "along MAINLINE - UPPER"
+  },
+  "merlin": {
+   "polylines": [
+    305
+   ],
+   "confidence": "high",
+   "mapName": "MERLIN",
+   "note": "along MERLIN"
+  },
+  "outer-limits": {
+   "polylines": [
+    311,
+    312,
+    313
+   ],
+   "confidence": "high",
+   "mapName": "OUTER LIMITS",
+   "note": "checked on a crop"
+  },
+  "over-easy": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "OVER EASY",
+   "note": "checked on a crop"
+  },
+  "overbite": {
+   "polylines": [
+    179,
+    180
+   ],
+   "confidence": "high",
+   "mapName": "OVERBITE",
+   "note": "symbol of OVERBITE | checked on a crop"
+  },
+  "pakalolo": {
+   "polylines": [
+    191,
+    192,
+    380
+   ],
+   "confidence": "high",
+   "mapName": "PAKALOLO",
+   "note": "end of PAKALOLO | symbol of PAKALOLO | along its printed name"
+  },
+  "panorama": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "PANORAMA",
+   "note": "along PANORAMA"
+  },
+  "quasar": {
+   "polylines": [
+    256,
+    378
+   ],
+   "confidence": "high",
+   "mapName": "QUASAR",
+   "note": "end of QUASAR | along its printed name"
+  },
+  "racer-alley": {
+   "polylines": [
+    73,
+    138,
+    416
+   ],
+   "confidence": "high",
+   "mapName": "RACER ALLEY",
+   "note": "end of RACER ALLEY | symbol of RACER ALLEY | along its printed name"
+  },
+  "raptors-ride": {
+   "polylines": [
+    321,
+    322,
+    399
+   ],
+   "confidence": "high",
+   "mapName": "RAPTOR\u2019S RIDE",
+   "note": "symbol of RAPTOR\u2019S RIDE | checked on a crop | along its printed name"
+  },
+  "renegade": {
+   "polylines": [
+    329,
+    330,
+    409
+   ],
+   "confidence": "high",
+   "mapName": "RENEGADE",
+   "note": "symbol of RENEGADE | end of RENEGADE | along its printed name"
+  },
+  "riders-revenge": {
+   "polylines": [
+    317,
+    318
+   ],
+   "confidence": "high",
+   "mapName": "RIDER\u2019S REVENGE",
+   "note": "checked on a crop"
+  },
+  "ridge-runner": {
+   "polylines": [
+    89,
+    90,
+    91,
+    384,
+    417
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE RUNNER",
+   "note": "symbol of RIDGE RUNNER | end of RIDGE RUNNER | along its printed name"
+  },
+  "rock-alley": {
+   "polylines": [
+    307
+   ],
+   "confidence": "high",
+   "mapName": "ROCK ALLEY",
+   "note": "along ROCK ALLEY"
+  },
+  "rocknroll": {
+   "polylines": [
+    86
+   ],
+   "confidence": "high",
+   "mapName": "ROCK\u2019N\u2019ROLL",
+   "note": "along ROCK\u2019N\u2019ROLL"
+  },
+  "ross-gold": {
+   "polylines": [
+    54,
+    55,
+    404
+   ],
+   "confidence": "high",
+   "mapName": "ROSS\u2019 GOLD",
+   "note": "checked on a crop | end of ROSS\u2019 GOLD | along its printed name"
+  },
+  "saudan-couloir": {
+   "polylines": [
+    254
+   ],
+   "confidence": "high",
+   "mapName": "SAUDAN COULOIR",
+   "note": "along SAUDAN COULOIR"
+  },
+  "school-marm": {
+   "polylines": [
+    71,
+    72,
+    449
+   ],
+   "confidence": "high",
+   "mapName": "SCHOOL MARM",
+   "note": "symbol of SCHOOL MARM | end of SCHOOL MARM | along its printed name"
+  },
+  "secret-bowl": {
+   "polylines": [
+    212
+   ],
+   "confidence": "high",
+   "mapName": "SECRET BOWL",
+   "note": "checked on a crop"
+  },
+  "shorthorn": {
+   "polylines": [
+    286,
+    287,
+    447
+   ],
+   "confidence": "high",
+   "mapName": "SHORTHORN",
+   "note": "symbol of SHORTHORN | end of SHORTHORN | along its printed name"
+  },
+  "showcase": {
+   "polylines": [
+    273
+   ],
+   "confidence": "high",
+   "mapName": "SHOWCASE",
+   "note": "checked on a crop"
+  },
+  "showcase-traverse": {
+   "polylines": [
+    335,
+    336
+   ],
+   "confidence": "high",
+   "mapName": "SHOWCASE TRAVERSE",
+   "note": "checked on a crop | symbol of SHOWCASE TRAVERSE"
+  },
+  "slingshot": {
+   "polylines": [
+    67,
+    68,
+    426
+   ],
+   "confidence": "high",
+   "mapName": "SLINGSHOT",
+   "note": "symbol of SLINGSHOT | checked on a crop | along its printed name"
+  },
+  "sluiceway": {
+   "polylines": [
+    78,
+    79,
+    362
+   ],
+   "confidence": "high",
+   "mapName": "SLUICEWAY",
+   "note": "symbol of SLUICEWAY | end of SLUICEWAY | along its printed name"
+  },
+  "snow-cross": {
+   "polylines": [
+    343
+   ],
+   "confidence": "high",
+   "mapName": "SNOW CROSS",
+   "note": "along SNOW CROSS"
+  },
+  "so-sweet": {
+   "polylines": [
+    331
+   ],
+   "confidence": "high",
+   "mapName": "SO SWEET",
+   "note": "checked on a crop"
+  },
+  "southside-green": {
+   "polylines": [
+    292,
+    294,
+    295
+   ],
+   "confidence": "high",
+   "mapName": "SOUTHSIDE GREEN",
+   "note": "along SOUTHSIDE GREEN | checked on a crop"
+  },
+  "springboard": {
+   "polylines": [
+    56,
+    418
+   ],
+   "confidence": "high",
+   "mapName": "SPRINGBOARD",
+   "note": "symbol of SPRINGBOARD | along its printed name"
+  },
+  "staircase": {
+   "polylines": [
+    189,
+    190,
+    398
+   ],
+   "confidence": "high",
+   "mapName": "STAIRCASE",
+   "note": "symbol of STAIRCASE | end of STAIRCASE | along its printed name"
+  },
+  "stoker": {
+   "polylines": [
+    65,
+    66,
+    436
+   ],
+   "confidence": "high",
+   "mapName": "STOKER",
+   "note": "symbol of STOKER | end of STOKER | along its printed name"
+  },
+  "stoker-bumps": {
+   "polylines": [
+    206,
+    267,
+    419
+   ],
+   "confidence": "high",
+   "mapName": "STOKER BUMPS",
+   "note": "end of STOKER BUMPS | symbol of STOKER BUMPS | along its printed name"
+  },
+  "straight-shot": {
+   "polylines": [
+    183,
+    184,
+    388
+   ],
+   "confidence": "high",
+   "mapName": "STRAIGHT SHOT",
+   "note": "symbol of STRAIGHT SHOT | end of STRAIGHT SHOT | along its printed name"
+  },
+  "straight-shot-lower": {
+   "polylines": [
+    158
+   ],
+   "confidence": "high",
+   "mapName": "STRAIGHT SHOT - LOWER",
+   "note": "checked on a crop"
+  },
+  "strawline": {
+   "polylines": [
+    167
+   ],
+   "confidence": "high",
+   "mapName": "STRAWLINE",
+   "note": "checked on a crop"
+  },
+  "sunburn": {
+   "polylines": [
+    207
+   ],
+   "confidence": "high",
+   "mapName": "SUNBURN",
+   "note": "along SUNBURN"
+  },
+  "sunnyside-up": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "SUNNYSIDE UP",
+   "note": "along SUNNYSIDE UP"
+  },
+  "sunset-boulevard": {
+   "polylines": [
+    9,
+    10,
+    11,
+    18,
+    408
+   ],
+   "confidence": "high",
+   "mapName": "SUNSET BOULEVARD",
+   "note": "checked on a crop | end of SUNSET BOULEVARD | along its printed name"
+  },
+  "sylvain": {
+   "polylines": [
+    262
+   ],
+   "confidence": "high",
+   "mapName": "SYLVAIN",
+   "note": "checked on a crop"
+  },
+  "the-bite": {
+   "polylines": [
+    187,
+    188,
+    401
+   ],
+   "confidence": "high",
+   "mapName": "THE BITE",
+   "note": "symbol of THE BITE | end of THE BITE | along its printed name"
+  },
+  "trapline": {
+   "polylines": [
+    84,
+    85,
+    413
+   ],
+   "confidence": "high",
+   "mapName": "TRAPLINE",
+   "note": "checked on a crop | symbol of TRAPLINE | along its printed name"
+  },
+  "twist-shout": {
+   "polylines": [
+    92,
+    93,
+    414
+   ],
+   "confidence": "high",
+   "mapName": "TWIST & SHOUT",
+   "note": "symbol of TWIST & SHOUT | checked on a crop | along its printed name"
+  },
+  "undercut": {
+   "polylines": [
+    198,
+    199,
+    434
+   ],
+   "confidence": "high",
+   "mapName": "UNDERCUT",
+   "note": "symbol of UNDERCUT | end of UNDERCUT | along its printed name"
+  },
+  "village-run": {
+   "polylines": [
+    296
+   ],
+   "confidence": "high",
+   "mapName": "VILLAGE RUN",
+   "note": "along VILLAGE RUN"
+  },
+  "wally-world": {
+   "polylines": [
+    159
+   ],
+   "confidence": "high",
+   "mapName": "WALLY WORLD",
+   "note": "along WALLY WORLD"
+  },
+  "watch-out": {
+   "polylines": [
+    325,
+    326,
+    390
+   ],
+   "confidence": "high",
+   "mapName": "WATCH OUT",
+   "note": "symbol of WATCH OUT | end of WATCH OUT | along its printed name"
+  },
+  "wheres-joe": {
+   "polylines": [
+    323,
+    324,
+    393
+   ],
+   "confidence": "high",
+   "mapName": "WHERE\u2019S JOE",
+   "note": "symbol of WHERE\u2019S JOE | checked on a crop | along its printed name"
+  },
+  "white-light": {
+   "polylines": [
+    82,
+    83,
+    102,
+    412
+   ],
+   "confidence": "high",
+   "mapName": "WHITE LIGHT",
+   "note": "end of WHITE LIGHT | checked on a crop | symbol of WHITE LIGHT | along its printed name"
+  },
+  "wishbone": {
+   "polylines": [
+    99
+   ],
+   "confidence": "high",
+   "mapName": "WISHBONE",
+   "note": "along WISHBONE"
+  },
+  "xhiggys-meadow": {
+   "polylines": [
+    210,
+    211,
+    361
+   ],
+   "confidence": "high",
+   "mapName": "XHIGGY\u2019S MEADOW",
+   "note": "symbol of XHIGGY\u2019S MEADOW | checked on a crop | along its printed name"
+  },
+  "yard-sale": {
+   "polylines": [
+    327,
+    328,
+    386
+   ],
+   "confidence": "high",
+   "mapName": "YARD SALE",
+   "note": "symbol of YARD SALE | end of YARD SALE | along its printed name"
+  },
+  "yellow-brick-road": {
+   "polylines": [
+    21,
+    22,
+    451
+   ],
+   "confidence": "high",
+   "mapName": "YELLOW BRICK ROAD",
+   "note": "symbol of YELLOW BRICK ROAD | checked on a crop | along its printed name"
+  },
+  "zig-zag": {
+   "polylines": [
+    63,
+    64,
+    427
+   ],
+   "confidence": "high",
+   "mapName": "ZIG ZAG",
+   "note": "symbol of ZIG ZAG | end of ZIG ZAG | along its printed name"
+  },
+  "adagio": {
+   "polylines": [
+    152
+   ],
+   "confidence": "high",
+   "mapName": "ADAGIO",
+   "note": "along ADAGIO"
+  },
+  "banana-peel": {
+   "polylines": [
+    49,
+    50,
+    403
+   ],
+   "confidence": "high",
+   "mapName": "BANANA PEEL",
+   "note": "symbol of BANANA PEEL | checked on a crop | along its printed name"
+  },
+  "bean-sprout": {
+   "polylines": [
+    117
+   ],
+   "confidence": "high",
+   "mapName": "BEAN SPROUT",
+   "note": "along BEAN SPROUT"
+  },
+  "bear-cub": {
+   "polylines": [
+    24,
+    40
+   ],
+   "confidence": "high",
+   "mapName": "BEAR CUB",
+   "note": "symbol of BEAR CUB | along BEAR CUB"
+  },
+  "bear-paw": {
+   "polylines": [
+    252,
+    253,
+    430
+   ],
+   "confidence": "high",
+   "mapName": "BEAR PAW",
+   "note": "end of BEAR PAW | checked on a crop | along its printed name"
+  },
+  "blue-road": {
+   "polylines": [
+    120
+   ],
+   "confidence": "high",
+   "mapName": "BLUE ROAD",
+   "note": "along BLUE ROAD"
+  },
+  "bobcat": {
+   "polylines": [
+    174
+   ],
+   "confidence": "high",
+   "mapName": "BOBCAT",
+   "note": "along BOBCAT"
+  },
+  "bobcat-and-chipmunk-park": {
+   "polylines": [
+    341
+   ],
+   "confidence": "high",
+   "mapName": "BOBCAT AND CHIPMUNK PARK",
+   "note": "checked on a crop"
+  },
+  "burnt-stew-trail": {
+   "polylines": [
+    23,
+    33
+   ],
+   "confidence": "high",
+   "mapName": "BURNT STEW TRAIL",
+   "note": "checked on a crop | along BURNT STEW TRAIL"
+  },
+  "camel-humps": {
+   "polylines": [
+    214
+   ],
+   "confidence": "high",
+   "mapName": "CAMEL HUMPS",
+   "note": "checked on a crop"
+  },
+  "chunkys-choice": {
+   "polylines": [
+    246
+   ],
+   "confidence": "high",
+   "mapName": "CHUNKY\u2019S CHOICE",
+   "note": "end of CHUNKY\u2019S CHOICE"
+  },
+  "closed-captions": {
+   "polylines": [
+    277
+   ],
+   "confidence": "high",
+   "mapName": "CLOSED CAPTIONS",
+   "note": "checked on a crop"
+  },
+  "cockalorum": {
+   "polylines": [
+    218
+   ],
+   "confidence": "high",
+   "mapName": "COCKALORUM",
+   "note": "checked on a crop"
+  },
+  "cougar": {
+   "polylines": [
+    114,
+    115,
+    382
+   ],
+   "confidence": "high",
+   "mapName": "COUGAR",
+   "note": "checked on a crop | symbol of COUGAR | along its printed name"
+  },
+  "coyote": {
+   "polylines": [
+    165,
+    175
+   ],
+   "confidence": "high",
+   "mapName": "COYOTE",
+   "note": "checked on a crop"
+  },
+  "crabapple": {
+   "polylines": [
+    133,
+    134
+   ],
+   "confidence": "high",
+   "mapName": "CRABAPPLE",
+   "note": "checked on a crop | end of CRABAPPLE"
+  },
+  "cross-roads": {
+   "polylines": [
+    105,
+    106,
+    441
+   ],
+   "confidence": "high",
+   "mapName": "CROSS ROADS",
+   "note": "symbol of CROSS ROADS | checked on a crop | along its printed name"
+  },
+  "dave-murray-downhill-lower": {
+   "polylines": [
+    215,
+    222,
+    223,
+    450
+   ],
+   "confidence": "high",
+   "mapName": "DAVE MURRAY DOWNHILL - LOWER",
+   "note": "checked on a crop | along its printed name"
+  },
+  "die-hard": {
+   "polylines": [
+    265,
+    266,
+    369
+   ],
+   "confidence": "high",
+   "mapName": "DIE HARD",
+   "note": "checked on a crop | end of DIE HARD | along its printed name"
+  },
+  "doom-gloom": {
+   "polylines": [
+    225,
+    226
+   ],
+   "confidence": "high",
+   "mapName": "DOOM & GLOOM",
+   "note": "checked on a crop"
+  },
+  "ego-bowl-lower": {
+   "polylines": [
+    354
+   ],
+   "confidence": "high",
+   "mapName": "EGO BOWL - LOWER",
+   "note": "checked on a crop"
+  },
+  "ego-bowl-upper": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "EGO BOWL - UPPER",
+   "note": "checked on a crop"
+  },
+  "emerald-forest": {
+   "polylines": [
+    136,
+    155
+   ],
+   "confidence": "high",
+   "mapName": "EMERALD FOREST",
+   "note": "checked on a crop | symbol of EMERALD FOREST"
+  },
+  "enchanted-forest": {
+   "polylines": [
+    281
+   ],
+   "confidence": "high",
+   "mapName": "ENCHANTED FOREST",
+   "note": "checked on a crop"
+  },
+  "encore-ridge": {
+   "polylines": [
+    153
+   ],
+   "confidence": "high",
+   "mapName": "ENCORE RIDGE",
+   "note": "along ENCORE RIDGE"
+  },
+  "expressway-whistler": {
+   "polylines": [
+    38,
+    48,
+    351
+   ],
+   "confidence": "high",
+   "mapName": "EXPRESSWAY (WHISTLER)",
+   "note": "checked on a crop"
+  },
+  "fantastic": {
+   "polylines": [
+    25,
+    442
+   ],
+   "confidence": "high",
+   "mapName": "FANTASTIC",
+   "note": "end of FANTASTIC | along its printed name"
+  },
+  "fisheye": {
+   "polylines": [
+    53,
+    176
+   ],
+   "confidence": "high",
+   "mapName": "FISHEYE",
+   "note": "along FISHEYE | continuation"
+  },
+  "franzs": {
+   "polylines": [
+    110,
+    111,
+    145,
+    422,
+    443
+   ],
+   "confidence": "high",
+   "mapName": "FRANZ\u2019S",
+   "note": "symbol of FRANZ\u2019S | checked on a crop | along its printed name"
+  },
+  "franzs-meadows": {
+   "polylines": [
+    220,
+    221,
+    389
+   ],
+   "confidence": "high",
+   "mapName": "FRANZ\u2019S MEADOWS",
+   "note": "symbol of FRANZ\u2019S MEADOWS | checked on a crop | along its printed name"
+  },
+  "frondola": {
+   "polylines": [
+    170
+   ],
+   "confidence": "high",
+   "mapName": "FRONDOLA",
+   "note": "along FRONDOLA"
+  },
+  "g-s": {
+   "polylines": [
+    118,
+    119,
+    377,
+    383
+   ],
+   "confidence": "high",
+   "mapName": "G.S.",
+   "note": "end of G.S. | along its printed name"
+  },
+  "glissando": {
+   "polylines": [
+    169
+   ],
+   "confidence": "high",
+   "mapName": "GLISSANDO",
+   "note": "along GLISSANDO"
+  },
+  "goats-gully": {
+   "polylines": [
+    216,
+    217,
+    437
+   ],
+   "confidence": "high",
+   "mapName": "GOAT\u2019S GULLY",
+   "note": "checked on a crop | symbol of GOAT\u2019S GULLY | along its printed name"
+  },
+  "grande-finale": {
+   "polylines": [
+    228,
+    396
+   ],
+   "confidence": "high",
+   "mapName": "GRANDE FINALE",
+   "note": "end of GRANDE FINALE | along its printed name"
+  },
+  "green-acres": {
+   "polylines": [
+    355,
+    356
+   ],
+   "confidence": "high",
+   "mapName": "GREEN ACRES",
+   "note": "checked on a crop"
+  },
+  "gun-barrels": {
+   "polylines": [
+    268,
+    269
+   ],
+   "confidence": "high",
+   "mapName": "GUN BARRELS",
+   "note": "checked on a crop"
+  },
+  "harmony-piste": {
+   "polylines": [
+    127,
+    128,
+    373
+   ],
+   "confidence": "high",
+   "mapName": "HARMONY PISTE",
+   "note": "checked on a crop | along its printed name"
+  },
+  "harmony-ridge": {
+   "polylines": [
+    121,
+    122,
+    123,
+    364
+   ],
+   "confidence": "high",
+   "mapName": "HARMONY RIDGE",
+   "note": "end of HARMONY RIDGE | continuation | checked on a crop | along its printed name"
+  },
+  "headwall": {
+   "polylines": [
+    140
+   ],
+   "confidence": "high",
+   "mapName": "HEADWALL",
+   "note": "along HEADWALL"
+  },
+  "highway-86": {
+   "polylines": [
+    109,
+    147,
+    177,
+    402
+   ],
+   "confidence": "high",
+   "mapName": "HIGHWAY 86",
+   "note": "symbol of HIGHWAY 86 | end of HIGHWAY 86 | along HIGHWAY 86 | along its printed name"
+  },
+  "jeffs-ode-to-joy": {
+   "polylines": [
+    154
+   ],
+   "confidence": "high",
+   "mapName": "JEFF\u2019S ODE TO JOY",
+   "note": "along JEFF\u2019S ODE TO JOY"
+  },
+  "jimmys-joker": {
+   "polylines": [
+    240,
+    241,
+    275,
+    425
+   ],
+   "confidence": "high",
+   "mapName": "JIMMY\u2019S JOKER",
+   "note": "symbol of JIMMY\u2019S JOKER | end of JIMMY\u2019S JOKER | continuation | along its printed name"
+  },
+  "jolly-green-giant": {
+   "polylines": [
+    116
+   ],
+   "confidence": "high",
+   "mapName": "JOLLY GREEN GIANT",
+   "note": "checked on a crop"
+  },
+  "kadenwood-trail": {
+   "polylines": [
+    150,
+    151
+   ],
+   "confidence": "high",
+   "mapName": "KADENWOOD TRAIL",
+   "note": "checked on a crop | along KADENWOOD TRAIL"
+  },
+  "kaleidoscope": {
+   "polylines": [
+    247,
+    248,
+    372
+   ],
+   "confidence": "high",
+   "mapName": "KALEIDOSCOPE",
+   "note": "end of KALEIDOSCOPE | symbol of KALEIDOSCOPE | along its printed name"
+  },
+  "krummholz": {
+   "polylines": [
+    129,
+    130,
+    376
+   ],
+   "confidence": "high",
+   "mapName": "KRUMMHOLZ",
+   "note": "symbol of KRUMMHOLZ | end of KRUMMHOLZ | along its printed name"
+  },
+  "little-red-run": {
+   "polylines": [
+    107,
+    108,
+    391
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE RED RUN",
+   "note": "checked on a crop | symbol of LITTLE RED RUN | along its printed name"
+  },
+  "little-whistler": {
+   "polylines": [
+    276
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE WHISTLER",
+   "note": "checked on a crop"
+  },
+  "low-roll": {
+   "polylines": [
+    249,
+    251
+   ],
+   "confidence": "high",
+   "mapName": "LOW ROLL",
+   "note": "checked on a crop"
+  },
+  "lower-olympic": {
+   "polylines": [
+    26,
+    47,
+    299,
+    352,
+    448
+   ],
+   "confidence": "high",
+   "mapName": "LOWER OLYMPIC",
+   "note": "checked on a crop | symbol of LOWER OLYMPIC | end of LOWER OLYMPIC | along its printed name"
+  },
+  "lower-ratfink": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "LOWER RATFINK",
+   "note": "checked on a crop"
+  },
+  "lower-whiskey-jack": {
+   "polylines": [
+    35,
+    36,
+    406
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WHISKEY JACK",
+   "note": "checked on a crop | symbol of LOWER WHISKEY JACK | along its printed name"
+  },
+  "marmot": {
+   "polylines": [
+    31,
+    32
+   ],
+   "confidence": "high",
+   "mapName": "MARMOT",
+   "note": "checked on a crop | along MARMOT"
+  },
+  "mathews-traverse": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "MATHEWS TRAVERSE",
+   "note": "along MATHEWS TRAVERSE"
+  },
+  "mcconkeys": {
+   "polylines": [
+    250
+   ],
+   "confidence": "high",
+   "mapName": "MCCONKEY\u2019S",
+   "note": "checked on a crop"
+  },
+  "mondays": {
+   "polylines": [
+    219
+   ],
+   "confidence": "high",
+   "mapName": "MONDAY\u2019S",
+   "note": "checked on a crop"
+  },
+  "northern-lights": {
+   "polylines": [
+    143,
+    172,
+    173
+   ],
+   "confidence": "high",
+   "mapName": "NORTHERN LIGHTS",
+   "note": "checked on a crop | end of NORTHERN LIGHTS"
+  },
+  "old-crow": {
+   "polylines": [
+    137
+   ],
+   "confidence": "high",
+   "mapName": "OLD CROW",
+   "note": "end of OLD CROW"
+  },
+  "old-man": {
+   "polylines": [
+    135,
+    146
+   ],
+   "confidence": "high",
+   "mapName": "OLD MAN",
+   "note": "continuation | checked on a crop"
+  },
+  "orange-peel": {
+   "polylines": [
+    112,
+    113,
+    410
+   ],
+   "confidence": "high",
+   "mapName": "ORANGE PEEL",
+   "note": "end of ORANGE PEEL | symbol of ORANGE PEEL | along its printed name"
+  },
+  "pale-face": {
+   "polylines": [
+    278
+   ],
+   "confidence": "high",
+   "mapName": "PALE FACE",
+   "note": "along PALE FACE"
+  },
+  "papoose": {
+   "polylines": [
+    27,
+    28,
+    400
+   ],
+   "confidence": "high",
+   "mapName": "PAPOOSE",
+   "note": "end of PAPOOSE | symbol of PAPOOSE | along its printed name"
+  },
+  "peak-to-creek": {
+   "polylines": [
+    149
+   ],
+   "confidence": "high",
+   "mapName": "PEAK TO CREEK",
+   "note": "along PEAK TO CREEK"
+  },
+  "peak-to-creek-upper": {
+   "polylines": [
+    148
+   ],
+   "confidence": "high",
+   "mapName": "PEAK TO CREEK - UPPER",
+   "note": "along PEAK TO CREEK - UPPER"
+  },
+  "pikas-traverse": {
+   "polylines": [
+    34,
+    51
+   ],
+   "confidence": "high",
+   "mapName": "PIKA\u2019S TRAVERSE",
+   "note": "checked on a crop"
+  },
+  "pony-trail": {
+   "polylines": [
+    29,
+    30,
+    301,
+    385
+   ],
+   "confidence": "high",
+   "mapName": "PONY TRAIL",
+   "note": "checked on a crop | symbol of PONY TRAIL | along its printed name"
+  },
+  "porcupine": {
+   "polylines": [
+    37,
+    392
+   ],
+   "confidence": "high",
+   "mapName": "PORCUPINE",
+   "note": "end of PORCUPINE | along its printed name"
+  },
+  "ptarmigan": {
+   "polylines": [
+    139,
+    156
+   ],
+   "confidence": "high",
+   "mapName": "PTARMIGAN",
+   "note": "checked on a crop | along PTARMIGAN"
+  },
+  "rabbit-tracks": {
+   "polylines": [
+    126,
+    374
+   ],
+   "confidence": "high",
+   "mapName": "RABBIT TRACKS",
+   "note": "checked on a crop | along its printed name"
+  },
+  "ratfink": {
+   "polylines": [
+    244,
+    245,
+    381
+   ],
+   "confidence": "high",
+   "mapName": "RATFINK",
+   "note": "end of RATFINK | symbol of RATFINK | along its printed name"
+  },
+  "raven": {
+   "polylines": [
+    257
+   ],
+   "confidence": "high",
+   "mapName": "RAVEN",
+   "note": "along RAVEN"
+  },
+  "ridge-run": {
+   "polylines": [
+    131,
+    132,
+    365
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE RUN",
+   "note": "end of RIDGE RUN | symbol of RIDGE RUN | along its printed name"
+  },
+  "school-yard": {
+   "polylines": [
+    280
+   ],
+   "confidence": "high",
+   "mapName": "SCHOOL YARD",
+   "note": "along SCHOOL YARD"
+  },
+  "seppos": {
+   "polylines": [
+    242,
+    243,
+    421
+   ],
+   "confidence": "high",
+   "mapName": "SEPPO\u2019S",
+   "note": "end of SEPPO\u2019S | checked on a crop | along its printed name"
+  },
+  "seppos-lower": {
+   "polylines": [
+    171
+   ],
+   "confidence": "high",
+   "mapName": "SEPPO\u2019S - LOWER",
+   "note": "checked on a crop"
+  },
+  "shale-slope": {
+   "polylines": [
+    235,
+    236,
+    371
+   ],
+   "confidence": "high",
+   "mapName": "SHALE SLOPE",
+   "note": "end of SHALE SLOPE | symbol of SHALE SLOPE | along its printed name"
+  },
+  "sidewinder": {
+   "polylines": [
+    349
+   ],
+   "confidence": "high",
+   "mapName": "SIDEWINDER",
+   "note": "checked on a crop"
+  },
+  "stefans-chute": {
+   "polylines": [
+    213
+   ],
+   "confidence": "high",
+   "mapName": "STEFAN\u2019S CHUTE",
+   "note": "checked on a crop"
+  },
+  "surprise": {
+   "polylines": [
+    263,
+    264,
+    368
+   ],
+   "confidence": "high",
+   "mapName": "SURPRISE",
+   "note": "symbol of SURPRISE | end of SURPRISE | along its printed name"
+  },
+  "t-bar-run": {
+   "polylines": [
+    103,
+    104,
+    363
+   ],
+   "confidence": "high",
+   "mapName": "T-BAR RUN",
+   "note": "checked on a crop | symbol of T-BAR RUN | along its printed name"
+  },
+  "the-cirque": {
+   "polylines": [
+    229,
+    231,
+    359
+   ],
+   "confidence": "high",
+   "mapName": "THE CIRQUE",
+   "note": "end of THE CIRQUE | symbol of THE CIRQUE | along its printed name"
+  },
+  "the-couloir": {
+   "polylines": [
+    232,
+    233,
+    358
+   ],
+   "confidence": "high",
+   "mapName": "THE COULOIR",
+   "note": "end of THE COULOIR | checked on a crop | along its printed name"
+  },
+  "the-glades": {
+   "polylines": [
+    124,
+    125,
+    375
+   ],
+   "confidence": "high",
+   "mapName": "THE GLADES",
+   "note": "checked on a crop | along its printed name"
+  },
+  "the-saddle": {
+   "polylines": [
+    271,
+    272,
+    360
+   ],
+   "confidence": "high",
+   "mapName": "THE SADDLE",
+   "note": "symbol of THE SADDLE | end of THE SADDLE | along its printed name"
+  },
+  "tokum": {
+   "polylines": [
+    141,
+    142,
+    438
+   ],
+   "confidence": "high",
+   "mapName": "TOKUM",
+   "note": "end of TOKUM | symbol of TOKUM | along its printed name"
+  },
+  "tree-fort": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "TREE FORT",
+   "note": "checked on a crop"
+  },
+  "upper-dave-murray-downhill": {
+   "polylines": [
+    224,
+    350,
+    432
+   ],
+   "confidence": "high",
+   "mapName": "UPPER DAVE MURRAY DOWNHILL",
+   "note": "symbol of UPPER DAVE MURRAY DOWNHILL | checked on a crop | along its printed name"
+  },
+  "upper-olympic": {
+   "polylines": [
+    297,
+    302,
+    429
+   ],
+   "confidence": "high",
+   "mapName": "UPPER OLYMPIC",
+   "note": "checked on a crop | symbol of UPPER OLYMPIC | along its printed name"
+  },
+  "upper-whiskey-jack": {
+   "polylines": [
+    298
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WHISKEY JACK",
+   "note": "checked on a crop"
+  },
+  "west-cirque": {
+   "polylines": [
+    260
+   ],
+   "confidence": "high",
+   "mapName": "WEST CIRQUE",
+   "note": "along WEST CIRQUE"
+  },
+  "whistler-bowl": {
+   "polylines": [
+    227,
+    230,
+    234
+   ],
+   "confidence": "high",
+   "mapName": "WHISTLER BOWL",
+   "note": "checked on a crop"
+  },
+  "wild-card": {
+   "polylines": [
+    238,
+    239,
+    420
+   ],
+   "confidence": "high",
+   "mapName": "WILD CARD",
+   "note": "symbol of WILD CARD | end of WILD CARD | along its printed name"
+  }
+ }
+}

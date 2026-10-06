@@ -1,0 +1,67 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "blackcomb-glacier": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "BLACKCOMB GLACIER",
+   "note": "checked on a crop"
+  },
+  "diamond-bowl": {
+   "polylines": [
+    0,
+    2,
+    5
+   ],
+   "confidence": "high",
+   "mapName": "DIAMOND BOWL",
+   "note": "checked on a crop"
+  },
+  "garnet-bowl": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "GARNET BOWL",
+   "note": "checked on a crop"
+  },
+  "glacier-road": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "GLACIER ROAD",
+   "note": "checked on a crop"
+  },
+  "ruby-bowl": {
+   "polylines": [
+    1,
+    6,
+    8
+   ],
+   "confidence": "high",
+   "mapName": "RUBY BOWL",
+   "note": "checked on a crop"
+  },
+  "sapphire-bowl": {
+   "polylines": [
+    10,
+    11
+   ],
+   "confidence": "high",
+   "mapName": "SAPPHIRE BOWL",
+   "note": "end of SAPPHIRE BOWL | checked on a crop"
+  },
+  "spankys-ladder": {
+   "polylines": [
+    4,
+    12
+   ],
+   "confidence": "high",
+   "mapName": "SPANKY\u2019S LADDER",
+   "note": "symbol of SPANKY\u2019S LADDER | checked on a crop"
+  }
+ }
+}

@@ -1,0 +1,36 @@
+// Whistler Blackcomb's 2025-26 trail map PDF from whistlerblackcomb.com's
+// trail-maps page, in three panels: the main map (Blackcomb on the left,
+// Whistler on the right) and its two insets, the Symphony Amphitheatre and
+// the Blackcomb Glacier, each with its own overlay. Trail lines are vector
+// strokes in the difficulty colours (purple: the family areas' adventure
+// trails; orange: the terrain parks; glades are black lines under white
+// dashes). Names are outlined glyphs in the run's colour on a white halo
+// (each glyph shape read once, then decoded:
+// tools/trailmap/resorts/whistler-blackcomb/), the symbol before the name,
+// printed in a gap of the run's line or along it. Each line piece takes the
+// name that runs into it or along it; the rest was settled on zoomed crops
+// (decisions.py). Where two trails' lines meet on the map, the resort's own
+// ArcGIS run lines were checked to meet there too; where they didn't, they
+// decided which run a line between two labels belongs to (Sunset Boulevard
+// below Sunnyside Up, Camel Humps beside the Harmony Express, White Light
+// under Straight Shot's label, Big Easy below Over Easy, Bobcat and Coyote
+// starting on Green Acres), and two links the map doesn't name (the
+// resort's Peak Traverse and Pig Alley) have no overlay. Names are as
+// printed (Greenline is printed GREENLINE and GREEN LINE). Seppo's and
+// Mainline are printed twice with two symbols: two runs each, named as the
+// resort's trail report names them; a blue symbol printed alone at Crystal
+// Road starts Straight Shot - Lower, the report's blue part of Straight
+// Shot. Expressway is a run on each mountain (the report lists both): two
+// trails, both shown as Expressway. The Glades is a groomed run (drawn as
+// one), not a glade. Difficulty: the symbol printed by the name (Big Easy's
+// square and Harmony Horseshoes' single diamond as printed, though the
+// report rates them green and double black); a name with none takes its
+// line's colour or the report's rating (Showcase Bowl and Brownlie Basin
+// black; Magic Castle, Tree Fort and Kid Trail green; Enchanted Forest and
+// School Yard blue; the terrain parks blue, the default). Flute Bowl and
+// North Flute Bowl print a diamond and a double diamond, and Glacier Road a
+// square on the main map and a diamond on the glacier inset: as the report
+// rates them (black, black, blue). Names printed with no line of their own
+// (bowls, faces, chutes, the glacier entrances) are markers at their names.
+// Trails are grouped by mountain as the report groups them; elevations are
+// the two summits as printed. x/y/baseY/width are unused layout fields.
