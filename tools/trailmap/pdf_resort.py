@@ -14,7 +14,7 @@ The resort's folder holds
                 no line, areas (resorts/hunter/resort.py lists the basic settings). Optional ones, read with getattr
                 where they apply (the other resort folders use them): JOIN_GAP, MATCH_ENDS, ALONG_SHORT,
                 ALONG_NEAREST, SYMBOL_CENTRE, CUT_AT_SYMBOLS, SYMBOL_OFF_LINE, LOOSE_SYMBOLS, ON_CIRCLE, SYMBOL_OF,
-                DEFAULT_SYMBOL
+                DEFAULT_SYMBOL, RATING, COLOR_SYMBOL, AS_PRINTED, AREA_OF
   decisions.py  CHECKED / UNNAMED / CUTS / TRACED, all keyed by points in map px (see its docstring)
   header.txt    the comment at the top of trails.ts
   regen.sh      the extraction, then this
@@ -139,7 +139,7 @@ class Resort:
         raw = raw['labels'] if isinstance(raw, dict) else raw  # pdf_glyphs.py: {labels, symbols}
         L = [{'text': l['text'], 'pts': [self.px(p) for p in l['pts']], 'c': self.px(l['c']), 'seq': l.get('seq', 0),
               'color': l['color'] if isinstance(l.get('color'), str) else tuple(l.get('color') or ()),
-              'size': l.get('size', 0)} for l in raw if R.is_name(l)]
+              'size': l.get('size', 0), 'glade': l.get('glade')} for l in raw if R.is_name(l)]
         near = 0.8 * R.SCALE  # px: two characters this close are one character drawn twice
         L += self.letter_runs(L)
         # one copy per printed name (a halo pass, the letters of a curved label, a recoloured copy); spaces aside
@@ -183,7 +183,7 @@ class Resort:
             if any(t == l['text'] and (q is None or math.dist(q, l['c']) < 40) for t, q in drop):
                 continue
             out.append({'name': getattr(R, 'RENAME', {}).get(l['text'], l['text']), 'pts': l['pts'], 'c': l['c'],
-                        'printed': l['text'], 'color': l.get('color')})
+                        'printed': l['text'], 'color': l.get('color'), 'glade': l.get('glade')})
         for e in getattr(R, 'EXTRA', []):  # names printed some other way (another font, a sign): name, x, y
             out.append({'name': e[0], 'pts': [tuple(e[1:3])], 'c': tuple(e[1:3]), 'printed': None,
                         'symbol': e[3] if len(e) > 3 else None})
@@ -434,7 +434,7 @@ class Resort:
         # Sugarloaf's key numbers): the unnamed pieces passing under the circle
         rad = getattr(R, 'ON_CIRCLE', 0) * R.SCALE
         for n in names if rad else ():
-            if n['printed'] and len(n['pts']) == 1:
+            if n['printed'] and max(math.dist(p, n['c']) for p in n['pts']) < 1.0:  # a name at one point
                 for p in P:
                     if not assign.get(p['id']) and line_dist(n['c'], p['pt']) <= rad:
                         assign[p['id']].add(n['name'])
@@ -502,7 +502,8 @@ class Resort:
         glades = set(getattr(R, 'GLADES', ()))
         along = (gap | set(getattr(R, 'LABEL_LINE', ()))) - set(getattr(R, 'NO_STRETCH', ())) - glades
         for n in names:
-            if n['name'] in along and n['printed'] and n['printed'] not in two_line and 'GLADE' not in n['name']:
+            if (n['name'] in along and n['printed'] and n['printed'] not in two_line
+                    and 'GLADE' not in n['name'].upper()):
                 pts = self.stretch(n)
                 pid = len(P)
                 P.append({'id': pid, 'cls': CLS.get(n.get('symbol')) or self.colour_of_assign(assign, P, n['name']),
@@ -556,20 +557,30 @@ class Resort:
         assert not left, ('undecided pieces: decide each on a crop (decisions.py CHECKED or UNNAMED)', left)
         P, names = self.P, self.names_
         glades, parks = set(getattr(R, 'GLADES', ())), set(getattr(R, 'PARKS', ()))
+
+        def display(nm):  # the name as the app shows it: DISPLAY, else as printed (AS_PRINTED), else title case
+            return R.DISPLAY.get(nm) or (nm.replace('’', "'") if getattr(R, 'AS_PRINTED', False) else None)
+        by_colour = getattr(R, 'COLOR_SYMBOL', {})  # maps that rate a run by the colour its name is printed in
+
+        def area(nm, c):  # resort.AREA_OF: a name's area where its position doesn't tell
+            return getattr(R, 'AREA_OF', {}).get(nm) or R.area(c)
         labels = []
         for n in names:
             nm = n['name']
-            labels.append({'mapName': nm, 'printed': R.DISPLAY.get(nm), 'symbol': n.get('symbol'),
-                           'glade': 'GLADE' in nm or nm in glades, 'park': nm in parks, 'area': R.area(n['c']),
-                           'labelSrc': [round(n['c'][0]), round(n['c'][1])], 'confidence': 'certain'})
+            labels.append({'mapName': nm, 'printed': display(nm),
+                           'symbol': n.get('symbol') or by_colour.get(n.get('color')),
+                           'glade': 'GLADE' in nm.upper() or nm in glades or bool(n.get('glade')), 'park': nm in parks,
+                           'area': area(nm, n['c']), 'labelSrc': [round(n['c'][0]), round(n['c'][1])],
+                           'confidence': 'certain'})
         # symbols printed with no name on a named trail's line (a change of rating): they count toward its difficulty
         loose_off = 0
         for s in self.loose:
             d, pid = min((line_dist(s['c'], p['pt']), p['id']) for p in P)
             if pid in self.assign and d <= 2 * s['r'] + 4:
                 nm = next(iter(self.assign[pid]))
-                labels.append({'mapName': nm, 'printed': R.DISPLAY.get(nm), 'symbol': s['t'],
-                               'glade': 'GLADE' in nm or nm in glades, 'park': nm in parks, 'area': R.area(s['c']),
+                labels.append({'mapName': nm, 'printed': display(nm), 'symbol': s['t'],
+                               'glade': 'GLADE' in nm.upper() or nm in glades, 'park': nm in parks,
+                               'area': area(nm, s['c']),
                                'labelSrc': [round(s['c'][0]), round(s['c'][1])], 'confidence': 'certain'})
                 print(f'  {s["t"]} at {[round(v) for v in s["c"]]} (no name printed) on {nm}')
             else:
@@ -587,6 +598,11 @@ class Resort:
             if d and L['mapName'] not in rated:
                 L['symbol'] = d
                 print(f'  {L["mapName"]}: no symbol printed, {d} by default (resort.DEFAULT_SYMBOL)')
+        # resort.RATING: the symbol of a name printed with two ratings, as the resort's own trail list gives it
+        for L in labels:
+            d = getattr(R, 'RATING', {}).get(L['mapName'])
+            if d:
+                L['symbol'] = d
         traced = sorted(self.traced)
         os.makedirs(self.work('tiles'), exist_ok=True)
         lines = [{'id': pid, 'mapName': next(iter(v)), 'color': P[pid]['cls'], 'confidence': 'certain',

@@ -27,9 +27,11 @@ consecutive same-colour glyphs (each within --join pt of the last); a word
 gap is a gap between outlines well over the label's median letter gap, or,
 with --space, over that many points along the reading direction (condensed
 fonts). Comma and apostrophe are often one shape turned over: read it as
-either, and the side of the line it sits on decides. A run whose glyphs all
-sit on another, longer (or later) run's is a fragment copy and is dropped. Difficulty symbols are fills too: an even four-sided fill in the
---square colour is a square, in the --diamond colour a diamond; two diamonds
+either, and the side of the line it sits on decides; so are n and u, and !
+and i, in some fonts (--turned nu: the half its gap is in decides). A run
+whose glyphs all sit on another, longer (or later) run's is a fragment copy
+and is dropped. Difficulty symbols are fills too: an even four-sided fill in
+the --square colour is a square, in the --diamond colour a diamond; two diamonds
 side by side (or one eight-sided fill) are a double diamond, and EX when
 small white letter fills sit inside; four curves in the --circle colour are a
 circle. Output: {"labels": [{seq, text, color, size, c, pts}], "symbols":
@@ -331,6 +333,29 @@ def labels(a):
         g = run[k]['c']
         return 1 if (g[0] - mx) * u[1] - (g[1] - my) * u[0] > 0 else -1
 
+    def open_side(g, u):
+        """Where glyph g's centre line, upright, crosses no ink: -1 mostly below its middle (n between its legs, !
+        between stroke and dot), +1 mostly above (u, i), 0 nowhere. u is the reading direction; up is u turned
+        back a right angle (PDF y runs down)."""
+        up = (u[1], -u[0])
+        polys = polygons(D[g['seq']]['items'])
+        along = [x * u[0] + y * u[1] for pl in polys for x, y in pl]
+        ext = [x * up[0] + y * up[1] for pl in polys for x, y in pl]
+        a0, h0 = (max(along) + min(along)) / 2, (max(ext) + min(ext)) / 2
+        h = (max(ext) - min(ext)) / 2
+
+        def filled(t):
+            px, py = a0 * u[0] + (h0 + t * h) * up[0], a0 * u[1] + (h0 + t * h) * up[1]
+            inside = False
+            for pl in polys:
+                for (x0, y0), (x1, y1) in zip(pl, pl[1:] + pl[:1]):
+                    if (y0 > py) != (y1 > py) and px < x0 + (py - y0) * (x1 - x0) / (y1 - y0):
+                        inside = not inside
+            return inside
+        empty = [t / 20 for t in range(-19, 20) if not filled(t / 20)]
+        return 0 if not empty else -1 if sum(empty) < 0 else 1
+
+    D = {d['seqno']: d for d in page.get_drawings()} if a.turned else {}
     runs, cur = [], []
     for g in (g for g in G if g.get('ch')):
         if cur and (g['col'] != cur[-1]['col'] or math.dist(g['c'], cur[-1]['c']) > a.join
@@ -355,6 +380,11 @@ def labels(a):
         for k, ch in enumerate(chars):
             if ch in (',', '’'):  # one shape turned over: above the line it is an apostrophe
                 chars[k] = '’' if side(run, k, dirs[min(k, len(dirs) - 1)]) > 0 else ','
+            for pair in a.turned:  # two letters that are one shape turned over (n/u): the half with the gap decides
+                if ch in pair and len(run) > 1:
+                    opening = open_side(run[k], dirs[min(k, len(dirs) - 1)])
+                    if opening:
+                        chars[k] = pair[0] if opening < 0 else pair[1]
         text = chars[0]
         for ch, sp in zip(chars[1:], space):
             text += (' ' if sp else '') + ch
@@ -418,6 +448,9 @@ def main():
                     help='pt: a word gap is a gap over this between outlines along the reading direction (condensed '
                          'fonts; Keystone 0.75). Default: a gap well over the label\'s median outline-to-outline gap')
     lb.add_argument('--seq-gap', type=int, default=6, help='drawing-order gap that starts a new label')
+    lb.add_argument('--turned', action='append', default=[],
+                    help='two letters that are one shape turned over, the one with its gap low first: nu, !i (a shape '
+                         'read as either is decided by which half its gap is in: Smugglers\' Notch)')
     lb.add_argument('--single', action='append', default=[],
                     help='colour class whose lone glyphs are labels too (one-digit numbered circles: Sugarloaf)')
     a = ap.parse_args()

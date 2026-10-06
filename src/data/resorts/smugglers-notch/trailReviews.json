@@ -1,0 +1,17 @@
+{
+ "reviews": {
+  "burton-treehouse-riglet-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "A kids' learning park at the village base, its name in an orange box with no line: marker at its name",
+   "at": "2026-10-06T00:40:46.000Z",
+   "by": "claude",
+   "labelAt": [
+    28.2,
+    93.65
+   ]
+  }
+ }
+}

@@ -105,6 +105,7 @@ export const RESORTS: ResortEntry[] = [
   oneMap('wildcat', 'Wildcat Mountain', () => import('./data/resorts/wildcat/trails'), () => import('./data/resorts/wildcat/trailPaths.json')),
   oneMap('sunday-river', 'Sunday River', () => import('./data/resorts/sunday-river/trails'), () => import('./data/resorts/sunday-river/trailPaths.json')),
   oneMap('sugarloaf', 'Sugarloaf', () => import('./data/resorts/sugarloaf/trails'), () => import('./data/resorts/sugarloaf/trailPaths.json')),
+  oneMap('smugglers-notch', "Smugglers' Notch", () => import('./data/resorts/smugglers-notch/trails'), () => import('./data/resorts/smugglers-notch/trailPaths.json')),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

@@ -1,0 +1,19 @@
+// Smugglers' Notch's trail map from smuggs.com's trail-map page (the 2024-25
+// artwork, still the map the resort links): one vector PDF page over a
+// low-resolution painting (the map image is the vector layer over a smooth
+// upscale of the painting). Trail lines are strokes in the difficulty
+// colours; names are white outlined glyphs on label boxes in the run's
+// colour (each glyph shape read once, then decoded:
+// tools/trailmap/resorts/smugglers-notch/), on the line or off it with a
+// leader line to the line or to a glade's hollow circle. Each line piece
+// takes the name printed on it or the leader that ends on it; one line that
+// carries Upper and Lower Drifter was cut between their labels, and the rest
+// was settled on zoomed crops (decisions.py). Names are as printed (Express
+// is Thomke's Express in the resort's list). Difficulty: the colour of the
+// name's box; experts' runs print chains of two or three diamonds on their
+// lines (double black). Glades (names with leaders to circles, no line) are
+// markers at their circles. Terrain parks are orange lines named in orange
+// boxes; Birch Run's own label names its park line. Peaks and elevations are
+// the three summits as printed; trails are grouped by mountain as the
+// resort's trail report groups them. x/y/baseY/width are unused layout
+// fields.

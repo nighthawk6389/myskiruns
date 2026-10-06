@@ -1,0 +1,684 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "buds-way": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "BUD\u2019S WAY",
+   "note": "along Bud\u2019s Way"
+  },
+  "curleys-cutback": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "CURLEY\u2019S CUTBACK",
+   "note": "along Curley\u2019s Cutback"
+  },
+  "dixies-knoll": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "DIXIE\u2019S KNOLL",
+   "note": "along Dixie\u2019s Knoll"
+  },
+  "evaporator": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "EVAPORATOR",
+   "note": "along Evaporator"
+  },
+  "garden-path": {
+   "polylines": [
+    16,
+    17,
+    18,
+    19
+   ],
+   "confidence": "high",
+   "mapName": "GARDEN PATH",
+   "note": "checked on a crop | along Garden Path"
+  },
+  "hibernator": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "HIBERNATOR",
+   "note": "along Hibernator"
+  },
+  "howies-wanderer": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "HOWIE\u2019S WANDERER",
+   "note": "checked on a crop"
+  },
+  "log-jam": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "LOG JAM",
+   "note": "along Log Jam"
+  },
+  "log-jam-terrain-park": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "LOG JAM TERRAIN PARK",
+   "note": "checked on a crop"
+  },
+  "lower-morse-liftline": {
+   "polylines": [
+    15,
+    22
+   ],
+   "confidence": "high",
+   "mapName": "LOWER MORSE LIFTLINE",
+   "note": "checked on a crop | along Lower Morse Liftline"
+  },
+  "magic-learning-trail": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "MAGIC LEARNING TRAIL",
+   "note": "along Magic Learning Trail"
+  },
+  "meadowlark": {
+   "polylines": [
+    20,
+    21
+   ],
+   "confidence": "high",
+   "mapName": "MEADOWLARK",
+   "note": "checked on a crop | along Meadowlark"
+  },
+  "midway": {
+   "polylines": [
+    1,
+    7,
+    8
+   ],
+   "confidence": "high",
+   "mapName": "MIDWAY",
+   "note": "checked on a crop | along Midway"
+  },
+  "sams-run": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "SAM\u2019S RUN",
+   "note": "along Sam\u2019s Run"
+  },
+  "snow-snake": {
+   "polylines": [
+    0,
+    9,
+    24
+   ],
+   "confidence": "high",
+   "mapName": "SNOW SNAKE",
+   "note": "along Snow Snake | checked on a crop"
+  },
+  "timberrr": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "TIMBERRR!",
+   "note": "along Timberrr!"
+  },
+  "upper-morse-liftline": {
+   "polylines": [
+    2,
+    12
+   ],
+   "confidence": "high",
+   "mapName": "UPPER MORSE LIFTLINE",
+   "note": "along Upper Morse Liftline | continuation"
+  },
+  "bermuda": {
+   "noLine": true,
+   "label": [
+    43.39,
+    42.44
+   ],
+   "confidence": "high"
+  },
+  "catwalk": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "CATWALK",
+   "note": "along Catwalk"
+  },
+  "dans-ford": {
+   "polylines": [
+    56,
+    57,
+    58
+   ],
+   "confidence": "high",
+   "mapName": "DAN\u2019S FORD",
+   "note": "checked on a crop | under the circle of Dan\u2019s Ford"
+  },
+  "doc-dempseys-glades": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "DOC DEMPSEY\u2019S GLADES",
+   "note": "under the circle of Doc Dempsey\u2019s Glades"
+  },
+  "father-bobs": {
+   "polylines": [
+    50,
+    55
+   ],
+   "confidence": "high",
+   "mapName": "FATHER BOB\u2019S",
+   "note": "checked on a crop | under the circle of Father Bob\u2019s"
+  },
+  "freefall": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "FREEFALL",
+   "note": "along Freefall"
+  },
+  "gary-bs-northwest-passage": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "GARY B\u2019S NORTHWEST PASSAGE",
+   "note": "under the circle of Gary B\u2019s Northwest Passage"
+  },
+  "goat-path": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "GOAT PATH",
+   "note": "along Goat Path"
+  },
+  "knights-revenge": {
+   "noLine": true,
+   "label": [
+    60.12,
+    46.63
+   ],
+   "confidence": "high"
+  },
+  "knights-revenge-gladed-park": {
+   "polylines": [
+    28,
+    110
+   ],
+   "confidence": "high",
+   "mapName": "KNIGHT\u2019S REVENGE GLADED PARK",
+   "note": "checked on a crop"
+  },
+  "lower-catwalk": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CATWALK",
+   "note": "along Lower Catwalk"
+  },
+  "lower-chilcoot": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CHILCOOT",
+   "note": "along Lower Chilcoot"
+  },
+  "lower-drifter": {
+   "polylines": [
+    112
+   ],
+   "confidence": "high",
+   "mapName": "LOWER DRIFTER",
+   "note": "along Lower Drifter"
+  },
+  "lower-f-i-s": {
+   "polylines": [
+    69,
+    70
+   ],
+   "confidence": "high",
+   "mapName": "LOWER F.I.S.",
+   "note": "along Lower F.I.S. | continuation"
+  },
+  "lower-liftline": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LIFTLINE",
+   "note": "along Lower Liftline"
+  },
+  "mcphersons": {
+   "polylines": [
+    32,
+    33,
+    66,
+    67
+   ],
+   "confidence": "high",
+   "mapName": "MCPHERSON\u2019S",
+   "note": "along McPherson\u2019s | continuation | checked on a crop"
+  },
+  "moonshiners-glades": {
+   "noLine": true,
+   "label": [
+    47.57,
+    37.8
+   ],
+   "confidence": "high"
+  },
+  "mulcahys-link": {
+   "polylines": [
+    51,
+    52,
+    61,
+    62
+   ],
+   "confidence": "high",
+   "mapName": "MULCAHY\u2019S LINK",
+   "note": "along Mulcahy\u2019s Link | continuation"
+  },
+  "norwegian-woods": {
+   "noLine": true,
+   "label": [
+    53.87,
+    40.52
+   ],
+   "confidence": "high"
+  },
+  "playground": {
+   "polylines": [
+    68
+   ],
+   "confidence": "high",
+   "mapName": "PLAYGROUND",
+   "note": "along Playground"
+  },
+  "red-fox-glades": {
+   "noLine": true,
+   "label": [
+    53.14,
+    28.41
+   ],
+   "confidence": "high"
+  },
+  "robins-run": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "ROBIN\u2019S RUN",
+   "note": "along Robin\u2019s Run"
+  },
+  "ruthies": {
+   "polylines": [
+    29,
+    31
+   ],
+   "confidence": "high",
+   "mapName": "RUTHIE\u2019S",
+   "note": "along Ruthie\u2019s | checked on a crop"
+  },
+  "shakedown": {
+   "noLine": true,
+   "label": [
+    59.25,
+    28.69
+   ],
+   "confidence": "high"
+  },
+  "shuttle": {
+   "polylines": [
+    60
+   ],
+   "confidence": "high",
+   "mapName": "SHUTTLE",
+   "note": "along Shuttle"
+  },
+  "the-black-hole": {
+   "polylines": [
+    47,
+    48
+   ],
+   "confidence": "high",
+   "mapName": "THE BLACK HOLE",
+   "note": "checked on a crop"
+  },
+  "the-shire": {
+   "noLine": true,
+   "label": [
+    32.82,
+    32.46
+   ],
+   "confidence": "high"
+  },
+  "three-mtn-glades": {
+   "noLine": true,
+   "label": [
+    51.56,
+    34.17
+   ],
+   "confidence": "high"
+  },
+  "upper-chilcoot": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CHILCOOT",
+   "note": "along Upper Chilcoot"
+  },
+  "upper-drifter": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "UPPER DRIFTER",
+   "note": "along Upper Drifter"
+  },
+  "upper-f-i-s": {
+   "polylines": [
+    34,
+    59
+   ],
+   "confidence": "high",
+   "mapName": "UPPER F.I.S.",
+   "note": "continuation | along Upper F.I.S."
+  },
+  "upper-liftline": {
+   "polylines": [
+    65
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LIFTLINE",
+   "note": "along Upper Liftline"
+  },
+  "waterfall": {
+   "polylines": [
+    64
+   ],
+   "confidence": "high",
+   "mapName": "WATERFALL",
+   "note": "under the circle of Waterfall"
+  },
+  "birch-run": {
+   "polylines": [
+    73,
+    82
+   ],
+   "confidence": "high",
+   "mapName": "BIRCH RUN",
+   "note": "under the circle of Birch Run | checked on a crop"
+  },
+  "black-bear": {
+   "polylines": [
+    103
+   ],
+   "confidence": "high",
+   "mapName": "BLACK BEAR",
+   "note": "along Black Bear"
+  },
+  "black-snake": {
+   "polylines": [
+    80
+   ],
+   "confidence": "high",
+   "mapName": "BLACK SNAKE",
+   "note": "along Black Snake"
+  },
+  "bootlegger": {
+   "polylines": [
+    75,
+    108
+   ],
+   "confidence": "high",
+   "mapName": "BOOTLEGGER",
+   "note": "along Bootlegger | checked on a crop"
+  },
+  "chute": {
+   "polylines": [
+    78
+   ],
+   "confidence": "high",
+   "mapName": "CHUTE",
+   "note": "under the circle of Chute"
+  },
+  "crossover": {
+   "polylines": [
+    89
+   ],
+   "confidence": "high",
+   "mapName": "CROSSOVER",
+   "note": "under the circle of Crossover"
+  },
+  "deer-run-glades": {
+   "noLine": true,
+   "label": [
+    72.96,
+    40.49
+   ],
+   "confidence": "high"
+  },
+  "full-nelson": {
+   "polylines": [
+    99,
+    109
+   ],
+   "confidence": "high",
+   "mapName": "FULL NELSON",
+   "note": "under the circle of Full Nelson"
+  },
+  "hangmans": {
+   "polylines": [
+    88,
+    100
+   ],
+   "confidence": "high",
+   "mapName": "HANGMAN\u2019S",
+   "note": "along Hangman\u2019s | checked on a crop"
+  },
+  "hangmans-drop": {
+   "polylines": [
+    76
+   ],
+   "confidence": "high",
+   "mapName": "HANGMAN\u2019S DROP",
+   "note": "under the circle of Hangman\u2019s Drop"
+  },
+  "harveys-hideaway": {
+   "polylines": [
+    72
+   ],
+   "confidence": "high",
+   "mapName": "HARVEY\u2019S HIDEAWAY",
+   "note": "under the circle of Harvey\u2019s Hideaway"
+  },
+  "highlander-glades": {
+   "noLine": true,
+   "label": [
+    72.56,
+    30.61
+   ],
+   "confidence": "high"
+  },
+  "jolly-rodger": {
+   "polylines": [
+    95,
+    96,
+    111
+   ],
+   "confidence": "high",
+   "mapName": "JOLLY RODGER",
+   "note": "checked on a crop | under the circle of Jolly Rodger"
+  },
+  "lower-exhibition": {
+   "polylines": [
+    92
+   ],
+   "confidence": "high",
+   "mapName": "LOWER EXHIBITION",
+   "note": "along Lower Exhibition"
+  },
+  "lower-pipeline": {
+   "polylines": [
+    87
+   ],
+   "confidence": "high",
+   "mapName": "LOWER PIPELINE",
+   "note": "along Lower Pipeline"
+  },
+  "lower-rumrunner": {
+   "polylines": [
+    84,
+    85
+   ],
+   "confidence": "high",
+   "mapName": "LOWER RUMRUNNER",
+   "note": "along Lower Rumrunner | checked on a crop"
+  },
+  "pipeline-escape": {
+   "polylines": [
+    98
+   ],
+   "confidence": "high",
+   "mapName": "PIPELINE ESCAPE",
+   "note": "along Pipeline Escape"
+  },
+  "pirates-plank": {
+   "noLine": true,
+   "label": [
+    73.83,
+    35.71
+   ],
+   "confidence": "high"
+  },
+  "poachers-woods": {
+   "polylines": [
+    102
+   ],
+   "confidence": "high",
+   "mapName": "POACHER\u2019S WOODS",
+   "note": "along Poacher\u2019s Woods"
+  },
+  "powder-keg": {
+   "noLine": true,
+   "label": [
+    68.36,
+    40.8
+   ],
+   "confidence": "high"
+  },
+  "practice-slope": {
+   "polylines": [
+    93
+   ],
+   "confidence": "high",
+   "mapName": "PRACTICE SLOPE",
+   "note": "along Practice Slope"
+  },
+  "sherwood-forest": {
+   "noLine": true,
+   "label": [
+    76.05,
+    51.87
+   ],
+   "confidence": "high"
+  },
+  "smugglersalley": {
+   "polylines": [
+    74
+   ],
+   "confidence": "high",
+   "mapName": "SMUGGLERS\u2019ALLEY",
+   "note": "along Smugglers\u2019Alley"
+  },
+  "snake-bite": {
+   "polylines": [
+    105
+   ],
+   "confidence": "high",
+   "mapName": "SNAKE BITE",
+   "note": "along Snake Bite"
+  },
+  "the-zone-terrain-park": {
+   "polylines": [
+    71
+   ],
+   "confidence": "high",
+   "mapName": "THE ZONE TERRAIN PARK",
+   "note": "under the circle of The Zone Terrain Park"
+  },
+  "thomkes": {
+   "polylines": [
+    107
+   ],
+   "confidence": "high",
+   "mapName": "THOMKE\u2019S",
+   "note": "along Thomke\u2019s"
+  },
+  "thomkes-express": {
+   "polylines": [
+    79
+   ],
+   "confidence": "high",
+   "mapName": "THOMKE\u2019S EXPRESS",
+   "note": "along Thomke\u2019s Express"
+  },
+  "treasure-run": {
+   "polylines": [
+    90
+   ],
+   "confidence": "high",
+   "mapName": "TREASURE RUN",
+   "note": "along Treasure Run"
+  },
+  "upper-exhibition": {
+   "polylines": [
+    97
+   ],
+   "confidence": "high",
+   "mapName": "UPPER EXHIBITION",
+   "note": "along Upper Exhibition"
+  },
+  "upper-pipeline": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "UPPER PIPELINE",
+   "note": "under the circle of Upper Pipeline"
+  },
+  "upper-rumrunner": {
+   "polylines": [
+    83
+   ],
+   "confidence": "high",
+   "mapName": "UPPER RUMRUNNER",
+   "note": "under the circle of Upper Rumrunner"
+  }
+ }
+}
