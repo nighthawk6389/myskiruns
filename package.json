@@ -16,7 +16,8 @@
     "lines:overlay": "node scripts/evaluateLines.mjs --overlay",
     "lines:png": "node scripts/generateLineOverlay.mjs",
     "trails:apply": "node scripts/applyTrailProposals.mjs",
-    "reviews:import": "node scripts/importReviews.mjs"
+    "reviews:import": "node scripts/importReviews.mjs",
+    "ads:build": "node --experimental-strip-types marketing/google-ads/build.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.117.2",

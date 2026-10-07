@@ -251,6 +251,7 @@ instead, see the playbook).
 | `npm test` | the trip merge and sync rules and the resort search (`tests/*.test.ts`, Node's test runner) |
 | `node scripts/mockSupabase.cjs` | a stand-in Supabase project, for trying accounts without one |
 | `node tools/accounts_check.cjs` | browser check: two devices sign in, sync, edit offline, delete (header has the setup) |
+| `npm run ads:build` | the Google Ads campaign's import files and preview (`marketing/google-ads/`, whose README has the plan) |
 
 The Python tools for a new map (PDF extraction, raster detection, tiles,
 crops, audits) are listed in the playbook's "Tools in this repo".

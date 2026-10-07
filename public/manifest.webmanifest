@@ -1,7 +1,7 @@
 {
-  "name": "Killington Trail Tracker",
+  "name": "My Ski Runs",
   "short_name": "Ski Runs",
-  "description": "Mark the Killington trails you ski, trip by trip.",
+  "description": "Mark the runs you ski on your resort's own trail map, trip by trip.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",

@@ -1,4 +1,4 @@
-import { Component, Suspense, use, useDeferredValue, useMemo, useRef, useState, type ReactNode } from 'react';
+import { Component, Suspense, use, useDeferredValue, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { RESORTS, loadResort, resortEntry, type Resort } from './resorts';
 import { useTrips } from './hooks/useTrips';
 import { useTrailFilter } from './hooks/useTrailFilter';
@@ -150,6 +150,12 @@ function ResortApp({ resort, picker }: { resort: Resort; picker: ReactNode }) {
     [filteredTrails]
   );
 
+  // the tab names the resort's map: searches (and ads) for "<resort> trail
+  // map" land on ?resort=<id>
+  useEffect(() => {
+    document.title = `${resort.name} Trail Map · My Ski Runs`;
+  }, [resort.name]);
+
   return (
     <div className={styles.app}>
       <header className={styles.header}>
@@ -193,6 +199,7 @@ function ResortApp({ resort, picker }: { resort: Resort; picker: ReactNode }) {
             showHint={skiedTrails.size === 0}
             conditions={conditions}
           />
+          <p className={styles.credit}>My Ski Runs is an independent app, not affiliated with {resort.name}.</p>
         </div>
 
         <aside className={styles.sidebar}>
