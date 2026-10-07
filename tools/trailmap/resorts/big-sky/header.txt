@@ -1,0 +1,53 @@
+// Big Sky Resort's 2025-26 trail maps from bigskyresort.com's trail-maps page:
+// three PDFs, three panels (the main map of all three mountains, and its South
+// Face and Bowl insets), each with its own overlay. Trail lines are vector
+// strokes in the difficulty colours (the main green and blue routes drawn wide,
+// a few lines as thin filled ribbons, the real-estate access trails pink and
+// read as green, the terrain parks orange; lines running off an inset's frame
+// are cut at it); names are dark text on a white halo (curved ones also drawn a
+// letter at a time), the symbol at one end of the name, printed along the run's
+// line, in a gap of it or beside it (tools/trailmap/resorts/big-sky/). Each
+// line piece takes the name printed along it or running into it; the rest was
+// settled on zoomed crops (decisions.py), where a line between two names could
+// be either run's, with the PDF's drawing order (one run's strokes are drawn
+// one after another) and OpenStreetMap's runs: one stroke carries Stillwater
+// Traverse down to the Lone Tree lift's foot and Meriwether on from there, Rips
+// down to Great Falls' line and Great Falls Gully below, Lazy Jack down to
+// where the two Powder Rivers join it and Cinnabar on, Trapline down to where
+// Pine Marten's branch rejoins it and Pine Marten below, Colter's Hell and Mine
+// Shaft, Alpine Meadows and Hideaway, K1 Return and Clubhouse Loop, the two
+// Calamity Janes, Swift Bear from Middle River's circle, and a link down to
+// White Otter Access; Lobo Meadows' line runs on past where Chuck's Run leaves
+// it; Mr. Ed's starts at its circle, on Mr. K's stroke; Sacajawea's, Lone
+// Wolf's and Yellow Mule's thin lines run on under wider ones (Yellow Brick
+// Road, White Wing, Lupine), and Liberty Bowl's and Ace's along the traverses
+// they leave: each stops where it meets the other line. Coulee is drawn as two
+// strokes, its line and a loop from Meriwether's round to its name. Lines the
+// maps don't name have no overlay: links between runs, a blue run-out from
+// Colter's Hell to the Mountain Village, the pink access lines at the White
+// Otter and Cascade lifts, a blue loop off Horseshoe, the traverses under the
+// Headwaters' triple diamonds, a green run-out along the Madison base, and
+// Ponderosa's cut-off to Bighorn (OpenStreetMap's Big Horn Cut-Off, not on the
+// trail report). Names are as the resort's trail report spells them (the maps
+// print capitals); a name printed twice for two runs is the report's upper and
+// lower one (Calamity Jane, Take a Bough, Powder River; the insets' Calamity
+// Jane is the upper), and PB & J Way's is printed on its black lower part, its
+// blue upper part marked only by its double square; DTM is Don't Tell Mama;
+// CLASS 4, 5 and 6 are the report's Whitewater (Class 4, 5, 6): three chutes,
+// three trails; the six numbered chutes are The Gullies. Difficulty: the symbol
+// printed by the name (two blue squares, advanced intermediate, are blue; the
+// expert double diamond and the high-exposure triple diamond, double black),
+// else one printed on the run's line, else the line's colour (Black & Blue,
+// Claim Jumper, Diamond Hitch, Porcupine; the terrain parks, with no symbol,
+// blue); Hells Half Acre and Ace leave Hellroaring's and King's lines below the
+// top symbol they share (double black, as the report rates them). All 323
+// trails' ratings and mountains agree with the resort's trail report (September
+// 2026) but six it doesn't list: 17 Green and Lost Frontier (a diamond each),
+// Gullies Traverse (a double diamond) and the three Whitewater chutes. The
+// report's Challenger, Ramcharger and Shedhorn lift lines, Dead Goat and the
+// three learning areas aren't on the maps. Names printed with no line of their
+// own (bowls, faces, chutes, cliffs, glades and the Cowpoke park) are markers
+// at their names. Trails are grouped by mountain (the report's lift areas:
+// Andesite Mountain's Ramcharger, Thunder Wolf, Southern Comfort and Lone
+// Moose, the Spanish Peaks'; Lone Mountain's the rest); elevations are the
+// three summits as printed. x/y/baseY/width are unused layout fields.

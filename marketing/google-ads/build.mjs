@@ -30,13 +30,13 @@ const SITE = 'https://www.myskiruns.app/';
 
 const EAST = new Set(['Vermont', 'New York', 'New Hampshire', 'Maine']);
 // states and provinces east to west, for lists in ads (others go last)
-const REGION_ORDER = ['Vermont', 'New York', 'New Hampshire', 'Maine', 'Colorado', 'Utah', 'California', 'British Columbia'];
+const REGION_ORDER = ['Vermont', 'New York', 'New Hampshire', 'Maine', 'Colorado', 'Montana', 'Utah', 'California', 'British Columbia'];
 
 const CAMPAIGNS = [
   // resort trail-map searches in Vermont, New York, New Hampshire and Maine;
   // French too: Quebec skiers fill Jay Peak, Stowe and the rest
   { key: 'east', name: 'Trail Maps - East', budget: 5, cpcLimit: 1, languages: 'en;fr' },
-  // Colorado, Utah, California and British Columbia
+  // Colorado, Montana, Utah, California and British Columbia
   { key: 'west', name: 'Trail Maps - West', budget: 5, cpcLimit: 1, languages: 'en' },
   // people looking for a way to track their runs, at any resort
   { key: 'tracker', name: 'Ski Run Tracker', budget: 5, cpcLimit: 1.5, languages: 'en' },
@@ -248,6 +248,24 @@ const RESORT_ADS = {
       ['palisades ski trails', 'phrase'],
     ],
     negatives: ['interstate', 'pacific palisades', 'palisades park', 'new jersey', 'nj', 'campground', 'rainier', 'apartments'],
+  },
+  'big-sky': {
+    short: 'Big Sky',
+    path: 'Big-Sky',
+    area: 'Lone Peak to Spanish Peaks',
+    // Moonlight Basin, merged into Big Sky, is still what people call its north side
+    names: ['big sky resort', 'big sky montana', 'moonlight basin'],
+    keywords: [
+      ['big sky trail map', 'exact'],
+      ['big sky ski map', 'exact'],
+      ['big sky ski map', 'phrase'],
+      ['big sky ski trails', 'phrase'],
+    ],
+    // the conference's sports, the TV series, the brewery, the other Big Skies
+    negatives: [
+      'football', 'basketball', 'softball', 'volleyball', 'tournament', 'tv', 'series', 'episode', 'cast',
+      'brewing', 'beer', 'australia', 'country',
+    ],
   },
 };
 
@@ -518,7 +536,7 @@ const total = resorts.reduce((n, r) => n + r.count, 0);
 const resortUrl = (id, panel) => `${SITE}?resort=${id}${panel ? `&panel=${panel}` : ''}`;
 const campaignName = Object.fromEntries(CAMPAIGNS.map((c) => [c.key, c.name]));
 
-// "18 resorts in Vermont, ...": regions east to west
+// "18 resorts in Vermont, ...": regions east to west (too many to list: the two ends)
 const rank = (region) => (REGION_ORDER.includes(region) ? REGION_ORDER.indexOf(region) : REGION_ORDER.length);
 const regions = [...new Set(resorts.map((r) => r.region))].sort((a, b) => rank(a) - rank(b));
 const listed = (names) => `${names.slice(0, -1).join(', ')} and ${names.at(-1)}`;
@@ -526,6 +544,7 @@ const resortsLine = fit(
   'description',
   `${resorts.length} resorts in ${listed(regions)}.`,
   `${resorts.length} resorts in ${listed(regions.map((r) => (r === 'British Columbia' ? 'BC' : r)))}.`,
+  `${resorts.length} resorts from ${regions[0]} to ${regions.at(-1)}.`,
 );
 
 const TRACKER_SHARED_HEADLINES = [

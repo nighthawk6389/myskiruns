@@ -125,6 +125,11 @@ export const RESORTS: ResortEntry[] = [
     { id: 'alpine-front', name: 'Alpine front', paths: () => import('./data/resorts/palisades-tahoe/panels/alpine-front/trailPaths.json') },
     { id: 'alpine-back', name: 'Alpine back', paths: () => import('./data/resorts/palisades-tahoe/panels/alpine-back/trailPaths.json') },
   ]),
+  panels('big-sky', 'Big Sky', 'Montana', () => import('./data/resorts/big-sky/trails'), [
+    { id: 'main', name: 'All three mountains', paths: () => import('./data/resorts/big-sky/panels/main/trailPaths.json') },
+    { id: 'south-face', name: 'South Face', paths: () => import('./data/resorts/big-sky/panels/south-face/trailPaths.json') },
+    { id: 'bowl', name: 'The Bowl', paths: () => import('./data/resorts/big-sky/panels/bowl/trailPaths.json') },
+  ]),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

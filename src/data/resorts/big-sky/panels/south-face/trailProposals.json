@@ -1,0 +1,317 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "ace": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "ACE",
+   "note": "checked on a crop"
+  },
+  "badlands": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "BADLANDS",
+   "note": "along Badlands"
+  },
+  "beargrass": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "BEARGRASS",
+   "note": "along Beargrass"
+  },
+  "bitterroot": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "BITTERROOT",
+   "note": "along Bitterroot"
+  },
+  "calamity-jane-upper": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "CALAMITY JANE (UPPER)",
+   "note": "along Calamity Jane (Upper)"
+  },
+  "cardio-trio": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "CARDIO TRIO",
+   "note": "along Cardio Trio"
+  },
+  "chucks-run": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "CHUCK'S RUN",
+   "note": "along Chuck's Run"
+  },
+  "cow-flats": {
+   "polylines": [
+    19,
+    43
+   ],
+   "confidence": "high",
+   "mapName": "COW FLATS",
+   "note": "along Cow Flats"
+  },
+  "dakota-gully": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "DAKOTA GULLY",
+   "note": "along Dakota Gully"
+  },
+  "dakota-road": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "DAKOTA ROAD",
+   "note": "along Dakota Road"
+  },
+  "duck-walk": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "DUCK WALK",
+   "note": "along Duck Walk"
+  },
+  "gullies-traverse": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "GULLIES TRAVERSE",
+   "note": "checked on a crop"
+  },
+  "hippy-highway": {
+   "polylines": [
+    21,
+    45
+   ],
+   "confidence": "high",
+   "mapName": "HIPPY HIGHWAY",
+   "note": "along Hippy Highway"
+  },
+  "king": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "KING",
+   "note": "along King"
+  },
+  "larkspur": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "LARKSPUR",
+   "note": "along Larkspur"
+  },
+  "lenin": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "LENIN",
+   "note": "along Lenin"
+  },
+  "liberty-bowl": {
+   "polylines": [
+    13,
+    34
+   ],
+   "confidence": "high",
+   "mapName": "LIBERTY BOWL",
+   "note": "checked on a crop"
+  },
+  "lobo": {
+   "polylines": [
+    3,
+    36
+   ],
+   "confidence": "high",
+   "mapName": "LOBO",
+   "note": "along Lobo | continuation"
+  },
+  "lobo-meadows": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "LOBO MEADOWS",
+   "note": "along Lobo Meadows"
+  },
+  "lupine": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "LUPINE",
+   "note": "along Lupine"
+  },
+  "marx": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "MARX",
+   "note": "along Marx"
+  },
+  "mule-skinner": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "MULE SKINNER",
+   "note": "along Mule Skinner"
+  },
+  "nebraska": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "NEBRASKA",
+   "note": "along Nebraska"
+  },
+  "old-cow-flats": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "OLD COW FLATS",
+   "note": "along Old Cow Flats"
+  },
+  "otter-slide": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "OTTER SLIDE",
+   "note": "along Otter Slide"
+  },
+  "pack-saddle": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "PACK SADDLE",
+   "note": "along Pack Saddle"
+  },
+  "paradise": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "PARADISE",
+   "note": "along Paradise"
+  },
+  "rock-valley": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "ROCK VALLEY",
+   "note": "along Rock Valley"
+  },
+  "screaming-left": {
+   "polylines": [
+    26,
+    31,
+    32
+   ],
+   "confidence": "high",
+   "mapName": "SCREAMING LEFT",
+   "note": "along Screaming Left | checked on a crop | symbol of Screaming Left"
+  },
+  "skittles-road": {
+   "polylines": [
+    17,
+    18,
+    33
+   ],
+   "confidence": "high",
+   "mapName": "SKITTLES ROAD",
+   "note": "along Skittles Road | checked on a crop"
+  },
+  "stump-farm": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "STUMP FARM",
+   "note": "along Stump Farm"
+  },
+  "sunlight": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "SUNLIGHT",
+   "note": "along Sunlight"
+  },
+  "tohelluride": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "TOHELLURIDE",
+   "note": "along Tohelluride"
+  },
+  "upper-sunlight": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SUNLIGHT",
+   "note": "along Upper Sunlight"
+  },
+  "white-pine": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "WHITE PINE",
+   "note": "checked on a crop"
+  },
+  "yellow-mule": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "YELLOW MULE",
+   "note": "along Yellow Mule"
+  },
+  "yeti-traverse": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "YETI TRAVERSE",
+   "note": "along Yeti Traverse"
+  },
+  "yogis": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "YOGI'S",
+   "note": "checked on a crop"
+  }
+ }
+}

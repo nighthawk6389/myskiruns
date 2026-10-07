@@ -1,8 +1,8 @@
 # Google Ads campaign
 
 A Google Search campaign for www.myskiruns.app, ready to import into Google
-Ads Editor. It has three campaigns, 24 ad groups (one per resort, plus five
-for people looking for a way to track their runs), 262 keywords and 496
+Ads Editor. It has three campaigns, 25 ad groups (one per resort, plus five
+for people looking for a way to track their runs), 279 keywords and 509
 negative keywords. Each ad group has a responsive search ad, and each
 campaign has sitelinks, callouts and a structured snippet. Everything imports
 **paused**: nothing runs or costs anything until you enable it.
@@ -20,7 +20,7 @@ campaign has sitelinks, callouts and a structured snippet. Everything imports
 | campaign | ad groups | typical search | where the ad goes |
 |---|---|---|---|
 | **Trail Maps - East** | Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch, Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf | "stowe trail map" | that resort's map: `?resort=stowe` |
-| **Trail Maps - West** | Vail, Breckenridge, Keystone, Copper Mountain, Winter Park, Park City Mountain, Palisades Tahoe, Whistler Blackcomb | "whistler piste map" | `?resort=whistler-blackcomb` |
+| **Trail Maps - West** | Vail, Breckenridge, Keystone, Copper Mountain, Winter Park, Big Sky, Park City Mountain, Palisades Tahoe, Whistler Blackcomb | "whistler piste map" | `?resort=whistler-blackcomb` |
 | **Ski Run Tracker** | Ski Run Tracker, Ski Trail Checklist, Ski Trip Log, Interactive Trail Maps, Brand | "app to track ski runs" | the home page |
 
 Most of the budget goes to **resort trail-map searches**, where the site has
@@ -40,17 +40,18 @@ watches, speed or other apps by name are blocked with negative keywords.
   well, and there isn't any yet.
 - Each resort has "trail map", "ski map", "ski trails", "trail list" and
   "run map" searches, plus the names people use for it ("breck", "smuggs",
-  "canyons village", "alpine meadows", "whistler piste map").
+  "canyons village", "alpine meadows", "moonlight basin", "whistler piste map").
 - **Ambiguous names** appear on their own only in exact searches ("keystone
   trail map") or next to "ski" ("keystone ski map"). Otherwise they appear
   only in longer forms ("keystone resort trail map"). They are:
   - Keystone, also a town in South Dakota;
   - Park City, also a summer trail network;
   - Winter Park, also a city in Florida;
-  - Sugarloaf, also a mountain in Maryland.
+  - Sugarloaf, also a mountain in Maryland;
+  - Big Sky, also a college conference, a TV series and Montana's nickname.
 
   Negatives block the other meanings ("south dakota", "deer valley",
-  "florida", "maryland").
+  "florida", "maryland", "football", "tv", "country").
 - **Campaign negatives** block what people usually want with a resort's name
   besides the winter map: summer trails and bike parks, lodging, lift
   tickets and passes, weather, webcams, snow reports, jobs, trail-map

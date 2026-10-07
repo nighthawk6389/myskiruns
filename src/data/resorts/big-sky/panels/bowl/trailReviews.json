@@ -1,0 +1,95 @@
+{
+ "reviews": {
+  "upper-a-z-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    56.72,
+    31.15
+   ]
+  },
+  "az-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    69.8,
+    46.04
+   ]
+  },
+  "the-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    36.59,
+    49.3
+   ]
+  },
+  "black-rock-gully": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    27.92,
+    57.87
+   ]
+  },
+  "cache-trees": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    77.0,
+    67.68
+   ]
+  },
+  "little-gullies": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.79,
+    73.28
+   ]
+  },
+  "zucchini-patch": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    88.05,
+    75.51
+   ]
+  }
+ }
+}

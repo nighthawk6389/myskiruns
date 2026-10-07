@@ -1,0 +1,147 @@
+{
+ "reviews": {
+  "dictator-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    46.41,
+    29.14
+   ]
+  },
+  "dirt-bag-wall": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    65.16,
+    32.18
+   ]
+  },
+  "castros": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    46.02,
+    33.02
+   ]
+  },
+  "the-wave": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    45.81,
+    37.21
+   ]
+  },
+  "vuarnet-cliffs": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    45.93,
+    41.82
+   ]
+  },
+  "chicken-head-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    68.44,
+    43.29
+   ]
+  },
+  "rockville-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    46.59,
+    47.8
+   ]
+  },
+  "erikas": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    42.92,
+    56.87
+   ]
+  },
+  "bavarian-forest": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    38.74,
+    60.38
+   ]
+  },
+  "dude-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.38,
+    63.89
+   ]
+  },
+  "aspen-meadows": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    47.16,
+    64.83
+   ]
+  }
+ }
+}

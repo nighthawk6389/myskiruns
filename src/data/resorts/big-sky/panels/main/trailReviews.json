@@ -1,0 +1,199 @@
+{
+ "reviews": {
+  "south-wall": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    59.14,
+    31.67
+   ]
+  },
+  "bone-crusher": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    54.1,
+    32.09
+   ]
+  },
+  "deepwater-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    77.9,
+    36.33
+   ]
+  },
+  "horseshoe-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    75.55,
+    38.31
+   ]
+  },
+  "country-club": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    59.41,
+    38.65
+   ]
+  },
+  "patrol-trees": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    74.97,
+    41.32
+   ]
+  },
+  "stillwater-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    68.05,
+    43.44
+   ]
+  },
+  "big-rock-tongue": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    58.95,
+    45.17
+   ]
+  },
+  "sticks-stones": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    63.4,
+    49.7
+   ]
+  },
+  "rock-pocket-area": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    23.44,
+    54.23
+   ]
+  },
+  "elk-park-meadows-area": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    23.44,
+    60.97
+   ]
+  },
+  "peru": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    26.47,
+    64.27
+   ]
+  },
+  "bolivia": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    27.44,
+    64.56
+   ]
+  },
+  "marlboro-country-area": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    24.86,
+    67.27
+   ]
+  },
+  "cowpoke-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T05:03:14.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.41,
+    81.29
+   ]
+  }
+ }
+}

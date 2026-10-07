@@ -1,0 +1,369 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "big-couloir": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "BIG COULOIR",
+   "note": "along Big Couloir"
+  },
+  "blue-moon": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "BLUE MOON",
+   "note": "along Blue Moon"
+  },
+  "buffalo-jump": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "BUFFALO JUMP",
+   "note": "along Buffalo Jump"
+  },
+  "calamity-jane-upper": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "CALAMITY JANE (UPPER)",
+   "note": "along Calamity Jane (Upper)"
+  },
+  "cow-flats": {
+   "polylines": [
+    40,
+    58
+   ],
+   "confidence": "high",
+   "mapName": "COW FLATS",
+   "note": "checked on a crop | along Cow Flats"
+  },
+  "crazy-horse": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "CRAZY HORSE",
+   "note": "along Crazy Horse"
+  },
+  "crons": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "CRON'S",
+   "note": "checked on a crop"
+  },
+  "dead-top": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "DEAD TOP",
+   "note": "along Dead Top"
+  },
+  "duck-walk": {
+   "polylines": [
+    43,
+    45
+   ],
+   "confidence": "high",
+   "mapName": "DUCK WALK",
+   "note": "along Duck Walk"
+  },
+  "exit-chute": {
+   "polylines": [
+    59
+   ],
+   "confidence": "high",
+   "mapName": "EXIT CHUTE",
+   "note": "along Exit Chute"
+  },
+  "forbidden-forest": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "FORBIDDEN FOREST",
+   "note": "along Forbidden Forest"
+  },
+  "gullies-traverse": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "GULLIES TRAVERSE",
+   "note": "along GULLIES TRAVERSE"
+  },
+  "gun-mount": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "GUN MOUNT",
+   "note": "along Gun Mount"
+  },
+  "harbors-natural-halfpipe": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "HARBOR'S NATURAL HALFPIPE",
+   "note": "along Harbor's Natural Halfpipe"
+  },
+  "highway": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "HIGHWAY",
+   "note": "checked on a crop"
+  },
+  "jay-walk": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "JAY WALK",
+   "note": "along Jay Walk"
+  },
+  "kastle-rock-a-z-chutes": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "KASTLE ROCK (A-Z CHUTES)",
+   "note": "along Kastle Rock (A-Z Chutes)"
+  },
+  "lrt-traverse": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "LRT TRAVERSE",
+   "note": "along LRT Traverse"
+  },
+  "lenin": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "LENIN",
+   "note": "along Lenin"
+  },
+  "liberty-bowl": {
+   "polylines": [
+    29,
+    34,
+    56
+   ],
+   "confidence": "high",
+   "mapName": "LIBERTY BOWL",
+   "note": "along Liberty Bowl | checked on a crop"
+  },
+  "little-tree": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE TREE",
+   "note": "along Little Tree"
+  },
+  "lobo": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "LOBO",
+   "note": "along Lobo"
+  },
+  "lobo-meadows": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "LOBO MEADOWS",
+   "note": "along Lobo Meadows"
+  },
+  "lower-pinnacles": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "LOWER PINNACLES",
+   "note": "along Lower Pinnacles"
+  },
+  "marx": {
+   "polylines": [
+    16,
+    26
+   ],
+   "confidence": "high",
+   "mapName": "MARX",
+   "note": "along Marx | continuation"
+  },
+  "morningstar": {
+   "polylines": [
+    49,
+    57
+   ],
+   "confidence": "high",
+   "mapName": "MORNINGSTAR",
+   "note": "continuation | along Morningstar"
+  },
+  "mr-k": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "MR. K",
+   "note": "along Mr. K"
+  },
+  "never-sweat": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "NEVER SWEAT",
+   "note": "along Never Sweat"
+  },
+  "otter-slide": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "OTTER SLIDE",
+   "note": "along Otter Slide"
+  },
+  "parachute-a-z-chutes": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "PARACHUTE (A-Z CHUTES)",
+   "note": "along Parachute (A-Z Chutes)"
+  },
+  "plain-jane-park": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "PLAIN JANE PARK",
+   "note": "along Plain Jane Park"
+  },
+  "rice-bowl": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "RICE BOWL",
+   "note": "checked on a crop"
+  },
+  "ski-time": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "SKI TIME",
+   "note": "along Ski Time"
+  },
+  "st-alphonse-trees": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "ST. ALPHONSE TREES",
+   "note": "along St. Alphonse Trees"
+  },
+  "steep-and-deep": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "STEEP AND DEEP",
+   "note": "along Steep and Deep"
+  },
+  "stump-farm": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "STUMP FARM",
+   "note": "along Stump Farm"
+  },
+  "tango-trees": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "TANGO TREES",
+   "note": "along Tango Trees"
+  },
+  "the-gullies": {
+   "polylines": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "confidence": "high",
+   "mapName": "THE GULLIES",
+   "note": "checked on a crop"
+  },
+  "three-moons": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "THREE MOONS",
+   "note": "along Three Moons"
+  },
+  "tohelluride": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "TOHELLURIDE",
+   "note": "along Tohelluride"
+  },
+  "turkey-traverse": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "TURKEY TRAVERSE",
+   "note": "along Turkey Traverse"
+  },
+  "upper-pinnacles": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "UPPER PINNACLES",
+   "note": "along Upper Pinnacles"
+  },
+  "white-wing": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "WHITE WING",
+   "note": "along White Wing"
+  },
+  "yeti-traverse": {
+   "polylines": [
+    2,
+    55
+   ],
+   "confidence": "high",
+   "mapName": "YETI TRAVERSE",
+   "note": "continuation | along Yeti Traverse"
+  }
+ }
+}

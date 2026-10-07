@@ -15,8 +15,8 @@ The resort's folder holds
                 where they apply (the other resort folders use them): JOIN_GAP, MATCH_ENDS, ALONG_SHORT,
                 ALONG_NEAREST, SYMBOL_CENTRE, CUT_AT_SYMBOLS, SYMBOL_OFF_LINE, LOOSE_SYMBOLS, ON_CIRCLE, SYMBOL_OF,
                 DEFAULT_SYMBOL, RATING, COLOR_SYMBOL, AS_PRINTED, AREA_OF, SPLIT, GLADE_LINES, NO_STRETCH_BESIDE,
-                RENAME_AT, NOT_GLADES
-  decisions.py  CHECKED / UNNAMED / CUTS / TRACED, all keyed by points in map px (see its docstring)
+                RENAME_AT, NOT_GLADES, NAMES, ALONG_FIRST
+  decisions.py  CHECKED / UNNAMED / CUTS / TRACED (and TRIMS), all keyed by points in map px (see its docstring)
   header.txt    the comment at the top of trails.ts
   regen.sh      the extraction, then this
 and reads, from work/<resort>/ (git-ignored; $<RESORT>_WORK overrides):
@@ -125,6 +125,11 @@ def work_root(rid):
     return os.path.abspath(os.environ.get(env, os.path.join(REPO, 'work', rid)))
 
 
+def spelling_key(name):
+    """A name with case, spaces and punctuation left out: how resort.NAMES matches a printed name to its spelling."""
+    return re.sub(r'[^a-z0-9]', '', name.lower())
+
+
 def top_module(rid):
     """The resort folder's own resort.py: a resort drawn on several map panels lists them there (PANELS)."""
     return load_module(os.path.join(HERE, 'resorts', rid, 'resort.py'), re.sub(r'\W', '_', f'top_{rid}'))
@@ -222,6 +227,7 @@ class Resort:
                 keep.append({'text': ' '.join(parts), 'pts': pts, 'color': chain[0].get('color'),
                              'c': (sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts))})
         drop = getattr(R, 'DROP', [])
+        spelled = {spelling_key(nm): nm for nm in getattr(R, 'NAMES', ())}
         out = []
         for l in keep:
             if any(t == l['text'] and (q is None or math.dist(q, l['c']) < 40) for t, q in drop):
@@ -231,6 +237,9 @@ class Resort:
             # map px, is a run of its own (Seppo's, printed twice, is Seppo's and Seppo's - Lower on the trail report)
             name = next((nm for q, t, nm in getattr(R, 'RENAME_AT', []) if t == l['text']
                          and math.dist(q, l['c']) < 40), name)
+            # resort.NAMES: the resort's own trail names (its trail report): a name printed in another case or
+            # punctuation (Big Sky's capitals) takes the report's spelling
+            name = spelled.get(spelling_key(name), name)
             out.append({'name': name, 'pts': l['pts'], 'c': l['c'],
                         'printed': l['text'], 'color': l.get('color'), 'glade': l.get('glade')})
         for e in getattr(R, 'EXTRA', []):  # names printed some other way (another font, a sign): name, x, y
@@ -346,6 +355,19 @@ class Resort:
                 print('  cut: no piece at', on)
                 continue
             self.split(P, P[pid], q)
+        # decisions.TRIMS [((x, y) on the piece, (x, y) to cut at)]: a line drawn on under another one (Big Sky's
+        # Sacajawea under Yellow Brick Road's wide line): cut it at the second point and drop the part beyond, so
+        # the stretch is the other line's alone
+        for on, q in getattr(self.D, 'TRIMS', []):
+            pid = self.resolve(P, on)
+            if pid is None:
+                print('  trim: no piece at', on)
+                continue
+            p = P[pid]
+            self.split(P, p, q)
+            rest = P.pop()
+            if line_dist(on, rest['pt']) < line_dist(on, p['pt']):  # the point lies on the second part: keep that
+                p.update({k: rest[k] for k in ('pt', 'points', 'lengthPx')})
         return P
 
     @staticmethod
@@ -464,6 +486,9 @@ class Resort:
         # a piece running along a name's characters
         short = getattr(R, 'ALONG_SHORT', False)  # also names of two or three characters (T2, OZ)
         nearest = getattr(R, 'ALONG_NEAREST', False)  # names printed between parallel lines: the nearest only
+        # names printed along their own line, symbol and all (Big Sky): a piece a name runs along takes it, though
+        # another name's end or symbol lies at one of its ends
+        first = getattr(R, 'ALONG_FIRST', False)
 
         def runs_along(n, p):  # the piece runs along the name's characters (ds: their distances to it)
             ds = [line_dist(q, p['pt']) for q in n['pts']]
@@ -477,10 +502,12 @@ class Resort:
             for p in P:
                 ok, ds = runs_along(n, p)
                 if ok:
-                    if p['id'] in assign and not why.get(p['id'], '').startswith('along'):
+                    if p['id'] in assign and not why.get(p['id'], '').startswith('along') and not first:
                         continue  # named by a name that runs into it
                     hits.append((sorted(ds)[len(ds) // 2], p['id']))
             for _d, pid in sorted(hits)[:1] if nearest else hits:
+                if first and not why.get(pid, '').startswith('along'):
+                    assign[pid] = set()  # the name at its end gives way to the one along it
                 assign[pid].add(n['name'])  # several names along one piece: cut it (CUTS)
                 why[pid] = f"along {n['name']}"
         # a name printed as a numbered circle on its own line (resort.ON_CIRCLE, pt: about the circle's radius;
@@ -621,8 +648,12 @@ class Resort:
         P, names = self.P, self.names_
         glades, parks = set(getattr(R, 'GLADES', ())), set(getattr(R, 'PARKS', ()))
 
-        def display(nm):  # the name as the app shows it: DISPLAY, else as printed (AS_PRINTED), else title case
-            return R.DISPLAY.get(nm) or (nm.replace('’', "'") if getattr(R, 'AS_PRINTED', False) else None)
+        spelled = set(getattr(R, 'NAMES', ()))
+
+        def display(nm):  # the name as the app shows it: DISPLAY, else as printed (AS_PRINTED) or as the resort's
+            # own list spells it (NAMES), else title case
+            return R.DISPLAY.get(nm) or (nm.replace('’', "'") if getattr(R, 'AS_PRINTED', False) or nm in spelled
+                                         else None)
         by_colour = getattr(R, 'COLOR_SYMBOL', {})  # maps that rate a run by the colour its name is printed in
         glade_lines = set()  # resort.GLADE_LINES: glades drawn in a line style of their own (prepare.py marks them)
         if getattr(R, 'GLADE_LINES', False):
