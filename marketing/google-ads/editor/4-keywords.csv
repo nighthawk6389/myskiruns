@@ -1,0 +1,250 @@
+Campaign,Ad group,Keyword,Criterion type,Status
+Trail Maps - East,Killington,killington trail map,Exact,Enabled
+Trail Maps - East,Killington,killington ski map,Exact,Enabled
+Trail Maps - East,Killington,killington trail map,Phrase,Enabled
+Trail Maps - East,Killington,killington ski map,Phrase,Enabled
+Trail Maps - East,Killington,killington ski trails,Phrase,Enabled
+Trail Maps - East,Killington,killington trail list,Phrase,Enabled
+Trail Maps - East,Killington,killington run map,Phrase,Enabled
+Trail Maps - East,Killington,killington mountain map,Phrase,Enabled
+Trail Maps - East,Stowe,stowe trail map,Exact,Enabled
+Trail Maps - East,Stowe,stowe ski map,Exact,Enabled
+Trail Maps - East,Stowe,stowe trail map,Phrase,Enabled
+Trail Maps - East,Stowe,stowe ski map,Phrase,Enabled
+Trail Maps - East,Stowe,stowe ski trails,Phrase,Enabled
+Trail Maps - East,Stowe,stowe trail list,Phrase,Enabled
+Trail Maps - East,Stowe,stowe run map,Phrase,Enabled
+Trail Maps - East,Stowe,stowe mountain map,Phrase,Enabled
+Trail Maps - East,Stowe,stowe mountain trail map,Exact,Enabled
+Trail Maps - East,Stowe,stowe mountain trail map,Phrase,Enabled
+Trail Maps - East,Stowe,stowe mountain ski map,Phrase,Enabled
+Trail Maps - East,Okemo,okemo trail map,Exact,Enabled
+Trail Maps - East,Okemo,okemo ski map,Exact,Enabled
+Trail Maps - East,Okemo,okemo trail map,Phrase,Enabled
+Trail Maps - East,Okemo,okemo ski map,Phrase,Enabled
+Trail Maps - East,Okemo,okemo ski trails,Phrase,Enabled
+Trail Maps - East,Okemo,okemo trail list,Phrase,Enabled
+Trail Maps - East,Okemo,okemo run map,Phrase,Enabled
+Trail Maps - East,Okemo,okemo mountain map,Phrase,Enabled
+Trail Maps - East,Sugarbush,sugarbush trail map,Exact,Enabled
+Trail Maps - East,Sugarbush,sugarbush ski map,Exact,Enabled
+Trail Maps - East,Sugarbush,sugarbush trail map,Phrase,Enabled
+Trail Maps - East,Sugarbush,sugarbush ski map,Phrase,Enabled
+Trail Maps - East,Sugarbush,sugarbush ski trails,Phrase,Enabled
+Trail Maps - East,Sugarbush,sugarbush trail list,Phrase,Enabled
+Trail Maps - East,Sugarbush,sugarbush run map,Phrase,Enabled
+Trail Maps - East,Sugarbush,sugarbush mountain map,Phrase,Enabled
+Trail Maps - East,Jay Peak,jay peak trail map,Exact,Enabled
+Trail Maps - East,Jay Peak,jay peak ski map,Exact,Enabled
+Trail Maps - East,Jay Peak,jay peak trail map,Phrase,Enabled
+Trail Maps - East,Jay Peak,jay peak ski map,Phrase,Enabled
+Trail Maps - East,Jay Peak,jay peak ski trails,Phrase,Enabled
+Trail Maps - East,Jay Peak,jay peak trail list,Phrase,Enabled
+Trail Maps - East,Jay Peak,jay peak run map,Phrase,Enabled
+Trail Maps - East,Whiteface,whiteface trail map,Exact,Enabled
+Trail Maps - East,Whiteface,whiteface ski map,Exact,Enabled
+Trail Maps - East,Whiteface,whiteface trail map,Phrase,Enabled
+Trail Maps - East,Whiteface,whiteface ski map,Phrase,Enabled
+Trail Maps - East,Whiteface,whiteface ski trails,Phrase,Enabled
+Trail Maps - East,Whiteface,whiteface trail list,Phrase,Enabled
+Trail Maps - East,Whiteface,whiteface run map,Phrase,Enabled
+Trail Maps - East,Whiteface,whiteface mountain map,Phrase,Enabled
+Trail Maps - East,Whiteface,whiteface mountain trail map,Exact,Enabled
+Trail Maps - East,Whiteface,whiteface mountain trail map,Phrase,Enabled
+Trail Maps - East,Whiteface,whiteface mountain ski map,Phrase,Enabled
+Trail Maps - West,Winter Park,winter park resort trail map,Exact,Enabled
+Trail Maps - West,Winter Park,winter park resort ski map,Exact,Enabled
+Trail Maps - West,Winter Park,winter park resort trail map,Phrase,Enabled
+Trail Maps - West,Winter Park,winter park resort ski map,Phrase,Enabled
+Trail Maps - West,Winter Park,winter park resort ski trails,Phrase,Enabled
+Trail Maps - West,Winter Park,winter park resort trail list,Phrase,Enabled
+Trail Maps - West,Winter Park,winter park resort run map,Phrase,Enabled
+Trail Maps - West,Winter Park,winter park colorado trail map,Exact,Enabled
+Trail Maps - West,Winter Park,winter park colorado trail map,Phrase,Enabled
+Trail Maps - West,Winter Park,winter park colorado ski map,Phrase,Enabled
+Trail Maps - West,Winter Park,winter park trail map,Exact,Enabled
+Trail Maps - West,Winter Park,winter park ski map,Exact,Enabled
+Trail Maps - West,Winter Park,winter park ski map,Phrase,Enabled
+Trail Maps - West,Winter Park,winter park ski trails,Phrase,Enabled
+Trail Maps - West,Winter Park,mary jane trail map,Exact,Enabled
+Trail Maps - West,Breckenridge,breckenridge trail map,Exact,Enabled
+Trail Maps - West,Breckenridge,breckenridge ski map,Exact,Enabled
+Trail Maps - West,Breckenridge,breckenridge trail map,Phrase,Enabled
+Trail Maps - West,Breckenridge,breckenridge ski map,Phrase,Enabled
+Trail Maps - West,Breckenridge,breckenridge ski trails,Phrase,Enabled
+Trail Maps - West,Breckenridge,breckenridge trail list,Phrase,Enabled
+Trail Maps - West,Breckenridge,breckenridge run map,Phrase,Enabled
+Trail Maps - West,Breckenridge,breckenridge mountain map,Phrase,Enabled
+Trail Maps - West,Breckenridge,breck trail map,Exact,Enabled
+Trail Maps - West,Breckenridge,breck trail map,Phrase,Enabled
+Trail Maps - West,Breckenridge,breck ski map,Phrase,Enabled
+Trail Maps - West,Copper Mountain,copper mountain trail map,Exact,Enabled
+Trail Maps - West,Copper Mountain,copper mountain ski map,Exact,Enabled
+Trail Maps - West,Copper Mountain,copper mountain trail map,Phrase,Enabled
+Trail Maps - West,Copper Mountain,copper mountain ski map,Phrase,Enabled
+Trail Maps - West,Copper Mountain,copper mountain ski trails,Phrase,Enabled
+Trail Maps - West,Copper Mountain,copper mountain trail list,Phrase,Enabled
+Trail Maps - West,Copper Mountain,copper mountain run map,Phrase,Enabled
+Trail Maps - West,Copper Mountain,copper ski map,Phrase,Enabled
+Trail Maps - West,Keystone,keystone resort trail map,Exact,Enabled
+Trail Maps - West,Keystone,keystone resort ski map,Exact,Enabled
+Trail Maps - West,Keystone,keystone resort trail map,Phrase,Enabled
+Trail Maps - West,Keystone,keystone resort ski map,Phrase,Enabled
+Trail Maps - West,Keystone,keystone resort ski trails,Phrase,Enabled
+Trail Maps - West,Keystone,keystone resort trail list,Phrase,Enabled
+Trail Maps - West,Keystone,keystone resort run map,Phrase,Enabled
+Trail Maps - West,Keystone,keystone colorado trail map,Exact,Enabled
+Trail Maps - West,Keystone,keystone colorado trail map,Phrase,Enabled
+Trail Maps - West,Keystone,keystone colorado ski map,Phrase,Enabled
+Trail Maps - West,Keystone,keystone trail map,Exact,Enabled
+Trail Maps - West,Keystone,keystone ski map,Exact,Enabled
+Trail Maps - West,Keystone,keystone ski map,Phrase,Enabled
+Trail Maps - West,Keystone,keystone ski trails,Phrase,Enabled
+Trail Maps - West,Vail,vail trail map,Exact,Enabled
+Trail Maps - West,Vail,vail ski map,Exact,Enabled
+Trail Maps - West,Vail,vail trail map,Phrase,Enabled
+Trail Maps - West,Vail,vail ski map,Phrase,Enabled
+Trail Maps - West,Vail,vail ski trails,Phrase,Enabled
+Trail Maps - West,Vail,vail trail list,Phrase,Enabled
+Trail Maps - West,Vail,vail run map,Phrase,Enabled
+Trail Maps - West,Vail,vail mountain map,Phrase,Enabled
+Trail Maps - West,Vail,vail back bowls map,Phrase,Enabled
+Trail Maps - West,Vail,vail front side map,Phrase,Enabled
+Trail Maps - West,Vail,blue sky basin map,Phrase,Enabled
+Trail Maps - East,Hunter Mountain,hunter mountain trail map,Exact,Enabled
+Trail Maps - East,Hunter Mountain,hunter mountain ski map,Exact,Enabled
+Trail Maps - East,Hunter Mountain,hunter mountain trail map,Phrase,Enabled
+Trail Maps - East,Hunter Mountain,hunter mountain ski map,Phrase,Enabled
+Trail Maps - East,Hunter Mountain,hunter mountain ski trails,Phrase,Enabled
+Trail Maps - East,Hunter Mountain,hunter mountain trail list,Phrase,Enabled
+Trail Maps - East,Hunter Mountain,hunter mountain run map,Phrase,Enabled
+Trail Maps - East,Wildcat Mountain,wildcat mountain trail map,Exact,Enabled
+Trail Maps - East,Wildcat Mountain,wildcat mountain ski map,Exact,Enabled
+Trail Maps - East,Wildcat Mountain,wildcat mountain trail map,Phrase,Enabled
+Trail Maps - East,Wildcat Mountain,wildcat mountain ski map,Phrase,Enabled
+Trail Maps - East,Wildcat Mountain,wildcat mountain ski trails,Phrase,Enabled
+Trail Maps - East,Wildcat Mountain,wildcat mountain trail list,Phrase,Enabled
+Trail Maps - East,Wildcat Mountain,wildcat mountain run map,Phrase,Enabled
+Trail Maps - East,Wildcat Mountain,wildcat ski map,Phrase,Enabled
+Trail Maps - East,Wildcat Mountain,wildcat ski trails,Phrase,Enabled
+Trail Maps - East,Sunday River,sunday river trail map,Exact,Enabled
+Trail Maps - East,Sunday River,sunday river ski map,Exact,Enabled
+Trail Maps - East,Sunday River,sunday river trail map,Phrase,Enabled
+Trail Maps - East,Sunday River,sunday river ski map,Phrase,Enabled
+Trail Maps - East,Sunday River,sunday river ski trails,Phrase,Enabled
+Trail Maps - East,Sunday River,sunday river trail list,Phrase,Enabled
+Trail Maps - East,Sunday River,sunday river run map,Phrase,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf maine trail map,Exact,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf maine ski map,Exact,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf maine trail map,Phrase,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf maine ski map,Phrase,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf maine ski trails,Phrase,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf maine trail list,Phrase,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf maine run map,Phrase,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf mountain maine trail map,Exact,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf mountain maine trail map,Phrase,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf mountain maine ski map,Phrase,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf resort trail map,Exact,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf resort trail map,Phrase,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf resort ski map,Phrase,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf trail map,Exact,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf ski map,Exact,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf ski map,Phrase,Enabled
+Trail Maps - East,Sugarloaf,sugarloaf ski trails,Phrase,Enabled
+Trail Maps - East,Smugglers' Notch,smugglers notch trail map,Exact,Enabled
+Trail Maps - East,Smugglers' Notch,smugglers notch ski map,Exact,Enabled
+Trail Maps - East,Smugglers' Notch,smugglers notch trail map,Phrase,Enabled
+Trail Maps - East,Smugglers' Notch,smugglers notch ski map,Phrase,Enabled
+Trail Maps - East,Smugglers' Notch,smugglers notch ski trails,Phrase,Enabled
+Trail Maps - East,Smugglers' Notch,smugglers notch trail list,Phrase,Enabled
+Trail Maps - East,Smugglers' Notch,smugglers notch run map,Phrase,Enabled
+Trail Maps - East,Smugglers' Notch,smuggs trail map,Exact,Enabled
+Trail Maps - East,Smugglers' Notch,smuggs trail map,Phrase,Enabled
+Trail Maps - East,Smugglers' Notch,smuggs ski map,Phrase,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler blackcomb trail map,Exact,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler blackcomb ski map,Exact,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler blackcomb trail map,Phrase,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler blackcomb ski map,Phrase,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler blackcomb ski trails,Phrase,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler blackcomb trail list,Phrase,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler blackcomb run map,Phrase,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler trail map,Exact,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler trail map,Phrase,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler ski map,Phrase,Enabled
+Trail Maps - West,Whistler Blackcomb,blackcomb trail map,Exact,Enabled
+Trail Maps - West,Whistler Blackcomb,blackcomb trail map,Phrase,Enabled
+Trail Maps - West,Whistler Blackcomb,blackcomb ski map,Phrase,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler piste map,Phrase,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler blackcomb piste map,Phrase,Enabled
+Trail Maps - West,Whistler Blackcomb,whistler mountain map,Phrase,Enabled
+Trail Maps - West,Park City Mountain,park city mountain trail map,Exact,Enabled
+Trail Maps - West,Park City Mountain,park city mountain ski map,Exact,Enabled
+Trail Maps - West,Park City Mountain,park city mountain trail map,Phrase,Enabled
+Trail Maps - West,Park City Mountain,park city mountain ski map,Phrase,Enabled
+Trail Maps - West,Park City Mountain,park city mountain ski trails,Phrase,Enabled
+Trail Maps - West,Park City Mountain,park city mountain trail list,Phrase,Enabled
+Trail Maps - West,Park City Mountain,park city mountain run map,Phrase,Enabled
+Trail Maps - West,Park City Mountain,canyons village trail map,Exact,Enabled
+Trail Maps - West,Park City Mountain,canyons village trail map,Phrase,Enabled
+Trail Maps - West,Park City Mountain,canyons village ski map,Phrase,Enabled
+Trail Maps - West,Park City Mountain,park city trail map,Exact,Enabled
+Trail Maps - West,Park City Mountain,park city ski map,Exact,Enabled
+Trail Maps - West,Park City Mountain,park city ski map,Phrase,Enabled
+Trail Maps - West,Park City Mountain,park city ski trails,Phrase,Enabled
+Trail Maps - West,Park City Mountain,park city canyons trail map,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,ski run tracker,Exact,Enabled
+Ski Run Tracker,Ski Run Tracker,ski trail tracker,Exact,Enabled
+Ski Run Tracker,Ski Run Tracker,track ski runs,Exact,Enabled
+Ski Run Tracker,Ski Run Tracker,ski run tracker,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,ski trail tracker,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,ski run tracker app,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,track ski runs,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,track my ski runs,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,app to track ski runs,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,ski run log,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,ski run logger,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,ski run counter,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,ski runs app,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,snowboard run tracker,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,ski tracker app,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,ski tracking app,Phrase,Enabled
+Ski Run Tracker,Ski Run Tracker,free ski tracker,Phrase,Enabled
+Ski Run Tracker,Ski Trail Checklist,ski trail checklist,Exact,Enabled
+Ski Run Tracker,Ski Trail Checklist,ski every run,Exact,Enabled
+Ski Run Tracker,Ski Trail Checklist,ski trail checklist,Phrase,Enabled
+Ski Run Tracker,Ski Trail Checklist,ski run checklist,Phrase,Enabled
+Ski Run Tracker,Ski Trail Checklist,ski every run,Phrase,Enabled
+Ski Run Tracker,Ski Trail Checklist,ski every trail,Phrase,Enabled
+Ski Run Tracker,Ski Trail Checklist,ski resort checklist,Phrase,Enabled
+Ski Run Tracker,Ski Trail Checklist,ski bucket list app,Phrase,Enabled
+Ski Run Tracker,Ski Trail Checklist,ski run list app,Phrase,Enabled
+Ski Run Tracker,Ski Trail Checklist,runs skied,Phrase,Enabled
+Ski Run Tracker,Ski Trail Checklist,trails skied,Phrase,Enabled
+Ski Run Tracker,Ski Trip Log,ski log app,Exact,Enabled
+Ski Run Tracker,Ski Trip Log,ski journal app,Exact,Enabled
+Ski Run Tracker,Ski Trip Log,ski log app,Phrase,Enabled
+Ski Run Tracker,Ski Trip Log,ski journal app,Phrase,Enabled
+Ski Run Tracker,Ski Trip Log,ski diary app,Phrase,Enabled
+Ski Run Tracker,Ski Trip Log,ski day log,Phrase,Enabled
+Ski Run Tracker,Ski Trip Log,ski trip log,Phrase,Enabled
+Ski Run Tracker,Ski Trip Log,ski days tracker,Phrase,Enabled
+Ski Run Tracker,Ski Trip Log,ski logbook,Phrase,Enabled
+Ski Run Tracker,Ski Trip Log,snowboard log app,Phrase,Enabled
+Ski Run Tracker,Ski Trip Log,ski journal,Phrase,Enabled
+Ski Run Tracker,Ski Trip Log,ski log,Phrase,Enabled
+Ski Run Tracker,Interactive Trail Maps,interactive ski trail map,Exact,Enabled
+Ski Run Tracker,Interactive Trail Maps,ski trail maps,Exact,Enabled
+Ski Run Tracker,Interactive Trail Maps,interactive ski trail map,Phrase,Enabled
+Ski Run Tracker,Interactive Trail Maps,interactive ski map,Phrase,Enabled
+Ski Run Tracker,Interactive Trail Maps,ski trail map app,Phrase,Enabled
+Ski Run Tracker,Interactive Trail Maps,ski trail maps app,Phrase,Enabled
+Ski Run Tracker,Interactive Trail Maps,ski resort map app,Phrase,Enabled
+Ski Run Tracker,Interactive Trail Maps,ski map app,Phrase,Enabled
+Ski Run Tracker,Interactive Trail Maps,offline ski map,Phrase,Enabled
+Ski Run Tracker,Interactive Trail Maps,offline ski trail map,Phrase,Enabled
+Ski Run Tracker,Interactive Trail Maps,ski resort trail maps,Phrase,Enabled
+Ski Run Tracker,Brand,myskiruns,Exact,Enabled
+Ski Run Tracker,Brand,my ski runs,Exact,Enabled
+Ski Run Tracker,Brand,myskiruns app,Exact,Enabled
+Ski Run Tracker,Brand,my ski runs,Phrase,Enabled
+Ski Run Tracker,Brand,my ski runs app,Phrase,Enabled

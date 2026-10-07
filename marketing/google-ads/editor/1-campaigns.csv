@@ -1,0 +1,4 @@
+Campaign,Campaign type,Campaign status,Budget,Budget type,Networks,Bid strategy type,Maximum CPC bid limit,Languages,Final URL suffix
+Trail Maps - East,Search,Paused,5.00,Daily,Google search,Maximize clicks,1.00,en;fr,utm_source=google&utm_medium=cpc&utm_campaign=trail-maps-east
+Trail Maps - West,Search,Paused,5.00,Daily,Google search,Maximize clicks,1.00,en,utm_source=google&utm_medium=cpc&utm_campaign=trail-maps-west
+Ski Run Tracker,Search,Paused,5.00,Daily,Google search,Maximize clicks,1.50,en,utm_source=google&utm_medium=cpc&utm_campaign=ski-run-tracker
