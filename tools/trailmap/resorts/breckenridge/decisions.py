@@ -98,6 +98,22 @@ CHECKED.update({
     # piece 250 cut where Lowest 4 O'Clock leaves it (split_pieces.py): Lower 4 O'Clock above, Gondola Ski Back below
     250: 'Lower 4 O’Clock', 351: 'Gondola Ski Back',
 })
+CHECKED.update({
+    # the lead-in stubs under 4 pt (regen.sh's second extraction pass, 2026-10-07), each on stubs/<id>.png
+    # (checks/stubs.py): the line drawn into a name's symbol or out of its last letter ("-symbol name-")
+    352: 'Frosty’s Freeway',  # from its diamond down to the Tunnel catwalk
+    353: 'Frosty’s Freeway',  # from its last letter up to the catwalk from the 6-Chair top
+    354: 'Sawmill',           # between SAWMILL and its subtitle "Easiest Way to Peak 9"
+    355: 'King’s Way',        # from its last letter into Lower Sundown's line
+    356: 'Y-Chute',           # on down from the Y of its upright label
+    357: 'Deja Vu',           # from the bottom of Bliss's line into its last letter
+    358: 'Tom’s Mom',         # from the end of the closure line beside E Lift Line into its double diamond
+    359: 'Stampede',          # from its last letter to the catwalk along the foot of Contest Bowl
+    # Frosty's Freeway's second line, from its diamond up to the catwalk's far end beside the label: drawn right
+    # after the two stubs (drawing order 109, 110, then 16, between Snowbirds' and Lobo's pairs: stubs/seq_of.json).
+    # match.py named it while the stub was missing; with the stub it only reaches the name through it.
+    16: 'Frosty’s Freeway',
+})
 UNNAMED = {
     240: 'blue line from under the Vista Haus sign down the right branch of the easiest-route band to the top of Springmeier; no name printed (f_vista.png)',
     230: 'blue feeder from Claimjumper across to Fort Mary B below its label; no name printed',

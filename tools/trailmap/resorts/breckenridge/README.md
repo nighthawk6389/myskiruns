@@ -76,28 +76,31 @@ All coordinates are PDF points unless noted. The map is the clip
 5. `tools/trailmap/extract_pdf_vectors.py` (the flags are in `regen.sh`)
    writes `pieces.json`: 351 pieces (205 black, 89 blue, 57 green).
 6. `tools/trailmap/split_pieces.py` cuts piece 250 at (1898.7, 2028.3) px:
-   Lower 4 O'Clock above, Gondola Ski Back below (new piece 351). An inline
-   step then sets `_source` and `_unnamed` (from `decisions.py`). The result is
-   `src/data/resorts/breckenridge/linePolylines.json`, 352 pieces.
+   Lower 4 O'Clock above, Gondola Ski Back below (new piece 351). A second
+   `extract_pdf_vectors.py` pass (`--min-length 2.5 --max-length 4 --append`)
+   then adds the 8 lead-in stubs the first pass drops as under 4 pt, as pieces
+   352 to 359, so every earlier id stays put. An inline step sets `_source`
+   and `_unnamed` (from `decisions.py`). The result is
+   `src/data/resorts/breckenridge/linePolylines.json`, 360 pieces.
 7. `matte.py` writes `map.png` (and with `IMAGES=1` also
    `public/maps/breckenridge.jpg`, quality 82, progressive).
-8. `match.py` writes `assign.json`: 309 pieces get names, 20 of them several,
-   and 43 get none (`match.log`).
+8. `match.py` writes `assign.json`: 316 pieces get names, 16 of them several,
+   and 44 get none (`match.log`).
 9. `reading.py` combines `assign.json` and `decisions.py` into
-   `tiles/result_breck.json` (labels with symbols, 335 named pieces) and
-   `gaps.json` (89 stretches on 86 trails, 40 markers).
+   `tiles/result_breck.json` (labels with symbols, 343 named pieces) and
+   `gaps.json` (92 stretches on 89 trails, 40 markers).
 10. `tools/trailmap/seed_roster.py`, then `header.txt`, write `trails.ts`
     (197 trails) and `labels.json`.
 11. `tools/trailmap/render_tiles.py` writes `tiles/index.json`, which supplies
     the image size to `aggregate_readings.py`.
 12. `tools/trailmap/aggregate_readings.py` writes `trailProposals.json` (157
     trails on pieces) and `review_data.json`.
-13. `traces.py` writes `trace_gaps.json`: 86 stretches plus pieces, and 40
+13. `traces.py` writes `trace_gaps.json`: 89 stretches plus pieces, and 40
     markers.
 14. `tools/trailmap/traces_to_reviews.py --replace-claude` writes
-    `trailReviews.json` (126 of Claude's reviews).
+    `trailReviews.json` (129 of Claude's reviews).
 15. `npm run trails:apply -- --resort breckenridge` writes `trailPaths.json`:
-    86 verified, 71 proposed, 40 label markers.
+    89 verified, 68 proposed, 40 label markers.
 
 ## Files
 
@@ -120,6 +123,11 @@ All coordinates are PDF points unless noted. The map is the clip
 | `checks/sheet.py` | label crops by name, or every label with no symbol (`@nosym`) |
 | `checks/symsheet.py` | contact sheets of every label of a difficulty with its symbol (scratch: `br_symsheet.py`) |
 | `checks/seq.py` | pieces and labels in PDF drawing order: the order does not group them here (scratch: `br_seq.py`) |
+| `checks/stubs.py` | a crop of each lead-in stub (pieces 352-359) with the pieces around it and the overlays (`stubs/<id>.png`) |
+| `checks/short_strokes.py` | every trail-coloured stroke under 4 pt, with its drawing number and ends: the 8 stubs and two scraps |
+| `checks/order.py` | the PDF's drawing order around given pieces (stubs included), with their names (`stubs/seq_of.json`) |
+| `checks/net.py` | every piece in a box in its own colour, tagged `id:name` at its middle and dotted at both ends: how pieces connect at a junction |
+| `checks/named_syms.py` | the named symbols in map px, for `tools/trailmap/symbol_audit.py` (its header has the commands) |
 | `checks/boxes.txt`, `checks/prob_boxes.txt` | the zoom boxes of the first pass over the map (`reg/g_*`) and of the problem windows (`reg/pb_*`) |
 
 Never hand-edit the generated files: `trails.ts`, `linePolylines.json`,
@@ -175,8 +183,12 @@ Never hand-edit the generated files: `trails.ts`, `linePolylines.json`,
 - **Stretches and markers:** a name printed in a gap of its own line gets a
   stretch drawn along its characters (two-line names along their midline),
   but only where a piece of its own runs into the name along the text. That
-  gives 89 stretches on 86 trails. Five names printed beside their line get no
-  stretch: Frosty's Freeway, Peak 8 Transfer, Swan City, Deja Vu and Pioneer.
+  gives 92 stretches on 89 trails. Three names printed beside their line get
+  no stretch: Peak 8 Transfer, Swan City and Pioneer. A name with half its
+  characters within 9 pt of one of its pieces counts as printed along it; the
+  lead-in stubs don't count for this (they touch a name's end), and Tom's Mom,
+  whose second line runs just below its name, is in a gap of its own line
+  (`IN_GAP` in `reading.py`).
   The 40 names with no line of their own (bowls, open areas, kids' zones, the
   four parks, Hades and Purgatory by the E-Chair, Windows) are markers at
   their label.
@@ -184,30 +196,42 @@ Never hand-edit the generated files: `trails.ts`, `linePolylines.json`,
   catwalks, park exits, the access path to Windows. They are recorded in
   `UNNAMED` with what each is, and hidden as not trails.
 - **The image:** the PDF's painting (xref 150, 1482x962) is placed at
-  -14.6,-37.4 to 1468,925.1 pt. `matte.py` renders the page twice, with the
-  painting swapped for flat white and then flat black:
-  alpha = 1 - (white - black) / 255, colour = black / alpha. It then
-  composites that layer over the scene7 raster, cropped to the clip and
-  resized with Lanczos. `tools/trailmap/matte_pdf_layer.py` was written later
-  from this script, but it places the background with a bicubic affine
-  transform and differs by about 1.6 levels on average, so it does not rebuild
-  the committed JPEG.
-- **Translucent layers are applied twice:** right after the painting, the PDF
-  draws a white wash at 10% opacity (form Fm0 in layer MC1), so the alpha
-  above is never below 0.098. It also draws the yellow easiest-route bands
-  with Multiply blending (forms Fm1 to Fm7). Both count as part of the vector
-  layer, but scene7's flattened raster already shows them, so matting applies
-  them a second time. Compared with the PDF's own render, the committed map
-  is about 6 to 10 levels lighter where only the painting shows (65% of the
-  map), and the bands are about 20 to 30 levels darker and greyer (2%). Lines
-  and text are identical. Rendering the vector layer without those forms
-  before matting would avoid this. It was left as is so that the committed
-  image is rebuilt exactly.
-- **The extractor drops short stubs:** `extract_pdf_vectors.py`'s default
-  `--min-length 4` drops 8 lead-in stubs of 2.8 to 4 pt that the map draws
-  into or out of a label: Y-Chute, Deja Vu, Stampede, Tom's Mom, Frosty's
-  Freeway (two), Sawmill and King's Way. Those overlays stop up to 12 px short
-  of the drawn line.
+  -14.6,-37.4 to 1468,925.1 pt. `matte.py` renders the page with the painting
+  swapped for flat white and then flat black: alpha = 1 - (white - black) /
+  255, colour = black / alpha. It composites that layer over the scene7
+  raster, cropped to the clip and resized with Lanczos. (The generic
+  `tools/trailmap/matte_pdf_layer.py` places the background with a bicubic
+  affine transform instead, about 1.6 levels apart on average.)
+- **Translucent layers:** the PDF draws 20 form XObjects under a graphics
+  state with opacity below 1 or a Multiply blend: a 10% white wash right after
+  the painting (Fm0), the yellow easiest-route bands and slow zones (Multiply),
+  a 65% and three 60% fills (two of them the legend's Area Closed and Slow
+  Zone swatches). scene7's raster is the whole map flattened, so it shows them
+  already. `matte.py` therefore takes the layer's coverage from renders with
+  those forms emptied (`translucent_forms()` in `matte_pdf_layer.py` finds
+  them): opaque content is drawn with any translucent form over it, and the
+  raster shows as it is everywhere else. Until 2026-10-07 the full layer's
+  alpha was used, which applied them twice: the map was 10, 6 and 5 levels
+  (R, G, B) lighter than the PDF's own render where only the painting shows,
+  and the bands 27, 25 and 13 levels darker; now both equal scene7's raster
+  (within 1 and 4 levels of the PDF's render).
+- **Short lead-in stubs:** `extract_pdf_vectors.py`'s default `--min-length 4`
+  drops 8 lead-in stubs of 2.8 to 4 pt drawn into a name's symbol or out of
+  its last letter: Y-Chute, Deja Vu, Stampede, Tom's Mom, Frosty's Freeway's
+  two, Sawmill and King's Way. A second pass appends them (352-359, named in
+  `decisions.py` on `checks/stubs.py`'s crops); re-extracting everything at a
+  lower minimum would renumber the pieces the decisions are keyed by. With
+  them, `match.py` names four pieces it had given two names (75, 172, 199 and
+  326: as the crops had settled them) and no longer reaches Frosty's Freeway's
+  piece 16, which is now in `CHECKED`.
+- **Two lines for one name:** Frosty's Freeway's line runs from the catwalk
+  below the 6-Chair top into its label and out of its diamond to the Tunnel
+  catwalk, and a second line (16) runs from its diamond up to the catwalk's
+  far end beside the label (the PDF draws the three strokes one after another,
+  between Snowbirds' and Lobo's pairs). Tom's Mom's runs from the end of the
+  closure line beside E Lift Line into its double diamond, the name, then 274
+  to the catwalk; its other line (67) comes from an access gate below the name
+  to the same catwalk.
 
 ## Checks done
 
@@ -237,7 +261,15 @@ Never hand-edit the generated files: `trails.ts`, `linePolylines.json`,
   overlay (its overlay is piece 67, below its label), and 6 symbols at
   overlay ends (Gold King, King's Way, Deja Vu, Nirvana, Frosty's Freeway,
   Rendezvous), most of them where a short stub was dropped (see above). None
-  of these was changed.
+  of these was changed then.
+- The fixes (2026-10-07): the 8 stubs on `checks/stubs.py`'s crops and the
+  drawing order around them; the 7 trails they belong to on
+  `tools/trailmap/overlay_audit.py --resort breckenridge --only ...` cells (no
+  other trail's overlay changed); `symbol_audit.py` (`checks/named_syms.py`):
+  no symbol off its overlay, and 4 at an overlay end, each the start of its run
+  (Gold King, King's Way, Nirvana, Rendezvous). The new image against the
+  PDF's own render and scene7's raster, as above, and on crops (the bands, the
+  legend's swatches). Hover check 511/511.
 
 ## A new season's map
 

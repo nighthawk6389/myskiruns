@@ -1,14 +1,14 @@
 # Trail reports: the resort's own list of its trails
 
-A resort's trail report (the "terrain and lift status" list on its website) names every trail with its rating
-and area. It is the best check on a map's reading: names as the resort spells them (the map prints capitals and
-abbreviations), the rating of each run against the symbol printed by it, the area or lift pod each belongs to,
-and the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py`
-(`NAMES` spelled by it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades
-Tahoe, Big Sky, Heavenly), and Big Sky and Heavenly keep it as `tools/trailmap/resorts/<id>/report.json`
-(`_source`, then rows of `[name, area, rating]`). It isn't the truth about the map: where the two differ, the
-map's printed symbol is kept unless the map is ambiguous (two symbols), and each difference is listed in the
-resort's header.
+A resort's trail report (the "terrain and lift status" list on its website) names every trail with its rating and
+area. It is the best check on a map's reading: names as the resort spells them (the map prints capitals and
+abbreviations), the rating of each run against the symbol printed by it, the area or lift pod each belongs to, and
+the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
+it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
+Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly and Keystone keep it as
+`tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
+and each difference is listed in the resort's header.
 
 Where to find it, by the platform the resort's site uses:
 
@@ -41,11 +41,13 @@ python3 -I tools/trailmap/reports/feed_trails.py work/heavenly/cc/feeds/<feed>.j
   --out tools/trailmap/resorts/heavenly/report.json --key trails --source "..."
 ```
 
-Heavenly's `report.json` is two such captures (2026-01-12, CC-MAIN-2026-04, as `trails`; 2024-12-13,
-CC-MAIN-2024-51, the season its map was drawn for, as `trails_2024_25`); `feed_trails.py` rebuilds both lists
-exactly from them. Park City's names and ratings were checked against a March 2026 capture. Whistler Blackcomb's
-against its terrain feed, together with the resort's own GIS layer of runs (ArcGIS, `Ski_Runs_GDB`: names,
-ratings and run lines; the scripts that read it are in `tools/archive/whistler-blackcomb/`).
+Keystone's `report.json` is one such capture (2025-11-18, CC-MAIN-2025-47: CC-MAIN-2026-04 has none, and the index
+server didn't answer for CC-MAIN-2025-51 or CC-MAIN-2026-08). Heavenly's `report.json` is two such captures
+(2026-01-12, CC-MAIN-2026-04, as `trails`; 2024-12-13, CC-MAIN-2024-51, the season its map was drawn for, as
+`trails_2024_25`); `feed_trails.py` rebuilds both lists exactly from them. Park City's names and ratings were
+checked against a March 2026 capture. Whistler Blackcomb's against its terrain feed, together with the resort's own
+GIS layer of runs (ArcGIS, `Ski_Runs_GDB`: names, ratings and run lines; the scripts that read it are in
+`tools/archive/whistler-blackcomb/`).
 
 ## mtnfeed / mtnpowder (Palisades Tahoe, and many independent resorts)
 
@@ -82,3 +84,4 @@ page; read it in headless Chromium, as above, out of the page text).
 | `cc_query.sh` | Common Crawl's CDX index: the captures of a URL pattern in the given crawls (retries) |
 | `cc_lookup.py` | The same without the index server (binary search of `cluster.idx` with range requests); `--fetch` downloads the WARC records |
 | `warc_to_html.py` | One WARC response record → the page's HTML as served |
+| `compare.py` | A resort's `trails.ts` against its `report.json`: runs only one of them lists, ratings that differ, names spelled otherwise |

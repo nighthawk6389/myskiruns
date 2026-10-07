@@ -6,7 +6,8 @@ import type { Trail, PeakData } from '../../../types';
 // each name was matched to the line it is printed along or in a gap of, and
 // checked on region crops. "High County Road" on the map is High Country
 // Road (NY DEC's name for the 2022 trail). Glades are the names that say so;
-// 10th Mt. Division and Cloudsplitter Glades have no drawn line (markers).
+// 10th Mt. Division and Cloudsplitter Glades have no drawn line (markers);
+// nor has Yellow Dot, a marker at its two-line name.
 // x/y/baseY/width are unused layout fields.
 export const peaks: PeakData[] = [
   { id: 'whiteface', name: 'Whiteface Mountain', elevation: 4867, x: 0, y: 0, baseY: 0, width: 0 },

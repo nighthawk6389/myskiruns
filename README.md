@@ -68,7 +68,7 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 | Sugarbush | Vermont | 138 (111 + 27) | 1 | PDF strokes, outlined labels; readers | `tools/trailmap/resorts/sugarbush/regen.sh` |
 | Jay Peak | Vermont | 88 (65 + 23) | 1 | a painting with no lines, names as text; trace pass | `tools/trailmap/resorts/jay-peak/regen.sh` |
 | Smugglers' Notch | Vermont | 82 (68 + 14) | 1 | PDF strokes, outlined names on label boxes | `tools/trailmap/resorts/smugglers-notch/regen.sh` |
-| Whiteface | New York | 98 (96 + 2) | 1 | PDF strokes and text (skimap.org) | `tools/trailmap/resorts/whiteface/regen.sh` |
+| Whiteface | New York | 98 (95 + 3) | 1 | PDF strokes and text (skimap.org) | `tools/trailmap/resorts/whiteface/regen.sh` |
 | Hunter Mountain | New York | 70 (66 + 4) | 1 | PDF strokes and text over a vector painting | `tools/trailmap/resorts/hunter/regen.sh` |
 | Wildcat Mountain | New Hampshire | 48 (47 + 1) | 1 | an older export's strokes and text on this season's image | `tools/trailmap/resorts/wildcat/regen.sh` |
 | Sunday River | Maine | 137 (116 + 21) | 1 | PDF strokes, outlined names, insets | `tools/trailmap/resorts/sunday-river/regen.sh` |
@@ -269,20 +269,14 @@ the playbook's [Part 5](docs/trail-map-playbook.md#part-5-what-we-tried-and-what
    Part 4](docs/trail-map-playbook.md#auditing-on-crops-or-the-human-review-page)).
 2. **Shared tooling:** a legend file per map feeding the extraction and the readers' prompts; readers run from a
    script instead of an interactive session ([playbook, Part 5](docs/trail-map-playbook.md#scaling-to-many-maps)).
-3. The hover check passes 8,854 of 8,860 points (2026-10-07). The six misses are points where two trails' overlays
+3. The hover check passes 8,852 of 8,858 points (2026-10-07). The six misses are points where two trails' overlays
    meet or share a stretch, where either name is right: Killington 2, Stowe 2, Big Sky's Bowl 1, Heavenly 1 (each
    resort's numbers are in the playbook's Part 3).
-4. Found while moving the older resorts' pipelines into the repo, not yet fixed (each changes committed data):
-   - Breckenridge: the map image applies two of the PDF's translucent layers a second time (the CDN raster already
-     has them), so it is 6-10 levels lighter over most of the map (lines and names are exact); and eight lead-in
-     stubs under 4 pt were never extracted, so those overlays stop up to 12 px short. Re-extracting renumbers the
-     pieces its decisions are keyed by.
-   - Whiteface: Yellow Dot has no line, and its overlay is a stretch that doubles back through its two-line label;
-     a marker would be truer.
-   - Whiteface, Winter Park, Breckenridge, Copper Mountain and Keystone key their decisions by piece id, valid for
-     their exact source file (the rebuild checks its SHA-256); Winter Park's and Copper Mountain's sites now serve
-     re-exports with other ids. Moving them onto `pdf_resort.py` would key them by points.
-   - Keystone's legend counts 140 trails; the list has 136 runs plus 9 parks and kids' zones: worth a look against
-     its trail report.
-5. Vail: Cookshack's second diamond has no line of its own (its overlay is the line it is printed beside).
-6. Killington's detector edge cases (3 false negatives, 1 false positive) are in `src/detection/LINES.md`.
+4. Whiteface, Winter Park, Breckenridge, Copper Mountain and Keystone key their decisions by piece id, valid for
+   their exact source file (the rebuild checks its SHA-256); Winter Park's and Copper Mountain's sites now serve
+   re-exports with other ids. Moving them onto `pdf_resort.py` would key them by points.
+5. **Areas:** Keystone, Breckenridge, Copper Mountain, Winter Park and Sunday River list every trail under one area
+   for the whole map. Where a trail report groups the runs by mountain or peak (Keystone's `report.json`: Bergman,
+   Dercum Mountain, North Peak, Outback), those groups would make the areas, as they do for the later resorts.
+6. Vail: Cookshack's second diamond has no line of its own (its overlay is the line it is printed beside).
+7. Killington's detector edge cases (3 false negatives, 1 false positive) are in `src/detection/LINES.md`.

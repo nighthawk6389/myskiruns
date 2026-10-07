@@ -11,7 +11,7 @@
 #
 # A person's reviews in trailReviews.json are kept; Claude's ("by": "claude") are rebuilt, keeping their
 # timestamps when nothing changed.
-set -e
+set -eo pipefail
 cd "$(dirname "$0")/../../../.."
 T=tools/trailmap; R=$T/resorts/breckenridge; D=src/data/resorts/breckenridge
 export BRECKENRIDGE_WORK=${BRECKENRIDGE_WORK:-$PWD/work/breckenridge}; W=$BRECKENRIDGE_WORK
@@ -63,6 +63,13 @@ python3 $T/extract_pdf_vectors.py "$W/breckenridge.pdf" --clip 0,80,1458,925 --s
 cp "$W/pieces.json" "$W/linePolylines.json"
 python3 $T/split_pieces.py --polylines "$W/linePolylines.json" --image-size 4374x2535 \
   --split "250@1898.7,2028.3=Lower 4 O’Clock/Gondola Ski Back" --reading "$W/reading_splits.json"
+#    then the lead-in stubs the first pass drops as under 4 pt (2.8 to 4 pt, drawn into or out of a label: Y-Chute,
+#    Deja Vu, Stampede, Tom's Mom, Frosty's Freeway's two, Sawmill, King's Way), appended as pieces 352-359 so
+#    every earlier id stays put
+python3 $T/extract_pdf_vectors.py "$W/breckenridge.pdf" --clip 0,80,1458,925 --scale 3 --color black=0,0,0 \
+  --color blue=0.01,0.28,0.82 --color green=0.02,0.53,0.02 --min-width 0.95 --max-width 1.05 \
+  --exclude 1326,400,1458,925 --exclude 1094,520,1326,925 --exclude 964,685,1086,915 --exclude 8,735,168,925 \
+  --min-length 2.5 --max-length 4 --append --out "$W/linePolylines.json" | cut -c1-60
 python3 - "$W/linePolylines.json" $D/linePolylines.json <<'PY'
 import json, sys
 sys.path.insert(0, 'tools/trailmap/resorts/breckenridge')
@@ -70,7 +77,7 @@ from decisions import UNNAMED
 d = json.load(open(sys.argv[1]))
 d['_source'] = ("PDF vector strokes (tools/trailmap/extract_pdf_vectors.py): the 0.99 pt green, blue and black strokes "
                 "of Breckenridge's 2025-26 map, solid and dashed (catwalks), outside the legend and stats panels; "
-                "piece 250 cut where Lowest 4 O'Clock leaves it")
+                "piece 250 cut where Lowest 4 O'Clock leaves it; the lead-in stubs under 4 pt appended as 352-359")
 d['_unnamed'] = {str(k): v for k, v in sorted(UNNAMED.items())}
 json.dump(d, open(sys.argv[2], 'w'))
 PY

@@ -29,3 +29,14 @@ CHECKED = {
 # split_pieces.py --split '2@2410.8,890.4=Brahma/Snake Pit')
 CHECKED.update({2: 'Brahma', 134: 'Snake Pit'})
 UNNAMED = {}
+# the names shown, where the trail report (report.json: Keystone's terrain feed as Common Crawl captured it on
+# 2025-11-18) spells a run otherwise than the map prints it (each printed form checked on a crop of the map; the ids
+# stay the map's, so a trail's skied history is kept). Kept as printed: Jackwhacker (the report's Jackwacker drops
+# the h), Ripperoo's Forest and Ripperoo's Glade (the report's Riperoo's misspells the mascot), The Windows (the
+# report's Lower Windows; the map prints "The Windows / Closes at 2:00 p.m.").
+REPORT_NAMES = {
+    'Bighorn': 'Big Horn', 'The Black Forest': 'Black Forest', 'Cat South Glades': 'Cat South Glade',
+    'Diamond Back': 'Diamondback', "Gray's": 'Grays', 'Go Devil': 'Go Devil - Upper', 'Lower Go Devil': 'Go Devil - Lower',
+    'HooDoo': 'Hoodoo', 'Idabelle': 'Ida Belle', 'Jackface': 'Jack Face', 'Mine Shaft': 'Mineshaft', 'Oh, Bob': 'Oh Bob',
+    'Powder Cap': 'Powdercap', 'Silver Spoon': 'Silverspoon', 'Two Sled': 'Two Sled Road', 'Witchita': 'Wichita',
+}

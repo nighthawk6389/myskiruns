@@ -501,36 +501,6 @@
    "at": "2026-09-30T15:32:40.000Z",
    "by": "claude"
   },
-  "yellow-dot": {
-   "status": "confirmed",
-   "polylines": [],
-   "drawn": [
-    [
-     2180,
-     1079
-    ],
-    [
-     2208,
-     1086
-    ],
-    [
-     2233,
-     1095
-    ],
-    [
-     2190,
-     1099
-    ],
-    [
-     2215,
-     1107
-    ]
-   ],
-   "mapDifficulty": null,
-   "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
-   "at": "2026-09-30T15:32:40.000Z",
-   "by": "claude"
-  },
   "wildway": {
    "status": "confirmed",
    "polylines": [
@@ -1847,6 +1817,19 @@
    "note": "Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces",
    "at": "2026-09-30T15:32:40.000Z",
    "by": "claude"
+  },
+  "yellow-dot": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Printed with no line of its own (checked on a crop): a marker at its label",
+   "at": "2026-10-07T13:08:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    58.13,
+    34.41
+   ]
   }
  }
 }

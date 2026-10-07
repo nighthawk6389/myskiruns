@@ -11,7 +11,9 @@ Writes:
 - $WHITEFACE_WORK/wf_gaps.json: {stretches: [[name, points]], markers: [names]}. A name not printed along its
   own pieces (fewer than half its characters within 30 px of them) is printed in a gap of its line, or is all
   of its line: it gets a stretch along its own characters (thinned to one point per ~25 px, in map px) that
-  stretches.py turns into a review. A glade name with no piece is a marker at its label.
+  stretches.py turns into a review. A glade name with no piece is a marker at its label (aggregate_readings.py
+  makes it); so is a name in decisions.py's NO_LINE (label_markers: stretches.py makes it, through
+  traces_to_reviews.py --labels).
 
 Difficulty: the name's colour (green circle, blue square, black diamond), double-black where a double diamond
 is printed beside a black name.
@@ -23,7 +25,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from decisions import FIX, OVERRIDE, PRINT_FIX, UNNAMED  # noqa: E402
+from decisions import FIX, NO_LINE, OVERRIDE, PRINT_FIX, UNNAMED  # noqa: E402
 
 REPO = os.path.abspath(os.path.join(HERE, '../../../..'))
 WORK = os.path.abspath(os.environ.get('WHITEFACE_WORK', os.path.join(REPO, 'work/whiteface')))
@@ -80,6 +82,7 @@ def seg_dist(q, a, b):
 full = {o['seq']: o for o in json.load(open(os.path.join(WORK, 'wf_labels.json')))}
 traces = []
 GLADE_MARKERS = []
+LABEL_MARKERS = []  # NO_LINE: names with no line, outside a glade
 for l in A['labels']:
     n = norm(l['text'])
     pts = [[x * S, y * S] for x, y in l['pts']]
@@ -90,6 +93,9 @@ for l in A['labels']:
     if 'GLADES' in n and not own:
         GLADE_MARKERS.append(n)
         continue
+    if n in NO_LINE and not own:
+        LABEL_MARKERS.append(n)
+        continue
     # thin the char centres to ~every 25 px
     thin = [pts[0]]
     for q in pts[1:]:
@@ -99,5 +105,6 @@ for l in A['labels']:
         thin.append(pts[-1])
     traces.append((n, [[round(x), round(y)] for x, y in thin]))
 print('label-gap stretches:', [t[0] for t in traces])
-print('glade markers:', GLADE_MARKERS)
-json.dump({'stretches': traces, 'markers': GLADE_MARKERS}, open(os.path.join(WORK, 'wf_gaps.json'), 'w'), indent=1)
+print('glade markers:', GLADE_MARKERS, '; other markers (NO_LINE):', LABEL_MARKERS)
+json.dump({'stretches': traces, 'markers': GLADE_MARKERS, 'label_markers': LABEL_MARKERS},
+          open(os.path.join(WORK, 'wf_gaps.json'), 'w'), indent=1)

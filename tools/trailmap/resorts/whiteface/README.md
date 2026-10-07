@@ -66,9 +66,9 @@ Claude's reviews): change `decisions.py`, the cuts in `regen.sh` or
 | 9 | `tools/trailmap/render_tiles.py` | `$W/tiles/` (tiles and `index.json`, whose image size and zoom `aggregate_readings.py` reads) |
 | 10 | `annotate.py` | `D/linePolylines.json`: `_source`, `_unnamed` |
 | 11 | `tools/trailmap/aggregate_readings.py` | `D/trailProposals.json`, `$W/review_data.json` |
-| 12 | `stretches.py` | `$W/trace_gaps.json`: 52 trails' pieces plus their stretch |
-| 13 | `tools/trailmap/traces_to_reviews.py --replace-claude` | `D/trailReviews.json` (52 reviews by Claude), `$W/recheck.json` |
-| 14 | `npm run -s trails:apply -- --resort whiteface` | `D/trailPaths.json`: 52 verified, 44 proposed, 2 label markers |
+| 12 | `stretches.py` | `$W/trace_gaps.json`: 51 trails' pieces plus their stretch, and Yellow Dot's empty trace (a marker) |
+| 13 | `tools/trailmap/traces_to_reviews.py --labels $W/labels.json --image $W/map.png --replace-claude` | `D/trailReviews.json` (52 reviews by Claude: 51 stretches, Yellow Dot's marker), `$W/recheck.json` |
+| 14 | `npm run -s trails:apply -- --resort whiteface` | `D/trailPaths.json`: 51 verified, 44 proposed, 3 label markers |
 
 On 2026-09-30 the trail list's header was replaced last, after
 `trails:apply`; `regen.sh` does it right after `seed_roster.py` (nothing in
@@ -134,13 +134,17 @@ extraction flags change (the hash check guards the first).
   13 neither (seven glade labels, The Slides, Upper Thruway, John's Bypass,
   Off Broadway, Mixing Bowl, Round-a-bout: settled on crops, or a stretch). Where
   fewer than half a name's characters lie within 30 px of its pieces, the
-  overlay also gets a stretch through the name's own characters (52 trails),
-  so a trail whose label is all of its line still has one: five trails have
+  overlay also gets a stretch through the name's own characters (51 trails),
+  so a trail whose label is all of its line still has one: four trails have
   no piece at all and are drawn by their stretch alone (John's Bypass, Off
-  Broadway, Round-a-bout, Upper Thruway, Yellow Dot). A name printed twice
-  gives two stretches, which must lie over 400 px apart (or `trails:apply`
-  joins them). Yellow Dot is printed on two lines, so its stretch runs
-  through "Yellow", back, and through "Dot".
+  Broadway, Round-a-bout, Upper Thruway). A name printed twice gives two
+  stretches, which must lie over 400 px apart (or `trails:apply` joins them).
+  Yellow Dot has no line either, and its name is printed on two lines: until
+  2026-10-07 its stretch ran through "Yellow", back, and through "Dot"; it is
+  now a marker at its label (`NO_LINE` in `decisions.py`, settled on
+  `checks/zoom_pieces.py`'s crop `yd_0.jpg`: its diamond and name sit in open
+  snow between Weber's Way and Skyward, with no black stroke into or out of
+  it).
 - **Fragments.** A second line or the end of a curved name is its own text
   object ("Glades", "Cut", "Dot", "Bridge", "Loop"): joined to the nearest
   label of the same colour. "Switchbacks" is printed once between "Upper" and

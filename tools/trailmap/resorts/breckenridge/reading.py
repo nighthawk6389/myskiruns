@@ -17,6 +17,11 @@ from common import PIECES, work  # noqa: E402
 from decisions import CHECKED, UNNAMED  # noqa: E402
 
 S, X0, Y0 = 3.0, 0, 80  # image px per PDF pt; the map clip's origin
+FIRST_STUB = 352  # the first piece of regen.sh's second extraction pass (the stubs under 4 pt)
+# names printed in a gap of their own line although another of their lines runs beside them (the test below would
+# take them for printed along it): Tom's Mom (stubs/358.png): the closure line's end, 358, its double diamond, the
+# name, 274; its other line, 67, runs below the name from an access gate to the same catwalk
+IN_GAP = {'Tom’s Mom'}
 N = json.load(open(work('names.json')))
 A = json.load(open(work('assign.json')))
 P = {p['id']: p for p in json.load(open(PIECES))['polylines']}
@@ -113,12 +118,15 @@ stretches, markers, beside = collections.defaultdict(list), {}, []
 for o in N['labels']:
     n = o['text']
     own = [P[pid]['pt'] for pid in by_name.get(n, [])]
+    # the lead-in stubs (regen.sh's second extraction pass, from FIRST_STUB on) touch a name's end: they can't run
+    # along it
+    long_own = [P[pid]['pt'] for pid in by_name.get(n, []) if pid < FIRST_STUB] or [[(-1e9, -1e9)] * 2]
     if not own:
         markers.setdefault(norm(n), px(o['c']))
         continue
     q = [tuple(c) for c in o['pts']]
-    near = sum(1 for c in q if min(min(seg_dist(c, s[i], s[i + 1]) for i in range(len(s) - 1)) for s in own) < 9)
-    if near >= 0.5 * len(q):
+    near = sum(1 for c in q if min(min(seg_dist(c, s[i], s[i + 1]) for i in range(len(s) - 1)) for s in long_own) < 9)
+    if near >= 0.5 * len(q) and n not in IN_GAP:
         continue  # printed along its own line
     if len(o['lines']) == 2:  # two lines side by side: their midline
         k = max(len(o['lines'][0]), len(o['lines'][1]))

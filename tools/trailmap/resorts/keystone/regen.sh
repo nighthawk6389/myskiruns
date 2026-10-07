@@ -45,10 +45,11 @@ check "$W/scene7.jpg" 8e836d78ff3d7cf6012ab81f6494ede4c7b376d8c7aa2fa6999e43f0ed
 
 # 2. the map image: the vector layer (lines, names, symbols, icons) at 2.8 px/pt over the CDN's raster (3187x2569,
 #    stretched to the page) in place of the PDF's 1610x1201 painting (xref 23), the map area only (0,90 to
-#    1530,1080 pt: 4284x2772 px)
+#    1530,1080 pt: 4284x2772 px). The CDN raster is the whole map flattened, so the PDF's three translucent layers
+#    (the 75% Multiply bands and slow zones, a 75% legend swatch, a 50% box) are left to it (--flattened)
 if [ -n "$IMAGES" ] || [ ! -f "$W/map.png" ]; then
   python3 $T/matte_pdf_layer.py --pdf "$W/keystone.pdf" --out "$W/map.png" --scale 2.8 --clip 0,90,1530,1080 \
-    --xref 23 --background "$W/scene7.jpg"
+    --xref 23 --background "$W/scene7.jpg" --flattened
 fi
 if [ -n "$IMAGES" ]; then
   python3 -c "
@@ -120,3 +121,25 @@ rm -f "$W/recheck.json"
 python3 $T/traces_to_reviews.py --replace-claude --traces "$W/trace_gaps.json" --reviews $D/trailReviews.json \
   --recheck "$W/recheck.json" --labels "$W/labels.json" --image "$W/map.png" | tail -1 | cut -c1-40
 npm run -s trails:apply -- --resort keystone
+
+# 8. the names shown: the trail report's spelling where the map prints a run otherwise (decisions.py's REPORT_NAMES,
+#    from report.json); last, since the proposals match the reading's names to trails.ts's. The ids stay the map's.
+python3 - $D/trails.ts <<'PY'
+import re, sys
+sys.path.insert(0, 'tools/trailmap/resorts/keystone')
+from decisions import REPORT_NAMES
+f = sys.argv[1]
+s = open(f).read()
+done = set()
+def shown(m):
+    old = m.group(2)
+    if old not in REPORT_NAMES:
+        return m.group(0)
+    done.add(old)
+    new = REPORT_NAMES[old]
+    return 'name: ' + (f'"{new}"' if "'" in new else f"'{new}'")
+s = re.sub(r"""name: (['"])(.*?)\1""", shown, s)
+assert done == set(REPORT_NAMES), set(REPORT_NAMES) - done
+open(f, 'w').write(s)
+print(len(done), "names spelled as the trail report spells them")
+PY

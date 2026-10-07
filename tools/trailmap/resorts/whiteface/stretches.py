@@ -8,9 +8,10 @@ and $WHITEFACE_WORK/wf_gaps.json (reading.py). Writes $WHITEFACE_WORK/trace_gaps
 traced, confidence, note}]}): per trail whose name is printed in a gap of its line (or whose label is all of
 its line), its proposed pieces plus the stretch along the printed name, which traces_to_reviews.py turns into a
 confirmed review by Claude. A name printed twice gives two strokes, joined in one trace; they must lie more
-than 400 px apart, or trails:apply would join them into one line. Also prints the trails with no proposed
-pieces and no marker: the five whose overlay is their stretch alone (John's Bypass, Off Broadway, Round-a-bout,
-Upper Thruway, Yellow Dot).
+than 400 px apart, or trails:apply would join them into one line. A name in decisions.py's NO_LINE gets an empty
+trace, which traces_to_reviews.py --labels makes a marker at its label. Also prints the trails with no proposed
+pieces and no marker: the four whose overlay is their stretch alone (John's Bypass, Off Broadway, Round-a-bout,
+Upper Thruway) and Yellow Dot (a marker).
 """
 import json
 import math
@@ -43,5 +44,8 @@ for tid, strokes in by.items():
     pieces = (P.get(tid) or {}).get('polylines') or []
     trails.append({'id': tid, 'pieces': pieces, 'traced': [q for s in strokes for q in s], 'confidence': 'high',
                    'note': 'Label printed in a gap of its own line (or the line is only the label): the stretch along the printed name, plus its pieces'})
+for n in G.get('label_markers', []):  # decisions.py's NO_LINE: an empty trace is a marker at the label
+    trails.append({'id': slug(n), 'pieces': [], 'traced': [], 'confidence': 'high',
+                   'note': 'Printed with no line of its own (checked on a crop): a marker at its label'})
 json.dump({'trails': trails}, open(os.path.join(WORK, 'trace_gaps.json'), 'w'), indent=1)
-print(len(trails), 'trails get label-gap stretches')
+print(len(by), 'trails get label-gap stretches,', len(trails) - len(by), 'a marker at the label (NO_LINE)')

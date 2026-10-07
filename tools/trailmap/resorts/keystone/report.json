@@ -1,0 +1,715 @@
+{
+ "_source": "Keystone's trail report: the trail feed (FR.TerrainStatusFeed) of keystoneresort.com's terrain and lift status page (/the-mountain/mountain-conditions/terrain-and-lift-status.aspx) as Common Crawl captured it on 2025-11-18 (CC-MAIN-2025-47, WARC crawl-data/CC-MAIN-2025-47/segments/1762439653041.91/warc/CC-MAIN-20251118181934-20251118211934-00937.warc.gz, offset 642781431, length 68151; tools/trailmap/reports/README.md): name, area (Bergman, Dercum Mountain, North Peak, Outback, Terrain Park) and difficulty, 142 trails. The names shown in the app follow its spelling where the map's differs (decisions.py, REPORT_NAMES).",
+ "trails": [
+  [
+   "Bald Mountain Glades",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Buffalo",
+   "Bergman",
+   "Blue"
+  ],
+  [
+   "Eagle's Nest",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Foxtrot Glades",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Grays",
+   "Bergman",
+   "Blue"
+  ],
+  [
+   "Indy Face",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Jane's Journey",
+   "Bergman",
+   "Blue"
+  ],
+  [
+   "Liberty",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Liberty Trees",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Midnight Ride",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Miners",
+   "Bergman",
+   "Green"
+  ],
+  [
+   "Nuchu",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Patriot",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Ptarmigan",
+   "Bergman",
+   "Blue"
+  ],
+  [
+   "Quandary",
+   "Bergman",
+   "Green"
+  ],
+  [
+   "Red",
+   "Bergman",
+   "Blue"
+  ],
+  [
+   "Revolution",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Silverheels",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Ten Mile",
+   "Bergman",
+   "Green"
+  ],
+  [
+   "Tenderfoot Glades",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Thorne",
+   "Bergman",
+   "Blue"
+  ],
+  [
+   "Torreys",
+   "Bergman",
+   "Blue"
+  ],
+  [
+   "Two If By Sea",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Uneva",
+   "Bergman",
+   "Black"
+  ],
+  [
+   "Ute",
+   "Bergman",
+   "Blue"
+  ],
+  [
+   "Wichita",
+   "Bergman",
+   "Blue"
+  ],
+  [
+   "Acapulco Road",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Bachelor",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Ballhooter",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Beger",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Black Jack",
+   "Dercum Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Bobtail",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Brahma",
+   "Dercum Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Buck Shot",
+   "Dercum Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Crap Game",
+   "Dercum Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Cross-cut",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Dercum's Dash",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Diamondback",
+   "Dercum Mountain",
+   "Black"
+  ],
+  [
+   "Discovery",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Endeavor",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Flying Dutchman",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Freda's",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Frenchman",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Gassy Thompson",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Go Devil - Lower",
+   "Dercum Mountain",
+   "Black"
+  ],
+  [
+   "Go Devil - Upper",
+   "Dercum Mountain",
+   "Black"
+  ],
+  [
+   "Gun Barrel",
+   "Dercum Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "H&H Mine",
+   "Dercum Mountain",
+   "TerrainPark"
+  ],
+  [
+   "Haywood",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Hoodoo",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Ida Belle",
+   "Dercum Mountain",
+   "Black"
+  ],
+  [
+   "Ina's Way",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Jack Face",
+   "Dercum Mountain",
+   "Black"
+  ],
+  [
+   "Jackwacker",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Jacques St. James",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Jaybird",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Last Chance",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Last Hoot",
+   "Dercum Mountain",
+   "Black"
+  ],
+  [
+   "Lost Mine",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Lower Windows",
+   "Dercum Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Midland",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Mineshaft",
+   "Dercum Mountain",
+   "Black"
+  ],
+  [
+   "Missouri",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Modest Girl",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Mouse Trap",
+   "Dercum Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Mozart",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Murphy's Mine",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Narrow Gauge",
+   "Dercum Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Orfint Boy",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Packsaddle Bowl",
+   "Dercum Mountain",
+   "Black"
+  ],
+  [
+   "Paymaster",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Richter",
+   "Dercum Mountain",
+   "Black"
+  ],
+  [
+   "Riperoo's Forest",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Riperoo's Glade",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "River Run",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Roulette",
+   "Dercum Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Santa Fe",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Schoolmarm",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Scout",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Silvermaster",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Silverspoon",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Ski-Daddle",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Snake Pit",
+   "Dercum Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Spring Dipper",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Swandyke",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "The Edge",
+   "Dercum Mountain",
+   "Black"
+  ],
+  [
+   "Two Sled Road",
+   "Dercum Mountain",
+   "Green"
+  ],
+  [
+   "Upper Frenchman",
+   "Dercum Mountain",
+   "Black"
+  ],
+  [
+   "Whipsaw",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Wild Card",
+   "Dercum Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Wild Irishman",
+   "Dercum Mountain",
+   "Blue"
+  ],
+  [
+   "Ambush",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Anticipation",
+   "North Peak",
+   "Blue"
+  ],
+  [
+   "Black Hawk",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Bullet",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Bullet Glades",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Cat Dancer",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Cat South Glade",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Foxtrot",
+   "North Peak",
+   "Blue"
+  ],
+  [
+   "Geronimo",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Glades",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Last Alamo",
+   "North Peak",
+   "Blue"
+  ],
+  [
+   "Lower Prospector",
+   "North Peak",
+   "Green"
+  ],
+  [
+   "Powdercap",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Prospector",
+   "North Peak",
+   "Blue"
+  ],
+  [
+   "Spillway",
+   "North Peak",
+   "Blue"
+  ],
+  [
+   "Starfire",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Badger",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Big Horn",
+   "Outback",
+   "Blue"
+  ],
+  [
+   "Bingo",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Black Forest",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Bushwhacker",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Christmas Tree",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Conquest",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Coyote Caper",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Elk Run",
+   "Outback",
+   "Blue"
+  ],
+  [
+   "Goalpost Gully",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Lodgepole",
+   "Outback",
+   "Blue"
+  ],
+  [
+   "Mr. Toad's Wild Ride",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Oh Bob",
+   "Outback",
+   "Blue"
+  ],
+  [
+   "Pika Glades",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Porcupine",
+   "Outback",
+   "Blue"
+  ],
+  [
+   "Puma Bowl",
+   "Outback",
+   "Black"
+  ],
+  [
+   "South Bowl Trees",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Tele Trees",
+   "Outback",
+   "Black"
+  ],
+  [
+   "The Corral",
+   "Outback",
+   "Black"
+  ],
+  [
+   "The Grizz",
+   "Outback",
+   "Black"
+  ],
+  [
+   "The Stadium",
+   "Outback",
+   "Black"
+  ],
+  [
+   "The Trap",
+   "Outback",
+   "Black"
+  ],
+  [
+   "The Willows",
+   "Outback",
+   "Blue"
+  ],
+  [
+   "The Wolf Den",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Timberwolf",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Victory Chutes",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Wildcat",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Wildfire",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Wolverine",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Wombat Chutes",
+   "Outback",
+   "Black"
+  ],
+  [
+   "Easy Street",
+   "Terrain Park",
+   "TerrainPark"
+  ],
+  [
+   "I-70",
+   "Terrain Park",
+   "TerrainPark"
+  ],
+  [
+   "Main Street",
+   "Terrain Park",
+   "TerrainPark"
+  ],
+  [
+   "Park Lane",
+   "Terrain Park",
+   "TerrainPark"
+  ],
+  [
+   "The Alley",
+   "Terrain Park",
+   "TerrainPark"
+  ]
+ ]
+}

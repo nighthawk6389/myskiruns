@@ -65,7 +65,7 @@ python3 $R/build.py > "$W/build.log"
 python3 $R/reading.py > "$W/reading.log"; head -1 "$W/reading.log"
 
 # 4. the trail list (with its header), the pieces' notes, proposals, Claude's reviews (label-gap stretches;
-#    two glades are markers) and the overlays
+#    two glades and Yellow Dot are markers) and the overlays
 python3 $T/seed_roster.py --readings "$W/tiles/result_whiteface.json" --areas 'whiteface=Whiteface Mountain=4867' \
   --trails $D/trails.ts --labels "$W/labels.json" > "$W/seed.log"; head -1 "$W/seed.log"
 python3 - <<PY
@@ -81,5 +81,5 @@ python3 $T/aggregate_readings.py --tiles "$W/tiles" --readings "$W/tiles/result_
   --labels "$W/labels.json"
 python3 $R/stretches.py | tail -1
 python3 $T/traces_to_reviews.py --traces "$W/trace_gaps.json" --reviews $D/trailReviews.json \
-  --recheck "$W/recheck.json" --replace-claude | cut -c1-60
+  --recheck "$W/recheck.json" --labels "$W/labels.json" --image "$W/map.png" --replace-claude | cut -c1-60
 npm run -s trails:apply -- --resort whiteface

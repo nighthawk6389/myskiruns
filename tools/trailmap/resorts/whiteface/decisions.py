@@ -31,5 +31,10 @@ OVERRIDE = {
     109: 'BROOKSIDE', 111: 'VALVEHOUSE ROAD', 112: "DANNY'S BRIDGE", 71: 'LOWER EMPIRE', 72: 'EMPIRE CUT',
     140: 'BEAR', 159: 'COYOTE CUT', 148: 'MIXING BOWL', 126: 'BOBCAT CHUTE', 129: 'MOOSE',
 }
+# names printed with no line of their own, outside any glade: a marker at the label (a stretch along a name on two
+# lines would zigzag through them). Yellow Dot (2026-10-07, yd_0.jpg: checks/zoom_pieces.py work/whiteface/yd
+# 2060,970,2350,1220 at Z=3): its diamond and two-line name sit in open snow between Weber's Way and Skyward, no black
+# stroke runs into or out of it; the blue piece 56 beside it runs into Weber's Way's square (OVERRIDE)
+NO_LINE = {'YELLOW DOT'}
 # pieces that are no trail's (also written to linePolylines.json's _unnamed by annotate.py)
 UNNAMED = {130: 'green connector from Moose down to Porcupine Pass; nothing printed on it (crop checked)'}

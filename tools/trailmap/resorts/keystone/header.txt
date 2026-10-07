@@ -1,13 +1,24 @@
 // Seeded by tools/trailmap/seed_roster.py from the 2025-26 map PDF. Its names
 // are outlined glyphs, not text: tools/trailmap/pdf_glyphs.py groups the
 // glyph outlines by shape (each shape read once on a contact sheet) and joins
-// consecutive glyphs into labels. Names are as printed (Orfint Boy, Beger,
-// Witchita, "Oh, Bob"). Difficulty is the symbol printed with each name;
-// "Extreme Terrain" (EX) is double-black. No readers: each line piece was
-// matched to the name printed along it and checked on region crops. The five
-// A51 park runs (Easy Street, Park Lane, Main Street, The Alley, I-70) print
-// no symbol: seed_roster's default (blue). The four kids' adventure zones
-// (Lost Mine, Murphy's Mine, Ripperoo's Forest, Ripperoo's Glade) print no
-// symbol either and sit on green runs: green. 25 names have no drawn line
-// (bowls, glades and tree areas, the learning-area runs, parks, kids' zones):
-// markers at the label. x/y/baseY/width are unused layout fields.
+// consecutive glyphs into labels. Names are as printed (Orfint Boy, Beger:
+// the trail report spells them so too), except 16 shown as the report spells
+// them (tools/trailmap/resorts/keystone/report.json, Keystone's terrain feed
+// of 2025-11-18): Wichita for the printed Witchita, Oh Bob, Grays, Two Sled
+// Road, Go Devil - Upper and - Lower, Cat South Glade, Big Horn, Black
+// Forest, Diamondback, Hoodoo, Ida Belle, Jack Face, Mineshaft, Powdercap,
+// Silverspoon (decisions.py, REPORT_NAMES; the ids stay the map's). Kept as
+// printed: Jackwhacker (the report's Jackwacker), Ripperoo's Forest and
+// Glade (Riperoo's), The Windows (Lower Windows). Every rating agrees with
+// the report's. Difficulty is the symbol printed with each name; "Extreme
+// Terrain" (EX) is double-black. No readers: each line piece was matched to
+// the name printed along it and checked on region crops. The five A51 park
+// runs (Easy Street, Park Lane, Main Street, The Alley, I-70) print no
+// symbol: seed_roster's default (blue). The four kids' adventure zones (Lost
+// Mine, Murphy's Mine, Ripperoo's Forest, Ripperoo's Glade) print no symbol
+// either and sit on green runs: green. 25 names have no drawn line (bowls,
+// glades and tree areas, Wombat Chutes, The Windows, the learning-area runs,
+// parks, kids' zones): markers at the label. The legend's "Number of Trails
+// 140" is this list less its five bowls (Bergman, Erickson, Independence,
+// North, South); the report also lists Discovery and H&H Mine, which this
+// map doesn't print. x/y/baseY/width are unused layout fields.

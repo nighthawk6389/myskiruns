@@ -338,7 +338,8 @@
   },
   "deja-vu": {
    "polylines": [
-    200
+    200,
+    357
    ],
    "confidence": "high",
    "mapName": "DEJA VU",
@@ -533,7 +534,9 @@
   },
   "frostys-freeway": {
    "polylines": [
-    16
+    16,
+    352,
+    353
    ],
    "confidence": "high",
    "mapName": "FROSTY'S FREEWAY",
@@ -659,7 +662,8 @@
   },
   "kings-way": {
    "polylines": [
-    166
+    166,
+    355
    ],
    "confidence": "high",
    "mapName": "KING'S WAY",
@@ -1087,7 +1091,8 @@
   "sawmill": {
    "polylines": [
     41,
-    43
+    43,
+    354
    ],
    "confidence": "high",
    "mapName": "SAWMILL",
@@ -1185,7 +1190,8 @@
   },
   "stampede": {
    "polylines": [
-    323
+    323,
+    359
    ],
    "confidence": "high",
    "mapName": "STAMPEDE",
@@ -1257,7 +1263,8 @@
   "toms-mom": {
    "polylines": [
     67,
-    274
+    274,
+    358
    ],
    "confidence": "high",
    "mapName": "TOM'S MOM",
@@ -1411,7 +1418,8 @@
   "y-chute": {
    "polylines": [
     173,
-    174
+    174,
+    356
    ],
    "confidence": "high",
    "mapName": "Y-CHUTE",

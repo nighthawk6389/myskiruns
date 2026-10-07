@@ -78,6 +78,44 @@
    "at": "2026-10-01T15:14:21.000Z",
    "by": "claude"
   },
+  "frostys-freeway": {
+   "status": "confirmed",
+   "polylines": [
+    16,
+    352,
+    353
+   ],
+   "drawn": [
+    [
+     1478,
+     1026
+    ],
+    [
+     1482,
+     1000
+    ],
+    [
+     1493,
+     973
+    ],
+    [
+     1506,
+     952
+    ],
+    [
+     1526,
+     931
+    ],
+    [
+     1542,
+     920
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
+   "at": "2026-10-07T13:19:50.000Z",
+   "by": "claude"
+  },
   "gondola-ski-back": {
    "status": "confirmed",
    "polylines": [
@@ -1478,7 +1516,8 @@
   "kings-way": {
    "status": "confirmed",
    "polylines": [
-    166
+    166,
+    355
    ],
    "drawn": [
     [
@@ -1500,7 +1539,7 @@
    ],
    "mapDifficulty": null,
    "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
-   "at": "2026-10-01T15:14:21.000Z",
+   "at": "2026-10-07T13:19:50.000Z",
    "by": "claude"
   },
   "briar-rose": {
@@ -1975,6 +2014,36 @@
    "at": "2026-10-01T15:14:21.000Z",
    "by": "claude"
   },
+  "toms-mom": {
+   "status": "confirmed",
+   "polylines": [
+    67,
+    274,
+    358
+   ],
+   "drawn": [
+    [
+     1313,
+     896
+    ],
+    [
+     1342,
+     901
+    ],
+    [
+     1365,
+     914
+    ],
+    [
+     1382,
+     926
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
+   "at": "2026-10-07T13:19:50.000Z",
+   "by": "claude"
+  },
   "red-rover": {
    "status": "confirmed",
    "polylines": [
@@ -2218,7 +2287,8 @@
   "stampede": {
    "status": "confirmed",
    "polylines": [
-    323
+    323,
+    359
    ],
    "drawn": [
     [
@@ -2240,7 +2310,7 @@
    ],
    "mapDifficulty": null,
    "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
-   "at": "2026-10-01T15:14:21.000Z",
+   "at": "2026-10-07T13:19:50.000Z",
    "by": "claude"
   },
   "trygves": {
@@ -2477,11 +2547,41 @@
    "at": "2026-10-01T15:14:21.000Z",
    "by": "claude"
   },
+  "deja-vu": {
+   "status": "confirmed",
+   "polylines": [
+    200,
+    357
+   ],
+   "drawn": [
+    [
+     3601,
+     790
+    ],
+    [
+     3612,
+     765
+    ],
+    [
+     3619,
+     739
+    ],
+    [
+     3622,
+     729
+    ]
+   ],
+   "mapDifficulty": null,
+   "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
+   "at": "2026-10-07T13:19:50.000Z",
+   "by": "claude"
+  },
   "y-chute": {
    "status": "confirmed",
    "polylines": [
     173,
-    174
+    174,
+    356
    ],
    "drawn": [
     [
@@ -2499,7 +2599,7 @@
    ],
    "mapDifficulty": null,
    "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
-   "at": "2026-10-01T15:14:21.000Z",
+   "at": "2026-10-07T13:19:50.000Z",
    "by": "claude"
   },
   "swinger": {
@@ -2564,7 +2664,8 @@
    "status": "confirmed",
    "polylines": [
     41,
-    43
+    43,
+    354
    ],
    "drawn": [
     [
@@ -2586,7 +2687,7 @@
    ],
    "mapDifficulty": null,
    "note": "Label printed in a gap of its own line or at its end: the stretch along the printed name, plus its pieces",
-   "at": "2026-10-01T15:14:21.000Z",
+   "at": "2026-10-07T13:19:50.000Z",
    "by": "claude"
   },
   "cashier": {

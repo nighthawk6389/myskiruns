@@ -39,13 +39,13 @@ assigned (it passes on a wrong line). The evidence is zoomed crops of the map, t
 |---|---|---|---|
 | 1 | **Find the source** | the resort's trail-map page: `node tools/trailmap/find_source.cjs links <page>` lists the PDFs and CDN images it loads; download with curl, or `fetch_pdf.cjs` where the site refuses curl. No PDF, or a hidden one: `python3 tools/trailmap/skimap.py search <name>` / `probe <area>` (skimap.org also keeps past editions). Note the URL and the file's SHA-256 | 15 min |
 | 2 | **See what it gives you** | `pdf_inspect.py` (images and their resolution, strokes by colour and width, fills, text by font), `pdf_classes.py` (each stroke class drawn alone: trails, lifts, boundary, hatching), and the printed legend; then **pick a route** (below) and the resort folder to start from | 15 min |
-| 3 | **Get the truth sources** | the resort's trail report (`tools/trailmap/reports/README.md`), its GIS if it publishes one, OpenStreetMap's runs (`osm_check.py fetch`) | 15-30 min |
+| 3 | **Get the truth sources** | the resort's trail report (`tools/trailmap/reports/README.md`; keep it as `report.json` and run `reports/compare.py` once the list exists), its GIS if it publishes one, OpenStreetMap's runs (`osm_check.py fetch`) | 15-30 min |
 | 4 | **Set up the folder** | `tools/trailmap/resorts/<id>/`, copied from the closest resort (Part 3): `regen.sh` (download with SHA check, extraction, matching, `trails:apply`), the map's reading (`resort.py` for `pdf_resort.py`), `decisions.py`, `header.txt` | 15 min |
 | 5 | **Extract** | the map image, the line pieces (`extract_pdf_vectors.py`, or the resort's `prepare.py`), the names (`pdf_labels.py` for text, `pdf_glyphs.py` for outlined glyphs), the symbols (`pdf_symbols.py`, `pdf_glyphs.py`). Look at the pieces over the map on crops before trusting them | 30-90 min |
 | 6 | **Name the pieces** | the automatic match (`pdf_resort.py <id> build`: a name names the line it is printed along, or the one ending at its text or symbol), then every undecided piece settled on zoomed crops (`pieces.py info / pair / seq`, `grid_crop.py`, `piece_sheet.py`, `osm_check.py check`), each recorded with the crop that settled it (`pdf_resort.py <id> add`). Names you can't extract: the AI readers (Part 4) | 1-4 h |
 | 7 | **The trail list** | from the printed names and symbols (`pdf_resort.py`, or `seed_roster.py`): spelled as the trail report spells them, rated by the printed symbol, grouped by the report's areas | in step 6 |
 | 8 | **Build** | `regen.sh`: proposals, Claude's reviews, `npm run trails:apply` | 1 min |
-| 9 | **Audit every overlay** | `overlay_audit.py` (one cell per trail: look at every one), `symbol_audit.py --mode off / ends / diamonds`, `pdf_overlaps.py`, ratings against the report; fix with a decision, a cut or a traced stretch, rebuild, look again | 1-3 h |
+| 9 | **Audit every overlay** | `overlay_audit.py` (one cell per trail: look at every one), `symbol_audit.py --mode off / ends / diamonds`, `pdf_overlaps.py`, ratings against the report; a matted image with `matte_check.py`; fix with a decision, a cut or a traced stretch, rebuild, look again | 1-3 h |
 | 10 | **Register it** | the map as a JPEG (quality 82, 2-4 MB) in `public/maps/`, an entry in `src/resorts.ts` (state, other places it's found by, panels), an ad group in `marketing/google-ads/build.mjs` (`npm run ads:build`), the docs: the README's table, its section in Part 3, CLAUDE.md's list of rebuilt resorts | 20 min |
 | 11 | **Verify** | `regen.sh` from an empty work folder, then `git status` shows nothing; `regen_all.sh` if a shared tool changed (every other resort unchanged); `hover_all.sh`; `node tools/app_check.cjs <url> --resort <id>`; `npx tsc -b && npx eslint . && npm test`; after an app change also `app_flows.cjs` and `offline_check.cjs` | 20 min |
 | 12 | **Commit and push** | one commit per resort, its message saying the source, the method, the decisions and the checks (the recent resorts' commits are the model) | |
@@ -70,7 +70,8 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 - **A low-resolution painting under good vectors:** `matte_pdf_layer.py` mattes the PDF's vector layer over a
   sharper copy of the painting (Breckenridge, from Vail Resorts' image CDN), a sharper image of the whole map
   (Keystone), or a smooth upscale of the embedded painting (Copper Mountain, Sugarloaf, Smugglers' Notch; Park City
-  with `--resample`).
+  with `--resample`). A sharper image of the whole map is flattened: it already shows the PDF's translucent layers
+  (washes, Multiply bands, slow zones), so leave them to it (`--flattened`; Breckenridge's `matte.py` does the same).
 - **This season's PDF has flattened lines or outlined names, an older one has them live:** skimap.org keeps past
   exports of the same artwork. Register the two pages (`register_pages.py`), check that every old name lands on the
   same name in this season's map and that this season prints no other, then take the strokes, text and symbols
@@ -196,6 +197,14 @@ instead (`pdf_resort.py <id> add`, or its `decisions.py`), then `regen.sh`.
   box's icon or a traffic light came out as symbols. Squares can be rectangles, corners rounded, a double diamond
   one notched outline. Check every symbol on a contact sheet (`symbol_audit.py --mode diamonds`) before trusting
   the ratings.
+- **The default `--min-length` (4 pt) drops short lead-in stubs** drawn into a name's symbol or out of its last
+  letter (Breckenridge's eight, 2.8-4 pt): start lower (Hunter: 0.8), or add them later with a second `--append`
+  pass (`--min-length 2.5 --max-length 4`), which numbers them after every existing piece. A stub that touches a
+  short name's end can make it look "printed along" its line: leave stubs out of that test (Breckenridge).
+- **A flattened background already holds the translucent layers.** Matting the full vector layer over it applies a
+  wash or a Multiply band twice (Breckenridge's map was 10 levels too light, its bands 27 too dark): take the layer's
+  coverage without its translucent forms (`matte_pdf_layer.py --flattened`), and check the result against the PDF's
+  own render where only the painting shows. A CMYK painting's flat black stand-in may render as (8,6,6), not 0.
 - **Re-exports renumber pieces.** The same map exported again draws its strokes in another order (Winter Park's
   site serves a re-export of the file its decisions were made on; Copper Mountain's drops one label): the SHA-256
   check in `regen.sh` catches it. Raster pieces renumber whenever the detector is re-tuned, and raster symbols
@@ -260,14 +269,15 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 
 | tool | what it does |
 |---|---|
-| `tools/trailmap/matte_pdf_layer.py` | A PDF's vector layer matted over a sharper copy of its painting, or a smooth upscale (`--resample` swaps every painting for an upscale and renders the page as it is) |
+| `tools/trailmap/matte_pdf_layer.py` | A PDF's vector layer matted over a sharper copy of its painting, or a smooth upscale (`--resample` swaps every painting for an upscale and renders the page as it is); `--flattened` for a background that is the whole map flattened (its translucent layers are left to it) |
+| `tools/trailmap/matte_check.py` | A matted image against the PDF's own render, where only the painting shows, under a translucent form and on opaque content: a translucent layer applied twice shows as a bias |
 | `tools/trailmap/resorts/vail/images.py` | Saves a large panel smaller as JPEG (overlays are in percent, so any size works) |
 
 **Line pieces**
 
 | tool | what it does |
 |---|---|
-| `tools/trailmap/extract_pdf_vectors.py` | Numbered pieces straight from a PDF's strokes in the trail colours: `--color`, `--min-width`/`--max-width`, `--append` another class, `--filled` (filled-and-stroked paths), `--outlined` (filled outlines), `--solid` (no dashed ones), `--exclude` boxes (legend, insets), `--min-length` (keep short stubs), `--image` (the map at the same scale) |
+| `tools/trailmap/extract_pdf_vectors.py` | Numbered pieces straight from a PDF's strokes in the trail colours: `--color`, `--min-width`/`--max-width`, `--append` another class, `--filled` (filled-and-stroked paths), `--outlined` (filled outlines), `--solid` (no dashed ones), `--exclude` boxes (legend, insets), `--min-length` (keep short stubs; with `--max-length` and `--append`, add only the stubs an earlier pass dropped), `--image` (the map at the same scale) |
 | `tools/trailmap/raster_lines.py` | Numbered pieces from a raster map: strict colour masks, text and icons dropped, dashes linked, skeleton, junctions joined straight |
 | `tools/trailmap/split_pieces.py` | Cuts a piece at a point where it runs into a differently named trail |
 | `tools/trailmap/snap_trace.py` | A few rough points read off a grid crop snapped onto the painted line: a stretch the extraction missed |
@@ -308,7 +318,7 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 
 | tool | what it does |
 |---|---|
-| `tools/trailmap/reports/` | A resort's trail report: terrain feeds of Vail Resorts' sites (`fetch_page.cjs`, `extract_feed.py`, `feed_trails.py`), their Common Crawl captures (`cc_query.sh`, `cc_lookup.py`, `warc_to_html.py`), mtnfeed and others (its README) |
+| `tools/trailmap/reports/` | A resort's trail report: terrain feeds of Vail Resorts' sites (`fetch_page.cjs`, `extract_feed.py`, `feed_trails.py`), their Common Crawl captures (`cc_query.sh`, `cc_lookup.py`, `warc_to_html.py`), mtnfeed and others (its README); `compare.py`: a resort's `trails.ts` against its `report.json` (runs only one lists, ratings, spellings) |
 | `tools/trailmap/osm_check.py` | OpenStreetMap's runs: `fetch` a box from an Overpass mirror; `check` each piece against the runs projected by a local fit on the named pieces around it |
 
 **Looking at pieces and overlays on crops**
@@ -493,7 +503,7 @@ give the same.
 
 ## Whiteface
 
-98 trails (96 + 2) · New York · one map · `tools/trailmap/resorts/whiteface/`.
+98 trails (95 + 3) · New York · one map · `tools/trailmap/resorts/whiteface/`.
 
 - **Source:** whiteface.com's PDF sits behind a Cloudflare check (curl and headless Chromium alike); skimap.org has
   the 2025-26 map (map 37629: `https://files.skimap.org/3zz4xytnhpior9rwxwsvb0erylv9.pdf`, title and date match).
@@ -505,13 +515,14 @@ give the same.
 - **Rebuild:** `tools/trailmap/resorts/whiteface/regen.sh` (14 s).
 - **The map:** names are drawn twice on the same spot, first in another colour, then the trail colour (keep the
   latter: the colour is the rating; symbols only tell double diamonds, 7 trails); most names sit in a gap of their
-  own line (76 of 102 labels matched by the pieces ending at the text's two ends), so 52 trails get a stretch
-  through their name, and five are drawn by their stretch alone; fragments ("Glades", "Cut", "Dot") are joined to
+  own line (76 of 102 labels matched by the pieces ending at the text's two ends), so 51 trails get a stretch
+  through their name, and four are drawn by their stretch alone; fragments ("Glades", "Cut", "Dot") are joined to
   the nearest label of their colour; "Switchbacks" printed once between "Upper" and "Lower" goes on both; the map's
-  "High County Road" is High Country Road. Two glades have no line: markers.
+  "High County Road" is High Country Road. Two glades have no line, nor has Yellow Dot (its two-line name in open
+  snow; `NO_LINE`, since 2026-10-07: its stretch had zigzagged through both lines): markers.
 - **Decisions:** 20 confirm the automatic name, 8 change it, 27 name pieces it left unnamed; piece 130 is an
   unnamed connector. Kept by piece id (the SHA-256 check guards the file).
-- **Checked:** region crops (`checks/audit.sh`), the diamond sheet; hover 290/290.
+- **Checked:** region crops (`checks/audit.sh`), the diamond sheet; hover 288/288.
 
 ## Winter Park
 
@@ -551,7 +562,10 @@ give the same.
   the PDF's vector layer matted over the CDN image (`matte.py`: the page rendered with its painting swapped for flat
   white and flat black, alpha = 1 - (white - black)/255). 0.99 pt strokes in the three colours (dashed ones are
   catwalks and count), four `--exclude` boxes for the legend, lift stats and ad panels: 351 pieces, one cut (piece
-  250: Lower 4 O'Clock, then Gondola Ski Back).
+  250: Lower 4 O'Clock, then Gondola Ski Back), then a second pass for the 8 lead-in stubs of 2.8-4 pt the first
+  drops (`--min-length 2.5 --max-length 4 --append`: pieces 352-359, so the earlier ids stay). The CDN image is the
+  map flattened: the matte leaves the PDF's 20 translucent forms (a 10% wash, the Multiply bands and slow zones, a
+  few 60-65% fills) to it, taking the layer's coverage from renders without them.
 - **Rebuild:** `tools/trailmap/resorts/breckenridge/regen.sh` (8 s; 29 s from empty); `checks/crops.sh`
   re-renders every crop the decisions cite.
 - **The map:** names are AvenirNextCondensed-Demi; the text holds many copies of each name (curved labels also a
@@ -560,15 +574,17 @@ give the same.
   three names printed twice in two colours (the last drawn wins). Lines run into their names (the legend's
   "-◆ Name-"): a piece ends at the name's symbol or text end; the drawing order doesn't group lines with names
   here. EX is two diamonds holding a white E and X (double black); chute names inside a bowl print no symbol and
-  take the bowl's; the four parks are blue; three symbol fills are "Terrain Only" lift notes. 89 stretches on 86
-  trails, 40 markers, 17 unnamed lines.
-- **Decisions:** 169 pieces named on crops, by piece id, each citing its crop (`decisions.py`).
-- **Known issues** (in its README): the CDN raster is the flattened map, so the matte applies the PDF's 10% white
-  wash and the yellow easiest-route bands a second time (the image is 6-10 levels lighter over most of the map;
-  lines and text are exact); eight lead-in stubs under 4 pt (Y-Chute, Deja Vu, Stampede, Tom's Mom, Frosty's
-  Freeway's two, Sawmill, King's Way) were never extracted (`--min-length` was left at its default), so those overlays
-  stop up to 12 px short; re-extracting renumbers the pieces the decisions are keyed by.
-- **Checked:** region audit, symbol sheets; hover 511/511.
+  take the bowl's; the four parks are blue; three symbol fills are "Terrain Only" lift notes. 92 stretches on 89
+  trails, 40 markers, 17 unnamed lines. Two names have two lines: Frosty's Freeway (its stubs into the name, and
+  piece 16 beside it, drawn right after them) and Tom's Mom (through its name, and piece 67 from an access gate
+  below it); Tom's Mom is in a gap of its own line although 67 runs close below the name (`IN_GAP`).
+- **Decisions:** 178 pieces named on crops, by piece id, each citing its crop (`decisions.py`; the stubs on
+  `checks/stubs.py`'s crops).
+- **Fixed 2026-10-07** (both were found when its scripts moved into the repo): the image applied the wash and the
+  bands twice (10 levels too light where only the painting shows, the bands 27 too dark; now both equal the CDN
+  image); the eight stubs were missing, so those overlays stopped up to 12 px short of their lines.
+- **Checked:** region audit, symbol sheets; the stubs' 7 trails on overlay-audit cells; `symbol_audit.py` (none off
+  its overlay; 4 at an overlay end, each where its run starts); hover 511/511.
 
 ## Copper Mountain
 
@@ -610,7 +626,8 @@ give the same.
   `pdf_glyphs.py` (`collect` the fills in the name colours, `sheet` each unread shape, `read` it once, `labels`).
   Lines: 1.5 pt strokes in the three colours (the legend panel excluded), plus `--append` at 0.9-1.1 pt black for
   Roulette and Black Jack (over a 3 pt white casing); piece 2 is cut where Brahma becomes Snake Pit. Map image:
-  `matte_pdf_layer.py --background scene7.jpg`.
+  `matte_pdf_layer.py --background scene7.jpg --flattened` (the CDN image already shows the PDF's three translucent
+  layers, among them the 75% Multiply bands and slow zones; until 2026-10-07 they were applied twice).
 - **Rebuild:** `tools/trailmap/resorts/keystone/regen.sh` (32 s).
 - **The map:** a condensed font (word gaps measured along the reading direction, `--space 0.75`); its capital I is
   the l shape (a word-initial l is an I); comma and apostrophe are one shape turned over; 13 names recoloured this
@@ -618,9 +635,15 @@ give the same.
   park runs, blue; the four gold kids' adventure zones, green): markers; Witchita's and Red's squares sit below their
   rotated names (`MANUAL`); a circle at (157, 1035) is a traffic light. 9 stretches (names in a gap of their own
   line; Cat South Glades is printed beside its line: none), 25 markers.
+- **Truth:** the trail report (`report.json`: the terrain feed as Common Crawl captured it on 2025-11-18): every
+  rating agrees with the map's. 16 runs are shown as it spells them, their ids kept (`REPORT_NAMES`, applied as
+  `regen.sh`'s last step: the proposals match the reading's names to `trails.ts`): Wichita (printed Witchita), Oh
+  Bob, Grays, Two Sled Road, Go Devil - Upper and - Lower, Cat South Glade, Big Horn, Black Forest, ...; kept as
+  printed: Jackwhacker (the report's Jackwacker), Ripperoo's (Riperoo's), The Windows (Lower Windows). The legend's
+  "Number of Trails 140" is the list's 145 less its five bowls, which the report doesn't list either; the report's
+  Discovery and H&H Mine aren't on the map.
 - **Decisions:** the match named 121 of 135 pieces; 14 settled and 4 confirmed on crops.
-- **Checked:** region audit, symbol sheets; hover 385/385. The legend says "Number of Trails 140", the list
-  has 136 runs plus the 5 parks and 4 kids' zones: worth a look against the trail report.
+- **Checked:** region audit, symbol sheets; the report, name by name; hover 385/385.
 
 ## Vail
 

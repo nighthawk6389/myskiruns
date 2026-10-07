@@ -66,6 +66,9 @@ def main():
     ap.add_argument('--min-width', type=float, default=0.0,
                     help='ignore thinner strokes (with --append: pick up one odd width of a colour)')
     ap.add_argument('--min-length', type=float, default=4.0, help='drop pieces shorter than this (points)')
+    ap.add_argument('--max-length', type=float, default=math.inf,
+                    help='keep only pieces shorter than this (points): with --append and a lower --min-length, '
+                         'the short stubs an earlier pass dropped, numbered after its pieces (Breckenridge)')
     ap.add_argument('--max-icon', type=float, default=10.0,
                     help='drop closed runs smaller than this (points): icons such as legend symbols')
     ap.add_argument('--filled', action='store_true',
@@ -144,7 +147,7 @@ def main():
     first_new = max((p['id'] for p in out), default=-1) + 1
     for cls, run in pieces:
         length = sum(math.hypot(q[0] - p[0], q[1] - p[1]) for p, q in zip(run, run[1:]))
-        if length < a.min_length:
+        if not a.min_length <= length < a.max_length:
             continue
         xs, ys = [p[0] for p in run], [p[1] for p in run]
         if math.dist(run[0], run[-1]) < 0.5 and math.hypot(max(xs) - min(xs), max(ys) - min(ys)) < a.max_icon:

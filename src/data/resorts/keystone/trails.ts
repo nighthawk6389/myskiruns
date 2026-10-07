@@ -3,16 +3,27 @@ import type { Trail, PeakData } from '../../../types';
 // Seeded by tools/trailmap/seed_roster.py from the 2025-26 map PDF. Its names
 // are outlined glyphs, not text: tools/trailmap/pdf_glyphs.py groups the
 // glyph outlines by shape (each shape read once on a contact sheet) and joins
-// consecutive glyphs into labels. Names are as printed (Orfint Boy, Beger,
-// Witchita, "Oh, Bob"). Difficulty is the symbol printed with each name;
-// "Extreme Terrain" (EX) is double-black. No readers: each line piece was
-// matched to the name printed along it and checked on region crops. The five
-// A51 park runs (Easy Street, Park Lane, Main Street, The Alley, I-70) print
-// no symbol: seed_roster's default (blue). The four kids' adventure zones
-// (Lost Mine, Murphy's Mine, Ripperoo's Forest, Ripperoo's Glade) print no
-// symbol either and sit on green runs: green. 25 names have no drawn line
-// (bowls, glades and tree areas, the learning-area runs, parks, kids' zones):
-// markers at the label. x/y/baseY/width are unused layout fields.
+// consecutive glyphs into labels. Names are as printed (Orfint Boy, Beger:
+// the trail report spells them so too), except 16 shown as the report spells
+// them (tools/trailmap/resorts/keystone/report.json, Keystone's terrain feed
+// of 2025-11-18): Wichita for the printed Witchita, Oh Bob, Grays, Two Sled
+// Road, Go Devil - Upper and - Lower, Cat South Glade, Big Horn, Black
+// Forest, Diamondback, Hoodoo, Ida Belle, Jack Face, Mineshaft, Powdercap,
+// Silverspoon (decisions.py, REPORT_NAMES; the ids stay the map's). Kept as
+// printed: Jackwhacker (the report's Jackwacker), Ripperoo's Forest and
+// Glade (Riperoo's), The Windows (Lower Windows). Every rating agrees with
+// the report's. Difficulty is the symbol printed with each name; "Extreme
+// Terrain" (EX) is double-black. No readers: each line piece was matched to
+// the name printed along it and checked on region crops. The five A51 park
+// runs (Easy Street, Park Lane, Main Street, The Alley, I-70) print no
+// symbol: seed_roster's default (blue). The four kids' adventure zones (Lost
+// Mine, Murphy's Mine, Ripperoo's Forest, Ripperoo's Glade) print no symbol
+// either and sit on green runs: green. 25 names have no drawn line (bowls,
+// glades and tree areas, Wombat Chutes, The Windows, the learning-area runs,
+// parks, kids' zones): markers at the label. The legend's "Number of Trails
+// 140" is this list less its five bowls (Bergman, Erickson, Independence,
+// North, South); the report also lists Discovery and H&H Mine, which this
+// map doesn't print. x/y/baseY/width are unused layout fields.
 export const peaks: PeakData[] = [
   { id: 'keystone', name: 'Keystone', elevation: 12614, x: 0, y: 0, baseY: 0, width: 0 },
 ];
@@ -27,7 +38,7 @@ export const trails: Trail[] = [
   { id: 'ballhooter', name: 'Ballhooter', difficulty: 'blue', peak: 'keystone' },
   { id: 'beger', name: 'Beger', difficulty: 'blue', peak: 'keystone' },
   { id: 'bergman-bowl', name: 'Bergman Bowl', difficulty: 'black', peak: 'keystone' },
-  { id: 'bighorn', name: 'Bighorn', difficulty: 'blue', peak: 'keystone' },
+  { id: 'bighorn', name: 'Big Horn', difficulty: 'blue', peak: 'keystone' },
   { id: 'bingo', name: 'Bingo', difficulty: 'black', peak: 'keystone' },
   { id: 'black-hawk', name: 'Black Hawk', difficulty: 'black', peak: 'keystone' },
   { id: 'black-jack', name: 'Black Jack', difficulty: 'double-black', peak: 'keystone' },
@@ -39,14 +50,14 @@ export const trails: Trail[] = [
   { id: 'bullet-glades', name: 'Bullet Glades', difficulty: 'black', peak: 'keystone', isGlade: true },
   { id: 'bushwhacker', name: 'Bushwhacker', difficulty: 'black', peak: 'keystone' },
   { id: 'cat-dancer', name: 'Cat Dancer', difficulty: 'black', peak: 'keystone' },
-  { id: 'cat-south-glades', name: 'Cat South Glades', difficulty: 'black', peak: 'keystone', isGlade: true },
+  { id: 'cat-south-glades', name: 'Cat South Glade', difficulty: 'black', peak: 'keystone', isGlade: true },
   { id: 'christmas-tree', name: 'Christmas Tree', difficulty: 'black', peak: 'keystone' },
   { id: 'conquest', name: 'Conquest', difficulty: 'black', peak: 'keystone' },
   { id: 'coyote-caper', name: 'Coyote Caper', difficulty: 'black', peak: 'keystone' },
   { id: 'crap-game', name: 'Crap Game', difficulty: 'double-black', peak: 'keystone' },
   { id: 'cross-cut', name: 'Cross-cut', difficulty: 'blue', peak: 'keystone' },
   { id: 'dercums-dash', name: "Dercum's Dash", difficulty: 'blue', peak: 'keystone' },
-  { id: 'diamond-back', name: 'Diamond Back', difficulty: 'black', peak: 'keystone' },
+  { id: 'diamond-back', name: 'Diamondback', difficulty: 'black', peak: 'keystone' },
   { id: 'eagles-nest', name: "Eagle's Nest", difficulty: 'black', peak: 'keystone' },
   { id: 'easy-street', name: 'Easy Street', difficulty: 'blue', peak: 'keystone', isTerrainPark: true },
   { id: 'elk-run', name: 'Elk Run', difficulty: 'blue', peak: 'keystone' },
@@ -60,18 +71,18 @@ export const trails: Trail[] = [
   { id: 'gassy-thompson', name: 'Gassy Thompson', difficulty: 'blue', peak: 'keystone' },
   { id: 'geronimo', name: 'Geronimo', difficulty: 'black', peak: 'keystone' },
   { id: 'glades', name: 'Glades', difficulty: 'black', peak: 'keystone', isGlade: true },
-  { id: 'go-devil', name: 'Go Devil', difficulty: 'black', peak: 'keystone' },
+  { id: 'go-devil', name: 'Go Devil - Upper', difficulty: 'black', peak: 'keystone' },
   { id: 'goalpost-gully', name: 'Goalpost Gully', difficulty: 'black', peak: 'keystone' },
-  { id: 'grays', name: "Gray's", difficulty: 'blue', peak: 'keystone' },
+  { id: 'grays', name: 'Grays', difficulty: 'blue', peak: 'keystone' },
   { id: 'gun-barrel', name: 'Gun Barrel', difficulty: 'double-black', peak: 'keystone' },
   { id: 'haywood', name: 'Haywood', difficulty: 'blue', peak: 'keystone' },
-  { id: 'hoodoo', name: 'HooDoo', difficulty: 'blue', peak: 'keystone' },
+  { id: 'hoodoo', name: 'Hoodoo', difficulty: 'blue', peak: 'keystone' },
   { id: 'i-70', name: 'I-70', difficulty: 'blue', peak: 'keystone', isTerrainPark: true },
-  { id: 'idabelle', name: 'Idabelle', difficulty: 'black', peak: 'keystone' },
+  { id: 'idabelle', name: 'Ida Belle', difficulty: 'black', peak: 'keystone' },
   { id: 'inas-way', name: "Ina's Way", difficulty: 'green', peak: 'keystone' },
   { id: 'independence-bowl', name: 'Independence Bowl', difficulty: 'black', peak: 'keystone' },
   { id: 'indy-face', name: 'Indy Face', difficulty: 'black', peak: 'keystone' },
-  { id: 'jackface', name: 'Jackface', difficulty: 'black', peak: 'keystone' },
+  { id: 'jackface', name: 'Jack Face', difficulty: 'black', peak: 'keystone' },
   { id: 'jackwhacker', name: 'Jackwhacker', difficulty: 'blue', peak: 'keystone' },
   { id: 'jacques-st-james', name: 'Jacques St. James', difficulty: 'blue', peak: 'keystone' },
   { id: 'janes-journey', name: "Jane's Journey", difficulty: 'blue', peak: 'keystone' },
@@ -83,12 +94,12 @@ export const trails: Trail[] = [
   { id: 'liberty-trees', name: 'Liberty Trees', difficulty: 'black', peak: 'keystone' },
   { id: 'lodgepole', name: 'Lodgepole', difficulty: 'blue', peak: 'keystone' },
   { id: 'lost-mine', name: 'Lost Mine', difficulty: 'green', peak: 'keystone' },
-  { id: 'lower-go-devil', name: 'Lower Go Devil', difficulty: 'black', peak: 'keystone' },
+  { id: 'lower-go-devil', name: 'Go Devil - Lower', difficulty: 'black', peak: 'keystone' },
   { id: 'lower-prospector', name: 'Lower Prospector', difficulty: 'green', peak: 'keystone' },
   { id: 'main-street', name: 'Main Street', difficulty: 'blue', peak: 'keystone', isTerrainPark: true },
   { id: 'midland', name: 'Midland', difficulty: 'blue', peak: 'keystone' },
   { id: 'midnight-ride', name: 'Midnight Ride', difficulty: 'black', peak: 'keystone' },
-  { id: 'mine-shaft', name: 'Mine Shaft', difficulty: 'black', peak: 'keystone' },
+  { id: 'mine-shaft', name: 'Mineshaft', difficulty: 'black', peak: 'keystone' },
   { id: 'miners', name: 'Miners', difficulty: 'green', peak: 'keystone' },
   { id: 'missouri', name: 'Missouri', difficulty: 'blue', peak: 'keystone' },
   { id: 'modest-girl', name: 'Modest Girl', difficulty: 'green', peak: 'keystone' },
@@ -99,7 +110,7 @@ export const trails: Trail[] = [
   { id: 'narrow-gauge', name: 'Narrow Gauge', difficulty: 'double-black', peak: 'keystone' },
   { id: 'north-bowl', name: 'North Bowl', difficulty: 'black', peak: 'keystone' },
   { id: 'nuchu', name: 'Nuchu', difficulty: 'black', peak: 'keystone' },
-  { id: 'oh-bob', name: 'Oh, Bob', difficulty: 'blue', peak: 'keystone' },
+  { id: 'oh-bob', name: 'Oh Bob', difficulty: 'blue', peak: 'keystone' },
   { id: 'orfint-boy', name: 'Orfint Boy', difficulty: 'blue', peak: 'keystone' },
   { id: 'packsaddle-bowl', name: 'Packsaddle Bowl', difficulty: 'black', peak: 'keystone' },
   { id: 'park-lane', name: 'Park Lane', difficulty: 'blue', peak: 'keystone', isTerrainPark: true },
@@ -107,7 +118,7 @@ export const trails: Trail[] = [
   { id: 'paymaster', name: 'Paymaster', difficulty: 'blue', peak: 'keystone' },
   { id: 'pika-glades', name: 'Pika Glades', difficulty: 'black', peak: 'keystone', isGlade: true },
   { id: 'porcupine', name: 'Porcupine', difficulty: 'blue', peak: 'keystone' },
-  { id: 'powder-cap', name: 'Powder Cap', difficulty: 'black', peak: 'keystone' },
+  { id: 'powder-cap', name: 'Powdercap', difficulty: 'black', peak: 'keystone' },
   { id: 'prospector', name: 'Prospector', difficulty: 'blue', peak: 'keystone' },
   { id: 'ptarmigan', name: 'Ptarmigan', difficulty: 'blue', peak: 'keystone' },
   { id: 'puma-bowl', name: 'Puma Bowl', difficulty: 'black', peak: 'keystone' },
@@ -122,7 +133,7 @@ export const trails: Trail[] = [
   { id: 'santa-fe', name: 'Santa Fe', difficulty: 'blue', peak: 'keystone' },
   { id: 'schoolmarm', name: 'Schoolmarm', difficulty: 'green', peak: 'keystone' },
   { id: 'scout', name: 'Scout', difficulty: 'green', peak: 'keystone' },
-  { id: 'silver-spoon', name: 'Silver Spoon', difficulty: 'green', peak: 'keystone' },
+  { id: 'silver-spoon', name: 'Silverspoon', difficulty: 'green', peak: 'keystone' },
   { id: 'silverheels', name: 'Silverheels', difficulty: 'black', peak: 'keystone' },
   { id: 'silvermaster', name: 'Silvermaster', difficulty: 'blue', peak: 'keystone' },
   { id: 'ski-daddle', name: 'Ski-Daddle', difficulty: 'green', peak: 'keystone' },
@@ -137,7 +148,7 @@ export const trails: Trail[] = [
   { id: 'ten-mile', name: 'Ten Mile', difficulty: 'green', peak: 'keystone' },
   { id: 'tenderfoot-glades', name: 'Tenderfoot Glades', difficulty: 'black', peak: 'keystone', isGlade: true },
   { id: 'the-alley', name: 'The Alley', difficulty: 'blue', peak: 'keystone', isTerrainPark: true },
-  { id: 'the-black-forest', name: 'The Black Forest', difficulty: 'black', peak: 'keystone' },
+  { id: 'the-black-forest', name: 'Black Forest', difficulty: 'black', peak: 'keystone' },
   { id: 'the-corral', name: 'The Corral', difficulty: 'black', peak: 'keystone' },
   { id: 'the-edge', name: 'The Edge', difficulty: 'black', peak: 'keystone' },
   { id: 'the-grizz', name: 'The Grizz', difficulty: 'black', peak: 'keystone' },
@@ -150,7 +161,7 @@ export const trails: Trail[] = [
   { id: 'timberwolf', name: 'Timberwolf', difficulty: 'black', peak: 'keystone' },
   { id: 'torreys', name: 'Torreys', difficulty: 'blue', peak: 'keystone' },
   { id: 'two-if-by-sea', name: 'Two If By Sea', difficulty: 'black', peak: 'keystone' },
-  { id: 'two-sled', name: 'Two Sled', difficulty: 'green', peak: 'keystone' },
+  { id: 'two-sled', name: 'Two Sled Road', difficulty: 'green', peak: 'keystone' },
   { id: 'uneva', name: 'Uneva', difficulty: 'black', peak: 'keystone' },
   { id: 'upper-frenchman', name: 'Upper Frenchman', difficulty: 'black', peak: 'keystone' },
   { id: 'ute', name: 'Ute', difficulty: 'blue', peak: 'keystone' },
@@ -160,7 +171,7 @@ export const trails: Trail[] = [
   { id: 'wild-irishman', name: 'Wild Irishman', difficulty: 'blue', peak: 'keystone' },
   { id: 'wildcat', name: 'Wildcat', difficulty: 'black', peak: 'keystone' },
   { id: 'wildfire', name: 'Wildfire', difficulty: 'black', peak: 'keystone' },
-  { id: 'witchita', name: 'Witchita', difficulty: 'blue', peak: 'keystone' },
+  { id: 'witchita', name: 'Wichita', difficulty: 'blue', peak: 'keystone' },
   { id: 'wolverine', name: 'Wolverine', difficulty: 'black', peak: 'keystone' },
   { id: 'wombat-chutes', name: 'Wombat Chutes', difficulty: 'black', peak: 'keystone' },
 ];

@@ -73,7 +73,7 @@ Run by `regen.sh` in this order (`$W` is the work folder, `D` is
 |---|---|---|
 | 1 | `tools/trailmap/fetch_pdf.cjs` (if missing), SHA-256 check | `$W/keystone.pdf` |
 | 1 | curl from scene7 (if missing), SHA-256 check | `$W/scene7.jpg` |
-| 2 | `tools/trailmap/matte_pdf_layer.py --scale 2.8 --clip 0,90,1530,1080 --xref 23 --background scene7.jpg` (with `IMAGES=1`, or when `map.png` is missing) | `$W/map.png` (4284x2772) |
+| 2 | `tools/trailmap/matte_pdf_layer.py --scale 2.8 --clip 0,90,1530,1080 --xref 23 --background scene7.jpg --flattened` (with `IMAGES=1`, or when `map.png` is missing) | `$W/map.png` (4284x2772) |
 | 2 | PIL, JPEG quality 82, optimized, progressive (`IMAGES=1` only) | `public/maps/keystone.jpg` |
 | 3 | `tools/trailmap/pdf_glyphs.py collect` (the name colours, legend and bottom bar excluded) | `$W/glyphs.json` (2186 glyphs, 140 shapes) |
 | 3 | `pdf_glyphs.py labels --letters letters.json --square blue --diamond black --circle green --space 0.75` | `$W/glyph_labels.json` (199 labels, 148 symbols) |
@@ -89,12 +89,12 @@ Run by `regen.sh` in this order (`$W` is the work folder, `D` is
 | 7 | `traces.py` | `$W/trace_gaps.json` (34 entries) |
 | 7 | `tools/trailmap/traces_to_reviews.py --replace-claude` | `D/trailReviews.json` (34 Claude reviews), `$W/recheck.json` |
 | 7 | `npm run trails:apply -- --resort keystone` | `D/trailPaths.json` (120 lines, 25 markers) |
+| 8 | inline Python: `REPORT_NAMES` (decisions.py) | `D/trails.ts`: 16 names shown as the trail report spells them (the ids stay) |
 
 `public/maps/keystone.jpg` was first made by a one-off scratch script,
 `k_image.py` (2026-10-01 16:28: `k_source.png`, saved as the JPEG above). Its
-code became `tools/trailmap/matte_pdf_layer.py` that evening; re-run on
-Keystone with the flags above it gave a byte-identical PNG (23:17), and it
-still does, so `regen.sh` uses the shared tool.
+code became `tools/trailmap/matte_pdf_layer.py` that evening, which `regen.sh`
+uses; since 2026-10-07 with `--flattened` (see "Map image" below).
 
 ## Files
 
@@ -105,7 +105,8 @@ still does, so `regen.sh` uses the shared tool.
 | `letters.json` | each glyph shape's character (keyed by shape signature and size), read on `pdf_glyphs.py sheet` contact sheets (scratch `k_letters.json`) |
 | `names.py` | glyph labels → trail names: drops non-trail labels (`NOT`), fixes spacing slips (`FIX`), joins two-line names (`JOIN`), attaches each symbol, the two set apart by hand (`MANUAL`) |
 | `build.py` | each label → the pieces it is printed along, at its symbol or at its text's far end; names spread along continuations |
-| `decisions.py` | `CHECKED`: the 18 pieces settled on crops (piece id → name), with the crop that settled each; `UNNAMED` (empty) |
+| `decisions.py` | `CHECKED`: the 18 pieces settled on crops (piece id → name), with the crop that settled each; `UNNAMED` (empty); `REPORT_NAMES`: the names shown in the trail report's spelling |
+| `report.json` | the trail report: Keystone's terrain feed as Common Crawl captured it on 2025-11-18 (name, area, rating; `tools/trailmap/reports/feed_trails.py` wrote it) |
 | `reading.py` | names + matches + decisions → the reading for seed_roster/aggregate_readings, stretches along names printed in a gap of their line, markers for names with no line; park and kids' zone ratings |
 | `traces.py` | stretches and markers → `trace_gaps.json` for `traces_to_reviews.py` |
 | `header.txt` | the comment at the top of `trails.ts` (scratch `k_header.txt`) |
@@ -150,8 +151,9 @@ which `regen.sh` remakes byte for byte (`splits_reading.json`, and
   Miners in green); a few road names are black over near-black (0.14, 0.12,
   0.13). `collect` keeps the last drawn glyph at each spot, which is the one
   printed on top.
-- **Names as printed:** Orfint Boy, Beger, Witchita, "Oh, Bob". Spacing slips
-  fixed: SpringDipper, TheTrap, "U neva". Schoolmarm's lower part is also
+- **Names as printed:** Orfint Boy, Beger (the trail report spells them so
+  too), Witchita, "Oh, Bob". Spacing slips fixed: SpringDipper, TheTrap,
+  "U neva". Schoolmarm's lower part is also
   labelled "Schoolmarm Family Ski Trail": the same trail. Set on two lines and
   joined: Orfint Boy, Packsaddle Bowl, Ripperoo's Glade. Not trails (dropped):
   roads, places, distances, closing-time notes, the peak names and
@@ -191,11 +193,34 @@ which `regen.sh` remakes byte for byte (`splits_reading.json`, and
   glades and tree areas (Bullet Glades, Glades, South Bowl Trees, Tele Trees,
   The Black Forest), Wombat Chutes, The Windows, the learning area's runs
   (Endeavor, Scout, Ski-Daddle), the five parks and the four kids' zones.
+- **The trail report** (`report.json`, 142 trails: Keystone's terrain feed of
+  2025-11-18, in season; out of season the feed lists none): every rating
+  agrees with the map's. 16 runs are shown as the report spells them, with
+  their ids kept (`REPORT_NAMES`, applied last in `regen.sh`, since the
+  proposals match the reading's names to `trails.ts`): Wichita (printed
+  Witchita), Oh Bob, Grays, Two Sled Road, Go Devil - Upper and Go Devil -
+  Lower (printed Go Devil and Lower Go Devil), Cat South Glade, Big Horn, Black
+  Forest, Diamondback, Hoodoo, Ida Belle, Jack Face, Mineshaft, Powdercap,
+  Silverspoon. Kept as printed (each checked on a crop): Jackwhacker (the
+  report's Jackwacker drops the h), Ripperoo's Forest and Glade (Riperoo's
+  misspells the mascot), The Windows (the report's Lower Windows; the map
+  prints "The Windows / Closes at 2:00 p.m."). Not on the map: Discovery and
+  H&H Mine (no such label in the learning area or the parks). The legend's
+  "Number of Trails 140" is this list of 145 less its five bowls (Bergman,
+  Erickson, Independence, North, South), which the report doesn't list.
 - **Map image:** the vector layer (lines, names, symbols, icons) is rendered at
   2.8 px/pt from two renders with the painting swapped for flat white and flat
   black (alpha = 1 - (white - black)/255, colour = black render / alpha) and
   matted over the scene7 raster stretched to the page (2.08 px/pt, against the
-  embedded painting's 1 px/pt).
+  embedded painting's 1 px/pt). That raster is the whole map flattened, so it
+  already shows the PDF's three translucent layers (form XObjects 16, 17 and
+  22: a 75% legend swatch, the 75% Multiply bands and slow zones, a 50% box);
+  `--flattened` takes the layer's coverage from renders without them, and
+  calibrates the flat stand-ins as they render (the CMYK painting's black
+  comes out as 8, 6, 6, not 0). Until 2026-10-07 they were applied twice: the
+  map was 10, 4 and 5 levels (R, G, B) lighter than the PDF's own render
+  where only the painting shows, and the bands 30, 29 and 11 levels darker;
+  now both equal the scene7 raster.
 
 ## Checks done
 
@@ -257,6 +282,11 @@ and so did a second run with the folder filled; every intermediate file
 (glyph labels, names, matches, reading, stretches, the 28 tiles, the PNG) is
 byte-identical to the scratch copy it replaces, and the checks scripts
 reproduce the scratch crops made after the split byte for byte.
+
+On 2026-10-07, later: the trail report compared name by name (above); the 16
+shown names and the new map image checked (the image against the PDF's own
+render and the scene7 raster, as above, and on crops of the bands). Hover check
+385/385.
 
 ## A new season's map
 

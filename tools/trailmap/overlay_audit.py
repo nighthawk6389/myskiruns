@@ -38,7 +38,7 @@ def pdf_reading(rid, panel):
     """For a resort read by pdf_resort.py: {trail id: [label point lists in percent]}, {trail id: {how named}}, and
     the full-size map image it read; else empty."""
     f = resort_files(rid, panel)
-    if not os.path.exists(os.path.join(f['tools'], *(['panels', panel] if panel else []), 'decisions.py')):
+    if not os.path.exists(os.path.join(f['tools'], 'resort.py')):  # its own scripts (Breckenridge, Keystone, ...)
         return {}, {}, None
     import pdf_resort as pr
     r = pr.Resort(f'{rid}/{panel}' if panel else rid)
