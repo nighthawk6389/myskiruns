@@ -1,0 +1,37 @@
+// Park City Mountain's 2025-26 trail map PDF from parkcitymountain.com's
+// trail-map page: one page with the Park City side on the left and Canyons
+// on the right, and the High Meadow Park inset (redrawn larger, not a copy:
+// its lines take its own names, and the four entering it from above, named
+// only on the main map, have no overlay there). Trail lines are vector
+// strokes in the difficulty colours (orange: the terrain parks; an easier
+// way down is its run's line drawn dashed). Names are outlined glyphs in the
+// run's colour (each glyph shape read once, then decoded:
+// tools/trailmap/resorts/park-city/), the symbol before the name, printed in
+// a gap of the run's line or beside it (a name on two or three lines between
+// its symbol and its line has a stretch from the symbol through it). Each
+// line piece takes the name that runs into it or along it; the rest was
+// settled on zoomed crops (decisions.py), and where a line between two names
+// could be either run's, OpenStreetMap's runs and the PDF's drawing order
+// (one run's strokes are drawn one after another) decided it: Sundog's line
+// on below its symbol (10th Mountain is printed in an oval), Willow Draw's
+// dashed run-out to the Canyons base, Panorama's dashed line below its
+// second name, Silverado's below its name, Elk Dance's (not Upper Harmony's)
+// from its name down to Upper Harmony's arrow, Blaster's from Belmont's,
+// Chrome Alley's up to Upper White Pine's name, Assessment's top (Powder Keg
+// leaves it), Peace's two short lines (Escape ends at its symbol). Lines the
+// map doesn't name have no overlay: four links (Crescent lift top to
+// Homerun, Homerun to Silver Queen, King Con to High Card, Treasure Hollow
+// to Homerun) and two run-outs (to the Dreamscape base; below Phantasm
+// across the Dreamcatcher lift). Names are as the resort's trail report
+// spells them (the map's 10TH MTN, MID-MTN, MEN'S SL and LADIES' SL written
+// out; HARMONY, printed on the lower part of Upper Harmony's run, is the
+// report's Lower Harmony; PINECONE is Pinecone Bowl). Difficulty: the symbol
+// printed by the name (four names in grey ovals print theirs under the
+// oval); King Con Access prints none (its line is green) and the terrain
+// parks are blue, the default (the map sizes them S, M, L instead). All 345
+// trails' ratings and sides agree with the resort's trail report (March
+// 2026). Names printed with no line of their own (bowls, chutes, tree areas
+// in grey ovals, expert lines through the trees, the halfpipe) are markers
+// at their names. Trails are grouped by side as the report groups its lift
+// pods; elevations are the two summits as printed. x/y/baseY/width are
+// unused layout fields.

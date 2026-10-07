@@ -28,7 +28,8 @@ gap is a gap between outlines well over the label's median letter gap, or,
 with --space, over that many points along the reading direction (condensed
 fonts). Comma and apostrophe are often one shape turned over: read it as
 either, and the side of the line it sits on decides; so are n and u, and !
-and i, in some fonts (--turned nu: the half its gap is in decides). A run
+and i, in some fonts (--turned nu: the half its gap is in decides), and 6 and 9 (--turned-hole 69: the half
+its hole is in). A run
 whose glyphs all sit on another, longer (or later) run's is a fragment copy
 and is dropped. Difficulty symbols are fills too: an even four-sided fill in
 the --square colour is a square, in the --diamond colour a diamond; two diamonds
@@ -364,7 +365,21 @@ def labels(a):
         empty = [t / 20 for t in range(-19, 20) if not filled(t / 20)]
         return 0 if not empty else -1 if sum(empty) < 0 else 1
 
-    D = {d['seqno']: d for d in page.get_drawings()} if a.turned else {}
+    def hole_side(g, u):
+        """Where glyph g's hole (its smallest inner outline: the loop of a 6 or a 9) sits, upright: -1 below its
+        middle, +1 above, 0 if it has none."""
+        up = (u[1], -u[0])
+        polys = polygons(D[g['seq']]['items'])
+        if len(polys) < 2:
+            return 0
+        ext = lambda pl: [x * up[0] + y * up[1] for x, y in pl]  # noqa: E731
+        outer = max(polys, key=lambda pl: max(ext(pl)) - min(ext(pl)))
+        hole = min(polys, key=lambda pl: max(ext(pl)) - min(ext(pl)))
+        h = sum(ext(hole)) / len(hole)
+        mid = (max(ext(outer)) + min(ext(outer))) / 2
+        return 0 if abs(h - mid) < 1e-6 else (1 if h > mid else -1)
+
+    D = {d['seqno']: d for d in page.get_drawings()} if a.turned or a.turned_hole else {}
     runs, cur = [], []
     for g in (g for g in G if g.get('ch')):
         if cur and (g['col'] != cur[-1]['col'] or math.dist(g['c'], cur[-1]['c']) > a.join
@@ -394,6 +409,11 @@ def labels(a):
                     opening = open_side(run[k], dirs[min(k, len(dirs) - 1)])
                     if opening:
                         chars[k] = pair[0] if opening < 0 else pair[1]
+            for pair in a.turned_hole:  # two digits that are one shape turned over (6/9): the half with the hole
+                if ch in pair and len(run) > 1:
+                    hole = hole_side(run[k], dirs[min(k, len(dirs) - 1)])
+                    if hole:
+                        chars[k] = pair[0] if hole < 0 else pair[1]
         text = chars[0]
         for ch, sp in zip(chars[1:], space):
             text += (' ' if sp else '') + ch
@@ -463,6 +483,9 @@ def main():
     lb.add_argument('--turned', action='append', default=[],
                     help='two letters that are one shape turned over, the one with its gap low first: nu, !i (a shape '
                          'read as either is decided by which half its gap is in: Smugglers\' Notch)')
+    lb.add_argument('--turned-hole', action='append', default=[],
+                    help='two characters that are one shape turned over, the one with its hole low first: 69 (decided '
+                         "by which half its hole is in: Park City's CLOUD 9 and 94 TURNS, its 6 BELLS)")
     lb.add_argument('--single', action='append', default=[],
                     help='colour class whose lone glyphs are labels too (one-digit numbered circles: Sugarloaf)')
     a = ap.parse_args()

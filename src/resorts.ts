@@ -119,6 +119,7 @@ export const RESORTS: ResortEntry[] = [
     { id: 'symphony', name: 'Symphony', paths: () => import('./data/resorts/whistler-blackcomb/panels/symphony/trailPaths.json') },
     { id: 'glacier', name: 'Glacier', paths: () => import('./data/resorts/whistler-blackcomb/panels/glacier/trailPaths.json') },
   ]),
+  oneMap('park-city', 'Park City Mountain', 'Utah', () => import('./data/resorts/park-city/trails'), () => import('./data/resorts/park-city/trailPaths.json')),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

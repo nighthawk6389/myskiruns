@@ -5,6 +5,7 @@ embedded painting upscaled with Lanczos instead of the renderer's blocky upscale
 
     python3 tools/trailmap/matte_pdf_layer.py --pdf map.pdf --out map.png --scale 2.8 --clip 0,90,1530,1080 \\
         [--background sharper.jpg] [--xref 23] [--page 0]
+    python3 tools/trailmap/matte_pdf_layer.py --pdf map.pdf --out map.png --scale 2.5 --resample 461 --resample 463
 
 The vector layer comes from rendering the page twice with the painting swapped for flat white and then flat
 black: alpha = 1 - (white - black) / 255, colour = black render / alpha. --xref is the painting's image xref
@@ -46,11 +47,31 @@ def main():
     ap.add_argument('--page', type=int, default=0)
     ap.add_argument('--xref', type=int, help="the painting's image xref (default: the largest image)")
     ap.add_argument('--background', help='a sharper raster of the whole page')
+    ap.add_argument('--resample', type=int, action='append', default=[],
+                    help='instead of matting: replace this image (xref; repeat for several) with a copy upscaled '
+                         'with Lanczos to the output scale, then render the page as it is, so any clip or '
+                         'placement is kept (Park City: its painting and the High Meadow Park inset\'s, clipped '
+                         'to the inset frame)')
     a = ap.parse_args()
     S = a.scale
     doc = pymupdf.open(a.pdf)
     page = doc[a.page]
     clip = pymupdf.Rect(*[float(v) for v in a.clip.split(',')]) if a.clip else page.rect
+    if a.resample:
+        for x in a.resample:
+            pm = pymupdf.Pixmap(doc, x)
+            if pm.colorspace.n != 3 or pm.alpha:
+                pm = pymupdf.Pixmap(pymupdf.csRGB, pm)
+            paint = Image.open(io.BytesIO(pm.tobytes('png'))).convert('RGB')
+            r = page.get_image_rects(x)[0]
+            f = S * r.width / paint.width  # output px per painting px
+            if f > 1:
+                big = paint.resize((round(paint.width * f), round(paint.height * f)), Image.LANCZOS)
+                page.replace_image(x, pixmap=pymupdf.Pixmap(pymupdf.csRGB, big.width, big.height, big.tobytes(), False))
+        pix = page.get_pixmap(matrix=pymupdf.Matrix(S, S), clip=clip)
+        pix.save(a.out)
+        print(a.out, (pix.width, pix.height), 'images resampled', a.resample)
+        return
     xref = a.xref or max(page.get_images(full=True), key=lambda im: im[2] * im[3])[0]
     W = render(a.pdf, a.page, xref, 255, S, clip)
     B = render(a.pdf, a.page, xref, 0, S, clip)
