@@ -267,6 +267,24 @@ const RESORT_ADS = {
       'brewing', 'beer', 'australia', 'country',
     ],
   },
+  heavenly: {
+    short: 'Heavenly',
+    path: 'Heavenly',
+    area: 'California and Nevada Sides',
+    // bare "heavenly" means too much else: only with "ski", "tahoe" or a map
+    names: ['heavenly ski resort', 'heavenly lake tahoe', 'heavenly tahoe'],
+    keywords: [
+      ['heavenly trail map', 'exact'],
+      ['heavenly ski map', 'exact'],
+      ['heavenly ski map', 'phrase'],
+      ['heavenly ski trails', 'phrase'],
+    ],
+    // the other heavenlies: food, beds, spas, faith, games and shows
+    negatives: [
+      'hash', 'ham', 'bed', 'bedding', 'mattress', 'spa', 'father', 'bodies', 'kingdom', 'creatures', 'delusion',
+      'sword', 'hawaiian', 'cookie', 'recipe', 'dessert',
+    ],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

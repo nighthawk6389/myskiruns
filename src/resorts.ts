@@ -38,6 +38,8 @@ export interface ResortEntry {
   name: string;
   /** state or province, for the picker's search and grouping */
   region: string;
+  /** other places the picker's search finds it by (Heavenly's second state, the lake) */
+  also?: string[];
   load: () => Promise<Resort>;
 }
 
@@ -74,11 +76,13 @@ function panels(
   region: string,
   trails: () => Promise<TrailsModule>,
   maps: { id: string; name: string; paths: () => Promise<PathsModule> }[],
+  also?: string[],
 ): ResortEntry {
   return {
     id,
     name,
     region,
+    also,
     load: async () => {
       const [t, ps] = await Promise.all([trails(), Promise.all(maps.map((m) => m.paths()))]);
       const panelMaps = maps.map((m, i) => ({ id: m.id, name: m.name, mapSrc: `/maps/${id}-${m.id}.jpg`, paths: pathsOf(ps[i]) }));
@@ -89,7 +93,8 @@ function panels(
 
 // To add a resort: put its data in src/data/resorts/<id>/ and its map in
 // public/maps/<id>.jpg (docs/trail-map-playbook.md), then list it here with
-// its state or province (the picker searches and groups by it). A
+// its state or province (the picker searches and groups by it; `also`, other
+// places it searches by). A
 // resort drawn on several panels keeps one trail list and, per panel, its
 // overlays in src/data/resorts/<id>/panels/<panel>/ and its map in
 // public/maps/<id>-<panel>.jpg.
@@ -124,12 +129,16 @@ export const RESORTS: ResortEntry[] = [
     { id: 'palisades', name: 'Palisades', paths: () => import('./data/resorts/palisades-tahoe/panels/palisades/trailPaths.json') },
     { id: 'alpine-front', name: 'Alpine front', paths: () => import('./data/resorts/palisades-tahoe/panels/alpine-front/trailPaths.json') },
     { id: 'alpine-back', name: 'Alpine back', paths: () => import('./data/resorts/palisades-tahoe/panels/alpine-back/trailPaths.json') },
-  ]),
+  ], ['Lake Tahoe']),
   panels('big-sky', 'Big Sky', 'Montana', () => import('./data/resorts/big-sky/trails'), [
     { id: 'main', name: 'All three mountains', paths: () => import('./data/resorts/big-sky/panels/main/trailPaths.json') },
     { id: 'south-face', name: 'South Face', paths: () => import('./data/resorts/big-sky/panels/south-face/trailPaths.json') },
     { id: 'bowl', name: 'The Bowl', paths: () => import('./data/resorts/big-sky/panels/bowl/trailPaths.json') },
   ]),
+  panels('heavenly', 'Heavenly', 'California', () => import('./data/resorts/heavenly/trails'), [
+    { id: 'main', name: 'California and Nevada', paths: () => import('./data/resorts/heavenly/panels/main/trailPaths.json') },
+    { id: 'top-of-gondola', name: 'Top of Gondola', paths: () => import('./data/resorts/heavenly/panels/top-of-gondola/trailPaths.json') },
+  ], ['Nevada', 'Lake Tahoe']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

@@ -1,0 +1,713 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "canyonland": {
+   "polylines": [
+    13,
+    14,
+    71
+   ],
+   "confidence": "high",
+   "mapName": "CANYONLAND",
+   "note": "end of Canyonland | symbol of Canyonland | along its printed name"
+  },
+  "double-down": {
+   "polylines": [
+    19,
+    91
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLE DOWN",
+   "note": "end of Double Down | along its printed name"
+  },
+  "east-bowl-woods": {
+   "noLine": true,
+   "label": [
+    81.11,
+    63.74
+   ],
+   "confidence": "high"
+  },
+  "ellies": {
+   "polylines": [
+    0,
+    1,
+    67
+   ],
+   "confidence": "high",
+   "mapName": "ELLIE'S",
+   "note": "symbol of Ellie's | end of Ellie's | along its printed name"
+  },
+  "ellies-swing": {
+   "polylines": [
+    64
+   ],
+   "confidence": "high",
+   "mapName": "ELLIE'S SWING",
+   "note": "along its printed name"
+  },
+  "express-line": {
+   "polylines": [
+    70
+   ],
+   "confidence": "high",
+   "mapName": "EXPRESS LINE",
+   "note": "along its printed name"
+  },
+  "fall-line": {
+   "polylines": [
+    109
+   ],
+   "confidence": "high",
+   "mapName": "FALL LINE",
+   "note": "along its printed name"
+  },
+  "gunbarrel": {
+   "polylines": [
+    136
+   ],
+   "confidence": "high",
+   "mapName": "GUNBARREL",
+   "note": "along its printed name"
+  },
+  "high-five": {
+   "polylines": [
+    16,
+    18,
+    65
+   ],
+   "confidence": "high",
+   "mapName": "HIGH FIVE",
+   "note": "along High Five | checked on a crop | along its printed name"
+  },
+  "lizs": {
+   "polylines": [
+    11,
+    12,
+    17,
+    62,
+    76
+   ],
+   "confidence": "high",
+   "mapName": "LIZ'S",
+   "note": "symbol of Liz's | end of Liz's | along its printed name"
+  },
+  "maggies": {
+   "polylines": [
+    45,
+    46,
+    47,
+    102,
+    124
+   ],
+   "confidence": "high",
+   "mapName": "MAGGIE'S",
+   "note": "symbol of Maggie's | end of Maggie's | along its printed name"
+  },
+  "mombo": {
+   "polylines": [
+    20,
+    21,
+    22,
+    93,
+    99,
+    114
+   ],
+   "confidence": "high",
+   "mapName": "MOMBO",
+   "note": "checked on a crop | symbol of Mombo | end of Mombo | along its printed name"
+  },
+  "mombo-upper": {
+   "polylines": [
+    96
+   ],
+   "confidence": "high",
+   "mapName": "MOMBO UPPER",
+   "note": "along its printed name"
+  },
+  "pinnacles": {
+   "polylines": [
+    66,
+    74,
+    81
+   ],
+   "confidence": "high",
+   "mapName": "PINNACLES",
+   "note": "along its printed name"
+  },
+  "pistol": {
+   "polylines": [
+    135
+   ],
+   "confidence": "high",
+   "mapName": "PISTOL",
+   "note": "along its printed name"
+  },
+  "powder-line": {
+   "polylines": [
+    112
+   ],
+   "confidence": "high",
+   "mapName": "POWDER LINE",
+   "note": "along its printed name"
+  },
+  "powderbowl-run": {
+   "polylines": [
+    142
+   ],
+   "confidence": "high",
+   "mapName": "POWDERBOWL RUN",
+   "note": "traced along the drawn line"
+  },
+  "powderbowl-upper": {
+   "polylines": [
+    141
+   ],
+   "confidence": "high",
+   "mapName": "POWDERBOWL UPPER",
+   "note": "traced along the drawn line"
+  },
+  "powderbowl-woods": {
+   "noLine": true,
+   "label": [
+    79.65,
+    42.76
+   ],
+   "confidence": "high"
+  },
+  "ridge-run": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE RUN",
+   "note": "along Ridge Run"
+  },
+  "round-a-bout": {
+   "polylines": [
+    2,
+    3,
+    115
+   ],
+   "confidence": "high",
+   "mapName": "ROUND-A-BOUT",
+   "note": "end of Round-a-Bout | along Round-a-Bout | along its printed name"
+  },
+  "ski-way-glades": {
+   "noLine": true,
+   "label": [
+    49.15,
+    22.02
+   ],
+   "confidence": "high"
+  },
+  "sky-canyon": {
+   "polylines": [
+    86
+   ],
+   "confidence": "high",
+   "mapName": "SKY CANYON",
+   "note": "along its printed name"
+  },
+  "sky-chute": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "SKY CHUTE",
+   "note": "along Sky Chute"
+  },
+  "skyline-trail": {
+   "polylines": [
+    8,
+    9,
+    10,
+    61,
+    63,
+    72
+   ],
+   "confidence": "high",
+   "mapName": "SKYLINE TRAIL",
+   "note": "symbol of Skyline trail | checked on a crop | along its printed name"
+  },
+  "steins-way": {
+   "polylines": [
+    120
+   ],
+   "confidence": "high",
+   "mapName": "STEIN'S WAY",
+   "note": "along its printed name"
+  },
+  "swing-trail": {
+   "polylines": [
+    107
+   ],
+   "confidence": "high",
+   "mapName": "SWING TRAIL",
+   "note": "along its printed name"
+  },
+  "waterfall": {
+   "polylines": [
+    111
+   ],
+   "confidence": "high",
+   "mapName": "WATERFALL",
+   "note": "along its printed name"
+  },
+  "world-cup": {
+   "polylines": [
+    138
+   ],
+   "confidence": "high",
+   "mapName": "WORLD CUP",
+   "note": "along its printed name"
+  },
+  "100-saddle": {
+   "polylines": [
+    128
+   ],
+   "confidence": "high",
+   "mapName": "$100 SADDLE",
+   "note": "along its printed name"
+  },
+  "aries": {
+   "polylines": [
+    79
+   ],
+   "confidence": "high",
+   "mapName": "ARIES",
+   "note": "along its printed name"
+  },
+  "aries-woods": {
+   "noLine": true,
+   "label": [
+    31.41,
+    43.9
+   ],
+   "confidence": "high"
+  },
+  "big-dipper": {
+   "polylines": [
+    4,
+    6,
+    7,
+    75,
+    83
+   ],
+   "confidence": "high",
+   "mapName": "BIG DIPPER",
+   "note": "checked on a crop | symbol of Big Dipper | end of Big Dipper | along its printed name"
+  },
+  "bonanza": {
+   "polylines": [
+    32,
+    34,
+    110
+   ],
+   "confidence": "high",
+   "mapName": "BONANZA",
+   "note": "symbol of Bonanza | checked on a crop | along its printed name"
+  },
+  "boulder-chute": {
+   "polylines": [
+    137
+   ],
+   "confidence": "high",
+   "mapName": "BOULDER CHUTE",
+   "note": "along its printed name"
+  },
+  "cloud-nine": {
+   "polylines": [
+    122
+   ],
+   "confidence": "high",
+   "mapName": "CLOUD NINE",
+   "note": "along its printed name"
+  },
+  "comet": {
+   "polylines": [
+    29,
+    30,
+    31,
+    84,
+    105
+   ],
+   "confidence": "high",
+   "mapName": "COMET",
+   "note": "checked on a crop | symbol of Comet | along its printed name"
+  },
+  "comstock": {
+   "polylines": [
+    58,
+    59,
+    129
+   ],
+   "confidence": "high",
+   "mapName": "COMSTOCK",
+   "note": "checked on a crop | symbol of Comstock | along its printed name"
+  },
+  "cosmic-wave": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "COSMIC WAVE",
+   "note": "along Cosmic Wave"
+  },
+  "crossover": {
+   "polylines": [
+    37,
+    41,
+    90,
+    117
+   ],
+   "confidence": "high",
+   "mapName": "CROSSOVER",
+   "note": "symbol of Crossover | checked on a crop | along its printed name"
+  },
+  "dipper-line": {
+   "polylines": [
+    68
+   ],
+   "confidence": "high",
+   "mapName": "DIPPER LINE",
+   "note": "along its printed name"
+  },
+  "dipper-return-lower": {
+   "polylines": [
+    5,
+    108
+   ],
+   "confidence": "high",
+   "mapName": "DIPPER RETURN LOWER",
+   "note": "symbol of Dipper Return Lower | along its printed name"
+  },
+  "dipper-return-upper": {
+   "polylines": [
+    104
+   ],
+   "confidence": "high",
+   "mapName": "DIPPER RETURN UPPER",
+   "note": "along its printed name"
+  },
+  "dipper-woods": {
+   "noLine": true,
+   "label": [
+    22.92,
+    32.21
+   ],
+   "confidence": "high"
+  },
+  "emilys-run": {
+   "polylines": [
+    133
+   ],
+   "confidence": "high",
+   "mapName": "EMILY'S RUN",
+   "note": "along its printed name"
+  },
+  "galaxy": {
+   "polylines": [
+    123,
+    132
+   ],
+   "confidence": "high",
+   "mapName": "GALAXY",
+   "note": "along its printed name"
+  },
+  "galaxy-line": {
+   "polylines": [
+    116
+   ],
+   "confidence": "high",
+   "mapName": "GALAXY LINE",
+   "note": "along its printed name"
+  },
+  "jacks": {
+   "polylines": [
+    97
+   ],
+   "confidence": "high",
+   "mapName": "JACK'S",
+   "note": "along its printed name"
+  },
+  "little-dipper": {
+   "polylines": [
+    82
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE DIPPER",
+   "note": "along its printed name"
+  },
+  "meteor": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "METEOR",
+   "note": "along its printed name"
+  },
+  "milky-way": {
+   "polylines": [
+    73
+   ],
+   "confidence": "high",
+   "mapName": "MILKY WAY",
+   "note": "along its printed name"
+  },
+  "mineshaft": {
+   "polylines": [
+    57,
+    126
+   ],
+   "confidence": "high",
+   "mapName": "MINESHAFT",
+   "note": "symbol of Mineshaft | along its printed name"
+  },
+  "nevada-trail": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "NEVADA TRAIL",
+   "note": "along Nevada Trail"
+  },
+  "nevada-woods": {
+   "noLine": true,
+   "label": [
+    32.97,
+    70.91
+   ],
+   "confidence": "high"
+  },
+  "north-bowl-upper": {
+   "polylines": [
+    143
+   ],
+   "confidence": "high",
+   "mapName": "NORTH BOWL UPPER",
+   "note": "traced along the drawn line"
+  },
+  "nova": {
+   "polylines": [
+    51,
+    94
+   ],
+   "confidence": "high",
+   "mapName": "NOVA",
+   "note": "checked on a crop | along its printed name"
+  },
+  "olympic-downhill": {
+   "polylines": [
+    38,
+    39,
+    40,
+    42,
+    121,
+    134
+   ],
+   "confidence": "high",
+   "mapName": "OLYMPIC DOWNHILL",
+   "note": "checked on a crop | symbol of Olympic Downhill | along its printed name"
+  },
+  "orion": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "ORION",
+   "note": "along Orion"
+  },
+  "orions-belt": {
+   "polylines": [
+    88
+   ],
+   "confidence": "high",
+   "mapName": "ORION'S BELT",
+   "note": "along its printed name"
+  },
+  "outlaw": {
+   "polylines": [
+    127
+   ],
+   "confidence": "high",
+   "mapName": "OUTLAW",
+   "note": "along its printed name"
+  },
+  "pepis": {
+   "polylines": [
+    35,
+    36,
+    125
+   ],
+   "confidence": "high",
+   "mapName": "PEPI'S",
+   "note": "end of Pepi's | checked on a crop | along its printed name"
+  },
+  "perimeter": {
+   "polylines": [
+    119
+   ],
+   "confidence": "high",
+   "mapName": "PERIMETER",
+   "note": "along its printed name"
+  },
+  "perimeter-upper": {
+   "polylines": [
+    92
+   ],
+   "confidence": "high",
+   "mapName": "PERIMETER UPPER",
+   "note": "along its printed name"
+  },
+  "ponderosa": {
+   "polylines": [
+    33,
+    113
+   ],
+   "confidence": "high",
+   "mapName": "PONDEROSA",
+   "note": "symbol of Ponderosa | along its printed name"
+  },
+  "rim-trail": {
+   "polylines": [
+    56,
+    118
+   ],
+   "confidence": "high",
+   "mapName": "RIM TRAIL",
+   "note": "end of Rim Trail | along its printed name"
+  },
+  "sand-dunes": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "SAND DUNES",
+   "note": "symbol of Sand Dunes"
+  },
+  "stagecoach": {
+   "polylines": [
+    131
+   ],
+   "confidence": "high",
+   "mapName": "STAGECOACH",
+   "note": "along its printed name"
+  },
+  "stagecoach-lower": {
+   "polylines": [
+    139
+   ],
+   "confidence": "high",
+   "mapName": "STAGECOACH LOWER",
+   "note": "along its printed name"
+  },
+  "stagecoach-return": {
+   "polylines": [
+    140
+   ],
+   "confidence": "high",
+   "mapName": "STAGECOACH RETURN",
+   "note": "along its printed name"
+  },
+  "stagecoach-woods": {
+   "noLine": true,
+   "label": [
+    24.89,
+    62.2
+   ],
+   "confidence": "high"
+  },
+  "the-pines": {
+   "polylines": [
+    130
+   ],
+   "confidence": "high",
+   "mapName": "THE PINES",
+   "note": "along its printed name"
+  },
+  "49er": {
+   "polylines": [
+    85
+   ],
+   "confidence": "high",
+   "mapName": "49ER",
+   "note": "along its printed name"
+  },
+  "big-easy": {
+   "polylines": [
+    101
+   ],
+   "confidence": "high",
+   "mapName": "BIG EASY",
+   "note": "along its printed name"
+  },
+  "california-trail": {
+   "polylines": [
+    23,
+    24,
+    25,
+    26,
+    27,
+    69,
+    80,
+    98
+   ],
+   "confidence": "high",
+   "mapName": "CALIFORNIA TRAIL",
+   "note": "end of California Trail | checked on a crop | symbol of California Trail | along its printed name"
+  },
+  "cascade": {
+   "polylines": [
+    78
+   ],
+   "confidence": "high",
+   "mapName": "CASCADE",
+   "note": "along its printed name"
+  },
+  "easy-street": {
+   "polylines": [
+    100
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "along its printed name"
+  },
+  "sams-dream": {
+   "polylines": [
+    87
+   ],
+   "confidence": "high",
+   "mapName": "SAM'S DREAM",
+   "note": "along its printed name"
+  },
+  "silver-spur": {
+   "polylines": [
+    60,
+    103
+   ],
+   "confidence": "high",
+   "mapName": "SILVER SPUR",
+   "note": "checked on a crop | along its printed name"
+  },
+  "tamarack-return": {
+   "polylines": [
+    89
+   ],
+   "confidence": "high",
+   "mapName": "TAMARACK RETURN",
+   "note": "along its printed name"
+  },
+  "von-schmidt": {
+   "polylines": [
+    43,
+    44,
+    95,
+    106
+   ],
+   "confidence": "high",
+   "mapName": "VON SCHMIDT",
+   "note": "checked on a crop | end of Von Schmidt | along its printed name"
+  }
+ }
+}

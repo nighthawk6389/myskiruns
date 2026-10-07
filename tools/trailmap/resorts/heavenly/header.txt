@@ -1,0 +1,47 @@
+// Heavenly's trail map: the 2024-25 artwork, still the resort's current map,
+// as an image on Vail Resorts' scene7 CDN (skiheavenly.com shows it and links
+// no winter PDF): the main painting of the California and Nevada sides and the
+// Top of Gondola inset, as two panels. Its lines, names and symbols come from
+// the 2022-23 PDF of the same artwork (skimap.org map 23043), registered on
+// each painting (tools/trailmap/resorts/heavenly/): every place the two
+// editions differ was checked on the image, and what it no longer prints left
+// out (Widow Maker, now Lone Wolf; Upper Powderbowl's and Powderbowl Run's
+// labels, since moved, are traced where the image prints them); Lakeview Park
+// is new. Lines are outlined blue and green routes, solid or dashed, and
+// Ellie's dark line; most runs have no line: their names are printed along the
+// painted cuts, the symbol before the name, and the overlay is the stretch
+// along the name from its symbol. Each line takes the name printed along it or
+// at its end; the rest was settled on zoomed crops (decisions.py), with the
+// PDF's drawing order and OpenStreetMap's runs: High Five's line forks above
+// the Sky Deck to both lifts' feet; California Trail's ends in two arrows into
+// the Sky Deck; Comet's starts at Sand Dunes' arrow; Big Dipper's runs on to
+// Upper Dipper Return's square; Nova's leaves Big Dipper's; Crossover's forks
+// below its lower label to the North Bowl Express top and towards Cloud 9; at
+// the top of the gondola, Von Schmidt is the lower label's line round the
+// hairpin into the upper label and on to California Trail (an older edition's
+// navigation map: Nevada to the Top of Gondola by Comet and the Von Schmidt
+// traverse), Silver Spur the line from Easy Street's circle down to it and its
+// name on to Bonanza, Bonanza the line from the lower label to its name, and
+// Olympic Downhill the line down from the Olympic Express top. Lines the map
+// doesn't name have no overlay: a link under the Canyon Express, two green
+// arrows from the Sky Deck lodge, the inset's ways to California and Nevada.
+// Names are as the resort's trail report spells them (this season's, else
+// 2024-25's, the season the map was drawn for); names the report has changed
+// since are as printed (Express Line, now Sky Express Line; Canyonland and
+// Ridge Run, now each split in two), and a run the report splits into an upper
+// and a lower part but the map prints on one line is one trail (California
+// Trail, Liz's, Comstock, Mineshaft, Olympic Downhill, Stagecoach, Gunbarrel,
+// Von Schmidt). Difficulty: the symbol printed by the name (two diamonds,
+// double black); Mott and Killebrew Canyons' 21 named chutes, printed with no
+// symbol, take the canyons' double diamond (the report's Extreme); Rim Trail, a
+// dark line, black. Every rating agrees with the report but Hogsback's (a
+// diamond on the map, double black on this season's report). Bowls, faces,
+// woods (glades), the canyons' chutes, the parks and the learning areas are
+// markers at their names. The report's learning areas and tubing hill (The
+// Meadow, Boulder Carpet Run, Black Bear Hollow, Tubing Run), Groove Trail,
+// Pioneer Trail and Red Fir (the map names only their lifts), Ridge Way, Sky
+// Chute 2, Galaxy Woods and Pinnacle Glades aren't on the map. Trails are
+// grouped by the report's areas (California, Nevada, Top of Gondola);
+// elevations: the summits printed above the Sky Express and Milky Way Bowl,
+// and the top of the Tamarack Express. x/y/baseY/width are unused layout
+// fields.

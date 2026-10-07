@@ -2,10 +2,10 @@
 
 A React + TypeScript app for tracking which trails you've skied, on the
 resorts' own trail maps: every trail is a clickable, correctly named overlay on
-the map. Twenty resorts so far (Killington, Stowe, Okemo, Sugarbush, Jay
+the map. Twenty-one resorts so far (Killington, Stowe, Okemo, Sugarbush, Jay
 Peak, Whiteface, Winter Park, Breckenridge, Copper Mountain, Keystone, Vail,
 Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Smugglers' Notch,
-Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky).
+Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky, Heavenly).
 The
 interesting part of this repo is the **trail-map pipeline** that puts those
 overlays on a map: from a resort's PDF (vector lines, text, outlined glyphs) or
@@ -207,9 +207,10 @@ labeled / labeled incorrectly" at the data source.
 Each resort has its own folder, `src/data/resorts/<id>/` (`trails.ts`,
 `linePolylines.json`, `trailProposals.json`, `trailReviews.json`, generated
 `trailPaths.json`), a map at `public/maps/<id>.jpg`, and an entry in
-`src/resorts.ts` (with its state or province). With more than one resort
-the header shows a resort picker (also `?resort=<id>` in the URL): a search
-over the names and states, grouped by state until something is typed
+`src/resorts.ts` (with its state or province, and any other places the
+search should find it by: Heavenly's Nevada, Lake Tahoe). With more than one
+resort the header shows a resort picker (also `?resort=<id>` in the URL): a
+search over the names and places, grouped by state until something is typed
 (`src/components/ResortPicker/`, the matching in `src/resortSearch.ts`,
 tested by `npm test`). Trips belong to a resort (older
 trips are Killington's), and condition votes are stored per resort. The
@@ -231,8 +232,8 @@ Resorts so far: Killington, Stowe and Okemo (reviewed on the Trail Check
 page); Sugarbush, Jay Peak, Whiteface, Winter Park, Breckenridge, Copper
 Mountain, Keystone, Vail, Hunter Mountain, Wildcat Mountain, Sunday River,
 Sugarloaf, Smugglers' Notch, Whistler Blackcomb, Park City, Palisades
-Tahoe and Big Sky (current maps, no review page: every overlay checked on
-zoomed crops instead, see the playbook).
+Tahoe, Big Sky and Heavenly (current maps, no review page: every overlay
+checked on zoomed crops instead, see the playbook).
 
 ## Scripts
 
@@ -247,7 +248,7 @@ zoomed crops instead, see the playbook).
 | `npm run trails:apply -- --resort <id> [--panel <p>]` | proposals + reviews → `trailPaths.json` (what the app draws) |
 | `npm run reviews:import -- <export dir> --resort <id>` | review-page export → `trailReviews.json` |
 | `tools/trailmap/resorts/vail/regen.sh` | rebuild all of Vail's data from its readings and decisions |
-| `tools/trailmap/resorts/<id>/regen.sh` | rebuild all of Hunter Mountain's, Wildcat Mountain's, Sunday River's, Sugarloaf's, Smugglers' Notch's, Whistler Blackcomb's, Park City's, Palisades Tahoe's or Big Sky's data from its PDF and decisions (`tools/trailmap/pdf_resort.py`; Whistler Blackcomb's, Palisades Tahoe's and Big Sky's in three panels) |
+| `tools/trailmap/resorts/<id>/regen.sh` | rebuild all of Hunter Mountain's, Wildcat Mountain's, Sunday River's, Sugarloaf's, Smugglers' Notch's, Whistler Blackcomb's, Park City's, Palisades Tahoe's, Big Sky's or Heavenly's data from its PDF and decisions (`tools/trailmap/pdf_resort.py`; Whistler Blackcomb's, Palisades Tahoe's and Big Sky's in three panels, Heavenly's in two) |
 | `npm test` | the trip merge and sync rules and the resort search (`tests/*.test.ts`, Node's test runner) |
 | `node scripts/mockSupabase.cjs` | a stand-in Supabase project, for trying accounts without one |
 | `node tools/accounts_check.cjs` | browser check: two devices sign in, sync, edit offline, delete (header has the setup) |
@@ -368,8 +369,8 @@ and re-encoded with 4:2:0 chroma subsampling — prefer it as pipeline input.
 
 ## What's left
 
-1. **A person's confirmation** for the seventeen resorts Claude checked on
-   crops instead of the review page (Sugarbush through Big Sky), if the
+1. **A person's confirmation** for the eighteen resorts Claude checked on
+   crops instead of the review page (Sugarbush through Heavenly), if the
    owner wants it: the Trail Check page can be published for any resort
    (playbook, step 4).
 2. **Shared tooling** (playbook, "Scaling to many maps"): the label-to-piece

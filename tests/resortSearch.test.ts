@@ -58,6 +58,23 @@ test('a state, or its postal abbreviation, finds its resorts after any name matc
   assert.deepEqual(ids('me'), ['sunday-river']);
 });
 
+test('a resort is also found by the other places it lists, and grouped by its region alone', () => {
+  const tahoe = [
+    { id: 'palisades-tahoe', name: 'Palisades Tahoe', region: 'California', also: ['Lake Tahoe'] },
+    { id: 'heavenly', name: 'Heavenly', region: 'California', also: ['Nevada', 'Lake Tahoe'] },
+  ];
+  const find = (q: string) => searchResorts(tahoe, q).map((r) => r.id);
+  assert.deepEqual(find('nevada'), ['heavenly']);
+  assert.deepEqual(find('nv'), ['heavenly']);
+  // a name match before a place match
+  assert.deepEqual(find('tahoe'), ['palisades-tahoe', 'heavenly']);
+  assert.deepEqual(find('lake tahoe'), ['heavenly', 'palisades-tahoe']);
+  assert.deepEqual(find('ca'), ['heavenly', 'palisades-tahoe']);
+  assert.deepEqual(byRegion(tahoe).map((g) => [g.region, g.resorts.map((r) => r.id)]), [
+    ['California', ['heavenly', 'palisades-tahoe']],
+  ]);
+});
+
 test('nothing matches a word no resort has', () => {
   assert.deepEqual(ids('whistler'), []);
 });

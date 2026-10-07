@@ -1,0 +1,34 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "big-easy": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "BIG EASY",
+   "note": "along Big Easy"
+  },
+  "easy-street": {
+   "polylines": [
+    7,
+    10
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "end of Easy Street | along its printed name"
+  },
+  "von-schmidt": {
+   "polylines": [
+    0,
+    1,
+    2,
+    3,
+    9
+   ],
+   "confidence": "high",
+   "mapName": "VON SCHMIDT",
+   "note": "checked on a crop | end of Von Schmidt | along its printed name"
+  }
+ }
+}

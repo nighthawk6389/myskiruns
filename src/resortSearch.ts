@@ -6,6 +6,8 @@ export interface ResortOption {
   name: string;
   /** state or province */
   region: string;
+  /** other places it is found by: a second state (a resort on a state line), its lake */
+  also?: readonly string[];
 }
 
 /** Lower case, no accents, straight apostrophes: "Smugglers’" finds "smugglers'". */
@@ -40,9 +42,9 @@ const ABBREVIATIONS: Record<string, string> = {
 };
 
 /** How well a resort matches a query: 0 the name starts with it, 1 a word of
- * the name does, 2 the name contains it, 3 its region (or the region's postal
- * abbreviation) matches, null no match. Apostrophes, hyphens and dots don't
- * count ("smugglers notch", "jaypeak"). */
+ * the name does, 2 the name contains it, 3 its region or another place it is
+ * found by (or a state's postal abbreviation) matches, null no match.
+ * Apostrophes, hyphens and dots don't count ("smugglers notch", "jaypeak"). */
 function rank(r: ResortOption, q: string): number | null {
   const name = fold(r.name);
   const bare = (s: string) => s.replace(/['\-.]/g, '');
@@ -51,9 +53,10 @@ function rank(r: ResortOption, q: string): number | null {
   if (nb.startsWith(qb) || nb.replace(/\s+/g, '').startsWith(qb.replace(/\s+/g, ''))) return 0;
   if (nb.split(/\s+/).some((w) => w.startsWith(qb))) return 1;
   if (nb.includes(qb) || nb.replace(/\s+/g, '').includes(qb.replace(/\s+/g, ''))) return 2;
-  const region = fold(r.region);
-  if (region.startsWith(q) || region.split(/\s+/).some((w) => w.startsWith(q))) return 3;
-  if (ABBREVIATIONS[region] === qb) return 3;
+  for (const place of [r.region, ...(r.also ?? [])].map(fold)) {
+    if (place.startsWith(q) || place.split(/\s+/).some((w) => w.startsWith(q))) return 3;
+    if (ABBREVIATIONS[place] === qb) return 3;
+  }
   return null;
 }
 

@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort map image to clickable, named trails
 
-This is the process that put clickable, correctly named trails on twenty
+This is the process that put clickable, correctly named trails on twenty-one
 resorts' current trail maps, starting with Killington (135 trails), written so
 it can be repeated (and sped up) for other resorts. It records what worked,
 what didn't, and what each step cost. Start with **Pick a route**: the source
@@ -23,7 +23,7 @@ a blank page to see what it is.
 |---|---|---|
 | trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; match each name to the stroke it is printed along (`pdf_resort.py`), settle the rest on crops yourself (step 3c); no readers | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels) |
 | vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels) |
-| lines as filled outlines, names as outlined glyphs | rasterise the outline fills and thin them to centre lines (Copper notes in step 1); `pdf_glyphs.py` | Copper Mountain |
+| lines as filled outlines, names as outlined glyphs | rasterise the outline fills and thin them to centre lines (Copper notes in step 1), or read each outline's centre line straight from its path (Heavenly); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork, two panels) |
 | vector strokes, names you can't extract | numbered tiles read by parallel readers (step 3) | Stowe, Okemo, Sugarbush |
 | a painting with no lines, names as text | the trace pass along the painted cuts (step 3b) | Jay Peak |
 | only raster images | `raster_lines.py` + `raster_symbols.py` (or `lineDetector.mjs`), pieces named on review tiles (3c) or by readers | Vail (three panels), Killington |
@@ -36,7 +36,10 @@ This season's PDF has outlined names and flattened lines, but an older export
 of the same artwork has them live (skimap.org keeps past seasons): register the
 two pages on renders, check that every old name lands on the same outlined
 name in this season's page and that this season prints no other name, then
-take the strokes, text and symbols from the old export (Wildcat).
+take the strokes, text and symbols from the old export (Wildcat). Where the
+current map is only an image, the same works with the image (Heavenly): find
+every place it differs from the old page, leave out what it no longer prints
+and trace what it prints anew.
 
 ## Resorts so far
 
@@ -62,13 +65,14 @@ take the strokes, text and symbols from the old export (Wildcat).
 | Park City | PDF strokes + outlined glyphs over a low-resolution painting, a main map and a redrawn inset | 345 (252 + 93) | glyphs read on sheets; 446 pieces named by the name at their end or along them, 97 settled on crops and 12 found not to be trails, 5 cuts; names, ratings and sides checked against the resort's trail report, lines two names could share against OpenStreetMap's runs and the PDF's drawing order; every overlay audited on crops |
 | Palisades Tahoe | three PDFs (the Palisades side, Alpine's front and back) of strokes + outlined glyphs over a painting, as three panels | 247 (124 + 123) | glyphs read on sheets; 234 pieces named by the name at their end or along them, 54 settled on crops and 4 found not to be trails, 1 cut, 1 stretch traced; names, ratings and mountains checked against the resort's trail report, lines two names could share against the PDF's drawing order and OpenStreetMap's runs; every overlay audited on crops |
 | Big Sky | three PDFs (the main map of its three mountains, the South Face and Bowl insets) of strokes + text over a painting, as three panels | 323 (290 + 33) | 343 pieces named by the name at their end or along them, 55 settled on crops and 30 found not to be trails, 15 cuts, 5 trimmed where they run on under another line; names, ratings and mountains checked against the resort's trail report, lines two names could share against the PDF's drawing order and OpenStreetMap's runs; every overlay audited on crops |
+| Heavenly | the 2024-25 map as an image only (the California and Nevada sides and the Top of Gondola inset, two panels); its lines, names and symbols from the 2022-23 PDF of the same artwork (lines as filled outlines, names as outlined glyphs), registered on the image | 120 (73 + 47) | glyphs read on sheets; 45 pieces named by the name at their end or along them, 19 settled on crops and 6 found not to be trails, 3 stretches traced (2 labels the image prints elsewhere than the 2022 page, 1 name on two lines); most runs have no line: the stretch along the name printed on the run is its overlay; every change since 2022 checked on the image; names, ratings and areas checked against the resort's trail report, lines two names could share against OpenStreetMap's one-way runs, the PDF's drawing order and an older edition's navigation map; every overlay audited on crops |
 
 Where each resort's decisions live: each piece's name is in
 `trailProposals.json` (a vector extraction is deterministic, so a PDF map's
 piece ids are stable), stretches and markers in `trailReviews.json`
 (`"by": "claude"` unless a person decided). Vail's and Hunter Mountain's
 pipelines are in the repo, in `tools/trailmap/resorts/<id>/`, and so are
-Wildcat's, Sunday River's, Sugarloaf's, Smugglers' Notch's, Whistler Blackcomb's (per panel), Park City's, Palisades Tahoe's and Big Sky's (per panel): decisions are kept as points (Vail's raster piece ids change
+Wildcat's, Sunday River's, Sugarloaf's, Smugglers' Notch's, Whistler Blackcomb's (per panel), Park City's, Palisades Tahoe's, Big Sky's and Heavenly's (per panel): decisions are kept as points (Vail's raster piece ids change
 whenever the detector is re-tuned) and `regen.sh` rebuilds every file of the
 resort from them (byte for byte). Hunter's is the template for a PDF map: `resort.py` says how the
 map prints things, `decisions.py` holds what the crops settled, and
@@ -137,6 +141,7 @@ every overlay on crops and run the hover check (step 4).
 | `tools/trailmap/resorts/park-city/` | Park City's: a main map and a redrawn inset at another scale (`prepare.py`), the bits of line redrawn over crossings dropped, names in grey ovals with their symbol under the oval (`SYMBOL_OF`) |
 | `tools/trailmap/resorts/palisades-tahoe/` | Palisades Tahoe's: three PDFs read as three panels (`prepare.py`: strokes drawn twice give one piece, a stroke hidden under another colour's none), names not printed along their line kept off it (`NO_STRETCH`) |
 | `tools/trailmap/resorts/big-sky/` | Big Sky's: three PDFs read as three panels, names as text spelled as the resort's trail report spells them (`report.json`, `NAMES`), lines drawn as filled ribbons read by their centre lines and cut at an inset's frame (`prepare.py`), a name's own line before the one ending at it (`ALONG_FIRST`), thin lines drawn on under wider ones trimmed (`TRIMS`) |
+| `tools/trailmap/resorts/heavenly/` | Heavenly's: the current map as an image (two panels) with its lines, names and symbols from an older PDF of the same artwork registered on it (`AFFINE`), what the image no longer prints left out (`GONE`); lines as filled outlines read by their centre lines, dashes chained, branched outlines by their skeletons (`prepare.py`); names printed along runs with no line as the runs' overlays (`LABEL_LINE`); a name's two parts picked by where they are printed (`JOIN`) |
 | `tools/trailmap/pdf_overlaps.py` | Overlays lying along another trail's line for a PDF resort (a line drawn on under another, or two runs on one stroke): each to check on a crop |
 | `tools/trailmap/fetch_pdf.cjs` | Downloads a PDF from inside the resort's page in headless Chromium (Vail Resorts' sites refuse curl) |
 | `tools/trailmap/render_tiles.py` | Zoomed tiles with every piece drawn and numbered, for the readers |
@@ -744,6 +749,56 @@ Getting the source in this sandbox:
     Liberty Bowl's and Ace's along the traverses they leave; each stops where
     it meets the other line (`TRIMS`). Hover check 753/753, 125/125, 138/139
     (the miss: a point of the Turkey Traverse at a gully's foot).
+- **The current map as an image, an older PDF of its artwork (Heavenly):**
+  skiheavenly.com shows its 2024-25 map (still the current one) as a scene7
+  image and links no winter PDF; skimap.org has the 2022-23 PDF of the same
+  artwork. Its page registers on the image's two paintings (SIFT matches and
+  RANSAC on renders: 5837 inliers on the main painting, median residual
+  0.10 px; 0.25 px on the inset), fixed in `resort.py` (`AFFINE`), so a
+  regeneration doesn't depend on feature matching.
+  - Every place the editions differ: the difference of the warped page and
+    the image, every region looked at side by side. A name or symbol the
+    image no longer prints is left out (`GONE`: Widow Maker, now Lone Wolf;
+    two moved labels and their squares); what it prints anew is `EXTRA`
+    (Lakeview Park, Lone Wolf), and a moved label's stretch is traced where
+    the image prints it. A check of each line piece and label against the
+    image's ink (the share of points with its colour within 2 px) finds the
+    rest.
+  - Lines are filled outlines (the artwork's strokes outlined), not strokes:
+    each outline narrower than the panel's lines is read by its centre line
+    (split at its two farthest-apart points, each point of one side paired
+    with the nearest of the other); a dashed line is one fill with one
+    outline per dash, chained in drawing order. Arrowheads have a shape of
+    their own (two curves and a notch); an outline with more area than one
+    line of its length (two lines drawn as one, an arrowhead merged into its
+    line) is skeletonised (`raster_lines.py`'s graph, junctions joined
+    straight). The names' letters are outlines of the dark line colour too:
+    a dark outline is a line only if it is long.
+  - Names: outlined glyphs (`pdf_glyphs.py`); M and W are one shape turned
+    over (`--turned WM`); O and zero match each other (a word with letters
+    takes O); circles are drawn with 16 curves (`--circle-curves`); two
+    diamonds one above the other are a double diamond (`--double-dist`).
+    The trail report: Common Crawl's capture of the terrain-status page (its
+    `FR.TerrainStatusFeed`, every trail with its area and rating), this
+    season's and 2024-25's (`report.json`); names take this season's
+    spelling, else 2024-25's; renamed runs keep the map's name.
+  - Most runs have no line: the name is printed along the painted cut, the
+    symbol before it. Such a name's stretch, from its symbol along its
+    characters, is the run's overlay (`LABEL_LINE`); a name on two lines
+    gets a traced stretch instead. Bowls, faces, woods, the canyons' named
+    chutes (no symbol: the canyons' double diamond, `DEFAULT_SYMBOL`), the
+    parks and the learning areas are markers.
+  - `JOIN` takes a part as (text, (x, y)) where the nearest copy of a word
+    is another name's (UPPER and MOMBO either side of a lift, another MOMBO
+    below).
+  - The lines at the top of the gondola were settled with OpenStreetMap's
+    one-way runs (where each starts and what it meets: Von Schmidt from the
+    Olympic Express top past Bonanza's and Easy Street's starts to
+    California Trail) and an older edition's navigation map ("Nevada to the
+    Top of Gondola: Comet, then the Von Schmidt traverse"), against the
+    auto-match, which had given the hairpin into Von Schmidt's label to the
+    name ending at its foot. Hover check 265/266 (the miss: Silver Spur's
+    overlay along the stretch of Von Schmidt's label it shares) and 9/9.
 - **Several panels:** a resort drawn on more than one map keeps one
   `trails.ts` and, per panel, `panels/<panel>/` with its own
   `linePolylines`, `trailProposals`, `trailReviews` and `trailPaths`; the map

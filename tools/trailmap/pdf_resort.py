@@ -112,6 +112,11 @@ def tid(name):
     return sr.slug(sr.norm(name))
 
 
+def join_text(parts):
+    """The name a resort.JOIN entry prints: its parts' texts (a part may be (text, (x, y)))."""
+    return ' '.join(t if isinstance(t, str) else t[0] for t in parts)
+
+
 def load_module(path, name):
     """A resort.py or decisions.py by its path (a resort drawn on several panels has one of each per panel)."""
     spec = importlib.util.spec_from_file_location(name, path)
@@ -211,11 +216,17 @@ class Resort:
                     keep.append({**l, 'text': p, 'pts': pts,
                                  'c': (sum(q[0] for q in pts) / len(pts), sum(q[1] for q in pts) / len(pts))})
         for parts in getattr(R, 'JOIN', []):  # a name printed in parts (two or three lines), in reading order
-            for first in [l for l in keep if l['text'] == parts[0]]:
+            # a part is its text, or (text, (x, y)): the label printing it near that point (map px), where the
+            # nearest one is another name's (Heavenly's UPPER and MOMBO either side of a lift, another MOMBO below)
+            parts = [(t, None) if isinstance(t, str) else t for t in parts]
+
+            def at(l, part):
+                return l['text'] == part[0] and (part[1] is None or math.dist(l['c'], part[1]) < 40)
+            for first in [l for l in keep if at(l, parts[0])]:
                 chain = [first]
-                for t in parts[1:]:
+                for part in parts[1:]:
                     gap = lambda l: min(math.dist(p, q) for p in chain[-1]['pts'] for q in l['pts'])  # noqa: E731
-                    nxt = min((l for l in keep if l['text'] == t and l not in chain), key=gap, default=None)
+                    nxt = min((l for l in keep if at(l, part) and l not in chain), key=gap, default=None)
                     if nxt is None or gap(nxt) > getattr(R, 'JOIN_GAP', 8) * R.SCALE:
                         break
                     chain.append(nxt)
@@ -224,7 +235,7 @@ class Resort:
                 for l in chain:
                     keep.remove(l)
                 pts = [p for l in chain for p in l['pts']]
-                keep.append({'text': ' '.join(parts), 'pts': pts, 'color': chain[0].get('color'),
+                keep.append({'text': ' '.join(t for t, _q in parts), 'pts': pts, 'color': chain[0].get('color'),
                              'c': (sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts))})
         drop = getattr(R, 'DROP', [])
         spelled = {spelling_key(nm): nm for nm in getattr(R, 'NAMES', ())}
@@ -305,7 +316,7 @@ class Resort:
         else:  # pdf_glyphs.py's symbols, in PDF points
             syms = [{'t': s['t'], 'c': self.px(s['c']), 'r': 1.5 * self.R.SCALE}
                     for s in self.load('printed.json')['symbols']]
-        joined = {' '.join(parts) for parts in getattr(self.R, 'JOIN', [])}
+        joined = {join_text(parts) for parts in getattr(self.R, 'JOIN', [])}
         used_s, used_n = set(), set()
         for q, name in getattr(self.R, 'SYMBOL_OF', []):  # a symbol printed beside its name but out of reach
             i = min(range(len(syms)), key=lambda i: math.dist(syms[i]['c'], q))
