@@ -32,7 +32,9 @@ and i, in some fonts (--turned nu: the half its gap is in decides), and 6 and 9 
 its hole is in). A run
 whose glyphs all sit on another, longer (or later) run's is a fragment copy
 and is dropped. Difficulty symbols are fills too: an even four-sided fill in
-the --square colour is a square, in the --diamond colour a diamond; two diamonds
+the --square colour is a square, in the --diamond colour a diamond (with
+--rounded also one whose corners are rounded, and with --rect-squares a
+near-square rectangle in the --square colour); two diamonds
 side by side (or one eight-sided fill) are a double diamond, and EX when
 small white letter fills sit inside; four curves in the --circle colour are a
 circle. Output: {"labels": [{seq, text, color, size, c, pts}], "symbols":
@@ -272,6 +274,14 @@ def labels(a):
     syms = []
     for g in G:
         k, s, big = g['kinds'], g['sig'], max(g['rect'][2] - g['rect'][0], g['rect'][3] - g['rect'][1]) >= a.sym_min
+        w, h = g['rect'][2] - g['rect'][0], g['rect'][3] - g['rect'][1]
+        if a.rounded and '|' not in k and 'c' in k and 'l' in k:
+            # corners rounded by short curves: the shape is its straight sides (all long; letters have short ones)
+            sides = [v for c, v in zip(k, s) if c == 'l']
+            if len(sides) in (4, 8) and min(sides) > 0.05 and sum(v for c, v in zip(k, s) if c == 'c') < 0.25:
+                k, s = 'l' * len(sides), sides
+        if a.rect_squares and k == 'l' and g['col'] in a.square and max(w, h) < a.even * min(w, h):
+            k, s = 'llll', [1.0]  # a square drawn as a rectangle
         even = len(s) > 0 and max(s) < a.even * min(s)
         g['ch'] = None
         if big and k == 'llll' and even and g['col'] in a.square:
@@ -393,6 +403,19 @@ def labels(a):
     for run in runs:
         if len(run) < 2 and run[0]['col'] not in a.single:
             continue  # a lone mark, not a label
+        if a.reorder and len(run) > 2:
+            # a glyph drawn out of turn (Palisades Tahoe's MAINLINE: its second i drawn after the e): order the run
+            # along its principal axis, pointing from its first drawn glyphs to its last
+            mx, my = sum(g['c'][0] for g in run) / len(run), sum(g['c'][1] for g in run) / len(run)
+            sxx = sum((g['c'][0] - mx) ** 2 for g in run); syy = sum((g['c'][1] - my) ** 2 for g in run)
+            sxy = sum((g['c'][0] - mx) * (g['c'][1] - my) for g in run)
+            th = 0.5 * math.atan2(2 * sxy, sxx - syy)
+            ax = (math.cos(th), math.sin(th))
+            proj = lambda g: (g['c'][0] - mx) * ax[0] + (g['c'][1] - my) * ax[1]  # noqa: E731
+            half = len(run) // 2
+            if sum(proj(g) for g in run[half:]) < sum(proj(g) for g in run[:half]):
+                ax = (-ax[0], -ax[1])
+            run = sorted(run, key=proj)
         dirs = directions(run)
         if a.space is None:
             gaps = [gap(p, q) for p, q in zip(run, run[1:])]
@@ -486,6 +509,13 @@ def main():
     lb.add_argument('--turned-hole', action='append', default=[],
                     help='two characters that are one shape turned over, the one with its hole low first: 69 (decided '
                          "by which half its hole is in: Park City's CLOUD 9 and 94 TURNS, its 6 BELLS)")
+    lb.add_argument('--reorder', action='store_true',
+                    help='order each label\'s glyphs along its axis rather than as drawn (a glyph drawn out of turn)')
+    lb.add_argument('--rounded', action='store_true',
+                    help="symbols with rounded corners: a shape of four (or eight) even straight sides joined by short "
+                         "curves is one with straight corners (Palisades Tahoe's Alpine maps)")
+    lb.add_argument('--rect-squares', action='store_true',
+                    help="a near-square rectangle in a --square colour is a square (Palisades Tahoe's main map)")
     lb.add_argument('--single', action='append', default=[],
                     help='colour class whose lone glyphs are labels too (one-digit numbered circles: Sugarloaf)')
     a = ap.parse_args()

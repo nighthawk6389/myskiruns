@@ -1,0 +1,735 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "attic": {
+   "polylines": [
+    69,
+    70
+   ],
+   "confidence": "high",
+   "mapName": "ATTIC",
+   "note": "checked on a crop | symbol of Attic"
+  },
+  "bills-boardwalk": {
+   "polylines": [
+    21,
+    22
+   ],
+   "confidence": "high",
+   "mapName": "BILL\u2019S BOARDWALK",
+   "note": "end of Bill\u2019s Boardwalk | symbol of Bill\u2019s Boardwalk"
+  },
+  "bottleneck-gully": {
+   "polylines": [
+    71,
+    197
+   ],
+   "confidence": "high",
+   "mapName": "BOTTLENECK GULLY",
+   "note": "checked on a crop | traced along the drawn line"
+  },
+  "bullet": {
+   "polylines": [
+    107,
+    164
+   ],
+   "confidence": "high",
+   "mapName": "BULLET",
+   "note": "end of Bullet | along its printed name"
+  },
+  "burkharts": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "BURKHART\u2019S",
+   "note": "checked on a crop"
+  },
+  "cii-ridge": {
+   "polylines": [
+    120,
+    121,
+    152
+   ],
+   "confidence": "high",
+   "mapName": "CII RIDGE",
+   "note": "end of CII Ridge | along its printed name"
+  },
+  "champs-elysees": {
+   "polylines": [
+    12,
+    13,
+    14,
+    76,
+    178,
+    183
+   ],
+   "confidence": "high",
+   "mapName": "CHAMPS ELYSEES",
+   "note": "end of Champs Elysees | symbol of Champs Elysees | continuation | along its printed name"
+  },
+  "chimney": {
+   "polylines": [
+    138
+   ],
+   "confidence": "high",
+   "mapName": "CHIMNEY",
+   "note": "symbol of Chimney"
+  },
+  "christmas-tree": {
+   "polylines": [
+    63,
+    113,
+    188
+   ],
+   "confidence": "high",
+   "mapName": "CHRISTMAS TREE",
+   "note": "symbol of Christmas Tree | end of Christmas Tree | along its printed name"
+  },
+  "chute-75": {
+   "polylines": [
+    52,
+    53,
+    170
+   ],
+   "confidence": "high",
+   "mapName": "CHUTE 75",
+   "note": "end of Chute 75 | symbol of Chute 75 | along its printed name"
+  },
+  "cornice-bowl": {
+   "polylines": [
+    48,
+    49,
+    157
+   ],
+   "confidence": "high",
+   "mapName": "CORNICE BOWL",
+   "note": "end of Cornice Bowl | along its printed name"
+  },
+  "costellos": {
+   "polylines": [
+    134,
+    135,
+    182
+   ],
+   "confidence": "high",
+   "mapName": "COSTELLO\u2019S",
+   "note": "symbol of Costello\u2019s | end of Costello\u2019s | along its printed name"
+  },
+  "cushmans": {
+   "polylines": [
+    112,
+    114,
+    187
+   ],
+   "confidence": "high",
+   "mapName": "CUSHMAN\u2019S",
+   "note": "end of Cushman\u2019s | symbol of Cushman\u2019s | along its printed name"
+  },
+  "easy-street": {
+   "polylines": [
+    74,
+    75
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "end of Easy Street | symbol of Easy Street"
+  },
+  "emigrant-face": {
+   "polylines": [
+    31,
+    32,
+    143
+   ],
+   "confidence": "high",
+   "mapName": "EMIGRANT FACE",
+   "note": "symbol of Emigrant Face | end of Emigrant Face | along its printed name"
+  },
+  "emigrant-gully": {
+   "polylines": [
+    27,
+    28,
+    150
+   ],
+   "confidence": "high",
+   "mapName": "EMIGRANT GULLY",
+   "note": "end of Emigrant Gully | symbol of Emigrant Gully | along its printed name"
+  },
+  "extra": {
+   "polylines": [
+    136
+   ],
+   "confidence": "high",
+   "mapName": "EXTRA",
+   "note": "symbol of Extra"
+  },
+  "gold-coast": {
+   "polylines": [
+    127,
+    128,
+    146
+   ],
+   "confidence": "high",
+   "mapName": "GOLD COAST",
+   "note": "end of Gold Coast | symbol of Gold Coast | along its printed name"
+  },
+  "gold-coast-face": {
+   "polylines": [
+    117,
+    118,
+    151
+   ],
+   "confidence": "high",
+   "mapName": "GOLD COAST FACE",
+   "note": "symbol of Gold Coast Face | end of Gold Coast Face | along its printed name"
+  },
+  "heidis": {
+   "polylines": [
+    0,
+    44,
+    177
+   ],
+   "confidence": "high",
+   "mapName": "HEIDI\u2019S",
+   "note": "end of Heidi\u2019s | symbol of Heidi\u2019s | along its printed name"
+  },
+  "heidis-glades": {
+   "noLine": true,
+   "label": [
+    23.52,
+    46.87
+   ],
+   "confidence": "high"
+  },
+  "high-voltage": {
+   "polylines": [
+    73,
+    144
+   ],
+   "confidence": "high",
+   "mapName": "HIGH VOLTAGE",
+   "note": "end of High Voltage | along its printed name"
+  },
+  "home-run": {
+   "polylines": [
+    4,
+    141,
+    181
+   ],
+   "confidence": "high",
+   "mapName": "HOME RUN",
+   "note": "symbol of Home Run | end of Home Run | along its printed name"
+  },
+  "horse-trails": {
+   "polylines": [
+    46,
+    47,
+    162
+   ],
+   "confidence": "high",
+   "mapName": "HORSE TRAILS",
+   "note": "symbol of Horse Trails | end of Horse Trails | along its printed name"
+  },
+  "jagged-edge": {
+   "polylines": [
+    108
+   ],
+   "confidence": "high",
+   "mapName": "JAGGED EDGE",
+   "note": "checked on a crop"
+  },
+  "julias-gold": {
+   "polylines": [
+    131,
+    132,
+    193
+   ],
+   "confidence": "high",
+   "mapName": "JULIA\u2019S GOLD",
+   "note": "end of Julia\u2019s Gold | symbol of Julia\u2019s Gold | along its printed name"
+  },
+  "killys": {
+   "polylines": [
+    122,
+    123,
+    147
+   ],
+   "confidence": "high",
+   "mapName": "KILLY\u2019S",
+   "note": "symbol of Killy\u2019s | end of Killy\u2019s | along its printed name"
+  },
+  "knob-hill": {
+   "polylines": [
+    109,
+    110,
+    192
+   ],
+   "confidence": "high",
+   "mapName": "KNOB HILL",
+   "note": "end of Knob Hill | symbol of Knob Hill | along its printed name"
+  },
+  "lake-view": {
+   "polylines": [
+    15,
+    16,
+    17,
+    180,
+    195
+   ],
+   "confidence": "high",
+   "mapName": "LAKE VIEW",
+   "note": "symbol of Lake View | end of Lake View | along its printed name"
+  },
+  "land-bridge": {
+   "polylines": [
+    66,
+    67,
+    171
+   ],
+   "confidence": "high",
+   "mapName": "LAND BRIDGE",
+   "note": "symbol of Land Bridge | end of Land Bridge | along its printed name"
+  },
+  "larkspur": {
+   "polylines": [
+    84,
+    85,
+    160
+   ],
+   "confidence": "high",
+   "mapName": "LARKSPUR",
+   "note": "end of Larkspur | symbol of Larkspur | along its printed name"
+  },
+  "lost-lake-loop": {
+   "polylines": [
+    119
+   ],
+   "confidence": "high",
+   "mapName": "LOST LAKE LOOP",
+   "note": "checked on a crop"
+  },
+  "lower-champs-elysees": {
+   "polylines": [
+    10,
+    11,
+    186
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CHAMPS ELYSEES",
+   "note": "end of Lower Champs Elysees | symbol of Lower Champs Elysees | along its printed name"
+  },
+  "lower-dog-leg": {
+   "polylines": [
+    59,
+    60,
+    190
+   ],
+   "confidence": "high",
+   "mapName": "LOWER DOG LEG",
+   "note": "end of Lower Dog Leg | symbol of Lower Dog Leg | along its printed name"
+  },
+  "lower-yellow": {
+   "polylines": [
+    94,
+    95,
+    96,
+    165
+   ],
+   "confidence": "high",
+   "mapName": "LOWER YELLOW",
+   "note": "symbol of Lower Yellow | end of Lower Yellow | checked on a crop | along its printed name"
+  },
+  "lupine": {
+   "polylines": [
+    86,
+    87,
+    161
+   ],
+   "confidence": "high",
+   "mapName": "LUPINE",
+   "note": "end of Lupine | symbol of Lupine | along its printed name"
+  },
+  "main": {
+   "polylines": [
+    137
+   ],
+   "confidence": "high",
+   "mapName": "MAIN",
+   "note": "symbol of Main"
+  },
+  "main-backside": {
+   "polylines": [
+    72
+   ],
+   "confidence": "high",
+   "mapName": "MAIN BACKSIDE",
+   "note": "checked on a crop"
+  },
+  "monkey-flower": {
+   "polylines": [
+    77,
+    78,
+    79
+   ],
+   "confidence": "high",
+   "mapName": "MONKEY FLOWER",
+   "note": "end of Monkey Flower | symbol of Monkey Flower | checked on a crop"
+  },
+  "montezumas": {
+   "polylines": [
+    42,
+    43,
+    185
+   ],
+   "confidence": "high",
+   "mapName": "MONTEZUMA\u2019S",
+   "note": "end of Montezuma\u2019s | symbol of Montezuma\u2019s | along its printed name"
+  },
+  "monument-ridge": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "MONUMENT RIDGE",
+   "note": "checked on a crop"
+  },
+  "moseleys": {
+   "polylines": [
+    54,
+    55,
+    175
+   ],
+   "confidence": "high",
+   "mapName": "MOSELEY\u2019S",
+   "note": "end of Moseley\u2019s | symbol of Moseley\u2019s | along its printed name"
+  },
+  "mountain-run": {
+   "polylines": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    88,
+    89,
+    166,
+    167,
+    176,
+    191
+   ],
+   "confidence": "high",
+   "mapName": "MOUNTAIN RUN",
+   "note": "end of Mountain Run | symbol of Mountain Run | along its printed name"
+  },
+  "mules-ear": {
+   "polylines": [
+    101,
+    102,
+    155
+   ],
+   "confidence": "high",
+   "mapName": "MULES EAR",
+   "note": "end of Mules Ear | symbol of Mules Ear | along its printed name"
+  },
+  "mystery": {
+   "polylines": [
+    29,
+    129,
+    153
+   ],
+   "confidence": "high",
+   "mapName": "MYSTERY",
+   "note": "symbol of Mystery | end of Mystery | along its printed name"
+  },
+  "national": {
+   "polylines": [
+    139
+   ],
+   "confidence": "high",
+   "mapName": "NATIONAL",
+   "note": "symbol of National"
+  },
+  "newport": {
+   "polylines": [
+    23,
+    148
+   ],
+   "confidence": "high",
+   "mapName": "NEWPORT",
+   "note": "end of Newport | along its printed name"
+  },
+  "nose": {
+   "polylines": [
+    68
+   ],
+   "confidence": "high",
+   "mapName": "NOSE",
+   "note": "checked on a crop"
+  },
+  "olympic-high": {
+   "polylines": [
+    35,
+    36,
+    172
+   ],
+   "confidence": "high",
+   "mapName": "OLYMPIC HIGH",
+   "note": "symbol of Olympic High | end of Olympic High | along its printed name"
+  },
+  "packers": {
+   "polylines": [
+    24,
+    25,
+    169
+   ],
+   "confidence": "high",
+   "mapName": "PACKERS",
+   "note": "symbol of Packers | end of Packers | along its printed name"
+  },
+  "paris-glades": {
+   "noLine": true,
+   "label": [
+    25.37,
+    58.65
+   ],
+   "confidence": "high"
+  },
+  "pioneer": {
+   "polylines": [
+    90,
+    91,
+    196
+   ],
+   "confidence": "high",
+   "mapName": "PIONEER",
+   "note": "end of Pioneer | symbol of Pioneer | along its printed name"
+  },
+  "poppy": {
+   "polylines": [
+    103,
+    104,
+    159
+   ],
+   "confidence": "high",
+   "mapName": "POPPY",
+   "note": "end of Poppy | symbol of Poppy | along its printed name"
+  },
+  "poulsens-gully": {
+   "polylines": [
+    64,
+    65,
+    111,
+    189
+   ],
+   "confidence": "high",
+   "mapName": "POULSEN\u2019S GULLY",
+   "note": "checked on a crop | symbol of Poulsen\u2019s Gully | along its printed name"
+  },
+  "racers": {
+   "polylines": [
+    8,
+    149
+   ],
+   "confidence": "high",
+   "mapName": "RACERS",
+   "note": "symbol of Racers | along its printed name"
+  },
+  "ramp-run": {
+   "polylines": [
+    81,
+    97,
+    154
+   ],
+   "confidence": "high",
+   "mapName": "RAMP RUN",
+   "note": "symbol of Ramp Run | end of Ramp Run | along its printed name"
+  },
+  "red-dog-face": {
+   "polylines": [
+    9,
+    194
+   ],
+   "confidence": "high",
+   "mapName": "RED DOG FACE",
+   "note": "end of Red Dog Face | along its printed name"
+  },
+  "red-dog-glades": {
+   "noLine": true,
+   "label": [
+    20.0,
+    67.3
+   ],
+   "confidence": "high"
+  },
+  "ridge-run": {
+   "polylines": [
+    26,
+    133,
+    142
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE RUN",
+   "note": "end of Ridge Run | symbol of Ridge Run | along its printed name"
+  },
+  "riviera": {
+   "polylines": [
+    99,
+    100,
+    163
+   ],
+   "confidence": "high",
+   "mapName": "RIVIERA",
+   "note": "end of Riviera | symbol of Riviera | along its printed name"
+  },
+  "saddle": {
+   "polylines": [
+    105,
+    106,
+    168
+   ],
+   "confidence": "high",
+   "mapName": "SADDLE",
+   "note": "symbol of Saddle | end of Saddle | along its printed name"
+  },
+  "saddle-face": {
+   "polylines": [
+    50,
+    51
+   ],
+   "confidence": "high",
+   "mapName": "SADDLE FACE",
+   "note": "symbol of Saddle Face | checked on a crop"
+  },
+  "schimmelpfennig-bowl": {
+   "polylines": [
+    57,
+    58
+   ],
+   "confidence": "high",
+   "mapName": "SCHIMMELPFENNIG BOWL",
+   "note": "checked on a crop | symbol of Schimmelpfennig Bowl"
+  },
+  "siberia-lift-line": {
+   "polylines": [
+    115,
+    158
+   ],
+   "confidence": "high",
+   "mapName": "SIBERIA LIFT LINE",
+   "note": "symbol of Siberia Lift Line | along its printed name"
+  },
+  "snow-flower": {
+   "polylines": [
+    82,
+    83,
+    156
+   ],
+   "confidence": "high",
+   "mapName": "SNOW FLOWER",
+   "note": "symbol of Snow Flower | end of Snow Flower | along its printed name"
+  },
+  "spring-bowl": {
+   "polylines": [
+    37,
+    38,
+    39
+   ],
+   "confidence": "high",
+   "mapName": "SPRING BOWL",
+   "note": "symbol of Spring Bowl | end of Spring Bowl | checked on a crop"
+  },
+  "start-me-up": {
+   "polylines": [
+    92,
+    93
+   ],
+   "confidence": "high",
+   "mapName": "START ME UP",
+   "note": "checked on a crop | symbol of Start Me Up"
+  },
+  "strainer": {
+   "polylines": [
+    40,
+    41,
+    179
+   ],
+   "confidence": "high",
+   "mapName": "STRAINER",
+   "note": "end of Strainer | symbol of Strainer | along its printed name"
+  },
+  "summer-road": {
+   "polylines": [
+    125,
+    126,
+    174
+   ],
+   "confidence": "high",
+   "mapName": "SUMMER ROAD",
+   "note": "end of Summer Road | symbol of Summer Road | along its printed name"
+  },
+  "sunnyside": {
+   "polylines": [
+    3,
+    20,
+    116,
+    173,
+    184
+   ],
+   "confidence": "high",
+   "mapName": "SUNNYSIDE",
+   "note": "symbol of Sunnyside | end of Sunnyside | along its printed name"
+  },
+  "the-mora": {
+   "polylines": [
+    80,
+    130,
+    145
+   ],
+   "confidence": "high",
+   "mapName": "THE MORA",
+   "note": "symbol of The Mora | end of The Mora | along its printed name"
+  },
+  "to-mountain-run": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "TO MOUNTAIN RUN",
+   "note": "symbol of To Mountain Run"
+  },
+  "upper-dog-leg": {
+   "polylines": [
+    61,
+    62
+   ],
+   "confidence": "high",
+   "mapName": "UPPER DOG LEG",
+   "note": "checked on a crop | symbol of Upper Dog Leg"
+  },
+  "valley-view": {
+   "polylines": [
+    18,
+    19
+   ],
+   "confidence": "high",
+   "mapName": "VALLEY VIEW",
+   "note": "end of Valley View | symbol of Valley View"
+  },
+  "womens-downhill": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "WOMEN\u2019S DOWNHILL",
+   "note": "checked on a crop"
+  },
+  "yellow-trail": {
+   "polylines": [
+    124
+   ],
+   "confidence": "high",
+   "mapName": "YELLOW TRAIL",
+   "note": "checked on a crop"
+  }
+ }
+}

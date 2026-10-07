@@ -1,0 +1,46 @@
+// Palisades Tahoe's 2025-26 trail maps from palisadestahoe.com's trail-maps
+// page: three PDFs, three panels (the Palisades side, and Alpine's front and
+// back sides), each with its own overlay. The Palisades side's two insets
+// (Shirley Lake and Silverado; Gold Coast to High Camp) are not among the
+// PDFs: the runs only they show are not here. Trail lines are vector strokes
+// in the difficulty colours (on Alpine's back side every stroke is drawn
+// twice, and on the Palisades side a blue line is left under Saddle's black
+// one: one piece, and none). Names are black outlined glyphs on a white halo
+// (each glyph shape read once, then decoded:
+// tools/trailmap/resorts/palisades-tahoe/), the symbol before the name or
+// above or below its middle, printed in a gap of the run's line or beside it.
+// Each line piece takes the name that runs into it or along it; the rest was
+// settled on zoomed crops (decisions.py), and where a line between two names
+// could be either run's, the PDF's drawing order (one run's strokes are drawn
+// one after another) and OpenStreetMap's runs decided it: Jagged Edge's line
+// past its diamond (Bullet's ends above it), the arrowed Lost Lake Loop
+// (Mountain Run's line runs under its name beside it), Home Run leaving
+// Mountain Run's line at a fork, Burkhart's along the bottom of the Mountain
+// Run oval past its square, Main Backside's from the ridge past its diamond
+// to Bottleneck Gully's, Werner's Schuss's on below its name down the
+// Boomerang loop's right branch to East Runout's square, Sherwood Run's from
+// the Sherwood top along the ridge and down to the base (one stroke), and
+// Shooting Star's from the end of Outer Limits' name down to the Lakeview
+// chair. Lines the maps don't name have no overlay: a green link from the
+// foot of Gold Coast and its neighbours down to Ramp Run, the black dashed
+// traverse along the High Camp gates (the gates, numbered boxes with their
+// symbols, are the report's Gate 1 to Gate 8), and a link along the Sherwood
+// ridge down to Maid Marian. Main, Extra, Chimney and National, named in the
+// sky above the Palisades, are each the short line hanging from its symbol;
+// Broken Arrow is a name with no line. Names are as the resort's trail report
+// spells them (the map's D-5 to D-8, G.S. Bowl, G.S. Cliffs, Ladies Slalom and
+// to Mountain Run written so; Face Cliffs, printed beside The Face, is The
+// Face Cliffs; the back side's Return Road to Weasel is the front side's
+// Return Road). Rock Garden, Yellow Trail, Sun Bowl and Summer Road are runs
+// on both mountains (the report lists both): two trails each, shown with the
+// same name. Difficulty: the symbol printed by the name; a name with none
+// takes its line's colour (CII Ridge and Cornice Bowl black) or its symbol on
+// the other Alpine side (Art's Knob), else the report's rating (Gunner's
+// Knob, High Traverse and South Face Access black, Sandy's Corner blue). All
+// 247 trails' ratings and mountains agree with the resort's trail report
+// (October 2026) but two: Gold Coast Ridge (a diamond) isn't in it, and the
+// back side's Shooting Star (a square) isn't the report's (a green run at
+// High Camp, on the inset). Names printed with no line of their own (bowls,
+// chutes, faces, cliffs, glades and pockets) are markers at their names.
+// Trails are grouped by mountain; elevations are the two summits as printed
+// (Granite Chief Peak, Ward Peak). x/y/baseY/width are unused layout fields.

@@ -120,6 +120,11 @@ export const RESORTS: ResortEntry[] = [
     { id: 'glacier', name: 'Glacier', paths: () => import('./data/resorts/whistler-blackcomb/panels/glacier/trailPaths.json') },
   ]),
   oneMap('park-city', 'Park City Mountain', 'Utah', () => import('./data/resorts/park-city/trails'), () => import('./data/resorts/park-city/trailPaths.json')),
+  panels('palisades-tahoe', 'Palisades Tahoe', 'California', () => import('./data/resorts/palisades-tahoe/trails'), [
+    { id: 'palisades', name: 'Palisades', paths: () => import('./data/resorts/palisades-tahoe/panels/palisades/trailPaths.json') },
+    { id: 'alpine-front', name: 'Alpine front', paths: () => import('./data/resorts/palisades-tahoe/panels/alpine-front/trailPaths.json') },
+    { id: 'alpine-back', name: 'Alpine back', paths: () => import('./data/resorts/palisades-tahoe/panels/alpine-back/trailPaths.json') },
+  ]),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];
