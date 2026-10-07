@@ -1,0 +1,186 @@
+{
+ "reviews": {
+  "high-traverse": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    42.8,
+    11.35
+   ]
+  },
+  "cb-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    39.14,
+    18.4
+   ]
+  },
+  "grouse-rock": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    5.1,
+    20.65
+   ]
+  },
+  "sun-bowl-alpine": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    36.76,
+    21.45
+   ]
+  },
+  "big-bend-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    33.79,
+    22.04
+   ]
+  },
+  "big-bend-keyhole": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    28.79,
+    23.05
+   ]
+  },
+  "grouse-saddle": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    11.14,
+    24.07
+   ]
+  },
+  "s-p-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    22.45,
+    24.65
+   ]
+  },
+  "east-gully": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    49.89,
+    27.56
+   ]
+  },
+  "west-gully": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    46.63,
+    28.15
+   ]
+  },
+  "south-face-access": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    53.13,
+    29.38
+   ]
+  },
+  "ck-bench": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    12.34,
+    37.53
+   ]
+  },
+  "south-face": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    46.43,
+    43.27
+   ]
+  },
+  "sherwood-creek": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-07T02:11:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    23.07,
+    71.42
+   ]
+  }
+ }
+}

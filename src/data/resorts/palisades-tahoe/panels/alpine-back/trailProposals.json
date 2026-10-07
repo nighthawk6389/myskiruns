@@ -1,0 +1,185 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "bobbys-run": {
+   "polylines": [
+    21,
+    24
+   ],
+   "confidence": "high",
+   "mapName": "BOBBY\u2019S RUN",
+   "note": "symbol of Bobby\u2019s Run | end of Bobby\u2019s Run"
+  },
+  "lakeview-to-weasel": {
+   "polylines": [
+    3,
+    4,
+    33
+   ],
+   "confidence": "high",
+   "mapName": "LAKEVIEW TO WEASEL",
+   "note": "end of Lakeview to Weasel | symbol of Lakeview to Weasel | along its printed name"
+  },
+  "leisure-lane": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "LEISURE LANE",
+   "note": "checked on a crop"
+  },
+  "maid-marian": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "MAID MARIAN",
+   "note": "checked on a crop"
+  },
+  "mountain-view": {
+   "polylines": [
+    14,
+    16,
+    30
+   ],
+   "confidence": "high",
+   "mapName": "MOUNTAIN VIEW",
+   "note": "symbol of Mountain View | checked on a crop | along its printed name"
+  },
+  "nottinghams-notch": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "NOTTINGHAM\u2019S NOTCH",
+   "note": "checked on a crop"
+  },
+  "outer-limits": {
+   "polylines": [
+    18,
+    32
+   ],
+   "confidence": "high",
+   "mapName": "OUTER LIMITS",
+   "note": "symbol of Outer Limits | along its printed name"
+  },
+  "rays-rut": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "RAY\u2019S RUT",
+   "note": "checked on a crop"
+  },
+  "reilys-run": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "REILY\u2019S RUN",
+   "note": "checked on a crop"
+  },
+  "return-road": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "RETURN ROAD",
+   "note": "checked on a crop"
+  },
+  "robin-hood": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "ROBIN HOOD",
+   "note": "checked on a crop"
+  },
+  "scott-meadow": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "SCOTT MEADOW",
+   "note": "checked on a crop"
+  },
+  "scott-ridge": {
+   "polylines": [
+    25,
+    26,
+    31
+   ],
+   "confidence": "high",
+   "mapName": "SCOTT RIDGE",
+   "note": "symbol of Scott Ridge | end of Scott Ridge | along its printed name"
+  },
+  "scottys-beam": {
+   "polylines": [
+    15,
+    17,
+    29
+   ],
+   "confidence": "high",
+   "mapName": "SCOTTY\u2019S BEAM",
+   "note": "symbol of Scotty\u2019s Beam | end of Scotty\u2019s Beam | along its printed name"
+  },
+  "sherwood-face": {
+   "polylines": [
+    10,
+    11
+   ],
+   "confidence": "high",
+   "mapName": "SHERWOOD FACE",
+   "note": "checked on a crop | symbol of Sherwood Face"
+  },
+  "sherwood-run": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "SHERWOOD RUN",
+   "note": "checked on a crop"
+  },
+  "shooting-star": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "SHOOTING STAR",
+   "note": "checked on a crop"
+  },
+  "standard-run": {
+   "polylines": [
+    22,
+    23
+   ],
+   "confidence": "high",
+   "mapName": "STANDARD RUN",
+   "note": "symbol of Standard Run | checked on a crop"
+  },
+  "summer-road-alpine": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "SUMMER ROAD (ALPINE)",
+   "note": "end of Summer Road (Alpine)"
+  },
+  "twilight-zone": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "TWILIGHT ZONE",
+   "note": "checked on a crop"
+  },
+  "winter-road": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "WINTER ROAD",
+   "note": "checked on a crop"
+  }
+ }
+}

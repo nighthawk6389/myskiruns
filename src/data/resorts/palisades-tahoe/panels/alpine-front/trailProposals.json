@@ -1,0 +1,344 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "alpine-bowl": {
+   "polylines": [
+    31,
+    38
+   ],
+   "confidence": "high",
+   "mapName": "ALPINE BOWL",
+   "note": "checked on a crop | symbol of Alpine Bowl"
+  },
+  "banana-chute": {
+   "polylines": [
+    23,
+    24
+   ],
+   "confidence": "high",
+   "mapName": "BANANA CHUTE",
+   "note": "symbol of Banana Chute | checked on a crop"
+  },
+  "boomerang": {
+   "polylines": [
+    61,
+    62
+   ],
+   "confidence": "high",
+   "mapName": "BOOMERANG",
+   "note": "checked on a crop | symbol of Boomerang"
+  },
+  "charity": {
+   "polylines": [
+    25,
+    26,
+    77
+   ],
+   "confidence": "high",
+   "mapName": "CHARITY",
+   "note": "symbol of Charity | checked on a crop | along its printed name"
+  },
+  "chute-that-seldom-slides": {
+   "polylines": [
+    49,
+    50
+   ],
+   "confidence": "high",
+   "mapName": "CHUTE THAT SELDOM SLIDES",
+   "note": "end of Chute That Seldom Slides | symbol of Chute That Seldom Slides"
+  },
+  "d8": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "D8",
+   "note": "checked on a crop"
+  },
+  "dance-floor": {
+   "polylines": [
+    41,
+    42,
+    82
+   ],
+   "confidence": "high",
+   "mapName": "DANCE FLOOR",
+   "note": "symbol of Dance Floor | end of Dance Floor | along its printed name"
+  },
+  "east-creek": {
+   "polylines": [
+    10,
+    11,
+    76
+   ],
+   "confidence": "high",
+   "mapName": "EAST CREEK",
+   "note": "symbol of East Creek | end of East Creek | along its printed name"
+  },
+  "east-runout": {
+   "polylines": [
+    27,
+    83
+   ],
+   "confidence": "high",
+   "mapName": "EAST RUNOUT",
+   "note": "checked on a crop | along its printed name"
+  },
+  "fall-line": {
+   "polylines": [
+    19,
+    20,
+    74
+   ],
+   "confidence": "high",
+   "mapName": "FALL LINE",
+   "note": "symbol of Fall Line | end of Fall Line | along its printed name"
+  },
+  "kangaroo-main-run": {
+   "polylines": [
+    36,
+    37,
+    85
+   ],
+   "confidence": "high",
+   "mapName": "KANGAROO MAIN RUN",
+   "note": "symbol of Kangaroo Main Run | end of Kangaroo Main Run | along its printed name"
+  },
+  "ladies-slalom": {
+   "polylines": [
+    21,
+    22,
+    80
+   ],
+   "confidence": "high",
+   "mapName": "LADIES\u2019 SLALOM",
+   "note": "symbol of Ladies\u2019 Slalom | end of Ladies\u2019 Slalom | along its printed name"
+  },
+  "leisure-lane": {
+   "polylines": [
+    4,
+    5,
+    67
+   ],
+   "confidence": "high",
+   "mapName": "LEISURE LANE",
+   "note": "symbol of Leisure Lane | end of Leisure Lane | along its printed name"
+  },
+  "meadow-beginner-area": {
+   "polylines": [
+    58
+   ],
+   "confidence": "high",
+   "mapName": "MEADOW BEGINNER AREA",
+   "note": "checked on a crop"
+  },
+  "mountain-view": {
+   "polylines": [
+    53,
+    54,
+    66
+   ],
+   "confidence": "high",
+   "mapName": "MOUNTAIN VIEW",
+   "note": "symbol of Mountain View | end of Mountain View | along its printed name"
+  },
+  "nicks-run": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "NICK\u2019S RUN",
+   "note": "checked on a crop"
+  },
+  "outer-limits": {
+   "polylines": [
+    39,
+    40,
+    65
+   ],
+   "confidence": "high",
+   "mapName": "OUTER LIMITS",
+   "note": "checked on a crop | symbol of Outer Limits | along its printed name"
+  },
+  "palisades": {
+   "polylines": [
+    43,
+    44,
+    63
+   ],
+   "confidence": "high",
+   "mapName": "PALISADES",
+   "note": "symbol of Palisades | end of Palisades | along its printed name"
+  },
+  "petes-peril": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "PETE\u2019S PERIL",
+   "note": "checked on a crop"
+  },
+  "reilys-run": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "REILY\u2019S RUN",
+   "note": "checked on a crop"
+  },
+  "return-road": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "RETURN ROAD",
+   "note": "checked on a crop"
+  },
+  "rock-garden-alpine": {
+   "polylines": [
+    29,
+    30,
+    69
+   ],
+   "confidence": "high",
+   "mapName": "ROCK GARDEN (ALPINE)",
+   "note": "end of Rock Garden (Alpine) | symbol of Rock Garden (Alpine) | along its printed name"
+  },
+  "scott-chute": {
+   "polylines": [
+    51,
+    52,
+    79
+   ],
+   "confidence": "high",
+   "mapName": "SCOTT CHUTE",
+   "note": "end of Scott Chute | symbol of Scott Chute | along its printed name"
+  },
+  "scott-ridge": {
+   "polylines": [
+    6,
+    7,
+    70
+   ],
+   "confidence": "high",
+   "mapName": "SCOTT RIDGE",
+   "note": "symbol of Scott Ridge | end of Scott Ridge | along its printed name"
+  },
+  "skateboard-alley": {
+   "polylines": [
+    8,
+    9,
+    78
+   ],
+   "confidence": "high",
+   "mapName": "SKATEBOARD ALLEY",
+   "note": "symbol of Skateboard Alley | checked on a crop | along its printed name"
+  },
+  "subway-beginner-area": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "SUBWAY BEGINNER AREA",
+   "note": "checked on a crop"
+  },
+  "sunspot": {
+   "polylines": [
+    32,
+    33,
+    64
+   ],
+   "confidence": "high",
+   "mapName": "SUNSPOT",
+   "note": "symbol of Sunspot | checked on a crop | along its printed name"
+  },
+  "the-face": {
+   "polylines": [
+    47,
+    48,
+    71
+   ],
+   "confidence": "high",
+   "mapName": "THE FACE",
+   "note": "end of The Face | symbol of The Face | along its printed name"
+  },
+  "tiegel": {
+   "polylines": [
+    13,
+    84
+   ],
+   "confidence": "high",
+   "mapName": "TIEGEL",
+   "note": "end of Tiegel | along its printed name"
+  },
+  "to-lakeview": {
+   "polylines": [
+    0,
+    1,
+    72
+   ],
+   "confidence": "high",
+   "mapName": "TO LAKEVIEW",
+   "note": "checked on a crop | along its printed name"
+  },
+  "upper-weasel-one": {
+   "polylines": [
+    15,
+    16,
+    73
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WEASEL ONE",
+   "note": "end of Upper Weasel One | symbol of Upper Weasel One | along its printed name"
+  },
+  "weasel-run": {
+   "polylines": [
+    12,
+    14,
+    81
+   ],
+   "confidence": "high",
+   "mapName": "WEASEL RUN",
+   "note": "symbol of Weasel Run | end of Weasel Run | along its printed name"
+  },
+  "werners-schuss": {
+   "polylines": [
+    28,
+    60
+   ],
+   "confidence": "high",
+   "mapName": "WERNER\u2019S SCHUSS",
+   "note": "symbol of Werner\u2019s Schuss | checked on a crop"
+  },
+  "west-runout": {
+   "polylines": [
+    55,
+    56,
+    86
+   ],
+   "confidence": "high",
+   "mapName": "WEST RUNOUT",
+   "note": "symbol of West Runout | end of West Runout | along its printed name"
+  },
+  "wolverine": {
+   "polylines": [
+    34,
+    59,
+    68
+   ],
+   "confidence": "high",
+   "mapName": "WOLVERINE",
+   "note": "symbol of Wolverine | checked on a crop | along its printed name"
+  },
+  "yellow-trail-alpine": {
+   "polylines": [
+    17,
+    18,
+    75
+   ],
+   "confidence": "high",
+   "mapName": "YELLOW TRAIL (ALPINE)",
+   "note": "symbol of Yellow Trail (Alpine) | checked on a crop | along its printed name"
+  }
+ }
+}
