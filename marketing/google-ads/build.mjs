@@ -11,9 +11,10 @@
 // Every text is checked against Google's limits before anything is written
 // (headlines 30 characters, descriptions 90, display paths 15, sitelink text
 // 25 and its descriptions 35, callouts and snippet values 25); where a line
-// lists alternatives, the first that fits is used. A resort in src/resorts.ts
-// without an entry in RESORT_ADS stops the build, so a new resort can't be
-// left out of the campaign.
+// lists alternatives, the first that fits is used. A negative keyword that
+// would block one of its own campaign's keywords stops the build, and so does
+// a resort in src/resorts.ts without an entry in RESORT_ADS, so a new resort
+// can't be left out of the campaign.
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -655,6 +656,15 @@ for (const [key, list] of Object.entries(campaignNegatives)) {
   if (new Set(list).size !== list.length) errors.push(`${campaignName[key]}: a negative keyword is listed twice`);
   for (const n of list) checkKeyword(n, `${campaignName[key]} (negative)`);
 }
+// a keyword containing one of its negatives would never show an ad
+const contains = (text, phrase) => ` ${text} `.includes(` ${phrase} `);
+for (const g of groups) {
+  for (const n of [...campaignNegatives[g.campaign], ...g.negatives]) {
+    for (const [text] of g.keywords) {
+      if (contains(text, n)) errors.push(`${campaignName[g.campaign]} > ${g.name}: negative "${n}" blocks keyword "${text}"`);
+    }
+  }
+}
 for (const [key, list] of Object.entries(sitelinks)) {
   const where = `${campaignName[key]} sitelinks`;
   for (const s of list) {
@@ -690,15 +700,14 @@ function csv(columns, rows) {
 const MATCH = { exact: 'Exact', phrase: 'Phrase' };
 const files = {
   '1-campaigns.csv': csv(
-    ['Campaign', 'Campaign type', 'Campaign status', 'Budget', 'Budget type', 'Networks', 'Bid strategy type',
-      'Maximum CPC bid limit', 'Languages', 'Final URL suffix'],
+    ['Campaign', 'Campaign type', 'Campaign status', 'Budget', 'Networks', 'Bid strategy type', 'Maximum CPC bid limit',
+      'Languages', 'Final URL suffix'],
     CAMPAIGNS.map((c) => ({
       Campaign: c.name,
       'Campaign type': 'Search',
       'Campaign status': 'Paused',
       Budget: c.budget.toFixed(2),
-      'Budget type': 'Daily',
-      Networks: 'Google search',
+      Networks: 'Google Search',
       'Bid strategy type': 'Maximize clicks',
       'Maximum CPC bid limit': c.cpcLimit.toFixed(2),
       Languages: c.languages,
@@ -743,14 +752,13 @@ const files = {
   ),
   '6-responsive-search-ads.csv': csv(
     [
-      'Campaign', 'Ad group', 'Ad type', 'Status', 'Final URL', 'Path 1', 'Path 2',
+      'Campaign', 'Ad group', 'Status', 'Final URL', 'Path 1', 'Path 2',
       ...Array.from({ length: 15 }, (_, i) => [`Headline ${i + 1}`, `Headline ${i + 1} position`]).flat(),
       ...Array.from({ length: 4 }, (_, i) => [`Description ${i + 1}`, `Description ${i + 1} position`]).flat(),
     ],
     groups.map((g) => ({
       Campaign: campaignName[g.campaign],
       'Ad group': g.name,
-      'Ad type': 'Responsive search ad',
       Status: 'Enabled',
       'Final URL': g.url,
       'Path 1': g.path1,

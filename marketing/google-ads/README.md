@@ -233,10 +233,11 @@ Everything comes from `build.mjs`:
 - The negative lists and the assets.
 
 Run counts and the resort list come from the app (`src/resorts.ts`,
-`src/data/resorts/<id>/trails.ts`). A resort added to the app without an
-entry in `RESORT_ADS` stops the build, which names it. Add the entry, run
-`npm run ads:build`, and import the files again (Importing, above). The run
-totals in the callouts and the tracker ads change too.
+`src/data/resorts/<id>/trails.ts`). A negative keyword that would block one
+of its campaign's own keywords stops the build. So does a resort added to the
+app without an entry in `RESORT_ADS`, and the error names it. Add the entry,
+run `npm run ads:build`, and import the files again (Importing, above). The
+run totals in the callouts and the tracker ads change too.
 
 Not included, and worth considering later:
 
