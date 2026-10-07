@@ -1,0 +1,1734 @@
+{
+ "lines": [
+  {
+   "id": 0,
+   "mapName": "HOTDOG HILL",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "leads into the HOTDOG HILL dot from the lower left (inside the lilac ski & ride school patch)"
+  },
+  {
+   "id": 1,
+   "mapName": "HOTDOG HILL",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "continues after the HOTDOG HILL text"
+  },
+  {
+   "id": 13,
+   "mapName": "WHISTLER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "in the lower Whistler band below Sweet Solitude; runs into the lower WHISTLER square+glade label (~2178,720); continuation of 27 across 137"
+  },
+  {
+   "id": 15,
+   "mapName": "EVERGLADE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "white-cased line along the long Everglade band; ends at the EVERGLADE square+glade label (~2423,751), continuing after it as 14. Its top starts beside the upper WHISTLER label icons (band fork); Whistler itself goes down 27/13"
+  },
+  {
+   "id": 17,
+   "mapName": "WHISPERING PINES",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "cased line in the Whispering Pines band; ends at the WHISPERING PINES label (~2305,595), which continues as 16"
+  },
+  {
+   "id": 19,
+   "mapName": "UPPER ARROW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "branches off the Timberline junction below 108 and ends at the UPPER ARROW square (2098,1140)"
+  },
+  {
+   "id": 26,
+   "mapName": "WHISTLER",
+   "color": "blue",
+   "confidence": "medium",
+   "tiles": [
+    "t002"
+   ],
+   "note": "short line from Easy Rider (139) into the upper WHISTLER square+glade label (2055,579); also the head of the Everglade band (Whistler 27 and Everglade 15 both leave this label)"
+  },
+  {
+   "id": 27,
+   "mapName": "WHISTLER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "leaves the upper WHISTLER label icons, crosses Sweet Solitude (137) and continues as 13 to the lower WHISTLER label"
+  },
+  {
+   "id": 49,
+   "mapName": "RIM ROCK",
+   "color": "blue",
+   "confidence": "medium",
+   "tiles": [
+    "t002"
+   ],
+   "note": "long line from the end of the square RIM ROCK label (~1120,470, left of these tiles) up to the summit at (1414,379); Moon Dog (235) branches off it near (1215,426)"
+  },
+  {
+   "id": 55,
+   "mapName": "COUNTDOWN",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "line before the square of COUNTDOWN"
+  },
+  {
+   "id": 56,
+   "mapName": "COUNTDOWN",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "after the COUNTDOWN text, up to the Summit Lodge"
+  },
+  {
+   "id": 57,
+   "mapName": "TRIPLESEC",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "ends at the diamond of TRIPLESEC"
+  },
+  {
+   "id": 58,
+   "mapName": "TRIPLESEC",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "from Buckhorn down to the end of the TRIPLESEC text"
+  },
+  {
+   "id": 60,
+   "mapName": "UPPER FALL LINE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "above the top of the UPPER FALL LINE label"
+  },
+  {
+   "id": 61,
+   "mapName": "CHALLENGER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "ends at the diamond of CHALLENGER"
+  },
+  {
+   "id": 62,
+   "mapName": "CHALLENGER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "after the CHALLENGER text, up to the Turkey Shoot junction on 210"
+  },
+  {
+   "id": 63,
+   "mapName": "MUELLERS' RUN",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "below the diamond of MUELLERS' RUN; ends just above the SCOOTER label"
+  },
+  {
+   "id": 64,
+   "mapName": "MUELLERS' RUN",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "after the MUELLERS' RUN text, up to Countdown"
+  },
+  {
+   "id": 65,
+   "mapName": "SACHEM",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "starts right after the upper SACHEM label (~1350,1460, left of these tiles); continues across a road as 69"
+  },
+  {
+   "id": 68,
+   "mapName": "SACHEM",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "after the lower SACHEM text"
+  },
+  {
+   "id": 69,
+   "mapName": "SACHEM",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "ends at the lower SACHEM dot (1558,1696)"
+  },
+  {
+   "id": 70,
+   "mapName": "HOME STRETCH",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "continues the HOME STRETCH text (same angle) up to the corner where Easy Street (72) ends"
+  },
+  {
+   "id": 72,
+   "mapName": "EASY STREET",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "after the EASY STREET text; meets Home Stretch (70) at a corner"
+  },
+  {
+   "id": 73,
+   "mapName": "EASY STREET",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t102"
+   ],
+   "note": "leads into the top of the EASY STREET text"
+  },
+  {
+   "id": 74,
+   "mapName": "LEDGES",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "after the LEDGES text"
+  },
+  {
+   "id": 75,
+   "mapName": "LEDGES",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "ends at the diamond of LEDGES"
+  },
+  {
+   "id": 76,
+   "mapName": "BUCKHORN",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "after the BUCKHORN text, down to the Summit Lodge"
+  },
+  {
+   "id": 77,
+   "mapName": "BUCKHORN",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "from the summit to the BUCKHORN dot"
+  },
+  {
+   "id": 78,
+   "mapName": "UPPER WORLD CUP",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t102"
+   ],
+   "note": "below the diamond of UPPER WORLD CUP"
+  },
+  {
+   "id": 79,
+   "mapName": "UPPER WORLD CUP",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "from Countdown (below its square) down to the top of the UPPER WORLD CUP text"
+  },
+  {
+   "id": 80,
+   "mapName": "UPPER CHIEF",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "after the UPPER CHIEF text, down to the Chute / Lower Chief junction"
+  },
+  {
+   "id": 81,
+   "mapName": "UPPER CHIEF",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "from Countdown down to the diamond of UPPER CHIEF"
+  },
+  {
+   "id": 82,
+   "mapName": "FAST LANE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t102"
+   ],
+   "note": "below the diamond of FAST LANE"
+  },
+  {
+   "id": 83,
+   "mapName": "FAST LANE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "above the FAST LANE text"
+  },
+  {
+   "id": 84,
+   "mapName": "NOR'EASTER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202",
+    "t302"
+   ],
+   "note": "after the NOR'EASTER text down to Lower Mountain Road; no other label along it"
+  },
+  {
+   "id": 85,
+   "mapName": "NOR'EASTER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "ends at the diamond of NOR'EASTER"
+  },
+  {
+   "id": 86,
+   "mapName": "LOWER WORLD CUP",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "below the square of LOWER WORLD CUP"
+  },
+  {
+   "id": 87,
+   "mapName": "LOWER WORLD CUP",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "from the Upper World Cup / Chute junction down to the top of the LOWER WORLD CUP text"
+  },
+  {
+   "id": 88,
+   "mapName": "CHUTE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "after the CHUTE text"
+  },
+  {
+   "id": 89,
+   "mapName": "CHUTE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102"
+   ],
+   "note": "ends at the square of CHUTE"
+  },
+  {
+   "id": 90,
+   "mapName": "LOWER CHIEF",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "after the LOWER CHIEF text"
+  },
+  {
+   "id": 91,
+   "mapName": "LOWER CHIEF",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "ends at the square of LOWER CHIEF"
+  },
+  {
+   "id": 92,
+   "mapName": "WILLIE'S WAY",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "from beside Lower Chief to the top of the WILLIE'S WAY text"
+  },
+  {
+   "id": 93,
+   "mapName": "WILLIE'S WAY",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "below the square of WILLIE'S WAY"
+  },
+  {
+   "id": 94,
+   "mapName": "WARDANCE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "after the WARDANCE text (race area)"
+  },
+  {
+   "id": 95,
+   "mapName": "WARDANCE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "ends at the diamond of WARDANCE (cased line in the hatched race area)"
+  },
+  {
+   "id": 96,
+   "mapName": "BLACK OUT",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t202"
+   ],
+   "note": "continuation of 97 after a gap where the BLACK RIDGE TRIPLE lift label covers the line"
+  },
+  {
+   "id": 97,
+   "mapName": "BLACK OUT",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t202"
+   ],
+   "note": "after the BLACK OUT text"
+  },
+  {
+   "id": 98,
+   "mapName": "BLACK OUT",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "ends at the diamond of BLACK OUT"
+  },
+  {
+   "id": 99,
+   "mapName": "SEL'S CHOICE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t202"
+   ],
+   "note": "after the SEL'S CHOICE text"
+  },
+  {
+   "id": 100,
+   "mapName": "SEL'S CHOICE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "ends at the diamond of SEL'S CHOICE"
+  },
+  {
+   "id": 101,
+   "mapName": "SEARLE'S WAY",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "after the SEARLE'S WAY text; the SIDEKICK label starts beside its lower end"
+  },
+  {
+   "id": 102,
+   "mapName": "SEARLE'S WAY",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "ends at the diamond of SEARLE'S WAY"
+  },
+  {
+   "id": 103,
+   "mapName": "SEARLE'S WAY",
+   "color": "black",
+   "confidence": "medium",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "short unlabeled connector from Nor'Easter (85) joining Searle's Way (102) at (1791,785), above the SEARLE'S WAY label"
+  },
+  {
+   "id": 104,
+   "mapName": "JOLLY GREEN GIANT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "after the JOLLY GREEN GIANT text, down to the Sidekick / Black Out junction"
+  },
+  {
+   "id": 105,
+   "mapName": "JOLLY GREEN GIANT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "ends at the square of JOLLY GREEN GIANT"
+  },
+  {
+   "id": 107,
+   "mapName": "LOWER TIMBERLINE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102"
+   ],
+   "note": "from the Timberline junction to the square of LOWER TIMBERLINE (2169,1086)"
+  },
+  {
+   "id": 108,
+   "mapName": "UPPER TIMBERLINE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102"
+   ],
+   "note": "after the UPPER TIMBERLINE text, down to the junction where 19 and 107 split"
+  },
+  {
+   "id": 109,
+   "mapName": "UPPER TIMBERLINE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "ends at the square of UPPER TIMBERLINE"
+  },
+  {
+   "id": 111,
+   "mapName": "CUTTER'S FOLLY",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102"
+   ],
+   "note": "ends at the square of CUTTER'S FOLLY"
+  },
+  {
+   "id": 116,
+   "mapName": "UPPER SAPPHIRE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "ends at the square of UPPER SAPPHIRE"
+  },
+  {
+   "id": 118,
+   "mapName": "TOMAHAWK",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "ends at the square of TOMAHAWK"
+  },
+  {
+   "id": 137,
+   "mapName": "SWEET SOLITUDE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "ends at the SWEET SOLITUDE dot (2234,692)"
+  },
+  {
+   "id": 139,
+   "mapName": "EASY RIDER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "ends at the EASY RIDER dot (2158,594)"
+  },
+  {
+   "id": 144,
+   "mapName": "UPPER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "between the two UPPER MOUNTAIN ROAD labels"
+  },
+  {
+   "id": 145,
+   "mapName": "UPPER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "from the summit to the first UPPER MOUNTAIN ROAD dot"
+  },
+  {
+   "id": 148,
+   "mapName": "FAIRWAY",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "after the FAIRWAY text"
+  },
+  {
+   "id": 149,
+   "mapName": "FAIRWAY",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302",
+    "t402"
+   ],
+   "note": "ends at the FAIRWAY dot"
+  },
+  {
+   "id": 150,
+   "mapName": "OPEN SLOPE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "after the OPEN SLOPE text, up along the B Quad (passes under the Sugar House box)"
+  },
+  {
+   "id": 151,
+   "mapName": "OPEN SLOPE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302",
+    "t402"
+   ],
+   "note": "from beside the Fairway dot to the OPEN SLOPE dot"
+  },
+  {
+   "id": 152,
+   "mapName": "LIFT LINE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "after the LIFT LINE text"
+  },
+  {
+   "id": 153,
+   "mapName": "LIFT LINE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302",
+    "t402"
+   ],
+   "note": "ends at the LIFT LINE dot"
+  },
+  {
+   "id": 154,
+   "mapName": "HOMEWARD BOUND",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302",
+    "t402"
+   ],
+   "note": "ends at the dot of the lower HOMEWARD BOUND label"
+  },
+  {
+   "id": 155,
+   "mapName": "KETTLE BROOK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302",
+    "t402"
+   ],
+   "note": "ends at the KETTLE BROOK dot"
+  },
+  {
+   "id": 156,
+   "mapName": "KETTLE BROOK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302",
+    "t402"
+   ],
+   "note": "after the KETTLE BROOK text, up to Homeward Bound"
+  },
+  {
+   "id": 157,
+   "mapName": "KETTLE BROOK",
+   "color": "green",
+   "confidence": "medium",
+   "tiles": [
+    "t302",
+    "t402"
+   ],
+   "note": "continues 155 westward after a ~15 px gap and ends under the lower HOMEWARD BOUND text; no label of its own"
+  },
+  {
+   "id": 158,
+   "mapName": "LEDGEWOOD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302",
+    "t402"
+   ],
+   "note": "ends at the LEDGEWOOD dot"
+  },
+  {
+   "id": 159,
+   "mapName": "LEDGEWOOD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302",
+    "t402"
+   ],
+   "note": "after the LEDGEWOOD text, up to Homeward Bound"
+  },
+  {
+   "id": 200,
+   "mapName": "ZIP",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "ends at the ZIP dot"
+  },
+  {
+   "id": 201,
+   "mapName": "ZIP",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "after the ZIP text"
+  },
+  {
+   "id": 202,
+   "mapName": "LOWER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "west of the LOWER MOUNTAIN ROAD dot (1817,1714), down to the base"
+  },
+  {
+   "id": 203,
+   "mapName": "LOWER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "after the LOWER MOUNTAIN ROAD text, up toward the terrain park"
+  },
+  {
+   "id": 206,
+   "mapName": "RUM RUN",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "after the RUM RUN text"
+  },
+  {
+   "id": 207,
+   "mapName": "RUM RUN",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "ends at the square of RUM RUN"
+  },
+  {
+   "id": 208,
+   "mapName": "LINK",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102"
+   ],
+   "note": "ends at the square of LINK; passes just under the end of the SCOOTER text (Scooter has no line of its own)"
+  },
+  {
+   "id": 209,
+   "mapName": "LINK",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102"
+   ],
+   "note": "after the LINK text"
+  },
+  {
+   "id": 210,
+   "mapName": "TURKEY SHOOT",
+   "color": "black",
+   "confidence": "medium",
+   "tiles": [
+    "t002"
+   ],
+   "note": "from Buckhorn down to Countdown; the two-line TURKEY SHOOT label sits at its junction with 238 and 62 (diamond touches 210, text runs parallel to 238)"
+  },
+  {
+   "id": 225,
+   "mapName": "HOMEWARD BOUND",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "ends at the dot of the upper HOMEWARD BOUND label (2109,1777)"
+  },
+  {
+   "id": 228,
+   "mapName": "RIDGE RUNNER",
+   "color": "green",
+   "confidence": "medium",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "horizontal line from the UPPER ARROW square eastward; interrupted by the LOWER TIMBERLINE label and the lift, then a short dash into the RIDGE RUNNER dot (2253,1143)"
+  },
+  {
+   "id": 231,
+   "mapName": "LOWER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t202"
+   ],
+   "note": "ends at the dot of the upper LOWER MOUNTAIN ROAD label (2388,1290); loops around the Broken Arrow glade"
+  },
+  {
+   "id": 233,
+   "mapName": "SKI SCHOOL SLOPE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302",
+    "t402"
+   ],
+   "note": "line directly above the SKI SCHOOL SLOPE label, beside carpet 4"
+  },
+  {
+   "id": 238,
+   "mapName": "TURKEY SHOOT",
+   "color": "black",
+   "confidence": "medium",
+   "tiles": [
+    "t002"
+   ],
+   "note": "from the Summit Lodge down-left to 210; the TURKEY SHOOT text is printed right above and parallel to it (could instead be Challenger's top: roughly in line with 62 but offset ~13 px)"
+  },
+  {
+   "id": 239,
+   "mapName": "SWEET SOLITUDE",
+   "color": "green",
+   "confidence": "low",
+   "tiles": [
+    "t002"
+   ],
+   "note": "unlabeled green spur merging into Sweet Solitude (137) at (2045,609); its free end sits just above the tops of Upper Sapphire (116) and Tomahawk (118)"
+  },
+  {
+   "id": 243,
+   "mapName": "THE NARROWS",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "after THE NARROWS label, in its band"
+  },
+  {
+   "id": 244,
+   "mapName": "THE NARROWS",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "before THE NARROWS label, in its band"
+  },
+  {
+   "id": 245,
+   "mapName": "RUM RUN",
+   "color": "blue",
+   "confidence": "medium",
+   "tiles": [
+    "t002"
+   ],
+   "note": "white-cased blue line in a thin blue band directly above the RUM RUN label; ends where 206 starts"
+  },
+  {
+   "id": 246,
+   "mapName": "PROGRESSION PARK",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "after the PROGRESSION PARK text"
+  },
+  {
+   "id": 247,
+   "mapName": "PROGRESSION PARK",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t202"
+   ],
+   "note": "above the orange pill of PROGRESSION PARK"
+  },
+  {
+   "id": 248,
+   "mapName": "THE ZONE",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "after THE ZONE text"
+  },
+  {
+   "id": 249,
+   "mapName": "THE ZONE",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t202"
+   ],
+   "note": "above the orange pill of THE ZONE"
+  },
+  {
+   "id": 250,
+   "mapName": "HALFPIPE",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "after the HALFPIPE text"
+  },
+  {
+   "id": 251,
+   "mapName": "HALFPIPE",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "above the orange pill of HALFPIPE"
+  },
+  {
+   "id": 252,
+   "mapName": "GORDON'S GARDEN",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "after the GORDON'S GARDEN text, up to where Homeward Bound (225) resumes"
+  },
+  {
+   "id": 253,
+   "mapName": "GORDON'S GARDEN",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t302",
+    "t402"
+   ],
+   "note": "before the orange pill; starts right after the lower HOMEWARD BOUND label's trailing dash (the park runs on Homeward Bound's line)"
+  }
+ ],
+ "labels": [
+  {
+   "mapName": "UPPER MOUNTAIN ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1590,
+    420
+   ],
+   "note": "first of two labels: 145 before, 144 after"
+  },
+  {
+   "mapName": "UPPER MOUNTAIN ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2087,
+    507
+   ],
+   "note": "second label, at the east end of 144"
+  },
+  {
+   "mapName": "BUCKHORN",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1550,
+    456
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "UPPER FALL LINE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1400,
+    492
+   ],
+   "note": "one diamond (checked at 8x); label straddles the left edge of t002"
+  },
+  {
+   "mapName": "TRIPLESEC",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1468,
+    532
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "TURKEY SHOOT",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1630,
+    525
+   ],
+   "note": "two-line label at the 210 / 238 / 62 junction"
+  },
+  {
+   "mapName": "CHALLENGER",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1514,
+    587
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "COUNTDOWN",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1605,
+    596
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "MUELLERS' RUN",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1476,
+    712
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "RUM RUN",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1777,
+    475
+   ],
+   "note": "no glade icon, though line 245 above it is drawn glade-style (white-cased, in a blue band)"
+  },
+  {
+   "mapName": "THE NARROWS",
+   "symbol": "diamond",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1936,
+    505
+   ],
+   "note": "diamond + glade icon at (1927-1942,529); its band is blue-tinted but the symbol is one black diamond"
+  },
+  {
+   "mapName": "WHISTLER",
+   "symbol": "square",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2055,
+    585
+   ],
+   "note": "upper label; square + glade icon"
+  },
+  {
+   "mapName": "WHISTLER",
+   "symbol": "square",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2178,
+    720
+   ],
+   "note": "lower label, mostly right of x=2159; square + glade icon"
+  },
+  {
+   "mapName": "EASY RIDER",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2201,
+    606
+   ],
+   "note": "only the dot (2158,594) is inside t002"
+  },
+  {
+   "mapName": "UPPER SAPPHIRE",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2112,
+    792
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "TOMAHAWK",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2150,
+    771
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "JOLLY GREEN GIANT",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1898,
+    850
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "UPPER CHIEF",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1651,
+    831
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "FAST LANE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1704,
+    869
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "NOR'EASTER",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1782,
+    970
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "SEARLE'S WAY",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1852,
+    946
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "UPPER WORLD CUP",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1540,
+    890
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "DROP OFF",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1487,
+    900
+   ],
+   "note": "no drawn line near it (between the end of Muellers' Run 63 and Upper World Cup)"
+  },
+  {
+   "mapName": "SCOOTER",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1448,
+    953
+   ],
+   "note": "no line of its own: the label runs from the end of Muellers' Run (63) down to Link (208)"
+  },
+  {
+   "mapName": "LINK",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1481,
+    1006
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "EASY STREET",
+   "symbol": "none-visible",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1417,
+    1073
+   ],
+   "note": "green text and green line, but no circle printed at either end (checked at 8x)"
+  },
+  {
+   "mapName": "HOME STRETCH",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1365,
+    1186
+   ],
+   "note": "mostly left of x=1399; dot at (1312,1216)"
+  },
+  {
+   "mapName": "UPPER TIMBERLINE",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2047,
+    902
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "CUTTER'S FOLLY",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2124,
+    889
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "RT. 103",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2162,
+    955
+   ],
+   "note": "printed 'RT. 103'"
+  },
+  {
+   "mapName": "CHUTE",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1646,
+    1105
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "LEDGES",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1491,
+    1357
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "SIDEKICK",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1941,
+    1097
+   ],
+   "note": "no drawn line: the label spans from Searle's Way (101) to the top of Black Out (98)"
+  },
+  {
+   "mapName": "BLACK OUT",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1995,
+    1195
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "SEL'S CHOICE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2085,
+    1242
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "UPPER ARROW",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2132,
+    1184
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "WARDANCE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1922,
+    1329
+   ],
+   "note": "in the hatched race area"
+  },
+  {
+   "mapName": "BROKEN ARROW",
+   "symbol": "diamond",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2143,
+    1312
+   ],
+   "note": "dark grey glade band with no line inside it"
+  },
+  {
+   "mapName": "LOWER CHIEF",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1772,
+    1343
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "LOWER WORLD CUP",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1593,
+    1469
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "WILLIE'S WAY",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1702,
+    1577
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "PROGRESSION PARK",
+   "symbol": "none-visible",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2059,
+    1545
+   ],
+   "note": "orange terrain park (pill)"
+  },
+  {
+   "mapName": "HALFPIPE",
+   "symbol": "none-visible",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2107,
+    1548
+   ],
+   "note": "orange terrain park (pill)"
+  },
+  {
+   "mapName": "THE ZONE",
+   "symbol": "none-visible",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2119,
+    1511
+   ],
+   "note": "orange terrain park (pill)"
+  },
+  {
+   "mapName": "SACHEM",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1569,
+    1730
+   ],
+   "note": "lower label; another SACHEM label at ~(1350,1460) is left of these tiles"
+  },
+  {
+   "mapName": "ZIP",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1617,
+    1685
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "LOWER MOUNTAIN ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1910,
+    1714
+   ],
+   "note": "lower label; the upper one (2388,1290) is right of these tiles"
+  },
+  {
+   "mapName": "HOTDOG HILL",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1782,
+    1788
+   ],
+   "note": "inside the lilac ski & ride school patch"
+  },
+  {
+   "mapName": "OPEN SLOPE",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1762,
+    1828
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "LIFT LINE",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1793,
+    1862
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "FAIRWAY",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1522,
+    1902
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "HOMEWARD BOUND",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1677,
+    1949
+   ],
+   "note": "lower label"
+  },
+  {
+   "mapName": "HOMEWARD BOUND",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2172,
+    1745
+   ],
+   "note": "upper label, partly right of x=2159"
+  },
+  {
+   "mapName": "GORDON'S GARDEN",
+   "symbol": "none-visible",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1876,
+    1886
+   ],
+   "note": "orange terrain park drawn on Homeward Bound's line"
+  },
+  {
+   "mapName": "KETTLE BROOK",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1990,
+    1932
+   ],
+   "note": "green trail label (the blue KETTLE BROOK box is a village, not listed)"
+  },
+  {
+   "mapName": "LEDGEWOOD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2105,
+    1924
+   ],
+   "note": "green trail label (the LEDGEWOOD box is a village, not listed)"
+  },
+  {
+   "mapName": "SKI SCHOOL SLOPE",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1592,
+    2030
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "GALAXY BOWL",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1462,
+    2052
+   ],
+   "note": "no drawn line; beside carpets 2 and 3"
+  }
+ ]
+}

@@ -6,6 +6,7 @@
 #
 #   tools/trailmap/resorts/whistler-blackcomb/regen.sh            # data only
 #   IMAGES=1 tools/trailmap/resorts/whistler-blackcomb/regen.sh   # also rewrite public/maps/whistler-blackcomb-*.jpg
+#   FORCE=1 ...                                                   # go on although a source's SHA-256 differs (a new edition)
 #
 # A person's reviews in trailReviews.json are kept; Claude's ("by": "claude") are rebuilt, keeping their
 # timestamps when nothing changed.
@@ -20,6 +21,16 @@ mkdir -p "$W"
   https://www.whistlerblackcomb.com/the-mountain/about-the-mountain/trail-maps.aspx \
   https://www.whistlerblackcomb.com/-/aemasset/sitecore/whistler-blackcomb/maps/winter-2025-2026/20251023_WB_winter-trail_map_001.pdf \
   "$W/whistler.pdf"
+
+# the files this data was built from: another file (a new edition) stops the rebuild until its decisions are
+# checked (docs/trail-map-playbook.md, "A new season's map"); FORCE=1 runs on it anyway
+check() {
+  local s; s=$(sha256sum "$1" | cut -d' ' -f1); [ "$s" = "$2" ] && return 0
+  echo "$1: SHA-256 $s, not $2 (the file this data was built from). A new edition needs its decisions" \
+    "checked first (docs/trail-map-playbook.md, \"A new season's map\"); FORCE=1 runs on it anyway." >&2
+  [ -n "$FORCE" ] || exit 1
+}
+check "$W/whistler.pdf" c67923118ba71469923139f2db2a505ca2dc9a7b36b65ac85c36460647756a0f  # 8117919 bytes
 
 # 2. per panel: the map image (the vector layer over the upscaled painting), line pieces, names and symbols
 python3 $T/resorts/whistler-blackcomb/prepare.py

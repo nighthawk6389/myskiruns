@@ -1,0 +1,1313 @@
+{
+ "lines": [
+  {
+   "id": 2,
+   "mapName": "TREE DANCER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "glade line inside the blue-violet TREE DANCER band, above the label (label inline; continues as 3)"
+  },
+  {
+   "id": 3,
+   "mapName": "TREE DANCER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "glade line after the TREE DANCER square+tree icon, inside its band, down to the Green Link / Mountain Road hub (~2810,1100)"
+  },
+  {
+   "id": 12,
+   "mapName": "WHISTLER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "below the icons of the lower WHISTLER label, inside that glade band"
+  },
+  {
+   "id": 13,
+   "mapName": "WHISTLER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "lower Whistler glade band above the lower WHISTLER label; continues 27 after it crosses the Sweet Solitude line"
+  },
+  {
+   "id": 14,
+   "mapName": "EVERGLADE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "glade line after the EVERGLADE label (inline, continues 15)"
+  },
+  {
+   "id": 15,
+   "mapName": "EVERGLADE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "right-hand fork of the glade band that starts at the upper WHISTLER label; runs to the EVERGLADE label, which is inline between 15 and 14"
+  },
+  {
+   "id": 16,
+   "mapName": "WHISPERING PINES",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "glade line after the WHISPERING PINES label, inside its band, ends at Easy Rider"
+  },
+  {
+   "id": 17,
+   "mapName": "WHISPERING PINES",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t003"
+   ],
+   "note": "glade line inside the WHISPERING PINES band from its top (~1948,484) to the label"
+  },
+  {
+   "id": 18,
+   "mapName": "UPPER ARROW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "after the UPPER ARROW label end, down to Lower Mountain Road (Lower Arrow 204 continues below). No glade icon/band printed, although the PDF puts 18/19 in its \"Tree Trails\" layer"
+  },
+  {
+   "id": 19,
+   "mapName": "UPPER ARROW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "from the junction at the end of Upper Timberline (~2095,985) to the square of UPPER ARROW"
+  },
+  {
+   "id": 20,
+   "mapName": "THE SHADOWS",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t203"
+   ],
+   "note": "glade line inside the dark-grey THE SHADOWS band, below the label"
+  },
+  {
+   "id": 21,
+   "mapName": "THE SHADOWS",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t203"
+   ],
+   "note": "glade line inside the dark-grey THE SHADOWS band, above the label"
+  },
+  {
+   "id": 26,
+   "mapName": "WHISTLER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t003"
+   ],
+   "note": "head of the glade band just above-left of the upper WHISTLER label (inline); after the label the band forks into 27 (Whistler) and 15 (Everglade)"
+  },
+  {
+   "id": 27,
+   "mapName": "WHISTLER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t003"
+   ],
+   "note": "left fork after the upper WHISTLER label icons; crosses the Sweet Solitude line and continues as 13 to the lower WHISTLER label"
+  },
+  {
+   "id": 99,
+   "mapName": "SEL'S CHOICE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t203"
+   ],
+   "note": "after the SEL'S CHOICE label end"
+  },
+  {
+   "id": 100,
+   "mapName": "SEL'S CHOICE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "leads into the diamond of SEL'S CHOICE"
+  },
+  {
+   "id": 106,
+   "mapName": "LOWER TIMBERLINE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "after the LOWER TIMBERLINE label to the Evergreen Summit Express bottom terminal"
+  },
+  {
+   "id": 107,
+   "mapName": "LOWER TIMBERLINE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "from the junction at the end of Upper Timberline (~2100,985) to the square of LOWER TIMBERLINE"
+  },
+  {
+   "id": 108,
+   "mapName": "UPPER TIMBERLINE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "after the UPPER TIMBERLINE label end, to the junction where Upper Arrow (19) and Lower Timberline (107) start"
+  },
+  {
+   "id": 110,
+   "mapName": "CUTTER'S FOLLY",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "after the CUTTER'S FOLLY label end, to the Express Lane / Upper-Lower Sapphire junction (~2200,928)"
+  },
+  {
+   "id": 111,
+   "mapName": "CUTTER'S FOLLY",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "leads into the square of CUTTER'S FOLLY from beside the Evergreen Summit Express"
+  },
+  {
+   "id": 112,
+   "mapName": "LOWER SAPPHIRE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "continuation of 113 below the Ridge Runner crossing, into the slow zone at Lower Mountain Road"
+  },
+  {
+   "id": 113,
+   "mapName": "LOWER SAPPHIRE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "after the LOWER SAPPHIRE label end, down to Ridge Runner"
+  },
+  {
+   "id": 114,
+   "mapName": "LOWER SAPPHIRE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "from the Express Lane / Cutter's Folly / Upper Sapphire junction (~2210,930) to the square of LOWER SAPPHIRE"
+  },
+  {
+   "id": 115,
+   "mapName": "UPPER SAPPHIRE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "after the UPPER SAPPHIRE label end, to the junction at ~(2208,910)"
+  },
+  {
+   "id": 116,
+   "mapName": "UPPER SAPPHIRE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "from just below the green spur 239 (~1975,630) to the square of UPPER SAPPHIRE"
+  },
+  {
+   "id": 117,
+   "mapName": "TOMAHAWK",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "blue trail: after the blue TOMAHAWK label, ends at Express Lane (~2256,887); the orange TOMAHAWK terrain-park line (255/254) is its fall-line continuation below Express Lane"
+  },
+  {
+   "id": 118,
+   "mapName": "TOMAHAWK",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "blue trail: leads into the square of the blue TOMAHAWK label; passes beside the FISHER CAT SLIDE kids-zone label (not a trail)"
+  },
+  {
+   "id": 119,
+   "mapName": "EXPRESS LANE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "short stub from the EXPRESS LANE label end to the Solitude summit / lift top"
+  },
+  {
+   "id": 120,
+   "mapName": "EXPRESS LANE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "below the square of EXPRESS LANE (label inline), to the junction with Cutter's Folly / Sapphire (~2206,928)"
+  },
+  {
+   "id": 121,
+   "mapName": "HEAVEN'S GATE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "after the HEAVEN'S GATE label end, down to Green Link"
+  },
+  {
+   "id": 122,
+   "mapName": "HEAVEN'S GATE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "from the Express Lane label end at the summit to the square of HEAVEN'S GATE"
+  },
+  {
+   "id": 123,
+   "mapName": "SCREAMIN' DEMON",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t203",
+    "t303"
+   ],
+   "note": "after the SCREAMIN' DEMON label end"
+  },
+  {
+   "id": 124,
+   "mapName": "SCREAMIN' DEMON",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "starts on Lower Mountain Road just below the ROAD end of its label, leads into the square of SCREAMIN' DEMON"
+  },
+  {
+   "id": 125,
+   "mapName": "THE PLUNGE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t203",
+    "t303"
+   ],
+   "note": "after THE PLUNGE label end"
+  },
+  {
+   "id": 126,
+   "mapName": "THE PLUNGE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t203"
+   ],
+   "note": "leads into the diamond of THE PLUNGE"
+  },
+  {
+   "id": 128,
+   "mapName": "BOOMERANG",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "starts at the Lower Mountain Road lift crossing (~2624,1194), runs beside the Solitude Express Quad into the square of the BOOMERANG label just east of my tiles (~2811,1494)"
+  },
+  {
+   "id": 129,
+   "mapName": "EXHIBITION",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "after the EXHIBITION label end, down toward Green Link"
+  },
+  {
+   "id": 130,
+   "mapName": "EXHIBITION",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "beside the Solitude Express Quad from the summit into the diamond of EXHIBITION"
+  },
+  {
+   "id": 134,
+   "mapName": "COLEMAN BROOK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "after the COLEMAN BROOK label end, down to the hub near JACKSON GORE JUNCTION (~2817,1079)"
+  },
+  {
+   "id": 135,
+   "mapName": "COLEMAN BROOK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "from the Solitude summit into the circle of COLEMAN BROOK"
+  },
+  {
+   "id": 136,
+   "mapName": "SWEET SOLITUDE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "after the SWEET SOLITUDE label end to the summit first-aid cross"
+  },
+  {
+   "id": 137,
+   "mapName": "SWEET SOLITUDE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t003"
+   ],
+   "note": "from the tip of the light-green band (~1931,560) into the circle of SWEET SOLITUDE; the unnamed spur 239 leaves it at ~(2045,609)"
+  },
+  {
+   "id": 138,
+   "mapName": "EASY RIDER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "after the EASY RIDER label end to the junction with Upper Mountain Road (~2520,740)"
+  },
+  {
+   "id": 139,
+   "mapName": "EASY RIDER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t003"
+   ],
+   "note": "from the tip of the light-green band (~1924,545) into the circle of EASY RIDER"
+  },
+  {
+   "id": 140,
+   "mapName": "LOWER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "medium",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "no label on it: green road from the hub where the second MOUNTAIN ROAD label ends (~2820,1100) west-southwest to the Solitude Express Quad, where it lines up with 234 (LOWER MOUNTAIN ROAD, label inline) across the lift; Boomerang (128) starts in that gap. Could instead be the tail of MOUNTAIN ROAD"
+  },
+  {
+   "id": 142,
+   "mapName": "MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "from the Upper Mountain Road / Easy Rider junction (~2520,740) into the circle of the MOUNTAIN ROAD label (inline; the road continues east of my tiles)"
+  },
+  {
+   "id": 143,
+   "mapName": "UPPER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "after the UPPER MOUNTAIN ROAD label end, along the ridge and down to the junction with Easy Rider (~2520,740)"
+  },
+  {
+   "id": 147,
+   "mapName": "ROUNDHOUSE RUN",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "from the Solitude summit into the circle of ROUNDHOUSE RUN"
+  },
+  {
+   "id": 150,
+   "mapName": "OPEN SLOPE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t303"
+   ],
+   "note": "continues from the end of the OPEN SLOPE label (label just west of my tiles at ~1759,1827) up-right past the SUGAR HOUSE box to near Lower Mountain Road (~2211,1669)"
+  },
+  {
+   "id": 156,
+   "mapName": "KETTLE BROOK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t303",
+    "t403"
+   ],
+   "note": "after the KETTLE BROOK label end, up to the Homeward Bound / Gordon's Garden junction (~2065,1808)"
+  },
+  {
+   "id": 158,
+   "mapName": "LEDGEWOOD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t303",
+    "t403"
+   ],
+   "note": "from under the KETTLE BROOK text into the circle of LEDGEWOOD"
+  },
+  {
+   "id": 159,
+   "mapName": "LEDGEWOOD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t303",
+    "t403"
+   ],
+   "note": "after the LEDGEWOOD label end, up to Homeward Bound (~2208,1760); Snow Track (160) branches off it"
+  },
+  {
+   "id": 160,
+   "mapName": "SNOW TRACK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t303"
+   ],
+   "note": "branches off Ledgewood (159) into the circle of SNOW TRACK; no drawn line after the label"
+  },
+  {
+   "id": 180,
+   "mapName": "VILLAGE RUN",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t203",
+    "t303"
+   ],
+   "note": "after the VILLAGE RUN label end"
+  },
+  {
+   "id": 181,
+   "mapName": "VILLAGE RUN",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t203",
+    "t303"
+   ],
+   "note": "from the corner of Lower Mountain Road at the foot of the SWITCHBACK label (~2320,1435) into the circle of VILLAGE RUN"
+  },
+  {
+   "id": 203,
+   "mapName": "LOWER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t203",
+    "t303"
+   ],
+   "note": "from the foot of Lower Arrow (~2177,1606) into the end of the second LOWER MOUNTAIN ROAD label (label just west of my tiles at ~1907,1714)"
+  },
+  {
+   "id": 204,
+   "mapName": "LOWER ARROW",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t203"
+   ],
+   "note": "from Lower Mountain Road (below Upper Arrow 18) down to the top of the vertical LOWER ARROW label"
+  },
+  {
+   "id": 205,
+   "mapName": "LOWER ARROW",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t203",
+    "t303"
+   ],
+   "note": "below the circle of LOWER ARROW, down to Lower Mountain Road"
+  },
+  {
+   "id": 225,
+   "mapName": "HOMEWARD BOUND",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t303"
+   ],
+   "note": "from the Gordon's Garden / Kettle Brook junction (~2066,1802) into the circle of HOMEWARD BOUND"
+  },
+  {
+   "id": 226,
+   "mapName": "HOMEWARD BOUND",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t303"
+   ],
+   "note": "after the HOMEWARD BOUND label end, up to the top of the lift above it"
+  },
+  {
+   "id": 227,
+   "mapName": "RIDGE RUNNER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "after the RIDGE RUNNER label end, down to Green Link"
+  },
+  {
+   "id": 228,
+   "mapName": "RIDGE RUNNER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "from the Upper Arrow square (~2112,1134) east to the RIDGE RUNNER label; broken where it crosses Lower Timberline and the Evergreen Summit Express"
+  },
+  {
+   "id": 229,
+   "mapName": "GREEN LINK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "one stroke from the circle of GREEN LINK west-southwest (Ridge Runner, Heaven's Gate and Exhibition end on it), hairpin at ~(2352,1240), back east to join Lower Mountain Road under its label at ~(2515,1214); the LOWER MOUNTAIN ROAD label is on the separate line 231-234, not on this return leg"
+  },
+  {
+   "id": 230,
+   "mapName": "GREEN LINK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "after the GREEN LINK label end, east to the hub (~2810,1100)"
+  },
+  {
+   "id": 231,
+   "mapName": "LOWER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t203"
+   ],
+   "note": "from the circle of LOWER MOUNTAIN ROAD (label inline between 234 and 231) west, hairpin near Broken Arrow, back east to Lower Arrow (~2201,1408)"
+  },
+  {
+   "id": 232,
+   "mapName": "LOWER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "medium",
+   "tiles": [
+    "t203",
+    "t303"
+   ],
+   "note": "no label on it: the road between 231 and 203 (both carry a LOWER MOUNTAIN ROAD label), broken only where Lower Arrow meets it at each end; the SWITCHBACK label ends at its corner (~2312,1435), where Village Run (181) starts"
+  },
+  {
+   "id": 234,
+   "mapName": "LOWER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "after the ROAD end of the LOWER MOUNTAIN ROAD label, up-right to the Solitude Express Quad"
+  },
+  {
+   "id": 237,
+   "mapName": "DOUBLE DIPPER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t203"
+   ],
+   "note": "after the DOUBLE DIPPER label, down into the slow zone at Lower Mountain Road"
+  },
+  {
+   "id": 239,
+   "mapName": "UNKNOWN",
+   "color": "green",
+   "confidence": "medium",
+   "tiles": [
+    "t003"
+   ],
+   "note": "short unnamed green spur leaving Sweet Solitude (137) at ~(2045,609) west to the heads of Upper Sapphire (116) and Tomahawk (118); no label on or near it (checked on crops)"
+  },
+  {
+   "id": 246,
+   "mapName": "PROGRESSION PARK",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t203",
+    "t303"
+   ],
+   "note": "orange terrain-park stub after the PROGRESSION PARK label"
+  },
+  {
+   "id": 247,
+   "mapName": "PROGRESSION PARK",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t203"
+   ],
+   "note": "orange terrain-park stub before the pill of PROGRESSION PARK"
+  },
+  {
+   "id": 248,
+   "mapName": "THE ZONE",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t203",
+    "t303"
+   ],
+   "note": "orange terrain-park stub after THE ZONE label"
+  },
+  {
+   "id": 249,
+   "mapName": "THE ZONE",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t203"
+   ],
+   "note": "orange terrain-park stub before the pill of THE ZONE"
+  },
+  {
+   "id": 250,
+   "mapName": "HALFPIPE",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t203",
+    "t303"
+   ],
+   "note": "orange terrain-park stub after the HALFPIPE label"
+  },
+  {
+   "id": 251,
+   "mapName": "HALFPIPE",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t203",
+    "t303"
+   ],
+   "note": "orange terrain-park stub before the pill of HALFPIPE"
+  },
+  {
+   "id": 252,
+   "mapName": "GORDON'S GARDEN",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t303"
+   ],
+   "note": "orange terrain-park line from the end of the GORDON'S GARDEN label (just west of my tiles, ~1874,1886) to the Homeward Bound / Kettle Brook junction (~2060,1808)"
+  },
+  {
+   "id": 254,
+   "mapName": "TOMAHAWK",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203"
+   ],
+   "note": "ORANGE terrain-park line after the orange TOMAHAWK label (pill), not the blue trail; same printed name as the blue TOMAHAWK trail (118/117), whose line it continues below Express Lane"
+  },
+  {
+   "id": 255,
+   "mapName": "TOMAHAWK",
+   "color": "freestyle",
+   "confidence": "high",
+   "tiles": [
+    "t103"
+   ],
+   "note": "ORANGE terrain-park line before the pill of the orange TOMAHAWK label, not the blue trail; starts just below Express Lane in line with blue TOMAHAWK 117"
+  }
+ ],
+ "labels": [
+  {
+   "mapName": "UPPER MOUNTAIN ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2084,
+    507
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "WHISTLER",
+   "symbol": "square",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2055,
+    589
+   ],
+   "note": "upper WHISTLER label (square + glade icon) at the head of the glade band"
+  },
+  {
+   "mapName": "EASY RIDER",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2199,
+    605
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "WHISPERING PINES",
+   "symbol": "square",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2305,
+    605
+   ],
+   "note": "square + glade icon"
+  },
+  {
+   "mapName": "WHISTLER",
+   "symbol": "square",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2178,
+    725
+   ],
+   "note": "second (lower) WHISTLER label on the same glade, square + glade icon"
+  },
+  {
+   "mapName": "SWEET SOLITUDE",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2272,
+    744
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "EVERGLADE",
+   "symbol": "square",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2422,
+    762
+   ],
+   "note": "square + glade icon"
+  },
+  {
+   "mapName": "TOMAHAWK",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2147,
+    768
+   ],
+   "note": "blue trail label (square); an orange terrain park with the same name is printed below Express Lane"
+  },
+  {
+   "mapName": "UPPER SAPPHIRE",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2109,
+    789
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "EXPRESS LANE",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2303,
+    880
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "CUTTER'S FOLLY",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2123,
+    889
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "MOUNTAIN ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2808,
+    889
+   ],
+   "note": "label straddles the east edge of my tiles; a second MOUNTAIN ROAD label is further east at ~(2905,1065)"
+  },
+  {
+   "mapName": "UPPER TIMBERLINE",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2046,
+    900
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "ROUNDHOUSE RUN",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2711,
+    908
+   ],
+   "note": "west of the JACKSON GORE JUNCTION sign"
+  },
+  {
+   "mapName": "RT. 103",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2160,
+    956
+   ],
+   "note": "no drawn line of its own: the label spans the short connector from the Cutter's Folly / Express Lane junction (~2200,930) down-left to the end of Upper Timberline (~2100,985)"
+  },
+  {
+   "mapName": "COLEMAN BROOK",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2722,
+    981
+   ],
+   "note": "west of the JACKSON GORE JUNCTION sign; the line ends at the hub beside it"
+  },
+  {
+   "mapName": "TREE DANCER",
+   "symbol": "square",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2676,
+    1012
+   ],
+   "note": "square + glade icon"
+  },
+  {
+   "mapName": "TOMAHAWK",
+   "symbol": "none-visible",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2348,
+    1022
+   ],
+   "note": "ORANGE terrain-park label with orange pill (freestyle), not the blue square TOMAHAWK trail; lines 255/254"
+  },
+  {
+   "mapName": "EXHIBITION",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2532,
+    1031
+   ],
+   "note": "one diamond (checked zoomed)"
+  },
+  {
+   "mapName": "LOWER SAPPHIRE",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2267,
+    1040
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "HEAVEN'S GATE",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2438,
+    1041
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "GREEN LINK",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2708,
+    1107
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "RIDGE RUNNER",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2307,
+    1140
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "LOWER TIMBERLINE",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2209,
+    1145
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "UPPER ARROW",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2132,
+    1181
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "DOUBLE DIPPER",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2240,
+    1242
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "SEL'S CHOICE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2084,
+    1244
+   ],
+   "note": "one diamond (checked zoomed)"
+  },
+  {
+   "mapName": "LOWER MOUNTAIN ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2470,
+    1249
+   ],
+   "note": "a second LOWER MOUNTAIN ROAD label is just west of my tiles at ~(1907,1714)"
+  },
+  {
+   "mapName": "BROKEN ARROW",
+   "symbol": "diamond",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2143,
+    1312
+   ],
+   "note": "one diamond + glade icon (checked zoomed); dark-grey glade band with NO drawn line"
+  },
+  {
+   "mapName": "SWITCHBACK",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2308,
+    1377
+   ],
+   "note": "no drawn line of its own: the vertical label runs from Lower Mountain Road (~2296,1325) down to the road's corner at ~(2312,1435), where Village Run starts"
+  },
+  {
+   "mapName": "THE SHADOWS",
+   "symbol": "diamond",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2379,
+    1385
+   ],
+   "note": "one diamond + glade icon (checked zoomed)"
+  },
+  {
+   "mapName": "THE PLUNGE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2506,
+    1461
+   ],
+   "note": "one diamond (checked zoomed)"
+  },
+  {
+   "mapName": "LOWER ARROW",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2202,
+    1483
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "BOOMERANG",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2811,
+    1494
+   ],
+   "note": "just east of my tiles; line 128 leads into it"
+  },
+  {
+   "mapName": "SCREAMIN' DEMON",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2672,
+    1506
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "THE ZONE",
+   "symbol": "none-visible",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2118,
+    1510
+   ],
+   "note": "orange terrain park (pill), freestyle"
+  },
+  {
+   "mapName": "HALFPIPE",
+   "symbol": "none-visible",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2108,
+    1546
+   ],
+   "note": "orange terrain park (pill), freestyle"
+  },
+  {
+   "mapName": "PROGRESSION PARK",
+   "symbol": "none-visible",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2059,
+    1542
+   ],
+   "note": "orange terrain park (pill), freestyle"
+  },
+  {
+   "mapName": "VILLAGE RUN",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2559,
+    1594
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "HOMEWARD BOUND",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2176,
+    1752
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "SNOW TRACK",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2278,
+    1856
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "LEDGEWOOD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2103,
+    1925
+   ],
+   "note": "green trail label; the light-blue LEDGEWOOD box below it is a building, not a trail"
+  },
+  {
+   "mapName": "KETTLE BROOK",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1988,
+    1934
+   ],
+   "note": "label straddles the west edge of my tiles; the dark-blue KETTLE BROOK box is a building, not a trail"
+  }
+ ]
+}

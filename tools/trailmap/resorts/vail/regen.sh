@@ -5,6 +5,7 @@
 #   tools/trailmap/resorts/vail/regen.sh            # data only
 #   IMAGES=1 tools/trailmap/resorts/vail/regen.sh   # also rewrite public/maps/vail-<panel>.jpg
 #   FRESH=1 ...                                     # re-run line and symbol detection (cached otherwise)
+#   FORCE=1 ...                                     # go on although a source's SHA-256 differs (a new edition)
 #
 # Human decisions in panels/<panel>/trailReviews.json are kept; Claude's ("by": "claude") are rebuilt from the
 # traces, keeping their timestamps when nothing changed.
@@ -20,6 +21,18 @@ for p in $PANELS; do
   [ -f "$W/$p.png" ] || curl -sSf -o "$W/$p.png" \
     "https://scene7.vailresorts.com/is/image/vailresorts/20251001_VL_winter-$p-trail_map_001?fmt=png-alpha&wid=4990&qlt=100"
 done
+
+# the files this data was built from: another file (a new edition) stops the rebuild until its decisions are
+# checked (docs/trail-map-playbook.md, "A new season's map"); FORCE=1 runs on it anyway
+check() {
+  local s; s=$(sha256sum "$1" | cut -d' ' -f1); [ "$s" = "$2" ] && return 0
+  echo "$1: SHA-256 $s, not $2 (the file this data was built from). A new edition needs its decisions" \
+    "checked first (docs/trail-map-playbook.md, \"A new season's map\"); FORCE=1 runs on it anyway." >&2
+  [ -n "$FORCE" ] || exit 1
+}
+check "$W/front-side.png" b64e3761040e8a8c69a1734289cf8559d708c46d374c37351452222e45d14f3e  # 24330864 bytes
+check "$W/back-bowls.png" 4d034ee0882c42beda143aa254099a72da48dc74cfc504f4ae1b854c9203d2b1  # 15927665 bytes
+check "$W/blue-sky.png" a957522cd75c3078b3807ef5e1aa1dc2e222a8183e16f7947025ce93cf0a7f9e  # 25585610 bytes
 
 # 2. line pieces and symbols. --exclude blanks the legend, info boxes, the Game Creek inset's frame, logos and
 # the header band; --k scales mark sizes (Back Bowls and Blue Sky are drawn bigger).

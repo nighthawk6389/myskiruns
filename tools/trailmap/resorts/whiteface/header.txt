@@ -1,0 +1,8 @@
+// Seeded by tools/trailmap/seed_roster.py from the 2025-26 map PDF's own text
+// (every name is real text there, coloured by difficulty, with its symbol
+// beside it; every single / double diamond checked on a crop). No readers:
+// each name was matched to the line it is printed along or in a gap of, and
+// checked on region crops. "High County Road" on the map is High Country
+// Road (NY DEC's name for the 2022 trail). Glades are the names that say so;
+// 10th Mt. Division and Cloudsplitter Glades have no drawn line (markers).
+// x/y/baseY/width are unused layout fields.

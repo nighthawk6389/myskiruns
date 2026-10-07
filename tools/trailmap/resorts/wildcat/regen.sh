@@ -5,6 +5,7 @@
 #
 #   tools/trailmap/resorts/wildcat/regen.sh            # data only
 #   IMAGES=1 tools/trailmap/resorts/wildcat/regen.sh   # also rewrite public/maps/wildcat.jpg
+#   FORCE=1 ...                                        # go on although a source's SHA-256 differs (a new edition)
 #
 # A person's reviews in trailReviews.json are kept; Claude's ("by": "claude") are rebuilt, keeping their
 # timestamps when nothing changed.
@@ -21,6 +22,17 @@ mkdir -p "$W"
   https://files.skimap.org/w18ct5ihtid1a6eekf9icq9qaqtj.pdf
 [ -f "$W/scene7.png" ] || curl -sSf -o "$W/scene7.png" \
   "https://scene7.vailresorts.com/is/image/vailresorts/20251226_WC_winter-trail_map_001?fmt=png-alpha&wid=3575&qlt=100"
+
+# the files this data was built from: another file (a new edition) stops the rebuild until its decisions are
+# checked (docs/trail-map-playbook.md, "A new season's map"); FORCE=1 runs on it anyway
+check() {
+  local s; s=$(sha256sum "$1" | cut -d' ' -f1); [ "$s" = "$2" ] && return 0
+  echo "$1: SHA-256 $s, not $2 (the file this data was built from). A new edition needs its decisions" \
+    "checked first (docs/trail-map-playbook.md, \"A new season's map\"); FORCE=1 runs on it anyway." >&2
+  [ -n "$FORCE" ] || exit 1
+}
+check "$W/wildcat_text.pdf" 8269b252ceb752dd67c270290df84bc4efd035c40534e9323f3de82430c64b98  # 961200 bytes
+check "$W/scene7.png" c61a5bf2630f4c9fed2501d35bc9ded3226f2c8b3511b60c1f7fb6b7ed22cc94  # 32719344 bytes
 
 # 2. the map image (the painting down to the legend bar), the trail lines (3.27 pt strokes in the three trail
 #    colours; the green FIRST AID CENTER lettering is left out), the names (text) and the symbols, all on the

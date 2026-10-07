@@ -1,0 +1,124 @@
+{
+ "trails": [
+  {
+   "id": "fast-track",
+   "pieces": [
+    168
+   ],
+   "partial": {},
+   "traced": [
+    [
+     4014,
+     1868
+    ],
+    [
+     4020,
+     1880
+    ],
+    [
+     4027,
+     1894
+    ],
+    [
+     4036,
+     1908
+    ],
+    [
+     4044,
+     1923
+    ],
+    [
+     4051,
+     1940
+    ],
+    [
+     4057,
+     1952
+    ],
+    [
+     4063,
+     1964
+    ]
+   ],
+   "confidence": "medium",
+   "note": "168 plus a trace along the FAST TRACK label to its end at a road crossing (4063,1964); 169 goes to Inn Bound (a naming call). 168 runs from the Quantum Six base slow zone (3945,1735), under the QUAD lift text where Spur Line joins, to the circle (4019,1877). The trace keeps the label as Fast Track."
+  },
+  {
+   "id": "inn-bound",
+   "pieces": [
+    169,
+    170
+   ],
+   "partial": {},
+   "traced": [],
+   "confidence": "medium",
+   "note": "169+170, from the FAST TRACK label end (4063,1965) to the base at the Coleman Brook quad bottom (3863,2171); the join bridges the label gap. 169 is a naming call with no junction. There a road crosses the trail, the narrow cut opens onto the wide base slope, and the base slow zone begins."
+  },
+  {
+   "id": "bright-star-basin",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     4128,
+     2119
+    ],
+    [
+     4100,
+     2116
+    ],
+    [
+     4072,
+     2112
+    ],
+    [
+     4040,
+     2123
+    ],
+    [
+     4005,
+     2136
+    ],
+    [
+     3970,
+     2149
+    ],
+    [
+     3937,
+     2160
+    ],
+    [
+     3915,
+     2169
+    ]
+   ],
+   "confidence": "medium",
+   "note": "No distinct run: a learning area served by carpets 6 and 7, in the base slow-zone band, with no line. Stand-in: from above carpet 7's top (4128,2119) along the label to its circle (3935,2160) and the base. A no-line marker at (4004,2134) is equally right. Trim x>4072 if it is only carpet 6's slope."
+  },
+  {
+   "id": "tree-tap",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     3991,
+     2071
+    ],
+    [
+     3965,
+     2084
+    ],
+    [
+     3940,
+     2097
+    ],
+    [
+     3912,
+     2109
+    ]
+   ],
+   "confidence": "low",
+   "note": "No distinct run or extent shown: a park printed only as an orange pill (3920,2105) and name, with no orange line in the PDF. It is in the open snow between lower Inn Bound (170) and carpet 6, by Snow Tubing. Stand-in along the label from the P (3991,2071) to the pill; a marker at (3956,2088) is fine."
+  }
+ ]
+}

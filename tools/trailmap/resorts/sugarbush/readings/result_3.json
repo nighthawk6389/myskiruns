@@ -1,0 +1,645 @@
+{
+ "lines": [
+  {
+   "id": 37,
+   "mapName": "SUNRISE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "North Lynx: black line SE of MORNING STAR, curling at the top by the summit patrol hut, down to the North Lynx base; SUNRISE label (one diamond + snowflake) printed along it."
+  },
+  {
+   "id": 38,
+   "mapName": "MORNING STAR",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "Straight black line along the SE side of the North Lynx Triple from the summit patrol hut to the lift bottom; MORNING STAR label (one diamond) printed along it."
+  },
+  {
+   "id": 39,
+   "mapName": "BIRCH RUN",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t003",
+    "t103"
+   ],
+   "note": "Blue line along the NW side of the North Lynx Triple from the summit patrol hut to the base; BIRCH RUN label (blue square + snowflake) printed along it."
+  },
+  {
+   "id": 41,
+   "mapName": "VILLAGE RUN",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t103",
+    "t203",
+    "t303"
+   ],
+   "note": "From the North Lynx base (below the Slide Brook Express bottom) down past the condo roads to (2094,2364); VILLAGE RUN label (blue square) and a 'TO CONDOS' arrow printed along it."
+  },
+  {
+   "id": 60,
+   "mapName": "WAY BACK",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104"
+   ],
+   "note": "Starts at the EXTERMINATOR/LWR EXTERMINATOR junction (3403,1176), runs through the two-line WAY / BACK label (blue square + snowflake), crosses under the North Ridge Express and BRAVO, crosses the LWR ELBOW line and ends in the Glen House slow zone (3310,1342); the short part after the lift crossing is unlabeled but continuous."
+  },
+  {
+   "id": 61,
+   "mapName": "UPPER LOOKIN' GOOD",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t004"
+   ],
+   "note": "Starts by the lookout at the RIM RUN hook and runs down-left to the Summit Quad, where LOOKIN' GOOD (70) continues; the two-line UPPER / LOOKIN' GOOD label (blue square) is printed inline on this line, not on the parallel RIM RUN return leg (64) just above it."
+  },
+  {
+   "id": 62,
+   "mapName": "SPIN OUT",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104"
+   ],
+   "note": "From LOWER RIM RUN (3144,1296) down-left to LOWER F.I.S. (3089,1424); SPIN OUT label (one diamond) printed inline."
+  },
+  {
+   "id": 63,
+   "mapName": "SOUTH BOUND",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "From the Glen House slow zone (3218,1379) down-left to LOWER F.I.S. (3089,1448); two-line SOUTH / BOUND label (one diamond) printed inline."
+  },
+  {
+   "id": 64,
+   "mapName": "RIM RUN",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t004"
+   ],
+   "note": "From the Mt Ellen summit patrol hut along the ridge (RIM RUN label, blue square + snowflake; PANORAMA merges and F.I.S. leaves on the way), hooks at the lookout/camera and returns down-left to the Summit Quad (3073,1071) where BLACK DIAMOND RUSH ends and LOWER RIM RUN (67) begins. The return leg carries no other label."
+  },
+  {
+   "id": 65,
+   "mapName": "ROB ROY",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104"
+   ],
+   "note": "Short connector from just below the Summit Quad chair icon (between the lift and LOOKIN' GOOD) down to LOWER RIM RUN; two-line ROB / ROY label printed along it, its blue square at the bottom where it meets Lower Rim Run."
+  },
+  {
+   "id": 66,
+   "mapName": "PANORAMA",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t004"
+   ],
+   "note": "From the summit patrol hut under the camera pointer through the PANORAMA label (blue square + snowflake), then down-right to merge into RIM RUN at (3061,914)."
+  },
+  {
+   "id": 67,
+   "mapName": "LOWER RIM RUN",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104"
+   ],
+   "note": "Starts where RIM RUN (64) and BLACK DIAMOND RUSH (112) end at the Summit Quad, crosses the lift, curves down the west side past the LOWER RIM RUN label (blue square + snowflake at 3002,1144) and runs east to the Glen House slow zone (3225,1367). ROB ROY's square sits on it where Rob Roy joins; no other label on it."
+  },
+  {
+   "id": 68,
+   "mapName": "LOWER F.I.S.",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104",
+    "t204",
+    "t304"
+   ],
+   "note": "From LOWER RIM RUN (3027,1229) down the far west side to the Mt Ellen base (3579,2170); LOWER F.I.S. printed twice along it (one diamond each, ~(3060,1330) and ~(3082,1876)); SPIN OUT and SOUTH BOUND join it; it passes the Moose Run Woods and Ellen's Woods glades and crosses under the Slide Brook Express."
+  },
+  {
+   "id": 69,
+   "mapName": "LWR ELBOW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104"
+   ],
+   "note": "Branches off ELBOW at (3239,1226) at the LWR ELBOW blue square + snowflake and runs along its label to the bottom of the North Ridge Express (3365,1324)."
+  },
+  {
+   "id": 70,
+   "mapName": "LOOKIN' GOOD",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104"
+   ],
+   "note": "Straight blue line along the east side of the Summit Quad from the end of UPPER LOOKIN' GOOD (3087,1094) to the Glen House slow zone (3229,1339); LOOKIN' GOOD label (blue square + snowflake) printed beside it."
+  },
+  {
+   "id": 71,
+   "mapName": "F.I.S.",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t004"
+   ],
+   "note": "Short black line from RIM RUN's ridge leg (3051,927) down to its return leg (3099,1043); F.I.S. label (two diamonds + snowflake) printed inline."
+  },
+  {
+   "id": 72,
+   "mapName": "EXTERMINATOR",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t004"
+   ],
+   "note": "From the top (3305,1020) to the junction (3411,1171) where WAY BACK (60) branches and LWR EXTERMINATOR (111) continues; EXTERMINATOR label (two diamonds) printed along it."
+  },
+  {
+   "id": 73,
+   "mapName": "ELBOW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104"
+   ],
+   "note": "From the lookout at the RIM RUN hook (3240,1018) down along the ELBOW label (blue square + snowflake). LWR ELBOW branches right at (3239,1226); the lower ~quarter below that junction is unlabeled and curves across LOOKIN' GOOD and the Summit Quad bottom into the Glen House slow zone (3181,1307) - read as Elbow's own continuation (no other name on it)."
+  },
+  {
+   "id": 74,
+   "mapName": "BRAVO",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104"
+   ],
+   "note": "Black line along the east side of the North Ridge Express from the top (3284,1029) to the lift bottom (3382,1317); BRAVO label (one diamond) at its top."
+  },
+  {
+   "id": 75,
+   "mapName": "WHICH WAY",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "From the North Ridge Express bottom (3376,1377) through the WHICH WAY label (blue square + snowflake at ~(3461,1454), just right of my tiles) down to the Green Mountain Express bottom (3541,1715) next to MAINSTREAM's start."
+  },
+  {
+   "id": 77,
+   "mapName": "TUMBLER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t104",
+    "t204"
+   ],
+   "note": "From the Glen House slow zone (3259,1421) curving down west of THE CLIFFS to the Green Mountain Express bottom slow zone (3458,1789); TUMBLER label (one diamond) printed inline. The TUMBLER WOODS glade label beside it is a separate glade with no line."
+  },
+  {
+   "id": 85,
+   "mapName": "SPLIT: NORTHSTAR / LWR NORTHSTAR",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104"
+   ],
+   "note": "From the North Ridge Express bottom (3366,1338) east through the NORTHSTAR label (green circle + snowflake at ~(3525,1383)) and down; it runs ~43 px past the LWR NORTHSTAR green circle at (3581,1521) (the 'LWR' of that label is printed on this piece) to its end (3578,1564) where 87 begins. Cut: 85@3581,1521=NORTHSTAR/LWR NORTHSTAR."
+  },
+  {
+   "id": 89,
+   "mapName": "JOE'S CRUISER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "From the North Ridge Express bottom (3395,1375) through the JOE'S CRUISER label (blue square + snowflake at ~(3483,1414), just right of my tiles) down to the Green Mountain Express bottom area (3568,1709)."
+  },
+  {
+   "id": 91,
+   "mapName": "HAMMERHEAD",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "From the Glen House area (3313,1412) down between THE CLIFFS and ENCORE to the Green Mountain Express bottom (3493,1704); HAMMERHEAD label (one diamond) printed inline."
+  },
+  {
+   "id": 93,
+   "mapName": "ENCORE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "From the Glen House area (3337,1392), curving right to the ENCORE diamond, then down west of the Green Mountain Express to its bottom (3496,1691); one diamond."
+  },
+  {
+   "id": 95,
+   "mapName": "THE CLIFFS",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "Straight black line just west of the Green Mountain Express from Glen House (3281,1431) to the bottom (3472,1748); THE CLIFFS label (one diamond + snowflake) printed inline."
+  },
+  {
+   "id": 111,
+   "mapName": "LWR EXTERMINATOR",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t004"
+   ],
+   "note": "Continues EXTERMINATOR past the WAY BACK junction (3411,1171); LWR EXTERMINATOR label (one diamond at ~(3442,1190), just right of my tiles) printed along it; ends on green line 83 at (3524,1347)."
+  },
+  {
+   "id": 112,
+   "mapName": "BLACK DIAMOND RUSH",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t004"
+   ],
+   "note": "Black line along the west side of the Summit Quad from the summit patrol hut (2961,894) to the RIM RUN / LOWER RIM RUN junction (3045,1070); two-line label BLACK DIAMOND / RUSH (two diamonds) printed along it."
+  }
+ ],
+ "labels": [
+  {
+   "mapName": "BIRCH RUN",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    2092,
+    1408
+   ],
+   "note": "snowflake before the square; North Lynx, on line 39"
+  },
+  {
+   "mapName": "MORNING STAR",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    2142,
+    1426
+   ],
+   "note": "North Lynx, on line 38"
+  },
+  {
+   "mapName": "SUNRISE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    2103,
+    1532
+   ],
+   "note": "snowflake before the diamond; North Lynx, on line 37"
+  },
+  {
+   "mapName": "VILLAGE RUN",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    2215,
+    1938
+   ],
+   "note": "'TO CONDOS' arrow printed beside it; on line 41"
+  },
+  {
+   "mapName": "PANORAMA",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3073,
+    879
+   ],
+   "note": "snowflake; on line 66"
+  },
+  {
+   "mapName": "RIM RUN",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3156,
+    962
+   ],
+   "note": "snowflake; on line 64"
+  },
+  {
+   "mapName": "BLACK DIAMOND RUSH",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    2997,
+    1007
+   ],
+   "note": "printed on two lines: BLACK DIAMOND / RUSH; on line 112"
+  },
+  {
+   "mapName": "F.I.S.",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3083,
+    1013
+   ],
+   "note": "snowflake; on line 71"
+  },
+  {
+   "mapName": "UPPER LOOKIN' GOOD",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3162,
+    1064
+   ],
+   "note": "two lines: UPPER / LOOKIN' GOOD; on line 61"
+  },
+  {
+   "mapName": "LOOKIN' GOOD",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3164,
+    1204
+   ],
+   "note": "snowflake; on line 70"
+  },
+  {
+   "mapName": "ELBOW",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3231,
+    1125
+   ],
+   "note": "snowflake; on line 73"
+  },
+  {
+   "mapName": "LWR ELBOW",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3309,
+    1278
+   ],
+   "note": "snowflake; on line 69"
+  },
+  {
+   "mapName": "BRAVO",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3305,
+    1087
+   ],
+   "note": "on line 74"
+  },
+  {
+   "mapName": "EXTERMINATOR",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3367,
+    1109
+   ],
+   "note": "on line 72"
+  },
+  {
+   "mapName": "BRAVO WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3285,
+    1155
+   ],
+   "note": "double-tree glade icon (two overlapping trees) at ~(3264,1071); no line"
+  },
+  {
+   "mapName": "BRAVINATOR WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3364,
+    1154
+   ],
+   "note": "double-tree glade icon; two lines BRAVINATOR / WOODS; no line"
+  },
+  {
+   "mapName": "EXTERMINATOR WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3468,
+    1180
+   ],
+   "note": "double-tree glade icon at ~(3384,1076); only its start is in t004, rest in the next column; no line"
+  },
+  {
+   "mapName": "WAY BACK",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3394,
+    1226
+   ],
+   "note": "snowflake; two lines WAY / BACK; on line 60"
+  },
+  {
+   "mapName": "LOWER RIM RUN",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3046,
+    1230
+   ],
+   "note": "snowflake; on line 67"
+  },
+  {
+   "mapName": "ROB ROY",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3154,
+    1254
+   ],
+   "note": "two lines ROB / ROY; square at ~(3135,1275) where line 65 meets Lower Rim Run"
+  },
+  {
+   "mapName": "LOWER F.I.S.",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3060,
+    1330
+   ],
+   "note": "upper of two LOWER F.I.S. labels on line 68"
+  },
+  {
+   "mapName": "LOWER F.I.S.",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3082,
+    1876
+   ],
+   "note": "lower of two LOWER F.I.S. labels on line 68"
+  },
+  {
+   "mapName": "SPIN OUT",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3121,
+    1354
+   ],
+   "note": "on line 62"
+  },
+  {
+   "mapName": "SOUTH BOUND",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3155,
+    1430
+   ],
+   "note": "two lines SOUTH / BOUND; on line 63"
+  },
+  {
+   "mapName": "TUMBLER",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3290,
+    1593
+   ],
+   "note": "on line 77"
+  },
+  {
+   "mapName": "TUMBLER WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3281,
+    1637
+   ],
+   "note": "double-tree glade icon; no line (TUMBLER's line 77 runs beside it)"
+  },
+  {
+   "mapName": "MOOSE RUN WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3150,
+    1671
+   ],
+   "note": "single-tree glade icon; no line"
+  },
+  {
+   "mapName": "THE CLIFFS",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3338,
+    1528
+   ],
+   "note": "snowflake; on line 95"
+  },
+  {
+   "mapName": "HAMMERHEAD",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3380,
+    1515
+   ],
+   "note": "on line 91"
+  },
+  {
+   "mapName": "ENCORE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3404,
+    1470
+   ],
+   "note": "on line 93"
+  },
+  {
+   "mapName": "ELLEN'S WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3372,
+    2093
+   ],
+   "note": "single-tree glade icon; no line"
+  }
+ ]
+}

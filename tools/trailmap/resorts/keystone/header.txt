@@ -1,0 +1,13 @@
+// Seeded by tools/trailmap/seed_roster.py from the 2025-26 map PDF. Its names
+// are outlined glyphs, not text: tools/trailmap/pdf_glyphs.py groups the
+// glyph outlines by shape (each shape read once on a contact sheet) and joins
+// consecutive glyphs into labels. Names are as printed (Orfint Boy, Beger,
+// Witchita, "Oh, Bob"). Difficulty is the symbol printed with each name;
+// "Extreme Terrain" (EX) is double-black. No readers: each line piece was
+// matched to the name printed along it and checked on region crops. The five
+// A51 park runs (Easy Street, Park Lane, Main Street, The Alley, I-70) print
+// no symbol: seed_roster's default (blue). The four kids' adventure zones
+// (Lost Mine, Murphy's Mine, Ripperoo's Forest, Ripperoo's Glade) print no
+// symbol either and sit on green runs: green. 25 names have no drawn line
+// (bowls, glades and tree areas, the learning-area runs, parks, kids' zones):
+// markers at the label. x/y/baseY/width are unused layout fields.

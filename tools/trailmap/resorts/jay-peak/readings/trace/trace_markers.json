@@ -1,0 +1,46 @@
+{
+ "trails": [
+  {
+   "id": "rabbit-hole",
+   "pieces": [],
+   "traced": [],
+   "confidence": "high",
+   "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill"
+  },
+  {
+   "id": "rabbit-park",
+   "pieces": [],
+   "traced": [],
+   "confidence": "high",
+   "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill"
+  },
+  {
+   "id": "shakedown",
+   "pieces": [],
+   "traced": [],
+   "confidence": "high",
+   "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill"
+  },
+  {
+   "id": "the-gully",
+   "pieces": [],
+   "traced": [],
+   "confidence": "high",
+   "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill"
+  },
+  {
+   "id": "the-rusch",
+   "pieces": [],
+   "traced": [],
+   "confidence": "high",
+   "note": "NO CUT: a terrain park printed as a name on an orange pill over an orange-dotted park area; marker at the pill"
+  },
+  {
+   "id": "sis-boom-bah",
+   "pieces": [],
+   "traced": [],
+   "confidence": "high",
+   "note": "NO CUT: printed only in the SIDE VIEW inset (not on the main painting); marker at its inset label"
+  }
+ ]
+}

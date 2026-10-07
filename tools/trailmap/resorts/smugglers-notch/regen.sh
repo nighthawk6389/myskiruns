@@ -5,6 +5,7 @@
 #
 #   tools/trailmap/resorts/smugglers-notch/regen.sh            # data only
 #   IMAGES=1 tools/trailmap/resorts/smugglers-notch/regen.sh   # also rewrite public/maps/smugglers-notch.jpg
+#   FORCE=1 ...                                                # go on although a source's SHA-256 differs (a new edition)
 #
 # A person's reviews in trailReviews.json are kept; Claude's ("by": "claude") are rebuilt, keeping their
 # timestamps when nothing changed.
@@ -16,6 +17,16 @@ mkdir -p "$W"
 
 # 1. the PDF, linked from https://www.smuggs.com/conditions-stats/trail-map/ (plain curl works)
 [ -f "$W/smuggs.pdf" ] || curl -sSf -o "$W/smuggs.pdf" https://www.smuggs.com/wp-content/uploads/2024/11/trailmap_2425.pdf
+
+# the files this data was built from: another file (a new edition) stops the rebuild until its decisions are
+# checked (docs/trail-map-playbook.md, "A new season's map"); FORCE=1 runs on it anyway
+check() {
+  local s; s=$(sha256sum "$1" | cut -d' ' -f1); [ "$s" = "$2" ] && return 0
+  echo "$1: SHA-256 $s, not $2 (the file this data was built from). A new edition needs its decisions" \
+    "checked first (docs/trail-map-playbook.md, \"A new season's map\"); FORCE=1 runs on it anyway." >&2
+  [ -n "$FORCE" ] || exit 1
+}
+check "$W/smuggs.pdf" 73ea287a0bdeddeffab0124c6272e2c25b1b0b8f6fb233a14db515c37d415a9c  # 1374705 bytes
 
 # 2. the map image (the vector layer over the upscaled painting), the line pieces, names and symbols (prepare.py)
 python3 $T/resorts/smugglers-notch/prepare.py

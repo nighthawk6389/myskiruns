@@ -1,0 +1,10 @@
+// Seeded from the printed labels by tools/trailmap/seed_roster.py; names and
+// difficulties are as printed on the 2025-26 map (symbols; every diamond
+// checked on a zoomed crop), glades from the tree icon. Names keep the map's
+// spelling (Lwr, Rd, Water Fall). The 27 glades ("wooded areas") print no
+// symbol and default to black: the map has no legend for its one- and
+// two-tree icons, and Sugarbush rates wooded areas as their own category.
+// Riemergasse prints only a snowflake: green from its line. Murphy's Glade
+// and Sugarbear Forest are drawn trails with symbols, not glades; Lower
+// Snowball is also printed on the wooded strip beside it. x/y/baseY/width
+// are unused layout fields.

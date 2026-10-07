@@ -1,0 +1,17 @@
+// Seeded by tools/trailmap/seed_roster.py from the 2025-26 main map PDF. Its
+// names are outlined glyphs, not text: they were read by grouping the glyph
+// outlines by shape (each shape read once on a contact sheet) and joining
+// consecutive glyphs into labels. Difficulty is the symbol printed with each
+// name; "Extreme Terrain" (EX) is double-black. No readers: each line piece
+// was matched to the name printed along it and checked on region crops. A
+// trail printed with two ratings takes the harder on a tie (Carefree: green
+// above Leap Frog, blue below). Names printed with no symbol take the colour
+// they are printed in (Clear Cut and Upper Skid Road blue; High Point Bypass,
+// See & Ski, Sluice, West Village Traverse and Green Acres green; Union Bowl
+// black), except Buffalo Stampede, which takes Tucker Mountain's EX (every
+// other run there is EX), and the Log Chute kids' zone, which takes its green
+// outline. The nine parks print no symbol: seed_roster's default (blue). 24
+// names have no drawn line (bowls, glades and tree areas, parks, kids' zones,
+// Upper Skid Road): markers at the label. Spaulding Bowl, Copper Bowl and
+// Tucker Mountain say SEE INSET; only the names on the main map are here.
+// x/y/baseY/width are unused layout fields.

@@ -1,0 +1,474 @@
+{
+ "trails": [
+  {
+   "id": "face-chutes",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     2062,
+     135
+    ],
+    [
+     2064,
+     175
+    ],
+    [
+     2062,
+     215
+    ],
+    [
+     2057,
+     255
+    ],
+    [
+     2052,
+     295
+    ],
+    [
+     2048,
+     330
+    ],
+    [
+     2042,
+     370
+    ],
+    [
+     2036,
+     410
+    ],
+    [
+     2042,
+     450
+    ],
+    [
+     2052,
+     490
+    ]
+   ],
+   "confidence": "low",
+   "note": "No drawn line. The summit face between the Tram cable and the ridge is painted as steep trees with narrow snow gaps. The diamond (2058,317) sits on the most open lane, just right of the Tram cable, so the trace runs from just below Sky Haus (2062,135) down that lane, past the symbol, to the Northway traverse at (2052,490). Face Chutes is plural and its name spans the whole face (x 2080-2218), so the reviewer may prefer a line further into the face."
+  },
+  {
+   "id": "tuckermans-chute",
+   "pieces": [],
+   "partial": {},
+   "traced": [],
+   "confidence": "low",
+   "note": "NO CUT (checked on a crop: no chute painted on the treed summit face; marker at the label). Tracer: No clear cut at the diamond (2146,244), which sits on the treed summit face. On this map symbols sit on their trail, not the label centre. The traced line is the lightest gap through it: a diagonal lane from just below Sky Haus (2074,150), past the left edge of the diamond, under 'Chutes' of the Face Chutes label, then down a narrow gap to Northway at (2182,412), right above JFK's first label. ALTERNATIVE: the clear white chute under the middle of the label (x~2245, from the ridge at (2248,228) to the Flyer-top junction (2240,360)). It carries the pink uphill route, so it is more likely the Ullr's Dream/Northway link to the summit, but check it."
+  },
+  {
+   "id": "upper-goat-run",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     2080,
+     505
+    ],
+    [
+     2070,
+     545
+    ],
+    [
+     2064,
+     580
+    ],
+    [
+     2078,
+     605
+    ],
+    [
+     2093,
+     640
+    ],
+    [
+     2108,
+     680
+    ],
+    [
+     2125,
+     708
+    ],
+    [
+     2150,
+     742
+    ],
+    [
+     2151,
+     800
+    ],
+    [
+     2143,
+     860
+    ],
+    [
+     2133,
+     900
+    ],
+    [
+     2115,
+     925
+    ],
+    [
+     2070,
+     932
+    ],
+    [
+     2020,
+     937
+    ],
+    [
+     1985,
+     943
+    ],
+    [
+     1952,
+     950
+    ]
+   ],
+   "confidence": "medium",
+   "note": "The square (2101,670) is in the open lane along the east edge of the big green tree block, left of the Flyer. Traced from the Northway traverse / First Aid hub (2080,505) down that lane, which widens into the open slope beside the Flyer, to about (2133,900). At the bottom it turns west along the open band below the Upper River Quai trees and runs to the Tram line (1952,950), where the Lower Goat Run cut starts. That end rests on the Upper/Lower names; if the reviewer disagrees, stop at the Upper Exhibition junction (~2130,915)."
+  },
+  {
+   "id": "jfk",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     2178,
+     428
+    ],
+    [
+     2172,
+     458
+    ],
+    [
+     2176,
+     488
+    ],
+    [
+     2199,
+     512
+    ],
+    [
+     2227,
+     522
+    ],
+    [
+     2254,
+     531
+    ],
+    [
+     2282,
+     541
+    ],
+    [
+     2312,
+     543
+    ],
+    [
+     2340,
+     551
+    ],
+    [
+     2360,
+     572
+    ],
+    [
+     2377,
+     596
+    ],
+    [
+     2380,
+     625
+    ],
+    [
+     2372,
+     655
+    ],
+    [
+     2378,
+     680
+    ],
+    [
+     2394,
+     705
+    ],
+    [
+     2408,
+     735
+    ],
+    [
+     2430,
+     758
+    ],
+    [
+     2455,
+     780
+    ],
+    [
+     2470,
+     805
+    ],
+    [
+     2476,
+     830
+    ],
+    [
+     2466,
+     856
+    ],
+    [
+     2468,
+     882
+    ],
+    [
+     2490,
+     905
+    ],
+    [
+     2520,
+     922
+    ],
+    [
+     2540,
+     942
+    ],
+    [
+     2550,
+     965
+    ],
+    [
+     2567,
+     990
+    ],
+    [
+     2585,
+     1006
+    ],
+    [
+     2617,
+     1021
+    ],
+    [
+     2648,
+     1036
+    ],
+    [
+     2682,
+     1050
+    ]
+   ],
+   "confidence": "medium",
+   "note": "Runs through all three labels. Starts on Northway (2178,428) and passes diamond 1 (2171,484) left of the Flyer. It crosses the Flyer at about (2225,520) and follows the open band along the lower-left edge of the big tree block to the junction with the lower Wedelmaster cut (~2380,620); this upper link is shared with Wedelmaster and is the less certain part. From there it follows the clear white JFK cut past diamond 2 (2383,692) and diamond 3 (2559,974) to where it meets Ullr's Dream (pink route) at (2682,1050). The cut from diamond 2 to the end is high confidence."
+  },
+  {
+   "id": "alligator-alley",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     2072,
+     540
+    ],
+    [
+     2110,
+     549
+    ],
+    [
+     2150,
+     561
+    ],
+    [
+     2180,
+     576
+    ],
+    [
+     2206,
+     588
+    ],
+    [
+     2235,
+     594
+    ],
+    [
+     2270,
+     601
+    ],
+    [
+     2310,
+     610
+    ],
+    [
+     2345,
+     617
+    ],
+    [
+     2388,
+     626
+    ]
+   ],
+   "confidence": "medium",
+   "note": "The name runs along the lower pink uphill route just east of the Flyer. Traced from the First Aid / Upper Goat Run hub (2072,540) through the gap between two tree patches west of the Flyer. It crosses the Flyer at the square (2190,592), then follows the open lane under the name to the JFK/Wedelmaster junction (2388,626). The west end is uncertain: it may start only at the Flyer."
+  },
+  {
+   "id": "wedelmaster",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     2270,
+     380
+    ],
+    [
+     2272,
+     408
+    ],
+    [
+     2264,
+     436
+    ],
+    [
+     2258,
+     462
+    ],
+    [
+     2262,
+     490
+    ],
+    [
+     2285,
+     515
+    ],
+    [
+     2315,
+     540
+    ],
+    [
+     2345,
+     560
+    ],
+    [
+     2370,
+     588
+    ],
+    [
+     2392,
+     618
+    ],
+    [
+     2420,
+     642
+    ],
+    [
+     2460,
+     655
+    ],
+    [
+     2500,
+     665
+    ],
+    [
+     2540,
+     675
+    ],
+    [
+     2580,
+     687
+    ],
+    [
+     2620,
+     701
+    ],
+    [
+     2660,
+     703
+    ],
+    [
+     2700,
+     710
+    ],
+    [
+     2740,
+     718
+    ],
+    [
+     2780,
+     724
+    ],
+    [
+     2820,
+     733
+    ],
+    [
+     2860,
+     738
+    ],
+    [
+     2885,
+     742
+    ]
+   ],
+   "confidence": "medium",
+   "note": "Square 1 (2253,462) is just right of the Flyer below its top station. Square 2 (2502,658) is on the long lower cut that carries the lower pink route. Traced from the Flyer-top junction (2270,380) past square 1 and down the open band along the tree block's lower-left edge, shared with JFK, to ~(2392,618). It then follows the lower cut past square 2 to where it merges into Ullr's Dream at (2885,742). The section above square 1 (2270,380-436) is partly hidden under the Northway label."
+  },
+  {
+   "id": "poma-line",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     2330,
+     360
+    ],
+    [
+     2360,
+     383
+    ],
+    [
+     2400,
+     405
+    ],
+    [
+     2440,
+     428
+    ],
+    [
+     2480,
+     451
+    ],
+    [
+     2520,
+     481
+    ],
+    [
+     2560,
+     502
+    ],
+    [
+     2600,
+     525
+    ],
+    [
+     2640,
+     549
+    ],
+    [
+     2668,
+     572
+    ]
+   ],
+   "confidence": "low",
+   "note": "The square (2544,484) is about 12 px inside the orange boundary, just above a narrow straight lane. The lane runs parallel to the boundary, about 25 px below it, between the boundary and Ullr's Dream's main cut. That main cut carries the pink uphill route and is where Ullr's square (2353,421) sits. Traced the lane from where it leaves the Ullr's/Flyer-top opening (2330,360) to where it rejoins Ullr's main cut (2668,572). The lane is narrow and only partly open. The alternative is that the name refers to the main cut itself, which would make it Ullr's Dream."
+  },
+  {
+   "id": "staircase",
+   "pieces": [],
+   "partial": {},
+   "traced": [],
+   "confidence": "medium",
+   "note": "NO CUT: the diamond (2309,878) and name sit in sparse conifers painted like the neighbouring Everglade glade. They lie between the open Upper Goat Run/Upper Exhibition slope (x~2200-2240) and the JFK cut (x~2440-2500). Zoomed crops and tree-density checks show no open lane through or next to the label, only scattered gaps; the nearest open snow is the JFK cut about 130 px east. Nothing to trace without guessing."
+  }
+ ]
+}

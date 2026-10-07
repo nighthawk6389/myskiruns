@@ -1,0 +1,542 @@
+{
+ "lines": [
+  {
+   "id": 0,
+   "mapName": "VALLEY HOUSE TRAVERSE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t100"
+   ],
+   "note": "Label printed along it (snowflake + blue square at its lower-left end). Runs inside a light-blue flat-zone band from the Super Bravo top/Info kiosk at Allyn's Lodge (802,1314) down-left to the Snowball / Heaven's Gate Traverse junction (553,1445)."
+  },
+  {
+   "id": 1,
+   "mapName": "STEIN'S RUN",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t100",
+    "t200"
+   ],
+   "note": "Double-diamond STEIN'S RUN label along it at ~(825,1720). Starts on Heaven's Gate Traverse at (637,1483), runs down past the STEIN'S WOODS glade label (the glade is the hatched strip beside it, not this line) to (1071,1961)."
+  },
+  {
+   "id": 2,
+   "mapName": "SPRING ROAD",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t200",
+    "t300"
+   ],
+   "note": "Label printed along the whole short line. It branches right off Lower Snowball at (462,2105) and ends at (675,2098)."
+  },
+  {
+   "id": 3,
+   "mapName": "SPRING FLING",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t100",
+    "t200",
+    "t300"
+   ],
+   "note": "A straight line from the camera junction at the bottom of Snowball (308,1740) to the base near Valley House Lodge (924,2212), with the SPRING FLING label on it."
+  },
+  {
+   "id": 4,
+   "mapName": "SPILLSVILLE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t000"
+   ],
+   "note": "The label (single diamond) is outside my tiles, at ~(1060,1120); read on the source image. Leaves Jester at (843,1055), crosses Organgrinder and runs down the left side of Heaven's Gate Quad to (1156,1238)."
+  },
+  {
+   "id": 6,
+   "mapName": "RACER'S EDGE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t200",
+    "t300"
+   ],
+   "note": "A straight line from the end of Lower Snowball (506,2147) to the base (903,2286). Snowflake + square + name along it."
+  },
+  {
+   "id": 10,
+   "mapName": "MURPHY'S GLADE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t100",
+    "t200"
+   ],
+   "note": "Main line from below the Valley House Traverse (737,1372) to (930,1629). The MURPHY'S GLADE label (blue square) runs along its lower part. The PDF draws it and piece 11 as that label's two strokes."
+  },
+  {
+   "id": 11,
+   "mapName": "MURPHY'S GLADE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t100"
+   ],
+   "note": "Second, right-hand upper branch of Murphy's Glade (770,1361), merging into piece 10 at (822,1487). The label's snowflake and square sit between the two branches."
+  },
+  {
+   "id": 12,
+   "mapName": "MOONSHINE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t100",
+    "t200"
+   ],
+   "note": "Starts at the snowflake on the Snowball line (390,1593) and ends at (529,1820), where Lower Moonshine (19) starts. MOONSHINE label along it."
+  },
+  {
+   "id": 13,
+   "mapName": "THE MALL",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t100",
+    "t200"
+   ],
+   "note": "Black line running down the left side of the Valley House Quad lift, from the lift top (567,1479) to the base (1038,2159). Single-diamond THE MALL label near the top. This is a trail stroke in the PDF, not the lift."
+  },
+  {
+   "id": 14,
+   "mapName": "LOWER TWIST",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t200"
+   ],
+   "note": "Continues Lixi's Twist from (533,1785) to (892,1975). Single-diamond LOWER TWIST label on it."
+  },
+  {
+   "id": 15,
+   "mapName": "LOWER SNOWBALL",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t100",
+    "t200",
+    "t300"
+   ],
+   "note": "From the camera junction at the bottom of Snowball (309,1742), around the left edge, then down-right with the LOWER SNOWBALL label (blue square) to (510,2148), where Racer's Edge starts. Spring Road branches off at (462,2105)."
+  },
+  {
+   "id": 19,
+   "mapName": "LOWER MOONSHINE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t200",
+    "t300"
+   ],
+   "note": "Continues Moonshine from (528,1818) to the base (948,2159). LOWER MOONSHINE label (blue square) along it."
+  },
+  {
+   "id": 20,
+   "mapName": "LOWER JESTER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t100"
+   ],
+   "note": "Only its start, under the Allyn's Lodge icons at (864,1293), is in my tiles. Traced on the source: it runs right, then down past two LOWER JESTER labels at ~(995,1590) and ~(1330,1800) to (1153,1967) near the Super Bravo base. The PDF draws it as one stroke with those two labels."
+  },
+  {
+   "id": 24,
+   "mapName": "LIXI'S TWIST",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t100",
+    "t200"
+   ],
+   "note": "Short black line (496,1529)->(524,1775), with a single diamond and the LIXI'S TWIST label on it. Lower Twist (14) continues from its bottom."
+  },
+  {
+   "id": 25,
+   "mapName": "SPLIT: JESTER / ALLYN'S TRAVERSE",
+   "color": "blue",
+   "confidence": "medium",
+   "tiles": [
+    "t000",
+    "t100"
+   ],
+   "note": "Split it at the junction (800,1233), where piece 26 branches right. From the Lincoln Peak summit (945,885) down to that junction it is JESTER: the snowflake + square + JESTER label is printed along it at ~(838,940). The last ~60 px, (800,1233)->(807,1293), runs down the left side of Allyn's Lodge to the Super Bravo top, where the Valley House Traverse starts. The horizontal ALLYN'S TRAVERSE label (snowflake + blue square) is printed right against that segment on its left and vertically centred on it; no other line touches the label. The PDF has no stroke of its own for Allyn's Traverse: the Jester stroke runs to the lodge and the label was added at the end of the layer. OpenStreetMap matches: its Allyn's Traverse leaves Jester, passes the lodge on the south (map-left) side and joins the Valley House Traverse, while its Jester ends on the north (map-right) side of the lodge, like piece 26."
+  },
+  {
+   "id": 26,
+   "mapName": "JESTER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t100"
+   ],
+   "note": "Short link from the Jester junction (800,1234) down-right to the front of Allyn's Lodge (864,1293), where Lower Jester (20) begins. In the PDF this stroke comes right after the Jester stroke and before the JESTER label."
+  },
+  {
+   "id": 28,
+   "mapName": "HEAVEN'S GATE TRAVERSE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t100"
+   ],
+   "note": "From the Snowball/Valley House Traverse junction (586,1459), with the HEAVEN'S GATE TRAVERSE label (snowflake + blue square) along it, to (1064,1579). The second HEAVEN'S GATE / TRAVERSE label covers the continuation east of there."
+  },
+  {
+   "id": 31,
+   "mapName": "DOWNSPOUT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t100"
+   ],
+   "note": "Only the start, beside the lodge (940,1292), is in my tiles. The DOWNSPOUT label (snowflake + blue square) is outside them at ~(1100,1380), along this line. Runs to (1353,1546) at the Heaven's Gate Quad."
+  },
+  {
+   "id": 32,
+   "mapName": "DOMINO CHUTE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t100"
+   ],
+   "note": "Two-line label DOMINO / CHUTE (snowflake + one blue square) centred on this short line, (897,1312)->(992,1396), just below Lower Jester. Not the black DOMINO trail further right."
+  },
+  {
+   "id": 35,
+   "mapName": "CAT'S MEOW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t300"
+   ],
+   "note": "From the open slope below Racer's Edge (577,2210) to the base (892,2317). Blue-square CAT'S MEOW label along it."
+  },
+  {
+   "id": 36,
+   "mapName": "BIRDLAND",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t100"
+   ],
+   "note": "From the Super Bravo top (848,1334) down the right side of the Super Bravo lift to (950,1616), where the black LOWER BIRDLAND stroke starts. BIRDLAND label (snowflake + blue square) along it."
+  }
+ ],
+ "labels": [
+  {
+   "mapName": "JESTER",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    838,
+    940
+   ],
+   "note": "Snowflake + blue square. On piece 25 just below the Lincoln Peak summit."
+  },
+  {
+   "mapName": "ALLYN'S TRAVERSE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    762,
+    1266
+   ],
+   "note": "Horizontal two-line label (snowflake at (709,1255) + blue square), right against the lower ~60 px of piece 25 below the Jester junction at (800,1233), beside Allyn's Lodge. The PDF gives it no stroke of its own. See the note on piece 25."
+  },
+  {
+   "mapName": "VALLEY HOUSE TRAVERSE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    681,
+    1371
+   ],
+   "note": "Snowflake + blue square at the lower-left end. Printed on piece 0, inside a light-blue flat-zone band."
+  },
+  {
+   "mapName": "SNOWBALL",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    462,
+    1528
+   ],
+   "note": "Snowflake + blue square at the lower-left end. Its drawn line has NO numbered piece: the PDF draws it as a filled shape, not a stroke. It runs from the Valley House Traverse / Heaven's Gate Traverse junction (~532,1464) down-left to the camera junction (308,1741), where pieces 3 and 15 start. Moonshine (12) branches off it at (390,1593)."
+  },
+  {
+   "mapName": "HEAVEN'S GATE TRAVERSE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    719,
+    1490
+   ],
+   "note": "Snowflake + blue square. Printed along piece 28; the PDF has this label as real text. A second HEAVEN'S GATE / TRAVERSE label sits further east, outside my tiles."
+  },
+  {
+   "mapName": "MURPHY'S GLADE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    844,
+    1510
+   ],
+   "note": "Snowflake + blue square. The name says GLADE, but no tree icon or hatching is printed by it: it is a normal blue line (pieces 10 + 11)."
+  },
+  {
+   "mapName": "BIRDLAND",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    897,
+    1440
+   ],
+   "note": "Snowflake + blue square. Printed along piece 36, right of the Super Bravo lift."
+  },
+  {
+   "mapName": "DOMINO CHUTE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    945,
+    1352
+   ],
+   "note": "Two-line label DOMINO / CHUTE with one snowflake + blue square, on piece 32. Cut by the right edge of t000/t100."
+  },
+  {
+   "mapName": "LIXI'S TWIST",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    516,
+    1684
+   ],
+   "note": "Single black diamond (zoomed). On piece 24."
+  },
+  {
+   "mapName": "THE MALL",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    702,
+    1680
+   ],
+   "note": "Single black diamond (zoomed). On piece 13, beside the Valley House Quad lift."
+  },
+  {
+   "mapName": "STEIN'S RUN",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    825,
+    1720
+   ],
+   "note": "Two black diamonds (zoomed), plus a snowflake. On piece 1."
+  },
+  {
+   "mapName": "MOONSHINE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    472,
+    1764
+   ],
+   "note": "Blue square. On piece 12."
+  },
+  {
+   "mapName": "LOWER TWIST",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    699,
+    1848
+   ],
+   "note": "Single black diamond (zoomed). On piece 14."
+  },
+  {
+   "mapName": "SPRING FLING",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    487,
+    1876
+   ],
+   "note": "Snowflake + blue square. On piece 3."
+  },
+  {
+   "mapName": "LOWER MOONSHINE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    833,
+    2044
+   ],
+   "note": "Blue square. On piece 19."
+  },
+  {
+   "mapName": "LOWER SNOWBALL",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    340,
+    2021
+   ],
+   "note": "Snowflake + blue square. The trail label on piece 15. A separate glade label with the same name is listed below."
+  },
+  {
+   "mapName": "SPRING ROAD",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    570,
+    2100
+   ],
+   "note": "Snowflake + blue square. On piece 2."
+  },
+  {
+   "mapName": "RACER'S EDGE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    645,
+    2198
+   ],
+   "note": "Snowflake + blue square. On piece 6."
+  },
+  {
+   "mapName": "CAT'S MEOW",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    773,
+    2311
+   ],
+   "note": "Blue square. On piece 35."
+  },
+  {
+   "mapName": "LOWER SNOWBALL",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    199,
+    1852
+   ],
+   "note": "A second LOWER SNOWBALL label, this time with a black tree icon. It is printed rotated along a narrow red-hatched strip just inside the ski-area boundary, left of the Lower Snowball trail (Wooded Areas layer in the PDF). No drawn line."
+  },
+  {
+   "mapName": "RACE COURSE WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    378,
+    2156
+   ],
+   "note": "Tree icon, red-hatched glade between Lower Snowball and the boundary. No line."
+  },
+  {
+   "mapName": "EDEN",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    414,
+    1968
+   ],
+   "note": "Tree icon, red-hatched glade between Lower Snowball and Spring Fling. No line."
+  },
+  {
+   "mapName": "GANGSTAS' GROTTO",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    657,
+    1751
+   ],
+   "note": "Printed as GANGSTAS' / GROTTO on two lines, with a tree icon. Red-hatched glade between Lixi's Twist and The Mall. No line."
+  },
+  {
+   "mapName": "STEIN'S WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    756,
+    1591
+   ],
+   "note": "Tree icon, hatched strip along the right of Stein's Run. The double diamond below it belongs to STEIN'S RUN. No line."
+  },
+  {
+   "mapName": "EGAN'S WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    843,
+    1625
+   ],
+   "note": "Tree icon, hatched glade between Stein's Run and Murphy's Glade. No line."
+  },
+  {
+   "mapName": "CHRISTMAS TREE WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    917,
+    1907
+   ],
+   "note": "Tree icon, hatched glade right of the Valley House Quad. Cut by the right edge of t200. No line."
+  },
+  {
+   "mapName": "SAP LINE",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    856,
+    1997
+   ],
+   "note": "Tree icon, hatched glade left of the Valley House Quad bottom terminal, above Lower Moonshine. No line."
+  }
+ ]
+}

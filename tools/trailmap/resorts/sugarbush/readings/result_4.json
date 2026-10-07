@@ -1,0 +1,747 @@
+{
+ "lines": [
+  {
+   "id": 60,
+   "mapName": "WAY BACK",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105"
+   ],
+   "note": "Blue line from the Way Back square/snowflake (3388,1213) SW, passes under the top of the NORTH RIDGE lift label, crosses LWR ELBOW's label/line (X crossing near 3330,1298, no junction) and ends in the Glen House plaza (3310,1342). One continuous stroke; the lower stretch carries no other name."
+  },
+  {
+   "id": 68,
+   "mapName": "LOWER F.I.S.",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t305"
+   ],
+   "note": "Only its bottom run-out is in my tiles (t305: along the light-blue band west of Riemergasse/Snowflake, ending at 3579,2170). Followed it on the source: one continuous black line from (3027,1229) carrying two 'LOWER F.I.S.' labels, each with one diamond (~3035,1265 and ~3035,1825), down the Mt Ellen west boundary and around to the base; no other label or junction."
+  },
+  {
+   "id": 69,
+   "mapName": "LWR ELBOW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105"
+   ],
+   "note": "Blue line inline under the 'LWR ELBOW' text (square + snowflake at 3250,1240) ending at the North Ridge lift label box (3365,1324). WAY BACK (60) crosses it near the 'BOW' letters."
+  },
+  {
+   "id": 72,
+   "mapName": "EXTERMINATOR",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t005"
+   ],
+   "note": "Thin black line under the 'EXTERMINATOR' text from the double diamond (~3322,1047) down to the LWR EXTERMINATOR single diamond (3442,1190) where 111 starts."
+  },
+  {
+   "id": 74,
+   "mapName": "BRAVO",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105"
+   ],
+   "note": "Lift-line trail on the right of the NORTH RIDGE EXPRESS QUAD; 'BRAVO' text inline with one diamond at (3291,1047). Lower end runs under the lift's red label box."
+  },
+  {
+   "id": 75,
+   "mapName": "WHICH WAY",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "Starts left of the North Ridge lift (3376,1377), crosses under it, inline through 'WHICH WAY' (square 3461,1454 + snowflake) and ends at the MAINSTREAM circle / slow zone (3541,1715)."
+  },
+  {
+   "id": 76,
+   "mapName": "WALT'S TRAIL",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t106",
+    "t205",
+    "t305"
+   ],
+   "note": "Starts at the Inverness summit (3920,1454), curves SW with no junction or other label to the inline 'WALT'S TRAIL' text (circle at its lower end 3652,1748), then continues down along the west side of Semi Tough Woods to the base near the KBRA T-bar bottom (3809,2031). The upper stretch is unlabeled but one continuous green line."
+  },
+  {
+   "id": 77,
+   "mapName": "TUMBLER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "From the Glen House plaza (3259,1421) down through the TUMBLER diamond (3262,1544) and inline 'TUMBLER' text, past Tumbler Woods, to the bottom of the Green Mountain Express (3458,1789)."
+  },
+  {
+   "id": 78,
+   "mapName": "SUGAR RUN",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t205",
+    "t305"
+   ],
+   "note": "Straight green line along the second orange terrain-park pill; 'SUGAR RUN' and its circle (3579,2047) are printed on the pill. Extends slightly past the pill's lower end (3742,2193)."
+  },
+  {
+   "id": 79,
+   "mapName": "STRAIGHT SHOT",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t205",
+    "t305"
+   ],
+   "note": "Straight green line just left of the Green Mountain Express lift, under the chair icon, inline through snowflake + circle (3612,1954) and 'STRAIGHT SHOT' text, ending near the base (3730,2114)."
+  },
+  {
+   "id": 80,
+   "mapName": "SNOWFLAKE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t305"
+   ],
+   "note": "Inline 'SNOWFLAKE' text with circle at its start (3577,2206); runs along the boundary to the base (3721,2293)."
+  },
+  {
+   "id": 81,
+   "mapName": "SEMI TOUGH",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t106",
+    "t205"
+   ],
+   "note": "From beside the ski-school icon (3911,1545) down through the inline 'SEMI TOUGH' text (square at its lower end 3825,1728) to the KBRA T-bar bottom (3811,1998)."
+  },
+  {
+   "id": 82,
+   "mapName": "RIEMERGASSE",
+   "color": "green",
+   "confidence": "medium",
+   "tiles": [
+    "t205",
+    "t305"
+   ],
+   "note": "Straight green line drawn on the orange terrain-park pill of the SUNSHINE QUAD (left of the red lift line, under the lift's red label and chair icon). No text is inline on it; the only trail label aligned with it is 'RIEMERGASSE' (snowflake, no difficulty symbol) printed parallel ~15 px to its SW, between GRADUATION's end and SNOWFLAKE's start. No other line fits that label."
+  },
+  {
+   "id": 83,
+   "mapName": "NORTHWAY",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105"
+   ],
+   "note": "Starts at the edge of the slow zone east of the North Ridge lift base (3452,1348), runs east along the light-blue band through the inline 'NORTHWAY' text (circle 3653,1377) to the Inverness summit (3898,1434)."
+  },
+  {
+   "id": 84,
+   "mapName": "NORTHRIDGE EXPRESSWAY",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t106"
+   ],
+   "note": "From the Inverness summit (3902,1444) west along the inline 'NORTHRIDGE EXPRESSWAY' text (circle + snowflake at its west end 3633,1524) to the junction with Lwr Northstar (3586,1581)."
+  },
+  {
+   "id": 85,
+   "mapName": "SPLIT: NORTHSTAR / LWR NORTHSTAR",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105"
+   ],
+   "note": "NORTHSTAR from its start in the plaza west of the North Ridge lift (3366,1338), under the lift, through snowflake + circle (3523,1385) and the 'NORTHSTAR' text, down to the LWR NORTHSTAR circle at (3581,1520). The last ~45 px, (3581,1520)-(3578,1564), run through that circle and under the 'LWR' text = LWR NORTHSTAR (continues as 87). Split spec: 85@3581,1520=NORTHSTAR/LWR NORTHSTAR."
+  },
+  {
+   "id": 86,
+   "mapName": "MAINSTREAM",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "Branches off Lwr Northstar (3573,1599); inline 'MAINSTREAM' text reading upward with its circle at the lower end (3544,1716), ends in the slow zone (3546,1733)."
+  },
+  {
+   "id": 87,
+   "mapName": "LWR NORTHSTAR",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "From the Northridge Expressway junction (3578,1564) down through the rest of the inline 'LWR NORTHSTAR' text to the slow zone (3568,1740)."
+  },
+  {
+   "id": 88,
+   "mapName": "LOWER CRACKERJACK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t205",
+    "t305"
+   ],
+   "note": "Continuation of 94 under the rest of the inline 'LOWER CRACKERJACK' text to the base (3746,2156)."
+  },
+  {
+   "id": 89,
+   "mapName": "JOE'S CRUISER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "Starts under the North Ridge lift (3395,1375), inline through square + snowflake (3485,1416) and 'JOE'S CRUISER' text, continues down to the slow zone (3568,1709)."
+  },
+  {
+   "id": 90,
+   "mapName": "INVERNESS",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t106",
+    "t205",
+    "t305"
+   ],
+   "note": "Straight blue line just east of the INVERNESS QUAD, inline 'INVERNESS' text with square + snowflake at its lower end (3958,1619); from the Inverness summit (3989,1478) to the base (3858,2049)."
+  },
+  {
+   "id": 91,
+   "mapName": "HAMMERHEAD",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "From the Glen House plaza (3313,1412) through the HAMMERHEAD diamond (3344,1444) and inline text down to the lower slow zone (3493,1704); runs parallel to ENCORE (93) on its left."
+  },
+  {
+   "id": 92,
+   "mapName": "GRADUATION",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t205",
+    "t305"
+   ],
+   "note": "Starts under the 'WOODS' of the GRADUATION WOODS label (3445,2012), inline along the thin 'GRADUATION' text, circle printed just after the name (3540,2131), ends where RIEMERGASSE's label begins (3555,2128)."
+  },
+  {
+   "id": 93,
+   "mapName": "ENCORE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "From the plaza (3337,1392) through the ENCORE diamond (3388,1420) and inline text, down parallel to HAMMERHEAD on its right to (3496,1691)."
+  },
+  {
+   "id": 94,
+   "mapName": "SPLIT: CRACKERJACK / LOWER CRACKERJACK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t205",
+    "t305"
+   ],
+   "note": "CRACKERJACK from the slow zone (3498,1832) through the circle (3487,1855) and inline 'CRACKERJACK' text down to the LOWER CRACKERJACK snowflake + circle (snowflake 3592,1988, circle 3606,2005). The last ~50 px from there to (3643,2041) run under 'LOWER CRA...' = LOWER CRACKERJACK (continues as 88). Split spec: 94@3598,1996=CRACKERJACK/LOWER CRACKERJACK."
+  },
+  {
+   "id": 95,
+   "mapName": "THE CLIFFS",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "Straight black line just left (west) of the Green Mountain Express lift, inline 'THE CLIFFS' text with snowflake + one diamond (3304,1469) at its top, from the plaza (3281,1431) to (3472,1748)."
+  },
+  {
+   "id": 96,
+   "mapName": "BRAMBLES",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t106",
+    "t205",
+    "t206"
+   ],
+   "note": "From the Inverness summit (4007,1466) through the square (4045,1499) and inline 'BRAMBLES' text, down west of Brambles Woods to (3910,1943)."
+  },
+  {
+   "id": 110,
+   "mapName": "EASY DOES IT",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t205",
+    "t305"
+   ],
+   "note": "Short green line beside the EASY UP carpet; tiny inline 'EASY DOES IT' text with a snowflake at the bottom and a small circle at its top end (3771,2149)."
+  },
+  {
+   "id": 111,
+   "mapName": "LWR EXTERMINATOR",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105"
+   ],
+   "note": "From the LWR EXTERMINATOR single diamond (3442,1190) inline along 'LWR EXTERMINATOR' text to the Northway line (3524,1347)."
+  }
+ ],
+ "labels": [
+  {
+   "mapName": "BRAVO",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3302,
+    1090
+   ],
+   "note": "one diamond at the top (3291,1047); inline on piece 74"
+  },
+  {
+   "mapName": "EXTERMINATOR",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3370,
+    1110
+   ],
+   "note": "two diamonds (~3322,1047), checked at 10x; thin text inline on piece 72"
+  },
+  {
+   "mapName": "LWR EXTERMINATOR",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3484,
+    1265
+   ],
+   "note": "one diamond (3442,1190), checked at 8x; inline on piece 111"
+  },
+  {
+   "mapName": "WAY BACK",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3400,
+    1228
+   ],
+   "note": "snowflake + square (3388,1213); two-line label; line = piece 60"
+  },
+  {
+   "mapName": "LWR ELBOW",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3305,
+    1282
+   ],
+   "note": "snowflake + square (3250,1240, just left of t005); inline on piece 69"
+  },
+  {
+   "mapName": "BRAVO WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3283,
+    1153
+   ],
+   "note": "glade, no line; label straddles the left edge of t005, icon at (3262,1070); glade icon = tree pair (no trunk), same as most Mt Ellen glades"
+  },
+  {
+   "mapName": "BRAVINATOR WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3365,
+    1150
+   ],
+   "note": "glade, no line; icon at (3338,1102); glade icon = tree pair (no trunk), same as most Mt Ellen glades"
+  },
+  {
+   "mapName": "EXTERMINATOR WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3465,
+    1170
+   ],
+   "note": "glade, no line; icon at (3383,1077); glade icon = tree pair (no trunk), same as most Mt Ellen glades"
+  },
+  {
+   "mapName": "WAY BACK WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3450,
+    1300
+   ],
+   "note": "glade, no line; icon at (3422,1263); glade icon = tree pair (no trunk), same as most Mt Ellen glades"
+  },
+  {
+   "mapName": "NORTHWAY",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3717,
+    1387
+   ],
+   "note": "circle (3653,1377); inline on piece 83"
+  },
+  {
+   "mapName": "NORTHSTAR",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3570,
+    1433
+   ],
+   "note": "snowflake + circle (3523,1385); inline on piece 85"
+  },
+  {
+   "mapName": "JOE'S CRUISER",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3519,
+    1497
+   ],
+   "note": "snowflake + square (3485,1416); inline on piece 89"
+  },
+  {
+   "mapName": "WHICH WAY",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3485,
+    1513
+   ],
+   "note": "snowflake + square (3461,1454); inline on piece 75"
+  },
+  {
+   "mapName": "ENCORE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3406,
+    1466
+   ],
+   "note": "one diamond (3388,1420), checked at 6x; inline on piece 93"
+  },
+  {
+   "mapName": "HAMMERHEAD",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3382,
+    1510
+   ],
+   "note": "one diamond (3344,1444), checked at 6x; inline on piece 91"
+  },
+  {
+   "mapName": "THE CLIFFS",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3337,
+    1523
+   ],
+   "note": "snowflake + one diamond (3304,1469), checked at 6x; inline on piece 95"
+  },
+  {
+   "mapName": "TUMBLER",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3289,
+    1591
+   ],
+   "note": "one diamond (3262,1544, just left of t105), checked at 6x; inline on piece 77"
+  },
+  {
+   "mapName": "TUMBLER WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3281,
+    1640
+   ],
+   "note": "glade, no line; label straddles the left edge of t105/t205, icon at (3222,1552) outside my tiles; glade icon = tree pair (no trunk), same as most Mt Ellen glades"
+  },
+  {
+   "mapName": "LWR NORTHSTAR",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3595,
+    1610
+   ],
+   "note": "circle (3581,1521) at its top; inline on the tail of 85 + piece 87"
+  },
+  {
+   "mapName": "MAINSTREAM",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3559,
+    1652
+   ],
+   "note": "circle + snowflake at the LOWER end of the upward-reading text (3544,1716); inline on piece 86"
+  },
+  {
+   "mapName": "NORTHRIDGE EXPRESSWAY",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3765,
+    1482
+   ],
+   "note": "snowflake + circle at its west end (3633,1524); inline on piece 84"
+  },
+  {
+   "mapName": "WALT'S WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3685,
+    1618
+   ],
+   "note": "glade, no line; icon at (3633,1670); glade icon = tree pair (no trunk), same as most Mt Ellen glades"
+  },
+  {
+   "mapName": "WALT'S TRAIL",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3690,
+    1680
+   ],
+   "note": "circle at the lower end of the upward-reading text (3652,1748); inline on piece 76"
+  },
+  {
+   "mapName": "SEMI TOUGH WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3762,
+    1700
+   ],
+   "note": "glade, no line; icon at (3704,1797); glade icon = tree pair (no trunk), same as most Mt Ellen glades"
+  },
+  {
+   "mapName": "SEMI TOUGH",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3840,
+    1655
+   ],
+   "note": "square at the lower end of the upward-reading text (3825,1728); inline on piece 81"
+  },
+  {
+   "mapName": "INVERNESS",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3973,
+    1560
+   ],
+   "note": "the trail label (not the INVERNESS area/elevation label); snowflake + square at its lower end (3958,1619); inline on piece 90"
+  },
+  {
+   "mapName": "BRAMBLES",
+   "symbol": "square",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    4053,
+    1550
+   ],
+   "note": "square at its top (4045,1499); inline on piece 96"
+  },
+  {
+   "mapName": "BRAMBLES WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    4105,
+    1675
+   ],
+   "note": "glade, no line; icon at (4046,1765); glade icon = tree pair (no trunk), same as most Mt Ellen glades"
+  },
+  {
+   "mapName": "CRACKERJACK",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3529,
+    1921
+   ],
+   "note": "snowflake + circle (3487,1855); inline on piece 94 (upper part)"
+  },
+  {
+   "mapName": "STRAIGHT SHOT",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3668,
+    2027
+   ],
+   "note": "snowflake + circle (3612,1954); inline on piece 79"
+  },
+  {
+   "mapName": "LOWER CRACKERJACK",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3678,
+    2080
+   ],
+   "note": "snowflake + circle (3606,2005); inline on the tail of 94 + piece 88"
+  },
+  {
+   "mapName": "SUGAR RUN",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3628,
+    2090
+   ],
+   "note": "circle (3579,2047); name and circle printed ON an orange terrain-park pill; line = piece 78"
+  },
+  {
+   "mapName": "GRADUATION WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3470,
+    2035
+   ],
+   "note": "glade, no line; icon at (3437,1984); GRADUATION (92) starts under this label; glade icon = tree pair (no trunk), same as most Mt Ellen glades"
+  },
+  {
+   "mapName": "GRADUATION",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3478,
+    2085
+   ],
+   "note": "circle printed just AFTER the name (3540,2131), on the text baseline; inline on piece 92"
+  },
+  {
+   "mapName": "RIEMERGASSE",
+   "symbol": "none-visible",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3605,
+    2155
+   ],
+   "note": "only a snowflake before the name (3548,2098); the nearby circle (3540,2131) belongs to GRADUATION. Label printed parallel to the SUNSHINE QUAD orange terrain-park pill, whose green line is piece 82; parks on this map may print no difficulty symbol"
+  },
+  {
+   "mapName": "ELLEN'S WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3368,
+    2092
+   ],
+   "note": "glade, no line; icon at (3284,2092) is a SINGLE upright tree with a trunk, unlike the tree-pair icon on every other glade in my tiles (and on Moose Run Woods); may or may not mean a different glade rating - no legend in the image"
+  },
+  {
+   "mapName": "SNOWFLAKE",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3630,
+    2248
+   ],
+   "note": "circle (3577,2206); inline on piece 80"
+  },
+  {
+   "mapName": "EASY DOES IT",
+   "symbol": "circle",
+   "glade": false,
+   "area": "mt-ellen",
+   "labelSrc": [
+    3753,
+    2187
+   ],
+   "note": "tiny label beside the EASY UP carpet; snowflake at the bottom, small circle at the top end (3771,2149); inline on piece 110"
+  }
+ ]
+}

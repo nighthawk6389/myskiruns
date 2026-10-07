@@ -1,0 +1,1140 @@
+{
+ "lines": [
+  {
+   "id": 4,
+   "mapName": "DOUBLE DIAMOND",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "glade line inside the dark-grey DOUBLE DIAMOND band, below its label (left arm of the U-shaped band shared with OUTRAGE)"
+  },
+  {
+   "id": 5,
+   "mapName": "DOUBLE DIAMOND",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "glade line inside the DOUBLE DIAMOND band, above its label; starts at the Rim Rock ridge line (49)"
+  },
+  {
+   "id": 6,
+   "mapName": "OUTRAGE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "glade line inside the dark-grey OUTRAGE band, below its label (right arm of the U-shaped band)"
+  },
+  {
+   "id": 7,
+   "mapName": "OUTRAGE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "glade line inside the OUTRAGE band, above its label"
+  },
+  {
+   "id": 8,
+   "mapName": "LOOSE SPRUCE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t100"
+   ],
+   "note": "glade line inside the LOOSE SPRUCE band, lower part"
+  },
+  {
+   "id": 9,
+   "mapName": "LOOSE SPRUCE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t001"
+   ],
+   "note": "glade line inside the LOOSE SPRUCE band, upper part"
+  },
+  {
+   "id": 10,
+   "mapName": "FORREST BUMP",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t101"
+   ],
+   "note": "glade line inside the FORREST BUMP band, below its label"
+  },
+  {
+   "id": 11,
+   "mapName": "FORREST BUMP",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "glade line inside the FORREST BUMP band, above its label"
+  },
+  {
+   "id": 29,
+   "mapName": "DREAM WEAVER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t001"
+   ],
+   "note": "continues from the DREAM WEAVER label up the ridge to the summit"
+  },
+  {
+   "id": 30,
+   "mapName": "DREAM WEAVER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t100"
+   ],
+   "note": "from the circle of the DREAM WEAVER label down to the slow zone at the Sunshine Quad / South Face Express bottom"
+  },
+  {
+   "id": 31,
+   "mapName": "CAT NAP",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t100"
+   ],
+   "note": "from the square of the CAT NAP label down to the slow zone"
+  },
+  {
+   "id": 32,
+   "mapName": "CAT NAP",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t100",
+    "t101"
+   ],
+   "note": "from the CAT NAP label up to Rim Rock (47)"
+  },
+  {
+   "id": 33,
+   "mapName": "OFF THE RIM",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t001",
+    "t100"
+   ],
+   "note": "from the square of the OFF THE RIM label down-left until it meets Dream Weaver (30)"
+  },
+  {
+   "id": 34,
+   "mapName": "OFF THE RIM",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t001"
+   ],
+   "note": "from the OFF THE RIM label up to Rim Rock (48)"
+  },
+  {
+   "id": 35,
+   "mapName": "STUMP JUMPER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t001",
+    "t100"
+   ],
+   "note": "from the diamond of the STUMP JUMPER label down to the slow zone"
+  },
+  {
+   "id": 36,
+   "mapName": "STUMP JUMPER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t001"
+   ],
+   "note": "from the STUMP JUMPER label up to Rim Rock (48)"
+  },
+  {
+   "id": 37,
+   "mapName": "PUNCH LINE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t100"
+   ],
+   "note": "from the diamond of the PUNCH LINE label down to the slow zone"
+  },
+  {
+   "id": 38,
+   "mapName": "PUNCH LINE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t001",
+    "t100",
+    "t101"
+   ],
+   "note": "from the PUNCH LINE label up to Rim Rock (48)"
+  },
+  {
+   "id": 39,
+   "mapName": "LOWER WILD THING",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t001",
+    "t100",
+    "t101"
+   ],
+   "note": "from the LOWER WILD THING label up to the Rim Rock crossing; collinear with 242 (UPPER WILD THING) above the crossing"
+  },
+  {
+   "id": 40,
+   "mapName": "LOWER WILD THING",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t100"
+   ],
+   "note": "from the diamond of the LOWER WILD THING label down to the South Face Express bottom"
+  },
+  {
+   "id": 41,
+   "mapName": "BLIND FAITH",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t100",
+    "t101"
+   ],
+   "note": "from the diamond of the BLIND FAITH label down to Cat Nap"
+  },
+  {
+   "id": 42,
+   "mapName": "BLIND FAITH",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t000",
+    "t001",
+    "t100",
+    "t101"
+   ],
+   "note": "from the BLIND FAITH label up to Rim Rock (48)"
+  },
+  {
+   "id": 43,
+   "mapName": "MOMENT'S REST",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "continues below the MOMENT'S REST label down to Rim Rock (47)"
+  },
+  {
+   "id": 44,
+   "mapName": "MOMENT'S REST",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "short piece from the bottom of the Double Diamond/Outrage glade band to the square of the MOMENT'S REST label"
+  },
+  {
+   "id": 45,
+   "mapName": "SPRINT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "short piece from the SPRINT label end to the Glades Peak Quad line"
+  },
+  {
+   "id": 46,
+   "mapName": "SPRINT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "short piece from the bottom of the Moment's Rest label to the square of the SPRINT label"
+  },
+  {
+   "id": 47,
+   "mapName": "RIM ROCK",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t101"
+   ],
+   "note": "continues from the lower RIM ROCK label down into the slow zone at the Glades Peak Quad bottom"
+  },
+  {
+   "id": 48,
+   "mapName": "RIM ROCK",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "between the upper RIM ROCK label (square) and the lower RIM ROCK label (square)"
+  },
+  {
+   "id": 49,
+   "mapName": "RIM ROCK",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "one continuous stroke from the upper RIM ROCK label along the ridge to the summit patrol hut; Upper Wild Thing, Moon Dog, Double Diamond, Outrage, Sundog and Upper Fall Line start from it, no other label on it"
+  },
+  {
+   "id": 50,
+   "mapName": "UPPER WILD THING",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "short piece above the UPPER WILD THING label, up to Rim Rock (49)"
+  },
+  {
+   "id": 51,
+   "mapName": "SUNCATCHER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t100",
+    "t200"
+   ],
+   "note": "leaves the slow zone (separate stroke from Dream Weaver 30) and runs into the upper end of the SUNCATCHER label; Rossi Run (241) branches off it"
+  },
+  {
+   "id": 52,
+   "mapName": "SUNCATCHER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t200"
+   ],
+   "note": "from the circle of the SUNCATCHER label down to the Sunshine Quad base (Southface Village)"
+  },
+  {
+   "id": 53,
+   "mapName": "FALL LINE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t101"
+   ],
+   "note": "from the square of the FALL LINE label down to the slow zone"
+  },
+  {
+   "id": 54,
+   "mapName": "FALL LINE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "above the FALL LINE label up to the Upper Fall Line / Countdown junction"
+  },
+  {
+   "id": 55,
+   "mapName": "COUNTDOWN",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "ends at the square of the COUNTDOWN label (label itself is just right of my tiles, in t002); runs down-left to the bottom of Upper Fall Line"
+  },
+  {
+   "id": 57,
+   "mapName": "TRIPLESEC",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "from the diamond of the TRIPLESEC label down to Upper Fall Line (59)"
+  },
+  {
+   "id": 58,
+   "mapName": "TRIPLESEC",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "from Buckhorn down to the upper end of the TRIPLESEC label"
+  },
+  {
+   "id": 59,
+   "mapName": "UPPER FALL LINE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "from the diamond of the UPPER FALL LINE label down to the Countdown junction"
+  },
+  {
+   "id": 60,
+   "mapName": "UPPER FALL LINE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "short piece above the UPPER FALL LINE label, from the summit ridge"
+  },
+  {
+   "id": 61,
+   "mapName": "CHALLENGER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "from the diamond of the CHALLENGER label down-left to Upper Fall Line"
+  },
+  {
+   "id": 63,
+   "mapName": "MUELLERS' RUN",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "from the diamond of the MUELLERS' RUN label down to the top of the SCOOTER label"
+  },
+  {
+   "id": 64,
+   "mapName": "MUELLERS' RUN",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "short piece above the MUELLERS' RUN label, up to Countdown (55)"
+  },
+  {
+   "id": 65,
+   "mapName": "SACHEM",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t201",
+    "t301"
+   ],
+   "note": "from the lower SACHEM label down to a road crossing; continues as 69"
+  },
+  {
+   "id": 66,
+   "mapName": "SACHEM",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "from the circle of the upper SACHEM label down through Okemo Trailside to the circle of the lower SACHEM label; Home Stretch joins it"
+  },
+  {
+   "id": 67,
+   "mapName": "SACHEM",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t101"
+   ],
+   "note": "continues from the upper SACHEM label up-right into the slow zone"
+  },
+  {
+   "id": 69,
+   "mapName": "SACHEM",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t201",
+    "t301"
+   ],
+   "note": "continues 65 after the road crossing, under the Sachem Quad, to the circle of a third SACHEM label (just right of my tiles)"
+  },
+  {
+   "id": 70,
+   "mapName": "HOME STRETCH",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "short piece from the HOME STRETCH label end to the bottom of Easy Street"
+  },
+  {
+   "id": 71,
+   "mapName": "HOME STRETCH",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "short piece from the circle of the HOME STRETCH label to Sachem (66)"
+  },
+  {
+   "id": 72,
+   "mapName": "EASY STREET",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "short piece below the EASY STREET label, meets Home Stretch"
+  },
+  {
+   "id": 73,
+   "mapName": "EASY STREET",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t101"
+   ],
+   "note": "short piece above the EASY STREET label, from the slow zone"
+  },
+  {
+   "id": 74,
+   "mapName": "LEDGES",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t201",
+    "t301"
+   ],
+   "note": "from the LEDGES label down to the Sachem Quad bottom"
+  },
+  {
+   "id": 75,
+   "mapName": "LEDGES",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "above the diamond of the LEDGES label, beside the Sachem Quad"
+  },
+  {
+   "id": 77,
+   "mapName": "BUCKHORN",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "from the summit patrol hut down to the circle of the BUCKHORN label"
+  },
+  {
+   "id": 78,
+   "mapName": "UPPER WORLD CUP",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t101"
+   ],
+   "note": "from the diamond of the UPPER WORLD CUP label down to the blue trails near Red Fox Woods"
+  },
+  {
+   "id": 79,
+   "mapName": "UPPER WORLD CUP",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "from Countdown down to the top of the UPPER WORLD CUP label"
+  },
+  {
+   "id": 145,
+   "mapName": "UPPER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "short piece from the summit patrol hut to the circle of the UPPER MOUNTAIN ROAD label"
+  },
+  {
+   "id": 149,
+   "mapName": "FAIRWAY",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t301",
+    "t401"
+   ],
+   "note": "short piece before the circle of the FAIRWAY label (148 continues after the label)"
+  },
+  {
+   "id": 151,
+   "mapName": "OPEN SLOPE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t301",
+    "t401"
+   ],
+   "note": "separate line starting just below the FAIRWAY circle and running up-right to the circle of the OPEN SLOPE label (label outside my tiles, in t302); the FAIRWAY text is aligned with 149/148, not with this line"
+  },
+  {
+   "id": 208,
+   "mapName": "LINK",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t101"
+   ],
+   "note": "from the slow zone to the square of the LINK label (the SCOOTER label ends just above this square)"
+  },
+  {
+   "id": 209,
+   "mapName": "LINK",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t101"
+   ],
+   "note": "continues after the LINK label"
+  },
+  {
+   "id": 235,
+   "mapName": "MOON DOG",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "short piece below the square of the MOON DOG label, down to Rim Rock (49)"
+  },
+  {
+   "id": 236,
+   "mapName": "MOON DOG",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "short piece above the MOON DOG label, up to the summit"
+  },
+  {
+   "id": 240,
+   "mapName": "ROSSI RUN",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t200"
+   ],
+   "note": "from the circle of the ROSSI RUN label around Southface Village to the Sunshine Quad base"
+  },
+  {
+   "id": 241,
+   "mapName": "ROSSI RUN",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t100",
+    "t200"
+   ],
+   "note": "from the ROSSI RUN label up to Suncatcher (51)"
+  },
+  {
+   "id": 242,
+   "mapName": "UPPER WILD THING",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "from the double diamond of the UPPER WILD THING label down to the Rim Rock crossing; 39 (LOWER WILD THING) continues below the crossing"
+  }
+ ],
+ "labels": [
+  {
+   "mapName": "SUNDOG",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1350,
+    362
+   ],
+   "note": "green; no drawn line of its own: the vertical label spans the short run from the summit down to the Rim Rock ridge line (49)"
+  },
+  {
+   "mapName": "MOON DOG",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1260,
+    385
+   ],
+   "note": "lines 235 and 236"
+  },
+  {
+   "mapName": "UPPER MOUNTAIN ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1586,
+    417
+   ],
+   "note": "label runs right out of my tiles; line 145 before it"
+  },
+  {
+   "mapName": "BUCKHORN",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1547,
+    455
+   ],
+   "note": "label runs right out of my tiles; line 77 before it"
+  },
+  {
+   "mapName": "RIM ROCK",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1119,
+    471
+   ],
+   "note": "upper of two RIM ROCK labels"
+  },
+  {
+   "mapName": "OUTRAGE",
+   "symbol": "double-diamond",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1300,
+    478
+   ],
+   "note": "two diamonds + tree icon, checked on a zoomed vector render; dark-grey band"
+  },
+  {
+   "mapName": "UPPER FALL LINE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1396,
+    492
+   ],
+   "note": "single diamond, checked on a zoomed vector render"
+  },
+  {
+   "mapName": "DOUBLE DIAMOND",
+   "symbol": "double-diamond",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1212,
+    512
+   ],
+   "note": "two diamonds + tree icon, checked on a zoomed vector render; dark-grey band"
+  },
+  {
+   "mapName": "UPPER WILD THING",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1124,
+    510
+   ],
+   "note": "TWO diamonds (not a glade), checked on a zoomed vector render"
+  },
+  {
+   "mapName": "TRIPLESEC",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1468,
+    531
+   ],
+   "note": "single diamond, checked on a zoomed vector render"
+  },
+  {
+   "mapName": "DREAM WEAVER",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    783,
+    559
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "OFF THE RIM",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    850,
+    586
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "CHALLENGER",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1516,
+    587
+   ],
+   "note": "single diamond, checked on a zoomed vector render"
+  },
+  {
+   "mapName": "COUNTDOWN",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1603,
+    598
+   ],
+   "note": "label itself is just right of my tiles (t002); included because piece 55 ends at its square"
+  },
+  {
+   "mapName": "STUMP JUMPER",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    852,
+    645
+   ],
+   "note": "single diamond, checked on a zoomed vector render"
+  },
+  {
+   "mapName": "LOOSE SPRUCE",
+   "symbol": "double-diamond",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    754,
+    670
+   ],
+   "note": "two diamonds + tree icon, checked on a zoomed vector render; dark-grey band"
+  },
+  {
+   "mapName": "MUELLERS' RUN",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1476,
+    711
+   ],
+   "note": "printed MUELLERS’ RUN; single diamond, checked on a zoomed vector render"
+  },
+  {
+   "mapName": "MOMENT'S REST",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1205,
+    722
+   ],
+   "note": "printed MOMENT’S REST"
+  },
+  {
+   "mapName": "SPRINT",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1266,
+    762
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "PUNCH LINE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    756,
+    772
+   ],
+   "note": "single diamond, checked on a zoomed vector render"
+  },
+  {
+   "mapName": "RIM ROCK",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1079,
+    809
+   ],
+   "note": "lower of two RIM ROCK labels"
+  },
+  {
+   "mapName": "LOWER WILD THING",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    779,
+    829
+   ],
+   "note": "single diamond, checked on a zoomed vector render"
+  },
+  {
+   "mapName": "FORREST BUMP",
+   "symbol": "double-diamond",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1009,
+    855
+   ],
+   "note": "spelled FORREST; two diamonds + tree icon, checked on a zoomed vector render; dark-grey band"
+  },
+  {
+   "mapName": "BLIND FAITH",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    829,
+    865
+   ],
+   "note": "single diamond, checked on a zoomed vector render"
+  },
+  {
+   "mapName": "FALL LINE",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1298,
+    872
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "UPPER WORLD CUP",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1540,
+    888
+   ],
+   "note": "single diamond, checked on a zoomed vector render"
+  },
+  {
+   "mapName": "DROP OFF",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1482,
+    900
+   ],
+   "note": "no drawn line: label sits in the gap between Muellers’ Run (63) and Upper World Cup (79/78)"
+  },
+  {
+   "mapName": "SCOOTER",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1447,
+    953
+   ],
+   "note": "no separate line piece: the vertical label spans from the bottom of Muellers’ Run (63) to the LINK square"
+  },
+  {
+   "mapName": "CAT NAP",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    794,
+    989
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "LINK",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1482,
+    1007
+   ],
+   "note": "lines 208 and 209"
+  },
+  {
+   "mapName": "SACHEM",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1250,
+    1029
+   ],
+   "note": "upper SACHEM label"
+  },
+  {
+   "mapName": "EASY STREET",
+   "symbol": "none-visible",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1418,
+    1073
+   ],
+   "note": "green text and green line (72/73) but NO symbol printed at either end of the label (zoomed vector render)"
+  },
+  {
+   "mapName": "HOME STRETCH",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1363,
+    1186
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "ROSSI RUN",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    294,
+    1236
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "SUNCATCHER",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    415,
+    1266
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "LEDGES",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1492,
+    1358
+   ],
+   "note": "single diamond, checked on a zoomed vector render"
+  },
+  {
+   "mapName": "SACHEM",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1348,
+    1456
+   ],
+   "note": "lower SACHEM label (a third SACHEM label is just right of my tiles at ~[1567,1727])"
+  },
+  {
+   "mapName": "OPEN SLOPE",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1754,
+    1828
+   ],
+   "note": "label outside my tiles (t302); included because piece 151 ends at its circle"
+  },
+  {
+   "mapName": "FAIRWAY",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1520,
+    1900
+   ],
+   "note": "lines 149 (before) and 148 (after, outside my tiles)"
+  },
+  {
+   "mapName": "GALAXY BOWL",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    1461,
+    2051
+   ],
+   "note": "small green circle; two-line label beside carpets 2 and 3 at the Clock Tower base; no drawn trail line (carpet-served learning slope)"
+  }
+ ]
+}

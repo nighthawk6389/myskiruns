@@ -4,9 +4,9 @@ Ski-run tracker for twenty-one resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
-trail map (start with "Pick a route" and "Resorts so far"). Read `README.md`
-("Current approach", "Earlier audit", "Prior attempts") before changing
-Killington's original pipeline.
+trail map (Part 1, "Doing a resort", then the closest resort's section in Part
+3) or changing a resort's data (its section in Part 3). Read
+`docs/killington.md` before changing Killington's original pipeline.
 
 ## Definition of done for trail overlays
 For every trail in each resort's `src/data/resorts/<id>/trails.ts`: its overlay
@@ -27,7 +27,7 @@ the already-assigned path (that is circular).
 - Trail names are black text on a white halo, rotated along the line.
 - The source PDF (commit `4d4a326`) is one flattened JPEG-2000 image, with no
   vector layers. It is sharper than the repo JPG (which is resampled, 4:2:0).
-- The other maps' legends and quirks are in the playbook (step 1).
+- The other maps' legends and quirks are in the playbook (Part 3, resort by resort).
 
 ## What works / what doesn't
 - Works: a resort PDF's own vectors where it has them: strokes
@@ -51,17 +51,23 @@ the already-assigned path (that is circular).
   `trailProposals.json` + `trailReviews.json`; never hand-edit it. Human
   review decisions in `trailReviews.json` (entries without `"by": "claude"`)
   outrank every automatic source, and a regeneration must keep them.
-- Vail's data (and its `trails.ts`) is rebuilt by
-  `tools/trailmap/resorts/vail/regen.sh` from `names.py` + `decisions.py`,
-  and Hunter's, Wildcat's, Sunday River's, Sugarloaf's, Smugglers' Notch's,
-  Whistler Blackcomb's, Park City's, Palisades Tahoe's, Big Sky's and
-  Heavenly's by `tools/trailmap/resorts/<id>/regen.sh` from their PDF
-  (Heavenly's: an older export of its map's artwork, registered on the
-  current image), `resort.py` + `decisions.py`
-  (`tools/trailmap/pdf_resort.py`; Whistler Blackcomb's, Palisades Tahoe's,
-  Big Sky's and Heavenly's per panel in `panels/<panel>/`):
-  change those, not the generated files. A new PDF resort gets such a folder
-  too.
+- Every resort's data but Killington's and Stowe's (their proposals and a
+  person's reviews are the record) is rebuilt byte for byte by
+  `tools/trailmap/resorts/<id>/regen.sh` from its sources and its folder's
+  readings and decisions: Vail's from `names.py` + `decisions.py`; Hunter's and
+  every PDF resort after it from `resort.py` + `decisions.py` through
+  `tools/trailmap/pdf_resort.py` (per panel in `panels/<panel>/` for Whistler
+  Blackcomb, Palisades Tahoe, Big Sky and Heavenly; Heavenly's PDF is an older
+  export of its map's artwork, registered on the current image); Whiteface's,
+  Winter Park's, Breckenridge's, Copper Mountain's and Keystone's by their own
+  scripts; Okemo's, Sugarbush's and Jay Peak's from their archived readings.
+  Change those, not the generated files. A new resort gets such a folder too,
+  and `tools/trailmap/regen_all.sh` must show no change to the others after a
+  shared tool changes. Each `regen.sh` stops on a source whose SHA-256 has
+  changed (a new edition: the playbook's "A new season's map"; `FORCE=1`).
+- Every script used to build or check a resort goes into the repo (the
+  resort's folder, `tools/`, or as a record `tools/archive/` with its index),
+  never only into the session's scratch folder: the container is reclaimed.
 - Record naming decisions about raster-detected pieces as points on the map,
   not piece ids: ids change whenever the detector is re-tuned.
 - Trips sync between devices by merging (`src/trips/log.ts`), never by
@@ -81,10 +87,14 @@ the already-assigned path (that is circular).
 
 ## In this sandbox
 - Playwright: load it from `$(npm root -g)/playwright` (`PLAYWRIGHT_PATH` for
-  `hover_check.cjs`). Chromium through the agent proxy needs
+  `hover_check.cjs`). Browser checks: `tools/trailmap/hover_all.sh` (every
+  resort), `tools/app_check.cjs`, `tools/app_flows.cjs` and
+  `tools/offline_check.cjs`, against a build served by `tools/serve_dist.cjs`.
+  Chromium through the agent proxy needs
   `--ignore-certificate-errors-spki-list=<pin of the proxy CA>`: the playbook,
-  step 1, has the command. Vail Resorts' sites need headless Chromium; their
-  scene7 image CDN works with plain curl.
+  Part 4, "Getting a source here", has the command (`fetch_pdf.cjs` and
+  `find_source.cjs` work it out themselves). Vail Resorts' sites need headless
+  Chromium; their scene7 image CDN works with plain curl.
 - Start `vite preview` in its own subshell and stop it by PID: `pkill -f` can
   kill the shell that runs it (any pattern in your own command line matches).
 - Offline checks: Playwright's offline mode doesn't stop a service worker's

@@ -1,0 +1,108 @@
+{
+ "trails": [
+  {
+   "id": "sidekick",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     1897,
+     1074
+    ],
+    [
+     1907,
+     1080
+    ],
+    [
+     1926,
+     1087
+    ],
+    [
+     1946,
+     1095
+    ],
+    [
+     1966,
+     1102
+    ],
+    [
+     1977,
+     1109
+    ],
+    [
+     1981,
+     1127
+    ]
+   ],
+   "confidence": "high",
+   "note": "No drawn line; a short traverse, not a fall-line run (label is shallow). The SIDEKICK label runs ESE across the open ridge top from Searle's Way's lower bend (101 at ~1897,1074; diamond 1907,1080) to the top of Black Out (98, 1980,1130), just above the Black Ridge Triple top (1958,1113); Jolly Green Giant (104) ends 25 px east. Traced along the label centreline, fitted to the text pixels."
+  },
+  {
+   "id": "searles-way",
+   "pieces": [
+    102,
+    103,
+    101
+   ],
+   "partial": {},
+   "traced": [],
+   "confidence": "high",
+   "note": "Whole pieces. 102 starts in a cut ~30 px west of Jolly Green Giant (1801,730; no line drawn to JGG) and is joined at (1791,785) by the unlabeled black connector 103 from Nor'Easter (its west end 9 px from 85); 102 runs into the SEARLE'S WAY diamond (1818,903); after the text (to 1886,990) 101 continues to 1876,1116, the top of the race area / Wardance (95). Sidekick leaves 101 eastward at ~1897,1074."
+  },
+  {
+   "id": "rt-103",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     2200,
+     926
+    ],
+    [
+     2185,
+     937
+    ],
+    [
+     2165,
+     952
+    ],
+    [
+     2145,
+     967
+    ],
+    [
+     2125,
+     982
+    ],
+    [
+     2107,
+     991
+    ]
+   ],
+   "confidence": "high",
+   "note": "No drawn line; a cross-slope connector. The RT. 103 label (square 2140,971 to the '3' at 2183,939) lies in open snow; its axis runs up-right into the Cutter's Folly / Upper Sapphire / Express Lane / Lower Sapphire junction (~2200,926) and down-left, under the Evergreen Summit Express, into the Upper Timberline end / Lower Timberline / Upper Arrow junction (~2107,991). Traced along it between the two junctions."
+  },
+  {
+   "id": "tomahawk",
+   "pieces": [
+    118,
+    117
+   ],
+   "partial": {},
+   "traced": [],
+   "confidence": "high",
+   "note": "Blue trail, whole pieces. 118 starts just below the unlabeled green spur 239 off Sweet Solitude (2004,630; spur not included), passes the FISHER CAT SLIDE kids-zone icon into the TOMAHAWK square (2115,735); after the text (to 2182,800, where the Whistler glade band merges in) 117 runs to Express Lane at the EXPRESS LANE square (2256,887). Checked on zoomed crops."
+  },
+  {
+   "id": "tomahawk-park",
+   "pieces": [
+    255,
+    254
+   ],
+   "partial": {},
+   "traced": [],
+   "confidence": "high",
+   "note": "Orange terrain-park line only, whole pieces. 255 starts ~35 px below Express Lane (2290,928), on the extension of blue Tomahawk (117) across Express Lane; orange pill (2323,983) and orange TOMAHAWK text to ~2372,1062; 254 continues to 2411,1122, ~25 px above Ridge Runner (227), where the park ends. No line is drawn across those two short gaps, so none traced."
+  }
+ ]
+}

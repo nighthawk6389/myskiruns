@@ -1,0 +1,20 @@
+const { chromium } = require(process.env.PLAYWRIGHT_PATH);
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1400, height: 900 } });
+  const errs = [];
+  page.on('pageerror', (e) => errs.push(e.message));
+  await page.goto('http://localhost:4199/?resort=killington');
+  await page.waitForTimeout(2500);
+  console.log('tabs:', await page.locator('[aria-label="Trail map"]').count());
+  const before = await page.locator('[class*="stage"]').first().getAttribute('style');
+  await page.getByLabel('Search trails').fill('Superstar');
+  await page.waitForTimeout(400);
+  await page.locator('button[title="Show on map"]').filter({ hasText: 'Superstar' }).first().click();
+  await page.waitForTimeout(1200);
+  const after = await page.locator('[class*="stage"]').first().getAttribute('style');
+  console.log('before:', before.match(/scale\([^)]*\)/)[0], 'after:', after.match(/scale\([^)]*\)/)[0]);
+  console.log('sheet:', await page.locator('[class*="sheetName"]').first().textContent());
+  console.log('errors:', errs.length ? errs : 'none');
+  await browser.close();
+})();

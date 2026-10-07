@@ -1,0 +1,688 @@
+{
+ "lines": [
+  {
+   "id": 2,
+   "mapName": "TREE DANCER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "White-cased blue line inside the blue-violet TREE DANCER glade band, above the label (label + square + glade icon at ~[2677,1005])."
+  },
+  {
+   "id": 3,
+   "mapName": "TREE DANCER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t104",
+    "t204"
+   ],
+   "note": "White-cased blue line inside the TREE DANCER glade band, below the label; runs down to the GREEN LINK line."
+  },
+  {
+   "id": 14,
+   "mapName": "EVERGLADE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "White-cased blue line inside the EVERGLADE glade band; starts at the EVERGLADE label + blue square + glade icon at ~[2421,760] (label outside my tiles, symbol checked at 8x: square)."
+  },
+  {
+   "id": 25,
+   "mapName": "SUPERNOVA",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t104",
+    "t204"
+   ],
+   "note": "White-cased black line in the left arm of the dark-grey glade band that ends at the SUPERNOVA label (~[3474,1250], outside my tiles; two diamonds + glade icon, checked at 8x). No other label on the band."
+  },
+  {
+   "id": 28,
+   "mapName": "SUPERNOVA",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "White-cased black line in the right arm of the same dark-grey SUPERNOVA glade band; joins 25 at ~[3352,1090]."
+  },
+  {
+   "id": 123,
+   "mapName": "SCREAMIN' DEMON",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t204",
+    "t304"
+   ],
+   "note": "Starts at the end of the SCREAMIN' DEMON label, runs down into the slow zone onto VILLAGE RUN (180)."
+  },
+  {
+   "id": 125,
+   "mapName": "THE PLUNGE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t204",
+    "t304"
+   ],
+   "note": "Starts at the end of the black-diamond THE PLUNGE label (~[2500,1450], outside my tiles) and runs down to VILLAGE RUN (180)."
+  },
+  {
+   "id": 127,
+   "mapName": "BOOMERANG",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t204",
+    "t304"
+   ],
+   "note": "Continues from the end of the BOOMERANG label down into the slow zone."
+  },
+  {
+   "id": 128,
+   "mapName": "BOOMERANG",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t204"
+   ],
+   "note": "Leads into the square of the BOOMERANG label; starts at the Lower Mountain Road crossing of the Solitude Express Quad lift line and runs down its left side."
+  },
+  {
+   "id": 131,
+   "mapName": "SIDEWINDER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t204",
+    "t304"
+   ],
+   "note": "Continues from the end of the SIDEWINDER label down to the Solitude Express Quad base; 182 branches east from it at ~[3030,1383]."
+  },
+  {
+   "id": 132,
+   "mapName": "SIDEWINDER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t104",
+    "t204"
+   ],
+   "note": "Leads into the square of the SIDEWINDER label from the junction at the bottom of Coleman Brook / end of Green Link."
+  },
+  {
+   "id": 133,
+   "mapName": "SIDEOUT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t204",
+    "t304"
+   ],
+   "note": "From the square of the SIDEOUT label down-left across the lift line (gap in the closed area) into the slow zone."
+  },
+  {
+   "id": 134,
+   "mapName": "COLEMAN BROOK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "Continues from the end of the COLEMAN BROOK label to the Sidewinder / Green Link junction."
+  },
+  {
+   "id": 135,
+   "mapName": "COLEMAN BROOK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "Leads into the circle of the COLEMAN BROOK label (light-green family-zone band)."
+  },
+  {
+   "id": 140,
+   "mapName": "LOWER MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t104",
+    "t204"
+   ],
+   "note": "Collinear continuation of 234 (which starts at the end of the LOWER MOUNTAIN ROAD label, outside my tiles) across the Solitude Express Quad lift line, in its own slow-zone band, up to the Coleman Brook / Green Link / Sidewinder junction. Boomerang (128) branches off at the lift crossing; the stub before the second MOUNTAIN ROAD label also points at this junction, so the Mountain Road / Lower Mountain Road boundary is a naming call, but no other label is on this line."
+  },
+  {
+   "id": 141,
+   "mapName": "MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "Runs from the end of the upper MOUNTAIN ROAD label through Jackson Gore Junction to the end of the lower MOUNTAIN ROAD label (~[2914,1060]); named on both ends."
+  },
+  {
+   "id": 142,
+   "mapName": "MOUNTAIN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104"
+   ],
+   "note": "Leads into the circle of the upper MOUNTAIN ROAD label."
+  },
+  {
+   "id": 146,
+   "mapName": "ROUNDHOUSE RUN",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "Continues from the end of the ROUNDHOUSE RUN label to Jackson Gore Junction."
+  },
+  {
+   "id": 161,
+   "mapName": "DAYBREAK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t304",
+    "t404"
+   ],
+   "note": "Continues from the end of the DAYBREAK label down to the Morning Star Triple base."
+  },
+  {
+   "id": 162,
+   "mapName": "DAYBREAK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t304"
+   ],
+   "note": "From the Solitude Express Quad base into the circle of the DAYBREAK label."
+  },
+  {
+   "id": 163,
+   "mapName": "JACK-A-LOPE",
+   "color": "green",
+   "confidence": "medium",
+   "tiles": [
+    "t304"
+   ],
+   "note": "No label on it: one stroke from the Solitude base area down under the MORNING STAR TRIPLE lift label; after a road gap it continues as 165 into the JACK-A-LOPE circle. PROMENADE (175) tees into it at ~[3179,1711]."
+  },
+  {
+   "id": 164,
+   "mapName": "JACK-A-LOPE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t304"
+   ],
+   "note": "Continues from the end of the JACK-A-LOPE label east to the Moonshadow line, where 167 continues to the SOUTHERN CROSSING label."
+  },
+  {
+   "id": 165,
+   "mapName": "JACK-A-LOPE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t304"
+   ],
+   "note": "Leads into the circle of the JACK-A-LOPE label."
+  },
+  {
+   "id": 175,
+   "mapName": "PROMENADE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t304"
+   ],
+   "note": "Continues from the end of the PROMENADE label, loops round and ends on 163 (Jack-a-Lope)."
+  },
+  {
+   "id": 176,
+   "mapName": "PROMENADE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t304"
+   ],
+   "note": "Short piece leading into the circle of the PROMENADE label."
+  },
+  {
+   "id": 177,
+   "mapName": "RISING STAR",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t204",
+    "t304"
+   ],
+   "note": "Leaves the circle of the RISING STAR label (label reads upward)."
+  },
+  {
+   "id": 178,
+   "mapName": "RISING STAR",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t204"
+   ],
+   "note": "Short piece above the end of the RISING STAR label, up to the Upper Moonshadow line."
+  },
+  {
+   "id": 179,
+   "mapName": "RISING STAR",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t204",
+    "t304"
+   ],
+   "note": "Tiny continuation of 177 after a road gap, ending just above the PROMENADE label."
+  },
+  {
+   "id": 180,
+   "mapName": "VILLAGE RUN",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t204",
+    "t304"
+   ],
+   "note": "Continues from the end of the VILLAGE RUN label (~[2560,1590], outside my tiles) through the slow zone to the Solitude Express Quad base; The Plunge, Screamin' Demon, Boomerang and Sideout end onto it."
+  },
+  {
+   "id": 182,
+   "mapName": "UPPER MOONSHADOW",
+   "color": "blue",
+   "confidence": "medium",
+   "tiles": [
+    "t204"
+   ],
+   "note": "No label on it: branches east off SIDEWINDER (131) and continues smoothly, across a road gap where RISING STAR (178) starts, as 183 and 185 into the UPPER MOONSHADOW label."
+  },
+  {
+   "id": 183,
+   "mapName": "UPPER MOONSHADOW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t204"
+   ],
+   "note": "Continuation of the Upper Moonshadow line between two road gaps, leading to 185 and the label."
+  },
+  {
+   "id": 185,
+   "mapName": "UPPER MOONSHADOW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t204",
+    "t304"
+   ],
+   "note": "Leads into the square of the UPPER MOONSHADOW label."
+  },
+  {
+   "id": 188,
+   "mapName": "LINE DRIVE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t304",
+    "t404"
+   ],
+   "note": "Continues from the end of the LINE DRIVE label into the slow zone at the Morning Star Triple base."
+  },
+  {
+   "id": 189,
+   "mapName": "LINE DRIVE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t304",
+    "t404"
+   ],
+   "note": "Leads into the square of the LINE DRIVE label, alongside the Morning Star Triple lift line."
+  },
+  {
+   "id": 191,
+   "mapName": "LOWER LIMELIGHT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t104",
+    "t204"
+   ],
+   "note": "From the Blue Moon / Upper Limelight junction to the square of the LOWER LIMELIGHT label."
+  },
+  {
+   "id": 192,
+   "mapName": "BLUE MOON",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "Continues from the end of the BLUE MOON label to the Upper/Lower Limelight junction."
+  },
+  {
+   "id": 193,
+   "mapName": "BLUE MOON",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "From Jackson Gore Junction into the square of the BLUE MOON label."
+  },
+  {
+   "id": 194,
+   "mapName": "UPPER LIMELIGHT",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "Leaves the diamond at the start of the UPPER LIMELIGHT label, down to the Blue Moon / Lower Limelight junction."
+  },
+  {
+   "id": 195,
+   "mapName": "UPPER LIMELIGHT",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t104"
+   ],
+   "note": "From Sunset Strip just below Jackson Gore Peak down to the end of the UPPER LIMELIGHT label."
+  },
+  {
+   "id": 222,
+   "mapName": "SUNSET STRIP",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104"
+   ],
+   "note": "Continues from the end of the SUNSET STRIP label up to Jackson Gore Peak; UPPER LIMELIGHT (195) branches off it near the top."
+  },
+  {
+   "id": 223,
+   "mapName": "SUNSET STRIP",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t004",
+    "t104"
+   ],
+   "note": "Leads into the circle of the SUNSET STRIP label from the south-west. Its lower tail continues past the point where 224 joins, down to just above BLUE MOON near its label; no other name is printed on it."
+  },
+  {
+   "id": 224,
+   "mapName": "SUNSET STRIP",
+   "color": "green",
+   "confidence": "medium",
+   "tiles": [
+    "t104"
+   ],
+   "note": "No label on it: a short green stroke inside the same yellow slow-zone band as the upper part of 223, from Jackson Gore Junction up to where it meets the SUNSET STRIP line (~[3067,888]). This is the Sunset Strip corridor into the junction, but it meets 223 at a junction rather than continuing it."
+  },
+  {
+   "id": 229,
+   "mapName": "GREEN LINK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t104",
+    "t204"
+   ],
+   "note": "White-cased green line leaving the circle of the GREEN LINK label to the south-west; hairpins at x~2352 and returns east to a free end at ~[2515,1214], above the LOWER MOUNTAIN ROAD label. One stroke with no junction or other label."
+  },
+  {
+   "id": 230,
+   "mapName": "GREEN LINK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t104",
+    "t204"
+   ],
+   "note": "Continues from the end of the GREEN LINK label to the Coleman Brook / Sidewinder junction."
+  }
+ ],
+ "labels": [
+  {
+   "mapName": "SUNSET STRIP",
+   "symbol": "circle",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3309,
+    735
+   ],
+   "note": "Inline on 223/222; circle checked at 8x (PDF vector circle at [3253,752])."
+  },
+  {
+   "mapName": "MOUNTAIN ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2813,
+    892
+   ],
+   "note": "Upper of two MOUNTAIN ROAD labels; inline between 142 and 141."
+  },
+  {
+   "mapName": "MOUNTAIN ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2914,
+    1060
+   ],
+   "note": "Lower MOUNTAIN ROAD label at the bottom of 141, reads toward the upper right, with a short stub before the circle pointing at the Coleman Brook / Sidewinder junction."
+  },
+  {
+   "mapName": "ROUNDHOUSE RUN",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2716,
+    908
+   ],
+   "note": "Inline between 147 and 146; west of the JACKSON GORE JUNCTION sign."
+  },
+  {
+   "mapName": "COLEMAN BROOK",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2725,
+    983
+   ],
+   "note": "The trail, not the lift of the same name. Inline between 135 and 134, west of the junction sign."
+  },
+  {
+   "mapName": "TREE DANCER",
+   "symbol": "square",
+   "glade": true,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2677,
+    1005
+   ],
+   "note": "Glade: blue square and orange-brown tree icon printed under the two-line name (square at [2666,1030], icon at [2685,1030]), checked at 8x; blue-violet band; lines 2 and 3."
+  },
+  {
+   "mapName": "GREEN LINK",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2714,
+    1107
+   ],
+   "note": "Inline between 229 and 230."
+  },
+  {
+   "mapName": "BLUE MOON",
+   "symbol": "square",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3108,
+    1004
+   ],
+   "note": "Inline between 193 and 192."
+  },
+  {
+   "mapName": "UPPER LIMELIGHT",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3350,
+    902
+   ],
+   "note": "ONE black diamond at [3304,952]: checked at 8x, and the PDF vectors also give a single diamond. Inline between 195 and 194."
+  },
+  {
+   "mapName": "SIDEWINDER",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2932,
+    1240
+   ],
+   "note": "Inline between 132 and 131."
+  },
+  {
+   "mapName": "LOWER LIMELIGHT",
+   "symbol": "square",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3414,
+    1307
+   ],
+   "note": "Straddles the right edge of t204 (square at [3369,1249] is inside). 191 leads into it and 190 continues after it."
+  },
+  {
+   "mapName": "BOOMERANG",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2812,
+    1500
+   ],
+   "note": "Reads downward, inline between 128 and 127."
+  },
+  {
+   "mapName": "SCREAMIN' DEMON",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2674,
+    1508
+   ],
+   "note": "Printed with a typographic apostrophe (SCREAMIN’ DEMON). The square at [2621,1459] is just left of t204; 123 continues after the label."
+  },
+  {
+   "mapName": "SIDEOUT",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    2960,
+    1537
+   ],
+   "note": "Reads upward from the square; 133 leaves the square, with a short stub beyond the T."
+  },
+  {
+   "mapName": "RISING STAR",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    3261,
+    1514
+   ],
+   "note": "Reads upward; 177 below, 178 above."
+  },
+  {
+   "mapName": "UPPER MOONSHADOW",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    3423,
+    1610
+   ],
+   "note": "Straddles the right edge of my tiles (square at [3386,1534]). Visible print is a blue square with blue text, checked at 8x, and the line (182/183/185) is blue. The PDF also holds a hidden GREEN copy of this label (square and text) drawn underneath, and likewise of LOWER MOONSHADOW; the blue copy is drawn on top."
+  },
+  {
+   "mapName": "PROMENADE",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    3213,
+    1634
+   ],
+   "note": "Inline between 176 and 175, near SOLITUDE VILLAGE."
+  },
+  {
+   "mapName": "JACK-A-LOPE",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    3332,
+    1783
+   ],
+   "note": "Inline between 165 and 164."
+  },
+  {
+   "mapName": "DAYBREAK",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    3057,
+    1878
+   ],
+   "note": "Reads downward, inline between 162 and 161."
+  },
+  {
+   "mapName": "LINE DRIVE",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    3349,
+    1981
+   ],
+   "note": "Inline between 189 and 188, beside the Morning Star Triple lift line."
+  }
+ ]
+}

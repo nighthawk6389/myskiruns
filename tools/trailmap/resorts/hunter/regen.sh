@@ -5,6 +5,7 @@
 #
 #   tools/trailmap/resorts/hunter/regen.sh            # data only
 #   IMAGES=1 tools/trailmap/resorts/hunter/regen.sh   # also rewrite public/maps/hunter.jpg
+#   FORCE=1 ...                                       # go on although a source's SHA-256 differs (a new edition)
 #
 # A person's reviews in trailReviews.json are kept; Claude's ("by": "claude") are rebuilt, keeping their
 # timestamps when nothing changed.
@@ -19,6 +20,16 @@ mkdir -p "$W"
   https://www.huntermtn.com/the-mountain/about-the-mountain/trail-map.aspx \
   https://www.huntermtn.com/-/aemasset/sitecore/hunter/maps/winter-2025-2026/20251122_HU_winter-trail_map_001.pdf \
   "$W/hunter.pdf"
+
+# the files this data was built from: another file (a new edition) stops the rebuild until its decisions are
+# checked (docs/trail-map-playbook.md, "A new season's map"); FORCE=1 runs on it anyway
+check() {
+  local s; s=$(sha256sum "$1" | cut -d' ' -f1); [ "$s" = "$2" ] && return 0
+  echo "$1: SHA-256 $s, not $2 (the file this data was built from). A new edition needs its decisions" \
+    "checked first (docs/trail-map-playbook.md, \"A new season's map\"); FORCE=1 runs on it anyway." >&2
+  [ -n "$FORCE" ] || exit 1
+}
+check "$W/hunter.pdf" 3de2347a4bfafc454ccbc68ccc3d63a116bd69a33a7cfc42fa519cabc8a9045e  # 9950776 bytes
 
 # 2. the trail lines (0.38 pt strokes in the three trail colours; lifts are thicker maroon strokes), the names
 # (text) and the symbols (rounded fills), all on the same 5 px/pt grid as the map image

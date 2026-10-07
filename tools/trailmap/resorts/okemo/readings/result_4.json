@@ -1,0 +1,704 @@
+{
+ "lines": [
+  {
+   "id": 222,
+   "mapName": "SUNSET STRIP",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105"
+   ],
+   "note": "from the summit down-left to the end of the SUNSET STRIP label; continues west of it as 223"
+  },
+  {
+   "id": 221,
+   "mapName": "TUCKERED OUT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105"
+   ],
+   "note": "from the summit east to the first ■TUCKERED OUT label (label ~3977,756); continues after it as 220"
+  },
+  {
+   "id": 218,
+   "mapName": "BIG BANG",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105"
+   ],
+   "note": "branches off Tuckered Out below the summit, ends at the ◆◆ of BIG BANG"
+  },
+  {
+   "id": 217,
+   "mapName": "BIG BANG",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105",
+    "t205"
+   ],
+   "note": "continues after the BIG BANG label, merges into Eclipse (215) at ~3990,1160"
+  },
+  {
+   "id": 23,
+   "mapName": "BLACK HOLE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105"
+   ],
+   "note": "thin line inside the dark-grey BLACK HOLE glade band, above its label"
+  },
+  {
+   "id": 22,
+   "mapName": "BLACK HOLE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105"
+   ],
+   "note": "inside the BLACK HOLE glade band, below its label/◆◆/glade icon"
+  },
+  {
+   "id": 212,
+   "mapName": "VORTEX",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105"
+   ],
+   "note": "from the summit down to the ◆ of VORTEX"
+  },
+  {
+   "id": 211,
+   "mapName": "VORTEX",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105"
+   ],
+   "note": "continues after the VORTEX label, crosses the Quantum Six lift and Quantum Leap (214), ends ~3707,1008"
+  },
+  {
+   "id": 214,
+   "mapName": "QUANTUM LEAP",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105",
+    "t205"
+   ],
+   "note": "black line along the Quantum Six lift line from the summit to the ◆ of QUANTUM LEAP (~3786,1252); crosses Vortex (211) and the lift, no other label along it"
+  },
+  {
+   "id": 213,
+   "mapName": "QUANTUM LEAP",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t205",
+    "t305"
+   ],
+   "note": "continues after the QUANTUM LEAP label beside the lift down to the Quantum Six bottom terminal"
+  },
+  {
+   "id": 216,
+   "mapName": "ECLIPSE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "short piece from the foot of the Black Hole band to the ◆ of ECLIPSE (inline label; 215 continues after it)"
+  },
+  {
+   "id": 215,
+   "mapName": "ECLIPSE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "continues after the ECLIPSE label down the east side to the slow zone ~4047,1558; Big Bang (217) merges in at ~3990,1160, no other label below"
+  },
+  {
+   "id": 195,
+   "mapName": "UPPER LIMELIGHT",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t005",
+    "t105"
+   ],
+   "note": "from Sunset Strip below the summit down to the end of the UPPER LIMELIGHT label"
+  },
+  {
+   "id": 194,
+   "mapName": "UPPER LIMELIGHT",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105"
+   ],
+   "note": "continues after the ◆ of UPPER LIMELIGHT to the Blue Moon / Lower Limelight junction ~3270,1025"
+  },
+  {
+   "id": 191,
+   "mapName": "LOWER LIMELIGHT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "from the Upper Limelight / Blue Moon junction to the ■ of LOWER LIMELIGHT"
+  },
+  {
+   "id": 190,
+   "mapName": "LOWER LIMELIGHT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t205",
+    "t305"
+   ],
+   "note": "continues after the LOWER LIMELIGHT label down to the slow zone at the Quantum Six bottom terminal"
+  },
+  {
+   "id": 197,
+   "mapName": "WHITE LIGHTNING",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105"
+   ],
+   "note": "branches off Upper Limelight just above its label, ends at the ◆ of WHITE LIGHTNING"
+  },
+  {
+   "id": 196,
+   "mapName": "WHITE LIGHTNING",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "continues after the WHITE LIGHTNING label, ends ~3704,1187"
+  },
+  {
+   "id": 199,
+   "mapName": "ROLLING THUNDER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "branches off White Lightning (197), ends at the ◆◆ of ROLLING THUNDER"
+  },
+  {
+   "id": 198,
+   "mapName": "ROLLING THUNDER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t205"
+   ],
+   "note": "continues after the ROLLING THUNDER label, ends ~3787,1461"
+  },
+  {
+   "id": 25,
+   "mapName": "SUPERNOVA",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105",
+    "t205"
+   ],
+   "note": "thin line inside the left arm of the dark-grey SUPERNOVA glade band (V-shaped band), down to its label"
+  },
+  {
+   "id": 28,
+   "mapName": "SUPERNOVA",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t105"
+   ],
+   "note": "thin line inside the right arm of the same V-shaped SUPERNOVA glade band; starts by White Lightning, joins 25 at ~3352,1090; the band has no other label"
+  },
+  {
+   "id": 24,
+   "mapName": "SUPERNOVA",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t205",
+    "t305"
+   ],
+   "note": "inside the SUPERNOVA glade band below its label/◆◆/glade icon, down to ~3813,1614"
+  },
+  {
+   "id": 174,
+   "mapName": "EXPRESSO",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t305"
+   ],
+   "note": "from the Quantum Six bottom-terminal slow zone to the ● of EXPRESSO; 173 continues after the label"
+  },
+  {
+   "id": 168,
+   "mapName": "FAST TRACK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t305"
+   ],
+   "note": "from the Quantum Six bottom-terminal slow zone down to the ● of FAST TRACK (~4019,1877); Spur Line (171) joins at ~4005,1785"
+  },
+  {
+   "id": 171,
+   "mapName": "SPUR LINE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t305"
+   ],
+   "note": "from the ● of SPUR LINE (label beside the Coleman Brook lift, x>4019) down to Fast Track (168)"
+  },
+  {
+   "id": 169,
+   "mapName": "INN BOUND",
+   "color": "green",
+   "confidence": "low",
+   "tiles": [
+    "t305",
+    "t405"
+   ],
+   "note": "AMBIGUOUS: sits between the end of the FAST TRACK label (~4063,1965) and the end of the INN BOUND label (~4014,2013) with no junction; 168-169-170 were drawn as one PDF path. Could equally be FAST TRACK (its continuation after the label); chose INN BOUND because the yellow slow zone that carries the INN BOUND label starts exactly at the FAST TRACK label end"
+  },
+  {
+   "id": 170,
+   "mapName": "INN BOUND",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t405"
+   ],
+   "note": "from the ● of INN BOUND down to the Jackson Gore base by the Coleman Brook lift bottom"
+  },
+  {
+   "id": 167,
+   "mapName": "SOUTHERN CROSSING",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t305"
+   ],
+   "note": "short piece from the Moonshadow crossing to the ● of SOUTHERN CROSSING (Jack-a-Lope ends at that crossing)"
+  },
+  {
+   "id": 166,
+   "mapName": "SOUTHERN CROSSING",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t305",
+    "t405"
+   ],
+   "note": "continues after the SOUTHERN CROSSING label past the coaster to the Jackson Gore base (~3839,2100)"
+  },
+  {
+   "id": 165,
+   "mapName": "JACK-A-LOPE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t305"
+   ],
+   "note": "from the Solitude base (junction with 163/189) to the ● of JACK-A-LOPE"
+  },
+  {
+   "id": 164,
+   "mapName": "JACK-A-LOPE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t305"
+   ],
+   "note": "continues after the JACK-A-LOPE label to the crossing with Upper/Lower Moonshadow"
+  },
+  {
+   "id": 183,
+   "mapName": "UPPER MOONSHADOW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t205"
+   ],
+   "note": "continues 182 (from Sidewinder) past the Rising Star branch, gap at a road, then 185 to the ■ of UPPER MOONSHADOW; no other label"
+  },
+  {
+   "id": 185,
+   "mapName": "UPPER MOONSHADOW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t205",
+    "t305"
+   ],
+   "note": "short piece ending at the ■ of UPPER MOONSHADOW"
+  },
+  {
+   "id": 186,
+   "mapName": "UPPER MOONSHADOW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t305"
+   ],
+   "note": "continues after the UPPER MOONSHADOW label down to the Jack-a-Lope / Southern Crossing crossing"
+  },
+  {
+   "id": 187,
+   "mapName": "LOWER MOONSHADOW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t305"
+   ],
+   "note": "short piece from that crossing to the top end of the LOWER MOONSHADOW label"
+  },
+  {
+   "id": 184,
+   "mapName": "LOWER MOONSHADOW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t305",
+    "t405"
+   ],
+   "note": "continues below the ■ of LOWER MOONSHADOW into the slow zone at the Morning Star Triple bottom"
+  },
+  {
+   "id": 189,
+   "mapName": "LINE DRIVE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t305",
+    "t405"
+   ],
+   "note": "from Jack-a-Lope at the Solitude base, beside Morning Star Triple, to the ■ of LINE DRIVE"
+  },
+  {
+   "id": 188,
+   "mapName": "LINE DRIVE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t305",
+    "t405"
+   ],
+   "note": "continues after the LINE DRIVE label into the slow zone at the Morning Star Triple bottom"
+  },
+  {
+   "id": 178,
+   "mapName": "RISING STAR",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t205"
+   ],
+   "note": "short piece from the Upper Moonshadow junction (182/183) to the top end of the RISING STAR label"
+  },
+  {
+   "id": 175,
+   "mapName": "PROMENADE",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t305"
+   ],
+   "note": "continues after the PROMENADE label (label west of the tile edge, ● ~3161,1627) to the Morning Star Triple / 163 junction"
+  },
+  {
+   "id": 161,
+   "mapName": "DAYBREAK",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t405"
+   ],
+   "note": "continues after the DAYBREAK label (west of the tile, ~3055,1880) to the Morning Star Triple bottom terminal slow zone"
+  }
+ ],
+ "labels": [
+  {
+   "mapName": "SUNSET STRIP",
+   "symbol": "circle",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3305,
+    736
+   ],
+   "note": "line 222 above / 223 below the label"
+  },
+  {
+   "mapName": "TUCKERED OUT",
+   "symbol": "square",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3977,
+    756
+   ],
+   "note": "upper of two TUCKERED OUT labels; the second (■ ~4144,1244) is east of these tiles"
+  },
+  {
+   "mapName": "BIG BANG",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3799,
+    791
+   ],
+   "note": "two diamonds confirmed on a 7x crop and in the PDF vector fills"
+  },
+  {
+   "mapName": "BLACK HOLE",
+   "symbol": "double-diamond",
+   "glade": true,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3705,
+    835
+   ],
+   "note": "glade: dark-grey band + orange-brown tree icon; ◆◆ printed under the name (7x crop + PDF fills)"
+  },
+  {
+   "mapName": "VORTEX",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3547,
+    835
+   ],
+   "note": "single diamond (7x crop + PDF fills)"
+  },
+  {
+   "mapName": "UPPER LIMELIGHT",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3350,
+    903
+   ],
+   "note": "single diamond (7x crop + PDF fills)"
+  },
+  {
+   "mapName": "WHITE LIGHTNING",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3565,
+    1094
+   ],
+   "note": "single diamond (7x crop + PDF fills)"
+  },
+  {
+   "mapName": "ECLIPSE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3859,
+    1117
+   ],
+   "note": "single diamond (7x crop + PDF fills)"
+  },
+  {
+   "mapName": "ROLLING THUNDER",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3550,
+    1214
+   ],
+   "note": "two diamonds (7x crop + PDF fills)"
+  },
+  {
+   "mapName": "SUPERNOVA",
+   "symbol": "double-diamond",
+   "glade": true,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3474,
+    1256
+   ],
+   "note": "glade: dark-grey V-shaped band + tree icon; ◆◆ printed under the name (7x crop + PDF fills)"
+  },
+  {
+   "mapName": "QUANTUM LEAP",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3808,
+    1309
+   ],
+   "note": "single diamond (7x crop + PDF fills); label runs beside the QUANTUM SIX lift label"
+  },
+  {
+   "mapName": "LOWER LIMELIGHT",
+   "symbol": "square",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3412,
+    1305
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "EXPRESSO",
+   "symbol": "circle",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    4011,
+    1652
+   ],
+   "note": "spelled EXPRESSO; label straddles the east tile edge"
+  },
+  {
+   "mapName": "FAST TRACK",
+   "symbol": "circle",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    4041,
+    1921
+   ],
+   "note": "only the ● is at the east edge of t305/t405 (x~4019); text lies east of these tiles"
+  },
+  {
+   "mapName": "INN BOUND",
+   "symbol": "circle",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3976,
+    2037
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "BRIGHT STAR BASIN",
+   "symbol": "circle",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    4005,
+    2134
+   ],
+   "note": "beginner area by carpets 6/7 at the Jackson Gore base; no drawn trail line"
+  },
+  {
+   "mapName": "TREE TAP",
+   "symbol": "none-visible",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3957,
+    2088
+   ],
+   "note": "terrain park: orange name with an orange pill; no drawn line (no freestyle piece)"
+  },
+  {
+   "mapName": "SOUTHERN CROSSING",
+   "symbol": "circle",
+   "glade": false,
+   "area": "jackson-gore",
+   "labelSrc": [
+    3596,
+    1859
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "JACK-A-LOPE",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    3331,
+    1784
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "UPPER MOONSHADOW",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    3423,
+    1612
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "LOWER MOONSHADOW",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    3441,
+    1934
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "LINE DRIVE",
+   "symbol": "square",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    3348,
+    1980
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "RISING STAR",
+   "symbol": "circle",
+   "glade": false,
+   "area": "okemo-mountain",
+   "labelSrc": [
+    3262,
+    1513
+   ],
+   "note": "label on the west edge of t205/t305"
+  }
+ ]
+}

@@ -7,8 +7,9 @@ folder holds those readings and decisions, and the script that turns them into
 the app's data. It is also the template for the next raster-only resort.
 
 ```bash
-tools/trailmap/resorts/vail/regen.sh             # rebuild src/data/resorts/vail/ (about a minute)
+tools/trailmap/resorts/vail/regen.sh             # rebuild src/data/resorts/vail/ (13 s with the detection cached)
 IMAGES=1 tools/trailmap/resorts/vail/regen.sh    # also public/maps/vail-<panel>.jpg
+FORCE=1 tools/trailmap/resorts/vail/regen.sh     # on a source whose SHA-256 differs (a new edition: the playbook, "A new season's map")
 FRESH=1 tools/trailmap/resorts/vail/regen.sh     # re-run line and symbol detection (cached otherwise)
 ```
 

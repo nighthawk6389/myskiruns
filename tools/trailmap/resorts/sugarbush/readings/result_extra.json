@@ -1,0 +1,12 @@
+{
+ "lines": [
+  {
+   "id": 114,
+   "mapName": "SNOWBALL",
+   "color": "blue",
+   "confidence": "certain",
+   "note": "Snowball is drawn as a filled outline, not a stroke (extract_pdf_vectors.py --outlined); reader 0 read its label and line on the source image"
+  }
+ ],
+ "labels": []
+}

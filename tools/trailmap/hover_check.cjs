@@ -63,10 +63,21 @@ for (const [id, p] of Object.entries(paths)) {
   await page.waitForTimeout(500);
   const box = await page.locator('svg[viewBox^="0 0 1000"]').boundingBox();
   const misses = [];
+  const read = () => page.locator('[class*=tooltipName]').first().textContent({ timeout: 300 }).catch(() => null);
   for (const c of cases) {
-    await page.mouse.move(box.x + (c.x / 100) * box.width, box.y + (c.y / 100) * box.height);
+    const at = [box.x + (c.x / 100) * box.width, box.y + (c.y / 100) * box.height];
+    await page.mouse.move(...at);
     await page.waitForTimeout(40);
-    const got = await page.locator('[class*=tooltipName]').first().textContent({ timeout: 300 }).catch(() => null);
+    let got = await read();
+    if (!got) {
+      // no tooltip at all (the page still busy, e.g. the service worker caching on a first visit): hover again once;
+      // a wrong name is a miss straight away
+      await page.mouse.move(at[0] + 40, at[1] + 40);
+      await page.waitForTimeout(300);
+      await page.mouse.move(...at);
+      await page.waitForTimeout(100);
+      got = await read();
+    }
     if (!got || !got.includes(c.name)) misses.push(`${c.name} -> ${got ?? 'nothing'}`);
   }
   console.log(`${cases.length - misses.length}/${cases.length} hover points show the right name`);

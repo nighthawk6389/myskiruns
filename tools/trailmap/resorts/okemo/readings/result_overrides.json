@@ -1,0 +1,19 @@
+{
+ "lines": [
+  {
+   "id": 255,
+   "mapName": "TOMAHAWK PARK",
+   "color": "freestyle",
+   "confidence": "certain",
+   "note": "orange TOMAHAWK terrain-park section below Express Lane, split from the blue Tomahawk trail"
+  },
+  {
+   "id": 254,
+   "mapName": "TOMAHAWK PARK",
+   "color": "freestyle",
+   "confidence": "certain",
+   "note": "orange TOMAHAWK terrain-park section below Express Lane, split from the blue Tomahawk trail"
+  }
+ ],
+ "labels": []
+}

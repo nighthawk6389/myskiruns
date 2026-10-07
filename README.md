@@ -1,406 +1,288 @@
-# myskiruns — ski trail tracker
+# My Ski Runs
 
-A React + TypeScript app for tracking which trails you've skied, on the
-resorts' own trail maps: every trail is a clickable, correctly named overlay on
-the map. Twenty-one resorts so far (Killington, Stowe, Okemo, Sugarbush, Jay
-Peak, Whiteface, Winter Park, Breckenridge, Copper Mountain, Keystone, Vail,
-Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Smugglers' Notch,
-Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky, Heavenly).
-The
-interesting part of this repo is the **trail-map pipeline** that puts those
-overlays on a map: from a resort's PDF (vector lines, text, outlined glyphs) or
-its raster images (line detection), through naming every line, to an audit of
-every overlay on zoomed crops. It started on Killington's flattened raster map,
-where fully automatic naming stalled at ~40% (the history is below); the
-working process is [`docs/trail-map-playbook.md`](docs/trail-map-playbook.md).
+A web app for keeping track of the trails you ski, on each resort's own trail map: every trail is a clickable
+overlay on the map, with its name and rating, so you tap the run you just skied and it's logged on your trip. It
+works offline on the mountain, installs to a phone's home screen, and can sync your trips between devices with an
+optional account. Live at **[www.myskiruns.app](https://www.myskiruns.app)**.
 
-## Running
+Twenty-one resorts so far, 3,327 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
+Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Vail, Breckenridge, Keystone, Copper
+Mountain, Winter Park, Park City, Big Sky, Palisades Tahoe, Heavenly and Whistler Blackcomb.
+
+Most of the work in this repository is the **trail-map pipeline**: getting every trail's overlay onto its own
+drawn line, with the right name, on maps that were never made to be machine-read. How it is done, resort by
+resort, is in **[docs/trail-map-playbook.md](docs/trail-map-playbook.md)**: start there to add a resort or to
+update one for a new season.
+
+**Contents:** [Quick start](#quick-start) · [Using the app](#using-the-app) · [Resorts](#resorts) ·
+[How a map gets its overlays](#how-a-map-gets-its-overlays) · [Repository layout](#repository-layout) ·
+[Scripts and checks](#scripts-and-checks) · [How the app works](#how-the-app-works) · [Accounts](#accounts) ·
+[Trail conditions](#trail-conditions) · [Deploying](#deploying) · [Marketing](#marketing) · [History](#history) ·
+[What's left](#whats-left)
+
+## Quick start
 
 ```bash
 npm install
-npm run dev        # app at localhost:5173
-npm run build      # typecheck + production build
-npm test           # trip merge/sync rules, resort search (tests/)
+npm run dev                    # http://localhost:5173 (serves /api/conditions from memory)
+npm run build                  # typecheck + production build into dist/
+npm test                       # the trip merge and sync rules, the resort search (tests/)
+npx tsc -b && npx eslint .     # before every commit
 ```
 
-**Doing this for another resort?** Follow
-[`docs/trail-map-playbook.md`](docs/trail-map-playbook.md): which route fits
-which kind of map source, the resorts done so far and how, the full workflow
-(source → lines → names → trail list → audit on crops → apply and verify), the
-tools in `tools/trailmap/`, the gotchas, and what each iteration taught us.
+The pipeline tools are Python 3 (`pip install pymupdf pillow numpy opencv-python-headless scikit-image scipy
+fonttools`) and Node; the browser checks use Playwright (in the Claude Code sandbox:
+`PLAYWRIGHT_PATH=$(npm root -g)/playwright`). `CLAUDE.md` has the rules every change follows.
 
 ## Using the app
 
-- **Resorts.** Pick the resort in the header (or `?resort=<id>`); the app
-  remembers it on the device. Vail's map comes as three panels (Front Side,
-  Back Bowls, Blue Sky Basin) and Whistler Blackcomb's as three (both
-  mountains, and insets of the Symphony Amphitheatre and the Blackcomb
-  Glacier), with a switcher on the map (or `?panel=<id>`); picking a trail in
-  the list opens the panel it is drawn on.
-- **Trips.** What you ski is logged per trip ("Presidents Day weekend").
-  Pick or start a trip in the header; mark a trail skied on the current
-  trip from the map, or with its check box in the list. With no trip yet,
-  the first mark starts one for today. Stats show this trip and all trips;
-  trails skied on an earlier trip are drawn dashed and say "skied before"
-  in the list.
-- **Finding a trail:** search the list and tap a trail's name; the map
-  zooms to it, highlights it and opens its sheet.
-- **On the map:** drag to pan, pinch or scroll to zoom (the corners button
-  shows the whole map; phones open zoomed to fill the screen). Tap a
-  trail and a sheet lists every trail within a finger's width, nearest
-  first, each with a big "Skied it" / "Remove" button, so junctions and dense
-  areas are never guessed; a toast offers Undo. Lines and markers keep a
-  constant on-screen size at every zoom and are thinner on small screens.
-- **Trail conditions (👍 / 👎).** In a trail's sheet, rate today's conditions;
-  tap the same thumb again to take it back. Votes count for 24 hours. The
-  list opens with "Good conditions today" (best net votes first) and rows
-  show a 👍/👎 badge. Votes are shared with everyone through
-  `api/conditions.ts`, a Vercel function backed by a Redis hash (Upstash,
-  added from the Vercel Marketplace; it sets `KV_REST_API_URL` /
-  `KV_REST_API_TOKEN`). Until that's connected the endpoint answers 503 and
-  the app keeps votes on the device (the sheet says so). Each device sends a
-  random id so it has one vote per trail; nothing identifies the person.
-  `vite` / `vite preview` serve the same API from memory for local testing.
-- **Condition tags.** After voting, pick up to three tags for what the trail
-  is like (groomed, powder, soft, moguls, hardpack, icy, slushy, thin cover,
-  crowded; list in `src/conditionTags.ts`). The sheet shows the most-reported
-  tags, and "Good conditions today" shows each trail's top tag. Tags are
-  stored with the vote, in the same 24-hour window.
-- **Trip summary.** "Summary" in the stats panel (or ⋯ → Trip summary) shows
-  trails skied, trails new to you (not logged on an earlier trip), days,
-  the difficulty mix and toughest trails, progress by peak, and a
-  day-by-day log with times; tap a run to see it on the map. "Share summary"
-  uses the phone's share sheet, or copies a text recap.
-- **Works offline and installs to the home screen.** A service worker
-  (`public/sw.js`, production builds only) caches the app with every resort's
-  trail data when it installs, and each trail map the first time it's shown
-  (all panels of a resort once it's opened), so it opens without signal on
-  the mountain; on a phone use "Add to Home Screen". A first visit downloads
-  about 4 MB, most of it the open resort's map, instead of every resort's map
-  (37 MB): each resort's data is its own chunk (`src/resorts.ts`), the other
-  resorts' data (~210 KB gzipped) is cached in the background, and a deploy
-  keeps the maps a phone already has (revalidated, not downloaded again).
-  The worker installs once the first map is on screen, so its background
-  downloads don't slow that map down on a weak connection.
-  On narrow screens the progress and trail list sit below the map and
-  scroll together, with the search box pinned.
-- **Your trips are kept on the device** (browser `localStorage`, key
-  `myskiruns.trips`). Use ⋯ → Export backup / Import backup to move or keep
-  them; importing adds trips that aren't already on the device (a trip
-  deleted here comes back as a copy). Data from the pre-trips version is
-  carried into a trip called "Earlier runs".
-- **Accounts (optional): back up and sync.** ⋯ → "Sign in to back up &
-  sync": enter your email, then the code emailed to you (no password). Your
-  trips are saved in your account and kept in step on every device you sign
-  in on: a sync runs on sign-in, a few seconds after each change, when the
-  app comes back online or to the foreground, and every 5 minutes while it's
-  open. Changes made offline on a phone sync once it has signal, and
-  changes on two devices merge rather than overwrite (the rules are in
-  `src/trips/log.ts`). Signing out keeps the trips on the device; "Delete
-  account" removes the account and the trips saved in it. Signed out, or with
-  accounts not set up (below), the app works as before. Setting it up:
-  [Accounts](#accounts-setting-up-sign-in-and-sync).
+- **Resorts.** Pick a resort with the button in the header: a search over the names, states and other places (it
+  finds Heavenly by "nevada" or "lake tahoe"), grouped by state before you type. `?resort=<id>` in the URL opens
+  one; the app remembers the last one on the device. Some maps come in several panels (Vail's Front Side, Back
+  Bowls and Blue Sky Basin; Big Sky's main map and two insets), with a switcher on the map (`?panel=<id>`);
+  picking a trail in the list opens the panel it is drawn on.
+- **Trips.** What you ski is logged per trip ("Presidents Day weekend"). Start or pick a trip in the header and
+  mark a trail skied from the map or with its check box in the list; with no trip yet, the first mark starts one
+  for today. The stats show this trip and all trips; trails skied on an earlier trip are drawn dashed.
+- **On the map:** drag to pan, pinch or scroll to zoom (the corners button shows the whole map). A tap opens a sheet
+  listing every trail within a finger's width, nearest first, each with a big "Skied it" button, so junctions are
+  never guessed; a toast offers Undo. Searching the list and tapping a name zooms the map to that trail.
+- **Trail conditions (👍 / 👎).** In a trail's sheet, rate today's conditions and pick up to three tags (groomed,
+  powder, moguls, icy, ...); votes are shared with everyone for 24 hours, and the list opens with "Good conditions
+  today". No account is involved: each device sends a random id, one vote per trail.
+- **Trip summary:** trails skied, new trails, days, the difficulty mix, progress by area and a day-by-day log;
+  "Share summary" uses the phone's share sheet.
+- **Offline and on the home screen.** A service worker caches the app with every resort's trail data, and each
+  map once it has been shown, so the app opens without signal; "Add to Home Screen" installs it.
+- **Your data stays on the device** (`localStorage`), with Export / Import backup in the ⋯ menu. **With an account**
+  (optional: email and a one-time code, no password) your trips are backed up and kept in step on every device;
+  changes made offline or on two devices merge rather than overwrite.
 
-## Accounts: setting up sign-in and sync
+## Resorts
 
-The same setup as Deconstructed Papers: Supabase Auth sends a one-time code by
-email (no passwords), through Resend as Supabase's mail server; the trips live
-in one Supabase table. Until the environment variables below are set, the app
-shows no account features.
+| resort | region | trails (lines + markers) | map | source and route | rebuild |
+|---|---|---|---|---|---|
+| Killington | Vermont | 135 (113 + 22) | 1 | flattened raster PDF; line detector, readers, a person's review | `npm run trails:apply -- --resort killington` ([history](docs/killington.md)) |
+| Stowe | Vermont | 125 (114 + 11) | 1 | PDF strokes, outlined names; readers, a person's review | `npm run trails:apply -- --resort stowe` |
+| Okemo | Vermont | 128 (124 + 4) | 1 | PDF strokes, outlined names; readers, trace pass, a person's review of 23 | `tools/trailmap/resorts/okemo/regen.sh` |
+| Sugarbush | Vermont | 138 (111 + 27) | 1 | PDF strokes, outlined labels; readers | `tools/trailmap/resorts/sugarbush/regen.sh` |
+| Jay Peak | Vermont | 88 (65 + 23) | 1 | a painting with no lines, names as text; trace pass | `tools/trailmap/resorts/jay-peak/regen.sh` |
+| Smugglers' Notch | Vermont | 82 (68 + 14) | 1 | PDF strokes, outlined names on label boxes | `tools/trailmap/resorts/smugglers-notch/regen.sh` |
+| Whiteface | New York | 98 (96 + 2) | 1 | PDF strokes and text (skimap.org) | `tools/trailmap/resorts/whiteface/regen.sh` |
+| Hunter Mountain | New York | 70 (66 + 4) | 1 | PDF strokes and text over a vector painting | `tools/trailmap/resorts/hunter/regen.sh` |
+| Wildcat Mountain | New Hampshire | 48 (47 + 1) | 1 | an older export's strokes and text on this season's image | `tools/trailmap/resorts/wildcat/regen.sh` |
+| Sunday River | Maine | 137 (116 + 21) | 1 | PDF strokes, outlined names, insets | `tools/trailmap/resorts/sunday-river/regen.sh` |
+| Sugarloaf | Maine | 175 (127 + 48) | 1 | PDF strokes, outlined names, numbered key circles, a raster inset | `tools/trailmap/resorts/sugarloaf/regen.sh` |
+| Vail | Colorado | 194 (173 + 21) | 3 | three raster paintings (no PDF); raster line detection | `tools/trailmap/resorts/vail/regen.sh` |
+| Breckenridge | Colorado | 197 (157 + 40) | 1 | PDF strokes and text over a sharper CDN painting | `tools/trailmap/resorts/breckenridge/regen.sh` |
+| Keystone | Colorado | 145 (120 + 25) | 1 | PDF strokes, outlined names, CDN painting | `tools/trailmap/resorts/keystone/regen.sh` |
+| Copper Mountain | Colorado | 128 (104 + 24) | 1 | PDF lines and names both as filled outlines | `tools/trailmap/resorts/copper-mountain/regen.sh` |
+| Winter Park | Colorado | 172 (114 + 58) | 1 | PDF strokes, text with no Unicode map | `tools/trailmap/resorts/winter-park/regen.sh` |
+| Park City Mountain | Utah | 345 (252 + 93) | 1 | PDF strokes, outlined names, a redrawn inset | `tools/trailmap/resorts/park-city/regen.sh` |
+| Big Sky | Montana | 323 (290 + 33) | 3 | three PDFs of strokes and text | `tools/trailmap/resorts/big-sky/regen.sh` |
+| Palisades Tahoe | California | 247 (124 + 123) | 3 | three PDFs of strokes and outlined names | `tools/trailmap/resorts/palisades-tahoe/regen.sh` |
+| Heavenly | California (and Nevada) | 120 (73 + 47) | 2 | the current map as an image; an older PDF of the artwork registered on it | `tools/trailmap/resorts/heavenly/regen.sh` |
+| Whistler Blackcomb | British Columbia | 232 (209 + 23) | 3 | one PDF read as a main map and two insets | `tools/trailmap/resorts/whistler-blackcomb/regen.sh` |
 
-1. **A Supabase project.** A new one keeps this app's users and email wording
-   apart from Deconstructed Papers. Free projects pause after a week without
-   use (the app keeps working on the device; sign-in and sync resume after
-   you restore the project in the dashboard).
-2. **The table.** In the SQL editor, run
-   [`supabase/migrations/001_trip_logs.sql`](supabase/migrations/001_trip_logs.sql):
-   one row per person (`trips`, a JSON list, and a `version`), readable and
-   writable only by that person (row-level security), deleted with them.
-3. **Email codes.** Authentication → Sign In / Providers → Email: on, new
-   sign-ups allowed. Authentication → Emails → Templates: put the code,
-   `{{ .Token }}`, in both "Magic Link" and "Confirm signup" (a first sign-in
-   uses the second), e.g. *Your My Ski Runs sign-in code is {{ .Token }}.*
-   The code is what works in the home-screen app; a link, if a template keeps
-   one, signs in the browser it opens in (Authentication → URL Configuration
-   → Site URL: the app's address).
-4. **Resend as the mail server.** Authentication → Emails → SMTP settings:
-   host `smtp.resend.com`, port `465`, user `resend`, password a Resend API
-   key, sender an address on a domain verified in Resend (Supabase's
-   built-in mailer allows only a couple of emails an hour and is meant for
-   testing).
-5. **Vercel environment variables** (Project Settings → Environment
-   Variables; copy them from Supabase → Project Settings → API keys), then
-   redeploy. `VITE_` values are built into the app; the service key stays on
-   the server:
+"Lines" are trails drawn on their own line (or along their printed name, where the map draws no line), "markers"
+are trails with no line (bowls, glades, chutes, parks) shown as a clickable marker at their name. `IMAGES=1` before
+a `regen.sh` also rewrites the resort's map image; every `regen.sh` downloads its sources into `work/<id>/`
+(git-ignored) and rebuilds the resort's committed files byte for byte. Killington and Stowe were built before the
+pipelines were kept: their proposals and a person's reviews are the record, and `trails:apply` rebuilds their
+overlays from them. The playbook's [Part 3](docs/trail-map-playbook.md#part-3-resort-by-resort) has each resort's source, scripts and
+quirks.
+
+Each resort's files:
+- `src/data/resorts/<id>/`: `trails.ts` (the trail list: id, name, rating, area, glade flag), and per map
+  `linePolylines.json` (the line pieces), `trailProposals.json` (each piece's name), `trailReviews.json` (decisions
+  that override proposals: a person's, or Claude's marked `"by": "claude"`) and `trailPaths.json` (what the app
+  draws, generated by `npm run trails:apply`; never edited by hand). A map in several panels keeps these in
+  `panels/<panel>/`.
+- `public/maps/<id>.jpg` (or `<id>-<panel>.jpg`): the map image the overlays are drawn on (in percent of it).
+- An entry in `src/resorts.ts`: name, state or province, other places the search finds it by, its panels.
+- `tools/trailmap/resorts/<id>/`: how it was built (`regen.sh`, the map's reading, the decisions settled on crops),
+  with a README listing its commands and files.
+- An ad group in `marketing/google-ads/build.mjs` (the build stops without one).
+
+## How a map gets its overlays
+
+Every map is different, and the hard part is never the drawing: it's naming. A trail's overlay must lie on that
+trail's own drawn line along its whole length and show that trail's name anywhere along it, and the map prints
+names beside lines, in gaps of lines, on label boxes, on numbered keys, or not at all. Fully automatic name-to-line
+assignment got about 40% right on Killington. What works:
+
+1. **Take the most the source gives you.** A resort's PDF often has the trail lines as vector strokes and the names
+   as text or outlined glyphs; then the geometry and the names are exact (`extract_pdf_vectors.py`,
+   `pdf_labels.py`, `pdf_glyphs.py`). With only images, lines are detected from the paint (`raster_lines.py`).
+2. **Match each name to the line it is printed along or at the end of**, automatically where the map is
+   unambiguous (`pdf_resort.py`), and settle the rest by looking at zoomed crops, recording every decision as a
+   point on the map with the crop that settled it. On maps where names can't be extracted, parallel AI readers
+   name numbered pieces on tiles.
+3. **Check against the resort's own data**: its trail report (names, ratings, areas), its GIS where published, and
+   OpenStreetMap's runs for which line a run follows.
+4. **Audit every overlay on crops**, one cell per trail, check every printed symbol against its trail, and hover
+   every trail in the real app. Pixel scores are never evidence; a test that hovers on the assigned path is
+   circular.
+
+The playbook has the routes, the tools, the checks and every resort's specifics.
+
+## Repository layout
+
+```
+src/                     the app (React 19 + TypeScript + Vite)
+  resorts.ts             the resort registry: one entry per resort, each loaded on demand
+  data/resorts/<id>/     each resort's trail list and overlays (above)
+  components/            ImageMap (the map, overlays, tap sheet), TrailList, TripBar, StatsPanel, TripSummary,
+                         ResortPicker, FilterBar, Account
+  trips/                 trips on the device (store.ts), the merge rules (log.ts), the account sync (sync.ts)
+  account/ hooks/        sign-in and session; trips, filters, conditions
+  resortSearch.ts        the picker's search; offline.ts: when to start the service worker
+  detection/             Killington's original line detector's ground truth (docs/killington.md)
+public/                  the map images (maps/), the service worker (sw.js), icons, manifest
+api/                     Vercel functions: conditions votes (conditions.ts), account deletion (account.ts)
+supabase/migrations/     the accounts table
+tests/                   npm test: trip merge and sync, resort search
+scripts/                 Node pipeline scripts: trails:apply, reviews:import, Killington's detector and OCR
+tools/
+  trailmap/              the trail-map pipeline (Python and Node): extraction, matching, checks
+    resorts/<id>/        each resort's rebuild: regen.sh, its map's reading, its decisions
+    reports/             fetching resorts' trail reports (terrain feeds, Common Crawl)
+    prompts/ runs/       the AI readers' prompts and example arguments (.claude/workflows/ runs them)
+    review/              the Trail Check review page
+  archive/               every one-off script written along the way, indexed (not maintained)
+  *.cjs                  browser checks of the app and a Vercel-like static server
+docs/                    the playbook; Killington's history
+marketing/google-ads/    the Google Ads campaign (generated)
+work/                    git-ignored: downloads and intermediate files of the pipelines
+```
+
+## Scripts and checks
+
+| command | what it does |
+|---|---|
+| `npm run dev` / `build` / `preview` | the app: dev server, production build, a local preview of the build |
+| `npm test` | the trip merge and sync rules (random three-device histories) and the resort search |
+| `npm run lint` | ESLint (with `npx tsc -b`, the check before every commit) |
+| `npm run trails:apply -- --resort <id> [--panel <p>]` | proposals + reviews → `trailPaths.json`, the overlays the app draws |
+| `npm run reviews:import -- <export dir> --resort <id>` | the Trail Check page's export → `trailReviews.json` |
+| `npm run ads:build` | the Google Ads import files from `marketing/google-ads/build.mjs` |
+| `npm run lines:eval` / `lines:overlay` / `lines:png` | Killington's line detector: score, overlay, the app's line image |
+| `tools/trailmap/resorts/<id>/regen.sh` | rebuild one resort from its sources and decisions (`IMAGES=1`: its map image too; `FORCE=1`: on a source whose SHA-256 has changed, a new edition) |
+| `tools/trailmap/regen_all.sh` | rebuild every resort and list what git sees changed: after changing a shared tool |
+| `tools/trailmap/hover_all.sh [<id>[:<panel>] ...]` | build the app, serve it, hover every trail of every resort and panel |
+| `python3 tools/trailmap/overlay_audit.py --resort <id> --out <dir>` | one audit cell per trail: its overlay on the map, its labels boxed |
+| `node tools/app_check.cjs <url> --resort <id>` | a resort in the real app: found by the search, every panel loads with overlays, phone layout |
+| `node tools/app_flows.cjs [dist]` | phone flows (tap, mark, undo, summary, panels), two tabs, backups |
+| `node tools/offline_check.cjs [dist]` | offline: first visit, reload without the server, a deploy, the load-error screen |
+| `node tools/accounts_check.cjs` | accounts: two devices sign in, sync, edit offline, delete (with `scripts/mockSupabase.cjs`) |
+| `node tools/serve_dist.cjs dist 4199` | serve a build the way Vercel serves it (cache headers, ETags; `THROTTLE_MBPS`, `RTT_MS`) |
+
+Every pipeline tool (extraction, glyph reading, matching, audits, OpenStreetMap, trail reports, source finding) is
+listed in the playbook's [Part 2](docs/trail-map-playbook.md#part-2-tools), with what it's for.
+
+## How the app works
+
+- **Resorts load on demand.** `src/resorts.ts` lists every resort with loaders for its trail list and overlays;
+  each resort's data is its own chunk, so a visit downloads the resorts it opens. A resort with several map panels
+  has one trail list and one overlay file per panel; a trail's area decides the panel it opens on.
+- **The map** (`src/components/ImageMap/`) draws the overlays as SVG over the map image, in percent of the image,
+  at a constant on-screen width. A tap or hover names the nearest trail to the pointer (the same test the hover
+  check uses), and the sheet lists every trail within a finger's width.
+- **Trips** are a log of events merged, never overwritten (`src/trips/log.ts`): a trip's name and date come from the
+  copy edited last, a run is kept if it was marked after it was last unmarked, and deletions stay as markers so they
+  reach other devices. The merge is commutative, associative and idempotent; `npm test` checks it on random
+  histories of three devices.
+- **Offline:** `public/sw.js` precaches the app and every resort's data (the list is filled in by `vite build`,
+  `vite.config.ts`), caches each map when it's shown (every panel of a resort once it's opened), and on a deploy
+  swaps its cache while keeping the maps a phone already has. It installs only once the first map is on screen, so
+  its background downloads don't compete with that map.
+- **Accounts** (optional) sync the trip log to one Supabase row per person with a version check
+  (`src/trips/sync.ts`); **conditions votes** go to `api/conditions.ts` (Redis). Locally, `vite` and `vite preview`
+  serve both APIs: conditions from memory, accounts against the Supabase project in `.env.local`.
+
+## Accounts
+
+Accounts are optional: with no Supabase variables set, the app works as before, with no sign-in shown. Sign-in is
+Supabase Auth's one-time email code (no passwords), sent through Resend; the trips live in one Supabase table.
+
+1. **A Supabase project.** A new one keeps this app's users and email wording separate. Free projects pause after
+   a week without use (the app keeps working on the device; sign-in and sync resume once the project is restored).
+2. **The table.** In the SQL editor, run [`supabase/migrations/001_trip_logs.sql`](supabase/migrations/001_trip_logs.sql):
+   one row per person (`trips`, a JSON list, and a `version`), readable and writable only by that person (row-level
+   security), deleted with them.
+3. **Email codes.** Authentication → Sign In / Providers → Email: on, new sign-ups allowed. Authentication → Emails →
+   Templates: put the code, `{{ .Token }}`, in both "Magic Link" and "Confirm signup" (a first sign-in uses the
+   second), e.g. *Your My Ski Runs sign-in code is {{ .Token }}.* The code is what works in the home-screen app; a
+   link, if a template keeps one, signs in the browser it opens in (Authentication → URL Configuration → Site URL:
+   the app's address).
+4. **Resend as the mail server.** Authentication → Emails → SMTP settings: host `smtp.resend.com`, port `465`, user
+   `resend`, password a Resend API key, sender an address on a domain verified in Resend (Supabase's own mailer
+   allows only a couple of emails an hour).
+5. **Vercel environment variables** (Project Settings → Environment Variables; from Supabase → Project Settings →
+   API keys), then redeploy. `VITE_` values are built into the app; the service key stays on the server:
 
    | variable | value |
    |---|---|
    | `VITE_SUPABASE_URL` | the project URL |
    | `VITE_SUPABASE_ANON_KEY` | the anon (publishable) key |
-   | `SUPABASE_SERVICE_ROLE_KEY` | the service_role (secret) key: used only by `api/account.ts` to delete an account |
+   | `SUPABASE_SERVICE_ROLE_KEY` | the service_role (secret) key, used only by `api/account.ts` to delete an account |
 
-   Connecting the project with Vercel's Supabase integration instead sets
-   `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` /
-   `SUPABASE_SERVICE_ROLE_KEY`, which work too. `.env.example` lists them for
-   local runs (`.env.local`).
+   Vercel's Supabase integration sets `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` /
+   `SUPABASE_SERVICE_ROLE_KEY` instead, which work too. `.env.example` lists them for local runs (`.env.local`).
 
-How it fits together:
-- `src/account/account.ts`: sign-in (supabase-js, loaded only when accounts
-  are set up), the session, and when to sync.
-- `src/trips/sync.ts`: one sync: read the account's row, merge, save it only
-  if its `version` hasn't moved (else read and merge again).
-- `src/trips/log.ts`: the merge. A trip's name and date come from the copy
-  edited last; a run is kept if it was marked after it was last unmarked; a
-  deleted trip stays in the log, hidden, so the deletion reaches other
-  devices. `npm test` checks these rules, and that random changes on three
-  devices give the same result whatever order they sync in.
-- `api/account.ts`: deletes the account with the service key (the row goes
-  with it).
+Without a Supabase project, `scripts/mockSupabase.cjs` stands in for one, and `tools/accounts_check.cjs` drives
+two devices through sign-in, sync, offline edits and deletion (its header has the commands).
 
-## What was done
+## Trail conditions
 
-### 1. Snow-surface detection (v1)
-`src/detection/trailDetector.ts` classifies the white groomed-run surface
-(bright, neutral pixels with ridge-based sky suppression). Evaluated against
-58 hand-labeled points: F1 92.7%. Kept as a reference; no longer used by the app.
-Docs: `src/detection/README.md`.
+The 👍/👎 votes and tags are shared through `api/conditions.ts`, a Vercel function backed by a Redis hash per
+resort: add Upstash Redis from the Vercel Marketplace and connect it to the project (it sets `KV_REST_API_URL` and
+`KV_REST_API_TOKEN`; `UPSTASH_REDIS_REST_URL` / `_TOKEN` work too). Until then the endpoint answers 503 and the app
+keeps votes on the device (the sheet says so). Votes count for 24 hours; each device sends a random id.
 
-### 2. Trail-LINE detection (v2 — the real trail identifier)
-Each named trail on the map is traced by a colored line (green/blue/black).
-`scripts/lib/lineDetector.mjs` extracts those lines at full resolution:
-hysteresis ink classification, sign-box slab removal, lift-outline clearing,
-text/graphics separation, directional endpoint linking across marker/icon
-gaps, and per-class centerline skeletons.
+## Deploying
 
-**Validated at 98.6% precision / 95.8% recall** (F1 97.2) against a 283-point
-audited ground truth (`src/detection/groundTruthLines.json`) with per-class
-recall green 29/29, blue 23/24, black 17/19. Docs and methodology:
-`src/detection/LINES.md`.
+Vercel builds the app (`npm run build`) on every push and serves `dist/` with `api/*.ts` as functions; pushes to
+`main` go to production (www.myskiruns.app). `api/` runs as Node ESM (`"type": "module"`), so its relative imports
+need explicit `.js` extensions, or every request fails with a 500; `npx vercel build` reports a missing one as
+TS2835. Environment variables: the accounts' and the conditions store's, above. Nothing else to do for a new
+resort: the service worker's precache list and version are filled in by the build.
 
-### 3. Label OCR + roster reconciliation
-`scripts/extractLabels.mjs` OCRs the rotated trail-name labels (103 labels
-in pass 1, 125 after the verified pass 2). `scripts/reconcileTrails.mjs` matches them to the
-roster: 54 trails gained name anchors; **11 trails that were missing from
-`src/data/resorts/killington/trails.ts` were added** (Blue Heaven, Helter Skelter, Full House,
-Frolic, The Jug, Shorty, Bearly, Killink, Gateway, Highlander, Sassafras) and
-Field Goal's difficulty was corrected to green — fixing "trails aren't
-labeled / labeled incorrectly" at the data source.
+## Marketing
 
-### 4. Detection-driven app assets
-- `public/maps/killington-lines.png` — difficulty-colored line overlay (〰 toggle,
-  shown only with `?lines` in the URL).
+`marketing/google-ads/` is a Google Search campaign ready to import into Google Ads Editor (everything imports
+paused): an ad group per resort plus general run-tracker searches. `npm run ads:build` generates it from
+`build.mjs`, where each resort has an entry (names, keywords, negatives); its README has the plan.
 
-### 5. Clickable trail paths
-- `scripts/tracePolylines.mjs` vectorizes the detection skeletons into 393
-  polylines (skeleton graph, junction resolution by straightest continuation,
-  Douglas-Peucker).
-- `scripts/enrichAnchors.mjs` second-pass OCR with dictionary-constrained
-  matching grew name anchors to 76/130 trails.
-- A first fully automatic assigner (nearest-first label→line matching;
-  removed, see git history) placed only ~40% of trails correctly — see the
-  audit below. Paths now come from the propose-then-review workflow.
-- The app renders each path as a clickable polyline (hover = name, click =
-  toggle skied).
+## History
 
-## Resorts
-
-Each resort has its own folder, `src/data/resorts/<id>/` (`trails.ts`,
-`linePolylines.json`, `trailProposals.json`, `trailReviews.json`, generated
-`trailPaths.json`), a map at `public/maps/<id>.jpg`, and an entry in
-`src/resorts.ts` (with its state or province, and any other places the
-search should find it by: Heavenly's Nevada, Lake Tahoe). With more than one
-resort the header shows a resort picker (also `?resort=<id>` in the URL): a
-search over the names and places, grouped by state until something is typed
-(`src/components/ResortPicker/`, the matching in `src/resortSearch.ts`,
-tested by `npm test`). Trips belong to a resort (older
-trips are Killington's), and condition votes are stored per resort. The
-pipeline scripts take `--resort <id>` (default `killington`), e.g.
-`npm run trails:apply -- --resort stowe`. To add a resort, follow
-`docs/trail-map-playbook.md`.
-
-A resort whose map comes as several panels (Vail: Front Side, Back Bowls,
-Blue Sky Basin; Whistler Blackcomb: main, symphony, glacier) keeps one
-`trails.ts` and, per panel,
-`panels/<panel>/{linePolylines,trailProposals,trailReviews,trailPaths}.json`
-with its map at `public/maps/<id>-<panel>.jpg`; its `src/resorts.ts` entry
-lists the panels in `maps`. The map shows one panel at a time with a switcher
-(also `?panel=<id>`), and picking a trail from the list opens the panel it is
-drawn on. The pipeline scripts take `--panel <id>` as well, e.g.
-`npm run trails:apply -- --resort vail --panel back-bowls`.
-
-Resorts so far: Killington, Stowe and Okemo (reviewed on the Trail Check
-page); Sugarbush, Jay Peak, Whiteface, Winter Park, Breckenridge, Copper
-Mountain, Keystone, Vail, Hunter Mountain, Wildcat Mountain, Sunday River,
-Sugarloaf, Smugglers' Notch, Whistler Blackcomb, Park City, Palisades
-Tahoe, Big Sky and Heavenly (current maps, no review page: every overlay
-checked on zoomed crops instead, see the playbook).
-
-## Scripts
-
-| command | purpose |
-|---|---|
-| `npm run lines:eval` | precision/recall vs line ground truth (`--why` for forensics) |
-| `npm run lines:overlay` | whole-map detection overlay render |
-| `npm run lines:png` | regenerate the app's line overlay |
-| `npm run detect:eval` / `detect:overlay` | v1 surface-detector equivalents |
-| `node scripts/extractLabels.mjs` | OCR the map labels |
-| `node scripts/reconcileTrails.mjs [--apply]` | match labels to roster, propose missing trails |
-| `npm run trails:apply -- --resort <id> [--panel <p>]` | proposals + reviews → `trailPaths.json` (what the app draws) |
-| `npm run reviews:import -- <export dir> --resort <id>` | review-page export → `trailReviews.json` |
-| `tools/trailmap/resorts/vail/regen.sh` | rebuild all of Vail's data from its readings and decisions |
-| `tools/trailmap/resorts/<id>/regen.sh` | rebuild all of Hunter Mountain's, Wildcat Mountain's, Sunday River's, Sugarloaf's, Smugglers' Notch's, Whistler Blackcomb's, Park City's, Palisades Tahoe's, Big Sky's or Heavenly's data from its PDF and decisions (`tools/trailmap/pdf_resort.py`; Whistler Blackcomb's, Palisades Tahoe's and Big Sky's in three panels, Heavenly's in two) |
-| `npm test` | the trip merge and sync rules and the resort search (`tests/*.test.ts`, Node's test runner) |
-| `node scripts/mockSupabase.cjs` | a stand-in Supabase project, for trying accounts without one |
-| `node tools/accounts_check.cjs` | browser check: two devices sign in, sync, edit offline, delete (header has the setup) |
-| `npm run ads:build` | the Google Ads campaign's import files and preview (`marketing/google-ads/`, whose README has the plan) |
-
-The Python tools for a new map (PDF extraction, raster detection, tiles,
-crops, audits) are listed in the playbook's "Tools in this repo".
-
-## Current approach: propose, then human review (Sept 2026)
-
-Fully automatic name→line assignment reached only ~40% (audit below), so
-naming is now done in two steps:
-
-1. **Propose.** The map is cut into 37 overlapping tiles at 1.7× zoom with
-   every detected line piece numbered. Six readers (Claude sub-agents, in
-   parallel) named each piece from the labels printed along it and its
-   continuity through junctions, or marked it lift / not-a-trail / unknown,
-   and listed labels whose line was not detected. Result:
-   `src/data/resorts/killington/trailProposals.json` — 82 trails at high confidence; 57 pieces
-   flagged as not trails (building outlines, icons, text); 92% of the real
-   trail-line length now carries a name (was 53%).
-2. **Review.** The *Killington Trail Check* page shows each trail's proposed
-   lines on the map; a person confirms, taps lines to add/remove, draws lines
-   the detector missed, or marks "no line" / "not on this map". Decisions are
-   exported to `src/data/resorts/killington/trailReviews.json`.
-
-`npm run trails:apply` merges both into `src/data/resorts/killington/trailPaths.json`: reviews
-win, unreviewed trails use high/medium proposals, and trails with neither get
-**no overlay** (no more guessed dots).
-
-**Status (Sept 28 2026, after review + map-evidence cleanup)** — every trail
-in `trails.ts` (135) has an overlay: 113 clickable lines, 22 glade markers at
-their printed label.
-
-What changed after the review, all from evidence printed on the map:
-- **Difficulties** follow the symbol printed at each trail (circle / square /
-  diamond / double diamond), read by six sub-agents over the tiles and each
-  change checked on a zoomed crop: 34 changes plus Low Road (blue line, no
-  symbol). Trails whose symbol changes along the way (Great Northern, Ridge
-  Run, Royal Flush, The Jug) and Skye Hawk (symbol and line disagree) keep
-  their listed difficulty.
-- **Splits:** the map prints SKYELARK and EAST FALL twice (upper blue, lower
-  black); the upper sections are Upper Skyelark / Upper East Fall.
-- **Glades found:** Treezy and Lil' Stash are printed as labels with no line.
-- **Duplicates merged:** Header and Skyeburst each appeared twice.
-- **Removed (29):** entries not printed anywhere on this map. Two independent
-  multi-agent searches (six agents by map area, then four agents each
-  scanning the whole map for 8 names) and the reviewer found no label for:
-  Snow Play, Swirl, Ramshead Run, Ramshead Liftline, Start Park, Upper FIS, Mountain Run, Mountain Training Station, Snowdon Liftline, Upper Snowdon, Lower Snowdon, Sass, Upper Northbrook, Snowdon Glades, Upper Catwalk, Juggernaut, Upper Great Bear, Woodward Peace Park, Great Eastern (K.P.), Lower FIS, K-1 Gondola Run, Upper Canyon, Lower Canyon, Killington Liftline, Superstar Glade, The Mall, Falls Brook, Bear Mountain Liftline, Bear Run. They are in git history if any should come back.
-- **Sections restored by the second search:** the map prints HOME STRETCH,
-  SKYEBURST and WILDFIRE more than once, each section starting at its own
-  difficulty marker, so Lower Home Stretch, Upper Skyeburst and Lower
-  Wildfire are split out again.
-- **Printed names:** Snowshed Slope, Snowshed Crossover, Northbrook Trail,
-  Vertigo Headwall, Big Dipper, Skyehawk, Skye Bits, The Northway, North
-  Star, Lil Stash (ids unchanged, so skied history is kept).
-- Areas for the 36 trails added from the review come from their nearest
-  original neighbours.
-
-Changes made by Claude are marked `"by": "claude"` in `trailReviews.json`
-and flagged "please recheck" on the review page, which now jumps to the next
-trail that needs action (undecided, skipped, or flagged).
-Browser check: 325/352 hover points show the right name; misses are all at
-junctions/crossings.
-
-To bring in more review work: export the page's `reviews` collection to a
-folder of JSON files (one per trail), then
-`npm run reviews:import -- <folder>` (maps the page's `new-…` ids, keeps the
-newer decision, ignores trails no longer listed) and `npm run trails:apply`.
-
-### Earlier audit of the fully automatic assignment
-
-The detector scores (97% F1) measure *line pixels*, not *named trails*. The
-real goal — every trail drawn on its own line, clickable, with the right
-name — was audited directly on zoomed crops of a random sample:
-
-| group | sampled | on the correct line | wrong line | can't verify |
-|---|---|---|---|---|
-| anchored (label-claimed) | 8 | 5 (4 of them only partially covered) | 3 | 0 |
-| region heuristic | 10 | 0 | 6 | 4 |
-
-- Anchored errors: roster difficulty wrong so the same-color preference picks
-  a neighbouring line (Breakaway is drawn black, roster says blue); label
-  sits between two lines and the neighbour wins (Bear Cub → Ridgeview's
-  line); glades with no drawn line get forced onto one (Treezy).
-- Region guesses mostly steal the *unlabeled continuation of another trail*
-  (Snow Play → lower Great Northern, Lower Home Stretch → Bear Trax, Lower
-  Northbrook → Caper, Start Park → Easy Street).
-- Coverage: median assigned path is ~160px on a 4572px map (fragments between
-  junctions), and only **53% of the detected trail-line length is clickable at
-  all**.
-- The earlier "26/30 hover" test was circular — it hovered on whatever path
-  had been assigned, so a wrong line still passed. Don't use it as evidence.
-
-Realistic estimate: roughly 40% of trails are on the right line, most only
-partially. Treat `source: region` paths as unverified guesses.
-
-## Prior attempts (other branches — none merged to `main`)
-
-`main` has not moved since March 2026; every attempt below started from it.
-
-| branch / PR | approach | outcome / lesson |
-|---|---|---|
-| `ski-trail-clickable-overlays` (#3) | sweepline tracing + Hungarian matching to label positions read *visually by AI agents* from crops | claimed 114/115 matched, but keyed pink/yellow as trail colors (those are highlight bands and boundary dots); tesseract got 2/114 |
-| `ski-run-plotting-explanation` (#4), `improve-extraction-metrics` (#5), `heuristic-cleanup-and-naming-refactor` | Python OpenCV: HSV + heuristic scoring + skeletons, text inpainting, SAM 2 click tool, Claude-Vision naming step | 90%+ on self-defined pixel metrics; naming step needs an API key and was never run; SAM 2 tool needs a desktop display; easyocr POC 17%. PR #4 notes "the recall metric itself was wrong" |
-| `fix-trail-overlays`, `debug-trail-map-overlay` | hand-set coordinates / debug overlays | point fixes only |
-| `fix-build-add-e2e-tests` | Playwright E2E tests for selection + overlay alignment | reusable |
-| this branch (#6) | JS line detector, rotation-aware OCR, label-anchored assignment | best line detection and OCR so far; naming still ~40% (above) |
-
-Common failure: each attempt optimized a proxy metric (pixels, coverage,
-label count) that it defined itself, and none had a human-verified,
-per-trail ground truth for the actual goal.
-
-Note: `TrailMapForWeb-compressed.pdf` (commit `4d4a326`) is a flattened
-raster (one JPEG-2000 image, authored in Illustrator, no vector layers). Its
-image is sharper than `public/maps/killington.jpg`, which was resampled
-and re-encoded with 4:2:0 chroma subsampling — prefer it as pipeline input.
+The app started on Killington's flattened raster map, where a line detector (97% F1 on line pixels) and OCR
+still put only about 40% of trails on the right line. Reading numbered tiles with AI readers and a person's review
+fixed that, and from the fourth resort on, the resorts' own PDFs gave exact lines and names. The detector, the OCR,
+the audits and the attempts on other branches are in [docs/killington.md](docs/killington.md); the lessons are in
+the playbook's [Part 5](docs/trail-map-playbook.md#part-5-what-we-tried-and-what-it-taught-us).
 
 ## What's left
 
-1. **A person's confirmation** for the eighteen resorts Claude checked on
-   crops instead of the review page (Sugarbush through Heavenly), if the
-   owner wants it: the Trail Check page can be published for any resort
-   (playbook, step 4).
-2. **Shared tooling** (playbook, "Scaling to many maps"): the label-to-piece
-   matcher for PDF maps is now `tools/trailmap/pdf_resort.py` (Hunter,
-   Wildcat, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb,
-   whose three panels it reads as one resort, Park City, and Palisades
-   Tahoe and Big Sky, three PDFs each read as three panels; the five PDF
-   resorts before them
-   each had a scratch copy); still
-   to do: a per-map legend file, readers run from a script.
-3. Killington (359/361) and Stowe (351/353) hover misses are stretches two
-   trails share, where either name is right.
-4. Vail: Cookshack's second diamond has no line of its own (the trail's
-   overlay is the line it is printed beside).
-5. Known detector edge cases (3 FN / 1 FP) in `src/detection/LINES.md`.
-
-## Regenerating the data (order matters)
-
-Killington's data, from its original pipeline (the other resorts were built
-by the playbook's routes; Vail's, Hunter Mountain's, Wildcat Mountain's,
-Sunday River's, Sugarloaf's, Smugglers' Notch's, Whistler Blackcomb's, Park
-City's, Palisades Tahoe's and Big Sky's whole datasets are rebuilt
-by `tools/trailmap/resorts/<id>/regen.sh`):
-
-```bash
-node scripts/extractLabels.mjs        # OCR -> labelAnchors.json (keeps pass-2 labels)
-node scripts/enrichAnchors.mjs        # pass-2 proposals -> /tmp/explore2/enrich; then --commit <ids>
-node scripts/reconcileTrails.mjs      # labels -> trailAnchors.json
-node scripts/tracePolylines.mjs       # detection -> linePolylines.json
-# naming: tiles + readers produce trailProposals.json; review page -> trailReviews.json
-npm run trails:apply                  # -> trailPaths.json (what the app draws)
-npm run lines:png                     # -> public/maps/killington-lines.png
-```
+1. **A person's confirmation** for the eighteen resorts Claude checked on crops instead of the review page
+   (Sugarbush through Heavenly), if wanted: the Trail Check page can be published for any resort ([playbook,
+   Part 4](docs/trail-map-playbook.md#auditing-on-crops-or-the-human-review-page)).
+2. **Shared tooling:** a legend file per map feeding the extraction and the readers' prompts; readers run from a
+   script instead of an interactive session ([playbook, Part 5](docs/trail-map-playbook.md#scaling-to-many-maps)).
+3. The hover check passes 8,854 of 8,860 points (2026-10-07). The six misses are points where two trails' overlays
+   meet or share a stretch, where either name is right: Killington 2, Stowe 2, Big Sky's Bowl 1, Heavenly 1 (each
+   resort's numbers are in the playbook's Part 3).
+4. Found while moving the older resorts' pipelines into the repo, not yet fixed (each changes committed data):
+   - Breckenridge: the map image applies two of the PDF's translucent layers a second time (the CDN raster already
+     has them), so it is 6-10 levels lighter over most of the map (lines and names are exact); and eight lead-in
+     stubs under 4 pt were never extracted, so those overlays stop up to 12 px short. Re-extracting renumbers the
+     pieces its decisions are keyed by.
+   - Whiteface: Yellow Dot has no line, and its overlay is a stretch that doubles back through its two-line label;
+     a marker would be truer.
+   - Whiteface, Winter Park, Breckenridge, Copper Mountain and Keystone key their decisions by piece id, valid for
+     their exact source file (the rebuild checks its SHA-256); Winter Park's and Copper Mountain's sites now serve
+     re-exports with other ids. Moving them onto `pdf_resort.py` would key them by points.
+   - Keystone's legend counts 140 trails; the list has 136 runs plus 9 parks and kids' zones: worth a look against
+     its trail report.
+5. Vail: Cookshack's second diamond has no line of its own (its overlay is the line it is printed beside).
+6. Killington's detector edge cases (3 false negatives, 1 false positive) are in `src/detection/LINES.md`.

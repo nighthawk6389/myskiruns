@@ -1,0 +1,14 @@
+// Seeded by tools/trailmap/seed_roster.py from the 2025-26 map PDF's own text:
+// every trail label is real text there, with its difficulty symbol drawn
+// just before it (no reader was needed). The map prints no lines, no glade
+// icon and no double diamonds. Labels printed with different symbols take
+// the majority (Ullr's Dream: blue, one green label up top; Northway: blue,
+// one black) and a tie takes the harder (Jet, U.N., Green Mountain Boys:
+// one blue label, one black). Glades are the names that say so (Glade,
+// Woods) and the trails whose label sits in painted trees with no cut
+// (Timbuktu, Valhalla, André's Paradise, Staircase, Deliverance; checked on
+// crops): a marker at the label, not a line; so is Tuckerman's Chute (no
+// chute painted on the treed summit face). The 5 terrain parks print no
+// symbol and default to blue. Sis Boom Bah is printed only in the Side View
+// inset. "Lower Lift Linee" on the map is Lower Lift Line. x/y/baseY/width
+// are unused layout fields.

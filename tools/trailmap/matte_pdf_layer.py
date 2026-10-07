@@ -13,8 +13,10 @@ black: alpha = 1 - (white - black) / 255, colour = black render / alpha. --xref 
 size; without it the embedded painting is upscaled into place, and the result is compared with MuPDF's own
 render where there are no vectors (Copper: 13.5 levels, from the smoother upscale; far more means the painting is
 misplaced). --clip (in pt) is the map area.
-Breckenridge, Copper Mountain (embedded painting) and Keystone (scene7 copy) 2025-26 were built this way; save
-the result as public/maps/<id>.jpg.
+Used by the regen.sh or prepare.py of Copper Mountain (embedded painting) and Keystone (the scene7 copy of the
+whole map), Sugarloaf, Smugglers' Notch, Whistler Blackcomb, Big Sky and Park City (--resample); Breckenridge's
+image came from an earlier inline version of the same method (resorts/breckenridge/matte.py). Save the result as
+public/maps/<id>.jpg.
 
 Requires: pip install pymupdf pillow numpy
 """

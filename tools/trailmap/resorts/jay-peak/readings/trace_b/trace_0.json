@@ -1,0 +1,440 @@
+{
+ "trails": [
+  {
+   "id": "vertigo",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     1950,
+     722
+    ],
+    [
+     1938,
+     760
+    ],
+    [
+     1910,
+     787
+    ],
+    [
+     1885,
+     818
+    ],
+    [
+     1856,
+     848
+    ],
+    [
+     1821,
+     870
+    ],
+    [
+     1789,
+     895
+    ],
+    [
+     1761,
+     923
+    ],
+    [
+     1734,
+     955
+    ],
+    [
+     1704,
+     982
+    ],
+    [
+     1678,
+     1014
+    ],
+    [
+     1652,
+     1045
+    ],
+    [
+     1632,
+     1075
+    ]
+   ],
+   "confidence": "medium",
+   "note": "Sparse-tree cut (scattered trees on open snow) between two dense tree bands, running down-left parallel to the diagonal lift; the label diamond (1787,903) sits in it. Starts where it branches off the open area at the top of the lifts / top of the River Quai cut (1950,722), just under the upper end of the tree band that separates it from the lift-line cut. The same strip carries on down-left to the Buckaroo Bonzai label (1527,1130). I end Vertigo at ~(1632,1075), where the tree band between it and Lower Goat Run's cut runs out and the two openings meet. That end is a judgment call because the map shows no name change on the strip."
+  },
+  {
+   "id": "lower-goat-run",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     1922,
+     970
+    ],
+    [
+     1892,
+     985
+    ],
+    [
+     1853,
+     999
+    ],
+    [
+     1818,
+     1021
+    ],
+    [
+     1784,
+     1041
+    ],
+    [
+     1749,
+     1060
+    ],
+    [
+     1718,
+     1086
+    ],
+    [
+     1697,
+     1108
+    ],
+    [
+     1682,
+     1135
+    ],
+    [
+     1670,
+     1158
+    ],
+    [
+     1660,
+     1182
+    ],
+    [
+     1650,
+     1205
+    ],
+    [
+     1635,
+     1225
+    ],
+    [
+     1605,
+     1233
+    ],
+    [
+     1570,
+     1236
+    ],
+    [
+     1535,
+     1238
+    ],
+    [
+     1500,
+     1240
+    ],
+    [
+     1478,
+     1242
+    ]
+   ],
+   "confidence": "medium",
+   "note": "Clear open diagonal cut. It leaves the River Quai cut at the tram line (~1922,970), just below where the Goat Run traverse from the Flyer corridor crosses under the tram, and runs down-left along the top edge of the big dense tree band to the label square (1724,1084). There it bends down along the band's left edge to ~(1650,1205), then the open snow turns west as a white band between two glades and ends at the Taxi/Lower Can Am slow-zone patch (~1478,1242). Not included: the traverse right of the tram, (2138,918) to (1935,955), which I assume is the end of Upper Goat Run. The westward band at the bottom is the least certain part."
+  },
+  {
+   "id": "lower-river-quai",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     1922,
+     965
+    ],
+    [
+     1916,
+     995
+    ],
+    [
+     1913,
+     1030
+    ],
+    [
+     1912,
+     1065
+    ],
+    [
+     1906,
+     1095
+    ],
+    [
+     1900,
+     1125
+    ],
+    [
+     1894,
+     1155
+    ],
+    [
+     1889,
+     1185
+    ],
+    [
+     1883,
+     1215
+    ],
+    [
+     1879,
+     1245
+    ],
+    [
+     1876,
+     1270
+    ],
+    [
+     1870,
+     1293
+    ]
+   ],
+   "confidence": "high",
+   "note": "The same cut along the left side of the tram, below the Goat Run crossing (~1922,965); the label square (1896,1118) is in it. It runs down to the top edge of the green-dot slow zone at ~(1870,1293). The tram line forms the cut's right edge the whole way down."
+  },
+  {
+   "id": "upper-river-quai",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     1985,
+     605
+    ],
+    [
+     1972,
+     638
+    ],
+    [
+     1961,
+     667
+    ],
+    [
+     1956,
+     695
+    ],
+    [
+     1954,
+     725
+    ],
+    [
+     1948,
+     755
+    ],
+    [
+     1943,
+     785
+    ],
+    [
+     1939,
+     815
+    ],
+    [
+     1935,
+     845
+    ],
+    [
+     1933,
+     875
+    ],
+    [
+     1930,
+     905
+    ],
+    [
+     1926,
+     935
+    ],
+    [
+     1922,
+     965
+    ]
+   ],
+   "confidence": "high",
+   "note": "Open cut along the LEFT side of the Aerial Tram line: the label diamond (1930,874) is in it and the text crosses the tram. Starts at the open area at the top of the diagonal lift / First Aid (~1985,605) and runs down to the Goat Run crossing at ~(1922,965), where Lower Goat Run leaves the cut on the left and the Goat Run traverse arrives from the right."
+  },
+  {
+   "id": "flash",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     2082,
+     1138
+    ],
+    [
+     2050,
+     1140
+    ],
+    [
+     2018,
+     1143
+    ],
+    [
+     2002,
+     1162
+    ],
+    [
+     1991,
+     1184
+    ],
+    [
+     1982,
+     1208
+    ],
+    [
+     1975,
+     1232
+    ],
+    [
+     1971,
+     1257
+    ],
+    [
+     1967,
+     1280
+    ],
+    [
+     1964,
+     1293
+    ]
+   ],
+   "confidence": "medium",
+   "note": "The label square (1991,1162) sits in the only gap between a white traverse band and a wide open slope. The band runs just below Expo Glade (y~1128-1148), from the Exhibition cut west to the tram; the open slope lies right of the tram. Traced from the Exhibition cut junction (2082,1138) west along that band, down through the gap past the label, then down the open slope to the slow zone (~1964,1293). Whether the band east of the label belongs to Flash is a judgment call; the Flash text is printed along it."
+  },
+  {
+   "id": "lower-exhibition",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     2082,
+     1138
+    ],
+    [
+     2077,
+     1165
+    ],
+    [
+     2073,
+     1190
+    ],
+    [
+     2068,
+     1215
+    ],
+    [
+     2064,
+     1245
+    ],
+    [
+     2060,
+     1275
+    ],
+    [
+     2056,
+     1305
+    ],
+    [
+     2052,
+     1330
+    ],
+    [
+     2050,
+     1345
+    ]
+   ],
+   "confidence": "high",
+   "note": "The same cut left of the Flyer line, below the y~1138 junction; the label square (2075,1217) is in it. It runs down to the slow zone at ~(2050,1345)."
+  },
+  {
+   "id": "upper-exhibition",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     2138,
+     918
+    ],
+    [
+     2113,
+     950
+    ],
+    [
+     2107,
+     980
+    ],
+    [
+     2102,
+     1010
+    ],
+    [
+     2097,
+     1040
+    ],
+    [
+     2092,
+     1070
+    ],
+    [
+     2087,
+     1100
+    ],
+    [
+     2082,
+     1138
+    ]
+   ],
+   "confidence": "high",
+   "note": "Open cut along the LEFT side of the Flyer lift line: the label diamond (2113,977) is in it and the text crosses the Flyer. Starts where the Upper Goat Run corridor down the Flyer meets the Goat Run traverse (~2138,918) and runs down to the junction at y~1138. There the Flash band branches west and a band crossing under the Flyer leads east to Racer. I split Upper and Lower Exhibition at that junction."
+  },
+  {
+   "id": "racer",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     2118,
+     1147
+    ],
+    [
+     2138,
+     1165
+    ],
+    [
+     2143,
+     1195
+    ],
+    [
+     2148,
+     1225
+    ],
+    [
+     2151,
+     1252
+    ],
+    [
+     2148,
+     1280
+    ],
+    [
+     2135,
+     1310
+    ],
+    [
+     2125,
+     1340
+    ]
+   ],
+   "confidence": "medium",
+   "note": "Open strip just RIGHT of the Flyer line, between glades; the label square (2153,1271) is in it. Starts on the white band that crosses under the Flyer at y~1140-1160 from the Exhibition junction, and runs down to the slow zone right of the Flyer at ~(2125,1340). It is less crisp than the other cuts because of the light glade painting on both sides. A second strip further right (x~2190-2215) is left alone; I take it to be Green Mountain Boys."
+  }
+ ]
+}

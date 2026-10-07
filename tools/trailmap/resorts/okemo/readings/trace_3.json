@@ -1,0 +1,41 @@
+{
+ "trails": [
+  {
+   "id": "jack-a-lope",
+   "pieces": [
+    163,
+    165,
+    164
+   ],
+   "partial": {},
+   "traced": [],
+   "confidence": "high",
+   "note": "Whole run is drawn: 163 from the Solitude base (open snow by the Morning Star Triple top, ~3109,1684) under the lift label, road gap, 165 into the label dot, 164 to the Moonshadow crossing (~3462,1815) where Southern Crossing (167) starts. Promenade (175) tees into 163 at ~3179,1712."
+  },
+  {
+   "id": "upper-moonshadow",
+   "pieces": [
+    182,
+    183,
+    185,
+    186
+   ],
+   "partial": {},
+   "traced": [],
+   "confidence": "high",
+   "note": "Whole run is drawn: 182 branches east off the Sidewinder slope (~3029,1382), road gap where Rising Star (178) leaves (~3255,1430), 183, road gap (~3362,1486), 185 into the label square, 186 below the label to the Jack-a-Lope/Southern Crossing crossing (~3466,1809); Lower Moonshadow (187) follows."
+  },
+  {
+   "id": "sunset-strip",
+   "pieces": [
+    222,
+    223,
+    224
+   ],
+   "partial": {},
+   "traced": [],
+   "confidence": "high",
+   "note": "222 from the Jackson Gore summit (~3501,641; Upper Limelight 195 branches off it) to the label; 223 from the label dot down-left through the slow zone, forking at ~3072,888: 224 to Jackson Gore Junction/top of Blue Moon (~2976,947), 223's tail onto Blue Moon by its label (~3027,966). Legs unnamed."
+  }
+ ]
+}

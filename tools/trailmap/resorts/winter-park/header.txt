@@ -1,0 +1,15 @@
+// Seeded by tools/trailmap/seed_roster.py from the 2025-26 map PDF's own text:
+// every name is real text there, in its trail's colour, with its symbol beside
+// it (the name font has no Unicode map, so names were decoded from its glyph
+// ids). No readers: each line piece was matched to the name printed along it
+// or at its end, and checked on region crops. Difficulty is the printed
+// symbol. Winter Park's "More Difficult (Advanced Intermediate)" (a blue
+// square with a black diamond; its trails are drawn as black lines with black
+// names) is black here, and "Extreme Terrain" (EX) is double-black. The Cirque
+// key rates all Cirque terrain EX, so its nine numbered runs and the
+// unsymbolled G-Face, Go-Joe, JR South and JR North are double-black. A trail
+// printed with two ratings takes the majority, the harder one on a tie
+// (Columbine black; March Hare, White Rabbit, Mary Jane, Lonesome Whistle
+// blue; Village Way green). Parks print no symbol: seed_roster's default
+// (blue). 58 names have no drawn line (painted cuts, bowls, parks, the Cirque
+// runs): markers at the label. x/y/baseY/width are unused layout fields.

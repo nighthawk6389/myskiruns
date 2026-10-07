@@ -3,10 +3,15 @@
 //
 //   PLAYWRIGHT_PATH=$(npm root -g)/playwright node tools/trailmap/fetch_pdf.cjs <page url> <pdf url> <out.pdf>
 //
-// Behind this sandbox's agent proxy, set PIN to the proxy CA's public-key pin (the playbook's step 1 has the
-// command); the proxy is taken from HTTPS_PROXY.
+// Behind this sandbox's agent proxy (HTTPS_PROXY), Chromium needs the proxy CA's public-key pin: taken from PIN, or
+// worked out from /root/.ccr/agent-proxy-ca.crt when that file exists (the playbook's step 1 has the command).
 const { chromium } = require(process.env.PLAYWRIGHT_PATH || 'playwright');
+const { execSync } = require('child_process');
 const fs = require('fs');
+
+const CA = '/root/.ccr/agent-proxy-ca.crt';
+const PIN = process.env.PIN || (fs.existsSync(CA) ? execSync(`openssl x509 -in ${CA} -pubkey -noout | openssl pkey -pubin `
+  + '-outform der | openssl dgst -sha256 -binary | base64').toString().trim() : '');
 
 const [pageUrl, pdfUrl, out] = process.argv.slice(2);
 if (!out) {
@@ -14,7 +19,7 @@ if (!out) {
   process.exit(2);
 }
 (async () => {
-  const args = process.env.PIN ? [`--ignore-certificate-errors-spki-list=${process.env.PIN}`] : [];
+  const args = PIN ? [`--ignore-certificate-errors-spki-list=${PIN}`] : [];
   const proxy = process.env.HTTPS_PROXY ? { server: process.env.HTTPS_PROXY } : undefined;
   const browser = await chromium.launch({ proxy, args });
   try {

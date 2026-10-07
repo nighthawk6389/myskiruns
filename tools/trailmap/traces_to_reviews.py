@@ -15,6 +15,11 @@ With --labels (labels.json from seed_roster.py) and --image, a trace with no
 pieces and no points (a reader found no cut to follow: a glade painted as
 trees, a park drawn as an area) becomes a "no-line" review with a marker at
 the trail's first label instead (Jay Peak, whose map draws no lines).
+
+With --replace-claude (a resort's regen.sh), the reviews Claude made before
+are dropped first and these added in their place; a person's reviews stay,
+and a decision that comes back unchanged keeps its old timestamp, so a
+rebuild with nothing changed leaves the file as it was.
 """
 import argparse
 import datetime
@@ -30,12 +35,18 @@ def main():
     ap.add_argument('--recheck', required=True, help='JSON {trailId: why}; created or extended')
     ap.add_argument('--labels', help='labels.json from seed_roster.py: empty traces become label markers')
     ap.add_argument('--image', help='the map image (with --labels), for its size')
+    ap.add_argument('--replace-claude', action='store_true',
+                    help="drop Claude's earlier reviews first (a person's stay); unchanged decisions keep their time")
     a = ap.parse_args()
     labels = json.load(open(a.labels)) if a.labels else {}
     if a.labels:
         from PIL import Image
         W, H = Image.open(a.image).size
     doc = json.load(open(a.reviews)) if os.path.exists(a.reviews) else {'reviews': {}}
+    old = {}
+    if a.replace_claude:
+        old = {k: v for k, v in doc['reviews'].items() if v.get('by') == 'claude'}
+        doc['reviews'] = {k: v for k, v in doc['reviews'].items() if v.get('by') != 'claude'}
     recheck = json.load(open(a.recheck)) if os.path.exists(a.recheck) else {}
     now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.000Z')
     added = []
@@ -59,6 +70,10 @@ def main():
             if any(t.get('partial', {}).values()):
                 # the review stores whole pieces: cut them first (split_pieces.py) and list the part's id
                 print(f"warning: {t['id']} uses only part of piece(s) {', '.join(t['partial'])}: {t['partial']}")
+    for k, v in doc['reviews'].items():  # unchanged decisions keep their timestamp
+        o = old.get(k)
+        if v.get('by') == 'claude' and o and {**o, 'at': None} == {**v, 'at': None}:
+            v['at'] = o['at']
     json.dump(doc, open(a.reviews, 'w'), indent=1)
     json.dump(recheck, open(a.recheck, 'w'), indent=1)
     print(f'{len(added)} traced trails pre-filled for recheck:', ', '.join(added))

@@ -1,0 +1,12 @@
+// Seeded by tools/trailmap/seed_roster.py from the 2025-26 map PDF's own text
+// (tools/trailmap/pdf_labels.py): every name is real text in its trail's
+// colour, with its symbol beside it. No readers: each line piece was matched
+// to the name printed along it, at its end or in a gap of it, and checked on
+// region crops. Difficulty is the printed symbol; "Extreme Terrain" (EX) is
+// double-black. Bowl and chute names printed with no symbol of their own take
+// their bowl's (Contest and Horseshoe Bowls, the Peak 7 bowls, Six Senses,
+// Serenity Bowl, South Col, Snow White, Lake Chutes / Imperial Bowl: double-
+// black; North Bowl's chutes: black), and Alpine Alley its black line. The four
+// terrain parks print no symbol: seed_roster's default (blue). 40 names have
+// no drawn line (bowls, open areas, kids' zones, parks): markers at the label.
+// x/y/baseY/width are unused layout fields.

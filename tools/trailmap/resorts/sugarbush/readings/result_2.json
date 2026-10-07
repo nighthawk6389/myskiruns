@@ -1,0 +1,844 @@
+{
+ "lines": [
+  {
+   "id": 21,
+   "mapName": "LOWER DOWNSPOUT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "LOWER DOWNSPOUT printed along it (blue square at its top, ~1404,1569); runs from the 16/31 junction down to the LOWER JESTER junction (piece 20)"
+  },
+  {
+   "id": 37,
+   "mapName": "SUNRISE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "from the North Lynx summit, curves down then runs straight along the SUNRISE label (single diamond) to the North Lynx base; no other label on it"
+  },
+  {
+   "id": 38,
+   "mapName": "MORNING STAR",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "straight line just right of North Lynx Triple, MORNING STAR printed inline (single diamond); summit to base"
+  },
+  {
+   "id": 39,
+   "mapName": "BIRCH RUN",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102",
+    "t202"
+   ],
+   "note": "left of North Lynx Triple, BIRCH RUN printed inline (blue square); ends where CASTLEROCK CONNECTION starts"
+  },
+  {
+   "id": 40,
+   "mapName": "WATER FALL",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t202"
+   ],
+   "note": "printed WATER FALL with a word gap (could be spelled WATERFALL); black middle section of the line beside Gate House Express Quad: blue HOT SHOT (57) above, LWR HOT SHOT (55) below; single diamond"
+  },
+  {
+   "id": 41,
+   "mapName": "VILLAGE RUN",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202",
+    "t302"
+   ],
+   "note": "VILLAGE RUN (blue square) with the caption TO CONDOS and an arrow; from the North Lynx base east then down to the condos"
+  },
+  {
+   "id": 42,
+   "mapName": "SUGARBEAR RD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "SUGARBEAR RD printed inline (green circle)"
+  },
+  {
+   "id": 43,
+   "mapName": "SUGARBEAR FOREST",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "short green line from SUGARBEAR RD down past the SUGARBEAR FOREST label (green circle; bold lettering but no glade icon/hatch)"
+  },
+  {
+   "id": 44,
+   "mapName": "SLOWPOKE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "blue line running along an orange terrain-park pill with SLOWPOKE (blue square) printed on it; from the PUSHOVER/LWR PUSHOVER junction down to SUGARBEAR RD"
+  },
+  {
+   "id": 45,
+   "mapName": "SLEEPER RD",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t202"
+   ],
+   "note": "SLEEPER RD printed inline (blue square at its west end); from SLEEPER (47) east to the WATER FALL/LWR HOT SHOT/OVER SHOT junction"
+  },
+  {
+   "id": 46,
+   "mapName": "SLEEPER CHUTES",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t202"
+   ],
+   "note": "SLEEPER CHUTES printed inline (single diamond); leaves near the top of SLEEPER and rejoins it lower down"
+  },
+  {
+   "id": 47,
+   "mapName": "SLEEPER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "two SLEEPER labels (both blue square) along it; continues past the SLEEPER RD junction to the Lincoln Peak base with no other label"
+  },
+  {
+   "id": 48,
+   "mapName": "SECOND THOUGHTS",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t202"
+   ],
+   "note": "short line with SECOND THOUGHTS (blue square) printed directly below it; the only line there"
+  },
+  {
+   "id": 49,
+   "mapName": "PUSHOVER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "PUSHOVER printed inline (green circle) on the green line in the yellow slow zone; continues as LWR PUSHOVER (54)"
+  },
+  {
+   "id": 50,
+   "mapName": "PUSHOVER CHUTE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "PUSHOVER CHUTE (blue square) printed along it; short blue line ending at PUSHOVER"
+  },
+  {
+   "id": 51,
+   "mapName": "OVER SHOT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t202"
+   ],
+   "note": "printed OVER SHOT (two words, blue square); from the PUSHOVER junction west to the WATER FALL/LWR HOT SHOT junction"
+  },
+  {
+   "id": 52,
+   "mapName": "OUT ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "OUT ROAD (green circle) is drawn as a green line with a thin blue line alongside; this piece follows the blue edge of that same line"
+  },
+  {
+   "id": 53,
+   "mapName": "OUT TO LUNCH",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "from the end of LWR PUSHOVER, curves down then runs along OUT TO LUNCH (green circle); no other label"
+  },
+  {
+   "id": 54,
+   "mapName": "LWR PUSHOVER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "LWR PUSHOVER printed inline (green circle); continuation of PUSHOVER below the OVER SHOT/SLOWPOKE junction"
+  },
+  {
+   "id": 55,
+   "mapName": "LWR HOT SHOT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t202"
+   ],
+   "note": "LWR HOT SHOT printed inline (blue square) beside Gate House Express Quad"
+  },
+  {
+   "id": 56,
+   "mapName": "IN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "IN ROAD printed inline (green circle)"
+  },
+  {
+   "id": 57,
+   "mapName": "HOT SHOT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "HOT SHOT printed inline (blue square); from the North Lynx base (info/first-aid icons) down to where the line turns black (WATER FALL, 40)"
+  },
+  {
+   "id": 58,
+   "mapName": "FIRST TIME",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t302"
+   ],
+   "note": "FIRST TIME printed along it (green circle), beside the WELCOME MAT carpet"
+  },
+  {
+   "id": 59,
+   "mapName": "EASY RIDER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t202",
+    "t302"
+   ],
+   "note": "EASY RIDER printed inline (green circle) above Village Quad; runs on to the Schoolhouse Lift area with no other label"
+  },
+  {
+   "id": 97,
+   "mapName": "RUMBLE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "leaves LIFT LINE near the top, RUMBLE printed inline (double diamond), ends on COTILLION"
+  },
+  {
+   "id": 98,
+   "mapName": "UNKNOWN",
+   "color": "black",
+   "confidence": "low",
+   "tiles": [
+    "t002"
+   ],
+   "note": "unnamed 29px connector from the RUMBLE line west to the LIFT LINE line (~1785,1067 to 1758,1078); no label; likely a second entrance to RUMBLE"
+  },
+  {
+   "id": 99,
+   "mapName": "MIDDLE EARTH",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "from Castlerock summit east along the ridge, then down with MIDDLE EARTH printed inline (single diamond), continuous to CASTLEROCK CONNECTION with no other label"
+  },
+  {
+   "id": 100,
+   "mapName": "LOWER LIFT LINE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "LOWER LIFT LINE printed inline (single diamond); continuation of LIFT LINE below the COTILLION crossing, down to the Castlerock Double base"
+  },
+  {
+   "id": 101,
+   "mapName": "LOWER CASTLEROCK RUN",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102",
+    "t202"
+   ],
+   "note": "LOWER CASTLEROCK RUN printed inline; single diamond after the name at the line's lower end"
+  },
+  {
+   "id": 102,
+   "mapName": "LIFT LINE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "LIFT LINE printed inline (double diamond) just right of Castlerock Double; summit down to where COTILLION crosses (~1652,1357), then continues as LOWER LIFT LINE (100)"
+  },
+  {
+   "id": 103,
+   "mapName": "COTILLION",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102",
+    "t202"
+   ],
+   "note": "COTILLION printed inline (single diamond); crosses LIFT LINE/LOWER LIFT LINE and runs on to CASTLEROCK CONNECTION"
+  },
+  {
+   "id": 104,
+   "mapName": "CASTLEROCK RUNOUT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "CASTLEROCK RUNOUT label (blue square ~1202,2115) is on its lower half, left of my tiles; the upper half from the Castlerock Double base (arrow) is the same continuous line (HEADER, 29, merges mid-way)"
+  },
+  {
+   "id": 105,
+   "mapName": "CASTLEROCK RUN",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "from the Castlerock Warming Hut down, CASTLEROCK RUN printed inline (single diamond); ends at the TROLL ROAD junction where LOWER CASTLEROCK RUN begins"
+  },
+  {
+   "id": 106,
+   "mapName": "UNKNOWN",
+   "color": "blue",
+   "confidence": "low",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "unnamed 67px spur with an arrow from LOWER DOWNSPOUT's line east to the Castlerock Double base / top of CASTLEROCK RUNOUT; no label (could be counted as part of LOWER DOWNSPOUT)"
+  },
+  {
+   "id": 107,
+   "mapName": "CASTLEROCK CONNECTION",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t102",
+    "t202"
+   ],
+   "note": "CASTLEROCK CONNECTION printed inline (blue square at its west end); North Lynx base west to the Castlerock Double base"
+  },
+  {
+   "id": 108,
+   "mapName": "BAILOUT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "BAILOUT printed inline (blue square ~1317,1356), label just left of my tiles"
+  },
+  {
+   "id": 109,
+   "mapName": "TROLL ROAD",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t002",
+    "t102"
+   ],
+   "note": "two TROLL ROAD labels (both blue square) along this winding line, from the CASTLEROCK RUN/LOWER CASTLEROCK RUN junction to CASTLEROCK CONNECTION"
+  },
+  {
+   "id": 113,
+   "mapName": "HI & LO ROAD",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t002"
+   ],
+   "note": "U-shaped loop off CASTLEROCK RUN with HI & LO ROAD (single diamond) printed inside it"
+  }
+ ],
+ "labels": [
+  {
+   "mapName": "CASTLEROCK RUN",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1608,
+    1079
+   ],
+   "note": "single diamond before the name (~1529,1140)"
+  },
+  {
+   "mapName": "HI & LO ROAD",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1687,
+    1087
+   ],
+   "note": "two-line label inside the loop of its line"
+  },
+  {
+   "mapName": "LIFT LINE",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1770,
+    1038
+   ],
+   "note": "two stacked diamonds before the name (~1746,1096)"
+  },
+  {
+   "mapName": "RUMBLE",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1764,
+    1160
+   ],
+   "note": "two stacked diamonds before the name (~1731,1212)"
+  },
+  {
+   "mapName": "MIDDLE EARTH",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1897,
+    1149
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "TROLL ROAD",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1604,
+    1222
+   ],
+   "note": "upper of two TROLL ROAD labels"
+  },
+  {
+   "mapName": "TROLL ROAD",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1727,
+    1401
+   ],
+   "note": "lower of two TROLL ROAD labels"
+  },
+  {
+   "mapName": "COTILLION",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1633,
+    1344
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "LOWER CASTLEROCK RUN",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1478,
+    1470
+   ],
+   "note": "single diamond printed after the name (~1525,1611)"
+  },
+  {
+   "mapName": "LOWER LIFT LINE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1594,
+    1546
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "CASTLEROCK CONNECTION",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1672,
+    1622
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "BIRCH RUN",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    2094,
+    1408
+   ],
+   "note": "snowflake before the square"
+  },
+  {
+   "mapName": "MORNING STAR",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    2140,
+    1426
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "SUNRISE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    2104,
+    1531
+   ],
+   "note": "snowflake before the diamond"
+  },
+  {
+   "mapName": "LOWER DOWNSPOUT",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1446,
+    1665
+   ],
+   "note": "label straddles the left edge of t102/t202"
+  },
+  {
+   "mapName": "WILD TURKEY",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1405,
+    1647
+   ],
+   "note": "glade (tree icon + red hatch); label mostly left of my tiles, partly visible at t102 left edge"
+  },
+  {
+   "mapName": "WITCH HAZEL",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1410,
+    1818
+   ],
+   "note": "glade (tree icon + red hatch); label mostly left of my tiles, partly visible at t202 left edge"
+  },
+  {
+   "mapName": "SLEEPER",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1677,
+    1778
+   ],
+   "note": "upper of two SLEEPER labels"
+  },
+  {
+   "mapName": "SLEEPER",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1512,
+    1938
+   ],
+   "note": "lower of two SLEEPER labels"
+  },
+  {
+   "mapName": "SLEEPER CHUTES",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1701,
+    1815
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "HOT SHOT",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1810,
+    1774
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "PUSHOVER CHUTE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1873,
+    1795
+   ],
+   "note": "two-line label"
+  },
+  {
+   "mapName": "SECOND THOUGHTS",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1835,
+    1873
+   ],
+   "note": "two-line label below its short line"
+  },
+  {
+   "mapName": "PUSHOVER",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1909,
+    1862
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "DEEPER SLEEPER",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1613,
+    1907
+   ],
+   "note": "glade: bold name, tree icon and red hatch between SLEEPER CHUTES and WATER FALL; no line of its own"
+  },
+  {
+   "mapName": "WATER FALL",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1680,
+    1897
+   ],
+   "note": "printed with a word gap (WATER FALL); may be spelled WATERFALL"
+  },
+  {
+   "mapName": "SLEEPER RD",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1500,
+    2006
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "OVER SHOT",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1751,
+    1980
+   ],
+   "note": "printed as two words"
+  },
+  {
+   "mapName": "SLOWPOKE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1727,
+    2058
+   ],
+   "note": "printed on an orange terrain-park pill (park)",
+   "park": true
+  },
+  {
+   "mapName": "LWR PUSHOVER",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1858,
+    2058
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "VILLAGE RUN",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    2216,
+    1937
+   ],
+   "note": "caption TO CONDOS with an arrow under it (not part of the name); label straddles the right edge of t202"
+  },
+  {
+   "mapName": "LWR HOT SHOT",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1480,
+    2085
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "SUGARBEAR RD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1574,
+    2182
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "SUGARBEAR FOREST",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1573,
+    2217
+   ],
+   "note": "bold two-line label with a green line, no glade icon or hatch"
+  },
+  {
+   "mapName": "EASY RIDER",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1670,
+    2208
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "FIRST TIME",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1456,
+    2280
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "OUT TO LUNCH",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1725,
+    2317
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "IN ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1573,
+    2388
+   ],
+   "note": ""
+  },
+  {
+   "mapName": "OUT ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1518,
+    2405
+   ],
+   "note": ""
+  }
+ ]
+}

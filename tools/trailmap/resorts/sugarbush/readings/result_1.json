@@ -1,0 +1,1156 @@
+{
+ "lines": [
+  {
+   "id": 0,
+   "mapName": "VALLEY HOUSE TRAVERSE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "label (blue square) printed along it on a light-blue band at ~(680,1380), just left of t001/t101; runs from beside the Super Bravo top / info icon (802,1314) SW to the Valley House Quad top"
+  },
+  {
+   "id": 1,
+   "mapName": "STEIN'S RUN",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "label with snowflake + two diamonds on it at (835,1724); runs from Heaven's Gate Traverse near the Valley House top (637,1483), between Stein's Woods and Egan's Woods, to the Super Bravo / Valley House base"
+  },
+  {
+   "id": 3,
+   "mapName": "SPRING FLING",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t301"
+   ],
+   "note": "label (snowflake, blue square) on it at ~(490,1875), left of my tiles; straight line down to the Valley House Lodge base area"
+  },
+  {
+   "id": 4,
+   "mapName": "SPILLSVILLE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "leaves the Jester line at (843,1055), crosses Organgrinder, SPILLSVILLE label (one diamond) right after the crossing; ends just left of the Heaven's Gate lift (1156,1238) by the top of Paradise Extension"
+  },
+  {
+   "id": 5,
+   "mapName": "SIGI'S RIPCORD",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "label with two diamonds on it; ends at (1201,1228) where Paradise (8) also ends and LWR RIPCORD (16) begins"
+  },
+  {
+   "id": 6,
+   "mapName": "RACER'S EDGE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t301"
+   ],
+   "note": "label (snowflake, blue square, race icon) on it at ~(630,2190), left of t301; ends at the Valley House Lodge base area"
+  },
+  {
+   "id": 7,
+   "mapName": "PARADISE EXTENSION",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "two-line label with one diamond along it; from just left of the Heaven's Gate lift (1178,1252) down to Downspout (1130,1394)"
+  },
+  {
+   "id": 8,
+   "mapName": "PARADISE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "label with two diamonds on it; Lower Paradise (17) forks off at (1228,1120); the last ~85px continue unlabeled to the lift line (1204,1203) where Sigi's Ripcord also ends and 16 / 7 begin"
+  },
+  {
+   "id": 9,
+   "mapName": "ORGANGRINDER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "label (snowflake, one diamond) on it; summit down to the Downspout crossing (1006,1286), continues as LOWER ORGANGRINDER (18)"
+  },
+  {
+   "id": 10,
+   "mapName": "MURPHY'S GLADE",
+   "color": "blue",
+   "confidence": "medium",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "two parallel lines at the MURPHY'S GLADE label: 11 (east) and this one (west) merge at (822,1487); below the merge this line carries the end of the label ('...S GLADE') down to the Super Bravo lift (930,1629). Its upper ~130px (737,1372)-(822,1487) is an unlabeled parallel branch off the Valley House Traverse, taken as part of the glade"
+  },
+  {
+   "id": 11,
+   "mapName": "MURPHY'S GLADE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t101"
+   ],
+   "note": "the label starts on this line (snowflake, blue square at (803,1438)); from below the Valley House Traverse, merges into 10 at (822,1487)"
+  },
+  {
+   "id": 13,
+   "mapName": "THE MALL",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t201",
+    "t301"
+   ],
+   "note": "label with one diamond on it at ~(700,1680), left of t101/t201; runs beside the Valley House Quad lift down to its base (1038,2159)"
+  },
+  {
+   "id": 14,
+   "mapName": "LOWER TWIST",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t201"
+   ],
+   "note": "label with one diamond on it at ~(700,1850), left of t201; ends at the Valley House Quad base (892,1975)"
+  },
+  {
+   "id": 16,
+   "mapName": "LWR RIPCORD",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "printed 'LWR RIPCORD'; begins where Sigi's Ripcord (5) and Paradise (8) end (1201,1235) and runs down the right side of the Heaven's Gate lift to its base (1361,1531); Lower Paradise (17) joins at the snowflake (1283,1365) right above the label's diamond"
+  },
+  {
+   "id": 17,
+   "mapName": "LOWER PARADISE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "forks off Paradise at (1228,1120) with one diamond; label along it; joins LWR RIPCORD (16) at (1283,1362)"
+  },
+  {
+   "id": 18,
+   "mapName": "LOWER ORGANGRINDER",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101",
+    "t201"
+   ],
+   "note": "continues Organgrinder (9) below the Downspout crossing; label (snowflake, one diamond) on it; ends at the Super Bravo base (1100,1916)"
+  },
+  {
+   "id": 19,
+   "mapName": "LOWER MOONSHINE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t201",
+    "t301"
+   ],
+   "note": "continues from the MOONSHINE label end (528,1818); LOWER MOONSHINE label (blue square) on it at (758,1963)-(902,2115); ends at the Valley House base"
+  },
+  {
+   "id": 20,
+   "mapName": "LOWER JESTER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101",
+    "t201"
+   ],
+   "note": "starts at Allyn's Lodge (864,1293) where 26 arrives; Downspout (31) leaves at (940,1293); loops down through both LOWER JESTER labels (1002,1592) and (1335,1797); Header (29) leaves at (1286,1890); ends in the Super Bravo base slow zone (1153,1967)"
+  },
+  {
+   "id": 21,
+   "mapName": "LOWER DOWNSPOUT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "continues Downspout (31) from the Heaven's Gate lift base; label (snowflake, blue square) along it; ends joining Lower Jester (20) at (1382,1782)"
+  },
+  {
+   "id": 22,
+   "mapName": "LOWER DOMINO",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "starts just below Heaven's Gate Traverse (1248,1593), continuing Domino (33); label with blue square along it"
+  },
+  {
+   "id": 23,
+   "mapName": "LOWER BIRDLAND",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "black line beside the Super Bravo lift below Birdland (36); label with one diamond along it; ends at the Super Bravo base"
+  },
+  {
+   "id": 25,
+   "mapName": "JESTER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "JESTER label (snowflake, blue square) on it at the summit; runs down the west ridge (Spillsville 4 leaves at (843,1055)); at (800,1234) piece 26 forks off to Allyn's Lodge. The last ~60px (800,1234)-(807,1293) continue to the Valley House Traverse start, and the small two-line ALLYN'S TRAVERSE label (~765,1265) is printed right beside that tail: the tail may be Allyn's Traverse (it is one PDF stroke with Jester, so not split here)"
+  },
+  {
+   "id": 26,
+   "mapName": "JESTER",
+   "color": "blue",
+   "confidence": "medium",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "unlabeled connector from the Jester fork (800,1234) past the Allyn's Lodge icons to (864,1293), where Lower Jester (20) starts; taken as the end of Jester at the lodge (it could equally be the head of Lower Jester)"
+  },
+  {
+   "id": 27,
+   "mapName": "HEAVEN'S GATE TRAVERSE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t101"
+   ],
+   "note": "second (east) HEAVEN'S GATE TRAVERSE label on it; from Lower Organgrinder (1067,1583) east to the arrowhead at the Heaven's Gate lift base (1358,1572)"
+  },
+  {
+   "id": 28,
+   "mapName": "HEAVEN'S GATE TRAVERSE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t101"
+   ],
+   "note": "first (west) label (blue square) on it at (594-833,1456-1526); from the Valley House Quad top (586,1459) east across Murphy's Glade, Birdland, the Super Bravo lift and Lower Jester to Lower Organgrinder (1064,1579), continuing as 27"
+  },
+  {
+   "id": 29,
+   "mapName": "HEADER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t201"
+   ],
+   "note": "from Lower Jester (1286,1890) to Castlerock Runout (1379,1933); label with blue square along it"
+  },
+  {
+   "id": 30,
+   "mapName": "GONDOLIER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t201",
+    "t301"
+   ],
+   "note": "label (snowflake, green circle) along it; from the Super Bravo base slow zone down to Lincoln Peak Village"
+  },
+  {
+   "id": 31,
+   "mapName": "DOWNSPOUT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "leaves Lower Jester at (940,1293) by Allyn's Lodge; label (snowflake, blue square) along it; ends at the Heaven's Gate lift base (1353,1546), continuing as LOWER DOWNSPOUT (21)"
+  },
+  {
+   "id": 32,
+   "mapName": "DOMINO CHUTE",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "short line under the two-line label (snowflake, blue square), from below Allyn's Lodge back into Lower Jester (992,1396)"
+  },
+  {
+   "id": 33,
+   "mapName": "DOMINO",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t101"
+   ],
+   "note": "starts beside Lower Organgrinder (1043,1430); label with one diamond on it (the diamond just below the LEW'S LINE tree icon); ends at Heaven's Gate Traverse (1233,1580), continuing as LOWER DOMINO (22)"
+  },
+  {
+   "id": 34,
+   "mapName": "COFFEE RUN",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t201",
+    "t301"
+   ],
+   "note": "label (snowflake, green circle) along it; from the Super Bravo base slow zone down to Lincoln Peak Village"
+  },
+  {
+   "id": 35,
+   "mapName": "CAT'S MEOW",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t301"
+   ],
+   "note": "label (blue square) on it at ~(765,2311), mostly left of t301; ends at the Valley House Lodge base area"
+  },
+  {
+   "id": 36,
+   "mapName": "BIRDLAND",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "blue line on the right of the Super Bravo lift from its top (848,1334); label (snowflake, blue square) along it; ends at (950,1616) where Lower Birdland (23) starts"
+  },
+  {
+   "id": 42,
+   "mapName": "SUGARBEAR RD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t301"
+   ],
+   "note": "label (snowflake, green circle) along it; label straddles the right edge of t301"
+  },
+  {
+   "id": 43,
+   "mapName": "SUGARBEAR FOREST",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t301"
+   ],
+   "note": "short line from Sugarbear Rd down to the SUGARBEAR FOREST green circle (1520,2237)"
+  },
+  {
+   "id": 45,
+   "mapName": "SLEEPER RD",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t201"
+   ],
+   "note": "leaves Sleeper (47) at (1413,2004) heading east; label with blue square on it"
+  },
+  {
+   "id": 47,
+   "mapName": "SLEEPER",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t201",
+    "t301"
+   ],
+   "note": "carries both SLEEPER labels (upper ~(1670,1770), lower (1505,1940)); below the Sleeper Rd junction (1411,2004) it continues unlabeled down to the Lincoln Peak Village base (1275,2256)"
+  },
+  {
+   "id": 52,
+   "mapName": "OUT ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t301"
+   ],
+   "note": "the piece traces the blue edge of a two-tone green/blue road stroke; OUT ROAD label with green circle on it"
+  },
+  {
+   "id": 55,
+   "mapName": "LWR HOT SHOT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t301"
+   ],
+   "note": "printed 'LWR HOT SHOT'; label (snowflake, blue square) along it, beside the Gate House Express"
+  },
+  {
+   "id": 56,
+   "mapName": "IN ROAD",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t301"
+   ],
+   "note": "label (green circle) on it; text continues right of t301"
+  },
+  {
+   "id": 58,
+   "mapName": "FIRST TIME",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t301"
+   ],
+   "note": "green line just below the Welcome Mat carpet; label (snowflake, green circle) along it"
+  },
+  {
+   "id": 59,
+   "mapName": "EASY RIDER",
+   "color": "green",
+   "confidence": "high",
+   "tiles": [
+    "t301"
+   ],
+   "note": "long green line beside the Schoolhouse Lift; the EASY RIDER label (snowflake, green circle at ~(1613,2242)) sits on it just right of t301"
+  },
+  {
+   "id": 100,
+   "mapName": "LOWER LIFT LINE",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "continues 102 below the Cotillion crossing (1653,1358) down the right side of the Castlerock Double; LOWER LIFT LINE label (one diamond at its lower end) along it; mostly right of t101/t201"
+  },
+  {
+   "id": 101,
+   "mapName": "LOWER CASTLEROCK RUN",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101",
+    "t201"
+   ],
+   "note": "starts at the foot of Castlerock Run where Troll Road leaves (1520,1189); label with one diamond (at the label's lower end) along it; ends at the Castlerock Double base (1533,1620)"
+  },
+  {
+   "id": 104,
+   "mapName": "CASTLEROCK RUNOUT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201",
+    "t301"
+   ],
+   "note": "from the Castlerock Double base (arrowhead at (1507,1747)) down to Lincoln Peak Village; CASTLEROCK RUNOUT label (blue square) along its lower half"
+  },
+  {
+   "id": 105,
+   "mapName": "CASTLEROCK RUN",
+   "color": "black",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "label with one diamond on it; from the Castlerock summit down to the Troll Road junction (1528,1180); only its foot is inside t001"
+  },
+  {
+   "id": 106,
+   "mapName": "UNKNOWN",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "unnamed connector: ~70px spur with an arrowhead from Lower Downspout (21) at (1434,1721) to the Castlerock Double bottom terminal; nothing printed on it (checked at 3x)"
+  },
+  {
+   "id": 107,
+   "mapName": "CASTLEROCK CONNECTION",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t101",
+    "t201"
+   ],
+   "note": "from the Castlerock Double base (1521,1719) east to the arrowhead (1821,1660); label with blue square along it; mostly right of my tiles"
+  },
+  {
+   "id": 108,
+   "mapName": "BAILOUT",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001",
+    "t101"
+   ],
+   "note": "starts beside Lower Castlerock Run (1437,1299); label with blue square on a light-blue band; crosses under the Heaven's Gate lift to (1263,1475) just above Downspout"
+  },
+  {
+   "id": 109,
+   "mapName": "TROLL ROAD",
+   "color": "blue",
+   "confidence": "high",
+   "tiles": [
+    "t001"
+   ],
+   "note": "from the Castlerock Run / Lower Castlerock Run junction (1537,1195): both TROLL ROAD labels (blue square) lie on its switchbacks under the Castlerock Double; ends at Castlerock Connection (1650,1608); only its start is inside t001"
+  }
+ ],
+ "labels": [
+  {
+   "mapName": "JESTER",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    858,
+    930
+   ],
+   "note": "blue square with snowflake before it, near the Lincoln Peak summit; label along piece 25"
+  },
+  {
+   "mapName": "ORGANGRINDER",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    978,
+    1105
+   ],
+   "note": "one diamond (checked zoomed), snowflake above it; along piece 9"
+  },
+  {
+   "mapName": "SPILLSVILLE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1065,
+    1125
+   ],
+   "note": "one diamond; along piece 4"
+  },
+  {
+   "mapName": "SIGI'S RIPCORD",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1120,
+    1100
+   ],
+   "note": "two diamonds (checked zoomed), snowflake before; along piece 5"
+  },
+  {
+   "mapName": "PARADISE",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1140,
+    985
+   ],
+   "note": "two diamonds (checked zoomed); along piece 8"
+  },
+  {
+   "mapName": "LOWER PARADISE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1265,
+    1235
+   ],
+   "note": "one diamond at the fork off Paradise; along piece 17"
+  },
+  {
+   "mapName": "PARADISE EXTENSION",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1150,
+    1325
+   ],
+   "note": "two-line label, one diamond at its lower end; along piece 7"
+  },
+  {
+   "mapName": "GRAND STAND",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1036,
+    1264
+   ],
+   "note": "red-hatched glade with tree icon just right of Allyn's Lodge; the Organgrinder line crosses the text"
+  },
+  {
+   "mapName": "DOWNSPOUT",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1117,
+    1397
+   ],
+   "note": "blue square with snowflake; along piece 31"
+  },
+  {
+   "mapName": "DOMINO CHUTE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    948,
+    1362
+   ],
+   "note": "two-line label, blue square with snowflake; along piece 32"
+  },
+  {
+   "mapName": "BIRDLAND",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    902,
+    1442
+   ],
+   "note": "blue square with snowflake, beside the Super Bravo lift; along piece 36"
+  },
+  {
+   "mapName": "MURPHY'S GLADE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    857,
+    1522
+   ],
+   "note": "blue square with snowflake, no tree icon (named a glade but printed like a trail, with drawn lines 11 and 10)"
+  },
+  {
+   "mapName": "LOWER JESTER",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1002,
+    1592
+   ],
+   "note": "first of two labels (upper); blue square with snowflake; on piece 20"
+  },
+  {
+   "mapName": "LOWER JESTER",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1335,
+    1797
+   ],
+   "note": "second of two labels (lower); blue square with snowflake; on piece 20"
+  },
+  {
+   "mapName": "HEAVEN'S GATE TRAVERSE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1180,
+    1600
+   ],
+   "note": "second of two labels (east), two-line label; along piece 27"
+  },
+  {
+   "mapName": "HEAVEN'S GATE TRAVERSE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    715,
+    1490
+   ],
+   "note": "first of two labels (west), mostly left of t101 (only '...RSE' inside); along piece 28"
+  },
+  {
+   "mapName": "LEW'S LINE",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1133,
+    1466
+   ],
+   "note": "red-hatched glade with tree icon between Downspout and Domino (the diamond just below it belongs to DOMINO)"
+  },
+  {
+   "mapName": "RUFFED UP",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1242,
+    1546
+   ],
+   "note": "red-hatched glade with tree icon"
+  },
+  {
+   "mapName": "WOOD LOT",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1281,
+    1540
+   ],
+   "note": "red-hatched glade with tree icon"
+  },
+  {
+   "mapName": "BIG BIRCH",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1366,
+    1645
+   ],
+   "note": "red-hatched glade with tree icon"
+  },
+  {
+   "mapName": "WILD TURKEY",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1406,
+    1645
+   ],
+   "note": "red-hatched glade with tree icon, beside Lower Downspout"
+  },
+  {
+   "mapName": "FISHER CAT",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1298,
+    1688
+   ],
+   "note": "red-hatched glade with tree icon"
+  },
+  {
+   "mapName": "WITCH HAZEL",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1410,
+    1815
+   ],
+   "note": "red-hatched glade with tree icon between Lower Jester and Castlerock Runout"
+  },
+  {
+   "mapName": "DOMINO",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1110,
+    1484
+   ],
+   "note": "one diamond (checked zoomed), just below the LEW'S LINE tree icon; along piece 33"
+  },
+  {
+   "mapName": "LOWER DOMINO",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1346,
+    1672
+   ],
+   "note": "blue square; along piece 22"
+  },
+  {
+   "mapName": "LOWER DOWNSPOUT",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1442,
+    1668
+   ],
+   "note": "blue square with snowflake; along piece 21"
+  },
+  {
+   "mapName": "LWR RIPCORD",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1330,
+    1455
+   ],
+   "note": "printed abbreviated 'LWR'; one diamond (checked zoomed); along piece 16 beside the Heaven's Gate lift"
+  },
+  {
+   "mapName": "BAILOUT",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1357,
+    1330
+   ],
+   "note": "blue square, on a light-blue band; along piece 108"
+  },
+  {
+   "mapName": "LOWER CASTLEROCK RUN",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1490,
+    1485
+   ],
+   "note": "one diamond at the lower end of the label; along piece 101"
+  },
+  {
+   "mapName": "LOWER BIRDLAND",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1006,
+    1755
+   ],
+   "note": "one diamond; along piece 23 beside the Super Bravo lift"
+  },
+  {
+   "mapName": "LOWER ORGANGRINDER",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1046,
+    1565
+   ],
+   "note": "one diamond with snowflake; along piece 18"
+  },
+  {
+   "mapName": "EGAN'S WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    850,
+    1628
+   ],
+   "note": "red-hatched glade with tree icon; label straddles the left edge of t101"
+  },
+  {
+   "mapName": "STEIN'S WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    765,
+    1595
+   ],
+   "note": "red-hatched glade with tree icon; mostly in t100, only its end is inside t101"
+  },
+  {
+   "mapName": "STEIN'S RUN",
+   "symbol": "double-diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    835,
+    1724
+   ],
+   "note": "two diamonds (checked zoomed) with snowflake; along piece 1"
+  },
+  {
+   "mapName": "CHRISTMAS TREE WOODS",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    928,
+    1908
+   ],
+   "note": "red-hatched glade with tree icon beside the Valley House Quad"
+  },
+  {
+   "mapName": "SAP LINE",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    862,
+    2003
+   ],
+   "note": "red-hatched glade with tree icon"
+  },
+  {
+   "mapName": "LOWER MOONSHINE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    830,
+    2040
+   ],
+   "note": "blue square; label starts left of t201 (x~758); along piece 19"
+  },
+  {
+   "mapName": "COFFEE RUN",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1066,
+    2110
+   ],
+   "note": "green circle with snowflake; along piece 34"
+  },
+  {
+   "mapName": "GONDOLIER",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1160,
+    2112
+   ],
+   "note": "green circle with snowflake; along piece 30"
+  },
+  {
+   "mapName": "CASTLEROCK RUNOUT",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1292,
+    2030
+   ],
+   "note": "blue square at the lower end; along the lower half of piece 104"
+  },
+  {
+   "mapName": "HEADER",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1340,
+    1912
+   ],
+   "note": "blue square; along piece 29"
+  },
+  {
+   "mapName": "SLEEPER",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1505,
+    1940
+   ],
+   "note": "lower of two labels, blue square with snowflake; along piece 47"
+  },
+  {
+   "mapName": "SLEEPER RD",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1495,
+    2004
+   ],
+   "note": "blue square; along piece 45"
+  },
+  {
+   "mapName": "LWR HOT SHOT",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1472,
+    2095
+   ],
+   "note": "printed abbreviated 'LWR'; blue square with snowflake; along piece 55"
+  },
+  {
+   "mapName": "SUGARBEAR RD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1562,
+    2182
+   ],
+   "note": "green circle with snowflake; label straddles the right edge of t301; along piece 42"
+  },
+  {
+   "mapName": "SUGARBEAR FOREST",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1566,
+    2214
+   ],
+   "note": "two-line label, green circle with snowflake; mostly right of t301; at the end of piece 43"
+  },
+  {
+   "mapName": "FIRST TIME",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1452,
+    2279
+   ],
+   "note": "green circle with snowflake, beside the Welcome Mat carpet; along piece 58"
+  },
+  {
+   "mapName": "OUT ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1506,
+    2404
+   ],
+   "note": "green circle; along piece 52 (green/blue two-tone line)"
+  },
+  {
+   "mapName": "IN ROAD",
+   "symbol": "circle",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1566,
+    2386
+   ],
+   "note": "green circle; only the circle is inside t301, text continues right; along piece 56"
+  },
+  {
+   "mapName": "CASTLEROCK RUN",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1602,
+    1082
+   ],
+   "note": "one diamond (checked zoomed) at the lower end; only the start is inside t001; along piece 105"
+  },
+  {
+   "mapName": "TROLL ROAD",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1602,
+    1222
+   ],
+   "note": "first (upper) of two labels, blue square; only the start is inside t001; along piece 109"
+  },
+  {
+   "mapName": "LOWER LIFT LINE",
+   "symbol": "diamond",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1592,
+    1545
+   ],
+   "note": "one diamond at the lower end; mostly right of t101; along piece 100"
+  },
+  {
+   "mapName": "CASTLEROCK CONNECTION",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1680,
+    1650
+   ],
+   "note": "blue square at the west end (inside t101/t201), text mostly to the right; along piece 107"
+  },
+  {
+   "mapName": "DEEPER SLEEPER",
+   "symbol": "none-visible",
+   "glade": true,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    1598,
+    1922
+   ],
+   "note": "red-hatched glade with tree icon; only the tree icon is inside t201"
+  },
+  {
+   "mapName": "ALLYN'S TRAVERSE",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    765,
+    1265
+   ],
+   "note": "just left of t001/t101 (x~728-800); blue square with snowflake, printed horizontally beside the lower tail of piece 25 (Jester) near Allyn's Lodge; no separate drawn line of its own"
+  },
+  {
+   "mapName": "CAT'S MEOW",
+   "symbol": "square",
+   "glade": false,
+   "area": "lincoln-peak",
+   "labelSrc": [
+    765,
+    2311
+   ],
+   "note": "only the last letters are inside t301; mostly in t300; along piece 35"
+  }
+ ]
+}

@@ -1,0 +1,129 @@
+{
+ "trails": [
+  {
+   "id": "galaxy-bowl",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     1485,
+     2057
+    ],
+    [
+     1463,
+     2058
+    ],
+    [
+     1442,
+     2061
+    ]
+   ],
+   "confidence": "low",
+   "note": "No distinct run on the map: GALAXY BOWL is only a two-line label with a green circle (1441,2045) between the two tiny carpets 2 (Skywalker, (1423,2055)-(1439,2056)) and 3 (Snow Star, (1443,2075)-(1480,2063)) among the Clock Tower base buildings; no drawn line, band or open-snow shape. The trace is only a ~45 px stand-in through the label between the carpets, parallel to them from their top (east) end to their bottom (west) end, so the name has a clickable spot; a no-line label marker at (1462,2052) would be equally right."
+  },
+  {
+   "id": "kettle-brook",
+   "pieces": [
+    156,
+    155,
+    157
+   ],
+   "partial": {},
+   "traced": [],
+   "confidence": "high",
+   "note": "Starts at the junction where upper Homeward Bound (225) ends and Gordon's Garden (252) begins (~2063,1808). 156 runs down to the end of the KETTLE BROOK label (2045,1910), which reads back to its circle (1935,1954). 155 then 157 continue west below the Gordon's Garden park (crossing the Vermont Family Adventure Run callout pointer) and end at ~(1708,1953) under the lower HOMEWARD BOUND text, where it merges back into Homeward Bound. So it is the bypass around Gordon's Garden. All three pieces are whole; the label gap is bridged by the join. The blue KETTLE BROOK box at ~(2010,1865) is the lodging, not the trail label."
+  },
+  {
+   "id": "lower-mountain-road",
+   "pieces": [
+    140,
+    234,
+    231,
+    232,
+    203,
+    202
+   ],
+   "partial": {},
+   "traced": [],
+   "confidence": "high",
+   "note": "Begins at the open hub at the foot of Coleman Brook (~2815,1100) where Mountain Road ends: 140 (collinear with the dash after the lower MOUNTAIN ROAD label) -> under the Solitude Express Quad -> 234 -> upper LOWER MOUNTAIN ROAD label (2557,1207 to circle 2388,1290) -> 231 west across the Upper/Lower Arrow junction to a hairpin by Broken Arrow (~2131,1372) and back east -> crosses Lower Arrow -> 232 east to a second hairpin at the foot of the SWITCHBACK label (~2311,1433, where Village Run starts) and back south-west past Black Bear Alley to where Lower Arrow (205) rejoins (~2186,1595) -> 203 -> lower LOWER MOUNTAIN ROAD label (2005,1714 to circle 1817,1714) -> 202 into the Clock Tower base slow zone (line ends 1625,1816). Whole pieces; checked on zoomed crops."
+  },
+  {
+   "id": "mountain-road",
+   "pieces": [
+    142,
+    141
+   ],
+   "partial": {},
+   "traced": [
+    [
+     2953,
+     1031
+    ],
+    [
+     2930,
+     1046
+    ],
+    [
+     2906,
+     1060
+    ],
+    [
+     2882,
+     1074
+    ],
+    [
+     2864,
+     1086
+    ],
+    [
+     2850,
+     1093
+    ],
+    [
+     2828,
+     1100
+    ],
+    [
+     2806,
+     1107
+    ]
+   ],
+   "confidence": "high",
+   "note": "Upper Mountain Road (143) and Easy Rider (138) end at a junction (~2527,738); Mountain Road starts there: 142 into the circle of the upper MOUNTAIN ROAD label (2751,861); after the label, 141 goes through Jackson Gore Junction (~2900,965) and bends into the second MOUNTAIN ROAD label (2957,1037 to circle 2864,1087), whose short dash ends at the open hub at the foot of Coleman Brook (~2815,1100; Green Link 230, Sidewinder 132 and 140 meet there). 140 lines up with that dash but leads under the Solitude lift (234) into the LOWER MOUNTAIN ROAD label, so Lower Mountain Road starts at the hub and 140 is not Mountain Road. Traced points cover only the lower label + dash to the hub (no piece there); the join bridges the upper-label gap between 142 and 141."
+  },
+  {
+   "id": "switchback",
+   "pieces": [],
+   "partial": {},
+   "traced": [
+    [
+     2293,
+     1319
+    ],
+    [
+     2298,
+     1342
+    ],
+    [
+     2304,
+     1368
+    ],
+    [
+     2310,
+     1394
+    ],
+    [
+     2316,
+     1418
+    ],
+    [
+     2321,
+     1436
+    ]
+   ],
+   "confidence": "medium",
+   "note": "No drawn line. The vertical SWITCHBACK label sits on open snow at the east edge of the tree island between Lower Mountain Road's upper leg (231) and its lower leg. Its circle (2296,1328) is just below the upper leg and its text ends (2323,1430) at the hairpin corner of 232, where Village Run (181) starts. Traced straight down the label from the road (2293,1319) to that corner junction (2321,1436). It is a short fall-line cut that skips Lower Mountain Road's western hairpin."
+  }
+ ]
+}
