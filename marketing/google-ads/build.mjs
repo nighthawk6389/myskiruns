@@ -30,13 +30,13 @@ const SITE = 'https://www.myskiruns.app/';
 
 const EAST = new Set(['Vermont', 'New York', 'New Hampshire', 'Maine']);
 // states and provinces east to west, for lists in ads (others go last)
-const REGION_ORDER = ['Vermont', 'New York', 'New Hampshire', 'Maine', 'Colorado', 'Utah', 'British Columbia'];
+const REGION_ORDER = ['Vermont', 'New York', 'New Hampshire', 'Maine', 'Colorado', 'Utah', 'California', 'British Columbia'];
 
 const CAMPAIGNS = [
   // resort trail-map searches in Vermont, New York, New Hampshire and Maine;
   // French too: Quebec skiers fill Jay Peak, Stowe and the rest
   { key: 'east', name: 'Trail Maps - East', budget: 5, cpcLimit: 1, languages: 'en;fr' },
-  // Colorado, Utah and British Columbia
+  // Colorado, Utah, California and British Columbia
   { key: 'west', name: 'Trail Maps - West', budget: 5, cpcLimit: 1, languages: 'en' },
   // people looking for a way to track their runs, at any resort
   { key: 'tracker', name: 'Ski Run Tracker', budget: 5, cpcLimit: 1.5, languages: 'en' },
@@ -236,6 +236,19 @@ const RESORT_ADS = {
       'garibaldi', 'sea to sky', 'village map', 'train',
     ],
   },
+  'palisades-tahoe': {
+    short: 'Palisades',
+    path: 'Palisades-Tahoe',
+    area: 'Palisades and Alpine Meadows',
+    // Alpine is the old Alpine Meadows, which people still search for
+    names: ['palisades tahoe', 'alpine meadows'],
+    keywords: [
+      ['palisades ski map', 'exact'],
+      ['palisades ski map', 'phrase'],
+      ['palisades ski trails', 'phrase'],
+    ],
+    negatives: ['interstate', 'pacific palisades', 'palisades park', 'new jersey', 'nj', 'campground', 'rainier', 'apartments'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */
@@ -316,7 +329,7 @@ const TRACKER_GROUPS = [
     name: 'Ski Run Tracker',
     path: 'Ski-Run-Tracker',
     pinned: ['Free Ski Run Tracker', 'Track Every Run You Ski'],
-    headlines: ['East Coast, Rockies and BC'],
+    headlines: ['East Coast to the West Coast'],
     lead: "Tap the runs you ski on the resort's own trail map. See your progress and what's left.",
     keywords: [
       ['ski run tracker', 'exact'],
@@ -447,11 +460,15 @@ const CALLOUTS = (total, resorts) => [
 // sitelinks of the "Ski Run Tracker" campaign: the best-known resorts
 const TRACKER_SITELINKS = ['killington', 'stowe', 'vail', 'breckenridge', 'park-city', 'whistler-blackcomb'];
 
-// Vail's other map panels get sitelinks of their own (distinct pages)
+// Other map panels get sitelinks of their own (distinct pages); peak: the
+// trail-list group whose runs the panel shows, for the run count
 const PANEL_SITELINKS = {
   vail: [
-    { panel: 'back-bowls', text: 'Vail Back Bowls Map', line: 'Sun Down, Sun Up, China, Siberia' },
-    { panel: 'blue-sky', text: 'Blue Sky Basin Map', line: "Pete's Bowl and Earl's Bowl" },
+    { panel: 'back-bowls', peak: 'back-bowls', text: 'Vail Back Bowls Map', line: 'Sun Down, Sun Up, China, Siberia' },
+    { panel: 'blue-sky', peak: 'blue-sky', text: 'Blue Sky Basin Map', line: "Pete's Bowl and Earl's Bowl" },
+  ],
+  'palisades-tahoe': [
+    { panel: 'alpine-front', peak: 'alpine', text: 'Alpine Meadows Trail Map', line: "Alpine's front and back sides" },
   ],
 };
 
@@ -613,7 +630,7 @@ const sitelinks = {
     sitelinkFor(r),
     ...(PANEL_SITELINKS[r.id] ?? []).map((p) => ({
       text: p.text,
-      line1: `${r.perPeak[p.panel]} runs to check off`,
+      line1: `${r.perPeak[p.peak] ?? errors.push(`${r.id}: no trail-list group "${p.peak}"`)} runs to check off`,
       line2: p.line,
       url: resortUrl(r.id, p.panel),
     })),
