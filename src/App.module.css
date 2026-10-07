@@ -42,6 +42,24 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
+}
+
+/* the map is the resort's, the app isn't: say so where people land (Google's
+   ad rules for sites that name a resort, and plain courtesy) */
+.credit {
+  position: absolute;
+  left: 8px;
+  bottom: 6px;
+  /* clear of the zoom buttons in the bottom right corner */
+  max-width: calc(100% - 96px);
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.88);
+  color: var(--text-secondary);
+  font-size: 11px;
+  line-height: 1.4;
+  pointer-events: none;
 }
 
 .sidebar {
@@ -109,6 +127,11 @@
   .mapArea {
     flex: 1 1 60%;
     min-height: 0;
+  }
+
+  /* the zoom buttons are at the top on phones */
+  .credit {
+    max-width: calc(100% - 16px);
   }
 
   .sidebar {
