@@ -10,7 +10,7 @@ straight through junctions (a crossing yields two through pieces).
 dashes: Vail's Back Bowls 1.75, Blue Sky 2.7); --text-max is the largest glyph (px) to treat as text. Yellow sign
 boxes (WILDLIFE HABITAT) are found and blanked automatically. Writes {_source, polylines:[{id, cls, lengthPx,
 points}]} in percent of the image, like extract_pdf_vectors.py. The colour masks are tuned to Vail's 2025-26
-palette; check them on a new map (--debug draws what each class kept).
+palette (--palette steamboat: Steamboat's 2026-27); check them on a new map (--debug draws what each class kept).
 
 Requires: pip install pillow numpy opencv-python-headless scikit-image
 """
@@ -22,9 +22,15 @@ from skimage.morphology import skeletonize
 Image.MAX_IMAGE_PIXELS = None
 
 
-def masks(A):
+def masks(A, palette='vail'):
     r, g, b = (A[..., i].astype(np.int16) for i in range(3))
     mx = A.max(2).astype(np.int16); mn = A.min(2).astype(np.int16)
+    if palette == 'steamboat':  # Steamboat's 2026-27 map: a darker blue (53, 94, 153) and green (32, 145, 83)
+        return {
+            'blue': (b > 115) & (b - r > 60) & (b - g > 35) & (r < 110) & (g < 140),
+            'green': (g > 110) & (g - r > 70) & (g - b > 30) & (r < 100),
+            'black': (mx < 60) & (mx - mn < 25) & (g - r < 12),
+        }
     return {
         'blue': (r < 40) & (g > 120) & (g < 185) & (b > 190) & (b - g > 40),
         'green': (r < 50) & (g > 130) & (g < 200) & (b < 120) & (g - b > 50) & (g - r > 100),
@@ -284,14 +290,14 @@ def sign_boxes(A, pad=8):
             if w > 60 and h > 25 and a > 0.5 * w * h]
 
 
-def run(png, excludes, out, debug=None, min_len=30, text_max=36, k=1.0, source=None):
+def run(png, excludes, out, debug=None, min_len=30, text_max=36, k=1.0, source=None, palette='vail'):
     A = np.asarray(Image.open(png).convert('RGB'))
     H, W = A.shape[:2]
     boxes = sign_boxes(A, pad=int(round(6 * k)))
     excludes = list(excludes) + boxes
     res = []
     dbg = np.full((H, W, 3), 255, np.uint8) if debug else None
-    for cls, m in masks(A).items():
+    for cls, m in masks(A, palette).items():
         cm = clean(m, excludes, k=k, text_max=text_max)
         sk = skeletonize(cm)
         adj = prune(graph(sk), 12)
@@ -322,11 +328,14 @@ def main():
     ap.add_argument('--k', type=float, default=1.0, help='scale of symbols and dashes relative to Vail Front Side')
     ap.add_argument('--text-max', type=int, default=36, help='largest glyph extent (px) to treat as text')
     ap.add_argument('--min-len', type=int, default=30, help='shortest piece kept (px)')
+    ap.add_argument('--palette', default='vail', choices=['vail', 'steamboat'],
+                    help="the colour masks: Vail's 2025-26 palette, or Steamboat's 2026-27")
     ap.add_argument('--debug', help='write the kept line pixels per class here')
     ap.add_argument('--source', help='text for the _source field')
     a = ap.parse_args()
     ex = [tuple(int(v) for v in e.split(',')) for e in a.exclude]
-    run(a.image, ex, a.out, debug=a.debug, min_len=a.min_len, text_max=a.text_max, k=a.k, source=a.source)
+    run(a.image, ex, a.out, debug=a.debug, min_len=a.min_len, text_max=a.text_max, k=a.k, source=a.source,
+        palette=a.palette)
 
 
 if __name__ == '__main__':

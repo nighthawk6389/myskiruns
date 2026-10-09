@@ -9,8 +9,8 @@ report decides spellings (docs/trail-map-playbook.md, Part 1, "Conventions for t
 
 --report: a report.json ({_source, <key>: [[name, area, rating], ...]}, as feed_trails.py writes it), default the
 resort's tools/trailmap/resorts/<id>/report.json; --key: its list (default: trails). Ratings are compared as the
-app's: Green, Blue (DoubleBlue too: advanced intermediate), Black, DoubleBlack (Extreme too) map to green, blue,
-black, double-black; TerrainPark is left out of the rating check (the app rates parks by the map). Names match on
+app's: Green, Blue (DoubleBlue and BlueBlack too: advanced intermediate), Black, DoubleBlack (Extreme too) map to
+green, blue, black, double-black; TerrainPark is left out of the rating check (the app rates parks by the map). Names match on
 their letters and digits, upper-cased, with "The" dropped (Black Forest = The Black Forest). A run the report splits into
 parts ("Lily (Upper)", "Lily (Lower)") stands for the map's one run of that name (or its "Lower Lily").
 """
@@ -23,7 +23,8 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from resort_files import resort_files, trail_info  # noqa: E402
 
-RATING = {'green': 'green', 'blue': 'blue', 'doubleblue': 'blue', 'black': 'black', 'doubleblack': 'double-black',
+RATING = {'green': 'green', 'blue': 'blue', 'doubleblue': 'blue', 'blueblack': 'blue', 'black': 'black',
+          'doubleblack': 'double-black',
           'extreme': 'double-black',
           'beginner': 'green', 'intermediate': 'blue', 'advanced': 'black', 'expert': 'double-black'}
 

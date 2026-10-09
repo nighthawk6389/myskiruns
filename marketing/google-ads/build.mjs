@@ -304,6 +304,21 @@ const RESORT_ADS = {
       'mountain bike', 'bike', 'hiking', 'concert', 'amphitheater', 'grocery',
     ],
   },
+  steamboat: {
+    short: 'Steamboat',
+    path: 'Steamboat',
+    area: 'Mt. Werner to Mahogany Ridge',
+    // bare "steamboat" means boats: only with the resort's names or a map
+    names: ['steamboat ski resort', 'steamboat springs', 'steamboat resort'],
+    keywords: [
+      ['steamboat trail map', 'exact'],
+      ['steamboat ski map', 'exact'],
+      ['steamboat ski map', 'phrase'],
+      ['steamboat ski trails', 'phrase'],
+    ],
+    // the boats, the river and the town's other trails and springs
+    negatives: ['boat', 'boats', 'paddle', 'river', 'cruise', 'willie', 'hot springs', 'strawberry', 'fish creek', 'rabbit ears pass'],
+  },
   'mt-bachelor': {
     short: 'Mt. Bachelor',
     path: 'Mt-Bachelor',

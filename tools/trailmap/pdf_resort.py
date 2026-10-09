@@ -15,7 +15,8 @@ The resort's folder holds
                 where they apply (the other resort folders use them): JOIN_GAP, MATCH_ENDS, ALONG_SHORT,
                 ALONG_NEAREST, SYMBOL_CENTRE, CUT_AT_SYMBOLS, SYMBOL_OFF_LINE, LOOSE_SYMBOLS, ON_CIRCLE, SYMBOL_OF,
                 DEFAULT_SYMBOL, RATING, COLOR_SYMBOL, AS_PRINTED, AREA_OF, SPLIT, GLADE_LINES, NO_STRETCH_BESIDE,
-                RENAME_AT, NOT_GLADES, NAMES, ALONG_FIRST
+                RENAME_AT, NOT_GLADES, NAMES, ALONG_FIRST, GROUPED (pieces and symbols that carry their trail's
+                name: an interactive map's groups, Steamboat)
   decisions.py  CHECKED / UNNAMED / CUTS / TRACED (and TRIMS), all keyed by points in map px (see its docstring)
   header.txt    the comment at the top of trails.ts
   regen.sh      the extraction, then this
@@ -184,7 +185,8 @@ class Resort:
         raw = raw['labels'] if isinstance(raw, dict) else raw  # pdf_glyphs.py: {labels, symbols}
         L = [{'text': l['text'], 'pts': [self.px(p) for p in l['pts']], 'c': self.px(l['c']), 'seq': l.get('seq', 0),
               'color': l['color'] if isinstance(l.get('color'), str) else tuple(l.get('color') or ()),
-              'size': l.get('size', 0), 'glade': l.get('glade')} for l in raw if R.is_name(l)]
+              'size': l.get('size', 0), 'glade': l.get('glade'), 'two_line': l.get('two_line')}
+             for l in raw if R.is_name(l)]
         near = 0.8 * R.SCALE  # px: two characters this close are one character drawn twice
         L += self.letter_runs(L)
         # one copy per printed name (a halo pass, the letters of a curved label, a recoloured copy); spaces aside
@@ -238,7 +240,6 @@ class Resort:
                 keep.append({'text': ' '.join(t for t, _q in parts), 'pts': pts, 'color': chain[0].get('color'),
                              'c': (sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts))})
         drop = getattr(R, 'DROP', [])
-        spelled = {spelling_key(nm): nm for nm in getattr(R, 'NAMES', ())}
         out = []
         for l in keep:
             if any(t == l['text'] and (q is None or math.dist(q, l['c']) < 40) for t, q in drop):
@@ -250,13 +251,18 @@ class Resort:
                          and math.dist(q, l['c']) < 40), name)
             # resort.NAMES: the resort's own trail names (its trail report): a name printed in another case or
             # punctuation (Big Sky's capitals) takes the report's spelling
-            name = spelled.get(spelling_key(name), name)
+            name = self.spelled(name)
             out.append({'name': name, 'pts': l['pts'], 'c': l['c'],
-                        'printed': l['text'], 'color': l.get('color'), 'glade': l.get('glade')})
+                        'printed': l['text'], 'color': l.get('color'), 'glade': l.get('glade'),
+                        **({'two_line': True} if l.get('two_line') else {})})
         for e in getattr(R, 'EXTRA', []):  # names printed some other way (another font, a sign): name, x, y
             out.append({'name': e[0], 'pts': [tuple(e[1:3])], 'c': tuple(e[1:3]), 'printed': None,
                         'symbol': e[3] if len(e) > 3 else None})
         return sorted(out, key=lambda n: (round(n['c'][1]), round(n['c'][0]), n['name']))  # a stable order
+
+    def spelled(self, name):
+        """resort.NAMES: the resort's own spelling of a name read some other way (case, spaces, punctuation)."""
+        return {spelling_key(nm): nm for nm in getattr(self.R, 'NAMES', ())}.get(spelling_key(name), name)
 
     def letter_runs(self, L):
         """A curved label is also drawn one object per letter: join consecutive single letters of one colour (by
@@ -314,10 +320,27 @@ class Resort:
             syms = [{'t': s['type'], 'c': tuple(s['src']), 'r': s['sizePt'] * self.R.SCALE / 2}
                     for s in self.load('symbols.json')]
         else:  # pdf_glyphs.py's symbols, in PDF points
-            syms = [{'t': s['t'], 'c': self.px(s['c']), 'r': 1.5 * self.R.SCALE}
-                    for s in self.load('printed.json')['symbols']]
+            syms = [{'t': s['t'], 'c': self.px(s['c']), 'r': 1.5 * self.R.SCALE, 'group': s.get('group'),
+                     'far': s.get('far')} for s in self.load('printed.json')['symbols']]
         joined = {join_text(parts) for parts in getattr(self.R, 'JOIN', [])}
         used_s, used_n = set(), set()
+        # a symbol its source groups with its trail's name (an interactive map's group, resort.GROUPED): each label of
+        # that name takes the nearest within reach of its ends, then a label still without one the group's nearest
+        # (a glade's, printed over its name; or one marked far: not where the source has it); the others, printed
+        # along the line, are left over
+        grouped = []
+        for i, s in enumerate(syms if getattr(self.R, 'GROUPED', False) else ()):
+            nm = self.spelled(getattr(self.R, 'RENAME', {}).get(s['group'], s['group'])) if s.get('group') else None
+            for j, n in enumerate(names):
+                if n['name'] == nm and n['printed']:
+                    d = min(math.dist(s['c'], p) for p in (n['pts'][0], n['pts'][-1]))
+                    grouped.append((bool(s.get('far')) or d > 2 * self.R.SYMBOL_REACH * self.R.SCALE, d, i, j))
+        for far, d, i, j in sorted(grouped):
+            if i not in used_s and j not in used_n:
+                used_s.add(i); used_n.add(j)
+                names[j]['symbol'] = syms[i]['t']
+                if not far:  # (a far one rates the name but is no end of it)
+                    names[j]['sym'] = syms[i]
         for q, name in getattr(self.R, 'SYMBOL_OF', []):  # a symbol printed beside its name but out of reach
             i = min(range(len(syms)), key=lambda i: math.dist(syms[i]['c'], q))
             j = next((j for j, n in enumerate(names) if n['name'] == name), None)
@@ -333,7 +356,8 @@ class Resort:
             for j, n in enumerate(names):
                 if n.get('symbol') is not None or not n['printed']:
                     continue
-                ends = n['pts'] if n['printed'] in joined else (n['pts'][0], n['pts'][-1])  # two lines: any end
+                ends = (n['pts'] if n['printed'] in joined or n.get('two_line')  # two lines: any end
+                        else (n['pts'][0], n['pts'][-1]))
                 if getattr(self.R, 'SYMBOL_CENTRE', False):  # symbols printed above or below the middle of a name
                     ends = list(ends) + [n['c']]
                 d = min(math.dist(s['c'], p) for p in ends)
@@ -400,7 +424,8 @@ class Resort:
         first, second = p['pt'][:i] + [c], [c] + p['pt'][i:]
         p['pt'], p['points'], p['lengthPx'] = first, self.pct(first), round(length(first))
         P.append({'id': len(P), 'cls': p['cls'], 'lengthPx': round(length(second)), 'points': self.pct(second),
-                  'pt': second, **({'glade': True} if p.get('glade') else {})})
+                  'pt': second, **({'glade': True} if p.get('glade') else {}),
+                  **({'name': p['name']} if p.get('name') else {})})
 
     def cut_at_symbols(self, P, names):
         """Maps that print a run's symbol on (or just beside) its line, with the name after it
@@ -549,6 +574,12 @@ class Resort:
                 if best and best[0] > 0 and not (assign.get(best[1], set()) - {n['name']}):
                     assign[best[1]].add(n['name'])
                     why[best[1]] = f"from the symbol of {n['name']}"
+        # resort.GROUPED: a piece its source names (an interactive map's line, grouped under its trail's name: the
+        # piece's 'name' in pieces.json) takes that name, renamed and spelled as the labels are; the decisions follow
+        for p in P if getattr(R, 'GROUPED', False) else ():
+            if p.get('name'):
+                assign[p['id']] = {self.spelled(getattr(R, 'RENAME', {}).get(p['name'], p['name']))}
+                why[p['id']] = 'its group'
         fixed = set()
         for q, name in D.CHECKED:
             pid = self.resolve(P, q)
@@ -602,6 +633,7 @@ class Resort:
                           assign.get(pid) == {n['name']} and runs_along(n, P[pid])[0] for pid in assign)}
         for j, n in enumerate(names):
             if (n['name'] in along and j not in beside and n['printed'] and n['printed'] not in two_line
+                    and not n.get('two_line')
                     and not glade_name(R, n['name'])):
                 pts = self.stretch(n)
                 if doubles_back(pts):

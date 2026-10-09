@@ -5,8 +5,8 @@ area. It is the best check on a map's reading: names as the resort spells them (
 abbreviations), the rating of each run against the symbol printed by it, the area or lift pod each belongs to, and
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
-Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley and Mt. Bachelor keep it as
-`tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor and Steamboat
+keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -63,7 +63,9 @@ curl -sS -o work/palisades-tahoe/feed.json "https://mtnpowder.com/feed/v3.json?b
 Every trail with its rating and lift area (Palisades Tahoe's id is 61, in the config). `feed_trails.py` reads such a
 feed into `report.json` rows (its areas are the feed's MountainAreas; the rating is read from each trail's icon, as
 labels differ by resort: Deer Valley calls a single diamond "Expert"). Deer Valley's (`deer-valley.json`, resort 49)
-was fetched out of season, every trail "closed for season": the season's list all the same.
+was fetched out of season, every trail "closed for season": the season's list all the same. So was Steamboat's
+(`steamboat.json`, resort 6), whose advanced-intermediate icon is BlueBlackSquare (a blue square and a black
+diamond: blue in the app).
 
 ## Big Sky
 

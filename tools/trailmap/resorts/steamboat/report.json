@@ -1,0 +1,995 @@
+{
+ "_source": "Steamboat's trail report: the mtnpowder feed (resort 6; the bearer token from v4.mtnfeed.com/resorts/steamboat.json) as fetched on 2026-10-09, out of season, every trail closed: the list all the same",
+ "trails": [
+  [
+   "Alarm Clock",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Ambush",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Arc",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Baby Powder",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Bail Out",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Barrows' Bend",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Bashor",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "BC Lift Line",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "BC Ski Way",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Bear Claw",
+   "Steamboat",
+   "BlueBlack"
+  ],
+  [
+   "Between",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Betwixt",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Big Foot",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Big Meadow",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Bird's Beak",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Biscuits",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Black Powder",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Blizzard",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Boulder Field",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Boulevard",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Broadway",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Buckshot",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Buddy's Run Lower",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Buddy's Run Upper",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Bugs' Run",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Cabin Fever",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Calf Roper",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Chaps",
+   "Steamboat",
+   "BlueBlack"
+  ],
+  [
+   "Cheesy Grits",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Christmas Tree Bowl",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Chuckwagon",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Chute 1",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Chute 2",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Chute 3",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Closets",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Concentration",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Corridor",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Cowboy Coffee",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Crowtrack",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Cub",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Cyclone",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Dawn",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Daybreak",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Diamond Hitch",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Distraction",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Drop Out",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Dusk",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Eagles Nest",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "East Face",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Eclipse",
+   "Steamboat",
+   "BlueBlack"
+  ],
+  [
+   "Edge of the World",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Ego",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Endless Gully",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Fairway",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Fawn",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Fetcher Glade",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "First Chance",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Flatout",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Flintlock",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Flying Z",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Flying Z Gulch",
+   "Steamboat",
+   "BlueBlack"
+  ],
+  [
+   "Fools Gold",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Four Points Lift Line",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Frying Pan",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Giggle Gulch",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Granola Bowl",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Gravy",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Half Hitch",
+   "Steamboat",
+   "BlueBlack"
+  ],
+  [
+   "Headwall",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Heavenly Daze",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Highline",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "High Noon",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Hot Cakes",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Huevos",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Huffman's",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Hurricane",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Jess' Cut-Off",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Jump Start",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Kit",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Kuus' Cruise",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Lariat",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Last Chance",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Legends Trees",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Lightning",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Lights Out",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Longhorn",
+   "Steamboat",
+   "BlueBlack"
+  ],
+  [
+   "Lower Concentration",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Lower High Noon",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Lower Valley View",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Mahogany Ridge Lift Line",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Meadow Lane",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Middle Rib",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Moonlight",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Morningside Liftline",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Mother Nature",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Nash Junction",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Nelson's Run",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "No Names",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Norther",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "North St. Pats",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Nostrils",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "One O'Clock",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Oops",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Outlaw",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Over Easy",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Park Lane",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Perry Park",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Pony Express Liftline",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Pressure Drop",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Pup",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Quickdraw",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Rainbow Lower",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Rainbow Upper",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Ramrod",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Rendezvous Way",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Right-O-Way",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Rolex",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Rooster",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Rough Rider",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Rowel",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Royal Flush",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Rudi's Run",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "See Me",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Shadows",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Short Cut",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Sideburn",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Sitz",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Sitzback",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Skeeter's Run",
+   "Steamboat",
+   "BlueBlack"
+  ],
+  [
+   "Skidaddle",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Skyline",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Snooze Bar",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "South Peak Flats",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "So What",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Spike",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Spur Run",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Stampede",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Storm Peak Catwalk",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Storm Peak North",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Storm Peak South",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Sundial",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Sundown Liftline",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Sunnyside",
+   "Steamboat",
+   "BlueBlack"
+  ],
+  [
+   "Sunset",
+   "Steamboat",
+   "BlueBlack"
+  ],
+  [
+   "Sunshine Lift Line Lower",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Sunshine Lift Line Upper",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Surprise",
+   "Steamboat",
+   "BlueBlack"
+  ],
+  [
+   "Swinger",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Ted's Ridge",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "The Gully",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "The Ridge",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Thick of It",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Three O'Clock",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Tomahawk",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Tomahawk Face",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Tornado",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Tornado Lane",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Tower",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Traverse",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Triangle 3",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Trick Roper",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Twilight",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Twister",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Two O'Clock",
+   "Steamboat",
+   "BlueBlack"
+  ],
+  [
+   "Two Step",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Typhoon",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Ultimate Glades",
+   "Steamboat",
+   "DoubleBlack"
+  ],
+  [
+   "Vagabond Lower",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Vagabond Upper",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Valley View",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Velvet",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Vertigo",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Vogue",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "Voo Doo",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Vortex",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Wake Up Call",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Wapiti",
+   "Steamboat",
+   "Blue"
+  ],
+  [
+   "West Side",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "White Out",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Why Not Lower",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Why Not Upper",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Wild Blue Way",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "WJW",
+   "Steamboat",
+   "Black"
+  ],
+  [
+   "Yoo Hoo",
+   "Steamboat",
+   "Green"
+  ],
+  [
+   "Chisholm Trail",
+   "Snowshoe Trails",
+   "Snowshoe"
+  ],
+  [
+   "Duster",
+   "Snowshoe Trails",
+   "Snowshoe"
+  ],
+  [
+   "Lil' Rodeo Park",
+   "Terrain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Maverick's Half Pipe",
+   "Terrain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Rabbit Ears Terrain Park",
+   "Terrain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Gate 1",
+   "Boundary Access Gates",
+   "DoubleBlack"
+  ],
+  [
+   "Gate 2",
+   "Boundary Access Gates",
+   "DoubleBlack"
+  ],
+  [
+   "Gate 3",
+   "Boundary Access Gates",
+   "DoubleBlack"
+  ],
+  [
+   "Gate 4",
+   "Boundary Access Gates",
+   "DoubleBlack"
+  ],
+  [
+   "Gate 5",
+   "Boundary Access Gates",
+   "DoubleBlack"
+  ],
+  [
+   "Gate 6",
+   "Boundary Access Gates",
+   "DoubleBlack"
+  ],
+  [
+   "Gate 7",
+   "Boundary Access Gates",
+   "DoubleBlack"
+  ],
+  [
+   "Gate 8",
+   "Boundary Access Gates",
+   "DoubleBlack"
+  ],
+  [
+   "Hogan Park",
+   "Boundary Access Gates",
+   "DoubleBlack"
+  ]
+ ]
+}

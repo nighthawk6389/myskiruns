@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's twenty-three resorts got their overlays, written so the next resort (or the next season of one of
+How the app's twenty-four resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -66,6 +66,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor | Mt. Bachelor |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
 | a painting with no lines, names as text | every run traced along its painted cut by trace readers (Part 4) | Jay Peak | Jay Peak |
+| only raster images, but an interactive map whose SVG draws the same artwork (Alterra's resorts-interactive.com) | `vicomap.py parse --detail`: its lines, letters and symbols grouped by trail; registered on the image, each line routed onto the image's own line, named by its group (`GROUPED`); the print's redrawn spots traced (`trace_ink.py`) | Steamboat | Steamboat |
 | only raster images | `raster_lines.py` + `raster_symbols.py` (or `lineDetector.mjs`), pieces named on review tiles or by readers | Vail (three panels), Killington | Vail |
 
 - **A low-resolution painting under good vectors:** `matte_pdf_layer.py` mattes the PDF's vector layer over a
@@ -282,8 +283,9 @@ What the tools would do, untried:
   (`reports/fetch_page.cjs` saves every response). Vector tiles or GeoJSON with run names are the best source
   there is: lines and names exact. Then draw the overlays on a render of the same data, or register the data on
   the printed map (`register_pages.py`'s method with control points). Raster tiles at the top zoom, stitched,
-  are recipe G. (Met once, as a check rather than a source: Deer Valley's resorts-interactive.com map is the
-  printed map's strokes again in an SVG grouped by trail name, `vicomap.py`; Part 3, "Deer Valley".)
+  are recipe G. (Met twice: Deer Valley's resorts-interactive.com map is the printed map's strokes again in an SVG
+  grouped by trail name, `vicomap.py`, a check there; Steamboat's, the same kind, is its vector source: Part 3,
+  "Deer Valley" and "Steamboat".)
 - **The resort's GIS** (an ArcGIS run layer, as Whistler Blackcomb publishes): names and run lines in map
   coordinates. It is a source of truth, not of overlays: the overlay must follow the drawn line. Fit an affine
   from GIS to map on named lines around each junction (as Whistler Blackcomb's check did), then use it to name
@@ -321,7 +323,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the twenty-three resorts settled, so the next ones come out alike:
+What the twenty-four resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -491,9 +493,10 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 |---|---|
 | `tools/trailmap/extract_pdf_vectors.py` | Numbered pieces straight from a PDF's strokes in the trail colours: `--color`, `--min-width`/`--max-width`, `--append` another class, `--filled` (filled-and-stroked paths), `--outlined` (filled outlines), `--solid` (no dashed ones), `--exclude` boxes (legend, insets), `--min-length` (keep short stubs; with `--max-length` and `--append`, add only the stubs an earlier pass dropped), `--image` (the map at the same scale) |
 | `tools/trailmap/pdf_outline_lines.py` | Numbered pieces from a PDF whose lines are filled outlines, by their centre lines (recipe C): `--color` classes, `--dark` ones taken only `--dark-min` pt long or more, `--max-width`, `--min-length`, `--dash` (chain a dashed line), `--exclude` boxes, `--glyphs` + `--letters` (leave out the names' letters) |
-| `tools/trailmap/raster_lines.py` | Numbered pieces from a raster map: strict colour masks, text and icons dropped, dashes linked, skeleton, junctions joined straight |
+| `tools/trailmap/raster_lines.py` | Numbered pieces from a raster map: strict colour masks (`--palette`: Vail's, Steamboat's), text and icons dropped, dashes linked, skeleton, junctions joined straight |
 | `tools/trailmap/split_pieces.py` | Cuts a piece at a point where it runs into a differently named trail |
 | `tools/trailmap/snap_trace.py` | A few rough points read off a grid crop snapped onto the painted line: a stretch the extraction missed |
+| `tools/trailmap/trace_ink.py` | The cheapest path along the painted line between a few points (`--rgb` or `--dark`): a stretch from its two ends, `--show` to check it |
 | `scripts/lib/lineDetector.mjs`, `scripts/tracePolylines.mjs`, `scripts/evaluateLines.mjs` | Killington's colour-line detector, its vectorisation into pieces, and its ground-truth score (`npm run lines:eval`) |
 
 **Names and symbols**
@@ -533,7 +536,7 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 |---|---|
 | `tools/trailmap/reports/` | A resort's trail report: terrain feeds of Vail Resorts' sites (`fetch_page.cjs`, `extract_feed.py`, `feed_trails.py`), their Common Crawl captures (`cc_query.sh`, `cc_lookup.py`, `warc_to_html.py`), mtnfeed (`feed_trails.py` reads its feed too, and a DOR trail list like Mt. Bachelor's) and others (its README); `compare.py`: a resort's `trails.ts` against its `report.json` (runs only one lists, ratings, spellings; a run the report splits into upper and lower parts stands for the map's one run, or for the parts the map prints apart) |
 | `tools/trailmap/osm_check.py` | OpenStreetMap's runs: `fetch` a box from an Overpass mirror; `check` each piece against the runs projected by a local fit on the named pieces around it |
-| `tools/trailmap/vicomap.py` | A resort's interactive map on resorts-interactive.com (Alterra's resorts): `fetch` its JSON and SVG, `parse` each trail's line and label (grouped by name in the SVG), `fit` the registration on the line pieces, `check` every piece against the trail covering it (`--along`: stretch by stretch), `show` a trail's lines over the map |
+| `tools/trailmap/vicomap.py` | A resort's interactive map on resorts-interactive.com (Alterra's resorts): `fetch` its JSON and SVG, `parse` each trail's line and label (grouped by name in the SVG; `--detail`: each line's style, every fill, the paths outside the groups), `fit` the registration on the line pieces (`fit-ink`: on an image's line pixels, where there are no pieces yet), `check` every piece against the trail covering it (`--along`: stretch by stretch), `show` a trail's lines over the map |
 
 **Looking at pieces and overlays on crops**
 
@@ -603,6 +606,7 @@ give the same.
 | [Heavenly](#heavenly) | current image + older PDF | registration, filled outlines | `regen.sh` | an image-only current map |
 | [Deer Valley](#deer-valley) | a flattened image + the earlier vector PDF; an interactive map | registration, glyph names, interactive-map check | `regen.sh` | an Alterra resort (resorts-interactive.com) |
 | [Mt. Bachelor](#mt-bachelor) | lines and names as filled outlines | `pdf_outline_lines.py`, glyph names | `regen.sh` | lines as filled outlines |
+| [Steamboat](#steamboat) | an image; the interactive map's SVG | `vicomap.py`, lines routed onto the image's, `GROUPED` | `regen.sh` | an image-only map with an interactive map |
 
 ## Killington
 
@@ -1277,6 +1281,44 @@ California, Nevada, Top of Gondola · `tools/trailmap/resorts/heavenly/`.
   square and Marshmallow's circle are printed beside their lines; seven at an overlay's end, each where its run
   starts); `compare.py` against the report; hover 253/254 (the miss where Melbourne's line runs on into Kangaroo's
   lower name, the stretch both share: either name is right).
+
+## Steamboat
+
+189 trails (144 + 45) · Colorado · one map · one area, Steamboat, as the trail report has it ·
+`tools/trailmap/resorts/steamboat/`.
+
+- **Source:** steamboat.com's trail map page links the 2026-27 map as an image only (2400x1682 px; `?w=6000` gets
+  the full size as JPEG, plain curl; without it the CDN sends WebP), with the Morningside Park inset top left. No
+  PDF anywhere (skimap.org has the 2025-26 image at 10156 px, the same artwork with a few runs redrawn:
+  `checks/editions.py`). The interactive map (resorts-interactive.com map 1800; its id found by asking the map API
+  for the ids near Deer Valley's, 1815, as the page sits behind a bot check) is this artwork's vector layer again:
+  every trail's line, letters and symbol in a group named after the trail. It is the vector source.
+- **Route:** `prepare.py`: the SVG parsed (`vicomap.py parse --detail`: each line's stroke and dashes, each group's
+  fills, the stroked paths outside the groups, where a few runs' blue lines are), put on the image by
+  `VICOMAP_AFFINE` (registered on the SVG's painting, then `vicomap.py fit-ink` on the image's blue line pixels),
+  each line routed onto the print's own (the cheapest path through its colour's pixels within 24 px, drawn to the
+  SVG's line; a much longer path, a detour, is not taken) after its ends under a label are cut back; the dashed black
+  copy over an advanced-intermediate run's blue line left out. Symbols are the group's fills shaped like one (four
+  equal sides, a few curves, a black eight-sided outline of 19 units or more is two diamonds); names its other
+  fills, split where they jump, kept on two lines when the second is a line away (`two_line`: no stretch). A name
+  or symbol the print shows elsewhere is moved there if onto its own line, else a symbol only rates its run
+  (`far`). `pdf_resort.py` with `GROUPED`: each piece takes its group's name.
+- **Rebuild:** `tools/trailmap/resorts/steamboat/regen.sh` (10 s); it checks the image's and the SVG's SHA-256 (the
+  interactive map can be redrawn at any time).
+- **The map:** names in the run's colour on a white halo, in a gap of the line; a black run's diamond printed again
+  and again along its line; advanced intermediate is a blue line under black dashes with a square and a diamond
+  (blue here). Chute 1, 2, 3 and Triangle 3 take the number in their group's id. All Out ("closed to public") and
+  the snowshoe trails are left out; the parks, in orange areas in no group, are placed by hand (`EXTRA`).
+- **Truth:** the trail report (`report.json`, the mtnpowder feed, resort 6: `feed_trails.py`; BlueBlackSquare is
+  advanced intermediate). Every rating agrees with the map's; the report's boundary gates aren't on the map.
+- **Where the print differs from the interactive map** (`checks/ink.py` lists each piece's share on the print's line
+  ink, worst first): the 2026-27 artwork redrew the middle of Sunshine (Concentration's line and name, Rudi's Run,
+  Vagabond's head) and the lines by the parks (Bashor, Bear Claw): the SVG's pieces there are `UNNAMED` and the
+  print's lines traced (`TRACED`, read with `trace_ink.py`). A few names stand elsewhere on the print (kept where
+  the SVG has them, with no stretch); the SVG's second Over Easy, in the inset, isn't printed (`DROP`).
+- **Decisions:** 252 pieces named by their group, 116 stretches along names, 5 traced, 11 not trails.
+- **Checked:** every overlay on crops (`overlay_audit.py`); every symbol against its overlay (Mother Nature's is
+  drawn 36 px from where the print has it: rating only); `compare.py` against the report; hover 477/477.
 
 # Part 4. Methods in detail
 

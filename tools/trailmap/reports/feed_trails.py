@@ -15,8 +15,9 @@ without, a summary and the rows are printed. Out of season the feed lists no tra
 
 An mtnpowder feed's areas are its MountainAreas, and its difficulty is read from each trail's icon, not its label
 (Deer Valley labels a single black diamond "Expert" and a double one "Extremely Difficult"): GreenCircle Green,
-BlueSquare Blue, BlueBlueSquare DoubleBlue (advanced intermediate), BlackDiamond Black, DoubleBlackDiamond
-DoubleBlack; a park icon TerrainPark.
+BlueSquare Blue, BlueBlueSquare DoubleBlue (advanced intermediate), BlueBlackSquare BlueBlack (advanced
+intermediate, Steamboat's blue square and black diamond), BlackDiamond Black, DoubleBlackDiamond DoubleBlack; a park
+icon (TerrainPark, Park) TerrainPark.
 
 A DOR trail list (a JSON list of trails, each with name, sector, difficulty, type and season: Mt. Bachelor's
 api.mtbachelor.com/api/v1/dor/drupal/trails, which its trail report page loads) gives its winter alpine and
@@ -32,7 +33,8 @@ CODES = {1: 'Green', 2: 'Blue', 3: 'Black', 4: 'DoubleBlack', 5: 'TerrainPark', 
 
 
 ICONS = {'GreenCircle': 'Green', 'BlueSquare': 'Blue', 'BlueBlueSquare': 'DoubleBlue', 'BlackDiamond': 'Black',
-         'DoubleBlackDiamond': 'DoubleBlack', 'TerrainPark': 'TerrainPark'}
+         'DoubleBlackDiamond': 'DoubleBlack', 'TerrainPark': 'TerrainPark', 'Park': 'TerrainPark',
+         'BlueBlackSquare': 'BlueBlack'}
 
 
 DOR = {'easiest': 'Green', 'more_difficult': 'Blue', 'most_difficult': 'Black', 'extreme': 'DoubleBlack'}

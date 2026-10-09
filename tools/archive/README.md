@@ -276,6 +276,19 @@ Finding sources: skimap.org search and probes (now `tools/trailmap/skimap.py`), 
 | `vail-resorts/fetch_status.cjs` | node fetch_status.cjs <terrain-status-url> <out.html>: save the rendered terrain status page (Vail sites). |
 | `vail-resorts/fetch_vail.cjs` | node fetch_vail.cjs <page-url> <outprefix>: open the resort's trail-map page in a real browser, list the map PDFs it links, and download the winter trail map PDF with the page as referer. |
 
+## steamboat
+
+Steamboat's look at its interactive map's SVG as a vector source: the SVG's elements and strokes summarised
+(`svg_inspect.py`), its lines drawn on the print through a trial affine (`svg_on_map.py`), and each label's best
+offset onto the print's ink (`label_offsets.py`: what showed the 2026-27 artwork moved some names). What they found is
+in `vicomap.py parse --detail` / `fit-ink` and `resorts/steamboat/prepare.py`.
+
+| file | what it did |
+|---|---|
+| `steamboat/svg_inspect.py` | svg_inspect.py <map.svg>: element ids by kind, and the fill:none paths' stroke colour, width and dashes, inside or outside the trail groups |
+| `steamboat/svg_on_map.py` | svg_on_map.py <image> <trails.json> a,b,c,d,e,f <out> [box ...]: the SVG's trail lines (and names) drawn on the image, cropped |
+| `steamboat/label_offsets.py` | Each group's letters' best offset (within 30 px) onto the print's ink in its colour, largest first |
+
 ## sugarbush
 
 The helpers Sugarbush's five tile readers wrote for themselves (label drafts, symbol sheets, writing their result files). Sugarbush's pipeline and readings are in `tools/trailmap/resorts/sugarbush/`.

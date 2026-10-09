@@ -1,0 +1,1402 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "ambush": {
+   "polylines": [
+    13,
+    332
+   ],
+   "confidence": "high",
+   "mapName": "AMBUSH",
+   "note": "its group | along its printed name"
+  },
+  "arc": {
+   "polylines": [
+    79,
+    80,
+    330
+   ],
+   "confidence": "high",
+   "mapName": "ARC",
+   "note": "its group | along its printed name"
+  },
+  "bc-lift-line": {
+   "polylines": [
+    81,
+    325
+   ],
+   "confidence": "high",
+   "mapName": "BC LIFT LINE",
+   "note": "its group | along its printed name"
+  },
+  "bc-ski-way": {
+   "polylines": [
+    90,
+    91,
+    349
+   ],
+   "confidence": "high",
+   "mapName": "BC SKI WAY",
+   "note": "its group | along its printed name"
+  },
+  "baby-powder": {
+   "polylines": [
+    181,
+    182,
+    282
+   ],
+   "confidence": "high",
+   "mapName": "BABY POWDER",
+   "note": "its group | along its printed name"
+  },
+  "bail-out": {
+   "polylines": [
+    1,
+    2,
+    267
+   ],
+   "confidence": "high",
+   "mapName": "BAIL OUT",
+   "note": "its group | along its printed name"
+  },
+  "barrows-bend": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "BARROWS' BEND",
+   "note": "its group"
+  },
+  "bashor": {
+   "polylines": [
+    379
+   ],
+   "confidence": "high",
+   "mapName": "BASHOR",
+   "note": "traced along the drawn line"
+  },
+  "bear-claw": {
+   "polylines": [
+    383
+   ],
+   "confidence": "high",
+   "mapName": "BEAR CLAW",
+   "note": "traced along the drawn line"
+  },
+  "between": {
+   "polylines": [
+    110,
+    111,
+    357
+   ],
+   "confidence": "high",
+   "mapName": "BETWEEN",
+   "note": "its group | along its printed name"
+  },
+  "betwixt": {
+   "polylines": [
+    98,
+    99,
+    351
+   ],
+   "confidence": "high",
+   "mapName": "BETWIXT",
+   "note": "its group | along its printed name"
+  },
+  "big-foot": {
+   "polylines": [
+    116,
+    117,
+    359
+   ],
+   "confidence": "high",
+   "mapName": "BIG FOOT",
+   "note": "its group | along its printed name"
+  },
+  "big-meadow": {
+   "polylines": [
+    22,
+    23,
+    285
+   ],
+   "confidence": "high",
+   "mapName": "BIG MEADOW",
+   "note": "its group | along its printed name"
+  },
+  "black-powder": {
+   "polylines": [
+    238,
+    239,
+    240,
+    271
+   ],
+   "confidence": "high",
+   "mapName": "BLACK POWDER",
+   "note": "its group | along its printed name"
+  },
+  "blizzard": {
+   "polylines": [
+    96,
+    97,
+    333
+   ],
+   "confidence": "high",
+   "mapName": "BLIZZARD",
+   "note": "its group | along its printed name"
+  },
+  "boulevard": {
+   "polylines": [
+    112,
+    113,
+    358
+   ],
+   "confidence": "high",
+   "mapName": "BOULEVARD",
+   "note": "its group | along its printed name"
+  },
+  "broadway": {
+   "polylines": [
+    175,
+    176,
+    336
+   ],
+   "confidence": "high",
+   "mapName": "BROADWAY",
+   "note": "its group | along its printed name"
+  },
+  "buckshot": {
+   "polylines": [
+    198,
+    199,
+    284
+   ],
+   "confidence": "high",
+   "mapName": "BUCKSHOT",
+   "note": "its group | along its printed name"
+  },
+  "buddys-run-lower": {
+   "polylines": [
+    28,
+    29,
+    279
+   ],
+   "confidence": "high",
+   "mapName": "BUDDY'S RUN LOWER",
+   "note": "its group | along its printed name"
+  },
+  "buddys-run-upper": {
+   "polylines": [
+    246
+   ],
+   "confidence": "high",
+   "mapName": "BUDDY'S RUN UPPER",
+   "note": "its group"
+  },
+  "cabin-fever": {
+   "polylines": [
+    215
+   ],
+   "confidence": "high",
+   "mapName": "CABIN FEVER",
+   "note": "its group"
+  },
+  "calf-roper": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "CALF ROPER",
+   "note": "its group"
+  },
+  "chaps": {
+   "polylines": [
+    247,
+    248,
+    327
+   ],
+   "confidence": "high",
+   "mapName": "CHAPS",
+   "note": "its group | along its printed name"
+  },
+  "chuckwagon": {
+   "polylines": [
+    32,
+    33
+   ],
+   "confidence": "high",
+   "mapName": "CHUCKWAGON",
+   "note": "its group"
+  },
+  "concentration": {
+   "polylines": [
+    380
+   ],
+   "confidence": "high",
+   "mapName": "CONCENTRATION",
+   "note": "traced along the drawn line"
+  },
+  "corridor": {
+   "polylines": [
+    223
+   ],
+   "confidence": "high",
+   "mapName": "CORRIDOR",
+   "note": "its group"
+  },
+  "cowboy-coffee": {
+   "polylines": [
+    3,
+    4,
+    263
+   ],
+   "confidence": "high",
+   "mapName": "COWBOY COFFEE",
+   "note": "its group | along its printed name"
+  },
+  "cub": {
+   "polylines": [
+    194,
+    195,
+    275
+   ],
+   "confidence": "high",
+   "mapName": "CUB",
+   "note": "its group | along its printed name"
+  },
+  "cyclone": {
+   "polylines": [
+    40,
+    41,
+    291
+   ],
+   "confidence": "high",
+   "mapName": "CYCLONE",
+   "note": "its group | along its printed name"
+  },
+  "dawn": {
+   "polylines": [
+    75,
+    76,
+    303
+   ],
+   "confidence": "high",
+   "mapName": "DAWN",
+   "note": "its group | along its printed name"
+  },
+  "daybreak": {
+   "polylines": [
+    165,
+    166,
+    331
+   ],
+   "confidence": "high",
+   "mapName": "DAYBREAK",
+   "note": "its group | along its printed name"
+  },
+  "diamond-hitch": {
+   "polylines": [
+    18,
+    19,
+    310
+   ],
+   "confidence": "high",
+   "mapName": "DIAMOND HITCH",
+   "note": "its group | along its printed name"
+  },
+  "distraction": {
+   "polylines": [
+    100,
+    101
+   ],
+   "confidence": "high",
+   "mapName": "DISTRACTION",
+   "note": "its group"
+  },
+  "drop-out": {
+   "polylines": [
+    30,
+    31,
+    322
+   ],
+   "confidence": "high",
+   "mapName": "DROP OUT",
+   "note": "its group | along its printed name"
+  },
+  "dusk": {
+   "polylines": [
+    57,
+    58,
+    292
+   ],
+   "confidence": "high",
+   "mapName": "DUSK",
+   "note": "its group | along its printed name"
+  },
+  "eagles-nest": {
+   "polylines": [
+    106,
+    107,
+    355
+   ],
+   "confidence": "high",
+   "mapName": "EAGLES NEST",
+   "note": "its group | along its printed name"
+  },
+  "eclipse": {
+   "polylines": [
+    262
+   ],
+   "confidence": "high",
+   "mapName": "ECLIPSE",
+   "note": "its group"
+  },
+  "edge-of-the-world": {
+   "polylines": [
+    16,
+    17,
+    321
+   ],
+   "confidence": "high",
+   "mapName": "EDGE OF THE WORLD",
+   "note": "its group | along its printed name"
+  },
+  "ego": {
+   "polylines": [
+    204,
+    205,
+    334
+   ],
+   "confidence": "high",
+   "mapName": "EGO",
+   "note": "its group | along its printed name"
+  },
+  "fairway": {
+   "polylines": [
+    231
+   ],
+   "confidence": "high",
+   "mapName": "FAIRWAY",
+   "note": "its group"
+  },
+  "fawn": {
+   "polylines": [
+    167,
+    168,
+    308
+   ],
+   "confidence": "high",
+   "mapName": "FAWN",
+   "note": "its group | along its printed name"
+  },
+  "fetcher-glade": {
+   "noLine": true,
+   "label": [
+    23.88,
+    41.5
+   ],
+   "confidence": "high"
+  },
+  "first-chance": {
+   "polylines": [
+    24,
+    25
+   ],
+   "confidence": "high",
+   "mapName": "FIRST CHANCE",
+   "note": "its group"
+  },
+  "flatout": {
+   "polylines": [
+    206,
+    340
+   ],
+   "confidence": "high",
+   "mapName": "FLATOUT",
+   "note": "its group | along its printed name"
+  },
+  "flintlock": {
+   "polylines": [
+    189,
+    190,
+    287
+   ],
+   "confidence": "high",
+   "mapName": "FLINTLOCK",
+   "note": "its group | along its printed name"
+  },
+  "flying-z": {
+   "polylines": [
+    220,
+    221,
+    294
+   ],
+   "confidence": "high",
+   "mapName": "FLYING Z",
+   "note": "its group | along its printed name"
+  },
+  "flying-z-gulch": {
+   "polylines": [
+    244,
+    245,
+    296
+   ],
+   "confidence": "high",
+   "mapName": "FLYING Z GULCH",
+   "note": "its group | along its printed name"
+  },
+  "fools-gold": {
+   "polylines": [
+    214
+   ],
+   "confidence": "high",
+   "mapName": "FOOLS GOLD",
+   "note": "its group"
+  },
+  "giggle-gulch": {
+   "polylines": [
+    150,
+    151,
+    366,
+    374
+   ],
+   "confidence": "high",
+   "mapName": "GIGGLE GULCH",
+   "note": "its group | along its printed name"
+  },
+  "half-hitch": {
+   "polylines": [
+    241,
+    293
+   ],
+   "confidence": "high",
+   "mapName": "HALF HITCH",
+   "note": "its group | along its printed name"
+  },
+  "headwall": {
+   "polylines": [
+    137,
+    377
+   ],
+   "confidence": "high",
+   "mapName": "HEADWALL",
+   "note": "its group | along its printed name"
+  },
+  "heavenly-daze": {
+   "polylines": [
+    120,
+    121,
+    354
+   ],
+   "confidence": "high",
+   "mapName": "HEAVENLY DAZE",
+   "note": "its group | along its printed name"
+  },
+  "high-noon": {
+   "polylines": [
+    169,
+    170,
+    278
+   ],
+   "confidence": "high",
+   "mapName": "HIGH NOON",
+   "note": "its group | along its printed name"
+  },
+  "highline": {
+   "polylines": [
+    61,
+    62,
+    273
+   ],
+   "confidence": "high",
+   "mapName": "HIGHLINE",
+   "note": "its group | along its printed name"
+  },
+  "huffmans": {
+   "polylines": [
+    158,
+    341
+   ],
+   "confidence": "high",
+   "mapName": "HUFFMAN'S",
+   "note": "its group | along its printed name"
+  },
+  "hurricane": {
+   "polylines": [
+    55,
+    56,
+    312
+   ],
+   "confidence": "high",
+   "mapName": "HURRICANE",
+   "note": "its group | along its printed name"
+  },
+  "jess-cut-off": {
+   "polylines": [
+    210
+   ],
+   "confidence": "high",
+   "mapName": "JESS' CUT-OFF",
+   "note": "its group"
+  },
+  "kit": {
+   "polylines": [
+    191,
+    192,
+    272
+   ],
+   "confidence": "high",
+   "mapName": "KIT",
+   "note": "its group | along its printed name"
+  },
+  "kuus-cruise": {
+   "polylines": [
+    67,
+    68,
+    295
+   ],
+   "confidence": "high",
+   "mapName": "KUUS' CRUISE",
+   "note": "its group | along its printed name"
+  },
+  "lariat": {
+   "polylines": [
+    207
+   ],
+   "confidence": "high",
+   "mapName": "LARIAT",
+   "note": "its group"
+  },
+  "last-chance": {
+   "polylines": [
+    26,
+    27,
+    286
+   ],
+   "confidence": "high",
+   "mapName": "LAST CHANCE",
+   "note": "its group | along its printed name"
+  },
+  "lightning": {
+   "polylines": [
+    94,
+    95,
+    337
+   ],
+   "confidence": "high",
+   "mapName": "LIGHTNING",
+   "note": "its group | along its printed name"
+  },
+  "lights-out": {
+   "polylines": [
+    209,
+    317
+   ],
+   "confidence": "high",
+   "mapName": "LIGHTS OUT",
+   "note": "its group | along its printed name"
+  },
+  "longhorn": {
+   "polylines": [
+    242,
+    243,
+    301
+   ],
+   "confidence": "high",
+   "mapName": "LONGHORN",
+   "note": "its group | along its printed name"
+  },
+  "lower-concentration": {
+   "polylines": [
+    118,
+    119,
+    353
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CONCENTRATION",
+   "note": "its group | along its printed name"
+  },
+  "lower-high-noon": {
+   "polylines": [
+    173,
+    174,
+    335
+   ],
+   "confidence": "high",
+   "mapName": "LOWER HIGH NOON",
+   "note": "its group | along its printed name"
+  },
+  "lower-valley-view": {
+   "polylines": [
+    144,
+    145,
+    365
+   ],
+   "confidence": "high",
+   "mapName": "LOWER VALLEY VIEW",
+   "note": "its group | along its printed name"
+  },
+  "meadow-lane": {
+   "polylines": [
+    42,
+    43,
+    289
+   ],
+   "confidence": "high",
+   "mapName": "MEADOW LANE",
+   "note": "its group | along its printed name"
+  },
+  "middle-rib": {
+   "polylines": [
+    9,
+    10,
+    314
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE RIB",
+   "note": "its group | along its printed name"
+  },
+  "moonlight": {
+   "polylines": [
+    59,
+    60,
+    329
+   ],
+   "confidence": "high",
+   "mapName": "MOONLIGHT",
+   "note": "its group | along its printed name"
+  },
+  "mother-nature": {
+   "polylines": [
+    213
+   ],
+   "confidence": "high",
+   "mapName": "MOTHER NATURE",
+   "note": "its group"
+  },
+  "nelsons-run": {
+   "polylines": [
+    49,
+    50,
+    316
+   ],
+   "confidence": "high",
+   "mapName": "NELSON'S RUN",
+   "note": "its group | along its printed name"
+  },
+  "norther": {
+   "polylines": [
+    82,
+    83,
+    328
+   ],
+   "confidence": "high",
+   "mapName": "NORTHER",
+   "note": "its group | along its printed name"
+  },
+  "one-oclock": {
+   "polylines": [
+    161,
+    162,
+    302
+   ],
+   "confidence": "high",
+   "mapName": "ONE O'CLOCK",
+   "note": "its group | along its printed name"
+  },
+  "oops": {
+   "polylines": [
+    102,
+    103,
+    344
+   ],
+   "confidence": "high",
+   "mapName": "OOPS",
+   "note": "its group | along its printed name"
+  },
+  "outlaw": {
+   "polylines": [
+    14,
+    15
+   ],
+   "confidence": "high",
+   "mapName": "OUTLAW",
+   "note": "its group"
+  },
+  "over-easy": {
+   "polylines": [
+    222
+   ],
+   "confidence": "high",
+   "mapName": "OVER EASY",
+   "note": "its group"
+  },
+  "park-lane": {
+   "polylines": [
+    230
+   ],
+   "confidence": "high",
+   "mapName": "PARK LANE",
+   "note": "its group"
+  },
+  "pressure-drop": {
+   "polylines": [
+    216,
+    217,
+    307
+   ],
+   "confidence": "high",
+   "mapName": "PRESSURE DROP",
+   "note": "its group | along its printed name"
+  },
+  "pup": {
+   "polylines": [
+    196,
+    197,
+    280
+   ],
+   "confidence": "high",
+   "mapName": "PUP",
+   "note": "its group | along its printed name"
+  },
+  "quickdraw": {
+   "polylines": [
+    187,
+    188,
+    281
+   ],
+   "confidence": "high",
+   "mapName": "QUICKDRAW",
+   "note": "its group | along its printed name"
+  },
+  "rainbow-lower": {
+   "polylines": [
+    249
+   ],
+   "confidence": "high",
+   "mapName": "RAINBOW LOWER",
+   "note": "its group"
+  },
+  "rainbow-upper": {
+   "polylines": [
+    53,
+    54,
+    299
+   ],
+   "confidence": "high",
+   "mapName": "RAINBOW UPPER",
+   "note": "its group | along its printed name"
+  },
+  "ramrod": {
+   "polylines": [
+    200,
+    201,
+    288
+   ],
+   "confidence": "high",
+   "mapName": "RAMROD",
+   "note": "its group | along its printed name"
+  },
+  "rendezvous-way": {
+   "polylines": [
+    193,
+    309
+   ],
+   "confidence": "high",
+   "mapName": "RENDEZVOUS WAY",
+   "note": "its group | along its printed name"
+  },
+  "right-o-way": {
+   "polylines": [
+    135,
+    136,
+    368,
+    378
+   ],
+   "confidence": "high",
+   "mapName": "RIGHT-O-WAY",
+   "note": "its group | along its printed name"
+  },
+  "rolex": {
+   "polylines": [
+    177,
+    178,
+    343
+   ],
+   "confidence": "high",
+   "mapName": "ROLEX",
+   "note": "its group | along its printed name"
+  },
+  "rooster": {
+   "polylines": [
+    5,
+    6,
+    264
+   ],
+   "confidence": "high",
+   "mapName": "ROOSTER",
+   "note": "its group | along its printed name"
+  },
+  "rough-rider": {
+   "polylines": [
+    232,
+    233,
+    364
+   ],
+   "confidence": "high",
+   "mapName": "ROUGH RIDER",
+   "note": "its group | along its printed name"
+  },
+  "rowel": {
+   "polylines": [
+    159,
+    160,
+    342
+   ],
+   "confidence": "high",
+   "mapName": "ROWEL",
+   "note": "its group | along its printed name"
+  },
+  "royal-flush": {
+   "polylines": [
+    11,
+    12,
+    313
+   ],
+   "confidence": "high",
+   "mapName": "ROYAL FLUSH",
+   "note": "its group | along its printed name"
+  },
+  "rudis-run": {
+   "polylines": [
+    381
+   ],
+   "confidence": "high",
+   "mapName": "RUDI'S RUN",
+   "note": "traced along the drawn line"
+  },
+  "see-me": {
+   "polylines": [
+    129,
+    130,
+    370
+   ],
+   "confidence": "high",
+   "mapName": "SEE ME",
+   "note": "its group | along its printed name"
+  },
+  "short-cut": {
+   "polylines": [
+    140,
+    141,
+    373
+   ],
+   "confidence": "high",
+   "mapName": "SHORT CUT",
+   "note": "its group | along its printed name"
+  },
+  "sideburn": {
+   "polylines": [
+    63,
+    64,
+    274
+   ],
+   "confidence": "high",
+   "mapName": "SIDEBURN",
+   "note": "its group | along its printed name"
+  },
+  "sitz": {
+   "polylines": [
+    127,
+    128,
+    367
+   ],
+   "confidence": "high",
+   "mapName": "SITZ",
+   "note": "its group | along its printed name"
+  },
+  "sitzback": {
+   "polylines": [
+    122,
+    123,
+    361
+   ],
+   "confidence": "high",
+   "mapName": "SITZBACK",
+   "note": "its group | along its printed name"
+  },
+  "skeeters-run": {
+   "polylines": [
+    261
+   ],
+   "confidence": "high",
+   "mapName": "SKEETER'S RUN",
+   "note": "its group"
+  },
+  "skidaddle": {
+   "polylines": [
+    108,
+    109,
+    360
+   ],
+   "confidence": "high",
+   "mapName": "SKIDADDLE",
+   "note": "its group | along its printed name"
+  },
+  "skyline": {
+   "polylines": [
+    227,
+    228,
+    319
+   ],
+   "confidence": "high",
+   "mapName": "SKYLINE",
+   "note": "its group | along its printed name"
+  },
+  "snooze-bar": {
+   "polylines": [
+    7,
+    8,
+    266
+   ],
+   "confidence": "high",
+   "mapName": "SNOOZE BAR",
+   "note": "its group | along its printed name"
+  },
+  "so-what": {
+   "polylines": [
+    92,
+    346
+   ],
+   "confidence": "high",
+   "mapName": "SO WHAT",
+   "note": "its group | along its printed name"
+  },
+  "south-peak-flats": {
+   "polylines": [
+    229
+   ],
+   "confidence": "high",
+   "mapName": "SOUTH PEAK FLATS",
+   "note": "its group"
+  },
+  "spike": {
+   "polylines": [
+    202,
+    203,
+    324
+   ],
+   "confidence": "high",
+   "mapName": "SPIKE",
+   "note": "its group | along its printed name"
+  },
+  "spur-run": {
+   "polylines": [
+    156,
+    157,
+    339
+   ],
+   "confidence": "high",
+   "mapName": "SPUR RUN",
+   "note": "its group | along its printed name"
+  },
+  "stampede": {
+   "polylines": [
+    138,
+    139,
+    375
+   ],
+   "confidence": "high",
+   "mapName": "STAMPEDE",
+   "note": "its group | along its printed name"
+  },
+  "storm-peak-catwalk": {
+   "polylines": [
+    208
+   ],
+   "confidence": "high",
+   "mapName": "STORM PEAK CATWALK",
+   "note": "its group"
+  },
+  "storm-peak-north": {
+   "polylines": [
+    225
+   ],
+   "confidence": "high",
+   "mapName": "STORM PEAK NORTH",
+   "note": "its group"
+  },
+  "storm-peak-south": {
+   "polylines": [
+    224
+   ],
+   "confidence": "high",
+   "mapName": "STORM PEAK SOUTH",
+   "note": "its group"
+  },
+  "sundial": {
+   "polylines": [
+    234,
+    235,
+    236,
+    237,
+    265,
+    268
+   ],
+   "confidence": "high",
+   "mapName": "SUNDIAL",
+   "note": "its group | along its printed name"
+  },
+  "sundown-liftline": {
+   "polylines": [
+    69,
+    70,
+    290
+   ],
+   "confidence": "high",
+   "mapName": "SUNDOWN LIFTLINE",
+   "note": "its group | along its printed name"
+  },
+  "sunnyside": {
+   "polylines": [
+    252,
+    253,
+    338
+   ],
+   "confidence": "high",
+   "mapName": "SUNNYSIDE",
+   "note": "its group | along its printed name"
+  },
+  "sunset": {
+   "polylines": [
+    250,
+    251,
+    304
+   ],
+   "confidence": "high",
+   "mapName": "SUNSET",
+   "note": "its group | along its printed name"
+  },
+  "sunshine-lift-line-lower": {
+   "polylines": [
+    258
+   ],
+   "confidence": "high",
+   "mapName": "SUNSHINE LIFT LINE LOWER",
+   "note": "its group"
+  },
+  "sunshine-lift-line-upper": {
+   "polylines": [
+    171,
+    172,
+    276
+   ],
+   "confidence": "high",
+   "mapName": "SUNSHINE LIFT LINE UPPER",
+   "note": "its group | along its printed name"
+  },
+  "surprise": {
+   "polylines": [
+    259,
+    260
+   ],
+   "confidence": "high",
+   "mapName": "SURPRISE",
+   "note": "its group"
+  },
+  "swinger": {
+   "polylines": [
+    152,
+    153,
+    372
+   ],
+   "confidence": "high",
+   "mapName": "SWINGER",
+   "note": "its group | along its printed name"
+  },
+  "teds-ridge": {
+   "polylines": [
+    104,
+    105,
+    348
+   ],
+   "confidence": "high",
+   "mapName": "TED'S RIDGE",
+   "note": "its group | along its printed name"
+  },
+  "three-oclock": {
+   "polylines": [
+    163,
+    164,
+    283
+   ],
+   "confidence": "high",
+   "mapName": "THREE O'CLOCK",
+   "note": "its group | along its printed name"
+  },
+  "tomahawk": {
+   "polylines": [
+    183,
+    184,
+    277
+   ],
+   "confidence": "high",
+   "mapName": "TOMAHAWK",
+   "note": "its group | along its printed name"
+  },
+  "tomahawk-face": {
+   "polylines": [
+    185,
+    186,
+    270
+   ],
+   "confidence": "high",
+   "mapName": "TOMAHAWK FACE",
+   "note": "its group | along its printed name"
+  },
+  "tornado": {
+   "polylines": [
+    47,
+    48,
+    300
+   ],
+   "confidence": "high",
+   "mapName": "TORNADO",
+   "note": "its group | along its printed name"
+  },
+  "tornado-lane": {
+   "polylines": [
+    36,
+    37,
+    305
+   ],
+   "confidence": "high",
+   "mapName": "TORNADO LANE",
+   "note": "its group | along its printed name"
+  },
+  "tower": {
+   "polylines": [
+    77,
+    78,
+    326
+   ],
+   "confidence": "high",
+   "mapName": "TOWER",
+   "note": "its group | along its printed name"
+  },
+  "traverse": {
+   "polylines": [
+    65,
+    66,
+    269
+   ],
+   "confidence": "high",
+   "mapName": "TRAVERSE",
+   "note": "its group | along its printed name"
+  },
+  "trick-roper": {
+   "polylines": [
+    154,
+    155,
+    362
+   ],
+   "confidence": "high",
+   "mapName": "TRICK ROPER",
+   "note": "its group | along its printed name"
+  },
+  "twister": {
+   "polylines": [
+    51,
+    52,
+    311
+   ],
+   "confidence": "high",
+   "mapName": "TWISTER",
+   "note": "its group | along its printed name"
+  },
+  "two-oclock": {
+   "polylines": [
+    256,
+    257,
+    297
+   ],
+   "confidence": "high",
+   "mapName": "TWO O'CLOCK",
+   "note": "its group | along its printed name"
+  },
+  "typhoon": {
+   "polylines": [
+    45,
+    46,
+    298
+   ],
+   "confidence": "high",
+   "mapName": "TYPHOON",
+   "note": "its group | along its printed name"
+  },
+  "ultimate-glades": {
+   "noLine": true,
+   "label": [
+    16.29,
+    34.84
+   ],
+   "confidence": "high"
+  },
+  "vagabond-lower": {
+   "polylines": [
+    86,
+    87,
+    356
+   ],
+   "confidence": "high",
+   "mapName": "VAGABOND LOWER",
+   "note": "its group | along its printed name"
+  },
+  "vagabond-upper": {
+   "polylines": [
+    84,
+    382
+   ],
+   "confidence": "high",
+   "mapName": "VAGABOND UPPER",
+   "note": "its group | traced along the drawn line"
+  },
+  "valley-view": {
+   "polylines": [
+    146,
+    147,
+    347
+   ],
+   "confidence": "high",
+   "mapName": "VALLEY VIEW",
+   "note": "its group | along its printed name"
+  },
+  "velvet": {
+   "polylines": [
+    226,
+    315
+   ],
+   "confidence": "high",
+   "mapName": "VELVET",
+   "note": "its group | along its printed name"
+  },
+  "vertigo": {
+   "polylines": [
+    114,
+    115,
+    350
+   ],
+   "confidence": "high",
+   "mapName": "VERTIGO",
+   "note": "its group | along its printed name"
+  },
+  "vogue": {
+   "polylines": [
+    133,
+    134,
+    371
+   ],
+   "confidence": "high",
+   "mapName": "VOGUE",
+   "note": "its group | along its printed name"
+  },
+  "voo-doo": {
+   "polylines": [
+    131,
+    132,
+    369
+   ],
+   "confidence": "high",
+   "mapName": "VOO DOO",
+   "note": "its group | along its printed name"
+  },
+  "vortex": {
+   "polylines": [
+    34,
+    35,
+    318
+   ],
+   "confidence": "high",
+   "mapName": "VORTEX",
+   "note": "its group | along its printed name"
+  },
+  "wjw": {
+   "polylines": [
+    38,
+    39,
+    323
+   ],
+   "confidence": "high",
+   "mapName": "WJW",
+   "note": "its group | along its printed name"
+  },
+  "wapiti": {
+   "polylines": [
+    20,
+    21,
+    306
+   ],
+   "confidence": "high",
+   "mapName": "WAPITI",
+   "note": "its group | along its printed name"
+  },
+  "west-side": {
+   "polylines": [
+    179,
+    180,
+    345
+   ],
+   "confidence": "high",
+   "mapName": "WEST SIDE",
+   "note": "its group | along its printed name"
+  },
+  "white-out": {
+   "polylines": [
+    218,
+    219,
+    320
+   ],
+   "confidence": "high",
+   "mapName": "WHITE OUT",
+   "note": "its group | along its printed name"
+  },
+  "why-not-lower": {
+   "polylines": [
+    73,
+    74,
+    352
+   ],
+   "confidence": "high",
+   "mapName": "WHY NOT LOWER",
+   "note": "its group | along its printed name"
+  },
+  "why-not-upper": {
+   "polylines": [
+    71,
+    72
+   ],
+   "confidence": "high",
+   "mapName": "WHY NOT UPPER",
+   "note": "its group"
+  },
+  "wild-blue-way": {
+   "polylines": [
+    142,
+    143,
+    376
+   ],
+   "confidence": "high",
+   "mapName": "WILD BLUE WAY",
+   "note": "its group | along its printed name"
+  },
+  "yoo-hoo": {
+   "polylines": [
+    211,
+    212,
+    363
+   ],
+   "confidence": "high",
+   "mapName": "YOO HOO",
+   "note": "its group | along its printed name"
+  }
+ }
+}
