@@ -4,8 +4,9 @@ Ski-run tracker for twenty-one resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
-trail map (Part 1, "Doing a resort", then the closest resort's section in Part
-3) or changing a resort's data (its section in Part 3). Read
+trail map (Part 1, "Doing a resort": the triage and the recipe for the map's
+type, then the closest resort's section in Part 3) or changing a resort's data
+(its section in Part 3). Read
 `docs/killington.md` before changing Killington's original pipeline.
 
 ## Definition of done for trail overlays

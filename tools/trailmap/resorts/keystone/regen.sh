@@ -29,7 +29,7 @@ check() {
 #    map 35939 is the same file for plain curl), and the map's raster from Vail Resorts' image CDN (plain curl
 #    works). A copy placed in $W by hand is used as it is, if its SHA-256 matches.
 if [ ! -f "$W/keystone.pdf" ]; then
-  # behind this sandbox's agent proxy, Chromium needs the proxy CA's public-key pin (the playbook, step 1)
+  # behind this sandbox's agent proxy, Chromium needs the proxy CA's public-key pin (the playbook, Part 4)
   CA=/root/.ccr/agent-proxy-ca.crt
   [ -n "$PIN" ] || [ ! -f $CA ] || export PIN=$(openssl x509 -in $CA -pubkey -noout | openssl pkey -pubin -outform der |
     openssl dgst -sha256 -binary | base64)

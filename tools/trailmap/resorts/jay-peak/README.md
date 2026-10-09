@@ -159,7 +159,7 @@ through a rebuild.
    `readings/` no longer fit (their points are on the old painting). Make the trace groups from the new
    label list (as in `tools/trailmap/runs/jay-peak-trace.json`: every trail
    that is not a named glade or a park, ~8 per group) and run the
-   `trailmap-trace` workflow (playbook step 3b), each re-run into its own
+   `trailmap-trace` workflow (the playbook's Part 4, "Auto-accept the easy ones, trace the hard ones"), each re-run into its own
    output folder. Put the parks' and inset names' markers in a
    `trace_markers.json`.
 3. Check every trace on a crop (`checks/audit_sheets.py`), empty the ones

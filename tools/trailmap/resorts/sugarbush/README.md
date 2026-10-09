@@ -159,7 +159,7 @@ with a new PDF. Redo:
    `checks/uncovered_strokes.py` until every trail-coloured stroke has a piece.
    Look for lines drawn as fills.
 2. Run `regen.sh` up to step 3 (it renders the tiles), then the readers: the
-   `trailmap-readers` workflow (playbook step 3) with
+   `trailmap-readers` workflow (the playbook's Part 4, "Naming pieces with parallel AI readers") with
    `tools/trailmap/runs/sugarbush-readers.json`, its tile groups updated to the
    new `index.json` (one group per column) and its legend checked against the
    new key. Their `result_*.json` replace `readings/`.
@@ -167,7 +167,7 @@ with a new PDF. Redo:
    with no name): `decisions.py` (splits, unnamed connectors), a reading like
    `result_extra.json` for a line the extraction missed, `header.txt`.
 4. Check every diamond (`checks/symbol_sheet.py out.png black`), audit every
-   overlay (`region_audit.py`, `symbol_audit.py`, playbook step 4) and run the
+   overlay (`region_audit.py`, `symbol_audit.py`, the playbook's Part 4) and run the
    hover check.
 
 A person's reviews, if any are ever added in `trailReviews.json` (entries

@@ -58,7 +58,7 @@ in `trailReviews.json`. Change the readings or decisions and re-run.
    ```
    One drawn line carrying two trails: add `(point on it, point to cut at)`
    to `CUTS`.
-5. `regen.sh`, then audit (the playbook's step 4):
+5. `regen.sh`, then audit (the playbook's Part 4, "Auditing on crops, or the human review page"):
    ```bash
    python3 tools/trailmap/region_audit.py --image work/vail/front-side.png \
      --paths src/data/resorts/vail/panels/front-side/trailPaths.json \

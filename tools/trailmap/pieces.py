@@ -1,5 +1,5 @@
-"""Look at a PDF resort's line pieces while settling them on crops (docs/trail-map-playbook.md, step 3c), for a resort
-read by pdf_resort.py (run its regen.sh first: the pieces and their names are in its work folder).
+"""Look at a PDF resort's line pieces while settling them on crops (docs/trail-map-playbook.md, Part 1, step 6),
+for a resort read by pdf_resort.py (run its regen.sh first: the pieces and their names are in its work folder).
 
     python3 tools/trailmap/pieces.py info park-city 2400,1100,2800,1400
         # every piece crossing the box (map px): id, class, name (or ? undecided, - not a trail), how it was named,

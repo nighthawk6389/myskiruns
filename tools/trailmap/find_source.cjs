@@ -1,5 +1,5 @@
 // Find a resort's trail-map files from its own web page, in headless Chromium (Vail Resorts' sites, among others,
-// return an error page to curl but serve a real browser): step 1 of docs/trail-map-playbook.md.
+// return an error page to curl but serve a real browser): triage step 1 in docs/trail-map-playbook.md, Part 1.
 //
 //   node tools/trailmap/find_source.cjs links <page url> [regex]
 //       every response, link, image and data-src URL of the rendered page (scrolled to the bottom, so lazy images

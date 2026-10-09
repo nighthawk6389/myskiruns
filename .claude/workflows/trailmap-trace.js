@@ -1,7 +1,7 @@
 export const meta = {
   name: 'trailmap-trace',
   description: 'Parallel readers trace trails with no drawn line, traverses and uncertain proposals (prompts/4-trace.md)',
-  whenToUse: 'Step 3b of docs/trail-map-playbook.md, before the human review. Pass args like tools/trailmap/runs/stowe-trace.json.',
+  whenToUse: 'Recipes E and F of docs/trail-map-playbook.md (Part 4: the trace pass), before the human review. Pass args like tools/trailmap/runs/stowe-trace.json.',
   phases: [{ title: 'Trace', detail: 'one reader per ~5 trails' }],
 }
 

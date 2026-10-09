@@ -22,7 +22,7 @@ byte for byte.
   1530x1233 pt, PDF 1.6, no metadata. keystoneresort.com returns an error page
   to curl, so `regen.sh` fetches it from inside the trail-map page in headless
   Chromium (`tools/trailmap/fetch_pdf.cjs`; behind this sandbox's agent proxy
-  it sets `PIN` from the proxy CA, as the playbook's step 1 says). skimap.org
+  it sets `PIN` from the proxy CA, as the playbook's Part 4, "Getting a source here" says). skimap.org
   has the same file (same SHA-256, checked 2026-10-07) for plain curl:
   <https://skimap.org/skimaps/view/35939> →
   `https://files.skimap.org/i8kvmxp7f2k2oxqtot6roh55vurt.pdf`. A copy placed in
@@ -295,7 +295,7 @@ render and the scene7 raster, as above, and on crops of the bands). Hover check
    (`?req=imageprops` gives its size). Put both URLs and their SHA-256s in
    `regen.sh`, and delete the old files in the work folder.
 2. Tally the strokes' colours and widths again (`checks/probe.py`, the
-   playbook's step 1): the trail colours, the 1.5 pt and 1 pt widths, the
+   playbook's triage): the trail colours, the 1.5 pt and 1 pt widths, the
    clip (0,90 to 1530,1080) and the legend's exclude box may all move. Check
    that the scene7 raster still covers the whole page (it is stretched to the
    page size) and lies on the PDF: a crop of `map.png` should show no second

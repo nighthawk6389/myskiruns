@@ -31,7 +31,7 @@ if [ ! -f "$W/okemo.pdf" ]; then
   curl -sSfL -o "$W/okemo.pdf.part" "$URL" || true
   if [ "$(head -c 5 "$W/okemo.pdf.part" 2>/dev/null)" != "%PDF-" ]; then
     echo "curl got no PDF from okemo.com; fetching it from inside the trail-map page" >&2
-    CA=/root/.ccr/agent-proxy-ca.crt  # behind this sandbox's agent proxy Chromium needs its CA's pin (playbook, step 1)
+    CA=/root/.ccr/agent-proxy-ca.crt  # behind this sandbox's agent proxy Chromium needs its CA's pin (playbook, Part 4)
     if [ -z "$PIN" ] && [ -f $CA ]; then
       PIN=$(openssl x509 -in $CA -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | base64)
     fi
@@ -107,7 +107,7 @@ python3 $R/steps.py reviews --before "$W/reviews_before.json"
 python3 $R/steps.py person --before "$W/reviews_before.json"
 
 # 8. the review page (tools/trailmap/review/) in $W/review: data.json with the recheck flags and label hints,
-#    the page and the map, ready to publish (playbook, step 4)
+#    the page and the map, ready to publish (playbook, Part 4)
 python3 $T/refresh_review_data.py --review-data "$W/review/data.json" --roster $D/trails.ts \
   --reviews $D/trailReviews.json --recheck "$W/recheck.json" > /dev/null
 python3 $R/steps.py hints

@@ -4,7 +4,8 @@ How the app's twenty-one resorts got their overlays, written so the next resort 
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
-- **Part 1, [Doing a resort](#part-1-doing-a-resort):** the goal, the process step by step, how to pick a route, the
+- **Part 1, [Doing a resort](#part-1-doing-a-resort):** the goal, the process step by step, how to pick a route,
+  [a recipe for each type of map](#recipes-map-type-by-map-type) (with `resort.py`'s settings by symptom), the
   ground rules, the conventions for the judgment calls, the sources of truth, a new season, fixing one trail,
   pitfalls.
 - **Part 2, [Tools](#part-2-tools):** every script, by stage.
@@ -80,6 +81,205 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
   (Heavenly).
 - **Ask for the layered file:** a resort's own Illustrator or PDF export with live layers removes most of the
   work (Killington's metadata shows a flattened Illustrator file).
+
+## Recipes, map type by map type
+
+The table above names the route; this is how to run it. Every recipe ends the same way (Part 1, steps 8-12:
+build, audit every overlay, register, verify, commit), and every one starts with the same hour of triage.
+
+### Triage: the first hour, whatever the map
+
+1. **Get every source there is**, each into `work/<id>/` with its SHA-256 noted: the resort's PDF
+   (`find_source.cjs links <trail-map page> 'pdf|map'`; `fetch_pdf.cjs` where the site refuses curl), the image the
+   site itself shows (Vail Resorts' scene7: `?req=imageprops` gives its full size), and skimap.org's editions
+   (`skimap.py search <name>`, `maps <area>`, `probe <area>`: the current one may be the same file, and an older
+   one may have live layers the current one lacks).
+2. **Read the legend first**, on a crop of the map: what colour is each rating, what are lifts, roads, catwalks,
+   the boundary, closures, parks, glades, slow zones; what symbol goes with each rating; how a name sits on its
+   line (in a gap of it, beside it, on a label box, in a key). Write it down: every later setting comes from it.
+3. **Tally the PDF:** `pdf_inspect.py map.pdf --out work/<id>/inspect` (images with their resolution, strokes by
+   colour and width, fills by colour, text spans by font), then `pdf_classes.py` on the colours the legend
+   named, each class drawn alone. Find the legend's colours in the tally yourself: the trail strokes are often
+   not the most common ones (Hunter's painting is 246,000 vector drawings; its 0.38 pt trail lines are buried
+   among them).
+4. **Recognise the type** from what the tally shows:
+
+| the tally shows | the type | recipe |
+|---|---|---|
+| strokes in the legend's trail colours, at one or two widths, and text spans in a name font | strokes and text | A |
+| those strokes, few or no text spans, thousands of small fills in the name colours | strokes and outlined glyphs | B |
+| no trail-coloured strokes, but long thin fills in the trail colours (and glyph fills) | filled-outline lines | C |
+| this season's PDF flattened or outlined, an older edition (skimap.org) with live layers of the same artwork | an older export registered | D, then A to C |
+| trail strokes, but the names are paint (in the raster) or glyph reading fails | names you can't extract | E |
+| names (text or glyphs) and symbols, no trail lines at all: runs are painted cuts | no drawn lines | F |
+| one big image and nothing else (or no PDF: only a CDN image) | raster only | G |
+
+   A map can mix types (Sunday River: glyph names plus a few text names; Sugarloaf: a raster inset in a vector
+   map; Park City: a redrawn inset at another scale): run each part by its own recipe and join them in
+   `prepare.py`.
+5. **Choose the map image** before anything is numbered (the pieces are on its grid): the page rendered as it is
+   if its painting's own resolution (`pdf_inspect.py`'s dpi / 72 = px per pt) is near the scale you render at; else `matte_pdf_layer.py` over a sharper copy (a CDN copy
+   of the whole map is flattened: `--flattened`), or over a smooth upscale (`--resample`). Check a matte with
+   `matte_check.py`.
+6. **Get the trail report** (`tools/trailmap/reports/README.md`) into `tools/trailmap/resorts/<id>/report.json`;
+   in October use a Common Crawl capture from the season.
+
+### A. Strokes and text (start from Hunter Mountain; Big Sky for several PDFs)
+
+1. `mkdir tools/trailmap/resorts/<id>` and copy Hunter's `regen.sh`, `resort.py`, `decisions.py` (empty its lists),
+   `header.txt`. In `regen.sh`: the source URL and SHA-256, the clip (the painting, without logo bands and
+   panels), the scale (map px per pt: 2 to 5, for a map 4,000-5,000 px wide), each trail colour and the stroke widths that are trails and not
+   lifts or roads (`--min-width`/`--max-width`), `--exclude` boxes for the legend and panels printed on the map,
+   `--min-length 0.8` (the default 4 pt drops lead-in stubs), `--append` passes for odd classes (a rating drawn in
+   pure black, at another width, `--filled`, `--outlined`; dashed access routes left out with `--solid`).
+2. Run `regen.sh` once and look at the pieces over the map before naming anything: `region_audit.py` or
+   `grid_crop.py --pieces work/<id>/pieces.json`. Every drawn trail line should be pieces; nothing else should be.
+3. Names: `pdf_labels.py map.pdf --out printed.json`; in `resort.py`, `is_name(label)` keeps the name font and
+   size. Count the names against the legend's or the report's count. A font with no Unicode map reads as `{N}`:
+   `--glyph N=char` (Winter Park).
+4. Symbols: `pdf_symbols.py --circle <green> --square <blue> --diamond <black>` (`--rounded` for rounded corners,
+   `--max-size` / `--max-diamond` for this map's sizes); check them on `symbol_audit.py --mode diamonds` later.
+5. `python3 tools/trailmap/pdf_resort.py <id> build`: the automatic match; `names.json` marks undecided pieces `?`.
+   Settle each on a zoomed crop (`pieces.py info / pair`, `grid_crop.py --names work/<id>/names.json`, `pieces.py
+   seq` for the drawing order, `osm_check.py check` for which run a line follows past a junction) and record it:
+   `pdf_resort.py <id> add "what the crop showed" x,y=NAME` (a point on the piece, so it survives re-extraction),
+   `x,y=-:"why"` for a line that is no trail. Cut one line carrying two runs with `CUTS`; draw a stretch the map
+   draws but the extraction can't (`snap_trace.py`) with `TRACED`.
+6. Tune `resort.py` by what the crops show (the table below), rebuild, repeat until nothing is `?`.
+7. Then build, audit and register (Part 1, steps 8-12).
+
+### B. Strokes and outlined glyphs (start from Sunday River or Park City; Keystone was the first)
+
+As A, but the names come from `pdf_glyphs.py`, in four passes:
+1. `collect map.pdf --out glyphs.json --color <name colour> ...` (every name colour, the zone colours too;
+   `--exclude` the legend and bars). It keeps the last drawn glyph at each spot (recoloured names sit over last
+   season's colour).
+2. `sheet` draws each unread shape upright and numbered; read the sheet and record it: `read 12=a 13=e ...` into
+   the resort's `letters.json`. Letters are keyed by shape, so another map in the same font reuses them (copy the
+   file first). Read everything; shapes left unread should only be symbols, icons and arrows.
+3. `labels --letters letters.json --square <blue> --diamond <black> --circle <green> --out labels.json`, with this
+   font's quirks: `--space` for word gaps in a condensed font, `--turned nu` (or `WM`) and `--turned-hole 69` (or
+   `dp`) for letters that are one shape turned over, `--rect-squares`, `--rounded`, `--even`, `--double-dist` (a double
+   diamond with a gap), `--circle-curves`, `--reorder` (glyphs drawn out of turn), `--single <colour>` (one-digit
+   keys).
+4. Print every label next to its crop and correct what's wrong (`JOIN` for names on two lines, `DROP`, `RENAME`,
+   `SPLIT` for two names read as one run); a few names may be real text: merge `pdf_labels.py`'s (Sunday River).
+   Then A's steps 5-7.
+
+Watch for: false double diamonds (a diamond drawn twice: Whistler Blackcomb), labels hidden under a later one or
+outside their clip (last season's names left in the file: drop them), names on label boxes over their line
+(`MATCH_ENDS = False`).
+
+### C. Lines drawn as filled outlines (start from Heavenly; Copper Mountain skeletonises instead)
+
+1. Lines: read each outline's centre line from its path (Heavenly's `prepare.py`: split the outline at its two
+   farthest-apart points, pair each point of one side with the nearest of the other; chain a dashed line's
+   outlines in drawing order; skip arrowheads, two curves and a notch; skeletonise an outline with more area than
+   one line of its length). Or rasterise each outline at 6 px/pt and thin it (Copper's `lines.py`: Zhang-Suen, no
+   diagonal steps a 4-neighbour path already joins, spurs under 2.5 pt pruned). Names' letters are dark outlines
+   too: a dark outline is a line only if it is long.
+2. Names and symbols: B's `pdf_glyphs.py` passes.
+3. Then A's steps 5-7. Expect more pieces to settle on crops: centre lines fork at junctions.
+
+### D. An older export registered on this season's map (Wildcat, Heavenly)
+
+When this season's PDF is flattened, outlined or missing but an older export of the same artwork has live layers:
+1. `register_pages.py --pdf old.pdf --page 0 --image this_season.png [--box ...]`: the affine (SIFT, RANSAC); keep
+   it in `resort.py` (`AFFINE`) so a rebuild doesn't depend on feature matching. Expect a median residual well
+   under 1 px; more means another artwork.
+2. Find every difference: warp the old page onto the image and compare region by region; check each old label
+   and piece against the image's ink. Record what this season no longer prints (`GONE`, leave it out) and what it
+   prints anew (`EXTRA`, and `TRACED` for a moved label's stretch).
+3. Extract from the old export with recipe A, B or C, on the image's grid.
+
+### E. Names you can't extract (start from Okemo; Sugarbush)
+
+Try B first: Okemo's outlined names went to readers only because `pdf_glyphs.py` didn't exist yet. When the
+names really are paint:
+1. The pieces as in A step 1 (or G for a raster).
+2. `render_tiles.py --image map.png --polylines linePolylines.json --out work/<id>/tiles`, then the readers
+   workflow (the user opts in: "use a workflow"), with `prompts/0-new-map.md` and an args file like
+   `tools/trailmap/runs/stowe-readers.json` (the legend from triage step 2; tiles grouped by column).
+3. `seed_roster.py` builds `trails.ts` from the readers' labels; `split_pieces.py` cuts their `SPLIT`s;
+   `aggregate_readings.py --labels` writes the proposals and auto-accepts the unanimous ones; the trace pass
+   (`prompts/4-trace.md`) takes the rest; `traces_to_reviews.py` (Part 4, "Naming pieces with parallel AI
+   readers" and "Auto-accept the easy ones, trace the hard ones").
+4. A person's review on the Trail Check page, or Claude's crop audit of every overlay.
+5. Keep every reading in `tools/trailmap/resorts/<id>/readings/` and rebuild from them (Okemo's `regen.sh`):
+   readers aren't deterministic, their saved answers are.
+
+### F. No drawn lines (Jay Peak)
+
+1. Names and symbols from the PDF (text: `pdf_labels.py`; glyphs: B), the trail list from them (`seed_roster.py`).
+2. Every run traced along its painted cut by trace readers (`prompts/4-trace.md`, groups of 5-10 trails), each
+   trace checked on a zoomed crop; a name with no cut is a marker at its label.
+3. Save the traces in `readings/` and rebuild from them in the order they arrived (`TRACE_ORDER`).
+
+### G. Raster only (start from Vail; Killington's detector for a flattened PDF raster)
+
+1. The largest copy there is (Vail Resorts' scene7 at full size, `?fmt=png-alpha&wid=<width>&qlt=100`; a PDF's
+   embedded raster with `extract_pdf_image.py`, not the website's JPEG).
+2. Lines: `raster_lines.py` with a strict colour mask per rating from the legend, `--exclude` for panels and
+   logos, `--k` scaling the mark sizes to the map's; symbols: `raster_symbols.py`. Look at the pieces on crops and
+   tune against points you label, not a pixel score.
+3. Name the pieces on review tiles (`grid_crop.py`) and record every decision as a point on the map (Vail's
+   `decisions.py`, `add.py`), never a piece id: re-tuning the detector renumbers every piece. Stretches the
+   detector breaks (dashes through slow zones, a name printed in the line) are traced with `snap_trace.py`.
+
+### `resort.py` settings, by what the crops show
+
+`pdf_resort.py` reads these from a resort's (or panel's) `resort.py`; Hunter's holds the basic ones.
+
+| what the map does | setting | as at |
+|---|---|---|
+| names in a gap of their line, symbol at one end (the default) | `SYMBOL_REACH`, `END_REACH`, `ALONG` (pt) | Hunter |
+| names on their line (label boxes over it), no gap | `MATCH_ENDS = False`, a larger `ALONG` | Sunday River, Wildcat |
+| names printed beside their line as well as in gaps | `NO_STRETCH_BESIDE = True` | Park City, Big Sky |
+| names between parallel lines | `ALONG_NEAREST = True` | Sunday River's inset |
+| the name's own line is the one it runs along, symbol at one end | `ALONG_FIRST = True` | Big Sky, Heavenly |
+| names of two or three characters (T2, OZ) | `ALONG_SHORT = True` | Sunday River |
+| names on two or more lines | `JOIN`, `JOIN_GAP`, `TWO_LINE` | Hunter, Smugglers' Notch |
+| two names read as one run of glyphs | `SPLIT` | Whistler Blackcomb |
+| text in the name style that isn't a trail; a misprint | `DROP`; `RENAME` | most |
+| a name printed some other way (a sign, another font) or only as a symbol | `EXTRA` | Big Sky (PB & J Way) |
+| the same name for two runs | `RENAME_AT` (by where it is printed), `DISPLAY` | Whistler Blackcomb, Big Sky |
+| the map prints capitals: the report's spellings | `NAMES` (from `report.json`), `DISPLAY` | Big Sky, Heavenly |
+| names in their own case | `AS_PRINTED = True` | Smugglers' Notch |
+| a symbol off its name's line ends, or out of reach | `SYMBOL_OF`; `SYMBOL_CENTRE = True` (above or below the middle) | Park City; Sunday River |
+| a symbol beside its line, not on it | `SYMBOL_OFF_LINE` | Wildcat |
+| symbols and names along the run, not at its start | `CUT_AT_SYMBOLS = False` and `CUTS` by hand | Wildcat |
+| symbols with no name (tree areas) | `LOOSE_SYMBOLS` (what they are) | Wildcat |
+| a misread symbol | `SYMBOL_FIX` | |
+| the rating is the label's colour, not a symbol | `COLOR_SYMBOL` | Smugglers' Notch |
+| names with no symbol, or two | `DEFAULT_SYMBOL`, `RATING` | Heavenly's canyons, Smugglers' Notch |
+| numbered circles referring to a key | `KEY`, `ON_CIRCLE` | Sugarloaf |
+| a leader from a name box to its line | `ON_CIRCLE` (the leader's far end) | Smugglers' Notch |
+| glades: names that don't say so; a "glades" that isn't one; glades drawn as their own line style | `GLADES`; `NOT_GLADES`; `GLADE_LINES` | Whistler Blackcomb |
+| parks; names with no line | `PARKS`; `NO_LINE` (a marker, with why) | Hunter |
+| the whole label is the run's line; no stretch along a name | `LABEL_LINE`; `NO_STRETCH` | Hunter, Heavenly |
+| areas | `AREAS`, `area(c)`, `AREA_OF` (from the report) | Big Sky |
+| several panels | `PANELS` here, a `panels/<panel>/resort.py` each | Whistler Blackcomb |
+| an older export on this season's image | `AFFINE`, `GONE` | Heavenly |
+
+`decisions.py` holds what the crops settled: `CHECKED` (a point on the piece → its name), `UNNAMED` (→ why it is no
+trail), `CUTS`, `TRACED` and `TRIMS` (a line drawn on under another stops where it meets it).
+
+### Map types not met yet
+
+What the tools would do, untried:
+- **An interactive web map** (map tiles, Mapbox or Leaflet): find its tile or data requests
+  (`reports/fetch_page.cjs` saves every response). Vector tiles or GeoJSON with run names are the best source
+  there is: lines and names exact. Then draw the overlays on a render of the same data, or register the data on
+  the printed map (`register_pages.py`'s method with control points). Raster tiles at the top zoom, stitched,
+  are recipe G.
+- **The resort's GIS** (an ArcGIS run layer, as Whistler Blackcomb publishes): names and run lines in map
+  coordinates. It is a source of truth, not of overlays: the overlay must follow the drawn line. Fit an affine
+  from GIS to map on named lines around each junction (as Whistler Blackcomb's check did), then use it to name
+  pieces, like `osm_check.py`.
+- **One PDF with the mountain's sides on two pages:** a panel per page (`--page` on every tool).
+- **A scanned or photographed map:** recipe G with looser masks and more review; expect to trace more stretches.
+- **No map at all online:** ask the resort for the layered file; failing that, skimap.org's most recent edition
+  with a note in the header.
 
 ## Ground rules
 
@@ -348,6 +548,7 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 | `tools/accounts_check.cjs`, `scripts/mockSupabase.cjs` | Accounts on two devices against a stand-in Supabase |
 | `tools/serve_dist.cjs` | Serves a build as Vercel does (cache headers, ETags, gzip), throttled on one shared link if asked |
 | `tools/trailmap/resort_files.py` | Where a resort's files are (for these tools) |
+| `tools/check_doc_paths.py` | Every repo path the docs mention exists: run it after moving or renaming a script |
 
 **Each resort's own:** `tools/trailmap/resorts/<id>/` (Part 3). **Everything else** written along the way, kept as
 a record and not maintained: `tools/archive/` (its README indexes every script).

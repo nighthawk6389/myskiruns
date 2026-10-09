@@ -59,7 +59,7 @@ crop c_cashier.png 270,540,370,700 6
 python3 $C/symsheet.py double-black "$W/sym_dbl.jpg" > /dev/null
 python3 $C/symsheet.py black "$W/sym_blk.jpg" > /dev/null
 
-# the overlay audit: every trail's overlay in its own colour, tagged with its name (the playbook's step 4)
+# the overlay audit: every trail's overlay in its own colour, tagged with its name (the playbook's Part 4)
 rm -rf "$W/audit"
 python3 tools/trailmap/region_audit.py --image "$W/map.png" --paths src/data/resorts/breckenridge/trailPaths.json \
   --trails src/data/resorts/breckenridge/trails.ts --out "$W/audit" --zoom 1.4 --grid 6x4 --area 0,330,4374,2535 > /dev/null

@@ -307,7 +307,7 @@ byte for byte, apart from the first-pass tiles):
 
 1. **Get the new PDF.** Try skimap.org's newest Winter Park Resort map (ski
    area 503) and the resort's maps page. Put its URL and SHA-256 in `regen.sh`.
-   Then tally the stroke colours and widths (the playbook, step 1). Colours
+   Then tally the stroke colours and widths (the playbook's triage). Colours
    shift even between exports of the same artwork (see Source), so update the
    `--color`/width flags, `names.py`'s `COL` and `symbols.py`'s fill colours
    and sizes. Check the map frame: `CLIP` in `regen.sh`, and the `X0, Y0`

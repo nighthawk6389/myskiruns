@@ -4,7 +4,7 @@
 //   PLAYWRIGHT_PATH=$(npm root -g)/playwright node tools/trailmap/fetch_pdf.cjs <page url> <pdf url> <out.pdf>
 //
 // Behind this sandbox's agent proxy (HTTPS_PROXY), Chromium needs the proxy CA's public-key pin: taken from PIN, or
-// worked out from /root/.ccr/agent-proxy-ca.crt when that file exists (the playbook's step 1 has the command).
+// worked out from /root/.ccr/agent-proxy-ca.crt when that file exists (the playbook's Part 4 has the command).
 const { chromium } = require(process.env.PLAYWRIGHT_PATH || 'playwright');
 const { execSync } = require('child_process');
 const fs = require('fs');

@@ -1,7 +1,7 @@
 export const meta = {
   name: 'trailmap-readers',
   description: 'Parallel readers name every numbered line piece of a trail map and record every printed label (prompts/0-new-map.md)',
-  whenToUse: 'Step 3 of docs/trail-map-playbook.md, after render_tiles.py. Pass args like tools/trailmap/runs/stowe-readers.json.',
+  whenToUse: 'Recipe E of docs/trail-map-playbook.md (Part 4: the readers), after render_tiles.py. Pass args like tools/trailmap/runs/stowe-readers.json.',
   phases: [{ title: 'Read', detail: 'one reader per group of neighbouring tiles' }],
 }
 

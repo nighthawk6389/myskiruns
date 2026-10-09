@@ -65,7 +65,7 @@ filled one.
    file comes back unchanged. `steps.py person` then checks that the person's reviews are exactly as before.
 8. **Review page**: `refresh_review_data.py`, `steps.py hints` (label positions for trails with no proposal),
    the page (`tools/trailmap/review/index.html`, titled Okemo Trail Check) and `map.jpg` → `$W/review/`, ready to
-   publish as in the playbook's step 4.
+   publish as in the playbook's Part 4, "Auditing on crops, or the human review page".
 9. **Overlays**: `npm run -s trails:apply -- --resort okemo` → `trailPaths.json` (20 reviewed lines, 104
    proposed, 4 markers: 3 reviewed and Broken Arrow).
 10. **Check**: `pdf_symbols.py --check` → `$W/symbols.json` (128 symbols) and "120/127 trails have a PDF symbol
@@ -171,7 +171,7 @@ A new PDF changes the piece ids, so the readings and decisions here don't carry 
 SHA-256. Then:
 
 1. Save it as `$OKEMO_WORK/okemo.pdf`, tally its stroke colours and widths and draw each class on a blank page
-   (playbook step 1), and fix the URL, the SHA-256 and the extraction flags in `regen.sh` (colours, `--clip`,
+   (the playbook's triage), and fix the URL, the SHA-256 and the extraction flags in `regen.sh` (colours, `--clip`,
    widths). `TILES=1 FORCE=1 regen.sh` then writes its pieces and tiles and stops before the data. If its pieces
    are the old ones (a re-export of the same artwork: compare `$W/pieces.json` with `linePolylines.json` before
    the split), the readings still fit: run `regen.sh` and check the git diff. Otherwise:

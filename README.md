@@ -12,7 +12,7 @@ Mountain, Winter Park, Park City, Big Sky, Palisades Tahoe, Heavenly and Whistle
 Most of the work in this repository is the **trail-map pipeline**: getting every trail's overlay onto its own
 drawn line, with the right name, on maps that were never made to be machine-read. How it is done, resort by
 resort, is in **[docs/trail-map-playbook.md](docs/trail-map-playbook.md)**: start there to add a resort or to
-update one for a new season.
+update one for a new season (its Part 1 has the first hour's triage and a recipe for each type of map).
 
 **Contents:** [Quick start](#quick-start) · [Using the app](#using-the-app) · [Resorts](#resorts) ·
 [How a map gets its overlays](#how-a-map-gets-its-overlays) · [Repository layout](#repository-layout) ·
@@ -175,6 +175,7 @@ work/                    git-ignored: downloads and intermediate files of the pi
 | `node tools/app_flows.cjs [dist]` | phone flows (tap, mark, undo, summary, panels), two tabs, backups |
 | `node tools/offline_check.cjs [dist]` | offline: first visit, reload without the server, a deploy, the load-error screen |
 | `node tools/accounts_check.cjs` | accounts: two devices sign in, sync, edit offline, delete (with `scripts/mockSupabase.cjs`) |
+| `python3 tools/check_doc_paths.py` | every repo path the docs mention exists (after moving or renaming a script) |
 | `node tools/serve_dist.cjs dist 4199` | serve a build the way Vercel serves it (cache headers, ETags; `THROTTLE_MBPS`, `RTT_MS`) |
 
 Every pipeline tool (extraction, glyph reading, matching, audits, OpenStreetMap, trail reports, source finding) is
