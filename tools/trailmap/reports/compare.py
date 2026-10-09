@@ -50,7 +50,7 @@ def main():
     # stand for X when the report has no X of its own (a rating that differs between the parts is listed)
     parts = {}
     for n, area, rating in rows:
-        m = re.fullmatch(r'(.*?)\s*\((Upper|Mid|Middle|Lower)\)', n)
+        m = re.fullmatch(r'(.*?)\s*\((Upper|Mid|Middle|Lower)\)', n, flags=re.I)
         if m:
             r = RATING.get(re.sub(r'[^a-z]', '', str(rating).lower()))
             for k in (key(m.group(1)), key(m.group(2) + ' ' + m.group(1))):
@@ -60,7 +60,9 @@ def main():
             rk[k] = (' / '.join(p[0] for p in ps), ps[0][1], ps[0][2] if len({p[2] for p in ps}) == 1 else None)
     tk = {key(n): (tid, n, d) for tid, (n, d, _) in trails.items()}
     only_app = sorted(v for k, v in tk.items() if k not in rk)
-    covered = {p[0] for k, ps in parts.items() if k in tk for p in ps}
+    # the parts standing for a run in trails.ts, and the rows trails.ts lists under their own names (a run whose
+    # parts the map prints apart)
+    covered = {p[0] for k, ps in parts.items() if k in tk for p in ps} | {r[0] for r in rows if key(r[0]) in tk}
     only_rep = sorted(v for k, v in rk.items() if k not in tk and not set(v[0].split(' / ')) <= covered
                       and v[0] not in covered)
     print(f'{len(trails)} trails in trails.ts, {len(rows)} rows in the report ({len({key(r[0]) for r in rows})} names)')

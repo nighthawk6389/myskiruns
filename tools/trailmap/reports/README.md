@@ -5,7 +5,7 @@ area. It is the best check on a map's reading: names as the resort spells them (
 abbreviations), the rating of each run against the symbol printed by it, the area or lift pod each belongs to, and
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
-Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone and Deer Valley keep it as
+Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley and Mt. Bachelor keep it as
 `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
@@ -72,6 +72,13 @@ The site's own scripts call `https://www.bigskyresort.com/api/reportpal?resortNa
 advanced intermediate, advanced, expert, high exposure). `tools/trailmap/resorts/big-sky/report.json` keeps name,
 area and rating as of 2026-09-24.
 
+## Mt. Bachelor
+
+The lift and trail report page (`mtbachelor.com/the-mountain/lift-trail-report/`) loads its DOR trail list from
+`https://api.mtbachelor.com/api/v1/dor/drupal/trails` (plain curl; `/lifts` the lifts): every trail of every season,
+with its sector and rating (easiest, more difficult, most difficult, extreme). `feed_trails.py` reads such a list
+(the winter alpine and terrain-park trails; its sectors are the areas), as in `resorts/mt-bachelor/README.md`.
+
 ## Smugglers' Notch
 
 `https://www.smuggs.com/conditions/winter-report/` lists every trail with its rating and mountain (rendered by the
@@ -83,7 +90,7 @@ page; read it in headless Chromium, as above, out of the page text).
 |---|---|
 | `fetch_page.cjs` | Renders a page in headless Chromium through the agent proxy; saves the HTML, its text, every JSON-ish response and the list of requests |
 | `extract_feed.py` | Every `X = {json}` assignment of a TerrainStatusFeed-like variable in a page, one JSON file each |
-| `feed_trails.py` | One FR.TerrainStatusFeed → report rows `[name, area, rating]`, printed or written into a `report.json` |
+| `feed_trails.py` | One FR.TerrainStatusFeed, mtnpowder feed or DOR trail list → report rows `[name, area, rating]`, printed or written into a `report.json` |
 | `cc_query.sh` | Common Crawl's CDX index: the captures of a URL pattern in the given crawls (retries) |
 | `cc_lookup.py` | The same without the index server (binary search of `cluster.idx` with range requests); `--fetch` downloads the WARC records |
 | `warc_to_html.py` | One WARC response record → the page's HTML as served |

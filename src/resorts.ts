@@ -142,6 +142,7 @@ export const RESORTS: ResortEntry[] = [
     { id: 'top-of-gondola', name: 'Top of Gondola', paths: () => import('./data/resorts/heavenly/panels/top-of-gondola/trailPaths.json') },
   ], ['Nevada', 'Lake Tahoe']),
   oneMap('deer-valley', 'Deer Valley', 'Utah', () => import('./data/resorts/deer-valley/trails'), () => import('./data/resorts/deer-valley/trailPaths.json'), ['Park City']),
+  oneMap('mt-bachelor', 'Mt. Bachelor', 'Oregon', () => import('./data/resorts/mt-bachelor/trails'), () => import('./data/resorts/mt-bachelor/trailPaths.json'), ['Mount Bachelor', 'Bend']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

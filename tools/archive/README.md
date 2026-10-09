@@ -81,6 +81,7 @@ that rewrote `vicomap.py check` with a KD-tree (`edit_check.py`).
 | `deer-valley/pt.py` | pt.py id@fraction ...: the map px point that far along a piece (for decisions.py points) |
 | `deer-valley/hstack.py` | hstack.py <out> <png> ...: images side by side |
 | `deer-valley/edit_check.py` | The edit that replaced `vicomap.py check`'s brute-force distances with a KD-tree |
+
 ## general
 
 Wrappers and early versions of tools now in the repo: the hover check runs (`tools/trailmap/hover_all.sh`), the regeneration check (`tools/trailmap/regen_all.sh`), the audit sheets (`tools/trailmap/overlay_audit.py`), piece contact sheets and region audits (`tools/trailmap/piece_sheet.py`, `region_audit.py`).
@@ -135,6 +136,18 @@ Heavenly's analyses: registering the 2022-23 PDF on the 2024-25 image (now `tool
 | `scripts/warc_to_html.py` | Split one uncompressed WARC response record into its HTTP headers and body. |
 | `tools/redraw.py` | redraw.py: redraw selected fills of a PDF page on a blank page (pymupdf Shape) and render it. Used as a module: redraw(page, drawings, scale, clip) -> RGB numpy array. |
 
+
+## mt-bachelor
+
+Mt. Bachelor's look into a line the extraction missed (I-5's and Carnival's, drawn as one outline at their
+junction): the PDF drawings under a map point (`near.py`) and `pdf_outline_lines.py`'s tests run on one drawing
+(`dbg_outline.py`). What they found is in `pdf_outline_lines.py` (an outline read by its skeleton when its mean
+width is a line's) and `resorts/mt-bachelor/checks/missed.py`.
+
+| file | what it did |
+|---|---|
+| `mt-bachelor/near.py` | near.py <pdf> x,y ...: the PDF drawings whose box holds each map px point (Mt. Bachelor's clip and scale), with colour, width and drawing order |
+| `mt-bachelor/dbg_outline.py` | dbg_outline.py <pdf> <seqno>: one drawing's outlines through `pdf_outline_lines.py`'s centre line, width, length and area |
 
 ## okemo
 

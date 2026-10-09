@@ -1,0 +1,776 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "backside-bowls-glades": {
+   "noLine": true,
+   "label": [
+    53.26,
+    13.02
+   ],
+   "confidence": "high"
+  },
+  "beverly-hills": {
+   "polylines": [
+    59,
+    60,
+    182
+   ],
+   "confidence": "high",
+   "mapName": "BEVERLY HILLS",
+   "note": "symbol of Beverly Hills | end of Beverly Hills | along its printed name"
+  },
+  "healy-heights": {
+   "polylines": [
+    46,
+    61,
+    181
+   ],
+   "confidence": "high",
+   "mapName": "HEALY HEIGHTS",
+   "note": "symbol of Healy Heights | end of Healy Heights | along its printed name"
+  },
+  "sunrise-getback-upper": {
+   "polylines": [
+    29,
+    31,
+    178
+   ],
+   "confidence": "high",
+   "mapName": "SUNRISE GETBACK (UPPER)",
+   "note": "end of Sunrise Getback (upper) | symbol of Sunrise Getback (upper) | along its printed name"
+  },
+  "wanoga-way": {
+   "polylines": [
+    62,
+    63,
+    134,
+    180,
+    191
+   ],
+   "confidence": "high",
+   "mapName": "WANOGA WAY",
+   "note": "end of Wanoga Way | symbol of Wanoga Way | along its printed name"
+  },
+  "21-road": {
+   "polylines": [
+    109,
+    111,
+    203
+   ],
+   "confidence": "high",
+   "mapName": "21 ROAD",
+   "note": "symbol of 21 Road | end of 21 Road | along its printed name"
+  },
+  "atkesons-zoom": {
+   "polylines": [
+    19,
+    112,
+    113,
+    212,
+    236
+   ],
+   "confidence": "high",
+   "mapName": "ATKESON'S ZOOM",
+   "note": "end of Atkeson's Zoom | symbol of Atkeson's Zoom | along its printed name"
+  },
+  "aussie-alley": {
+   "polylines": [
+    3,
+    102,
+    249
+   ],
+   "confidence": "high",
+   "mapName": "AUSSIE ALLEY",
+   "note": "end of Aussie Alley | symbol of Aussie Alley | along its printed name"
+  },
+  "boomerang": {
+   "polylines": [
+    4,
+    14,
+    15,
+    103,
+    232,
+    251
+   ],
+   "confidence": "high",
+   "mapName": "BOOMERANG",
+   "note": "symbol of Boomerang | end of Boomerang | along its printed name"
+  },
+  "brookies-run": {
+   "polylines": [
+    9,
+    124,
+    125,
+    202,
+    229
+   ],
+   "confidence": "high",
+   "mapName": "BROOKIE'S RUN",
+   "note": "end of Brookie's Run | symbol of Brookie's Run | along its printed name"
+  },
+  "bushwacker": {
+   "polylines": [
+    16,
+    17,
+    237
+   ],
+   "confidence": "high",
+   "mapName": "BUSHWACKER",
+   "note": "end of Bushwacker | symbol of Bushwacker | along its printed name"
+  },
+  "chadalak": {
+   "polylines": [
+    105,
+    106,
+    205
+   ],
+   "confidence": "high",
+   "mapName": "CHADALAK",
+   "note": "symbol of Chadalak | end of Chadalak | along its printed name"
+  },
+  "devils-backbone": {
+   "polylines": [
+    21,
+    22,
+    217
+   ],
+   "confidence": "high",
+   "mapName": "DEVIL'S BACKBONE",
+   "note": "symbol of Devil's Backbone | end of Devil's Backbone | along its printed name"
+  },
+  "downunder": {
+   "polylines": [
+    98,
+    100,
+    241
+   ],
+   "confidence": "high",
+   "mapName": "DOWNUNDER",
+   "note": "symbol of Downunder | end of Downunder | along its printed name"
+  },
+  "downunder-west": {
+   "polylines": [
+    2,
+    12,
+    13,
+    230,
+    254
+   ],
+   "confidence": "high",
+   "mapName": "DOWNUNDER WEST",
+   "note": "symbol of Downunder West | end of Downunder West | along its printed name"
+  },
+  "fish-hawk-wing": {
+   "polylines": [
+    122,
+    123
+   ],
+   "confidence": "high",
+   "mapName": "FISH HAWK WING",
+   "note": "checked on a crop"
+  },
+  "huckleberry-picker": {
+   "polylines": [
+    114,
+    115,
+    247
+   ],
+   "confidence": "high",
+   "mapName": "HUCKLEBERRY PICKER",
+   "note": "symbol of Huckleberry Picker | end of Huckleberry Picker | along its printed name"
+  },
+  "kangaroo": {
+   "polylines": [
+    107,
+    117,
+    127,
+    214,
+    240
+   ],
+   "confidence": "high",
+   "mapName": "KANGAROO",
+   "note": "end of Kangaroo | checked on a crop | along its printed name"
+  },
+  "melbourne": {
+   "polylines": [
+    99,
+    141,
+    215
+   ],
+   "confidence": "high",
+   "mapName": "MELBOURNE",
+   "note": "symbol of Melbourne | end of Melbourne | along its printed name"
+  },
+  "northwest-connection": {
+   "polylines": [
+    118,
+    120,
+    252
+   ],
+   "confidence": "high",
+   "mapName": "NORTHWEST CONNECTION",
+   "note": "symbol of Northwest Connection | end of Northwest Connection | along its printed name"
+  },
+  "northwest-crossover": {
+   "polylines": [
+    104,
+    108
+   ],
+   "confidence": "high",
+   "mapName": "NORTHWEST CROSSOVER",
+   "note": "symbol of Northwest Crossover | end of Northwest Crossover"
+  },
+  "osprey-way": {
+   "polylines": [
+    23,
+    24,
+    25,
+    121,
+    190,
+    208,
+    223
+   ],
+   "confidence": "high",
+   "mapName": "OSPREY WAY",
+   "note": "symbol of Osprey Way | checked on a crop | along its printed name"
+  },
+  "snapshot-bowl": {
+   "polylines": [
+    18,
+    20,
+    196
+   ],
+   "confidence": "high",
+   "mapName": "SNAPSHOT BOWL",
+   "note": "symbol of Snapshot Bowl | end of Snapshot Bowl | along its printed name"
+  },
+  "sparks-lake-run": {
+   "polylines": [
+    1,
+    26,
+    126,
+    198,
+    221
+   ],
+   "confidence": "high",
+   "mapName": "SPARKS LAKE RUN",
+   "note": "symbol of Sparks Lake Run | end of Sparks Lake Run | along its printed name"
+  },
+  "west-bowls-glades": {
+   "noLine": true,
+   "label": [
+    66.3,
+    24.78
+   ],
+   "confidence": "high"
+  },
+  "west-catchline": {
+   "polylines": [
+    27,
+    28,
+    30,
+    177,
+    183
+   ],
+   "confidence": "high",
+   "mapName": "WEST CATCHLINE",
+   "note": "end of West Catchline | symbol of West Catchline | along its printed name"
+  },
+  "avalanche": {
+   "polylines": [
+    54,
+    55,
+    150,
+    151,
+    218,
+    253
+   ],
+   "confidence": "high",
+   "mapName": "AVALANCHE",
+   "note": "symbol of Avalanche | end of Avalanche | along its printed name"
+  },
+  "canyon": {
+   "polylines": [
+    34,
+    91,
+    233,
+    246
+   ],
+   "confidence": "high",
+   "mapName": "CANYON",
+   "note": "symbol of Canyon | end of Canyon | along its printed name"
+  },
+  "carys-runway": {
+   "polylines": [
+    8,
+    235
+   ],
+   "confidence": "high",
+   "mapName": "CARY'S RUNWAY",
+   "note": "end of Cary's Runway | along its printed name"
+  },
+  "cliffs-run": {
+   "polylines": [
+    53,
+    129,
+    219
+   ],
+   "confidence": "high",
+   "mapName": "CLIFF'S RUN",
+   "note": "symbol of Cliff's Run | end of Cliff's Run | along its printed name"
+  },
+  "cliffhanger": {
+   "polylines": [
+    56,
+    57,
+    130,
+    220,
+    243
+   ],
+   "confidence": "high",
+   "mapName": "CLIFFHANGER",
+   "note": "symbol of Cliffhanger | end of Cliffhanger | along its printed name"
+  },
+  "coffee": {
+   "polylines": [
+    86,
+    87,
+    136,
+    227,
+    248
+   ],
+   "confidence": "high",
+   "mapName": "COFFEE",
+   "note": "symbol of Coffee | end of Coffee | along its printed name"
+  },
+  "coffee-west": {
+   "polylines": [
+    33,
+    35,
+    228
+   ],
+   "confidence": "high",
+   "mapName": "COFFEE WEST",
+   "note": "end of Coffee West | symbol of Coffee West | along its printed name"
+  },
+  "corkscrew": {
+   "polylines": [
+    76,
+    250
+   ],
+   "confidence": "high",
+   "mapName": "CORKSCREW",
+   "note": "symbol of Corkscrew | along its printed name"
+  },
+  "dsq": {
+   "polylines": [
+    74,
+    77,
+    78,
+    79,
+    234,
+    258
+   ],
+   "confidence": "high",
+   "mapName": "DSQ",
+   "note": "end of DSQ | symbol of DSQ | checked on a crop | along its printed name"
+  },
+  "eds-garden": {
+   "polylines": [
+    97,
+    101,
+    222,
+    255
+   ],
+   "confidence": "high",
+   "mapName": "ED'S GARDEN",
+   "note": "symbol of Ed's Garden | end of Ed's Garden | along its printed name"
+  },
+  "home-run": {
+   "polylines": [
+    144,
+    145,
+    261
+   ],
+   "confidence": "high",
+   "mapName": "HOME RUN",
+   "note": "symbol of Home Run | end of Home Run | along its printed name"
+  },
+  "iceberg": {
+   "polylines": [
+    89,
+    90,
+    238
+   ],
+   "confidence": "high",
+   "mapName": "ICEBERG",
+   "note": "symbol of Iceberg | end of Iceberg | along its printed name"
+  },
+  "leeway": {
+   "polylines": [
+    138,
+    142,
+    155,
+    156,
+    242,
+    259
+   ],
+   "confidence": "high",
+   "mapName": "LEEWAY",
+   "note": "symbol of Leeway | end of Leeway | along its printed name"
+  },
+  "old-skyliner": {
+   "polylines": [
+    84,
+    85,
+    245
+   ],
+   "confidence": "high",
+   "mapName": "OLD SKYLINER",
+   "note": "symbol of Old Skyliner | end of Old Skyliner | along its printed name"
+  },
+  "olympian": {
+   "polylines": [
+    82,
+    83,
+    226
+   ],
+   "confidence": "high",
+   "mapName": "OLYMPIAN",
+   "note": "end of Olympian | symbol of Olympian | along its printed name"
+  },
+  "outback-way": {
+   "polylines": [
+    96,
+    140,
+    209
+   ],
+   "confidence": "high",
+   "mapName": "OUTBACK WAY",
+   "note": "checked on a crop | end of Outback Way | along its printed name"
+  },
+  "red-shuttle": {
+   "polylines": [
+    93,
+    224
+   ],
+   "confidence": "high",
+   "mapName": "RED SHUTTLE",
+   "note": "end of Red Shuttle | along its printed name"
+  },
+  "skyliner-liftline": {
+   "polylines": [
+    75,
+    80,
+    256
+   ],
+   "confidence": "high",
+   "mapName": "SKYLINER LIFTLINE",
+   "note": "end of Skyliner Liftline | symbol of Skyliner Liftline | along its printed name"
+  },
+  "summit-crossover": {
+   "polylines": [
+    153,
+    154,
+    210
+   ],
+   "confidence": "high",
+   "mapName": "SUMMIT CROSSOVER",
+   "note": "symbol of Summit Crossover | end of Summit Crossover | along its printed name"
+  },
+  "sunshine": {
+   "polylines": [
+    146,
+    147,
+    260
+   ],
+   "confidence": "high",
+   "mapName": "SUNSHINE",
+   "note": "symbol of Sunshine | end of Sunshine | along its printed name"
+  },
+  "thunderbird": {
+   "polylines": [
+    88,
+    137,
+    139,
+    225,
+    257
+   ],
+   "confidence": "high",
+   "mapName": "THUNDERBIRD",
+   "note": "symbol of Thunderbird | end of Thunderbird | along its printed name"
+  },
+  "tippy-toe": {
+   "polylines": [
+    10,
+    11,
+    244
+   ],
+   "confidence": "high",
+   "mapName": "TIPPY TOE",
+   "note": "symbol of Tippy Toe | end of Tippy Toe | along its printed name"
+  },
+  "west-boundary": {
+   "polylines": [
+    92,
+    94
+   ],
+   "confidence": "high",
+   "mapName": "WEST BOUNDARY",
+   "note": "checked on a crop"
+  },
+  "west-village-getback": {
+   "polylines": [
+    7,
+    152,
+    239
+   ],
+   "confidence": "high",
+   "mapName": "WEST VILLAGE GETBACK",
+   "note": "symbol of West Village Getback | end of West Village Getback | along its printed name"
+  },
+  "alpenglow": {
+   "polylines": [
+    161,
+    162,
+    231
+   ],
+   "confidence": "high",
+   "mapName": "ALPENGLOW",
+   "note": "symbol of Alpenglow | end of Alpenglow | along its printed name"
+  },
+  "bluebird": {
+   "polylines": [
+    36,
+    131,
+    216
+   ],
+   "confidence": "high",
+   "mapName": "BLUEBIRD",
+   "note": "symbol of Bluebird | end of Bluebird | along its printed name"
+  },
+  "carnival": {
+   "polylines": [
+    45,
+    47,
+    157,
+    159,
+    197,
+    211
+   ],
+   "confidence": "high",
+   "mapName": "CARNIVAL",
+   "note": "symbol of Carnival | end of Carnival | along its printed name"
+  },
+  "chicken-foot": {
+   "polylines": [
+    173,
+    174,
+    200
+   ],
+   "confidence": "high",
+   "mapName": "CHICKEN FOOT",
+   "note": "end of Chicken Foot | symbol of Chicken Foot | along its printed name"
+  },
+  "cirrus": {
+   "polylines": [
+    72,
+    73,
+    201
+   ],
+   "confidence": "high",
+   "mapName": "CIRRUS",
+   "note": "symbol of Cirrus | end of Cirrus | along its printed name"
+  },
+  "cloudchaser-crossover": {
+   "polylines": [
+    50,
+    51,
+    194
+   ],
+   "confidence": "high",
+   "mapName": "CLOUDCHASER CROSSOVER",
+   "note": "end of Cloudchaser Crossover | symbol of Cloudchaser Crossover | along its printed name"
+  },
+  "convergence-zone": {
+   "polylines": [
+    43,
+    44,
+    186
+   ],
+   "confidence": "high",
+   "mapName": "CONVERGENCE ZONE",
+   "note": "symbol of Convergence Zone | end of Convergence Zone | along its printed name"
+  },
+  "day-break": {
+   "polylines": [
+    165,
+    168
+   ],
+   "confidence": "high",
+   "mapName": "DAY BREAK",
+   "note": "checked on a crop"
+  },
+  "early-riser": {
+   "polylines": [
+    169,
+    170
+   ],
+   "confidence": "high",
+   "mapName": "EARLY RISER",
+   "note": "checked on a crop"
+  },
+  "east-catchline": {
+   "polylines": [
+    5,
+    32,
+    179
+   ],
+   "confidence": "high",
+   "mapName": "EAST CATCHLINE",
+   "note": "end of East Catchline | symbol of East Catchline | along its printed name"
+  },
+  "flying-dutchman": {
+   "polylines": [
+    39,
+    40,
+    189
+   ],
+   "confidence": "high",
+   "mapName": "FLYING DUTCHMAN",
+   "note": "symbol of Flying Dutchman | end of Flying Dutchman | along its printed name"
+  },
+  "green-flash": {
+   "polylines": [
+    163,
+    166
+   ],
+   "confidence": "high",
+   "mapName": "GREEN FLASH",
+   "note": "checked on a crop"
+  },
+  "hemlock": {
+   "polylines": [
+    66,
+    67,
+    185
+   ],
+   "confidence": "high",
+   "mapName": "HEMLOCK",
+   "note": "end of Hemlock | symbol of Hemlock | along its printed name"
+  },
+  "high-pressure": {
+   "polylines": [
+    37,
+    38,
+    206
+   ],
+   "confidence": "high",
+   "mapName": "HIGH PRESSURE",
+   "note": "symbol of High Pressure | end of High Pressure | along its printed name"
+  },
+  "i-5": {
+   "polylines": [
+    41,
+    42,
+    158,
+    160,
+    175,
+    176,
+    193,
+    199,
+    213
+   ],
+   "confidence": "high",
+   "mapName": "I-5",
+   "note": "symbol of I-5 | end of I-5 | along its printed name"
+  },
+  "jet-stream": {
+   "polylines": [
+    132,
+    135,
+    188
+   ],
+   "confidence": "high",
+   "mapName": "JET STREAM",
+   "note": "symbol of Jet Stream | end of Jet Stream | along its printed name"
+  },
+  "marshmallow": {
+   "polylines": [
+    148,
+    149
+   ],
+   "confidence": "high",
+   "mapName": "MARSHMALLOW",
+   "note": "checked on a crop"
+  },
+  "morning-glory": {
+   "polylines": [
+    164,
+    167
+   ],
+   "confidence": "high",
+   "mapName": "MORNING GLORY",
+   "note": "checked on a crop"
+  },
+  "pine-cone": {
+   "polylines": [
+    69,
+    71,
+    192
+   ],
+   "confidence": "high",
+   "mapName": "PINE CONE",
+   "note": "symbol of Pine Cone | end of Pine Cone | along its printed name"
+  },
+  "roostertail": {
+   "polylines": [
+    48,
+    49,
+    52,
+    204
+   ],
+   "confidence": "high",
+   "mapName": "ROOSTERTAIL",
+   "note": "end of Roostertail | symbol of Roostertail | continuation | along its printed name"
+  },
+  "sun-dog": {
+   "polylines": [
+    64,
+    65,
+    184
+   ],
+   "confidence": "high",
+   "mapName": "SUN DOG",
+   "note": "end of Sun Dog | symbol of Sun Dog | along its printed name"
+  },
+  "sunrise-getback-lower": {
+   "polylines": [
+    207
+   ],
+   "confidence": "high",
+   "mapName": "SUNRISE GETBACK (LOWER)",
+   "note": "along its printed name"
+  },
+  "sunrise-getback-middle": {
+   "polylines": [
+    6,
+    133,
+    187
+   ],
+   "confidence": "high",
+   "mapName": "SUNRISE GETBACK (MIDDLE)",
+   "note": "end of Sunrise Getback (middle) | symbol of Sunrise Getback (middle) | along its printed name"
+  },
+  "white-bark": {
+   "polylines": [
+    68,
+    70,
+    195
+   ],
+   "confidence": "high",
+   "mapName": "WHITE BARK",
+   "note": "symbol of White Bark | end of White Bark | along its printed name"
+  }
+ }
+}

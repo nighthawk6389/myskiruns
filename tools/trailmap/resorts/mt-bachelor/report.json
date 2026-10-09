@@ -1,0 +1,665 @@
+{
+ "_source": "Mt. Bachelor's trail report: its DOR trail list (https://api.mtbachelor.com/api/v1/dor/drupal/trails, loaded by mtbachelor.com/the-mountain/lift-trail-report/) as fetched on 2026-10-09, out of season: the winter alpine and terrain-park trails",
+ "trails": [
+  [
+   "Avalanche (Lower)",
+   "Frontside",
+   "Green"
+  ],
+  [
+   "Avalanche (Upper)",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Avalanche West",
+   "Frontside",
+   "Green"
+  ],
+  [
+   "Canyon (lower)",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Canyon (upper)",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Cary's Runway",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Cliff's Run",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Cliffhanger (lower)",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Cliffhanger (middle)",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Cliffhanger (upper)",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Coffee",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Coffee West",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Corkscrew",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "DSQ",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Ed's Garden (upper)",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Grotto",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Home Run",
+   "Frontside",
+   "Green"
+  ],
+  [
+   "Iceberg (lower)",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Iceberg (upper)",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Leeway (lower)",
+   "Frontside",
+   "Green"
+  ],
+  [
+   "Leeway (upper)",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Little Canyon",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Old Skyliner",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Olympian",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Olympian Shuttle",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Outback Way",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Red Liftline",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Red Shuttle",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Shorty",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Skyliner Liftline",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Summit Crossover",
+   "Frontside",
+   "Green"
+  ],
+  [
+   "Sunshine",
+   "Frontside",
+   "Green"
+  ],
+  [
+   "The Cone",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Thunderbird",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Tippy Toe",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "West Boundary",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "West Village Getback",
+   "Frontside",
+   "Green"
+  ],
+  [
+   "Alpenglow",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "Backside Bowls & Glades",
+   "Summit",
+   "DoubleBlack"
+  ],
+  [
+   "Bev's East",
+   "Summit",
+   "Blue"
+  ],
+  [
+   "Beverly Hills",
+   "Summit",
+   "Blue"
+  ],
+  [
+   "Bluebird",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Carnival (lower)",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "Carnival (upper)",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Cirque Bowl",
+   "Summit",
+   "DoubleBlack"
+  ],
+  [
+   "Cirrus",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Clark's Jay",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Cloudchaser Access",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "Cloudchaser Crossover",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Convergence Zone",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Cow's Face",
+   "Summit",
+   "Black"
+  ],
+  [
+   "Day Break",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "Dilly Dally Alley",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "Early Riser",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "East Bowls",
+   "Eastside",
+   "Black"
+  ],
+  [
+   "East Catchline",
+   "Eastside",
+   "Black"
+  ],
+  [
+   "East Healy",
+   "Summit",
+   "Blue"
+  ],
+  [
+   "Flying Dutchman (lower)",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Flying Dutchman (upper)",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Green Flash",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "Healy Heights",
+   "Summit",
+   "Blue"
+  ],
+  [
+   "Hemlock",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "High Pressure",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Hourglass",
+   "Summit",
+   "DoubleBlack"
+  ],
+  [
+   "I-5 (lower)",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "I-5 (upper)",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Jet Stream (lower)",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Jet Stream (upper)",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Low Pressure",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Marshmallow",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "Morning Glory",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "Pine Cone",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Pinnacles",
+   "Summit",
+   "DoubleBlack"
+  ],
+  [
+   "Roostertail",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Chicken Foot",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Serengeti Plains",
+   "Summit",
+   "DoubleBlack"
+  ],
+  [
+   "Sun Dog",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Sunrise Getback (lower)",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "Sunrise Getback (middle)",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Sunrise Getback (upper)",
+   "Summit",
+   "Black"
+  ],
+  [
+   "The Low East",
+   "Eastside",
+   "Black"
+  ],
+  [
+   "The Moraine",
+   "Summit",
+   "Black"
+  ],
+  [
+   "Wanoga Way (lower)",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "Wanoga Way (upper)",
+   "Summit",
+   "Blue"
+  ],
+  [
+   "West Ridge",
+   "Summit",
+   "Black"
+  ],
+  [
+   "White Bark",
+   "Eastside",
+   "Blue"
+  ],
+  [
+   "21 Road",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Atkeson's Zoom (lower)",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Atkeson's Zoom (upper)",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Aussie Alley",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Boomerang (lower)",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Boomerang (upper)",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Brookie's Run (lower)",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Brookie's Run (upper)",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Bushwacker",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Chadalak",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Devil's Backbone (lower)",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Devil's East",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Devil's West",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Downunder",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Downunder West (lower)",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Downunder West (upper)",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Ed's Garden (lower)",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Fish Hawk Wing",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Huckleberry Picker",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Kangaroo (lower)",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Kangaroo (upper)",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Melbourne",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Northwest Connection",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Northwest Crossover",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Osprey Way (lower)",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Osprey Way (middle)",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Osprey Way (upper)",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Snapshot Alley",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Snapshot Bowl",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Sparks Lake Bowl",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Sparks Lake Run (lower)",
+   "Westside",
+   "Blue"
+  ],
+  [
+   "Sparks Lake Run (upper)",
+   "Westside",
+   "Black"
+  ],
+  [
+   "West Bowls & Glades",
+   "Westside",
+   "DoubleBlack"
+  ],
+  [
+   "West Catchline",
+   "Westside",
+   "Black"
+  ],
+  [
+   "Start Park",
+   "Woodward Mountain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Volcano Adventure Zone",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "Rainbow Adventure Zone",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "Short Sands",
+   "Woodward Mountain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Cannon Beach",
+   "Woodward Mountain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Pacific City",
+   "Woodward Mountain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Seaside",
+   "Woodward Mountain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Peace Park",
+   "Woodward Mountain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Halfpipe",
+   "Woodward Mountain Parks",
+   "TerrainPark"
+  ],
+  [
+   "The Point",
+   "Woodward Mountain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Enchanted Forest",
+   "Eastside",
+   "Green"
+  ],
+  [
+   "Progression Park",
+   "Woodward Mountain Parks",
+   "TerrainPark"
+  ]
+ ]
+}

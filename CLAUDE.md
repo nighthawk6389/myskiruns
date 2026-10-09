@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Ski-run tracker for twenty-two resorts (React 19 + TS + Vite). The hard part is
+Ski-run tracker for twenty-three resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
@@ -32,8 +32,9 @@ the already-assigned path (that is circular).
 
 ## What works / what doesn't
 - Works: a resort PDF's own vectors where it has them: strokes
-  (`extract_pdf_vectors.py`), text (`pdf_labels.py`) and outlined glyphs
-  (`pdf_glyphs.py`) give exact lines and names. With no PDF, raster line
+  (`extract_pdf_vectors.py`) or filled outlines (`pdf_outline_lines.py`), text
+  (`pdf_labels.py`) and outlined glyphs (`pdf_glyphs.py`) give exact lines and
+  names. With no PDF, raster line
   detection: `raster_lines.py` (Vail) or `scripts/lib/lineDetector.mjs`
   (Killington, 97% F1). The printed symbol is the difficulty.
 - Works: naming the pieces by reading them. Either numbered-tile readers

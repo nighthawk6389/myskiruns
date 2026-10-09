@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's twenty-two resorts got their overlays, written so the next resort (or the next season of one of
+How the app's twenty-three resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -63,7 +63,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 |---|---|---|---|
 | trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels) | Hunter, Big Sky |
 | vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels) | Sunday River, Park City |
-| lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (Heavenly); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork) | Heavenly |
+| lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor | Mt. Bachelor |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
 | a painting with no lines, names as text | every run traced along its painted cut by trace readers (Part 4) | Jay Peak | Jay Peak |
 | only raster images | `raster_lines.py` + `raster_symbols.py` (or `lineDetector.mjs`), pieces named on review tiles or by readers | Vail (three panels), Killington | Vail |
@@ -170,15 +170,22 @@ Watch for: false double diamonds (a diamond drawn twice: Whistler Blackcomb), la
 outside their clip (last season's names left in the file: drop them), names on label boxes over their line
 (`MATCH_ENDS = False`).
 
-### C. Lines drawn as filled outlines (start from Heavenly; Copper Mountain skeletonises instead)
+### C. Lines drawn as filled outlines (start from Mt. Bachelor; Copper Mountain skeletonises instead)
 
-1. Lines: read each outline's centre line from its path (Heavenly's `prepare.py`: split the outline at its two
-   farthest-apart points, pair each point of one side with the nearest of the other; chain a dashed line's
-   outlines in drawing order; skip arrowheads, two curves and a notch; skeletonise an outline with more area than
-   one line of its length). Or rasterise each outline at 6 px/pt and thin it (Copper's `lines.py`: Zhang-Suen, no
-   diagonal steps a 4-neighbour path already joins, spurs under 2.5 pt pruned). Names' letters are dark outlines
-   too: a dark outline is a line only if it is long.
-2. Names and symbols: B's `pdf_glyphs.py` passes.
+1. Lines: read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method: split the
+   outline at its two farthest-apart points, pair each point of one side with the nearest of the other; chain a
+   dashed line's outlines in drawing order; skip arrowheads, two curves and a notch; skeletonise an outline with
+   more area than one line of its length, or one that reads wide but whose mean width is a line's: lines meeting
+   at a junction drawn as one outline). Or rasterise each outline at 6 px/pt and thin it (Copper's `lines.py`: Zhang-Suen, no
+   diagonal steps a 4-neighbour path already joins, spurs under 2.5 pt pruned). Names' letters are outlines too:
+   leave out the fills `pdf_glyphs.py` reads as letters (`--glyphs`, `--letters`: an I or a hyphen in a run's
+   colour is as thin as its line), and take a dark outline as a line only if it is long (`--dark-min`). Then
+   check that every outline in a run's colour is covered by a piece, a letter or a symbol (Mt. Bachelor's
+   `checks/missed.py`).
+2. Names and symbols: B's `pdf_glyphs.py` passes. A cluster of names may be drawn grouped by shape (every G of
+   the cluster, then every R...): `labels` then makes fragments of them (Mt. Bachelor's beginner area). Drop the
+   fragments (`DROP`), place each name by hand where it is printed (`EXTRA`, in the report's spelling) and give
+   it the symbol printed by it (`SYMBOL_OF`).
 3. Then A's steps 5-7. Expect more pieces to settle on crops: centre lines fork at junctions.
 
 ### D. An older export registered on this season's map (Wildcat, Heavenly; Deer Valley the other way round)
@@ -314,7 +321,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the twenty-two resorts settled, so the next ones come out alike:
+What the twenty-three resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -483,6 +490,7 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 | tool | what it does |
 |---|---|
 | `tools/trailmap/extract_pdf_vectors.py` | Numbered pieces straight from a PDF's strokes in the trail colours: `--color`, `--min-width`/`--max-width`, `--append` another class, `--filled` (filled-and-stroked paths), `--outlined` (filled outlines), `--solid` (no dashed ones), `--exclude` boxes (legend, insets), `--min-length` (keep short stubs; with `--max-length` and `--append`, add only the stubs an earlier pass dropped), `--image` (the map at the same scale) |
+| `tools/trailmap/pdf_outline_lines.py` | Numbered pieces from a PDF whose lines are filled outlines, by their centre lines (recipe C): `--color` classes, `--dark` ones taken only `--dark-min` pt long or more, `--max-width`, `--min-length`, `--dash` (chain a dashed line), `--exclude` boxes, `--glyphs` + `--letters` (leave out the names' letters) |
 | `tools/trailmap/raster_lines.py` | Numbered pieces from a raster map: strict colour masks, text and icons dropped, dashes linked, skeleton, junctions joined straight |
 | `tools/trailmap/split_pieces.py` | Cuts a piece at a point where it runs into a differently named trail |
 | `tools/trailmap/snap_trace.py` | A few rough points read off a grid crop snapped onto the painted line: a stretch the extraction missed |
@@ -493,7 +501,7 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 | tool | what it does |
 |---|---|
 | `tools/trailmap/pdf_labels.py` | Trail names from a PDF's text, decoding fonts with no Unicode map (`--glyph gid=char` for the ones it can't) |
-| `tools/trailmap/pdf_glyphs.py` | Names and symbols from outlined glyphs: `collect` the fills in the name colours (`--max-size` for large capitals), `sheet` each unread shape, `read` `shape=char`, `labels` (word gaps `--space`, glyphs joined within `--join`, `--turned` / `--turned-hole` for shapes that are two characters turned over, `--rect-squares`, `--rounded`, `--reorder`, `--circle-curves`, `--diamond-curves` (diamonds with curved sides), `--double-dist`, `--even`, `--sym-min`, `--single`) |
+| `tools/trailmap/pdf_glyphs.py` | Names and symbols from outlined glyphs: `collect` the fills in the name colours (`--max-size` for large capitals), `sheet` each unread shape, `read` `shape=char`, `labels` (word gaps `--space`, glyphs joined within `--join`, `--turned` / `--turned-hole` for shapes that are two characters turned over, `--rect-squares`, `--rounded`, `--reorder`, `--circle-curves`, `--any-circles` (circles drawn with any number of curves), `--diamond-curves` (diamonds with curved sides), `--double-dist`, `--even`, `--sym-min`, `--single`) |
 | `tools/trailmap/pdf_symbols.py` | Difficulty symbols from a PDF's fills (`--rounded`, size limits); `--check` lists trails whose rating has no matching symbol by their label |
 | `tools/trailmap/raster_symbols.py` | Symbols on a raster map (square, circle, diamond, double, EX) |
 
@@ -523,7 +531,7 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 
 | tool | what it does |
 |---|---|
-| `tools/trailmap/reports/` | A resort's trail report: terrain feeds of Vail Resorts' sites (`fetch_page.cjs`, `extract_feed.py`, `feed_trails.py`), their Common Crawl captures (`cc_query.sh`, `cc_lookup.py`, `warc_to_html.py`), mtnfeed (`feed_trails.py` reads its feed too) and others (its README); `compare.py`: a resort's `trails.ts` against its `report.json` (runs only one lists, ratings, spellings; a run the report splits into upper and lower parts stands for the map's one run) |
+| `tools/trailmap/reports/` | A resort's trail report: terrain feeds of Vail Resorts' sites (`fetch_page.cjs`, `extract_feed.py`, `feed_trails.py`), their Common Crawl captures (`cc_query.sh`, `cc_lookup.py`, `warc_to_html.py`), mtnfeed (`feed_trails.py` reads its feed too, and a DOR trail list like Mt. Bachelor's) and others (its README); `compare.py`: a resort's `trails.ts` against its `report.json` (runs only one lists, ratings, spellings; a run the report splits into upper and lower parts stands for the map's one run, or for the parts the map prints apart) |
 | `tools/trailmap/osm_check.py` | OpenStreetMap's runs: `fetch` a box from an Overpass mirror; `check` each piece against the runs projected by a local fit on the named pieces around it |
 | `tools/trailmap/vicomap.py` | A resort's interactive map on resorts-interactive.com (Alterra's resorts): `fetch` its JSON and SVG, `parse` each trail's line and label (grouped by name in the SVG), `fit` the registration on the line pieces, `check` every piece against the trail covering it (`--along`: stretch by stretch), `show` a trail's lines over the map |
 
@@ -594,6 +602,7 @@ give the same.
 | [Big Sky](#big-sky) | three PDFs of strokes and text | `pdf_resort.py`, report spellings | `regen.sh` | names spelled by the report |
 | [Heavenly](#heavenly) | current image + older PDF | registration, filled outlines | `regen.sh` | an image-only current map |
 | [Deer Valley](#deer-valley) | a flattened image + the earlier vector PDF; an interactive map | registration, glyph names, interactive-map check | `regen.sh` | an Alterra resort (resorts-interactive.com) |
+| [Mt. Bachelor](#mt-bachelor) | lines and names as filled outlines | `pdf_outline_lines.py`, glyph names | `regen.sh` | lines as filled outlines |
 
 ## Killington
 
@@ -1222,6 +1231,52 @@ California, Nevada, Top of Gondola · `tools/trailmap/resorts/heavenly/`.
   Lake/All Right, Carbenite/Persistance), 1 traced stretch.
 - **Checked:** every overlay on crops (`overlay_audit.py`), every symbol against its overlay (Rising Star's square 50
   px off its overlay, printed under its two-line name; White Owl's and Mayflower Link's beside theirs); hover 569/569.
+
+## Mt. Bachelor
+
+110 trails (72 + 38) · Oregon · one map · areas the trail report's four sectors · `tools/trailmap/resorts/mt-bachelor/`.
+
+- **Source:** the 2025-26 winter trail map PDF linked from mtbachelor.com's trail map page (`cms.mtbachelor.com`,
+  plain curl): one InDesign page, the legend and Ski Patrol panel on the left, James Niehues's painting (300 dpi)
+  with its vector layer on the right. The map image is the page right of the legend panel (`CLIP`) rendered at 3 px
+  per pt.
+- **Route (recipe C, then B):** `prepare.py`: the lines with `pdf_outline_lines.py` (every trail line is a filled
+  outline 1.1 pt wide in blue, green or near-black; the names' letters, outlines in the same colours, left out by
+  their glyph shapes, `--glyphs`/`--letters`; a black outline is a line from 5 pt on: Snapshot Bowl's stub is 6);
+  `pdf_glyphs.py` (463 shapes read on sheets, `letters.json`: the Whitebark Pine logo's letters and the icons are
+  `*`; green circles drawn with any number of curves, `--any-circles`; squares sometimes as rectangles,
+  `--rect-squares`); `pdf_resort.py`.
+- **Rebuild:** `tools/trailmap/resorts/mt-bachelor/regen.sh` (15 s).
+- **The map:** a name is printed in a gap of its own line in the run's colour, its symbol at the name's start as it
+  reads (the top or the bottom), and the line runs on from both ends: a line that runs into a name with no junction
+  between is that trail's. Z is N turned a quarter (one shape: `RENAME` Convergence Zone, Atkeson's Zoom); O and zero
+  are one shape (a word with letters takes O). The peaks', lodges' and elevations' labels are drawn first and last
+  (`is_name` by drawing order), The Moraine among them. Ten names are drawn grouped by shape across a cluster
+  (Green Flash, Morning Glory, Early Riser and Day Break at Sunrise, Shorty, Fish Hawk Wing, Marshmallow, West
+  Boundary, Volcano Adventure Zone, Start Park): fragments dropped, names placed by hand (`DROP`, `EXTRA`,
+  `SYMBOL_OF`). Tree runs (Clark's Jay, Low Pressure), the summit's bowls and chutes, and the Woodward parks have no
+  line: 36 markers; the two Bowls & Glades are glades.
+- **Lines read wide:** where two lines meet, the PDF may draw them as one outline; split at its farthest-apart
+  points it pairs across the branches and reads wider than a line, so it was left out (I-5's and Carnival's lines
+  at Carnival's square). `pdf_outline_lines.py` now reads such an outline by its skeleton when its mean width (twice
+  its area over its perimeter) is a line's; `checks/missed.py` lists every run-coloured outline no piece, letter or
+  symbol covers (none now).
+- **Truth:** the trail report (`report.json`): the DOR trail list mtbachelor.com's lift and trail report page loads
+  (`api.mtbachelor.com/api/v1/dor/drupal/trails`), every winter run with its sector and rating, read by
+  `feed_trails.py`. Names take its spelling (Bushwacker, Northwest Crossover, Halfpipe, Backside Bowls & Glades);
+  its runs split into (upper), (middle) and (lower) are one trail each as the map prints them, but Sunrise
+  Getback's three parts, printed apart with their own symbols, are three. A run printed with two symbols takes the
+  one printed more often, a tie the harder. Ratings agree but Serengeti Plains' (one diamond on the map, double
+  black in the report: the map's kept); The Moraine and The Cone print no symbol (black, as the report rates them;
+  `DEFAULT_SYMBOL`). Avalanche West and Cloudchaser Access, in the report, aren't on this map. Areas: the report's
+  sectors (the parks with the side they're on; a run in two sectors with its upper part's).
+- **Decisions:** 148 pieces named by the name at their end or by their symbol, 85 stretches along names, 18 settled
+  on crops (the beginner loops at Sunrise, Marshmallow, West Boundary, Fish Hawk Wing against Osprey Way, DSQ against
+  Corkscrew), 11 links with no name printed along them.
+- **Checked:** every overlay on crops (`overlay_audit.py`); every symbol against its overlay (Northwest Crossover's
+  square and Marshmallow's circle are printed beside their lines; seven at an overlay's end, each where its run
+  starts); `compare.py` against the report; hover 253/254 (the miss where Melbourne's line runs on into Kangaroo's
+  lower name, the stretch both share: either name is right).
 
 # Part 4. Methods in detail
 

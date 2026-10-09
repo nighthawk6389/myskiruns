@@ -37,8 +37,9 @@ the --square colour is a square, in the --diamond colour a diamond (with
 near-square rectangle in the --square colour); two diamonds
 side by side (or one eight-sided fill) are a double diamond, and EX when
 small white letter fills sit inside; four curves (--circle-curves) in the
---circle colour are a circle, and with --diamond-curves N, N curves in the
---diamond colour a diamond (curved sides). Output: {"labels": [{seq, text, color, size, c, pts}], "symbols":
+--circle colour are a circle (with --any-circles, any closed fill of curves
+as wide as tall), and with --diamond-curves N, N curves in the --diamond
+colour a diamond (curved sides). Output: {"labels": [{seq, text, color, size, c, pts}], "symbols":
 [{t, c, color, seq}]} in PDF points, c a label's centre and pts its glyph
 centres in reading order (the same fields as pdf_labels.py, so the matching
 step is the same). Join names set on two lines and attach each symbol to the
@@ -295,6 +296,9 @@ def labels(a):
             g['sym'] = 'circle'
         elif big and a.diamond_curves and k == 'c' * a.diamond_curves and g['col'] in a.diamond:
             g['sym'] = 'diamond'  # a diamond drawn with curved sides (Deer Valley)
+        elif (big and a.any_circles and g['col'] in a.circle and '|' not in k and k.count('c') >= 4
+              and sum(v for c, v in zip(k, s) if c == 'l') < 0.05 and max(w, h) < 1.15 * min(w, h)):
+            g['sym'] = 'circle'  # a circle drawn with any number of curves (and specks of line: Mt. Bachelor)
         else:
             g['ch'] = letter(table, g)
         if g.get('sym'):
@@ -523,6 +527,9 @@ def main():
                     help='colour class whose lone glyphs are labels too (one-digit numbered circles: Sugarloaf)')
     lb.add_argument('--circle-curves', type=int, default=4,
                     help="curves in a circle symbol's outline (Heavenly's are drawn with 16)")
+    lb.add_argument('--any-circles', action='store_true',
+                    help='a closed fill of curves (at least four, any lines among them tiny) in a --circle colour, '
+                         'as wide as tall, is a circle, however many curves it is drawn with')
     lb.add_argument('--diamond-curves', type=int, default=0,
                     help='a fill of this many curves in a --diamond colour is a diamond (curved sides; default: none)')
     a = ap.parse_args()

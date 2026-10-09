@@ -30,13 +30,14 @@ const SITE = 'https://www.myskiruns.app/';
 
 const EAST = new Set(['Vermont', 'New York', 'New Hampshire', 'Maine']);
 // states and provinces east to west, for lists in ads (others go last)
-const REGION_ORDER = ['Vermont', 'New York', 'New Hampshire', 'Maine', 'Colorado', 'Montana', 'Utah', 'California', 'British Columbia'];
+const REGION_ORDER = ['Vermont', 'New York', 'New Hampshire', 'Maine', 'Colorado', 'Montana', 'Utah', 'California', 'Oregon',
+  'British Columbia'];
 
 const CAMPAIGNS = [
   // resort trail-map searches in Vermont, New York, New Hampshire and Maine;
   // French too: Quebec skiers fill Jay Peak, Stowe and the rest
   { key: 'east', name: 'Trail Maps - East', budget: 5, cpcLimit: 1, languages: 'en;fr' },
-  // Colorado, Montana, Utah, California and British Columbia
+  // Colorado, Montana, Utah, California, Oregon and British Columbia
   { key: 'west', name: 'Trail Maps - West', budget: 5, cpcLimit: 1, languages: 'en' },
   // people looking for a way to track their runs, at any resort
   { key: 'tracker', name: 'Ski Run Tracker', budget: 5, cpcLimit: 1.5, languages: 'en' },
@@ -302,6 +303,15 @@ const RESORT_ADS = {
       'arizona', 'az', 'phoenix', 'california', 'antioch', 'pennsylvania', 'pa', 'hershey', 'unified', 'high school',
       'mountain bike', 'bike', 'hiking', 'concert', 'amphitheater', 'grocery',
     ],
+  },
+  'mt-bachelor': {
+    short: 'Mt. Bachelor',
+    path: 'Mt-Bachelor',
+    area: 'Summit, Westside & Eastside',
+    names: ['mt bachelor', 'mount bachelor'],
+    keywords: [],
+    // the volcano (climbs, geology) and the TV show; summer and Nordic are the campaign's negatives
+    negatives: ['climb', 'climbing', 'volcano', 'eruption', 'geology', 'the bachelor', 'bachelorette'],
   },
 };
 

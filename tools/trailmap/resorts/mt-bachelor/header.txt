@@ -1,0 +1,25 @@
+// Mt. Bachelor's 2025-26 trail map (James Niehues's painting; the PDF linked
+// from mtbachelor.com's trail map page). Its vector layer draws every trail
+// line as a filled outline in the run's colour, read by its centre line
+// (tools/trailmap/pdf_outline_lines.py), and every name as outlined capitals
+// (tools/trailmap/pdf_glyphs.py, shapes read on contact sheets: letters.json).
+// A name is printed in a gap of its own line, its symbol at the name's start;
+// each piece is named by the name at its end, or settled on a crop
+// (decisions.py). Ten names whose letters the PDF draws grouped by shape
+// (Green Flash, Morning Glory, Early Riser and Day Break at Sunrise, Shorty,
+// Fish Hawk Wing, Marshmallow, West Boundary, Volcano Adventure Zone, Start
+// Park) are placed by hand where printed. Names are spelled as the trail
+// report spells them (report.json: the resort's DOR trail list): Bushwacker,
+// Northwest Crossover, Halfpipe, Backside Bowls & Glades, West Bowls &
+// Glades. The report's runs split into (upper), (middle) and (lower) are one
+// trail each, as the map prints them, but Sunrise Getback, whose three parts
+// are printed apart with their own symbols. Difficulty is the symbol printed
+// with each name; a run printed with two takes the one printed more often, a
+// tie the harder (I-5 green; Carnival, Leeway, Avalanche blue; Canyon black).
+// Serengeti Plains prints one diamond (the report: double black): the map's
+// kept. The Moraine and The Cone print no symbol: black, as the report rates
+// them; the adventure zones green. The report's Avalanche West and Cloudchaser
+// Access aren't on this map. 36 names have no drawn line (the summit's bowls
+// and chutes, tree runs, the Woodward parks): markers at the label; the two
+// Bowls & Glades are glades. Areas are the report's sectors, the parks with
+// the side they're on. x/y/baseY/width are unused layout fields.
