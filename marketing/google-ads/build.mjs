@@ -346,6 +346,16 @@ const RESORT_ADS = {
       'mountain bike', 'bike park', 'fishing', 'hiking', 'campground', 'zip code',
     ],
   },
+  snowmass: {
+    short: 'Snowmass',
+    path: 'Snowmass',
+    area: 'Elk Camp to the Cirque',
+    names: ['snowmass', 'aspen snowmass', 'snowmass village'],
+    keywords: [],
+    // the other mountain (the 14er), the village's summer, the conference center and the rodeo
+    negatives: ['snowmass mountain 14er', 'snowmass lake', 'maroon bells', 'rodeo', 'balloon festival',
+      'mountain bike', 'bike park', 'hiking', 'conference center', 'golf'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

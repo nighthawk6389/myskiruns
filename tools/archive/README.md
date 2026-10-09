@@ -259,6 +259,19 @@ Park City's checks: drawing-order checks (`seq*.py`, now `tools/trailmap/pieces.
 | `und.py` | und.py x0,y0,x1,y1 zoom out: the map crop (map px) with named pieces thin (their colour), undecided ones thick red with their ids, names' labels as in names.json. |
 | `und2.py` | und2.py OUT_DIR [cols rows]: tiles of the map (with a margin) holding undecided pieces; in each, every piece drawn thin in its colour with id:name labels for named ones near undecided ones, undecided ones thick red with ids. |
 
+## snowmass
+
+Snowmass's helpers for settling its pieces on crops (run from the repo root after a build): which line a printed
+name lies on (`near.py`), which pieces pass a point and the nearest point on each, to key a decision to a point on
+its piece (`at.py`), and a pieces file with only some ids, for `grid_crop.py --pieces` (`only.py`). What they
+settled is in `resorts/snowmass/panels/<panel>/decisions.py`.
+
+| file | what it did |
+|---|---|
+| `snowmass/near.py` | near.py NAME ...: the main panel's three pieces nearest each printed name (median distance of its letters) |
+| `snowmass/at.py` | at.py <panel> x,y ...: the three pieces nearest each point: id, name, distance, nearest point on the piece |
+| `snowmass/only.py` | only.py pieces_cut.json out.json id ...: those pieces alone (for `grid_crop.py`), with their ends, length and mid point |
+
 ## sources
 
 Finding sources: skimap.org search and probes (now `tools/trailmap/skimap.py`), links inside resort pages (now `tools/trailmap/find_source.cjs`), PDF summaries (now `pdf_inspect.py`, `pdf_classes.py`), and `biggest-resorts/`: the survey of the largest resorts' map sources that chose the five big mountains.

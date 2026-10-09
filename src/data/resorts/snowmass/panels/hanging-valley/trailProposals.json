@@ -1,0 +1,209 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "baby-ruth": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "BABY RUTH",
+   "note": "along Baby Ruth"
+  },
+  "cassidys": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "CASSIDY'S",
+   "note": "along Cassidy's"
+  },
+  "cookies": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "COOKIES",
+   "note": "along Cookies"
+  },
+  "frog-pond-glades": {
+   "noLine": true,
+   "label": [
+    56.04,
+    42.51
+   ],
+   "confidence": "high"
+  },
+  "glade-one": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "GLADE ONE",
+   "note": "along Glade One"
+  },
+  "glade-three": {
+   "polylines": [
+    1,
+    10,
+    25
+   ],
+   "confidence": "high",
+   "mapName": "GLADE THREE",
+   "note": "checked on a crop | along Glade Three"
+  },
+  "glade-two": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "GLADE TWO",
+   "note": "checked on a crop"
+  },
+  "hanging-valley-glades": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "HANGING VALLEY GLADES",
+   "note": "checked on a crop"
+  },
+  "hanging-valley-headwall": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "HANGING VALLEY HEADWALL",
+   "note": "along Hanging Valley Headwall"
+  },
+  "high-pass-lower-bd": {
+   "polylines": [
+    14,
+    21
+   ],
+   "confidence": "high",
+   "mapName": "HIGH PASS (LOWER BD)",
+   "note": "checked on a crop"
+  },
+  "lower-ladder": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LADDER",
+   "note": "checked on a crop"
+  },
+  "possible": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "POSSIBLE",
+   "note": "along Possible"
+  },
+  "reidars": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "REIDAR'S",
+   "note": "along Reidar's"
+  },
+  "robertos": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "ROBERTO'S",
+   "note": "along Roberto's"
+  },
+  "showcase": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "SHOWCASE",
+   "note": "along Showcase"
+  },
+  "the-edge": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "THE EDGE",
+   "note": "along The Edge"
+  },
+  "turkey-trot": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "TURKEY TROT",
+   "note": "along Turkey Trot"
+  },
+  "upper-ladder": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LADDER",
+   "note": "checked on a crop"
+  },
+  "valley-valley": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "VALLEY VALLEY",
+   "note": "along Valley Valley"
+  },
+  "wall-one": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "WALL ONE",
+   "note": "along Wall One"
+  },
+  "wall-two": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "WALL TWO",
+   "note": "along Wall Two"
+  },
+  "waters": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "WATERS",
+   "note": "along Waters"
+  },
+  "weird-woods": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "WEIRD WOODS",
+   "note": "checked on a crop"
+  },
+  "west-1-2": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "WEST 1 & 2",
+   "note": "along West 1 & 2"
+  },
+  "willys": {
+   "polylines": [
+    18,
+    23
+   ],
+   "confidence": "high",
+   "mapName": "WILLY'S",
+   "note": "along Willy's | continuation"
+  }
+ }
+}

@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's twenty-five resorts got their overlays, written so the next resort (or the next season of one of
+How the app's twenty-six resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -61,7 +61,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 
 | the source gives you | route | done this way | start from |
 |---|---|---|---|
-| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels) | Hunter, Big Sky |
+| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`) | Hunter, Big Sky; Snowmass for a map rated by colour |
 | vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels) | Sunday River, Park City |
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor | Mt. Bachelor |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
@@ -324,7 +324,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the twenty-five resorts settled, so the next ones come out alike:
+What the twenty-six resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -337,7 +337,9 @@ What the twenty-five resorts settled, so the next ones come out alike:
   draws its runs as black lines (Winter Park's blue square holding a diamond: black); EX, expert and
   high-exposure are double black. A run printed twice with two ratings: the report's rating, else the majority,
   the harder on a tie. Where the map's symbol and the report differ, the map's is kept and the difference noted
-  in the resort's header (Whistler Blackcomb's Big Easy, Heavenly's Hogsback).
+  in the resort's header (Whistler Blackcomb's Big Easy, Heavenly's Hogsback). A map that prints no symbols but
+  sets each name on a pill in its run's colour: the pill's colour, double black where the legend marks the expert
+  runs another way (Snowmass: a yellow-cased line, an EX mark by the name).
 - **What is a trail.** Every run the map names. Bowls, faces, chutes, glades, parks, learning and kids' areas are
   trails too, as markers at their names when the map draws no line for them. Lines the map doesn't name (links,
   run-outs, access roads, traverses with no label) have no overlay, recorded in `UNNAMED` with why. Names the
@@ -609,6 +611,7 @@ give the same.
 | [Mt. Bachelor](#mt-bachelor) | lines and names as filled outlines | `pdf_outline_lines.py`, glyph names | `regen.sh` | lines as filled outlines |
 | [Steamboat](#steamboat) | an image; the interactive map's SVG | `vicomap.py`, lines routed onto the image's, `GROUPED` | `regen.sh` | an image-only map with an interactive map |
 | [Mammoth Mountain](#mammoth-mountain) | a PDF with no trail lines, names as text; two interactive maps' SVGs | `vicomap.py` lines registered on the painting, names spelled as the groups, `GROUPED` | `regen.sh` | a map with no lines but an interactive map |
+| [Snowmass](#snowmass) | PDF strokes and filled casings, names as text on pills in the run's colour | `pdf_resort.py`, the rating from the pill's colour (`COLOR_SYMBOL`) | `regen.sh` | a map rated by its names' colours |
 
 ## Killington
 
@@ -1376,6 +1379,58 @@ trail report's three base lodges · `tools/trailmap/resorts/mammoth/`.
   `grid_crop.py` crops); every symbol against its overlay (`symbol_audit.py --mode off`: 43 symbols 15-80 px from
   their line, each beside its run as the map prints it); `compare.py` against the report; hover 499/499 (main) and
   93/93 (back side).
+
+## Snowmass
+
+124 trails (114 + 10) · Colorado · two panels, the whole mountain and the inset of Hanging Valley (drawn larger, with
+the names the main map leaves out) · areas: the five printed summits (Cirque, High Alpine, Big Burn, Elk Camp, Sam's
+Knob), each with the trail report's lift areas whose runs come down from it · `tools/trailmap/resorts/snowmass/`.
+
+- **Source:** the 2025-26 PDF that aspensnowmass.com's Snowmass trail-map page links ("layered", plain curl): one
+  Illustrator page, the trail lines vectors over two 100 dpi paintings (the mountain's and the inset's), every name
+  text. Lines: blue, black and green strokes (1.12 pt on the main map, thinner in the inset); the expert runs are a
+  black line in a yellow casing, drawn as filled outlines (in two yellows in the inset), a few as a thin yellow stroke
+  over a wide black one (AMF, Gowdy's, an exit from the Cirque, the inset's West I & II) and a few black lines pure black instead of the
+  map's near-black (Cabin, Camp 3, the foot of Garrett Gulch). Names: white text on a pill in the run's colour
+  (green, blue, black), set along the run's own line; lifts are red and purple pills; the glades and areas are
+  white-on-black boxes like the black runs' pills. **No symbol by any name**: the legend rates by colour, the double
+  black runs by their yellow casing (with double diamonds printed along it, often far from the name) and the
+  extreme terrain by an EX mark (two black diamonds, as text or as shapes).
+- **Route:** `prepare.py`, per panel: the page rendered at the panel's scale (3 and 6 px/pt) with both paintings
+  upscaled (`matte_pdf_layer.py --resample`); the strokes (`extract_pdf_vectors.py`, the panel's widths, the inset's
+  dashed ridge line left out with `--solid`), the casings' centre lines (`pdf_outline_lines.py`, each yellow its own
+  class name: two `--color` of one name keep the last) and the thin yellow strokes, one piece per path (a stroke
+  lying along a casing, the inset's expert centre drawn twice, left out). Names: `pdf_labels.py`'s white text in the
+  names' font or size (the lodges' and notices' white-on-black callouts are smaller and bold), each one's pill colour
+  sampled round its letters on a 6 px/pt render (`pill()`); a black name is expert where its own line (the piece most
+  of its letters lie on) is a casing or an EX mark is within two and a half letters; a name printed in parts
+  (`JOIN`) is expert if a part is; two names drawn as one text object on two pills (UTE CHUTE FAST DRAW, AMF
+  GOWDY'S, BEAR BOTTOM GUNNER'S VIEW) are split before their pills are read (`SPLIT`). `pdf_resort.py` with
+  `COLOR_SYMBOL` (the pill's colour is the rating), `ALONG_FIRST` (a name is its own line's), `ALONG_SHORT` (RIO,
+  AMF) and `NO_STRETCH_BESIDE`. A run the report splits into (Upper) and (Lower) is one trail as printed, but Green
+  Cabin and Banzai, printed apart (`KEEP_PARTS`).
+- **Rebuild:** `tools/trailmap/resorts/snowmass/regen.sh` (25 s); it checks the PDF's SHA-256.
+- **Truth:** the trail report (`report.json`: Aspen Snowmass's grooming feed, `feed_trails.py`; reports README,
+  "Aspen Snowmass"): 135 trails by lift area, its uphill routes left out. The map doesn't print the parks' and pipes'
+  names (six), Burnt Mountain Glades (its three runs, Rio, A-Line and Split Tree, are printed instead), Cabin Cut
+  Off, Elk Camp Meadows, Mousetrap or Pipeline; it prints the inset's Hanging Valley runs the report doesn't list
+  (Upper Ladder, Valley Valley, Wall One and Two, Strawberry Patch, Cassidy's, Union, Willy's, Glade One to Three,
+  Waters, Weird Woods: as printed, title case) and Bridges. Ratings agree but Cabin's (a black pill; the report:
+  blue; the map's kept). The inset's boundary traverse below High Pass prints no name: the report's High Pass (Lower
+  BD), double black (`EXTRA` with its casing's rating).
+- **Decisions** (every piece settled on `grid_crop.py` crops): the main map draws a run on as one path where the
+  next one starts, so 16 cuts where two runs part (Turkey Trot and Funnel, Glissade and Garrett Gulch, Wineskin and
+  Monkshood, Trestle and Green Cabin, Banzai Ridge, Coney Glade and Blue Grouse, Coyote Hollow and Timberline,
+  Wildcat and Campground, East Wall and the Cirque's top traverse, Assay Hill and Bridges, ...); Rock Band Chute's
+  path runs down along Grinder's before it leaves it (`TRIMS`). On the whole mountain, Hanging Valley's lines take
+  the inset's names (Hanging Valley Glades, Weird Woods, Baby Ruth, High Pass (Lower BD); the inset's Upper Ladder is
+  Lower Ladder's on the main map, which prints only that). Connectors, cut-acrosses, the traverses along the foot
+  of Hanging Valley and the top of the Cirque, and the Cirque's run-out below its headwalls print no name (20 and
+  3 `UNNAMED`). Markers: the glades with no line of their own (Free Fall, Sneaky's, Powerline, Sunkiss, Frog Pond),
+  Buckskin Cliffs, West Garrett, Fanny Hill, Strawberry Patch, Union.
+- **Checked:** every overlay on crops (`overlay_audit.py`, 29 and 7 sheets, every cell read; the cells that showed
+  a problem fixed and read again); `compare.py` against the report; hover 332/332 (main) and 75/75 (Hanging
+  Valley).
 
 # Part 4. Methods in detail
 

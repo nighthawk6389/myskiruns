@@ -125,8 +125,9 @@ def main() -> None:
         f.write('// difficulties are as printed on the 2025-26 map (symbols), glades from the\n')
         f.write('// glade icon. x/y/baseY/width are unused layout fields.\n')
         f.write('export const peaks: PeakData[] = [\n')
-        for x in areas:
-            f.write(f"  {{ id: '{x['id']}', name: '{x['name']}', elevation: {int(x['elevation'])}, x: 0, y: 0, baseY: 0, width: 0 }},\n")
+        for x in areas:  # (a name with an apostrophe in double quotes: Snowmass's Sam's Knob)
+            name = f'"{x["name"]}"' if "'" in x['name'] else f"'{x['name']}'"
+            f.write(f"  {{ id: '{x['id']}', name: {name}, elevation: {int(x['elevation'])}, x: 0, y: 0, baseY: 0, width: 0 }},\n")
         f.write('];\n\nexport const trails: Trail[] = [\n')
         for t in trails:
             name = f'"{t["name"]}"' if "'" in t['name'] else f"'{t['name']}'"

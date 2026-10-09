@@ -1,0 +1,43 @@
+{
+ "reviews": {
+  "buckskin-cliffs": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-09T18:11:42.000Z",
+   "by": "claude",
+   "labelAt": [
+    53.78,
+    39.62
+   ]
+  },
+  "west-garrett": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-09T18:11:42.000Z",
+   "by": "claude",
+   "labelAt": [
+    57.87,
+    44.36
+   ]
+  },
+  "fanny-hill": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-09T18:11:42.000Z",
+   "by": "claude",
+   "labelAt": [
+    46.49,
+    83.33
+   ]
+  }
+ }
+}

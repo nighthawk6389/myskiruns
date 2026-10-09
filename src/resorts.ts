@@ -148,6 +148,10 @@ export const RESORTS: ResortEntry[] = [
     { id: 'main', name: 'Whole mountain', paths: () => import('./data/resorts/mammoth/panels/main/trailPaths.json') },
     { id: 'back-side', name: 'Back Side', paths: () => import('./data/resorts/mammoth/panels/back-side/trailPaths.json') },
   ], ['Mammoth', 'Mammoth Lakes']),
+  panels('snowmass', 'Snowmass', 'Colorado', () => import('./data/resorts/snowmass/trails'), [
+    { id: 'main', name: 'Whole mountain', paths: () => import('./data/resorts/snowmass/panels/main/trailPaths.json') },
+    { id: 'hanging-valley', name: 'Hanging Valley', paths: () => import('./data/resorts/snowmass/panels/hanging-valley/trailPaths.json') },
+  ], ['Aspen Snowmass', 'Aspen']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

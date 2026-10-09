@@ -298,6 +298,20 @@ Trail Maps - West,Mammoth Mountain,mammoth trail map,Exact,Enabled
 Trail Maps - West,Mammoth Mountain,mammoth ski map,Exact,Enabled
 Trail Maps - West,Mammoth Mountain,mammoth ski map,Phrase,Enabled
 Trail Maps - West,Mammoth Mountain,mammoth ski trails,Phrase,Enabled
+Trail Maps - West,Snowmass,snowmass trail map,Exact,Enabled
+Trail Maps - West,Snowmass,snowmass ski map,Exact,Enabled
+Trail Maps - West,Snowmass,snowmass trail map,Phrase,Enabled
+Trail Maps - West,Snowmass,snowmass ski map,Phrase,Enabled
+Trail Maps - West,Snowmass,snowmass ski trails,Phrase,Enabled
+Trail Maps - West,Snowmass,snowmass trail list,Phrase,Enabled
+Trail Maps - West,Snowmass,snowmass run map,Phrase,Enabled
+Trail Maps - West,Snowmass,snowmass mountain map,Phrase,Enabled
+Trail Maps - West,Snowmass,aspen snowmass trail map,Exact,Enabled
+Trail Maps - West,Snowmass,aspen snowmass trail map,Phrase,Enabled
+Trail Maps - West,Snowmass,aspen snowmass ski map,Phrase,Enabled
+Trail Maps - West,Snowmass,snowmass village trail map,Exact,Enabled
+Trail Maps - West,Snowmass,snowmass village trail map,Phrase,Enabled
+Trail Maps - West,Snowmass,snowmass village ski map,Phrase,Enabled
 Ski Run Tracker,Ski Run Tracker,ski run tracker,Exact,Enabled
 Ski Run Tracker,Ski Run Tracker,ski trail tracker,Exact,Enabled
 Ski Run Tracker,Ski Run Tracker,track ski runs,Exact,Enabled

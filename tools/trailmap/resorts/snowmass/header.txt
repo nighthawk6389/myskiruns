@@ -1,0 +1,28 @@
+// Snowmass's 2025-26 trail map (aspensnowmass.com: the resort's "layered" PDF,
+// one page), drawn as two panels: the whole mountain, and the inset of Hanging
+// Valley, drawn larger with the names of runs the main map leaves unnamed. The
+// lines are the PDF's own: blue, black and green strokes, and the expert runs,
+// a black line in a yellow casing, by the casing's centre line (a few casings
+// are a thin yellow stroke over a black one; a few black lines are pure
+// black). Every name is white text on a pill in its run's colour, set along
+// its own line: the rating is the pill's colour (green, blue, black), a black
+// run double black where its own line is cased in yellow or an EX mark
+// (extreme terrain) is printed by its name. Cabin's pill is black (the
+// report: blue). Names are spelled as the trail report spells them
+// (report.json: the resort's grooming feed); a run the report splits into
+// upper and lower parts is one trail as the map prints it, but Green Cabin and
+// Banzai (printed apart). The inset's names the report doesn't list (Upper
+// Ladder, the walls, the glades) are as printed; its boundary traverse, with
+// no name printed, is the report's High Pass (Lower BD), double black as its
+// casing. On the whole mountain, Hanging Valley's lines take the inset's names
+// (Hanging Valley Glades, Weird Woods, Baby Ruth, High Pass (Lower BD)). Where
+// one line carries two runs, decisions.py cuts it where they part (Turkey Trot
+// and Funnel, Glissade and Garrett Gulch, Wineskin and Monkshood, Banzai Ridge,
+// Coney Glade and Blue Grouse, Coyote Hollow and Timberline, Wildcat and
+// Campground, East Wall and the Cirque's traverse); Rock Band Chute's line is
+// drawn down along Grinder's, its own from where it leaves it. Names with no
+// line (most glades, Buckskin Cliffs, West Garrett, Fanny Hill, Strawberry
+// Patch, Union): markers at the label. The uphill routes are left out. Areas:
+// the printed summits, each with the report's lift areas whose runs come down
+// from it.
+// x/y/baseY/width are unused layout fields.

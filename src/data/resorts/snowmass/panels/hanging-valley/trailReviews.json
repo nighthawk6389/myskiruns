@@ -1,0 +1,30 @@
+{
+ "reviews": {
+  "strawberry-patch": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-09T18:11:53.000Z",
+   "by": "claude",
+   "labelAt": [
+    36.18,
+    57.75
+   ]
+  },
+  "union": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-09T18:11:53.000Z",
+   "by": "claude",
+   "labelAt": [
+    37.22,
+    64.21
+   ]
+  }
+ }
+}

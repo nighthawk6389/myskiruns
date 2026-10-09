@@ -5,8 +5,8 @@ area. It is the best check on a map's reading: names as the resort spells them (
 abbreviations), the rating of each run against the symbol printed by it, the area or lift pod each belongs to, and
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
-Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat and Mammoth
-keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth and
+Snowmass keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -74,6 +74,23 @@ The site's own scripts call `https://www.bigskyresort.com/api/reportpal?resortNa
 (`true` exactly, or nothing comes back): every trail with its lift area and rating (beginner, intermediate,
 advanced intermediate, advanced, expert, high exposure). `tools/trailmap/resorts/big-sky/report.json` keeps name,
 area and rating as of 2026-09-24.
+
+## Aspen Snowmass
+
+Its grooming report page loads `https://www.aspensnowmass.com/AspenSnowmass/GroomingReport/Feed?mountain=Snowmass`
+(plain curl; `mountain=` also takes the other three mountains): every trail by lift area (`areas`, each with its
+`trails`), with its difficulty (beginner, intermediate, advanced, expert, extreme, terrain-park), listed out of
+season too. `feed_trails.py` reads it (beginner Green, intermediate Blue, advanced Black, expert DoubleBlack, extreme
+Extreme, terrain-park TerrainPark); Snowmass's `report.json` was fetched on 2026-10-09. Its uphill routes are an area
+of their own (Uphill Routes), left out of the trail list.
+
+```bash
+mkdir -p work/snowmass/report
+curl -sS -o work/snowmass/report/feed.json \
+  'https://www.aspensnowmass.com/AspenSnowmass/GroomingReport/Feed?mountain=Snowmass'
+python3 -I tools/trailmap/reports/feed_trails.py work/snowmass/report/feed.json --source "..." \
+  --out tools/trailmap/resorts/snowmass/report.json
+```
 
 ## Mt. Bachelor
 
