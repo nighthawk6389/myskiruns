@@ -1,0 +1,1140 @@
+{
+ "_source": "Deer Valley's trail report: the mtnpowder feed (https://mtnpowder.com/feed/v3.json, resort 49, the token in https://v4.mtnfeed.com/resorts/deer-valley.json) as fetched on 2026-10-09, every trail closed for the season since 2026-09-21: the 2025-26 list",
+ "trails": [
+  [
+   "Birdseye",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Black Forest",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Blue Ledge",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Edgar's Alley",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Emerald",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Evergreen",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Finis",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Fortune Teller",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Free Thinker",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Gilt Edge",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Grizzly",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Homeward Bound (Lower)",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Homeward Bound (Mid)",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Homeward Bound (Upper)",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Kebob",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Keno",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Legal Tender",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Little Reb",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Mayflower Bowl",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Mayflower Chutes",
+   "Bald Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "McHenry (Lower)",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "McHenry (Mid)",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "McHenry (Upper)",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Miners Delight",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Morning Star",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Nabob",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Narrow Gauge",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Northern Light (Lower)",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Northern Light (Upper)",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "North Star",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Orient Express",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Ottobahn",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Paradise",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Peerless",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Perseverance",
+   "Bald Mountain",
+   "DoubleBlue"
+  ],
+  [
+   "Perseverance Bowl",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Rattler",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Reward",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Ruins Of Pompeii",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Seldom Seen",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Son of Rattler",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Star",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Stein's Way",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Sultan Connection",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Sunset",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Sunset Glade",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Thunderer",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Trainer",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Triangle Trees",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Tycoon",
+   "Bald Mountain",
+   "DoubleBlue"
+  ],
+  [
+   "Wizard",
+   "Bald Mountain",
+   "DoubleBlue"
+  ],
+  [
+   "All Right",
+   "Keetley Point",
+   "Blue"
+  ],
+  [
+   "Corner Stone",
+   "Keetley Point",
+   "Blue"
+  ],
+  [
+   "Dart",
+   "Keetley Point",
+   "Green"
+  ],
+  [
+   "Daylight",
+   "Keetley Point",
+   "Green"
+  ],
+  [
+   "Lady of the Lake",
+   "Keetley Point",
+   "Blue"
+  ],
+  [
+   "Lake Shore",
+   "Keetley Point",
+   "Blue"
+  ],
+  [
+   "Little Giant",
+   "Keetley Point",
+   "Green"
+  ],
+  [
+   "Lone Tree",
+   "Keetley Point",
+   "Blue"
+  ],
+  [
+   "Lucky Find",
+   "Keetley Point",
+   "Green"
+  ],
+  [
+   "Mayflower Link",
+   "Keetley Point",
+   "Green"
+  ],
+  [
+   "Overlooked",
+   "Keetley Point",
+   "Blue"
+  ],
+  [
+   "Prospect",
+   "Keetley Point",
+   "Green"
+  ],
+  [
+   "Road to Sultan",
+   "Keetley Point",
+   "Green"
+  ],
+  [
+   "Short Line",
+   "Keetley Point",
+   "Blue"
+  ],
+  [
+   "Waterloo",
+   "Keetley Point",
+   "Blue"
+  ],
+  [
+   "Yaup",
+   "Keetley Point",
+   "Blue"
+  ],
+  [
+   "Argus",
+   "Lady Morgan",
+   "Black"
+  ],
+  [
+   "Centennial",
+   "Lady Morgan",
+   "Black"
+  ],
+  [
+   "Dakota",
+   "Lady Morgan",
+   "Blue"
+  ],
+  [
+   "Hillside",
+   "Lady Morgan",
+   "Black"
+  ],
+  [
+   "Magnet (Lower)",
+   "Lady Morgan",
+   "Black"
+  ],
+  [
+   "Magnet (Upper)",
+   "Lady Morgan",
+   "Black"
+  ],
+  [
+   "Margus",
+   "Lady Morgan",
+   "Black"
+  ],
+  [
+   "Pearl",
+   "Lady Morgan",
+   "Green"
+  ],
+  [
+   "Walker",
+   "Lady Morgan",
+   "Green"
+  ],
+  [
+   "Webster",
+   "Lady Morgan",
+   "Green"
+  ],
+  [
+   "Bandana",
+   "Flagstaff Mountain",
+   "Green"
+  ],
+  [
+   "Banner",
+   "Flagstaff Mountain",
+   "Green"
+  ],
+  [
+   "Bluebell",
+   "Flagstaff Mountain",
+   "Blue"
+  ],
+  [
+   "Boulder Bumps",
+   "Flagstaff Mountain",
+   "Blue"
+  ],
+  [
+   "Custer",
+   "Flagstaff Mountain",
+   "Green"
+  ],
+  [
+   "DT's Trees",
+   "Flagstaff Mountain",
+   "Black"
+  ],
+  [
+   "Four Ply",
+   "Flagstaff Mountain",
+   "Black"
+  ],
+  [
+   "Gemini",
+   "Flagstaff Mountain",
+   "Blue"
+  ],
+  [
+   "Guardsman Glade",
+   "Flagstaff Mountain",
+   "Black"
+  ],
+  [
+   "Gumby Glade",
+   "Flagstaff Mountain",
+   "Black"
+  ],
+  [
+   "Hawkeye",
+   "Flagstaff Mountain",
+   "Blue"
+  ],
+  [
+   "Hidden Treasure",
+   "Flagstaff Mountain",
+   "Blue"
+  ],
+  [
+   "Lily (Lower)",
+   "Flagstaff Mountain",
+   "Green"
+  ],
+  [
+   "Lily (Upper)",
+   "Flagstaff Mountain",
+   "Green"
+  ],
+  [
+   "Lost Boulder",
+   "Flagstaff Mountain",
+   "Blue"
+  ],
+  [
+   "Lucky Jack",
+   "Flagstaff Mountain",
+   "Green"
+  ],
+  [
+   "Lucky Star",
+   "Flagstaff Mountain",
+   "Blue"
+  ],
+  [
+   "Mountain Daisy",
+   "Flagstaff Mountain",
+   "Green"
+  ],
+  [
+   "Ontario Bowl",
+   "Flagstaff Mountain",
+   "Black"
+  ],
+  [
+   "Ontario (Lower)",
+   "Flagstaff Mountain",
+   "Green"
+  ],
+  [
+   "Ontario (Upper)",
+   "Flagstaff Mountain",
+   "Green"
+  ],
+  [
+   "Peeler",
+   "Flagstaff Mountain",
+   "DoubleBlue"
+  ],
+  [
+   "Sidewinder",
+   "Flagstaff Mountain",
+   "Blue"
+  ],
+  [
+   "Silver Buck (Lower)",
+   "Flagstaff Mountain",
+   "Blue"
+  ],
+  [
+   "Silver Buck (Upper)",
+   "Flagstaff Mountain",
+   "Blue"
+  ],
+  [
+   "Square Deal",
+   "Flagstaff Mountain",
+   "Black"
+  ],
+  [
+   "Star Gazer",
+   "Flagstaff Mountain",
+   "Blue"
+  ],
+  [
+   "Three Ply",
+   "Flagstaff Mountain",
+   "Black"
+  ],
+  [
+   "Trump",
+   "Flagstaff Mountain",
+   "Green"
+  ],
+  [
+   "Woodside",
+   "Flagstaff Mountain",
+   "Green"
+  ],
+  [
+   "Age of Reason (Lower)",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "Age of Reason (Mid)",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "Age of Reason (Upper)",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "Bet Your Boots",
+   "Park Peak",
+   "Black"
+  ],
+  [
+   "Carbenite (Lower)",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "Carbenite (Upper)",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "Cataract",
+   "Park Peak",
+   "Black"
+  ],
+  [
+   "Catch All (Lower)",
+   "Park Peak",
+   "Black"
+  ],
+  [
+   "Catch All (Upper)",
+   "Park Peak",
+   "Black"
+  ],
+  [
+   "Clipper (Lower)",
+   "Park Peak",
+   "Green"
+  ],
+  [
+   "Clipper (Upper)",
+   "Park Peak",
+   "Green"
+  ],
+  [
+   "Crown Prince",
+   "Park Peak",
+   "Green"
+  ],
+  [
+   "Deep Enuf",
+   "Park Peak",
+   "Black"
+  ],
+  [
+   "Dream",
+   "Park Peak",
+   "Green"
+  ],
+  [
+   "Dream Meadow",
+   "Park Peak",
+   "Green"
+  ],
+  [
+   "Exchange",
+   "Park Peak",
+   "Green"
+  ],
+  [
+   "Fallon",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "Free Will",
+   "Park Peak",
+   "DoubleBlue"
+  ],
+  [
+   "Golden Age",
+   "Park Peak",
+   "Green"
+  ],
+  [
+   "Green Monster (Lower)",
+   "Park Peak",
+   "Green"
+  ],
+  [
+   "Green Monster (Mid)",
+   "Park Peak",
+   "Green"
+  ],
+  [
+   "Green Monster (Upper)",
+   "Park Peak",
+   "Green"
+  ],
+  [
+   "Hellcat",
+   "Park Peak",
+   "Black"
+  ],
+  [
+   "Humbug",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "June Bug",
+   "Park Peak",
+   "Green"
+  ],
+  [
+   "Nemesis",
+   "Park Peak",
+   "Black"
+  ],
+  [
+   "Nondescript",
+   "Park Peak",
+   "Black"
+  ],
+  [
+   "Ophelia",
+   "Park Peak",
+   "Black"
+  ],
+  [
+   "Papa Joe",
+   "Park Peak",
+   "Black"
+  ],
+  [
+   "Pay Rock",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "Persistance",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "Pinto",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "Redemption",
+   "Park Peak",
+   "DoubleBlue"
+  ],
+  [
+   "Reliance",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "Straddle Bug",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "Trilby",
+   "Park Peak",
+   "Blue"
+  ],
+  [
+   "Ampheon",
+   "Pioche Point",
+   "Blue"
+  ],
+  [
+   "Dispute",
+   "Pioche Point",
+   "Black"
+  ],
+  [
+   "Divide",
+   "Pioche Point",
+   "Blue"
+  ],
+  [
+   "Minnow",
+   "Pioche Point",
+   "Green"
+  ],
+  [
+   "Nettie",
+   "Pioche Point",
+   "Green"
+  ],
+  [
+   "Niagara",
+   "Pioche Point",
+   "Blue"
+  ],
+  [
+   "Olive Branch",
+   "Pioche Point",
+   "Green"
+  ],
+  [
+   "Pioche Access",
+   "Pioche Point",
+   "Blue"
+  ],
+  [
+   "Uno",
+   "Pioche Point",
+   "Green"
+  ],
+  [
+   "Viola",
+   "Pioche Point",
+   "Green"
+  ],
+  [
+   "Anchor Trees",
+   "Empire",
+   "Black"
+  ],
+  [
+   "Buckeye",
+   "Empire",
+   "Black"
+  ],
+  [
+   "Conviction",
+   "Empire",
+   "Black"
+  ],
+  [
+   "Daly Bowl",
+   "Empire",
+   "DoubleBlack"
+  ],
+  [
+   "Daly Chutes",
+   "Empire",
+   "DoubleBlack"
+  ],
+  [
+   "Domingo",
+   "Empire",
+   "Black"
+  ],
+  [
+   "Empire Bowl",
+   "Empire",
+   "Black"
+  ],
+  [
+   "Lady Morgan Bowl",
+   "Empire",
+   "Black"
+  ],
+  [
+   "Nugget",
+   "Empire",
+   "Blue"
+  ],
+  [
+   "Ore Cart",
+   "Empire",
+   "Blue"
+  ],
+  [
+   "Orion",
+   "Empire",
+   "DoubleBlue"
+  ],
+  [
+   "Quincy Knoll",
+   "Empire",
+   "Black"
+  ],
+  [
+   "Solace",
+   "Empire",
+   "Blue"
+  ],
+  [
+   "Supreme (Lower)",
+   "Empire",
+   "Blue"
+  ],
+  [
+   "Supreme (Upper)",
+   "Empire",
+   "Blue"
+  ],
+  [
+   "X-Files",
+   "Empire",
+   "Black"
+  ],
+  [
+   "Zebra Trees",
+   "Empire",
+   "Black"
+  ],
+  [
+   "Cascade",
+   "Little Baldy Peak",
+   "Black"
+  ],
+  [
+   "Crescent",
+   "Little Baldy Peak",
+   "Black"
+  ],
+  [
+   "Deer Hollow (Lower)",
+   "Little Baldy Peak",
+   "Green"
+  ],
+  [
+   "Deer Hollow (Upper)",
+   "Little Baldy Peak",
+   "Green"
+  ],
+  [
+   "Deertrail",
+   "Little Baldy Peak",
+   "Green"
+  ],
+  [
+   "Dynamic",
+   "Little Baldy Peak",
+   "Black"
+  ],
+  [
+   "Fairview",
+   "Little Baldy Peak",
+   "Blue"
+  ],
+  [
+   "Gnat's Eye",
+   "Little Baldy Peak",
+   "Green"
+  ],
+  [
+   "Jordanelle",
+   "Little Baldy Peak",
+   "DoubleBlue"
+  ],
+  [
+   "Mountaineer",
+   "Little Baldy Peak",
+   "Blue"
+  ],
+  [
+   "Silver Hill",
+   "Little Baldy Peak",
+   "Blue"
+  ],
+  [
+   "Caledonia",
+   "Big Dutch Peak",
+   "Blue"
+  ],
+  [
+   "Evening Star",
+   "Big Dutch Peak",
+   "Blue"
+  ],
+  [
+   "Glencoe",
+   "Big Dutch Peak",
+   "Black"
+  ],
+  [
+   "Good Luck",
+   "Big Dutch Peak",
+   "Blue"
+  ],
+  [
+   "Joker",
+   "Big Dutch Peak",
+   "Blue"
+  ],
+  [
+   "Klondyke",
+   "Big Dutch Peak",
+   "Blue"
+  ],
+  [
+   "Magnolia",
+   "Big Dutch Peak",
+   "Green"
+  ],
+  [
+   "Matchless",
+   "Big Dutch Peak",
+   "Blue"
+  ],
+  [
+   "Mountain Monarch",
+   "Big Dutch Peak",
+   "Blue"
+  ],
+  [
+   "Pinafore",
+   "Big Dutch Peak",
+   "Blue"
+  ],
+  [
+   "Primrose",
+   "Big Dutch Peak",
+   "Blue"
+  ],
+  [
+   "Rebellion",
+   "Big Dutch Peak",
+   "Black"
+  ],
+  [
+   "Spitfire",
+   "Big Dutch Peak",
+   "Black"
+  ],
+  [
+   "Sure Thing",
+   "Big Dutch Peak",
+   "Blue"
+  ],
+  [
+   "Torpedo",
+   "Big Dutch Peak",
+   "Blue"
+  ],
+  [
+   "To the Max",
+   "Big Dutch Peak",
+   "Blue"
+  ],
+  [
+   "Tug of War (Lower)",
+   "Big Dutch Peak",
+   "Green"
+  ],
+  [
+   "Tug of War (Upper)",
+   "Big Dutch Peak",
+   "Green"
+  ],
+  [
+   "U Bet",
+   "Big Dutch Peak",
+   "Green"
+  ],
+  [
+   "Welcome Stranger",
+   "Big Dutch Peak",
+   "Black"
+  ],
+  [
+   "Big Stick (Lower)",
+   "Bald Eagle Mountain",
+   "DoubleBlue"
+  ],
+  [
+   "Big Stick (Upper)",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "Champion",
+   "Bald Eagle Mountain",
+   "Black"
+  ],
+  [
+   "Dew Drop",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "Kimberly",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "Know You Don't",
+   "Bald Eagle Mountain",
+   "Black"
+  ],
+  [
+   "Last Chance",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "Little Bell",
+   "Bald Eagle Mountain",
+   "Green"
+  ],
+  [
+   "Little Kate",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "Little Stick (Lower)",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "Little Stick (Mid)",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "Little Stick (Upper)",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "Lucky Bill",
+   "Bald Eagle Mountain",
+   "Black"
+  ],
+  [
+   "Lucky Bud",
+   "Bald Eagle Mountain",
+   "Black"
+  ],
+  [
+   "Navigator",
+   "Bald Eagle Mountain",
+   "Green"
+  ],
+  [
+   "Rising Star",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "Roamer",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "Rosebud",
+   "Bald Eagle Mountain",
+   "Green"
+  ],
+  [
+   "Silver Dollar",
+   "Bald Eagle Mountain",
+   "Green"
+  ],
+  [
+   "Silver Link",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "Solid Muldoon",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "Success",
+   "Bald Eagle Mountain",
+   "Green"
+  ],
+  [
+   "Sunrise",
+   "Bald Eagle Mountain",
+   "Blue"
+  ],
+  [
+   "White Owl",
+   "Bald Eagle Mountain",
+   "Black"
+  ],
+  [
+   "Wide West",
+   "Bald Eagle Mountain",
+   "Green"
+  ],
+  [
+   "Yes You Do",
+   "Bald Eagle Mountain",
+   "Black"
+  ]
+ ]
+}

@@ -5,9 +5,9 @@ overlay on the map, with its name and rating, so you tap the run you just skied 
 works offline on the mountain, installs to a phone's home screen, and can sync your trips between devices with an
 optional account. Live at **[www.myskiruns.app](https://www.myskiruns.app)**.
 
-Twenty-one resorts so far, 3,327 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
+Twenty-two resorts so far, 3,534 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
 Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Vail, Breckenridge, Keystone, Copper
-Mountain, Winter Park, Park City, Big Sky, Palisades Tahoe, Heavenly and Whistler Blackcomb.
+Mountain, Winter Park, Park City, Deer Valley, Big Sky, Palisades Tahoe, Heavenly and Whistler Blackcomb.
 
 Most of the work in this repository is the **trail-map pipeline**: getting every trail's overlay onto its own
 drawn line, with the right name, on maps that were never made to be machine-read. How it is done, resort by
@@ -79,6 +79,7 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 | Copper Mountain | Colorado | 128 (104 + 24) | 1 | PDF lines and names both as filled outlines | `tools/trailmap/resorts/copper-mountain/regen.sh` |
 | Winter Park | Colorado | 172 (114 + 58) | 1 | PDF strokes, text with no Unicode map | `tools/trailmap/resorts/winter-park/regen.sh` |
 | Park City Mountain | Utah | 345 (252 + 93) | 1 | PDF strokes, outlined names, a redrawn inset | `tools/trailmap/resorts/park-city/regen.sh` |
+| Deer Valley | Utah | 207 (181 + 26) | 1 | an earlier export's strokes and outlined names on this season's flattened image; checked against the interactive map | `tools/trailmap/resorts/deer-valley/regen.sh` |
 | Big Sky | Montana | 323 (290 + 33) | 3 | three PDFs of strokes and text | `tools/trailmap/resorts/big-sky/regen.sh` |
 | Palisades Tahoe | California | 247 (124 + 123) | 3 | three PDFs of strokes and outlined names | `tools/trailmap/resorts/palisades-tahoe/regen.sh` |
 | Heavenly | California (and Nevada) | 120 (73 + 47) | 2 | the current map as an image; an older PDF of the artwork registered on it | `tools/trailmap/resorts/heavenly/regen.sh` |

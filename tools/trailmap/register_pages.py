@@ -11,6 +11,9 @@ whole image); the page is rendered at the box's scale. Prints the matches, the R
 median and 90th-percentile residual, and the affine as resort.py keeps it (AFFINE: x = a pt_x + b pt_y + c,
 y = d pt_x + e pt_y + f). Fix it in the resort's resort.py rather than re-matching on every regeneration, then check
 that every old name lands on the image's own name (crops), and look at every place the two differ.
+
+--ref registers an image instead of a PDF page (an interactive map's painting: vicomap.py), in its own units:
+--ref-scale units per px of it (an SVG's units where the painting is drawn scaled), --clip in those units.
 """
 import argparse
 
@@ -24,7 +27,9 @@ Image.MAX_IMAGE_PIXELS = None
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split('\n\n')[0])
-    ap.add_argument('--pdf', required=True)
+    ap.add_argument('--pdf')
+    ap.add_argument('--ref', help='an image to register instead of a PDF page')
+    ap.add_argument('--ref-scale', type=float, default=1.0, help="--ref's units per px of it")
     ap.add_argument('--page', type=int, default=0)
     ap.add_argument('--clip', help='x0,y0,x1,y1 of the page (pt)')
     ap.add_argument('--image', required=True)
@@ -33,13 +38,24 @@ def main():
     ap.add_argument('--ratio', type=float, default=0.7, help="Lowe's ratio test")
     ap.add_argument('--thresh', type=float, default=1.5, help='RANSAC reprojection threshold, px')
     a = ap.parse_args()
-    pg = pymupdf.open(a.pdf)[a.page]
-    clip = pymupdf.Rect(*map(float, a.clip.split(','))) if a.clip else pg.rect
+    assert bool(a.pdf) != bool(a.ref), 'one of --pdf and --ref'
+    if a.pdf:
+        pg = pymupdf.open(a.pdf)[a.page]
+        clip = pymupdf.Rect(*map(float, a.clip.split(','))) if a.clip else pg.rect
+    else:
+        ref = Image.open(a.ref).convert('RGB')
+        clip = pymupdf.Rect(*map(float, a.clip.split(','))) if a.clip else \
+            pymupdf.Rect(0, 0, ref.width * a.ref_scale, ref.height * a.ref_scale)
     img = Image.open(a.image).convert('RGB')
     bx0, by0, bx1, by1 = map(int, a.box.split(',')) if a.box else (0, 0, *img.size)
     z = (bx1 - bx0) / clip.width
-    pix = pg.get_pixmap(matrix=pymupdf.Matrix(z, z), clip=clip, alpha=False)
-    A = np.frombuffer(pix.samples, np.uint8).reshape(pix.height, pix.width, 3)
+    if a.pdf:
+        pix = pg.get_pixmap(matrix=pymupdf.Matrix(z, z), clip=clip, alpha=False)
+        A = np.frombuffer(pix.samples, np.uint8).reshape(pix.height, pix.width, 3)
+    else:
+        r = a.ref_scale
+        A = np.asarray(ref.crop((round(clip.x0 / r), round(clip.y0 / r), round(clip.x1 / r), round(clip.y1 / r)))
+                       .resize((round(clip.width * z), round(clip.height * z)), Image.LANCZOS))
     B = np.asarray(img)[by0:by1, bx0:bx1]
     sift = cv2.SIFT_create(a.features)
     ka, da = sift.detectAndCompute(cv2.cvtColor(A, cv2.COLOR_RGB2GRAY), None)

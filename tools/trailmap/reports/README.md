@@ -5,7 +5,7 @@ area. It is the best check on a map's reading: names as the resort spells them (
 abbreviations), the rating of each run against the symbol printed by it, the area or lift pod each belongs to, and
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
-Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly and Keystone keep it as
+Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone and Deer Valley keep it as
 `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
@@ -60,7 +60,10 @@ TOKEN=$(python3 -c "import json; print(json.load(open('work/palisades-tahoe/cfg.
 curl -sS -o work/palisades-tahoe/feed.json "https://mtnpowder.com/feed/v3.json?bearer_token=$TOKEN&resortId%5B%5D=61"
 ```
 
-Every trail with its rating and lift area (Palisades Tahoe's id is 61, in the config).
+Every trail with its rating and lift area (Palisades Tahoe's id is 61, in the config). `feed_trails.py` reads such a
+feed into `report.json` rows (its areas are the feed's MountainAreas; the rating is read from each trail's icon, as
+labels differ by resort: Deer Valley calls a single diamond "Expert"). Deer Valley's (`deer-valley.json`, resort 49)
+was fetched out of season, every trail "closed for season": the season's list all the same.
 
 ## Big Sky
 

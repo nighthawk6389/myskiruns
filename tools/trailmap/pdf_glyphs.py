@@ -37,7 +37,8 @@ the --square colour is a square, in the --diamond colour a diamond (with
 near-square rectangle in the --square colour); two diamonds
 side by side (or one eight-sided fill) are a double diamond, and EX when
 small white letter fills sit inside; four curves (--circle-curves) in the
---circle colour are a circle. Output: {"labels": [{seq, text, color, size, c, pts}], "symbols":
+--circle colour are a circle, and with --diamond-curves N, N curves in the
+--diamond colour a diamond (curved sides). Output: {"labels": [{seq, text, color, size, c, pts}], "symbols":
 [{t, c, color, seq}]} in PDF points, c a label's centre and pts its glyph
 centres in reading order (the same fields as pdf_labels.py, so the matching
 step is the same). Join names set on two lines and attach each symbol to the
@@ -292,6 +293,8 @@ def labels(a):
             g['sym'] = 'ex' if inside(g['rect']) >= 2 else 'double-diamond'
         elif big and k == 'c' * a.circle_curves and g['col'] in a.circle:
             g['sym'] = 'circle'
+        elif big and a.diamond_curves and k == 'c' * a.diamond_curves and g['col'] in a.diamond:
+            g['sym'] = 'diamond'  # a diamond drawn with curved sides (Deer Valley)
         else:
             g['ch'] = letter(table, g)
         if g.get('sym'):
@@ -520,6 +523,8 @@ def main():
                     help='colour class whose lone glyphs are labels too (one-digit numbered circles: Sugarloaf)')
     lb.add_argument('--circle-curves', type=int, default=4,
                     help="curves in a circle symbol's outline (Heavenly's are drawn with 16)")
+    lb.add_argument('--diamond-curves', type=int, default=0,
+                    help='a fill of this many curves in a --diamond colour is a diamond (curved sides; default: none)')
     a = ap.parse_args()
     {'collect': collect, 'sheet': sheet, 'read': read, 'labels': labels}[a.cmd](a)
 

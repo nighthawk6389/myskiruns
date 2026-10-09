@@ -62,6 +62,25 @@ Big Sky's checks while its pieces were settled: crops of the PDF sharp around pi
 | `ratecmp.py` | ratecmp.py: Big Sky's trails.ts ratings and mountains vs the trail report (tools/trailmap/resorts/big-sky/report.json). |
 | `rostercmp.py` | rostercmp.py [panel ...]: the panels' names vs the resort feed: names not in it, and feed trails no panel prints. |
 
+## deer-valley
+
+Deer Valley's analyses: the October PDF rendered on the November image and diffed (`diff.py`, `clusters.py`,
+`pairs.py`), every label side by side in both editions and scored (`labdiff.py`, `labsheet.py`: now
+`resorts/deer-valley/checks/editions.py labels`), word-gap settings tried against the interactive map's names
+(`spacing.py`), points along pieces for decisions (`pt.py`), crops joined side by side (`hstack.py`), and an edit
+that rewrote `vicomap.py check` with a KD-tree (`edit_check.py`).
+
+| file | what it did |
+|---|---|
+| `deer-valley/diff.py` | The October page rendered on the November image's grid (the registration's affine) and the blurred difference of the two |
+| `deer-valley/clusters.py` | Clusters of strong difference in that image, largest first |
+| `deer-valley/pairs.py` | pairs.py <out> x,y,w,h ...: each box of the November image beside the October render |
+| `deer-valley/labdiff.py` | Each printed label's share of dark text pixels with no match in the other edition, most changed first |
+| `deer-valley/labsheet.py` | Contact sheets of the labels (November above, October below), in a given order |
+| `deer-valley/spacing.py` | `pdf_glyphs.py labels` with several `--space` values, each scored by the names the interactive map spells the same but for spaces |
+| `deer-valley/pt.py` | pt.py id@fraction ...: the map px point that far along a piece (for decisions.py points) |
+| `deer-valley/hstack.py` | hstack.py <out> <png> ...: images side by side |
+| `deer-valley/edit_check.py` | The edit that replaced `vicomap.py check`'s brute-force distances with a KD-tree |
 ## general
 
 Wrappers and early versions of tools now in the repo: the hover check runs (`tools/trailmap/hover_all.sh`), the regeneration check (`tools/trailmap/regen_all.sh`), the audit sheets (`tools/trailmap/overlay_audit.py`), piece contact sheets and region audits (`tools/trailmap/piece_sheet.py`, `region_audit.py`).
@@ -115,6 +134,7 @@ Heavenly's analyses: registering the 2022-23 PDF on the 2024-25 image (now `tool
 | `scripts/build_feed_trails.py` | Build Heavenly's trail list from the FR.TerrainStatusFeed of an archived terrain-and-lift-status.aspx page. |
 | `scripts/warc_to_html.py` | Split one uncompressed WARC response record into its HTTP headers and body. |
 | `tools/redraw.py` | redraw.py: redraw selected fills of a PDF page on a blank page (pymupdf Shape) and render it. Used as a module: redraw(page, drawings, scale, clip) -> RGB numpy array. |
+
 
 ## okemo
 

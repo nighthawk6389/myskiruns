@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's twenty-one resorts got their overlays, written so the next resort (or the next season of one of
+How the app's twenty-two resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -181,7 +181,7 @@ outside their clip (last season's names left in the file: drop them), names on l
 2. Names and symbols: B's `pdf_glyphs.py` passes.
 3. Then A's steps 5-7. Expect more pieces to settle on crops: centre lines fork at junctions.
 
-### D. An older export registered on this season's map (Wildcat, Heavenly)
+### D. An older export registered on this season's map (Wildcat, Heavenly; Deer Valley the other way round)
 
 When this season's PDF is flattened, outlined or missing but an older export of the same artwork has live layers:
 1. `register_pages.py --pdf old.pdf --page 0 --image this_season.png [--box ...]`: the affine (SIFT, RANSAC); keep
@@ -191,6 +191,10 @@ When this season's PDF is flattened, outlined or missing but an older export of 
    and piece against the image's ink. Record what this season no longer prints (`GONE`, leave it out) and what it
    prints anew (`EXTRA`, and `TRACED` for a moved label's stretch).
 3. Extract from the old export with recipe A, B or C, on the image's grid.
+
+The newer edition may be the flattened one and the older the vectors (Deer Valley: the October PDF's strokes and
+glyphs on the November image, `checks/editions.py` for every name, line and symbol that differs, the image's own
+additions traced). Read the names on the newer edition: it corrects the older one's (Ham Bug, now Humbug).
 
 ### E. Names you can't extract (start from Okemo; Sugarbush)
 
@@ -271,7 +275,8 @@ What the tools would do, untried:
   (`reports/fetch_page.cjs` saves every response). Vector tiles or GeoJSON with run names are the best source
   there is: lines and names exact. Then draw the overlays on a render of the same data, or register the data on
   the printed map (`register_pages.py`'s method with control points). Raster tiles at the top zoom, stitched,
-  are recipe G.
+  are recipe G. (Met once, as a check rather than a source: Deer Valley's resorts-interactive.com map is the
+  printed map's strokes again in an SVG grouped by trail name, `vicomap.py`; Part 3, "Deer Valley".)
 - **The resort's GIS** (an ArcGIS run layer, as Whistler Blackcomb publishes): names and run lines in map
   coordinates. It is a source of truth, not of overlays: the overlay must follow the drawn line. Fit an affine
   from GIS to map on named lines around each junction (as Whistler Blackcomb's check did), then use it to name
@@ -309,7 +314,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the twenty-one resorts settled, so the next ones come out alike:
+What the twenty-two resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -463,7 +468,7 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 | `tools/trailmap/pdf_inspect.py` | What a PDF holds, page by page: images with their resolution, strokes by colour x width, fills, text by font; renders, and the vector layer alone (`--vec`) |
 | `tools/trailmap/pdf_classes.py` | The most common stroke classes (or fill colours) of a page, each drawn alone on one contact sheet |
 | `tools/trailmap/extract_pdf_image.py` | The lossless raster of a PDF, and whether it has vector text or drawings |
-| `tools/trailmap/register_pages.py` | The affine that puts a PDF page on a map image (SIFT, ratio test, RANSAC): an older export on this season's image |
+| `tools/trailmap/register_pages.py` | The affine that puts a PDF page on a map image (SIFT, ratio test, RANSAC): an older export on this season's image; `--ref` registers an image instead (an interactive map's painting) |
 
 **The map image**
 
@@ -488,7 +493,7 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 | tool | what it does |
 |---|---|
 | `tools/trailmap/pdf_labels.py` | Trail names from a PDF's text, decoding fonts with no Unicode map (`--glyph gid=char` for the ones it can't) |
-| `tools/trailmap/pdf_glyphs.py` | Names and symbols from outlined glyphs: `collect` the fills in the name colours, `sheet` each unread shape, `read` `shape=char`, `labels` (word gaps `--space`, `--turned` / `--turned-hole` for shapes that are two characters turned over, `--rect-squares`, `--rounded`, `--reorder`, `--circle-curves`, `--double-dist`, `--even`, `--single`) |
+| `tools/trailmap/pdf_glyphs.py` | Names and symbols from outlined glyphs: `collect` the fills in the name colours (`--max-size` for large capitals), `sheet` each unread shape, `read` `shape=char`, `labels` (word gaps `--space`, glyphs joined within `--join`, `--turned` / `--turned-hole` for shapes that are two characters turned over, `--rect-squares`, `--rounded`, `--reorder`, `--circle-curves`, `--diamond-curves` (diamonds with curved sides), `--double-dist`, `--even`, `--sym-min`, `--single`) |
 | `tools/trailmap/pdf_symbols.py` | Difficulty symbols from a PDF's fills (`--rounded`, size limits); `--check` lists trails whose rating has no matching symbol by their label |
 | `tools/trailmap/raster_symbols.py` | Symbols on a raster map (square, circle, diamond, double, EX) |
 
@@ -518,8 +523,9 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 
 | tool | what it does |
 |---|---|
-| `tools/trailmap/reports/` | A resort's trail report: terrain feeds of Vail Resorts' sites (`fetch_page.cjs`, `extract_feed.py`, `feed_trails.py`), their Common Crawl captures (`cc_query.sh`, `cc_lookup.py`, `warc_to_html.py`), mtnfeed and others (its README); `compare.py`: a resort's `trails.ts` against its `report.json` (runs only one lists, ratings, spellings) |
+| `tools/trailmap/reports/` | A resort's trail report: terrain feeds of Vail Resorts' sites (`fetch_page.cjs`, `extract_feed.py`, `feed_trails.py`), their Common Crawl captures (`cc_query.sh`, `cc_lookup.py`, `warc_to_html.py`), mtnfeed (`feed_trails.py` reads its feed too) and others (its README); `compare.py`: a resort's `trails.ts` against its `report.json` (runs only one lists, ratings, spellings; a run the report splits into upper and lower parts stands for the map's one run) |
 | `tools/trailmap/osm_check.py` | OpenStreetMap's runs: `fetch` a box from an Overpass mirror; `check` each piece against the runs projected by a local fit on the named pieces around it |
+| `tools/trailmap/vicomap.py` | A resort's interactive map on resorts-interactive.com (Alterra's resorts): `fetch` its JSON and SVG, `parse` each trail's line and label (grouped by name in the SVG), `fit` the registration on the line pieces, `check` every piece against the trail covering it (`--along`: stretch by stretch), `show` a trail's lines over the map |
 
 **Looking at pieces and overlays on crops**
 
@@ -587,6 +593,7 @@ give the same.
 | [Palisades Tahoe](#palisades-tahoe) | three PDFs | `pdf_resort.py` | `regen.sh` | several PDFs |
 | [Big Sky](#big-sky) | three PDFs of strokes and text | `pdf_resort.py`, report spellings | `regen.sh` | names spelled by the report |
 | [Heavenly](#heavenly) | current image + older PDF | registration, filled outlines | `regen.sh` | an image-only current map |
+| [Deer Valley](#deer-valley) | a flattened image + the earlier vector PDF; an interactive map | registration, glyph names, interactive-map check | `regen.sh` | an Alterra resort (resorts-interactive.com) |
 
 ## Killington
 
@@ -1176,6 +1183,45 @@ California, Nevada, Top of Gondola · `tools/trailmap/resorts/heavenly/`.
 - **Checked:** every overlay on crops, every symbol against its overlay (Sand Dunes' symbol 13 px off its overlay's
   end, accepted); hover 265/266 (the miss: Silver Spur's overlay along the stretch of Von Schmidt's label it
   shares) and 9/9 on Top of Gondola.
+
+## Deer Valley
+
+207 trails (181 + 26) · Utah · one map · areas the trail report's ten mountains · `tools/trailmap/resorts/deer-valley/`.
+
+- **Source:** the resort publishes the 2025-26 map (with the East Village expansion) only as its interactive map
+  (resorts-interactive.com map 1815, behind `deervalley.com/explore-the-mountain/interactive-grooming-map`) and links
+  no PDF. skimap.org keeps two exports of the artwork: the vector PDF of 2025-10-16 (map 35124: 2.1 pt strokes,
+  outlined glyph names, over a 45 dpi painting) and the flattened export of 2025-11-04 (map 40099: one 5301x3997
+  image in a PDF, a sharp painting, the logo and legend moved). The map image is the November image's trail area;
+  the October page is registered on it (`register_pages.py`: 2982 inliers, median residual 0.09 px; `AFFINE` in
+  `resort.py`) and everything is read from it.
+- **Route:** `prepare.py` (the image's crop; the 2.1 pt green, blue and near-black strokes, the 1.68 and 2.15 pt ones
+  too, the legend box left out), `pdf_glyphs.py` (221 shapes read on five sheets, `letters.json`: capitals up to 19 pt,
+  `--max-size 19`; glyphs joined within 13 pt, wide letters leave big gaps; diamonds drawn with four curves,
+  `--diamond-curves 4`; two diamonds 1.6 widths apart are expert), Northern Light's text letters, `pdf_resort.py`.
+- **Rebuild:** `tools/trailmap/resorts/deer-valley/regen.sh` (20 s).
+- **The map:** every name is near-black, printed in a gap of its line with its symbol a little apart (`END_REACH`
+  12 pt); bowls', chutes' and glades' symbols sit under the middle of a two-line name (`SYMBOL_CENTRE`, `JOIN`, 24
+  of them); l and I are one shape (inside a word, l). Names that are no trail (lifts from Sultan Express on, lodges,
+  peaks, the "COMING WINTER 26/27" notice on Hail Peak) are drawn after the names: `is_name` by drawing order.
+- **The two editions** (`checks/editions.py`: each label side by side, pieces and symbols against the image's ink,
+  the image's line ink on no piece): the November image renames Ham Bug Humbug and corrects Persistence, Niagra and
+  Pompei (Persistance, Niagara, Pompeii, `RENAME`), and adds Gilt Edge's stub (traced, `TRACED`). Magnet is drawn
+  twice at one spot, first misspelt (Magent: `DROP`).
+- **Truth:** the trail report (`report.json`, the mtnpowder feed, resort 49: `feed_trails.py` reads it, ratings by
+  icon: BlueBlueSquare is advanced intermediate) and the **interactive map**: its SVG is this map's strokes again,
+  grouped by trail name (`vicomap.py`: registered on its painting, then fitted on the pieces, median 0.27 px). `vicomap.py
+  check` names the trail covering each piece; every difference was settled on a crop (the interactive map lacks a
+  few lines: Carbenite's lower part, Clipper's, McHenry's middle). Names take the report's spelling (Mountain Daisy,
+  Lake Shore, Nondescript) but Ruins of Pompeii and Miner's Delight; its runs split into upper, middle and lower
+  are one trail each as the map prints them, but Lower Lily and Lower Magnet, printed apart, are their own. Ratings
+  agree but Silver Buck's (green circles on the map, blue in the report: the map's kept); four names printed twice
+  with two symbols take the report's (`RATING`).
+- **Decisions:** 363 pieces named by the name at their end or along them, 82 settled on crops, 2 not trails (a link,
+  the line along the Empire Express), 5 cuts (Trump/Ontario, Champion/Know You Don't, Clipper/Golden Age, Lady of the
+  Lake/All Right, Carbenite/Persistance), 1 traced stretch.
+- **Checked:** every overlay on crops (`overlay_audit.py`), every symbol against its overlay (Rising Star's square 50
+  px off its overlay, printed under its two-line name; White Owl's and Mayflower Link's beside theirs); hover 569/569.
 
 # Part 4. Methods in detail
 

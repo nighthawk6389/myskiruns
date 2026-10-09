@@ -1,6 +1,7 @@
 """A resort's trail report from a Vail Resorts terrain feed: the FR.TerrainStatusFeed object of its
-terrain-and-lift-status page (extract_feed.py writes each one to a JSON file), as report.json rows
-[name, area, difficulty label], in the feed's order.
+terrain-and-lift-status page (extract_feed.py writes each one to a JSON file), or from an mtnpowder feed
+(mtnpowder.com/feed/v3.json: README.md, "mtnfeed / mtnpowder"), as report.json rows [name, area, difficulty label],
+in the feed's order.
 
     python3 -I tools/trailmap/reports/feed_trails.py work/heavenly/feed/FR.TerrainStatusFeed_1.json
     python3 -I tools/trailmap/reports/feed_trails.py FEED.json --out tools/trailmap/resorts/<id>/report.json \\
@@ -11,6 +12,11 @@ works (numbers are turned into labels: 1 Green, 2 Blue, 3 Black, 4 DoubleBlack, 
 --out, the rows go under --key in that JSON file (created, or that key replaced), with --source as its "_source";
 without, a summary and the rows are printed. Out of season the feed lists no trails: use a capture from the season
 (cc_query.sh / cc_lookup.py, then warc_to_html.py and extract_feed.py).
+
+An mtnpowder feed's areas are its MountainAreas, and its difficulty is read from each trail's icon, not its label
+(Deer Valley labels a single black diamond "Expert" and a double one "Extremely Difficult"): GreenCircle Green,
+BlueSquare Blue, BlueBlueSquare DoubleBlue (advanced intermediate), BlackDiamond Black, DoubleBlackDiamond
+DoubleBlack; a park icon TerrainPark.
 """
 import argparse
 import collections
@@ -20,8 +26,18 @@ import os
 CODES = {1: 'Green', 2: 'Blue', 3: 'Black', 4: 'DoubleBlack', 5: 'TerrainPark', 7: 'Extreme'}
 
 
+ICONS = {'GreenCircle': 'Green', 'BlueSquare': 'Blue', 'BlueBlueSquare': 'DoubleBlue', 'BlackDiamond': 'Black',
+         'DoubleBlackDiamond': 'DoubleBlack', 'TerrainPark': 'TerrainPark'}
+
+
 def rows(feed):
     out = []
+    if 'Resorts' in feed:  # mtnpowder
+        for resort in feed['Resorts']:
+            for area in resort['MountainAreas']:
+                for t in area.get('Trails', []):
+                    out.append([t['Name'].strip(), area['Name'].strip(), ICONS.get(t['TrailIcon'], t['TrailIcon'])])
+        return out
     for area in feed['GroomingAreas']:
         for t in area['Trails']:
             d = t['Difficulty']
@@ -31,7 +47,7 @@ def rows(feed):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split('\n\n')[0])
-    ap.add_argument('feed', help='one FR.TerrainStatusFeed object (JSON)')
+    ap.add_argument('feed', help='one FR.TerrainStatusFeed object, or an mtnpowder feed (JSON)')
     ap.add_argument('--out', help='report.json to write the rows into')
     ap.add_argument('--key', default='trails', help='the key the rows go under (e.g. trails_2024_25 for a past season)')
     ap.add_argument('--source', help='"_source": where and when the feed was captured')

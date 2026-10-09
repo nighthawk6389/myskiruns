@@ -1,0 +1,28 @@
+// Deer Valley's 2025-26 trail map (with the East Village expansion). The
+// resort publishes it only as its interactive map; skimap.org keeps two
+// exports of the artwork: the vector PDF of 2025-10-16 (map 35124) and the
+// flattened image of 2025-11-04 (map 40099). The map image is the November
+// image; lines, names and symbols are the October PDF's, registered on it
+// (tools/trailmap/register_pages.py, median residual 0.09 px). Trail lines are
+// the PDF's 2.1 pt strokes; names are outlined glyphs (pdf_glyphs.py, shapes
+// read on contact sheets: letters.json), one (Northern Light) text. Each piece
+// is named by the name printed in its gap or at its end, or settled on a crop
+// (decisions.py), each checked against the resort's interactive map, which
+// draws these strokes again grouped by trail name (tools/trailmap/vicomap.py).
+// Where the editions differ the November image wins: Humbug (the PDF's Ham
+// Bug), Persistance (Persistence), Niagara (Niagra), Ruins of Pompeii (Pompei),
+// Gilt Edge's stub (traced). Names are spelled as the trail report spells them
+// (report.json: the mtnpowder feed's 2025-26 list): Mountain Daisy for Mtn.
+// Daisy, Lake Shore, Nondescript, To the Max; but Ruins of Pompeii and Miner's
+// Delight as the map prints them. The report's runs split into (Upper), (Mid)
+// and (Lower) are one trail each, as the map prints them; Lower Lily and Lower
+// Magnet are printed apart and are trails of their own. Difficulty is the
+// symbol printed with each name; advanced intermediate (two squares:
+// Perseverance, Tycoon, Wizard, Peeler, Free Will, Redemption, Orion,
+// Jordanelle, Big Stick's lower part) is blue; two diamonds are expert.
+// Names printed twice with two symbols take the report's rating: Bluebell,
+// Solid Muldoon, Solace (blue), Stein's Way (black). Silver Buck prints green
+// circles (the report: blue): the map's kept. 26 names have no drawn line
+// (bowls, chutes, glades, tree areas): markers at the label. Hail Peak's
+// terrain, "coming winter 26/27", isn't on this map. Areas are the report's
+// mountains. x/y/baseY/width are unused layout fields.

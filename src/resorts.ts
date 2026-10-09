@@ -55,11 +55,13 @@ function oneMap(
   region: string,
   trails: () => Promise<TrailsModule>,
   paths: () => Promise<PathsModule>,
+  also?: string[],
 ): ResortEntry {
   return {
     id,
     name,
     region,
+    also,
     load: async () => {
       const [t, p] = await Promise.all([trails(), paths()]);
       const maps = [{ id: 'map', name: 'Trail map', mapSrc: `/maps/${id}.jpg`, paths: pathsOf(p) }];
@@ -139,6 +141,7 @@ export const RESORTS: ResortEntry[] = [
     { id: 'main', name: 'California and Nevada', paths: () => import('./data/resorts/heavenly/panels/main/trailPaths.json') },
     { id: 'top-of-gondola', name: 'Top of Gondola', paths: () => import('./data/resorts/heavenly/panels/top-of-gondola/trailPaths.json') },
   ], ['Nevada', 'Lake Tahoe']),
+  oneMap('deer-valley', 'Deer Valley', 'Utah', () => import('./data/resorts/deer-valley/trails'), () => import('./data/resorts/deer-valley/trailPaths.json'), ['Park City']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

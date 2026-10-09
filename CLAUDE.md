@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Ski-run tracker for twenty-one resorts (React 19 + TS + Vite). The hard part is
+Ski-run tracker for twenty-two resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
@@ -59,7 +59,8 @@ the already-assigned path (that is circular).
   every PDF resort after it from `resort.py` + `decisions.py` through
   `tools/trailmap/pdf_resort.py` (per panel in `panels/<panel>/` for Whistler
   Blackcomb, Palisades Tahoe, Big Sky and Heavenly; Heavenly's PDF is an older
-  export of its map's artwork, registered on the current image); Whiteface's,
+  export of its map's artwork, registered on the current image, and Deer
+  Valley's an earlier one registered on the later flattened image); Whiteface's,
   Winter Park's, Breckenridge's, Copper Mountain's and Keystone's by their own
   scripts; Okemo's, Sugarbush's and Jay Peak's from their archived readings.
   Change those, not the generated files. A new resort gets such a folder too,

@@ -285,6 +285,24 @@ const RESORT_ADS = {
       'sword', 'hawaiian', 'cookie', 'recipe', 'dessert',
     ],
   },
+  'deer-valley': {
+    short: 'Deer Valley',
+    path: 'Deer-Valley',
+    area: 'Bald Mountain to East Village',
+    names: ['deer valley resort', 'deer valley utah'],
+    keywords: [
+      ['deer valley trail map', 'exact'],
+      ['deer valley ski map', 'exact'],
+      ['deer valley ski map', 'phrase'],
+      ['deer valley ski trails', 'phrase'],
+      ['deer valley east village map', 'phrase'],
+    ],
+    // the other Deer Valleys (Arizona, California, Pennsylvania), and summer
+    negatives: [
+      'arizona', 'az', 'phoenix', 'california', 'antioch', 'pennsylvania', 'pa', 'hershey', 'unified', 'high school',
+      'mountain bike', 'bike', 'hiking', 'concert', 'amphitheater', 'grocery',
+    ],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */
