@@ -144,6 +144,10 @@ export const RESORTS: ResortEntry[] = [
   oneMap('deer-valley', 'Deer Valley', 'Utah', () => import('./data/resorts/deer-valley/trails'), () => import('./data/resorts/deer-valley/trailPaths.json'), ['Park City']),
   oneMap('mt-bachelor', 'Mt. Bachelor', 'Oregon', () => import('./data/resorts/mt-bachelor/trails'), () => import('./data/resorts/mt-bachelor/trailPaths.json'), ['Mount Bachelor', 'Bend']),
   oneMap('steamboat', 'Steamboat', 'Colorado', () => import('./data/resorts/steamboat/trails'), () => import('./data/resorts/steamboat/trailPaths.json'), ['Steamboat Springs']),
+  panels('mammoth', 'Mammoth Mountain', 'California', () => import('./data/resorts/mammoth/trails'), [
+    { id: 'main', name: 'Whole mountain', paths: () => import('./data/resorts/mammoth/panels/main/trailPaths.json') },
+    { id: 'back-side', name: 'Back Side', paths: () => import('./data/resorts/mammoth/panels/back-side/trailPaths.json') },
+  ], ['Mammoth', 'Mammoth Lakes']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

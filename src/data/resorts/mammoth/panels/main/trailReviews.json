@@ -1,0 +1,82 @@
+{
+ "reviews": {
+  "gravy-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-09T14:12:31.000Z",
+   "by": "claude",
+   "labelAt": [
+    67.6,
+    41.45
+   ]
+  },
+  "woollys-woods": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-09T14:12:31.000Z",
+   "by": "claude",
+   "labelAt": [
+    81.82,
+    56.54
+   ]
+  },
+  "twilight-zone": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-09T14:12:31.000Z",
+   "by": "claude",
+   "labelAt": [
+    67.18,
+    59.19
+   ]
+  },
+  "snake-run": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-09T14:29:49.000Z",
+   "by": "claude",
+   "labelAt": [
+    49.72,
+    62.93
+   ]
+  },
+  "hucks-drop": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-09T14:12:31.000Z",
+   "by": "claude",
+   "labelAt": [
+    40.25,
+    70.5
+   ]
+  },
+  "goldies-flight": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-09T14:12:31.000Z",
+   "by": "claude",
+   "labelAt": [
+    16.35,
+    78.7
+   ]
+  }
+ }
+}

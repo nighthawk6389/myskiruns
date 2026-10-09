@@ -1,0 +1,965 @@
+{
+ "_source": "Mammoth Mountain's trail report: the mtnpowder feed (resort 60; the bearer token from v4.mtnfeed.com/resorts/mammoth.json) as fetched on 2026-10-09, out of season, every trail closed: the list all the same",
+ "trails": [
+  [
+   "Jibs & More (Trail)",
+   "Canyon",
+   "Blue"
+  ],
+  [
+   "Agee's Run",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Andy's Double Gold",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Apple Pie",
+   "Main Lodge",
+   "Green"
+  ],
+  [
+   "Arriba (Lower)",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Arriba (Upper)",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Blue Ox",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Bristlecone",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Broadway",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Center Bowl",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "China Bowl",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Christmas Bowl",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Climax",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Comeback Trail",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Comin' Thru",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Cornice Bowl",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Coyote",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Critters",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Disco Playground",
+   "Main Lodge",
+   "TerrainPark"
+  ],
+  [
+   "Drop 18",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Dropout Chutes",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Dry Creek",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Dry Creek (Lower)",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Dry Creek (Upper)",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Easy Rider",
+   "Main Lodge",
+   "Green"
+  ],
+  [
+   "Europa Cup",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Exhibition",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Forest Trail",
+   "Main Lodge",
+   "TerrainPark"
+  ],
+  [
+   "Glades",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Gravy Chute",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Gremlins Gulch",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Hangman's Hollow",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Huevos Grande",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Jill's Pipe",
+   "Main Lodge",
+   "Halfpipe"
+  ],
+  [
+   "Jill's Run",
+   "Main Lodge",
+   "Green"
+  ],
+  [
+   "Jill's Run Uphill Route",
+   "Main Lodge",
+   "UphillArrow"
+  ],
+  [
+   "Kiwi Flats",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Knee Deep",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Lodgepole",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Lost in the Woods",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Lost in the Woods (Lower) Uphill Route",
+   "Main Lodge",
+   "UphillArrow"
+  ],
+  [
+   "Lost in the Woods (Upper) Uphill Route",
+   "Main Lodge",
+   "UphillArrow"
+  ],
+  [
+   "Main Park",
+   "Main Lodge",
+   "TerrainPark"
+  ],
+  [
+   "Main Pipe",
+   "Main Lodge",
+   "Halfpipe"
+  ],
+  [
+   "Mambo (Lower)",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Mambo (Upper)",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "MJB's",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Monument",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "New Critters",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Old 10 Breakover",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Old Comeback",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Oops",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Outpost Glades",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Over Easy",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Paranoid Chutes",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Paranoid Flats",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Patrolmen's",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Phantom's Escape",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Philippe's",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Ponderosa",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Ralphie's",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Reds Lake Run",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Ricardo Bluffs",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Rigley's Bowl",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Road Runner Lower (Bottom Half)",
+   "Main Lodge",
+   "Green"
+  ],
+  [
+   "Road Runner Lower (Top Half)",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Road Runner (Middle)",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Road Runner (Upper)",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Rogers' Ridge",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Rooster Tail",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Rusty's",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Saddle Bowl",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Santiago",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Santiago Bowl",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Scotty's",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Secret Spot",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Sesame Street",
+   "Main Lodge",
+   "Green"
+  ],
+  [
+   "Silver Tip",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Skyline",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "St. Anton",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "St. Anton (Lower)",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "St. Anton (Upper)",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Starr Chutes",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "St. Moritz",
+   "Main Lodge",
+   "Green"
+  ],
+  [
+   "Stump Alley",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Surprise",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Terry's Run",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "The Bear",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "The Hemlocks",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "The Hemlocks (Terrain Features)",
+   "Main Lodge",
+   "TerrainPark"
+  ],
+  [
+   "The Snowflakes / Fascination",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Top of the World",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Training Wheels",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Twilight Zone",
+   "Main Lodge",
+   "PurpleStar"
+  ],
+  [
+   "Wall",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Wall Street",
+   "Main Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Walter's",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "West Bowl",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "West Summit Uphill Route",
+   "Main Lodge",
+   "UphillArrow"
+  ],
+  [
+   "Whitebark Bowl (Lower)",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Whitebark Bowl (Upper)",
+   "Main Lodge",
+   "Black"
+  ],
+  [
+   "Whitebark Ridge",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Wipeout Chutes",
+   "Main Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Woolly's Woods",
+   "Main Lodge",
+   "PurpleStar"
+  ],
+  [
+   "World Cup",
+   "Main Lodge",
+   "Blue"
+  ],
+  [
+   "Antin Alley / Chickadee",
+   "Canyon Lodge",
+   "Blue"
+  ],
+  [
+   "Avalanche",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Avalanche Chutes",
+   "Canyon Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Big Bird",
+   "Canyon Lodge",
+   "Green"
+  ],
+  [
+   "Big Bird Uphill Route",
+   "Canyon Lodge",
+   "UphillArrow"
+  ],
+  [
+   "Bluejay",
+   "Canyon Lodge",
+   "Black"
+  ],
+  [
+   "Canyon Connector",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Canyon Lodge Uphill Route",
+   "Canyon Lodge",
+   "UphillArrow"
+  ],
+  [
+   "Carousel",
+   "Canyon Lodge",
+   "TerrainPark"
+  ],
+  [
+   "Cloverleaf",
+   "Canyon Lodge",
+   "Blue"
+  ],
+  [
+   "Crosswalk",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Downhill (Lower)",
+   "Canyon Lodge",
+   "Blue"
+  ],
+  [
+   "Downhill (Upper)",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Encore",
+   "Canyon Lodge",
+   "Black"
+  ],
+  [
+   "Face of Five (Lower)",
+   "Canyon Lodge",
+   "Black"
+  ],
+  [
+   "Face of Five (Upper)",
+   "Canyon Lodge",
+   "Black"
+  ],
+  [
+   "Follow Me",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Ginger Bread",
+   "Canyon Lodge",
+   "Green"
+  ],
+  [
+   "Grizzly Lower",
+   "Canyon Lodge",
+   "Black"
+  ],
+  [
+   "Grizzly (Upper)",
+   "Canyon Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Hansel",
+   "Canyon Lodge",
+   "Green"
+  ],
+  [
+   "Haven't the Foggiest",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Huck's Drop",
+   "Canyon Lodge",
+   "PurpleStar"
+  ],
+  [
+   "Hully Gully",
+   "Canyon Lodge",
+   "Blue"
+  ],
+  [
+   "Jibs & More",
+   "Canyon Lodge",
+   "TerrainPark"
+  ],
+  [
+   "Little Bird",
+   "Canyon Lodge",
+   "Green"
+  ],
+  [
+   "Milk Run",
+   "Canyon Lodge",
+   "Green"
+  ],
+  [
+   "Quicksilver",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Redtail",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Redwing",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Relief",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Repeat 22",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Roller Coaster (Lower)",
+   "Canyon Lodge",
+   "Blue"
+  ],
+  [
+   "Roller Coaster (Upper)",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Round About",
+   "Canyon Lodge",
+   "Green"
+  ],
+  [
+   "Round Robin",
+   "Canyon Lodge",
+   "Green"
+  ],
+  [
+   "Sanctuary",
+   "Canyon Lodge",
+   "Black"
+  ],
+  [
+   "School Yard",
+   "Canyon Lodge",
+   "Green"
+  ],
+  [
+   "Shaft",
+   "Canyon Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Side Show",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Skiback Trail Uphill Route",
+   "Canyon Lodge",
+   "UphillArrow"
+  ],
+  [
+   "Sliver",
+   "Canyon Lodge",
+   "Black"
+  ],
+  [
+   "Snake Run",
+   "Canyon Lodge",
+   "TerrainPark"
+  ],
+  [
+   "Solitude (Lower)",
+   "Canyon Lodge",
+   "Blue"
+  ],
+  [
+   "Solitude (Upper)",
+   "Canyon Lodge",
+   "BlueBlack"
+  ],
+  [
+   "South Park",
+   "Canyon Lodge",
+   "TerrainPark"
+  ],
+  [
+   "Spring Canyon",
+   "Canyon Lodge",
+   "Green"
+  ],
+  [
+   "Sunset",
+   "Canyon Lodge",
+   "Black"
+  ],
+  [
+   "Sunshine Glades",
+   "Canyon Lodge",
+   "Black"
+  ],
+  [
+   "Swell",
+   "Canyon Lodge",
+   "Blue"
+  ],
+  [
+   "The Acts",
+   "Canyon Lodge",
+   "Black"
+  ],
+  [
+   "Triangle",
+   "Canyon Lodge",
+   "Black"
+  ],
+  [
+   "Village Ski Back Trail",
+   "Canyon Lodge",
+   "Blue"
+  ],
+  [
+   "Viva (Lower)",
+   "Canyon Lodge",
+   "Black"
+  ],
+  [
+   "Viva (Upper)",
+   "Canyon Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Way Home",
+   "Canyon Lodge",
+   "Blue"
+  ],
+  [
+   "Wonderland Playground",
+   "Canyon Lodge",
+   "TerrainPark"
+  ],
+  [
+   "Back for More (Lower)",
+   "Eagle Lodge",
+   "Green"
+  ],
+  [
+   "Back for More (Upper)",
+   "Eagle Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Bridges",
+   "Eagle Lodge",
+   "Blue"
+  ],
+  [
+   "Christmas Tree",
+   "Eagle Lodge",
+   "Blue"
+  ],
+  [
+   "Dave's Glades",
+   "Eagle Lodge",
+   "Black"
+  ],
+  [
+   "Dave's Run",
+   "Eagle Lodge",
+   "Black"
+  ],
+  [
+   "Dragon Alley",
+   "Eagle Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Dragon's Back",
+   "Eagle Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Dragon's Pass",
+   "Eagle Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Dragon's Tail",
+   "Eagle Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Eagle Lodge Uphill Route",
+   "Eagle Lodge",
+   "UphillArrow"
+  ],
+  [
+   "Eagle Playground",
+   "Eagle Lodge",
+   "TerrainPark"
+  ],
+  [
+   "Goldhill (Lower)",
+   "Eagle Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Goldhill (Upper)",
+   "Eagle Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Goldie's Flight",
+   "Eagle Lodge",
+   "PurpleStar"
+  ],
+  [
+   "Head Chutes",
+   "Eagle Lodge",
+   "DoubleBlack"
+  ],
+  [
+   "Holiday",
+   "Eagle Lodge",
+   "Green"
+  ],
+  [
+   "Juniper",
+   "Eagle Lodge",
+   "Blue"
+  ],
+  [
+   "Lupin",
+   "Eagle Lodge",
+   "Green"
+  ],
+  [
+   "Main Traverse",
+   "Eagle Lodge",
+   "Blue"
+  ],
+  [
+   "Manzanita",
+   "Eagle Lodge",
+   "Blue"
+  ],
+  [
+   "Pumpkin",
+   "Eagle Lodge",
+   "Green"
+  ],
+  [
+   "Ricochet (Lower)",
+   "Eagle Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Ricochet (Upper)",
+   "Eagle Lodge",
+   "Black"
+  ],
+  [
+   "Roma's Glades",
+   "Eagle Lodge",
+   "Black"
+  ],
+  [
+   "Roma's Road",
+   "Eagle Lodge",
+   "Blue"
+  ],
+  [
+   "Sleepy Hollow",
+   "Eagle Lodge",
+   "Green"
+  ],
+  [
+   "Slot",
+   "Eagle Lodge",
+   "BlueBlack"
+  ],
+  [
+   "Watertank",
+   "Eagle Lodge",
+   "Blue"
+  ],
+  [
+   "Wazoo",
+   "Eagle Lodge",
+   "DoubleBlack"
+  ]
+ ]
+}

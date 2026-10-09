@@ -328,6 +328,24 @@ const RESORT_ADS = {
     // the volcano (climbs, geology) and the TV show; summer and Nordic are the campaign's negatives
     negatives: ['climb', 'climbing', 'volcano', 'eruption', 'geology', 'the bachelor', 'bachelorette'],
   },
+  mammoth: {
+    short: 'Mammoth',
+    path: 'Mammoth',
+    area: 'Summit to the Back Side',
+    // bare "mammoth" means the animal (and much else): only with the resort's names or a map
+    names: ['mammoth mountain', 'mammoth lakes', 'mammoth ski resort'],
+    keywords: [
+      ['mammoth trail map', 'exact'],
+      ['mammoth ski map', 'exact'],
+      ['mammoth ski map', 'phrase'],
+      ['mammoth ski trails', 'phrase'],
+    ],
+    // the animals, the caves and the other Mammoths (the storage brand, the cards, the town's summer)
+    negatives: [
+      'woolly', 'extinct', 'fossil', 'tusk', 'elephant', 'cave', 'kentucky', 'national park', 'storage', 'hunting',
+      'mountain bike', 'bike park', 'fishing', 'hiking', 'campground', 'zip code',
+    ],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

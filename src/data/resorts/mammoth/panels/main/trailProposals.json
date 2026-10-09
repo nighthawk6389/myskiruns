@@ -1,0 +1,1329 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "agees-run": {
+   "polylines": [
+    119
+   ],
+   "confidence": "high",
+   "mapName": "AGEE'S RUN",
+   "note": "its group"
+  },
+  "andys-double-gold": {
+   "polylines": [
+    117
+   ],
+   "confidence": "high",
+   "mapName": "ANDY'S DOUBLE GOLD",
+   "note": "its group"
+  },
+  "apple-pie": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "APPLE PIE",
+   "note": "its group"
+  },
+  "blue-ox": {
+   "polylines": [
+    118
+   ],
+   "confidence": "high",
+   "mapName": "BLUE OX",
+   "note": "its group"
+  },
+  "bristlecone": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "BRISTLECONE",
+   "note": "its group"
+  },
+  "broadway": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "BROADWAY",
+   "note": "its group"
+  },
+  "center-bowl": {
+   "polylines": [
+    90
+   ],
+   "confidence": "high",
+   "mapName": "CENTER BOWL",
+   "note": "its group"
+  },
+  "china-bowl": {
+   "polylines": [
+    109
+   ],
+   "confidence": "high",
+   "mapName": "CHINA BOWL",
+   "note": "its group"
+  },
+  "christmas-bowl": {
+   "polylines": [
+    110
+   ],
+   "confidence": "high",
+   "mapName": "CHRISTMAS BOWL",
+   "note": "its group"
+  },
+  "climax": {
+   "polylines": [
+    141
+   ],
+   "confidence": "high",
+   "mapName": "CLIMAX",
+   "note": "its group"
+  },
+  "comeback-trail": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "COMEBACK TRAIL",
+   "note": "its group"
+  },
+  "comin-thru": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "COMIN' THRU",
+   "note": "its group"
+  },
+  "cornice-bowl": {
+   "polylines": [
+    125
+   ],
+   "confidence": "high",
+   "mapName": "CORNICE BOWL",
+   "note": "its group"
+  },
+  "coyote": {
+   "polylines": [
+    91
+   ],
+   "confidence": "high",
+   "mapName": "COYOTE",
+   "note": "its group"
+  },
+  "critters": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "CRITTERS",
+   "note": "its group"
+  },
+  "disco-playground": {
+   "polylines": [
+    155
+   ],
+   "confidence": "high",
+   "mapName": "DISCO PLAYGROUND",
+   "note": "its group"
+  },
+  "drop-18": {
+   "polylines": [
+    112
+   ],
+   "confidence": "high",
+   "mapName": "DROP 18",
+   "note": "its group"
+  },
+  "dropout-chutes": {
+   "polylines": [
+    138
+   ],
+   "confidence": "high",
+   "mapName": "DROPOUT CHUTES",
+   "note": "its group"
+  },
+  "dry-creek": {
+   "polylines": [
+    107
+   ],
+   "confidence": "high",
+   "mapName": "DRY CREEK",
+   "note": "its group"
+  },
+  "dry-creek-lower": {
+   "polylines": [
+    83
+   ],
+   "confidence": "high",
+   "mapName": "DRY CREEK (LOWER)",
+   "note": "its group"
+  },
+  "dry-creek-upper": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "DRY CREEK (UPPER)",
+   "note": "its group"
+  },
+  "easy-rider": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "EASY RIDER",
+   "note": "its group"
+  },
+  "europa-cup": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "EUROPA CUP",
+   "note": "its group"
+  },
+  "exhibition": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "EXHIBITION",
+   "note": "its group"
+  },
+  "forest-trail": {
+   "polylines": [
+    158
+   ],
+   "confidence": "high",
+   "mapName": "FOREST TRAIL",
+   "note": "its group"
+  },
+  "glades": {
+   "noLine": true,
+   "label": [
+    67.96,
+    44.98
+   ],
+   "confidence": "high"
+  },
+  "gremlins-gulch": {
+   "polylines": [
+    58
+   ],
+   "confidence": "high",
+   "mapName": "GREMLINS GULCH",
+   "note": "its group"
+  },
+  "hangmans-hollow": {
+   "polylines": [
+    140
+   ],
+   "confidence": "high",
+   "mapName": "HANGMAN'S HOLLOW",
+   "note": "its group"
+  },
+  "huevos-grande": {
+   "polylines": [
+    142
+   ],
+   "confidence": "high",
+   "mapName": "HUEVOS GRANDE",
+   "note": "its group"
+  },
+  "jills-run": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "JILL'S RUN",
+   "note": "its group"
+  },
+  "kiwi-flats": {
+   "polylines": [
+    129
+   ],
+   "confidence": "high",
+   "mapName": "KIWI FLATS",
+   "note": "its group"
+  },
+  "knee-deep": {
+   "polylines": [
+    84
+   ],
+   "confidence": "high",
+   "mapName": "KNEE DEEP",
+   "note": "its group"
+  },
+  "lodgepole": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "LODGEPOLE",
+   "note": "its group"
+  },
+  "lost-in-the-woods": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "LOST IN THE WOODS",
+   "note": "its group"
+  },
+  "mjbs": {
+   "polylines": [
+    139
+   ],
+   "confidence": "high",
+   "mapName": "MJB'S",
+   "note": "its group"
+  },
+  "main-park": {
+   "polylines": [
+    156
+   ],
+   "confidence": "high",
+   "mapName": "MAIN PARK",
+   "note": "its group"
+  },
+  "mambo-lower": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "MAMBO (LOWER)",
+   "note": "its group"
+  },
+  "mambo-upper": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "MAMBO (UPPER)",
+   "note": "its group"
+  },
+  "monument": {
+   "polylines": [
+    136
+   ],
+   "confidence": "high",
+   "mapName": "MONUMENT",
+   "note": "its group"
+  },
+  "new-critters": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "NEW CRITTERS",
+   "note": "its group"
+  },
+  "old-10-breakover": {
+   "polylines": [
+    157
+   ],
+   "confidence": "high",
+   "mapName": "OLD 10 BREAKOVER",
+   "note": "its group"
+  },
+  "old-comeback": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "OLD COMEBACK",
+   "note": "its group"
+  },
+  "over-easy": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "OVER EASY",
+   "note": "its group"
+  },
+  "paranoid-chutes": {
+   "polylines": [
+    131
+   ],
+   "confidence": "high",
+   "mapName": "PARANOID CHUTES",
+   "note": "its group"
+  },
+  "paranoid-flats": {
+   "polylines": [
+    135
+   ],
+   "confidence": "high",
+   "mapName": "PARANOID FLATS",
+   "note": "its group"
+  },
+  "patrolmens": {
+   "polylines": [
+    114
+   ],
+   "confidence": "high",
+   "mapName": "PATROLMEN'S",
+   "note": "its group"
+  },
+  "phantoms-escape": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "PHANTOM'S ESCAPE",
+   "note": "its group"
+  },
+  "philippes": {
+   "polylines": [
+    130
+   ],
+   "confidence": "high",
+   "mapName": "PHILIPPE'S",
+   "note": "its group"
+  },
+  "ponderosa": {
+   "polylines": [
+    87
+   ],
+   "confidence": "high",
+   "mapName": "PONDEROSA",
+   "note": "its group"
+  },
+  "ralphies": {
+   "polylines": [
+    85
+   ],
+   "confidence": "high",
+   "mapName": "RALPHIE'S",
+   "note": "its group"
+  },
+  "ricardo-bluffs": {
+   "polylines": [
+    80
+   ],
+   "confidence": "high",
+   "mapName": "RICARDO BLUFFS",
+   "note": "its group"
+  },
+  "road-runner-lower-bottom-half": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "ROAD RUNNER LOWER (BOTTOM HALF)",
+   "note": "its group"
+  },
+  "road-runner-lower-top-half": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "ROAD RUNNER LOWER (TOP HALF)",
+   "note": "its group"
+  },
+  "rogers-ridge": {
+   "polylines": [
+    113
+   ],
+   "confidence": "high",
+   "mapName": "ROGERS' RIDGE",
+   "note": "its group"
+  },
+  "rooster-tail": {
+   "polylines": [
+    108
+   ],
+   "confidence": "high",
+   "mapName": "ROOSTER TAIL",
+   "note": "its group"
+  },
+  "rustys": {
+   "polylines": [
+    86
+   ],
+   "confidence": "high",
+   "mapName": "RUSTY'S",
+   "note": "its group"
+  },
+  "saddle-bowl": {
+   "polylines": [
+    89
+   ],
+   "confidence": "high",
+   "mapName": "SADDLE BOWL",
+   "note": "its group"
+  },
+  "santiago-bowl": {
+   "polylines": [
+    124
+   ],
+   "confidence": "high",
+   "mapName": "SANTIAGO BOWL",
+   "note": "its group"
+  },
+  "scottys": {
+   "polylines": [
+    165
+   ],
+   "confidence": "high",
+   "mapName": "SCOTTY'S",
+   "note": "checked on a crop"
+  },
+  "secret-spot": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "SECRET SPOT",
+   "note": "its group"
+  },
+  "sesame-street": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "SESAME STREET",
+   "note": "its group"
+  },
+  "silver-tip": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "SILVER TIP",
+   "note": "its group"
+  },
+  "skyline": {
+   "polylines": [
+    120
+   ],
+   "confidence": "high",
+   "mapName": "SKYLINE",
+   "note": "its group"
+  },
+  "st-anton": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "ST. ANTON",
+   "note": "its group"
+  },
+  "st-anton-lower": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "ST. ANTON (LOWER)",
+   "note": "its group"
+  },
+  "st-anton-upper": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "ST. ANTON (UPPER)",
+   "note": "its group"
+  },
+  "st-moritz": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "ST. MORITZ",
+   "note": "its group"
+  },
+  "starr-chutes": {
+   "polylines": [
+    128
+   ],
+   "confidence": "high",
+   "mapName": "STARR CHUTES",
+   "note": "its group"
+  },
+  "stump-alley": {
+   "polylines": [
+    55
+   ],
+   "confidence": "high",
+   "mapName": "STUMP ALLEY",
+   "note": "its group"
+  },
+  "terrys-run": {
+   "polylines": [
+    88
+   ],
+   "confidence": "high",
+   "mapName": "TERRY'S RUN",
+   "note": "its group"
+  },
+  "the-bear": {
+   "polylines": [
+    132
+   ],
+   "confidence": "high",
+   "mapName": "THE BEAR",
+   "note": "its group"
+  },
+  "the-hemlocks": {
+   "polylines": [
+    127
+   ],
+   "confidence": "high",
+   "mapName": "THE HEMLOCKS",
+   "note": "its group"
+  },
+  "the-hemlocks-terrain-features": {
+   "polylines": [
+    154
+   ],
+   "confidence": "high",
+   "mapName": "THE HEMLOCKS (TERRAIN FEATURES)",
+   "note": "its group"
+  },
+  "the-snowflakes-fascination": {
+   "polylines": [
+    116
+   ],
+   "confidence": "high",
+   "mapName": "THE SNOWFLAKES / FASCINATION",
+   "note": "its group"
+  },
+  "top-of-the-world": {
+   "polylines": [
+    133
+   ],
+   "confidence": "high",
+   "mapName": "TOP OF THE WORLD",
+   "note": "its group"
+  },
+  "wall": {
+   "polylines": [
+    115
+   ],
+   "confidence": "high",
+   "mapName": "WALL",
+   "note": "its group"
+  },
+  "wall-street": {
+   "polylines": [
+    82
+   ],
+   "confidence": "high",
+   "mapName": "WALL STREET",
+   "note": "its group"
+  },
+  "walters": {
+   "polylines": [
+    153
+   ],
+   "confidence": "high",
+   "mapName": "WALTER'S",
+   "note": "its group"
+  },
+  "west-bowl": {
+   "polylines": [
+    111
+   ],
+   "confidence": "high",
+   "mapName": "WEST BOWL",
+   "note": "its group"
+  },
+  "whitebark-bowl-lower": {
+   "polylines": [
+    122
+   ],
+   "confidence": "high",
+   "mapName": "WHITEBARK BOWL (LOWER)",
+   "note": "its group"
+  },
+  "whitebark-bowl-upper": {
+   "polylines": [
+    121
+   ],
+   "confidence": "high",
+   "mapName": "WHITEBARK BOWL (UPPER)",
+   "note": "its group"
+  },
+  "whitebark-ridge": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "WHITEBARK RIDGE",
+   "note": "its group"
+  },
+  "wipeout-chutes": {
+   "polylines": [
+    137
+   ],
+   "confidence": "high",
+   "mapName": "WIPEOUT CHUTES",
+   "note": "its group"
+  },
+  "world-cup": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "WORLD CUP",
+   "note": "its group"
+  },
+  "antin-alley-chickadee": {
+   "polylines": [
+    56,
+    167
+   ],
+   "confidence": "high",
+   "mapName": "ANTIN ALLEY / CHICKADEE",
+   "note": "its group | along its printed name"
+  },
+  "avalanche": {
+   "polylines": [
+    78
+   ],
+   "confidence": "high",
+   "mapName": "AVALANCHE",
+   "note": "its group"
+  },
+  "avalanche-chutes": {
+   "polylines": [
+    143
+   ],
+   "confidence": "high",
+   "mapName": "AVALANCHE CHUTES",
+   "note": "its group"
+  },
+  "big-bird": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "BIG BIRD",
+   "note": "its group"
+  },
+  "bluejay": {
+   "polylines": [
+    126
+   ],
+   "confidence": "high",
+   "mapName": "BLUEJAY",
+   "note": "its group"
+  },
+  "canyon-connector": {
+   "polylines": [
+    68
+   ],
+   "confidence": "high",
+   "mapName": "CANYON CONNECTOR",
+   "note": "its group"
+  },
+  "carousel": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "CAROUSEL",
+   "note": "its group"
+  },
+  "cloverleaf": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "CLOVERLEAF",
+   "note": "its group"
+  },
+  "crosswalk": {
+   "polylines": [
+    79
+   ],
+   "confidence": "high",
+   "mapName": "CROSSWALK",
+   "note": "its group"
+  },
+  "downhill-lower": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "DOWNHILL (LOWER)",
+   "note": "its group"
+  },
+  "downhill-upper": {
+   "polylines": [
+    76
+   ],
+   "confidence": "high",
+   "mapName": "DOWNHILL (UPPER)",
+   "note": "its group"
+  },
+  "encore": {
+   "polylines": [
+    97
+   ],
+   "confidence": "high",
+   "mapName": "ENCORE",
+   "note": "its group"
+  },
+  "face-of-five-lower": {
+   "polylines": [
+    99
+   ],
+   "confidence": "high",
+   "mapName": "FACE OF FIVE (LOWER)",
+   "note": "its group"
+  },
+  "face-of-five-upper": {
+   "polylines": [
+    100
+   ],
+   "confidence": "high",
+   "mapName": "FACE OF FIVE (UPPER)",
+   "note": "its group"
+  },
+  "follow-me": {
+   "polylines": [
+    163
+   ],
+   "confidence": "high",
+   "mapName": "FOLLOW ME",
+   "note": "its group"
+  },
+  "ginger-bread": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "GINGER BREAD",
+   "note": "its group"
+  },
+  "grizzly-upper": {
+   "polylines": [
+    146
+   ],
+   "confidence": "high",
+   "mapName": "GRIZZLY (UPPER)",
+   "note": "its group"
+  },
+  "grizzly-lower": {
+   "polylines": [
+    95
+   ],
+   "confidence": "high",
+   "mapName": "GRIZZLY LOWER",
+   "note": "its group"
+  },
+  "hansel": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "HANSEL",
+   "note": "its group"
+  },
+  "havent-the-foggiest": {
+   "polylines": [
+    69
+   ],
+   "confidence": "high",
+   "mapName": "HAVEN'T THE FOGGIEST",
+   "note": "its group"
+  },
+  "hully-gully": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "HULLY GULLY",
+   "note": "its group"
+  },
+  "jibs-more": {
+   "polylines": [
+    160
+   ],
+   "confidence": "high",
+   "mapName": "JIBS & MORE",
+   "note": "its group"
+  },
+  "little-bird": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE BIRD",
+   "note": "its group"
+  },
+  "lower-shaft": {
+   "polylines": [
+    166
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SHAFT",
+   "note": "along its printed name"
+  },
+  "milk-run": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "MILK RUN",
+   "note": "its group"
+  },
+  "quicksilver": {
+   "polylines": [
+    62
+   ],
+   "confidence": "high",
+   "mapName": "QUICKSILVER",
+   "note": "its group"
+  },
+  "redtail": {
+   "polylines": [
+    71
+   ],
+   "confidence": "high",
+   "mapName": "REDTAIL",
+   "note": "its group"
+  },
+  "redwing": {
+   "polylines": [
+    72
+   ],
+   "confidence": "high",
+   "mapName": "REDWING",
+   "note": "its group"
+  },
+  "relief": {
+   "polylines": [
+    65
+   ],
+   "confidence": "high",
+   "mapName": "RELIEF",
+   "note": "its group"
+  },
+  "repeat-22": {
+   "polylines": [
+    70
+   ],
+   "confidence": "high",
+   "mapName": "REPEAT 22",
+   "note": "its group"
+  },
+  "roller-coaster-lower": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "ROLLER COASTER (LOWER)",
+   "note": "its group"
+  },
+  "roller-coaster-upper": {
+   "polylines": [
+    81
+   ],
+   "confidence": "high",
+   "mapName": "ROLLER COASTER (UPPER)",
+   "note": "its group"
+  },
+  "round-about": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "ROUND ABOUT",
+   "note": "its group"
+  },
+  "round-robin": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "ROUND ROBIN",
+   "note": "its group"
+  },
+  "sanctuary": {
+   "polylines": [
+    102
+   ],
+   "confidence": "high",
+   "mapName": "SANCTUARY",
+   "note": "its group"
+  },
+  "school-yard": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "SCHOOL YARD",
+   "note": "its group"
+  },
+  "shaft": {
+   "polylines": [
+    145
+   ],
+   "confidence": "high",
+   "mapName": "SHAFT",
+   "note": "its group"
+  },
+  "side-show": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "SIDE SHOW",
+   "note": "its group"
+  },
+  "sliver": {
+   "polylines": [
+    103
+   ],
+   "confidence": "high",
+   "mapName": "SLIVER",
+   "note": "its group"
+  },
+  "solitude-lower": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "SOLITUDE (LOWER)",
+   "note": "its group"
+  },
+  "solitude-upper": {
+   "polylines": [
+    75
+   ],
+   "confidence": "high",
+   "mapName": "SOLITUDE (UPPER)",
+   "note": "its group"
+  },
+  "south-park": {
+   "polylines": [
+    159
+   ],
+   "confidence": "high",
+   "mapName": "SOUTH PARK",
+   "note": "its group"
+  },
+  "spring-canyon": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "SPRING CANYON",
+   "note": "its group"
+  },
+  "sunset": {
+   "polylines": [
+    98
+   ],
+   "confidence": "high",
+   "mapName": "SUNSET",
+   "note": "its group"
+  },
+  "sunshine-glades": {
+   "polylines": [
+    94
+   ],
+   "confidence": "high",
+   "mapName": "SUNSHINE GLADES",
+   "note": "its group"
+  },
+  "swell": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "SWELL",
+   "note": "its group"
+  },
+  "the-acts": {
+   "polylines": [
+    101
+   ],
+   "confidence": "high",
+   "mapName": "THE ACTS",
+   "note": "its group"
+  },
+  "triangle": {
+   "polylines": [
+    104
+   ],
+   "confidence": "high",
+   "mapName": "TRIANGLE",
+   "note": "its group"
+  },
+  "village-ski-back-trail": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "VILLAGE SKI BACK TRAIL",
+   "note": "its group"
+  },
+  "viva-lower": {
+   "polylines": [
+    96
+   ],
+   "confidence": "high",
+   "mapName": "VIVA (LOWER)",
+   "note": "its group"
+  },
+  "viva-upper": {
+   "polylines": [
+    144
+   ],
+   "confidence": "high",
+   "mapName": "VIVA (UPPER)",
+   "note": "its group"
+  },
+  "way-home": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "WAY HOME",
+   "note": "its group"
+  },
+  "wonderland-playground": {
+   "polylines": [
+    161
+   ],
+   "confidence": "high",
+   "mapName": "WONDERLAND PLAYGROUND",
+   "note": "its group"
+  },
+  "back-for-more-lower": {
+   "polylines": [
+    164
+   ],
+   "confidence": "high",
+   "mapName": "BACK FOR MORE (LOWER)",
+   "note": "its group"
+  },
+  "back-for-more-upper": {
+   "polylines": [
+    6,
+    66,
+    67
+   ],
+   "confidence": "high",
+   "mapName": "BACK FOR MORE (UPPER)",
+   "note": "checked on a crop | its group"
+  },
+  "bridges": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "BRIDGES",
+   "note": "its group"
+  },
+  "christmas-tree": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "CHRISTMAS TREE",
+   "note": "its group"
+  },
+  "daves-glades": {
+   "polylines": [
+    148
+   ],
+   "confidence": "high",
+   "mapName": "DAVE'S GLADES",
+   "note": "its group"
+  },
+  "daves-run": {
+   "polylines": [
+    93
+   ],
+   "confidence": "high",
+   "mapName": "DAVE'S RUN",
+   "note": "its group"
+  },
+  "dragon-alley": {
+   "polylines": [
+    63
+   ],
+   "confidence": "high",
+   "mapName": "DRAGON ALLEY",
+   "note": "its group"
+  },
+  "dragons-back": {
+   "polylines": [
+    149
+   ],
+   "confidence": "high",
+   "mapName": "DRAGON'S BACK",
+   "note": "its group"
+  },
+  "dragons-pass": {
+   "polylines": [
+    150
+   ],
+   "confidence": "high",
+   "mapName": "DRAGON'S PASS",
+   "note": "its group"
+  },
+  "dragons-tail": {
+   "polylines": [
+    152
+   ],
+   "confidence": "high",
+   "mapName": "DRAGON'S TAIL",
+   "note": "its group"
+  },
+  "eagle-playground": {
+   "polylines": [
+    162
+   ],
+   "confidence": "high",
+   "mapName": "EAGLE PLAYGROUND",
+   "note": "its group"
+  },
+  "goldhill-lower": {
+   "polylines": [
+    60
+   ],
+   "confidence": "high",
+   "mapName": "GOLDHILL (LOWER)",
+   "note": "its group"
+  },
+  "goldhill-upper": {
+   "polylines": [
+    61
+   ],
+   "confidence": "high",
+   "mapName": "GOLDHILL (UPPER)",
+   "note": "its group"
+  },
+  "head-chutes": {
+   "polylines": [
+    147
+   ],
+   "confidence": "high",
+   "mapName": "HEAD CHUTES",
+   "note": "its group"
+  },
+  "holiday": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "HOLIDAY",
+   "note": "its group"
+  },
+  "juniper": {
+   "polylines": [
+    73
+   ],
+   "confidence": "high",
+   "mapName": "JUNIPER",
+   "note": "its group"
+  },
+  "lupin": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "LUPIN",
+   "note": "its group"
+  },
+  "main-traverse": {
+   "polylines": [
+    105,
+    106
+   ],
+   "confidence": "high",
+   "mapName": "MAIN TRAVERSE",
+   "note": "its group"
+  },
+  "manzanita": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "MANZANITA",
+   "note": "its group"
+  },
+  "pumpkin": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "PUMPKIN",
+   "note": "its group"
+  },
+  "ricochet-lower": {
+   "polylines": [
+    64
+   ],
+   "confidence": "high",
+   "mapName": "RICOCHET (LOWER)",
+   "note": "its group"
+  },
+  "ricochet-upper": {
+   "polylines": [
+    92
+   ],
+   "confidence": "high",
+   "mapName": "RICOCHET (UPPER)",
+   "note": "its group"
+  },
+  "romas-glades": {
+   "polylines": [
+    123
+   ],
+   "confidence": "high",
+   "mapName": "ROMA'S GLADES",
+   "note": "its group"
+  },
+  "romas-road": {
+   "polylines": [
+    134
+   ],
+   "confidence": "high",
+   "mapName": "ROMA'S ROAD",
+   "note": "its group"
+  },
+  "sleepy-hollow": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "SLEEPY HOLLOW",
+   "note": "its group"
+  },
+  "slot": {
+   "polylines": [
+    74
+   ],
+   "confidence": "high",
+   "mapName": "SLOT",
+   "note": "its group"
+  },
+  "watertank": {
+   "polylines": [
+    59
+   ],
+   "confidence": "high",
+   "mapName": "WATERTANK",
+   "note": "its group"
+  },
+  "wazoo": {
+   "polylines": [
+    151
+   ],
+   "confidence": "high",
+   "mapName": "WAZOO",
+   "note": "its group"
+  }
+ }
+}

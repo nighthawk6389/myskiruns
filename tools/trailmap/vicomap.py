@@ -219,8 +219,11 @@ def parse(a):
                       'lines': [[[round(x, 2), round(y, 2)] for x, y in pl] for pl in pls]})
     # the painting: <use xlink:href="#_ImageN" ... transform="matrix(s,0,0,s,tx,ty)"/> and <image id="_ImageN" ...>
     svg = open(os.path.join(a.dir, 'map.svg')).read()
-    # (id="map", or another id with serif:id="map" as Steamboat's; an x, y offset folded into the translation)
+    # (id="map", or another id with serif:id="map" as Steamboat's, or the first element of <g id="map"> as Mammoth's;
+    # an x, y offset folded into the translation)
     use = next((u for u in re.findall(r'<use [^>]*>', svg) if re.search(r'(?<![\w:])id="map"|serif:id="map"', u)), None)
+    if use is None:
+        use = (re.search(r'<g id="map">\s*(<use [^>]*>)', svg) or [None, None])[1]
     bg = None
     if use and 'transform="matrix(' in use:
         href = re.search(r'xlink:href="#([^"]+)"', use).group(1)

@@ -5,10 +5,10 @@ overlay on the map, with its name and rating, so you tap the run you just skied 
 works offline on the mountain, installs to a phone's home screen, and can sync your trips between devices with an
 optional account. Live at **[www.myskiruns.app](https://www.myskiruns.app)**.
 
-Twenty-four resorts so far, 3,833 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
+Twenty-five resorts so far, 4,015 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
 Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Vail, Breckenridge, Keystone, Copper
-Mountain, Winter Park, Steamboat, Park City, Deer Valley, Big Sky, Palisades Tahoe, Heavenly, Mt. Bachelor and
-Whistler Blackcomb.
+Mountain, Winter Park, Steamboat, Park City, Deer Valley, Big Sky, Palisades Tahoe, Heavenly, Mammoth Mountain,
+Mt. Bachelor and Whistler Blackcomb.
 
 Most of the work in this repository is the **trail-map pipeline**: getting every trail's overlay onto its own
 drawn line, with the right name, on maps that were never made to be machine-read. How it is done, resort by
@@ -85,6 +85,7 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 | Big Sky | Montana | 323 (290 + 33) | 3 | three PDFs of strokes and text | `tools/trailmap/resorts/big-sky/regen.sh` |
 | Palisades Tahoe | California | 247 (124 + 123) | 3 | three PDFs of strokes and outlined names | `tools/trailmap/resorts/palisades-tahoe/regen.sh` |
 | Heavenly | California (and Nevada) | 120 (73 + 47) | 2 | the current map as an image; an older PDF of the artwork registered on it | `tools/trailmap/resorts/heavenly/regen.sh` |
+| Mammoth Mountain | California | 182 (175 + 7) | 2 | a PDF with names as text and no trail lines; its interactive maps' SVGs as the lines | `tools/trailmap/resorts/mammoth/regen.sh` |
 | Mt. Bachelor | Oregon | 110 (72 + 38) | 1 | PDF lines and names both as filled outlines over a painting | `tools/trailmap/resorts/mt-bachelor/regen.sh` |
 | Whistler Blackcomb | British Columbia | 232 (209 + 23) | 3 | one PDF read as a main map and two insets | `tools/trailmap/resorts/whistler-blackcomb/regen.sh` |
 
@@ -269,8 +270,8 @@ the playbook's [Part 5](docs/trail-map-playbook.md#part-5-what-we-tried-and-what
 
 ## What's left
 
-1. **A person's confirmation** for the twenty-one resorts Claude checked on crops instead of the review page
-   (Sugarbush through Steamboat), if wanted: the Trail Check page can be published for any resort ([playbook,
+1. **A person's confirmation** for the twenty-two resorts Claude checked on crops instead of the review page
+   (Sugarbush through Mammoth), if wanted: the Trail Check page can be published for any resort ([playbook,
    Part 4](docs/trail-map-playbook.md#auditing-on-crops-or-the-human-review-page)).
 2. **Shared tooling:** a legend file per map feeding the extraction and the readers' prompts; readers run from a
    script instead of an interactive session ([playbook, Part 5](docs/trail-map-playbook.md#scaling-to-many-maps)).

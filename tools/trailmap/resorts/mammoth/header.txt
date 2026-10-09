@@ -1,0 +1,25 @@
+// Mammoth Mountain's 2025-26 trail map (skimap.org 42347: the resort's PDF;
+// page 2 is the map), drawn as two panels: the whole mountain, and the inset
+// of the back side (Chairs 13 and 14). The map prints its names as text and
+// its symbols as fills over a painting, and draws no trail lines: each run's
+// line is the resort's interactive map's (resorts-interactive.com maps 1812
+// and 1819, whose SVGs draw every run's line over the same paintings, grouped
+// by name), registered on the painting and named by its group
+// (resort.GROUPED). Names are spelled as the trail report spells them
+// (report.json: the mtnpowder feed), a name printed once for a run the report
+// splits (MAMBO, ROAD RUNNER) taking the part whose line it is printed on.
+// Symbols: green circle, blue square (Slightly Difficult), blue diamond
+// (Difficult: advanced intermediate, blue), black diamond, double black
+// diamond. Two names are outlined glyphs, read on a crop (LOWER ROAD RUNNER,
+// ANTIN ALLEY / CHICKADEE). Lower Shaft, printed under Shaft with a diamond of
+// its own, is the interactive map's and not the report's; Starr Chutes is
+// printed with a double diamond (the report: a single). The uphill routes are
+// left out; the adventure zones (a purple star) are green. Where the
+// interactive map isn't the print (decisions.py): its Skyline runs on down
+// the face along Scotty's labels (that part is Scotty's), Back for More's
+// split moves to the second Upper label's diamond, Main Traverse ends where
+// the printed traverse does; Antin Alley / Chickadee and Lower Shaft run along
+// their names. Names with no line (Glades, Gravy Chute, the park Snake Run,
+// the adventure zones): markers at the label. Areas: the report's three base
+// lodges, at their printed elevations.
+// x/y/baseY/width are unused layout fields.

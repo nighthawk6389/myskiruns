@@ -137,6 +137,17 @@ Heavenly's analyses: registering the 2022-23 PDF on the 2024-25 image (now `tool
 | `tools/redraw.py` | redraw.py: redraw selected fills of a PDF page on a blank page (pymupdf Shape) and render it. Used as a module: redraw(page, drawings, scale, clip) -> RGB numpy array. |
 
 
+## mammoth
+
+Mammoth's checks of its reading: each printed name's symbol against the trail report (`symbols_vs_report.py`), and a
+trail's overlay with its neighbours on a wider crop than an audit cell (`trail_context.py`, written by the overlay
+audit's readers). What they showed is in `resorts/mammoth/` (prepare.py, the panels' resort.py and decisions.py).
+
+| file | what it did |
+|---|---|
+| `mammoth/symbols_vs_report.py` | Each panel's names whose attached symbol differs from the report's rating, and the symbols no name took |
+| `mammoth/trail_context.py` | trail_context.py <trail_id> <out.png> <margin_px> <scale> [x0 y0 x1 y1]: one trail's overlay among the others, cropped |
+
 ## mt-bachelor
 
 Mt. Bachelor's look into a line the extraction missed (I-5's and Carnival's, drawn as one outline at their

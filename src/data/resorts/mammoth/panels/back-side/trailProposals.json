@@ -1,0 +1,254 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "arriba-lower": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "ARRIBA (LOWER)",
+   "note": "its group"
+  },
+  "arriba-upper": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "ARRIBA (UPPER)",
+   "note": "its group"
+  },
+  "bristlecone": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "BRISTLECONE",
+   "note": "its group"
+  },
+  "comin-thru": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "COMIN' THRU",
+   "note": "its group"
+  },
+  "critters": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "CRITTERS",
+   "note": "its group"
+  },
+  "dropout-chutes": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "DROPOUT CHUTES",
+   "note": "its group"
+  },
+  "kiwi-flats": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "KIWI FLATS",
+   "note": "its group"
+  },
+  "lodgepole": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "LODGEPOLE",
+   "note": "its group"
+  },
+  "new-critters": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "NEW CRITTERS",
+   "note": "its group"
+  },
+  "oops": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "OOPS",
+   "note": "its group"
+  },
+  "outpost-glades": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "OUTPOST GLADES",
+   "note": "its group"
+  },
+  "reds-lake-run": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "REDS LAKE RUN",
+   "note": "its group"
+  },
+  "rigleys-bowl": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "RIGLEY'S BOWL",
+   "note": "its group"
+  },
+  "road-runner-middle": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "ROAD RUNNER (MIDDLE)",
+   "note": "its group"
+  },
+  "road-runner-upper": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "ROAD RUNNER (UPPER)",
+   "note": "its group"
+  },
+  "road-runner-lower-bottom-half": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "ROAD RUNNER LOWER (BOTTOM HALF)",
+   "note": "its group"
+  },
+  "road-runner-lower-top-half": {
+   "polylines": [
+    3,
+    4
+   ],
+   "confidence": "high",
+   "mapName": "ROAD RUNNER LOWER (TOP HALF)",
+   "note": "its group"
+  },
+  "santiago": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "SANTIAGO",
+   "note": "its group"
+  },
+  "santiago-bowl": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "SANTIAGO BOWL",
+   "note": "its group"
+  },
+  "scottys": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "SCOTTY'S",
+   "note": "its group"
+  },
+  "secret-spot": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "SECRET SPOT",
+   "note": "its group"
+  },
+  "skyline": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "SKYLINE",
+   "note": "its group"
+  },
+  "st-anton": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "ST. ANTON",
+   "note": "its group"
+  },
+  "starr-chutes": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "STARR CHUTES",
+   "note": "its group"
+  },
+  "surprise": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "SURPRISE",
+   "note": "its group"
+  },
+  "the-hemlocks": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "THE HEMLOCKS",
+   "note": "its group"
+  },
+  "training-wheels": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "TRAINING WHEELS",
+   "note": "its group"
+  },
+  "whitebark-bowl-lower": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "WHITEBARK BOWL (LOWER)",
+   "note": "its group"
+  },
+  "whitebark-bowl-upper": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "WHITEBARK BOWL (UPPER)",
+   "note": "its group"
+  },
+  "whitebark-ridge": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "WHITEBARK RIDGE",
+   "note": "its group"
+  },
+  "wipeout-chutes": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "WIPEOUT CHUTES",
+   "note": "its group"
+  }
+ }
+}
