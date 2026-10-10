@@ -1,0 +1,268 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "7-down": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "7 DOWN",
+   "note": "checked on a crop"
+  },
+  "bear-bottom-beginner-area": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "BEAR BOTTOM BEGINNER AREA",
+   "note": "end of Bear Bottom Beginner Area"
+  },
+  "cruiser": {
+   "polylines": [
+    21,
+    24,
+    32
+   ],
+   "confidence": "high",
+   "mapName": "CRUISER",
+   "note": "checked on a crop"
+  },
+  "dickys": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "DICKY'S",
+   "note": "checked on a crop"
+  },
+  "east-why": {
+   "polylines": [
+    7,
+    8
+   ],
+   "confidence": "high",
+   "mapName": "EAST WHY",
+   "note": "end of East Why | symbol of East Why"
+  },
+  "ego-trip": {
+   "polylines": [
+    35,
+    43
+   ],
+   "confidence": "high",
+   "mapName": "EGO TRIP",
+   "note": "end of Ego Trip | checked on a crop"
+  },
+  "hog-back": {
+   "polylines": [
+    14,
+    17
+   ],
+   "confidence": "high",
+   "mapName": "HOG BACK",
+   "note": "end of Hog Back"
+  },
+  "jos": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "JO'S",
+   "note": "checked on a crop"
+  },
+  "last-chance": {
+   "polylines": [
+    30,
+    33
+   ],
+   "confidence": "high",
+   "mapName": "LAST CHANCE",
+   "note": "end of Last Chance | checked on a crop"
+  },
+  "log-chute-lower": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "LOG CHUTE (LOWER)",
+   "note": "end of Log Chute (Lower)"
+  },
+  "log-chute-upper": {
+   "polylines": [
+    2,
+    6
+   ],
+   "confidence": "high",
+   "mapName": "LOG CHUTE (UPPER)",
+   "note": "end of Log Chute (Upper) | checked on a crop"
+  },
+  "mainstream": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "MAINSTREAM",
+   "note": "checked on a crop"
+  },
+  "miracle-mile-lower": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "MIRACLE MILE (LOWER)",
+   "note": "checked on a crop"
+  },
+  "miracle-mile-upper": {
+   "polylines": [
+    12,
+    15
+   ],
+   "confidence": "high",
+   "mapName": "MIRACLE MILE (UPPER)",
+   "note": "checked on a crop | end of Miracle Mile (Upper)"
+  },
+  "off-chute": {
+   "polylines": [
+    45,
+    49
+   ],
+   "confidence": "high",
+   "mapName": "OFF CHUTE",
+   "note": "end of Off Chute | traced along the drawn line"
+  },
+  "olympic": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "OLYMPIC",
+   "note": "end of Olympic"
+  },
+  "perfect-pitches": {
+   "polylines": [
+    13,
+    16
+   ],
+   "confidence": "high",
+   "mapName": "PERFECT PITCHES",
+   "note": "checked on a crop"
+  },
+  "pipe-dream": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "PIPE DREAM",
+   "note": "checked on a crop"
+  },
+  "side-chute": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "SIDE CHUTE",
+   "note": "end of Side Chute"
+  },
+  "side-show": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "SIDE SHOW",
+   "note": "end of Side Show"
+  },
+  "skyline-creek": {
+   "polylines": [
+    27,
+    31
+   ],
+   "confidence": "high",
+   "mapName": "SKYLINE CREEK",
+   "note": "checked on a crop"
+  },
+  "sugarpine": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "SUGARPINE",
+   "note": "end of Sugarpine"
+  },
+  "summit-connection": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "SUMMIT CONNECTION",
+   "note": "symbol of Summit Connection"
+  },
+  "summit-run-lower": {
+   "polylines": [
+    19,
+    25
+   ],
+   "confidence": "high",
+   "mapName": "SUMMIT RUN (LOWER)",
+   "note": "checked on a crop"
+  },
+  "summit-run-upper": {
+   "polylines": [
+    22,
+    26
+   ],
+   "confidence": "high",
+   "mapName": "SUMMIT RUN (UPPER)",
+   "note": "end of Summit Run (Upper) | checked on a crop"
+  },
+  "sundown": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "SUNDOWN",
+   "note": "checked on a crop"
+  },
+  "the-wall": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "THE WALL",
+   "note": "end of The Wall"
+  },
+  "timber-ridge": {
+   "polylines": [
+    3,
+    5
+   ],
+   "confidence": "high",
+   "mapName": "TIMBER RIDGE",
+   "note": "checked on a crop"
+  },
+  "tommis": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "TOMMI'S",
+   "note": "checked on a crop"
+  },
+  "westridge-park": {
+   "polylines": [
+    11,
+    47
+   ],
+   "confidence": "high",
+   "mapName": "WESTRIDGE PARK",
+   "note": "checked on a crop"
+  },
+  "zzyzx-park": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "ZZYZX PARK",
+   "note": "checked on a crop"
+  }
+ }
+}

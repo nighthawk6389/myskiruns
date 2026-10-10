@@ -70,6 +70,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 | a PDF with names as text and symbols as fills over a painting, but no trail lines drawn; an interactive map of the same painting | `vicomap.py parse`: its lines, registered on the painting and kept as they are (nothing printed to route them onto), named by their group (`GROUPED`); `pdf_labels.py` names spelled as the groups; symbols from the fills by colour | Mammoth (two panels, two interactive maps) | Mammoth |
 | only raster images | `raster_lines.py` + `raster_symbols.py` (or `lineDetector.mjs`), pieces named on review tiles or by readers | Vail (three panels), Killington | Vail |
 | only images, runs painted as slopes with no line (names along them), and an interactive map whose SVG groups each run's letters and symbol | the groups' letters and symbols registered on the print (`register_pages.py --ref`), what they lack read on crops (`names.py`); each run's overlay the stretch along its printed name (`LABEL_LINE`), the few drawn lines routed on the print | Schweitzer (two panels) | Schweitzer; Heavenly for a map whose runs have no line |
+| only images, one print drawing each run's line and the others painting runs with no line, and an interactive map per panel whose groups hold each run's symbols and an older line (no letters) | each SVG registered on its print (`register_pages.py --ref`), the groups' symbols placed on it, a label at each; where the print draws lines, its own (colour masks, `raster_lines.py`'s clean and skeleton pieces; the black kept only near an interactive-map black line, the trees left out), named by the symbol at each run's top; where it draws none, the groups' lines as they are (Mammoth's), with the stretch along the printed name (`LABEL_LINE`) for a run in no group or with a stub of a line; what the groups lack read on crops (`names.py`) | Big Bear (three panels: Snow Summit drawn, Bear Mountain and Snow Valley painted) | Big Bear; Mammoth, Schweitzer |
 | only small web JPEGs, lines blurred into the painting or in casings | the map read on zoomed crops: each name, its symbol, its run's line as waypoints (`names.py`), each line routed along the painted one (`route_trace.py`), the pieces named by the reading (`GROUPED`) | Whitefish Mountain (three panels) | Whitefish |
 
 - **A low-resolution painting under good vectors:** `matte_pdf_layer.py` mattes the PDF's vector layer over a
@@ -633,6 +634,7 @@ give the same.
 | [Schweitzer](#schweitzer) | two images, runs painted with no line; two interactive maps | the groups' names and symbols on the prints, the stretch along each name, `names.py` | `regen.sh` | an image-only map of runs with no lines |
 | [Northstar](#northstar) | PDF lines as filled outlines holding several runs, names as white glyphs haloed in the line's colour | `pdf_outline_lines.py` centre lines, the halo's colour as the rating, cuts at each junction | `regen.sh` | one outline for several runs |
 | [Beaver Creek](#beaver-creek) | this season's map an image only (CDN); a 2023 vector export of the artwork | registration, glyph names, symbols on the lines (`SYMBOL_ON_LINE`) | `regen.sh` | a Vail Resorts map with no PDF this season |
+| [Big Bear](#big-bear) | three images, no PDF: one print drawing the lines, two painting the runs with none; three interactive maps | the print's own lines named by their symbols; the interactive maps' lines and stretches along the names elsewhere; `names.py` | `regen.sh` | an image-only map whose panels differ in kind |
 
 ## Killington
 
@@ -1782,6 +1784,57 @@ skiways, the Landing) · `tools/trailmap/resorts/beaver-creek/`.
   stretches beside their symbols and Middle Golden Eagle's two branches fixed and read again); `compare.py` against
   the report; hover 462/464 (the two misses where Piney's and Powell's lines meet and run on together below the
   Cinch catwalk: either name is right); the app check.
+
+## Big Bear
+
+93 trails (91 + 2) · California · three panels, one per mountain: Snow Summit, Bear Mountain, Snow Valley (the
+report's three areas too) · `tools/trailmap/resorts/big-bear/`.
+
+- **Source:** bigbearmountainresort.com's trail-maps page links the 2025-26 maps as images only (plain curl): Snow
+  Summit 2500x1859, Bear Mountain 2500x1770, Snow Valley 1965x2400 (a PNG), James Niehues's paintings. No PDF
+  anywhere. The CDN (Imperva) answers one request for Snow Summit's with its own WebP and the next with the origin's
+  JPEG: `regen.sh` fetches again until the WebP the data was built from comes (both are the same painting). Snow
+  Summit's print **draws each run's line** (blue, green, black; lifts red); Bear Mountain's and Snow Valley's paint
+  the runs as slopes with **no line**, the name and symbol printed by each. The resort's interactive maps
+  (resorts-interactive.com maps 1818, 1808, 1825) draw the same paintings, each run's symbols and a line in a group
+  named after it, but not the names' letters; the lines are an older drawing (Snow Summit's lie up to 25 px off its
+  print's), and Snow Valley's map is an older edition (some symbols and lines differ from the print's; it adds the summit
+  drawn bigger in an inset). All six SHA-256s are
+  checked.
+- **Route:** `prepare.py`, per panel: each SVG registered on its print (`register_pages.py --ref` on the SVG's
+  painting: 1753 inliers, 0.25 px; 1951, 0.22 px; 1963, 0.19 px; `VICOMAP_AFFINE` in each panel's `resort.py`); per
+  group its fills shaped like a symbol at the panel's size (a square, a diamond, two side by side a double, a
+  circle), with a label at each (the name is printed by its symbol). Snow Summit's lines are the print's own: colour
+  masks per class, `raster_lines.py`'s `clean()` (text, symbols, icons out, the legend and the sky excluded) and
+  skeleton pieces through junctions; the black mask takes in the painting's dark trees, so a black component is kept
+  only if it is long and thin (60 px or more end to end, under 7 px wide, its skeleton no more than three times its
+  span: a crown's is tangled) and lies near an interactive-map black line (`lines_only()`). They are named by the
+  symbol at each run's top (`MATCH_ENDS`, `SYMBOL_REACH` 6 px). Bear Mountain's and Snow Valley's lines are the
+  groups' as they are (Mammoth's way); a run in no group (Bear Mountain's Learning Curve, the Park Runs, Expressway,
+  The Gulch, the parks and pipes, Street Scene) has its label read on crops (`names.py`, first and last letter) and
+  the stretch along it (`LABEL_LINE`). Snow Valley's names and symbols are all read on the print (`names.py`: its
+  groups' symbols are the older edition's), and six runs whose line is a stub there (Bubble Gum, Lower and Upper Wine
+  Rock, Quickie, Thunder Mountain, West Run) have the stretch along the name as well. Geronimo's double diamonds hold
+  letters, so no group gives them: `names.py`. Two runs named Pipeline (Bear Mountain's blue, Snow Valley's black):
+  `RENAME` per panel, `DISPLAY`, `AREA_OF`.
+- **Rebuild:** `tools/trailmap/resorts/big-bear/regen.sh` (20 s).
+- **Truth:** the trail report (`report.json`: the mtnpowder feed, mtnfeed path `big-bear-mountain`, resorts 57, 58
+  and 173, fetched out of season: every run listed). Runs the report splits and the map draws as one line are one
+  trail (Timber Ridge: one line, one square; Westridge Park: one line, its name printed three times). Ratings are
+  the printed symbols; a run printed with two takes the report's (Miracle Mile (Upper): squares and a diamond,
+  black; Side Chute and Olympic: diamonds and a double, double black); 7 Down's line is green, its symbols blue
+  squares: blue. Printed and not in the report: Backdoors (Bear Mountain; in the interactive map too), Comeback Trail
+  and Log Road (Snow Summit: a square each by the summit, no name or line, named by their groups: markers). In the
+  report and not printed: Snow Valley's The Hideout. (`compare.py` lists Pipeline's rating as differing: it pairs
+  the report's two Pipelines with one name; each panel's is right.)
+- **Decisions:** Snow Summit's on crops (`panels/snow-summit/decisions.py`): 27 pieces checked (Timber Ridge, 7
+  Down, Miracle Mile's Upper and Lower parts, the runs past a junction), 4 no trail (two trees, lift 6's hut icon), 2
+  cuts, Off Chute's stretch traced. Bear Mountain: Easy Street (its three stretches would bridge across trees) and
+  Outlaw's Alley (its symbol mid-label) traced. Snow Valley: the older map's Bubble Gum line where the print draws the
+  cat track's red dashes is no trail; the Cat Track's waypoints on the dashes (`names.py`, `LINES`).
+- **Checked:** every overlay on crops (`overlay_audit.py`, 9, 8 and 8 sheets, every cell read; Off Chute, Miracle
+  Mile, Easy Street, Outlaw's Alley, The Gulch, the Cat Track, Bubble Gum and Snow Valley's six stubs fixed and read
+  again); `compare.py` against the report; hover 95/95, 87/87, 93/93; the app check.
 
 # Part 4. Methods in detail
 

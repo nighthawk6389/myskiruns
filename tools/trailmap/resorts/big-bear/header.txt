@@ -1,0 +1,30 @@
+// Big Bear Mountain Resort's 2025-26 trail maps (bigbearmountainresort.com:
+// images only, James Niehues's paintings), one panel per mountain: Snow
+// Summit, Bear Mountain and Snow Valley. Names are spelled as the resort's
+// mountain report spells them (report.json: the mtnpowder feed). The resort's
+// interactive maps (resorts-interactive.com maps 1818, 1808, 1825) draw the
+// same paintings with, per run, a group named after it holding its symbols
+// and a line. Snow Summit's print draws each run's line: its overlays are the
+// print's own lines (colour masks, skeleton pieces), named by the symbol at
+// each run's top or settled on crops (decisions.py), its runs in no group
+// (Cruiser, Skyline Creek, Sundown, Westridge Park, ZZYZX Park) read on crops
+// (names.py). Timber Ridge is one line with one square (the report's Upper
+// and Lower), Westridge Park one line with the name printed three times (the
+// report's Upper and Lower): one trail each. Comeback Trail and Log Road are
+// a square each and no name or line at the summit (named by the interactive
+// map's groups; not in the report): markers. Bear Mountain's and Snow Valley's prints paint the
+// runs as slopes with no line: their overlays are the interactive map's lines
+// as drawn, and for Bear Mountain's runs in no group (Learning Curve, the
+// Park Runs, Expressway, The Gulch, the parks' and pipes' runs, Street Scene)
+// the stretch along the printed name; Easy Street and Outlaw's Alley traced
+// on crops. Snow Valley's interactive map is an older edition: its names and
+// symbols were read on the print (names.py), the stretch along the printed
+// name added where its line is a stub (Bubble Gum, Lower and Upper Wine Rock,
+// Quickie, Thunder Mountain, West Run), and its cat track traced along the
+// print's red dashes. Difficulty is the symbol printed by each name; a run
+// printed with two ratings takes the report's (Miracle Mile (Upper): squares
+// and a diamond, black; Side Chute and Olympic: diamonds and a double
+// diamond, double black). Snow Summit's 7 Down is drawn as a green line but
+// printed with blue squares: blue. Not on these maps: Snow Valley's The
+// Hideout. Backdoors (Bear Mountain) is printed and in the interactive map
+// but not in the report. x/y/baseY/width are unused layout fields.

@@ -1,0 +1,244 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "accelerator": {
+   "polylines": [
+    10,
+    11
+   ],
+   "confidence": "high",
+   "mapName": "ACCELERATOR",
+   "note": "its group"
+  },
+  "amusement-park": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "AMUSEMENT PARK",
+   "note": "along its printed name"
+  },
+  "backdoors": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "BACKDOORS",
+   "note": "its group"
+  },
+  "boneyard": {
+   "polylines": [
+    14,
+    15
+   ],
+   "confidence": "high",
+   "mapName": "BONEYARD",
+   "note": "its group"
+  },
+  "central-park": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "CENTRAL PARK",
+   "note": "along its printed name"
+  },
+  "easy-street": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "traced along the drawn line"
+  },
+  "exhibition": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "EXHIBITION",
+   "note": "its group"
+  },
+  "expressway": {
+   "polylines": [
+    24,
+    25
+   ],
+   "confidence": "high",
+   "mapName": "EXPRESSWAY",
+   "note": "along its printed name"
+  },
+  "gambler": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "GAMBLER",
+   "note": "its group"
+  },
+  "geronimo": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "GERONIMO",
+   "note": "its group"
+  },
+  "grizzly": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "GRIZZLY",
+   "note": "its group"
+  },
+  "half-pipe-13ft": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "HALF PIPE (13FT)",
+   "note": "along its printed name"
+  },
+  "hidden-valley": {
+   "polylines": [
+    12,
+    13
+   ],
+   "confidence": "high",
+   "mapName": "HIDDEN VALLEY",
+   "note": "its group"
+  },
+  "inspiration": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "INSPIRATION",
+   "note": "its group"
+  },
+  "learning-curve": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "LEARNING CURVE",
+   "note": "along its printed name"
+  },
+  "modified-pipe-18ft": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "MODIFIED PIPE (18FT)",
+   "note": "along its printed name"
+  },
+  "outlaw": {
+   "polylines": [
+    18,
+    19
+   ],
+   "confidence": "high",
+   "mapName": "OUTLAW",
+   "note": "its group"
+  },
+  "outlaws-alley": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "OUTLAW'S ALLEY",
+   "note": "traced along the drawn line"
+  },
+  "park-run-face": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "PARK RUN (FACE)",
+   "note": "along its printed name"
+  },
+  "park-run-lower": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "PARK RUN (LOWER)",
+   "note": "along its printed name"
+  },
+  "park-run-upper": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "PARK RUN (UPPER)",
+   "note": "along its printed name"
+  },
+  "pipeline-bear-mountain": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "PIPELINE (BEAR MOUNTAIN)",
+   "note": "its group"
+  },
+  "rips-run": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "RIP'S RUN",
+   "note": "its group"
+  },
+  "ripcord": {
+   "polylines": [
+    20,
+    21
+   ],
+   "confidence": "high",
+   "mapName": "RIPCORD",
+   "note": "its group"
+  },
+  "showtime": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "SHOWTIME",
+   "note": "its group"
+  },
+  "silver-connection": {
+   "polylines": [
+    16,
+    17
+   ],
+   "confidence": "high",
+   "mapName": "SILVER CONNECTION",
+   "note": "its group"
+  },
+  "street-scene": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "STREET SCENE",
+   "note": "along its printed name"
+  },
+  "the-gulch": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "THE GULCH",
+   "note": "along its printed name"
+  },
+  "the-wedge": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "THE WEDGE",
+   "note": "its group"
+  }
+ }
+}

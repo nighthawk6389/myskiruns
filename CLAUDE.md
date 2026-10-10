@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Ski-run tracker for thirty-four resorts (React 19 + TS + Vite). The hard part is
+Ski-run tracker for thirty-five resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
@@ -66,8 +66,9 @@ the already-assigned path (that is circular).
   every PDF resort after it from `resort.py` + `decisions.py` through
   `tools/trailmap/pdf_resort.py` (per panel in `panels/<panel>/` for Whistler
   Blackcomb, Palisades Tahoe, Big Sky, Heavenly, Mammoth, Snowmass, Aspen Mountain, Whitefish (no PDF:
-  its `names.py` is the map read on crops) and Schweitzer (no PDF: its interactive maps' groups and a
-  `names.py` read on crops); Heavenly's PDF is an older
+  its `names.py` is the map read on crops), Schweitzer (no PDF: its interactive maps' groups and a
+  `names.py` read on crops) and Big Bear (no PDF: one print's own lines, the others' interactive-map
+  lines, its `names.py` read on crops); Heavenly's PDF is an older
   export of its map's artwork, registered on the current image, and Deer
   Valley's an earlier one registered on the later flattened image, and Beaver Creek's 2023 export on this season's
   CDN image; Steamboat

@@ -69,6 +69,24 @@ the piece crops the decisions cite. The edition check is maintained: `resorts/be
 | `beaver-creek/names_list.py` | names_list.py <resort>: every printed name after the reading, as the report spells it or not, with its symbol and whether a piece carries it |
 | `beaver-creek/piece_crops.py` | piece_crops.py <work dir> <out.png> <ids>: each piece alone in magenta on a zoomed crop, the named symbols around it (OTHERS=1: the other pieces too) |
 
+## big-bear
+
+Big Bear's triage (the work folder `work/big-bear`, after `prepare.py` and `pdf_resort.py big-bear build`): the
+interactive maps' lines drawn on the prints to see how far off each lies, a first try at routing Snow Summit's along
+its print's own colours (the lines as prepare.py puts them now came of it: the print's own components near the
+interactive map's), the black mask's components and the thresholds that keep The Wall's, Dicky's and Olympic's lines
+and not the trees, and the symbols the interactive maps' groups don't carry (Geronimo's, Snow Valley's: names.py).
+
+| file | what it did |
+|---|---|
+| `big-bear/vicomap_lines.py` | vicomap_lines.py <vicomap dir> <print> <out.png> <affine>: the interactive map's trail lines (vicomap.py parse) on the print through the affine, coloured by rating, each named, the lifts orange; prints each trail's rating and line and fill counts |
+| `big-bear/snow_summit_auto.py` | snow_summit_auto.py: each of Snow Summit's interactive-map lines routed (least cost, within 40 px) along the print's pixels in its colour; the share of the route on the colour, drawn (`ss_auto.png`) |
+| `big-bear/black_components.py` | black_components.py: Snow Summit's black mask after raster_lines.clean, its components and skeleton lengths (the first try at keeping lines, not trees) |
+| `big-bear/black_components2.py` | black_components2.py <min skeleton> <min straightness>: the components kept by skeleton length, end-to-end span over length and width, drawn black on the faded map, the rest pink (`ss_black.png`) |
+| `big-bear/black_at_points.py` | black_at_points.py: at a few points of missed black lines, the component there and its span, area and skeleton length (which test dropped it) |
+| `big-bear/symbols_missed.py` | symbols_missed.py <map.png> <printed.json> <min> <max>: green circles, blue squares and black diamonds of that size on the print that printed.json doesn't have |
+| `big-bear/symbols_all.py` | symbols_all.py <map.png> <min> <max>: every symbol of that size on the print, side-by-side diamonds as a double (Snow Valley's, read into names.py) |
+
 ## big-sky
 
 Big Sky's checks while its pieces were settled: crops of the PDF sharp around pieces and names, drawing order, junctions, overlaps (now `tools/trailmap/pdf_overlaps.py`), the OpenStreetMap cross-check (now `tools/trailmap/osm_check.py`), and the names against the trail report.

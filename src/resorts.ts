@@ -171,6 +171,11 @@ export const RESORTS: ResortEntry[] = [
   oneMap('alta', 'Alta', 'Utah', () => import('./data/resorts/alta/trails'), () => import('./data/resorts/alta/trailPaths.json'), ['Alta Ski Area', 'Little Cottonwood Canyon']),
   oneMap('northstar', 'Northstar', 'California', () => import('./data/resorts/northstar/trails'), () => import('./data/resorts/northstar/trailPaths.json'), ['Northstar California', 'Lake Tahoe', 'Truckee']),
   oneMap('beaver-creek', 'Beaver Creek', 'Colorado', () => import('./data/resorts/beaver-creek/trails'), () => import('./data/resorts/beaver-creek/trailPaths.json'), ['Beaver Creek Resort', 'Bachelor Gulch', 'Arrowhead', 'Avon', 'Vail Valley']),
+  panels('big-bear', 'Big Bear', 'California', () => import('./data/resorts/big-bear/trails'), [
+    { id: 'snow-summit', name: 'Snow Summit', paths: () => import('./data/resorts/big-bear/panels/snow-summit/trailPaths.json') },
+    { id: 'bear-mountain', name: 'Bear Mountain', paths: () => import('./data/resorts/big-bear/panels/bear-mountain/trailPaths.json') },
+    { id: 'snow-valley', name: 'Snow Valley', paths: () => import('./data/resorts/big-bear/panels/snow-valley/trailPaths.json') },
+  ], ['Big Bear Mountain Resort', 'Snow Summit', 'Bear Mountain', 'Snow Valley', 'Big Bear Lake']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

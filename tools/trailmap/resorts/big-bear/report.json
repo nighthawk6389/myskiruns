@@ -1,0 +1,470 @@
+{
+ "_source": "Big Bear Mountain Resort's mountain report (bigbearmountainresort.com/mountain-information: its lifts-and-trails widget, mtnfeed resort path big-bear-mountain), the mtnpowder feed for resorts 57, 58 and 173 (Bear Mountain, Snow Summit, Snow Valley), fetched 2026-10-10 out of season (every run closed for season: the season's list all the same); tools/trailmap/reports/feed_trails.py",
+ "trails": [
+  [
+   "Accelerator",
+   "Bear Mountain",
+   "Blue"
+  ],
+  [
+   "Amusement Park",
+   "Bear Mountain",
+   "Green"
+  ],
+  [
+   "Boneyard",
+   "Bear Mountain",
+   "Blue"
+  ],
+  [
+   "Central Park",
+   "Bear Mountain",
+   "Blue"
+  ],
+  [
+   "Easy Street",
+   "Bear Mountain",
+   "Green"
+  ],
+  [
+   "Exhibition",
+   "Bear Mountain",
+   "Black"
+  ],
+  [
+   "Expressway",
+   "Bear Mountain",
+   "Blue"
+  ],
+  [
+   "Gambler",
+   "Bear Mountain",
+   "Black"
+  ],
+  [
+   "Geronimo",
+   "Bear Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Grizzly",
+   "Bear Mountain",
+   "Black"
+  ],
+  [
+   "Half Pipe (13ft)",
+   "Bear Mountain",
+   "Halfpipe"
+  ],
+  [
+   "Hidden Valley",
+   "Bear Mountain",
+   "Blue"
+  ],
+  [
+   "Inspiration",
+   "Bear Mountain",
+   "Green"
+  ],
+  [
+   "Learning Curve",
+   "Bear Mountain",
+   "Green"
+  ],
+  [
+   "Modified Pipe (18ft)",
+   "Bear Mountain",
+   "Halfpipe"
+  ],
+  [
+   "Outlaw",
+   "Bear Mountain",
+   "Black"
+  ],
+  [
+   "Outlaw's Alley",
+   "Bear Mountain",
+   "Blue"
+  ],
+  [
+   "Park Run (Face)",
+   "Bear Mountain",
+   "Blue"
+  ],
+  [
+   "Park Run (Lower)",
+   "Bear Mountain",
+   "Green"
+  ],
+  [
+   "Park Run (Upper)",
+   "Bear Mountain",
+   "Blue"
+  ],
+  [
+   "Pipeline",
+   "Bear Mountain",
+   "Blue"
+  ],
+  [
+   "Ripcord",
+   "Bear Mountain",
+   "Blue"
+  ],
+  [
+   "Rip's Run",
+   "Bear Mountain",
+   "Black"
+  ],
+  [
+   "Showtime",
+   "Bear Mountain",
+   "Black"
+  ],
+  [
+   "Silver Connection",
+   "Bear Mountain",
+   "Blue"
+  ],
+  [
+   "Street Scene",
+   "Bear Mountain",
+   "Blue"
+  ],
+  [
+   "The Gulch",
+   "Bear Mountain",
+   "Green"
+  ],
+  [
+   "The Wedge",
+   "Bear Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "7 Down",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Bear Bottom Beginner Area",
+   "Snow Summit",
+   "Green"
+  ],
+  [
+   "Cruiser",
+   "Snow Summit",
+   "Green"
+  ],
+  [
+   "Dicky's",
+   "Snow Summit",
+   "Black"
+  ],
+  [
+   "East Why",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Ego Trip",
+   "Snow Summit",
+   "Black"
+  ],
+  [
+   "Hog Back",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Jo's",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Last Chance",
+   "Snow Summit",
+   "Green"
+  ],
+  [
+   "Log Chute (Lower)",
+   "Snow Summit",
+   "Black"
+  ],
+  [
+   "Log Chute (Upper)",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Mainstream",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Miracle Mile (Lower)",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Miracle Mile (Upper)",
+   "Snow Summit",
+   "Black"
+  ],
+  [
+   "Off Chute",
+   "Snow Summit",
+   "Black"
+  ],
+  [
+   "Olympic",
+   "Snow Summit",
+   "DoubleBlack"
+  ],
+  [
+   "Perfect Pitches",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Pipe Dream",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Side Chute",
+   "Snow Summit",
+   "DoubleBlack"
+  ],
+  [
+   "Side Show",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Skyline Creek",
+   "Snow Summit",
+   "Green"
+  ],
+  [
+   "Sugarpine",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Summit Connection",
+   "Snow Summit",
+   "Green"
+  ],
+  [
+   "Summit Run (Lower)",
+   "Snow Summit",
+   "Green"
+  ],
+  [
+   "Summit Run (Upper)",
+   "Snow Summit",
+   "Green"
+  ],
+  [
+   "Sundown",
+   "Snow Summit",
+   "Green"
+  ],
+  [
+   "The Wall",
+   "Snow Summit",
+   "DoubleBlack"
+  ],
+  [
+   "Timber Ridge (Lower)",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Timber Ridge (Upper)",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Tommi's",
+   "Snow Summit",
+   "Black"
+  ],
+  [
+   "Westridge Park (Lower)",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Westridge Park (Upper)",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "ZZYZX Park",
+   "Snow Summit",
+   "Blue"
+  ],
+  [
+   "Big Bowl",
+   "Snow Valley",
+   "Black"
+  ],
+  [
+   "Bobcat Alley",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "Bubble Gum",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "Cat Track",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "Coyote Flats",
+   "Snow Valley",
+   "Green"
+  ],
+  [
+   "Eagle Flats",
+   "Snow Valley",
+   "Green"
+  ],
+  [
+   "East Bowl",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "East Slide",
+   "Snow Valley",
+   "Black"
+  ],
+  [
+   "Graduation",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "Lake Run",
+   "Snow Valley",
+   "Black"
+  ],
+  [
+   "Little Bowl",
+   "Snow Valley",
+   "Black"
+  ],
+  [
+   "Lower Wine Rock",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "Mambo Alley",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "Nord Valley",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "Pipeline",
+   "Snow Valley",
+   "Black"
+  ],
+  [
+   "Quickie",
+   "Snow Valley",
+   "Black"
+  ],
+  [
+   "Race Peak",
+   "Snow Valley",
+   "Black"
+  ],
+  [
+   "Richard's",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "Show Me",
+   "Snow Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Show Off",
+   "Snow Valley",
+   "Black"
+  ],
+  [
+   "Snake Run",
+   "Snow Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Snow Bowl",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "Surprise Run",
+   "Snow Valley",
+   "Black"
+  ],
+  [
+   "The Chute",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "The EDGE",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "The Face",
+   "Snow Valley",
+   "Black"
+  ],
+  [
+   "The Hideout",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "The Ladder",
+   "Snow Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Thunder Mountain",
+   "Snow Valley",
+   "Green"
+  ],
+  [
+   "Upper Wine Rock",
+   "Snow Valley",
+   "Blue"
+  ],
+  [
+   "West Run",
+   "Snow Valley",
+   "Black"
+  ],
+  [
+   "West Slide",
+   "Snow Valley",
+   "Blue"
+  ]
+ ]
+}

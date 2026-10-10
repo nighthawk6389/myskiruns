@@ -1,0 +1,284 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "big-bowl": {
+   "polylines": [
+    36,
+    37
+   ],
+   "confidence": "high",
+   "mapName": "BIG BOWL",
+   "note": "its group"
+  },
+  "bobcat-alley": {
+   "polylines": [
+    13,
+    14
+   ],
+   "confidence": "high",
+   "mapName": "BOBCAT ALLEY",
+   "note": "its group"
+  },
+  "bubble-gum": {
+   "polylines": [
+    18,
+    57
+   ],
+   "confidence": "high",
+   "mapName": "BUBBLE GUM",
+   "note": "its group | along its printed name"
+  },
+  "cat-track": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "CAT TRACK",
+   "note": "its group"
+  },
+  "coyote-flats": {
+   "polylines": [
+    48,
+    49
+   ],
+   "confidence": "high",
+   "mapName": "COYOTE FLATS",
+   "note": "its group"
+  },
+  "eagle-flats": {
+   "polylines": [
+    44,
+    45
+   ],
+   "confidence": "high",
+   "mapName": "EAGLE FLATS",
+   "note": "its group"
+  },
+  "east-bowl": {
+   "polylines": [
+    30,
+    31
+   ],
+   "confidence": "high",
+   "mapName": "EAST BOWL",
+   "note": "its group"
+  },
+  "east-slide": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "EAST SLIDE",
+   "note": "its group"
+  },
+  "graduation": {
+   "polylines": [
+    46,
+    47
+   ],
+   "confidence": "high",
+   "mapName": "GRADUATION",
+   "note": "its group"
+  },
+  "lake-run": {
+   "polylines": [
+    50,
+    51
+   ],
+   "confidence": "high",
+   "mapName": "LAKE RUN",
+   "note": "its group"
+  },
+  "little-bowl": {
+   "polylines": [
+    32,
+    33
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE BOWL",
+   "note": "its group"
+  },
+  "lower-wine-rock": {
+   "polylines": [
+    38,
+    39,
+    61
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WINE ROCK",
+   "note": "its group | along its printed name"
+  },
+  "mambo-alley": {
+   "polylines": [
+    42,
+    43
+   ],
+   "confidence": "high",
+   "mapName": "MAMBO ALLEY",
+   "note": "its group"
+  },
+  "nord-valley": {
+   "polylines": [
+    4,
+    5
+   ],
+   "confidence": "high",
+   "mapName": "NORD VALLEY",
+   "note": "its group"
+  },
+  "pipeline-snow-valley": {
+   "polylines": [
+    54,
+    55
+   ],
+   "confidence": "high",
+   "mapName": "PIPELINE (SNOW VALLEY)",
+   "note": "its group"
+  },
+  "quickie": {
+   "polylines": [
+    25,
+    60
+   ],
+   "confidence": "high",
+   "mapName": "QUICKIE",
+   "note": "its group | along its printed name"
+  },
+  "race-peak": {
+   "polylines": [
+    23,
+    24
+   ],
+   "confidence": "high",
+   "mapName": "RACE PEAK",
+   "note": "its group"
+  },
+  "richards": {
+   "polylines": [
+    52,
+    53
+   ],
+   "confidence": "high",
+   "mapName": "RICHARD'S",
+   "note": "its group"
+  },
+  "show-me": {
+   "polylines": [
+    9,
+    10
+   ],
+   "confidence": "high",
+   "mapName": "SHOW ME",
+   "note": "its group"
+  },
+  "show-off": {
+   "polylines": [
+    34,
+    35
+   ],
+   "confidence": "high",
+   "mapName": "SHOW OFF",
+   "note": "its group"
+  },
+  "snake-run": {
+   "polylines": [
+    11,
+    12
+   ],
+   "confidence": "high",
+   "mapName": "SNAKE RUN",
+   "note": "its group"
+  },
+  "snow-bowl": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "SNOW BOWL",
+   "note": "its group"
+  },
+  "surprise-run": {
+   "polylines": [
+    21,
+    22
+   ],
+   "confidence": "high",
+   "mapName": "SURPRISE RUN",
+   "note": "its group"
+  },
+  "the-chute": {
+   "polylines": [
+    40,
+    41
+   ],
+   "confidence": "high",
+   "mapName": "THE CHUTE",
+   "note": "its group"
+  },
+  "the-edge": {
+   "polylines": [
+    28,
+    29
+   ],
+   "confidence": "high",
+   "mapName": "THE EDGE",
+   "note": "its group"
+  },
+  "the-face": {
+   "polylines": [
+    6,
+    7
+   ],
+   "confidence": "high",
+   "mapName": "THE FACE",
+   "note": "its group"
+  },
+  "the-ladder": {
+   "polylines": [
+    2,
+    3
+   ],
+   "confidence": "high",
+   "mapName": "THE LADDER",
+   "note": "its group"
+  },
+  "thunder-mountain": {
+   "polylines": [
+    26,
+    27,
+    62
+   ],
+   "confidence": "high",
+   "mapName": "THUNDER MOUNTAIN",
+   "note": "its group | along its printed name"
+  },
+  "upper-wine-rock": {
+   "polylines": [
+    16,
+    17,
+    58
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WINE ROCK",
+   "note": "its group | along its printed name"
+  },
+  "west-run": {
+   "polylines": [
+    20,
+    59
+   ],
+   "confidence": "high",
+   "mapName": "WEST RUN",
+   "note": "its group | along its printed name"
+  },
+  "west-slide": {
+   "polylines": [
+    0,
+    1
+   ],
+   "confidence": "high",
+   "mapName": "WEST SLIDE",
+   "note": "its group"
+  }
+ }
+}

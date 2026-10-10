@@ -5,11 +5,11 @@ overlay on the map, with its name and rating, so you tap the run you just skied 
 works offline on the mountain, installs to a phone's home screen, and can sync your trips between devices with an
 optional account. Live at **[www.myskiruns.app](https://www.myskiruns.app)**.
 
-Thirty-four resorts so far, 5,036 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
+Thirty-five resorts so far, 5,129 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
 Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Vail, Beaver Creek, Breckenridge, Keystone,
 Copper Mountain, Winter Park, Steamboat, Snowmass, Aspen Mountain, Buttermilk, Park City, Deer Valley, Snowbasin,
-Alta, Big Sky, Whitefish Mountain, Schweitzer, Palisades Tahoe, Northstar, Heavenly, Mammoth Mountain, Mt. Bachelor
-and Whistler Blackcomb.
+Alta, Big Sky, Whitefish Mountain, Schweitzer, Palisades Tahoe, Northstar, Heavenly, Mammoth Mountain, Big Bear,
+Mt. Bachelor and Whistler Blackcomb.
 
 Most of the work in this repository is the **trail-map pipeline**: getting every trail's overlay onto its own
 drawn line, with the right name, on maps that were never made to be machine-read. How it is done, resort by
@@ -96,6 +96,7 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 | Northstar | California | 99 (83 + 16) | 1 | PDF lines as filled outlines, one for the runs that meet (cut at each junction), white names haloed in the line's colour | `tools/trailmap/resorts/northstar/regen.sh` |
 | Heavenly | California (and Nevada) | 120 (73 + 47) | 2 | the current map as an image; an older PDF of the artwork registered on it | `tools/trailmap/resorts/heavenly/regen.sh` |
 | Mammoth Mountain | California | 182 (175 + 7) | 2 | a PDF with names as text and no trail lines; its interactive maps' SVGs as the lines | `tools/trailmap/resorts/mammoth/regen.sh` |
+| Big Bear | California | 93 (91 + 2) | 3 | three images, no PDF (Snow Summit, Bear Mountain, Snow Valley): Snow Summit's print's own lines; the other two paint runs with no line, their interactive maps' lines and stretches along the printed names | `tools/trailmap/resorts/big-bear/regen.sh` |
 | Mt. Bachelor | Oregon | 110 (72 + 38) | 1 | PDF lines and names both as filled outlines over a painting | `tools/trailmap/resorts/mt-bachelor/regen.sh` |
 | Whistler Blackcomb | British Columbia | 232 (209 + 23) | 3 | one PDF read as a main map and two insets | `tools/trailmap/resorts/whistler-blackcomb/regen.sh` |
 
@@ -280,14 +281,14 @@ the playbook's [Part 5](docs/trail-map-playbook.md#part-5-what-we-tried-and-what
 
 ## What's left
 
-1. **A person's confirmation** for the thirty-one resorts Claude checked on crops instead of the review page
-   (Sugarbush through Beaver Creek), if wanted: the Trail Check page can be published for any resort ([playbook,
+1. **A person's confirmation** for the thirty-two resorts Claude checked on crops instead of the review page
+   (Sugarbush through Big Bear), if wanted: the Trail Check page can be published for any resort ([playbook,
    Part 4](docs/trail-map-playbook.md#auditing-on-crops-or-the-human-review-page)).
 2. **Shared tooling:** a legend file per map feeding the extraction and the readers' prompts; readers run from a
    script instead of an interactive session ([playbook, Part 5](docs/trail-map-playbook.md#scaling-to-many-maps)).
-3. The hover check passes 8,852 of 8,858 points (2026-10-07). The six misses are points where two trails' overlays
-   meet or share a stretch, where either name is right: Killington 2, Stowe 2, Big Sky's Bowl 1, Heavenly 1 (each
-   resort's numbers are in the playbook's Part 3).
+3. The hover check passes 14,073 of 14,082 points (2026-10-10). The nine misses are points where two trails'
+   overlays meet or share a stretch, where either name is right: Killington 2, Stowe 2, Beaver Creek 2, Big Sky's
+   Bowl 1, Heavenly 1, Mt. Bachelor 1 (each resort's numbers are in the playbook's Part 3).
 4. Whiteface, Winter Park, Breckenridge, Copper Mountain and Keystone key their decisions by piece id, valid for
    their exact source file (the rebuild checks its SHA-256); Winter Park's and Copper Mountain's sites now serve
    re-exports with other ids. Moving them onto `pdf_resort.py` would key them by points.

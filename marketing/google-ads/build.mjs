@@ -435,6 +435,21 @@ const RESORT_ADS = {
     negatives: ['summer', 'mountain bike', 'golf', 'hiking', 'real estate', 'condo', 'jobs', 'wedding', 'hotel',
       'arizona', 'state park', 'ohio', 'oregon', 'cookie'],
   },
+  'big-bear': {
+    short: 'Big Bear',
+    path: 'Big-Bear',
+    area: 'Snow Summit to Snow Valley',
+    // its mountains' bare names mean other places too (New York's Bear Mountain, other Snow Valleys): only with
+    // Big Bear's
+    names: ['big bear mountain resort', 'big bear', 'snow summit', 'bear mountain big bear', 'snow valley big bear'],
+    keywords: [
+      ['big bear ski trails', 'phrase'],
+      ['snow summit ski trails', 'phrase'],
+    ],
+    // the lake town's summer and lodging, the zoo, New York's Bear Mountain
+    negatives: ['summer', 'mountain bike', 'bike park', 'hiking', 'cabin', 'cabins', 'rental', 'lodging', 'hotel',
+      'zoo', 'jobs', 'wedding', 'fishing', 'new york', 'harriman', 'state park', 'bridge'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */
@@ -655,6 +670,10 @@ const PANEL_SITELINKS = {
   ],
   'palisades-tahoe': [
     { panel: 'alpine-front', peak: 'alpine', text: 'Alpine Meadows Trail Map', line: "Alpine's front and back sides" },
+  ],
+  'big-bear': [
+    { panel: 'bear-mountain', peak: 'bear-mountain', text: 'Bear Mountain Trail Map', line: 'Geronimo, Park Run, Central Park' },
+    { panel: 'snow-valley', peak: 'snow-valley', text: 'Snow Valley Trail Map', line: 'Wine Rock to Thunder Mountain' },
   ],
 };
 
