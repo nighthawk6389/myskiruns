@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Ski-run tracker for twenty-eight resorts (React 19 + TS + Vite). The hard part is
+Ski-run tracker for twenty-nine resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another

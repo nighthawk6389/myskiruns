@@ -1,0 +1,600 @@
+{
+ "_source": "Snowbasin's trail report: the trail tables of https://www.snowbasin.com/the-mountain/mountain-report/ as captured by Common Crawl on 2026-01-21 (CC-MAIN-2026-04; the page lists summer trails out of season): the 2025-26 winter list, the access gates left out",
+ "trails": [
+  [
+   "Carnahan's",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "Coyote Bowl",
+   "Strawberry",
+   "Blue"
+  ],
+  [
+   "Gordon's",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "Gordon's Gully",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "Gun Tower",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "Hohmann's",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "Last Chance",
+   "Strawberry",
+   "Blue"
+  ],
+  [
+   "Lone Tree",
+   "Strawberry",
+   "DoubleBlack"
+  ],
+  [
+   "Lower Bear Springs",
+   "Strawberry",
+   "Blue"
+  ],
+  [
+   "Lower Elk Ridge",
+   "Strawberry",
+   "Blue"
+  ],
+  [
+   "Lower Main Street",
+   "Strawberry",
+   "Blue"
+  ],
+  [
+   "Mid Elk Ridge",
+   "Strawberry",
+   "Blue"
+  ],
+  [
+   "Mid Main Street",
+   "Strawberry",
+   "Blue"
+  ],
+  [
+   "Middle Bowl Cirque",
+   "Strawberry",
+   "DoubleBlack"
+  ],
+  [
+   "Moonshine Bowl",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "Needles Cirque",
+   "Strawberry",
+   "DoubleBlack"
+  ],
+  [
+   "Sister's Bowl",
+   "Strawberry",
+   "DoubleBlack"
+  ],
+  [
+   "Smokey's",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "Sow Back",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "Strawberry Fields",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "Sun King",
+   "Strawberry",
+   "Blue"
+  ],
+  [
+   "The Diamond",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "The Walrus",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "Trappers Trail",
+   "Strawberry",
+   "Blue"
+  ],
+  [
+   "Twist & Shout",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "Upper Bear Springs",
+   "Strawberry",
+   "Blue"
+  ],
+  [
+   "Upper Elk Ridge",
+   "Strawberry",
+   "Blue"
+  ],
+  [
+   "Upper Main Street",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "WFO",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "White Lightning",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "White Room",
+   "Strawberry",
+   "Black"
+  ],
+  [
+   "Wolverine",
+   "Strawberry",
+   "Blue"
+  ],
+  [
+   "119",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "25th St.",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Bear Hollow",
+   "Needles",
+   "Green"
+  ],
+  [
+   "Beaver Slide",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Boardwalk",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Bullwinkle",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "City Hill",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Dan's Run",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Dog Leg",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Fro Zone",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Herbert's",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Littlecat",
+   "Needles",
+   "Green"
+  ],
+  [
+   "Lo Fro Zone",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Moose Mound",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Needles",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Needles Way",
+   "Needles",
+   "Green"
+  ],
+  [
+   "Penny Lane",
+   "Needles",
+   "Green"
+  ],
+  [
+   "Pineview",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Porcupine Traverse",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Pork Barrel",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Powder Puff",
+   "Needles",
+   "Green"
+  ],
+  [
+   "Rocky J",
+   "Needles",
+   "Black"
+  ],
+  [
+   "School Hill",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Showboat",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Slo Road",
+   "Needles",
+   "Green"
+  ],
+  [
+   "Sunshine",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Sweet Revenge",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Two Bit Street",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Upper 119",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Utah Express",
+   "Needles",
+   "Black"
+  ],
+  [
+   "3 Skis",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Bash",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Bear Hollow Woods",
+   "Needles",
+   "Green"
+  ],
+  [
+   "Becker Face",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Becks",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Bobcat Ridge",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Centennial",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Cirque",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Dwayne's",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Grizz",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Harold's",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Lower Moose Mound",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Pfeiffalina",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Philpot Ridge",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Snow Shoe",
+   "Needles",
+   "Green"
+  ],
+  [
+   "Squirrel",
+   "Needles",
+   "Green"
+  ],
+  [
+   "Stein's",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Strawberry Traverse",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Sunny Side",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Sunshine Bowl",
+   "Needles",
+   "Black"
+  ],
+  [
+   "The Wallow",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Wildcat Bowl",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Wildcat Ridge",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Wildcat Traverse",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Willow",
+   "Needles",
+   "Blue"
+  ],
+  [
+   "Women's GS",
+   "Needles",
+   "Black"
+  ],
+  [
+   "Middle Bowl Traverse",
+   "Porcupine",
+   "Blue"
+  ],
+  [
+   "Porky Face",
+   "Porcupine",
+   "Blue"
+  ],
+  [
+   "Powderhound Bowl",
+   "Porcupine",
+   "Black"
+  ],
+  [
+   "Rainer's Run",
+   "Porcupine",
+   "Blue"
+  ],
+  [
+   "Surprise",
+   "Porcupine",
+   "Black"
+  ],
+  [
+   "The Flank",
+   "Porcupine",
+   "DoubleBlack"
+  ],
+  [
+   "Easter Bowl",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Grizzly Downhill",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Grizzly Start",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Hollywood",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "John Paul Face",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Mt. Ogden Bowl",
+   "John Paul",
+   "DoubleBlack"
+  ],
+  [
+   "Mt. Ogden Bowl Road",
+   "John Paul",
+   "Blue"
+  ],
+  [
+   "No Name",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Parson's",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Roy's",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Shooting Star",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Snow King",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "The Jungle",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Wildflower Downhill",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Wildflower Start",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Deane's",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Ellison's",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "FTS",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Grizzly Finish",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Janis'",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Lower Pyramid",
+   "John Paul",
+   "DoubleBlack"
+  ],
+  [
+   "The Burn",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Wildflower Finish",
+   "John Paul",
+   "Black"
+  ],
+  [
+   "Littlecat Terrain Park",
+   "Terrain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Orson's",
+   "Terrain Parks",
+   "TerrainPark"
+  ]
+ ]
+}

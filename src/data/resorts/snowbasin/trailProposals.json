@@ -1,0 +1,977 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "carnahans": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "CARNAHAN'S",
+   "note": "along Carnahan's"
+  },
+  "coyote-bowl": {
+   "polylines": [
+    70,
+    126
+   ],
+   "confidence": "high",
+   "mapName": "COYOTE BOWL",
+   "note": "along Coyote Bowl"
+  },
+  "gordons": {
+   "polylines": [
+    101
+   ],
+   "confidence": "high",
+   "mapName": "GORDON'S",
+   "note": "along Gordon's"
+  },
+  "gordons-gully": {
+   "polylines": [
+    128
+   ],
+   "confidence": "high",
+   "mapName": "GORDON'S GULLY",
+   "note": "checked on a crop"
+  },
+  "gun-tower": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "GUN TOWER",
+   "note": "along Gun Tower"
+  },
+  "hohmanns": {
+   "polylines": [
+    55,
+    59
+   ],
+   "confidence": "high",
+   "mapName": "HOHMANN'S",
+   "note": "along Hohmann's | checked on a crop"
+  },
+  "last-chance": {
+   "polylines": [
+    68
+   ],
+   "confidence": "high",
+   "mapName": "LAST CHANCE",
+   "note": "along Last Chance"
+  },
+  "lone-tree": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "LONE TREE",
+   "note": "along Lone Tree"
+  },
+  "lower-bear-springs": {
+   "polylines": [
+    112,
+    129
+   ],
+   "confidence": "high",
+   "mapName": "LOWER BEAR SPRINGS",
+   "note": "checked on a crop"
+  },
+  "lower-elk-ridge": {
+   "polylines": [
+    130
+   ],
+   "confidence": "high",
+   "mapName": "LOWER ELK RIDGE",
+   "note": "checked on a crop"
+  },
+  "lower-main-street": {
+   "polylines": [
+    132
+   ],
+   "confidence": "high",
+   "mapName": "LOWER MAIN STREET",
+   "note": "checked on a crop"
+  },
+  "mid-elk-ridge": {
+   "polylines": [
+    71,
+    100
+   ],
+   "confidence": "high",
+   "mapName": "MID ELK RIDGE",
+   "note": "along Mid Elk Ridge | checked on a crop"
+  },
+  "mid-main-street": {
+   "polylines": [
+    74,
+    111,
+    131
+   ],
+   "confidence": "high",
+   "mapName": "MID MAIN STREET",
+   "note": "checked on a crop"
+  },
+  "moonshine-bowl": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "MOONSHINE BOWL",
+   "note": "along Moonshine Bowl"
+  },
+  "smokeys": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "SMOKEY'S",
+   "note": "along Smokey's"
+  },
+  "sow-back": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "SOW BACK",
+   "note": "along Sow Back"
+  },
+  "strawberry-fields": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "STRAWBERRY FIELDS",
+   "note": "along Strawberry Fields"
+  },
+  "sun-king": {
+   "polylines": [
+    96
+   ],
+   "confidence": "high",
+   "mapName": "SUN KING",
+   "note": "along Sun King"
+  },
+  "the-diamond": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "THE DIAMOND",
+   "note": "along The Diamond"
+  },
+  "the-walrus": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "THE WALRUS",
+   "note": "checked on a crop"
+  },
+  "trappers-bypass": {
+   "polylines": [
+    133
+   ],
+   "confidence": "high",
+   "mapName": "TRAPPER\u2019S BYPASS",
+   "note": "checked on a crop"
+  },
+  "trappers-trail": {
+   "polylines": [
+    78
+   ],
+   "confidence": "high",
+   "mapName": "TRAPPERS TRAIL",
+   "note": "checked on a crop"
+  },
+  "twist-shout": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "TWIST & SHOUT",
+   "note": "checked on a crop"
+  },
+  "upper-bear-springs": {
+   "polylines": [
+    79
+   ],
+   "confidence": "high",
+   "mapName": "UPPER BEAR SPRINGS",
+   "note": "along Upper Bear Springs"
+  },
+  "upper-elk-ridge": {
+   "polylines": [
+    72,
+    75
+   ],
+   "confidence": "high",
+   "mapName": "UPPER ELK RIDGE",
+   "note": "checked on a crop | along Upper Elk Ridge"
+  },
+  "upper-main-street": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "UPPER MAIN STREET",
+   "note": "along Upper Main Street"
+  },
+  "wfo": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "WFO",
+   "note": "checked on a crop"
+  },
+  "white-lightning": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "WHITE LIGHTNING",
+   "note": "along White Lightning"
+  },
+  "white-room": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "WHITE ROOM",
+   "note": "along White Room"
+  },
+  "wolverine": {
+   "polylines": [
+    69
+   ],
+   "confidence": "high",
+   "mapName": "WOLVERINE",
+   "note": "along Wolverine"
+  },
+  "119": {
+   "polylines": [
+    107
+   ],
+   "confidence": "high",
+   "mapName": "119",
+   "note": "checked on a crop"
+  },
+  "25th-st": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "25TH ST.",
+   "note": "along 25th St."
+  },
+  "3-skis": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "3 SKIS",
+   "note": "along 3 Skis"
+  },
+  "bash": {
+   "polylines": [
+    5,
+    33
+   ],
+   "confidence": "high",
+   "mapName": "BASH",
+   "note": "along Bash | continuation"
+  },
+  "bear-hollow": {
+   "polylines": [
+    142
+   ],
+   "confidence": "high",
+   "mapName": "BEAR HOLLOW",
+   "note": "checked on a crop"
+  },
+  "beaver-slide": {
+   "polylines": [
+    104
+   ],
+   "confidence": "high",
+   "mapName": "BEAVER SLIDE",
+   "note": "along Beaver Slide"
+  },
+  "becker-face": {
+   "polylines": [
+    93
+   ],
+   "confidence": "high",
+   "mapName": "BECKER FACE",
+   "note": "along Becker Face"
+  },
+  "becks": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "BECKS",
+   "note": "along Becks"
+  },
+  "blue-grouse": {
+   "polylines": [
+    124
+   ],
+   "confidence": "high",
+   "mapName": "BLUE GROUSE",
+   "note": "along Blue Grouse"
+  },
+  "boardwalk": {
+   "polylines": [
+    99
+   ],
+   "confidence": "high",
+   "mapName": "BOARDWALK",
+   "note": "along Boardwalk"
+  },
+  "bobcat-ridge": {
+   "polylines": [
+    61
+   ],
+   "confidence": "high",
+   "mapName": "BOBCAT RIDGE",
+   "note": "along Bobcat Ridge"
+  },
+  "bullwinkle": {
+   "polylines": [
+    88
+   ],
+   "confidence": "high",
+   "mapName": "BULLWINKLE",
+   "note": "along Bullwinkle"
+  },
+  "catastrophe-rocks": {
+   "polylines": [
+    62
+   ],
+   "confidence": "high",
+   "mapName": "CATASTROPHE ROCKS!",
+   "note": "along Catastrophe Rocks!"
+  },
+  "centennial": {
+   "polylines": [
+    139
+   ],
+   "confidence": "high",
+   "mapName": "CENTENNIAL",
+   "note": "checked on a crop"
+  },
+  "cirque": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "CIRQUE",
+   "note": "along Cirque"
+  },
+  "city-hill": {
+   "polylines": [
+    95
+   ],
+   "confidence": "high",
+   "mapName": "CITY HILL",
+   "note": "along City Hill"
+  },
+  "dans-run": {
+   "polylines": [
+    81,
+    82,
+    113
+   ],
+   "confidence": "high",
+   "mapName": "DAN'S RUN",
+   "note": "checked on a crop | end of Dan's Run | along Dan's Run"
+  },
+  "dog-leg": {
+   "polylines": [
+    109
+   ],
+   "confidence": "high",
+   "mapName": "DOG LEG",
+   "note": "checked on a crop"
+  },
+  "dwaynes": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "DWAYNE'S",
+   "note": "along Dwayne's"
+  },
+  "eas-a-long": {
+   "polylines": [
+    117
+   ],
+   "confidence": "high",
+   "mapName": "EAS-A-LONG",
+   "note": "along Eas-A-Long"
+  },
+  "fro-zone": {
+   "polylines": [
+    145
+   ],
+   "confidence": "high",
+   "mapName": "FRO ZONE",
+   "note": "along its printed name"
+  },
+  "grizz": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "GRIZZ",
+   "note": "along Grizz"
+  },
+  "harolds": {
+   "polylines": [
+    98
+   ],
+   "confidence": "high",
+   "mapName": "HAROLD'S",
+   "note": "along Harold's"
+  },
+  "herberts": {
+   "polylines": [
+    89,
+    97
+   ],
+   "confidence": "high",
+   "mapName": "HERBERT'S",
+   "note": "along Herbert's | continuation"
+  },
+  "littlecat": {
+   "polylines": [
+    116,
+    119
+   ],
+   "confidence": "high",
+   "mapName": "LITTLECAT",
+   "note": "continuation | along Littlecat"
+  },
+  "littlecat-terrain-park": {
+   "polylines": [
+    118
+   ],
+   "confidence": "high",
+   "mapName": "LITTLECAT TERRAIN PARK",
+   "note": "along Littlecat Terrain Park"
+  },
+  "lo-fro-zone": {
+   "polylines": [
+    105
+   ],
+   "confidence": "high",
+   "mapName": "LO FRO ZONE",
+   "note": "along Lo Fro Zone"
+  },
+  "lower-moose-mound": {
+   "polylines": [
+    122
+   ],
+   "confidence": "high",
+   "mapName": "LOWER MOOSE MOUND",
+   "note": "checked on a crop"
+  },
+  "middle-bowl-traverse": {
+   "polylines": [
+    86
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE BOWL TRAVERSE",
+   "note": "along Middle Bowl Traverse"
+  },
+  "moose-mound": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "MOOSE MOUND",
+   "note": "along Moose Mound"
+  },
+  "needles": {
+   "polylines": [
+    141
+   ],
+   "confidence": "high",
+   "mapName": "NEEDLES",
+   "note": "checked on a crop"
+  },
+  "needles-way": {
+   "polylines": [
+    121
+   ],
+   "confidence": "high",
+   "mapName": "NEEDLES WAY",
+   "note": "checked on a crop"
+  },
+  "orsons": {
+   "polylines": [
+    127
+   ],
+   "confidence": "high",
+   "mapName": "ORSON'S",
+   "note": "along Orson's"
+  },
+  "penny-lane": {
+   "polylines": [
+    120
+   ],
+   "confidence": "high",
+   "mapName": "PENNY LANE",
+   "note": "along Penny Lane"
+  },
+  "pfeiffalina": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "PFEIFFALINA",
+   "note": "along Pfeiffalina"
+  },
+  "philpot-ridge": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "PHILPOT RIDGE",
+   "note": "along Philpot Ridge"
+  },
+  "pineview": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "PINEVIEW",
+   "note": "along Pineview"
+  },
+  "porcupine-traverse": {
+   "polylines": [
+    140
+   ],
+   "confidence": "high",
+   "mapName": "PORCUPINE TRAVERSE",
+   "note": "checked on a crop"
+  },
+  "pork-barrel": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "PORK BARREL",
+   "note": "along Pork Barrel"
+  },
+  "porky-face": {
+   "polylines": [
+    85
+   ],
+   "confidence": "high",
+   "mapName": "PORKY FACE",
+   "note": "along Porky Face"
+  },
+  "powderhound-bowl": {
+   "polylines": [
+    24,
+    51
+   ],
+   "confidence": "high",
+   "mapName": "POWDERHOUND BOWL",
+   "note": "along Powderhound Bowl | checked on a crop"
+  },
+  "rainers-run": {
+   "polylines": [
+    103
+   ],
+   "confidence": "high",
+   "mapName": "RAINER'S RUN",
+   "note": "along Rainer's Run"
+  },
+  "rocky-j": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "ROCKY J",
+   "note": "along Rocky J"
+  },
+  "school-hill": {
+   "polylines": [
+    102
+   ],
+   "confidence": "high",
+   "mapName": "SCHOOL HILL",
+   "note": "along School Hill"
+  },
+  "showboat": {
+   "polylines": [
+    106
+   ],
+   "confidence": "high",
+   "mapName": "SHOWBOAT",
+   "note": "checked on a crop"
+  },
+  "slo-road": {
+   "polylines": [
+    115
+   ],
+   "confidence": "high",
+   "mapName": "SLO ROAD",
+   "note": "checked on a crop"
+  },
+  "snow-shoe": {
+   "polylines": [
+    143
+   ],
+   "confidence": "high",
+   "mapName": "SNOW SHOE",
+   "note": "checked on a crop"
+  },
+  "squirrel": {
+   "polylines": [
+    123
+   ],
+   "confidence": "high",
+   "mapName": "SQUIRREL",
+   "note": "along Squirrel"
+  },
+  "steins": {
+   "polylines": [
+    92
+   ],
+   "confidence": "high",
+   "mapName": "STEIN'S",
+   "note": "along Stein's"
+  },
+  "strawberry-traverse": {
+   "polylines": [
+    76,
+    77,
+    84,
+    114
+   ],
+   "confidence": "high",
+   "mapName": "STRAWBERRY TRAVERSE",
+   "note": "along Strawberry Traverse | checked on a crop | end of Strawberry Traverse"
+  },
+  "sunny-side": {
+   "polylines": [
+    90
+   ],
+   "confidence": "high",
+   "mapName": "SUNNY SIDE",
+   "note": "along Sunny Side"
+  },
+  "sunshine": {
+   "polylines": [
+    110
+   ],
+   "confidence": "high",
+   "mapName": "SUNSHINE",
+   "note": "checked on a crop"
+  },
+  "sunshine-bowl": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "SUNSHINE BOWL",
+   "note": "along Sunshine Bowl"
+  },
+  "surprise": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "SURPRISE",
+   "note": "along Surprise"
+  },
+  "sweet-revenge": {
+   "polylines": [
+    83,
+    125
+   ],
+   "confidence": "high",
+   "mapName": "SWEET REVENGE",
+   "note": "along Sweet Revenge | end of Sweet Revenge"
+  },
+  "the-flank": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "THE FLANK",
+   "note": "along The Flank"
+  },
+  "the-wallow": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "THE WALLOW",
+   "note": "along The Wallow"
+  },
+  "two-bit-street": {
+   "polylines": [
+    87,
+    108
+   ],
+   "confidence": "high",
+   "mapName": "TWO BIT STREET",
+   "note": "along Two Bit Street | checked on a crop"
+  },
+  "upper-119": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "UPPER 119",
+   "note": "along Upper 119"
+  },
+  "utah-express": {
+   "polylines": [
+    66
+   ],
+   "confidence": "high",
+   "mapName": "UTAH EXPRESS",
+   "note": "along Utah Express"
+  },
+  "wildcat-bowl": {
+   "polylines": [
+    91
+   ],
+   "confidence": "high",
+   "mapName": "WILDCAT BOWL",
+   "note": "along Wildcat Bowl"
+  },
+  "wildcat-ridge": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "WILDCAT RIDGE",
+   "note": "checked on a crop"
+  },
+  "wildcat-traverse": {
+   "polylines": [
+    67
+   ],
+   "confidence": "high",
+   "mapName": "WILDCAT TRAVERSE",
+   "note": "along Wildcat Traverse"
+  },
+  "willow": {
+   "polylines": [
+    80
+   ],
+   "confidence": "high",
+   "mapName": "WILLOW",
+   "note": "along Willow"
+  },
+  "womens-gs": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "WOMEN'S GS",
+   "note": "along Women's GS"
+  },
+  "deanes": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "DEANE'S",
+   "note": "along Deane's"
+  },
+  "dry-bowl": {
+   "polylines": [
+    63
+   ],
+   "confidence": "high",
+   "mapName": "DRY BOWL",
+   "note": "along Dry Bowl"
+  },
+  "easter-bowl": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "EASTER BOWL",
+   "note": "along Easter Bowl"
+  },
+  "ellisons": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "ELLISON'S",
+   "note": "along Ellison's"
+  },
+  "fts": {
+   "polylines": [
+    135
+   ],
+   "confidence": "high",
+   "mapName": "FTS",
+   "note": "checked on a crop"
+  },
+  "grizzly-downhill": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "GRIZZLY DOWNHILL",
+   "note": "along Grizzly Downhill"
+  },
+  "grizzly-finish": {
+   "polylines": [
+    137
+   ],
+   "confidence": "high",
+   "mapName": "GRIZZLY FINISH",
+   "note": "checked on a crop"
+  },
+  "grizzly-start": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "GRIZZLY START",
+   "note": "checked on a crop"
+  },
+  "hollywood": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "HOLLYWOOD",
+   "note": "checked on a crop"
+  },
+  "janis": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "JANIS'",
+   "note": "along Janis'"
+  },
+  "john-paul-face": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "JOHN PAUL FACE",
+   "note": "along John Paul Face"
+  },
+  "mt-ogden-bowl-road": {
+   "polylines": [
+    94
+   ],
+   "confidence": "high",
+   "mapName": "MT. OGDEN BOWL ROAD",
+   "note": "along Mt. Ogden Bowl Road"
+  },
+  "no-name": {
+   "polylines": [
+    144
+   ],
+   "confidence": "high",
+   "mapName": "NO NAME",
+   "note": "checked on a crop"
+  },
+  "parsons": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "PARSON'S",
+   "note": "along Parson's"
+  },
+  "pig-pen": {
+   "polylines": [
+    65
+   ],
+   "confidence": "high",
+   "mapName": "PIG PEN",
+   "note": "along Pig Pen"
+  },
+  "roys": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "ROY'S",
+   "note": "along Roy's"
+  },
+  "shooting-star": {
+   "polylines": [
+    40,
+    42
+   ],
+   "confidence": "high",
+   "mapName": "SHOOTING STAR",
+   "note": "continuation | along Shooting Star"
+  },
+  "snow-king": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "SNOW KING",
+   "note": "along Snow King"
+  },
+  "staircase": {
+   "polylines": [
+    64
+   ],
+   "confidence": "high",
+   "mapName": "STAIRCASE",
+   "note": "along Staircase"
+  },
+  "the-burn": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "THE BURN",
+   "note": "along The Burn"
+  },
+  "the-jungle": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "THE JUNGLE",
+   "note": "along The Jungle"
+  },
+  "wildflower-downhill": {
+   "polylines": [
+    31,
+    58
+   ],
+   "confidence": "high",
+   "mapName": "WILDFLOWER DOWNHILL",
+   "note": "along Wildflower Downhill | checked on a crop"
+  },
+  "wildflower-finish": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "WILDFLOWER FINISH",
+   "note": "along Wildflower Finish"
+  },
+  "wildflower-start": {
+   "polylines": [
+    138
+   ],
+   "confidence": "high",
+   "mapName": "WILDFLOWER START",
+   "note": "checked on a crop"
+  }
+ }
+}

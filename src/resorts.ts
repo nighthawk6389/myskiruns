@@ -158,6 +158,7 @@ export const RESORTS: ResortEntry[] = [
     { id: 'heros', name: "Hero's", paths: () => import('./data/resorts/aspen-mountain/panels/heros/trailPaths.json') },
   ], ['Ajax', 'Aspen Snowmass', 'Aspen']),
   oneMap('buttermilk', 'Buttermilk', 'Colorado', () => import('./data/resorts/buttermilk/trails'), () => import('./data/resorts/buttermilk/trailPaths.json'), ['Aspen Snowmass', 'Aspen']),
+  oneMap('snowbasin', 'Snowbasin', 'Utah', () => import('./data/resorts/snowbasin/trails'), () => import('./data/resorts/snowbasin/trailPaths.json'), ['Ogden']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

@@ -376,6 +376,15 @@ const RESORT_ADS = {
     negatives: ['recipe', 'pancakes', 'biscuits', 'substitute', 'ranch', 'falls', 'x games tickets', 'mountain bike',
       'hiking'],
   },
+  snowbasin: {
+    short: 'Snowbasin',
+    path: 'Snowbasin',
+    area: 'Strawberry to John Paul',
+    names: ['snowbasin', 'snowbasin resort', 'snow basin utah'],
+    keywords: [],
+    // the summer and the concerts, the bike park
+    negatives: ['summer', 'concert', 'blues and brews', 'mountain bike', 'bike park', 'hiking', 'wedding', 'jobs'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

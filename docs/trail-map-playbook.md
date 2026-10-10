@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's twenty-eight resorts got their overlays, written so the next resort (or the next season of one of
+How the app's twenty-nine resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -61,7 +61,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 
 | the source gives you | route | done this way | start from |
 |---|---|---|---|
-| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels) and Buttermilk (one panel) | Hunter, Big Sky; Snowmass for a map rated by colour |
+| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
 | vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels) | Sunday River, Park City |
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor | Mt. Bachelor |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
@@ -324,7 +324,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the twenty-eight resorts settled, so the next ones come out alike:
+What the twenty-nine resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -614,6 +614,7 @@ give the same.
 | [Snowmass](#snowmass) | PDF strokes and filled casings, names as text on pills in the run's colour | `pdf_resort.py`, the rating from the pill's colour (`COLOR_SYMBOL`) | `regen.sh` | a map rated by its names' colours |
 | [Aspen Mountain](#aspen-mountain) | the same kind, three panels; no trail report | as Snowmass, names spelled as printed | `regen.sh` | a map of that kind with insets |
 | [Buttermilk](#buttermilk) | the same kind, one panel; the dotted way down | as Snowmass | `regen.sh` | a small map of that kind |
+| [Snowbasin](#snowbasin) | PDF strokes and text over a painting, symbols on the lines; a few lines as filled outlines | `pdf_resort.py`; the report from a Common Crawl capture of an HTML table | `regen.sh` | names printed along their lines, symbols on them |
 
 ## Killington
 
@@ -1513,6 +1514,49 @@ the trail report's lift areas · `tools/trailmap/resorts/buttermilk/`.
 - **Checked:** every overlay on crops (`overlay_audit.py`, 11 sheets, every cell read; the two it showed wrong,
   Red's Rover's run-out and a cut-across named Ridge Trail, fixed and read again); `compare.py` against the report;
   hover 130/130.
+
+## Snowbasin
+
+125 trails (119 + 6) · Utah · one map · areas: the trail report's lift areas (Strawberry, Needles with Porcupine's
+runs, John Paul), each with the elevation printed where its lifts top out · `tools/trailmap/resorts/snowbasin/`.
+
+- **Source:** the 2025-26 PDF that snowbasin.com's trail-maps page links ("for Ikon, reduced", plain curl; the page
+  shows a JPG of it; skimap.org's map 34864 is the same file): one InDesign page, James Niehues's painting at about
+  2 px/pt under vector lines. Lines: 2.25 pt strokes in black, blue and green, each drawn again at 1.13 pt over
+  itself; the Olympic downhill courses are black lines in a yellow casing, the "easier way down" yellow dashes over
+  a blue or green line, the area-access gates black Π icons stroked at the trails' width. Four blue lines are filled
+  outlines instead of strokes (under the Blue Grouse and Orson's pills, Coyote Bowl's lower part, Sweet Revenge's
+  top). Names are text in the run's colour (AvenirNext Medium 10.1 pt; the bowls' two-line names Demi 13.5), printed
+  along their line; some names are drawn twice in two colours (the last drawn is on top). Symbols are fills set on
+  the line by the name, turned along it; the bowls' double diamonds sit under their names.
+- **Route:** `prepare.py`: the page at 3 px/pt with the painting upscaled (`matte_pdf_layer.py --resample`); the
+  2.25 pt strokes (`extract_pdf_vectors.py`), the gate icons and the pieces drawn twice dropped, and the four outlined
+  lines' centre lines (the outline split at its caps, its two sides averaged); names from `pdf_labels.py` in the
+  three trail colours, each copy given its top copy's colour; symbols from `pdf_symbols.py`. `pdf_resort.py` with
+  `ALONG_FIRST`, `NO_STRETCH_BESIDE`; the bowls joined (`JOIN`, `JOIN_GAP` 17 pt), two names set as one text object
+  split (`SPLIT`: ROCKYJ PINEVIEW, DOGLEG SUNSHINE), the bowls' and The Flank's symbols given to their names
+  (`SYMBOL_OF`), and Bullwinkle's and Rocky J's (Rocky J's diamond is nearer Bullwinkle's last letter).
+- **Rebuild:** `tools/trailmap/resorts/snowbasin/regen.sh` (25 s); it checks the PDF's SHA-256.
+- **Truth:** the trail report (`report.json`): the mountain report page's tables as Common Crawl captured them on
+  2026-01-21 (the live page lists summer trails out of season; the reports README, "Snowbasin"), read by
+  `mountain_report.py`. LMM is Lower Moose Mound, Needles Run the report's Needles, Rainer's its Rainer's Run, Lower
+  Pyramids its Lower Pyramid, the LITTLECAT on the park's orange pill its Littlecat Terrain Park. Printed and not on
+  the report: Trapper's Bypass, Eas-A-Long, Catastrophe Rocks!, Dry Bowl, Staircase, Pig Pen, Porky Cirque, the Blue
+  Grouse park. On the report and not printed: Powder Puff, Bear Hollow Woods. Ratings agree but Gordon's (a blue
+  name and a square on its line; the report: black; the map's kept); Needles Cirque, printed in black with no symbol,
+  double black as the report has it (`RATING`).
+- **Decisions** (every piece settled on crops; `tools/archive/snowbasin/thin_crops.py` draws the pieces thin so the
+  map's own colours stay readable): 17 cuts where one path carries two or three runs (Twist & Shout and Gordon's
+  Gully, Trappers Trail and Lower Bear Springs, Mid and Lower Elk Ridge, Mid and Lower Main Street, Hollywood and
+  Grizzly Finish, Grizzly Start and Wildflower Start, Wildcat Ridge and Centennial, Porcupine Traverse, Needles and
+  Showboat, Slo Road, Bear Hollow and Snow Shoe, No Name below the ridge, Trapper's Bypass's path, which runs along
+  Mid Main Street's line between its two stretches); names printed beside a line the auto-match missed (WFO, The
+  Walrus, Dog Leg, Sunshine, Needles Way, LMM, 119 in black type on its blue line); 7 lines with no name printed
+  (links, the ridge from the tram to No Name's top, the line under the Lower Pyramids). Penny Lane is its whole green
+  line, the "Return to Base Area" route from Strawberry included. Markers: the bowls and cirques with no line
+  (Sister's Bowl, Middle Bowl Cirque, Needles Cirque, Porky Cirque, Mt. Ogden Bowl, Lower Pyramid).
+- **Checked:** every overlay on crops (`overlay_audit.py`, 21 sheets, every cell read; No Name's, which ran along the
+  ridge from the tram, cut and read again); `compare.py` against the report; hover 363/363.
 
 # Part 4. Methods in detail
 

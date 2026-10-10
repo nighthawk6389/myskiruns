@@ -1,0 +1,82 @@
+{
+ "reviews": {
+  "porky-cirque": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T02:28:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    64.61,
+    12.38
+   ]
+  },
+  "needles-cirque": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T02:28:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    50.52,
+    12.69
+   ]
+  },
+  "middle-bowl-cirque": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T02:28:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    40.14,
+    13.12
+   ]
+  },
+  "sisters-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T02:28:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    17.41,
+    20.14
+   ]
+  },
+  "mt-ogden-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T02:28:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.57,
+    21.14
+   ]
+  },
+  "lower-pyramid": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T02:28:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    89.15,
+    66.86
+   ]
+  }
+ }
+}

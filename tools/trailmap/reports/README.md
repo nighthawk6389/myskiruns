@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass and Buttermilk keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk and Snowbasin keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -99,6 +99,23 @@ The lift and trail report page (`mtbachelor.com/the-mountain/lift-trail-report/`
 `https://api.mtbachelor.com/api/v1/dor/drupal/trails` (plain curl; `/lifts` the lifts): every trail of every season,
 with its sector and rating (easiest, more difficult, most difficult, extreme). `feed_trails.py` reads such a list
 (the winter alpine and terrain-park trails; its sectors are the areas), as in `resorts/mt-bachelor/README.md`.
+
+## Snowbasin
+
+The mountain report page (`https://www.snowbasin.com/the-mountain/mountain-report/`, plain curl) holds the trail
+tables in its HTML: one per lift area (Strawberry, Needles, Porcupine, John Paul), then the access gates and the
+terrain parks, each row a difficulty icon (easy, moderate, difficult, most-difficult, terrain-park), a name and a
+status. Out of season it lists the summer trails, so Snowbasin's `report.json` is Common Crawl's capture of
+2026-01-21 (CC-MAIN-2026-04), read by `resorts/snowbasin/mountain_report.py` (the gates left out):
+
+```bash
+python3 -I tools/trailmap/reports/cc_lookup.py CC-MAIN-2026-04 'com,snowbasin)/the-mountain/mountain-report' \
+  work/snowbasin/cc --fetch
+python3 -I tools/trailmap/reports/warc_to_html.py work/snowbasin/cc/CC-MAIN-2026-04_20260121160328.warc \
+  work/snowbasin/cc/page.html
+python3 -I tools/trailmap/resorts/snowbasin/mountain_report.py work/snowbasin/cc/page.html --source "..." \
+  --out tools/trailmap/resorts/snowbasin/report.json
+```
 
 ## Smugglers' Notch
 

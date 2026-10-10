@@ -1,0 +1,28 @@
+// Snowbasin's 2025-26 trail map (snowbasin.com: the resort's PDF, one page,
+// James Niehues's painting under vector lines). The lines are the PDF's own:
+// black, blue and green strokes; four blue ones drawn as filled outlines (the
+// lines under the Blue Grouse and Orson's pills, Coyote Bowl's lower part,
+// Sweet Revenge's top) are taken along their middle. Names are text in the
+// run's colour, printed along its line; the rating is the symbol on the line
+// by the name, else the name's colour (Gordon's, a blue name and a square on
+// its line, is black on the report: the map's blue is kept). Names are
+// spelled as the trail report spells them (report.json: the mountain report's
+// tables, January 2026): LMM is Lower Moose Mound, Needles Run the report's
+// Needles, Rainer's its Rainer's Run, Lower Pyramids its Lower Pyramid;
+// Trapper's Bypass, Eas-A-Long, Catastrophe Rocks!, Dry Bowl, Staircase, Pig
+// Pen, Porky Cirque and the Blue Grouse park are printed but not on the
+// report. The report's Powder Puff and Bear Hollow Woods are not printed.
+// Where one line carries two runs, decisions.py cuts it where the second
+// starts (Twist & Shout and Gordon's Gully, Trappers Trail and Lower Bear
+// Springs, the Main Streets and Elk Ridges, Hollywood and Grizzly Finish,
+// Grizzly Start and Wildflower Start, Wildcat Ridge and Centennial, Porcupine
+// Traverse, Needles and Showboat, Slo Road, Bear Hollow and Snow Shoe). Penny
+// Lane is its whole green line, the "Return to Base Area" route from
+// Strawberry included; the ridge from the tram's top to No Name's, and the
+// links no name is printed on, have no overlay. The bowls and cirques
+// (Sister's Bowl, Middle Bowl Cirque, Needles Cirque, Porky Cirque, Mt. Ogden
+// Bowl, Lower Pyramid), printed with no line: markers at their names, double
+// black by the two diamonds printed by them (Needles Cirque, printed with
+// none, by the report; Porky Cirque, not on it, black). Areas: the report's
+// lift areas, Porcupine's runs with the Needles'.
+// x/y/baseY/width are unused layout fields.

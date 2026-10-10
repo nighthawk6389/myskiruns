@@ -282,6 +282,16 @@ Park City's checks: drawing-order checks (`seq*.py`, now `tools/trailmap/pieces.
 | `und.py` | und.py x0,y0,x1,y1 zoom out: the map crop (map px) with named pieces thin (their colour), undecided ones thick red with their ids, names' labels as in names.json. |
 | `und2.py` | und2.py OUT_DIR [cols rows]: tiles of the map (with a margin) holding undecided pieces; in each, every piece drawn thin in its colour with id:name labels for named ones near undecided ones, undecided ones thick red with ids. |
 
+## snowbasin
+
+Snowbasin's crops for settling its pieces (`thin_crops.py`: the map with every piece drawn thin over it, so the map's
+own line colours stay readable, with its id and name; or one piece alone in a box round it). What they settled is in
+`resorts/snowbasin/decisions.py`.
+
+| file | what it did |
+|---|---|
+| `snowbasin/thin_crops.py` | thin_crops.py <out dir> <zoom> x0,y0,x1,y1 ... (or `piece <id> ...`): review crops of work/snowbasin/ with the pieces drawn thin, ids and names at their middles |
+
 ## snowmass
 
 Snowmass's helpers for settling its pieces on crops (run from the repo root after a build): which line a printed
