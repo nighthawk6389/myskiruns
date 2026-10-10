@@ -1,0 +1,645 @@
+{
+ "_source": "Schweitzer's trail list: the mtnpowder feed (resort 168, mtnpowder.com/feed/v3.json; the config v4.mtnfeed.com/resorts/schweitzer.json gives its id and token), fetched 2026-10-10, out of season: every trail listed closed",
+ "trails": [
+  [
+   "Abracadabra",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "A Chute",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Basin Trail",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Bermuda",
+   "Schweitzer Bowl",
+   "TerrainPark"
+  ],
+  [
+   "Bud's Chute (B)",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Bunny Hills",
+   "Schweitzer Bowl",
+   "TerrainPark"
+  ],
+  [
+   "Caboose",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Cat Track to Village",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "C Chute",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Chair 4 Glades",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Charlie's",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Dogleg",
+   "Schweitzer Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "Down the Hatch",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "E Chute",
+   "Schweitzer Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "Enchanted Forest",
+   "Schweitzer Bowl",
+   "Green"
+  ],
+  [
+   "F Chute",
+   "Schweitzer Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "G Chute",
+   "Schweitzer Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "Gypsy",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Happy Trails",
+   "Schweitzer Bowl",
+   "Green"
+  ],
+  [
+   "H Chute",
+   "Schweitzer Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "Headwall",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Headwall Runout",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Heather's Run",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Jack's Dream",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Jimmy's Run (lower)",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Jimmy's Run (upper)",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "JR Trees",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "K-MAC's (D)",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Loophole Loop",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Loophole (lower)",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Midway",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Pend Oreille (lower)",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Pend Oreille (middle)",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Pend Oreille (upper)",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Primetime",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Quicksilver",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "R Chutes (1-3)",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Ridge Run (lower)",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Ridge Run (upper)",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Sam's Alley (lower)",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Sam's Alley (upper)",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Shenanigans",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Skid Row",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "South Ridge",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Starfish",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Stiles (lower)",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Stiles (upper)",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Stomping Grounds Terrain Park",
+   "Schweitzer Bowl",
+   "TerrainPark"
+  ],
+  [
+   "Sundance",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Teakettle Trail",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "The Face",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "The Great Divide",
+   "Schweitzer Bowl",
+   "Blue"
+  ],
+  [
+   "Trial Run",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "White Lightning",
+   "Schweitzer Bowl",
+   "Black"
+  ],
+  [
+   "Australia",
+   "Outback Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "Blue Grass",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Casper",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Cathedral Aisle",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Cedar Park",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Colburn School",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Cut Off",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Debbie Sue",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Detention",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Downhill Run",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "G-3 (lower)",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "G-3 (upper)",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Gitback",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Glade-iator",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Hall Pass",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Have Fun (lower)",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Have Fun (upper)",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Home School",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Kaniksu (lower)",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Kaniksu (upper)",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Kaniksu Woods",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Kathy's Yard Sale",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Know Fun",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Kohli's Big Timber",
+   "Outback Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "Lakeside Chutes",
+   "Outback Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "Lakeside Runout",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Little Blue Ridge Run",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Misfortune",
+   "Outback Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "No Joke",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "No Joke Runout",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "North Bowl Chutes",
+   "Outback Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "North Ridge",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Phineas' Forest",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Phineas' Runout",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Pucci's Chute",
+   "Outback Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "Recess",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Revenge",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Right On",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Roller Ghoster",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "SARS Spur",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Shoot the Moon",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Short Cut",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Siberia",
+   "Outback Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "Siberia Runout",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Slapshot",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Snow Ghost (lower)",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Snow Ghost (upper)",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Spring Board",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Stella's Run",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Study Hall",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Timber Cruiser",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Toomey's Runout",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Toomey's Trail",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Triple Bypass",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Upper Siberia Road",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Vagabond",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Wayne's Woods",
+   "Outback Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "West Cathedral",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Whiplash",
+   "Outback Bowl",
+   "DoubleBlack"
+  ],
+  [
+   "Will's Runout",
+   "Outback Bowl",
+   "Black"
+  ],
+  [
+   "Zip Down",
+   "Outback Bowl",
+   "Blue"
+  ],
+  [
+   "Boomerang",
+   "Cross Country Trails",
+   "Black"
+  ],
+  [
+   "Cloudwalker",
+   "Cross Country Trails",
+   "Blue"
+  ],
+  [
+   "Cougar Gulch",
+   "Cross Country Trails",
+   "Blue"
+  ],
+  [
+   "Coyote Canyon",
+   "Cross Country Trails",
+   "Blue"
+  ],
+  [
+   "GRR",
+   "Cross Country Trails",
+   "Blue"
+  ],
+  [
+   "Hucklberry Hill",
+   "Cross Country Trails",
+   "Black"
+  ],
+  [
+   "Mama Bear",
+   "Cross Country Trails",
+   "Blue"
+  ],
+  [
+   "Moose Trot",
+   "Cross Country Trails",
+   "Blue"
+  ],
+  [
+   "Morris Mile",
+   "Cross Country Trails",
+   "Blue"
+  ],
+  [
+   "Overland (lower)",
+   "Cross Country Trails",
+   "Blue"
+  ],
+  [
+   "Overland (upper)",
+   "Cross Country Trails",
+   "Blue"
+  ],
+  [
+   "Papa Bear",
+   "Cross Country Trails",
+   "Blue"
+  ],
+  [
+   "Wolf Ridge",
+   "Cross Country Trails",
+   "Blue"
+  ]
+ ]
+}

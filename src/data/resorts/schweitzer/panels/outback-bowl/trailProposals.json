@@ -1,0 +1,482 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "caboose": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "CABOOSE",
+   "note": "along its printed name"
+  },
+  "cat-track-to-village": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "CAT TRACK TO VILLAGE",
+   "note": "along its printed name"
+  },
+  "down-the-hatch": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "DOWN THE HATCH",
+   "note": "its group"
+  },
+  "loophole-loop": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "LOOPHOLE LOOP",
+   "note": "along its printed name"
+  },
+  "skid-row": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "SKID ROW",
+   "note": "along its printed name"
+  },
+  "the-great-divide": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "THE GREAT DIVIDE",
+   "note": "its group"
+  },
+  "trial-run": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "TRIAL RUN",
+   "note": "along its printed name"
+  },
+  "australia": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "AUSTRALIA",
+   "note": "along its printed name"
+  },
+  "blue-grass": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "BLUE GRASS",
+   "note": "along its printed name"
+  },
+  "casper": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "CASPER",
+   "note": "along its printed name"
+  },
+  "cathedral-aisle": {
+   "polylines": [
+    47,
+    60
+   ],
+   "confidence": "high",
+   "mapName": "CATHEDRAL AISLE",
+   "note": "along its printed name"
+  },
+  "cedar-park": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "CEDAR PARK",
+   "note": "its group"
+  },
+  "colburn-school": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "COLBURN SCHOOL",
+   "note": "along its printed name"
+  },
+  "cut-off": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "CUT OFF",
+   "note": "along its printed name"
+  },
+  "debbie-sue": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "DEBBIE SUE",
+   "note": "along its printed name"
+  },
+  "detention": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "DETENTION",
+   "note": "along its printed name"
+  },
+  "downhill-run": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "DOWNHILL RUN",
+   "note": "along its printed name"
+  },
+  "g-3-lower": {
+   "polylines": [
+    55
+   ],
+   "confidence": "high",
+   "mapName": "G-3 (LOWER)",
+   "note": "along its printed name"
+  },
+  "g-3-upper": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "G-3 (UPPER)",
+   "note": "along its printed name"
+  },
+  "gitback": {
+   "polylines": [
+    50,
+    51
+   ],
+   "confidence": "high",
+   "mapName": "GITBACK",
+   "note": "along its printed name"
+  },
+  "glade-iator": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "GLADE-IATOR",
+   "note": "along its printed name"
+  },
+  "hall-pass": {
+   "polylines": [
+    41,
+    53
+   ],
+   "confidence": "high",
+   "mapName": "HALL PASS",
+   "note": "along its printed name"
+  },
+  "have-fun-lower": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "HAVE FUN (LOWER)",
+   "note": "along its printed name"
+  },
+  "have-fun-upper": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "HAVE FUN (UPPER)",
+   "note": "along its printed name"
+  },
+  "home-school": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "HOME SCHOOL",
+   "note": "along its printed name"
+  },
+  "kaniksu-lower": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "KANIKSU (LOWER)",
+   "note": "along its printed name"
+  },
+  "kaniksu-upper": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "KANIKSU (UPPER)",
+   "note": "along its printed name"
+  },
+  "kathys-yard-sale": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "KATHY'S YARD SALE",
+   "note": "along its printed name"
+  },
+  "know-fun": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "KNOW FUN",
+   "note": "along its printed name"
+  },
+  "kohlis-big-timber": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "KOHLI'S BIG TIMBER",
+   "note": "along its printed name"
+  },
+  "lakeside-runout": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "LAKESIDE RUNOUT",
+   "note": "along its printed name"
+  },
+  "little-blue-ridge-run": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE BLUE RIDGE RUN",
+   "note": "its group"
+  },
+  "misfortune": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "MISFORTUNE",
+   "note": "along its printed name"
+  },
+  "no-joke": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "NO JOKE",
+   "note": "along its printed name"
+  },
+  "north-ridge": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "NORTH RIDGE",
+   "note": "along its printed name"
+  },
+  "phineas-forest": {
+   "polylines": [
+    63
+   ],
+   "confidence": "high",
+   "mapName": "PHINEAS' FOREST",
+   "note": "along its printed name"
+  },
+  "puccis-chute": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "PUCCI'S CHUTE",
+   "note": "along its printed name"
+  },
+  "recess": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "RECESS",
+   "note": "along its printed name"
+  },
+  "revenge": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "REVENGE",
+   "note": "along its printed name"
+  },
+  "right-on": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "RIGHT ON",
+   "note": "along its printed name"
+  },
+  "roller-ghoster": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "ROLLER GHOSTER",
+   "note": "along its printed name"
+  },
+  "sars-spur": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "SARS SPUR",
+   "note": "along its printed name"
+  },
+  "shoot-the-moon": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "SHOOT THE MOON",
+   "note": "along its printed name"
+  },
+  "siberia": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "SIBERIA",
+   "note": "along its printed name"
+  },
+  "siberia-runout": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "SIBERIA RUNOUT",
+   "note": "along its printed name"
+  },
+  "slapshot": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "SLAPSHOT",
+   "note": "along its printed name"
+  },
+  "snow-ghost-lower": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "SNOW GHOST (LOWER)",
+   "note": "along its printed name"
+  },
+  "snow-ghost-upper": {
+   "polylines": [
+    18,
+    35
+   ],
+   "confidence": "high",
+   "mapName": "SNOW GHOST (UPPER)",
+   "note": "along its printed name"
+  },
+  "spring-board": {
+   "polylines": [
+    62
+   ],
+   "confidence": "high",
+   "mapName": "SPRING BOARD",
+   "note": "along its printed name"
+  },
+  "stellas-run": {
+   "polylines": [
+    59
+   ],
+   "confidence": "high",
+   "mapName": "STELLA'S RUN",
+   "note": "along its printed name"
+  },
+  "study-hall": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "STUDY HALL",
+   "note": "along its printed name"
+  },
+  "timber-cruiser": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "TIMBER CRUISER",
+   "note": "along its printed name"
+  },
+  "toomeys-trail": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "TOOMEY'S TRAIL",
+   "note": "along its printed name"
+  },
+  "triple-bypass": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "TRIPLE BYPASS",
+   "note": "along its printed name"
+  },
+  "vagabond": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "VAGABOND",
+   "note": "its group"
+  },
+  "west-cathedral": {
+   "polylines": [
+    61
+   ],
+   "confidence": "high",
+   "mapName": "WEST CATHEDRAL",
+   "note": "along its printed name"
+  },
+  "whiplash": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "WHIPLASH",
+   "note": "along its printed name"
+  },
+  "wills-runout": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "WILL'S RUNOUT",
+   "note": "along its printed name"
+  },
+  "zip-down": {
+   "polylines": [
+    49,
+    58
+   ],
+   "confidence": "high",
+   "mapName": "ZIP DOWN",
+   "note": "along its printed name"
+  }
+ }
+}

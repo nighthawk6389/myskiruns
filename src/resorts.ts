@@ -164,6 +164,10 @@ export const RESORTS: ResortEntry[] = [
     { id: 'north-side', name: 'North Side', paths: () => import('./data/resorts/whitefish/panels/north-side/trailPaths.json') },
     { id: 'hellroaring', name: 'Hellroaring Basin', paths: () => import('./data/resorts/whitefish/panels/hellroaring/trailPaths.json') },
   ], ['Big Mountain', 'Whitefish']),
+  panels('schweitzer', 'Schweitzer', 'Idaho', () => import('./data/resorts/schweitzer/trails'), [
+    { id: 'schweitzer-bowl', name: 'Schweitzer Bowl', paths: () => import('./data/resorts/schweitzer/panels/schweitzer-bowl/trailPaths.json') },
+    { id: 'outback-bowl', name: 'Outback Bowl', paths: () => import('./data/resorts/schweitzer/panels/outback-bowl/trailPaths.json') },
+  ], ['Schweitzer Mountain', 'Sandpoint']),
   oneMap('northstar', 'Northstar', 'California', () => import('./data/resorts/northstar/trails'), () => import('./data/resorts/northstar/trailPaths.json'), ['Northstar California', 'Lake Tahoe', 'Truckee']),
 ];
 

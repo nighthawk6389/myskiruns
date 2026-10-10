@@ -395,6 +395,16 @@ const RESORT_ADS = {
     negatives: ['lake', 'fishing', 'fish', 'summer', 'mountain bike', 'bike park', 'hiking', 'zip line', 'jobs',
       'real estate'],
   },
+  schweitzer: {
+    short: 'Schweitzer',
+    path: 'Schweitzer',
+    area: 'Schweitzer & Outback Bowls',
+    names: ['schweitzer mountain', 'schweitzer ski resort', 'schweitzer idaho'],
+    keywords: [],
+    // the summer and the bike park, Sandpoint's lake and lodging
+    negatives: ['summer', 'mountain bike', 'bike park', 'hiking', 'lake pend oreille', 'real estate', 'condo', 'jobs',
+      'engineering', 'wedding'],
+  },
   northstar: {
     short: 'Northstar',
     path: 'Northstar',

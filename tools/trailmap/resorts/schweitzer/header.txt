@@ -1,0 +1,29 @@
+// Schweitzer's 2025-26 trail maps (schweitzer.com: images only, James
+// Niehues's paintings): Schweitzer Bowl, the front side, and Outback Bowl, the
+// back side (skimap.org's 2024-25 image of it, the same artwork at a higher
+// resolution). The runs are painted slopes with no line drawn: a name printed
+// along each, its symbol by it. Each run's overlay is the stretch along its
+// printed name, from its symbol (a run printed twice has a stretch at each);
+// the names printed on two lines (South Bowl Chutes, Bunny Hills, Lakeside
+// Chutes, Wayne's Woods, Short Cut) and the glades (Chair 4 Glades, J.R.
+// Trees) are markers at their names. The cat tracks are navy lines: Gypsy,
+// Teakettle Trail, The Great Divide, Down the Hatch and Cat Track to Village
+// on the front (the resort's interactive map's lines, resorts-interactive.com
+// map 1826, routed onto the print's), and The Great Divide, Down the Hatch,
+// Vagabond, Cedar Park and Little Blue Ridge Run on the Outback map (read on
+// crops, cut at each run's symbol). Names and symbols are the interactive
+// maps' (1826 and 1827: each run's letters and symbol grouped under its name,
+// the trail report's), put on the prints, and what they lack was read on
+// crops (names.py: most of the Outback map's black runs, the parks, Lower
+// Loophole). Names are spelled as the trail report spells them (report.json:
+// the mtnpowder feed): JIMMIE'S RUN (J.R.) is Jimmy's Run (upper) and
+// (lower), UPPER G-3 G-3 (upper), UPPER KANIKSU Kaniksu (upper), LOWER
+// LOOPHOLE Loophole (lower); SOUTHSIDE PARK (the interactive map's Crystal),
+// Britt's Bowl and South Bowl Chutes are printed and not on the report. Not
+// printed: Dogleg, the E to H Chutes, the R Chutes, Headwall Runout, Pend
+// Oreille (lower) and (middle), Kaniksu Woods, No Joke Runout, Phineas'
+// Runout, Toomey's Runout, Upper Siberia Road, North Bowl Chutes. Runs printed
+// on both maps (Caboose, Skid Row, Trial Run, Loophole Loop, The Great Divide,
+// Down the Hatch, Cat Track to Village) have an overlay on each. Areas: the
+// report's two bowls.
+// x/y/baseY/width are unused layout fields.

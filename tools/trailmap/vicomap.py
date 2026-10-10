@@ -167,6 +167,9 @@ def fill_box(st, pls, d=''):
            'cmds': ''.join(re.findall(r'[A-DF-Za-df-z]', d))[:60]}
     if len(pls) == 1 and len(pts) <= 12:  # a polygon of a few corners (a symbol, or a letter like I): its corners
         out['poly'] = [[round(x, 2), round(y, 2)] for x, y in pts]
+    elif 1 < len(pls) <= 4:  # a few outlines in one fill (two symbols drawn as one path, Schweitzer's): each one's box
+        out['part_boxes'] = [[round(min(q[0] for q in pl), 2), round(min(q[1] for q in pl), 2),
+                              round(max(q[0] for q in pl), 2), round(max(q[1] for q in pl), 2)] for pl in pls]
     return out
 
 

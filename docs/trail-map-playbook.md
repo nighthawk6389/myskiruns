@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's thirty-one resorts got their overlays, written so the next resort (or the next season of one of
+How the app's thirty-two resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -69,6 +69,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 | only raster images, but an interactive map whose SVG draws the same artwork (Alterra's resorts-interactive.com) | `vicomap.py parse --detail`: its lines, letters and symbols grouped by trail; registered on the image, each line routed onto the image's own line, named by its group (`GROUPED`); the print's redrawn spots traced (`trace_ink.py`) | Steamboat | Steamboat |
 | a PDF with names as text and symbols as fills over a painting, but no trail lines drawn; an interactive map of the same painting | `vicomap.py parse`: its lines, registered on the painting and kept as they are (nothing printed to route them onto), named by their group (`GROUPED`); `pdf_labels.py` names spelled as the groups; symbols from the fills by colour | Mammoth (two panels, two interactive maps) | Mammoth |
 | only raster images | `raster_lines.py` + `raster_symbols.py` (or `lineDetector.mjs`), pieces named on review tiles or by readers | Vail (three panels), Killington | Vail |
+| only images, runs painted as slopes with no line (names along them), and an interactive map whose SVG groups each run's letters and symbol | the groups' letters and symbols registered on the print (`register_pages.py --ref`), what they lack read on crops (`names.py`); each run's overlay the stretch along its printed name (`LABEL_LINE`), the few drawn lines routed on the print | Schweitzer (two panels) | Schweitzer; Heavenly for a map whose runs have no line |
 | only small web JPEGs, lines blurred into the painting or in casings | the map read on zoomed crops: each name, its symbol, its run's line as waypoints (`names.py`), each line routed along the painted one (`route_trace.py`), the pieces named by the reading (`GROUPED`) | Whitefish Mountain (three panels) | Whitefish |
 
 - **A low-resolution painting under good vectors:** `matte_pdf_layer.py` mattes the PDF's vector layer over a
@@ -333,7 +334,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the thirty-one resorts settled, so the next ones come out alike:
+What the thirty-two resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -626,6 +627,7 @@ give the same.
 | [Buttermilk](#buttermilk) | the same kind, one panel; the dotted way down | as Snowmass | `regen.sh` | a small map of that kind |
 | [Snowbasin](#snowbasin) | PDF strokes and text over a painting, symbols on the lines; a few lines as filled outlines | `pdf_resort.py`; the report from a Common Crawl capture of an HTML table | `regen.sh` | names printed along their lines, symbols on them |
 | [Whitefish Mountain](#whitefish-mountain) | three small web JPEGs, no PDF | the map read on crops (`names.py`), lines routed on the painting (`route_trace.py`) | `regen.sh` | a map only published as small images |
+| [Schweitzer](#schweitzer) | two images, runs painted with no line; two interactive maps | the groups' names and symbols on the prints, the stretch along each name, `names.py` | `regen.sh` | an image-only map of runs with no lines |
 | [Northstar](#northstar) | PDF lines as filled outlines holding several runs, names as white glyphs haloed in the line's colour | `pdf_outline_lines.py` centre lines, the halo's colour as the rating, cuts at each junction | `regen.sh` | one outline for several runs |
 
 ## Killington
@@ -1603,6 +1605,49 @@ sides, the areas too) · `tools/trailmap/resorts/whitefish/`.
   showed a route on a neighbouring line, Central Avenue, Hope Slope, Ski Way, Under Easy, Middle Fork and Toni
   Matt's top, given waypoints where they strayed and read again, and seven markers moved onto their labels);
   `compare.py` against the report; hover 175/175, 61/61, 44/44.
+
+## Schweitzer
+
+103 trails (96 + 7) · Idaho · two panels: Schweitzer Bowl (the front) and Outback Bowl (the back; the report's two
+areas too) · `tools/trailmap/resorts/schweitzer/`.
+
+- **Source:** schweitzer.com's maps page links the 2025-26 maps as images only (plain curl): Schweitzer Bowl at
+  3300x2550, Outback Bowl at 1920x1484 only. skimap.org's map 30575 is the 2024-25 Outback Bowl at 3300x2550: the
+  same artwork (the two register as a plain scaling, and the 28 places they differ are the JPEG's ringing round
+  letters and lift lines: `tools/archive/schweitzer/editions.py`), used for its resolution. No PDF anywhere (skimap's
+  PDFs are 2022's, images in a PDF). James Niehues's paintings: the runs are painted slopes with **no line**, the name
+  printed along each in black on a white halo and its symbol by it; only the cat tracks are navy lines; the parks are
+  orange pills. The resort's interactive maps (resorts-interactive.com maps 1826 and 1827, found by asking the map API
+  for the ids near Deer Valley's) draw the same paintings, each run's white letters (the print's halos) and symbol in a
+  group named after it (the report's names, the upper and lower parts of a run apart), and on the front the cat
+  tracks' lines. The Outback map's groups have no black symbols, and 21 of its groups no letters.
+- **Route:** `prepare.py`, per panel: each SVG registered on its print (`register_pages.py --ref` on the SVG's
+  embedded painting: 808 inliers, 0.33 px; 653, 0.18 px); per group its letters in drawing order, split where they
+  jump (a run printed twice), moved onto a smooth curve (DOWN THE HATCH's small THE zigzags), and its symbols (a fill
+  of two four-sided outlines a double diamond); `names.py` adds the labels and symbols the groups lack (read on crops;
+  the print's black diamonds found by `tools/archive/schweitzer/diamonds.py` and each given its run on a crop), renames
+  two groups (the interactive map's Crystal is the print's SOUTHSIDE PARK, a park; Stiles is Stiles (upper)) and drops
+  Crystal's square; the cat tracks are the front SVG's lines and `names.py`'s waypoints on the Outback map, routed
+  along the print's navy pixels (a tight colour match: a looser one takes in the trees' shadows), each gap where its
+  name is printed crossed straight. `pdf_resort.py` with `LABEL_LINE` for every name (each run's overlay is the
+  stretch along its printed name, from its symbol), `NO_STRETCH` for the names printed on two lines (markers) and the
+  cat tracks (their line is their overlay), the pieces named by their group (`GROUPED`).
+- **Rebuild:** `tools/trailmap/resorts/schweitzer/regen.sh` (15 s); it checks the five sources' SHA-256.
+- **Truth:** the trail report (`report.json`: the mtnpowder feed, resort 168, fetched out of season: every run
+  listed; the cross-country trails left out). Every rating agrees; the parks (no symbol printed) are blue by default.
+  JIMMIE'S RUN (J.R.) is Jimmy's Run, upper and lower; UPPER G-3, UPPER KANIKSU and LOWER LOOPHOLE the report's
+  G-3 (upper), Kaniksu (upper), Loophole (lower). Printed and not on the report: Southside Park, Britt's Bowl, South
+  Bowl Chutes. On the report and not printed: Dogleg, the E to H Chutes, the R Chutes, Headwall Runout, Pend Oreille
+  (lower) and (middle), Kaniksu Woods, No Joke Runout, Phineas' Runout, Toomey's Runout, Upper Siberia Road, North
+  Bowl Chutes.
+- **Decisions:** none per piece: each label and line is named by its group or by `names.py`. Runs printed on both
+  maps (Caboose, Skid Row, Trial Run, Loophole Loop, The Great Divide, Down the Hatch, Cat Track to Village) have an
+  overlay on each; a run printed twice on one map has a stretch at each (Gitback's two joined by `trails:apply` across
+  the open slope between them). Markers: the names printed on two lines (South Bowl Chutes, Bunny Hills, Lakeside
+  Chutes, Wayne's Woods, Short Cut) and the glades (Chair 4 Glades, JR Trees; Glade-iator is a run, `NOT_GLADES`).
+- **Checked:** every overlay on crops (`overlay_audit.py`, 6 and 7 sheets, every cell read; the Outback cat tracks
+  routed again where they had strayed onto the trees' shadows and the boundary's yellow line); `compare.py` against
+  the report; hover 136/136, 180/180.
 
 ## Northstar
 

@@ -1,0 +1,391 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "a-chute": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "A CHUTE",
+   "note": "along its printed name"
+  },
+  "abracadabra": {
+   "polylines": [
+    55
+   ],
+   "confidence": "high",
+   "mapName": "ABRACADABRA",
+   "note": "along its printed name"
+  },
+  "basin-trail": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "BASIN TRAIL",
+   "note": "along its printed name"
+  },
+  "bermuda": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "BERMUDA",
+   "note": "along its printed name"
+  },
+  "britts-bowl": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "BRITT'S BOWL",
+   "note": "along its printed name"
+  },
+  "buds-chute-b": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "BUD'S CHUTE (B)",
+   "note": "along its printed name"
+  },
+  "c-chute": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "C CHUTE",
+   "note": "along its printed name"
+  },
+  "caboose": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "CABOOSE",
+   "note": "along its printed name"
+  },
+  "cat-track-to-village": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "CAT TRACK TO VILLAGE",
+   "note": "its group"
+  },
+  "chair-4-glades": {
+   "noLine": true,
+   "label": [
+    64.21,
+    50.2
+   ],
+   "confidence": "high"
+  },
+  "charlies": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "CHARLIE'S",
+   "note": "along its printed name"
+  },
+  "down-the-hatch": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "DOWN THE HATCH",
+   "note": "its group"
+  },
+  "enchanted-forest": {
+   "polylines": [
+    61
+   ],
+   "confidence": "high",
+   "mapName": "ENCHANTED FOREST",
+   "note": "along its printed name"
+  },
+  "gypsy": {
+   "polylines": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    18,
+    30,
+    38,
+    52
+   ],
+   "confidence": "high",
+   "mapName": "GYPSY",
+   "note": "its group | along its printed name"
+  },
+  "happy-trails": {
+   "polylines": [
+    60
+   ],
+   "confidence": "high",
+   "mapName": "HAPPY TRAILS",
+   "note": "along its printed name"
+  },
+  "headwall": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "HEADWALL",
+   "note": "along its printed name"
+  },
+  "heathers-run": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "HEATHER'S RUN",
+   "note": "along its printed name"
+  },
+  "jr-trees": {
+   "noLine": true,
+   "label": [
+    68.82,
+    32.71
+   ],
+   "confidence": "high"
+  },
+  "jacks-dream": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "JACK'S DREAM",
+   "note": "along its printed name"
+  },
+  "jimmys-run-lower": {
+   "polylines": [
+    50,
+    53
+   ],
+   "confidence": "high",
+   "mapName": "JIMMY'S RUN (LOWER)",
+   "note": "along its printed name"
+  },
+  "jimmys-run-upper": {
+   "polylines": [
+    31,
+    35
+   ],
+   "confidence": "high",
+   "mapName": "JIMMY'S RUN (UPPER)",
+   "note": "along its printed name"
+  },
+  "k-macs-d": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "K-MAC'S (D)",
+   "note": "along its printed name"
+  },
+  "loophole-lower": {
+   "polylines": [
+    59
+   ],
+   "confidence": "high",
+   "mapName": "LOOPHOLE (LOWER)",
+   "note": "along its printed name"
+  },
+  "loophole-loop": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "LOOPHOLE LOOP",
+   "note": "along its printed name"
+  },
+  "midway": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "MIDWAY",
+   "note": "along its printed name"
+  },
+  "pend-oreille-upper": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "PEND OREILLE (UPPER)",
+   "note": "along its printed name"
+  },
+  "primetime": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "PRIMETIME",
+   "note": "along its printed name"
+  },
+  "quicksilver": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "QUICKSILVER",
+   "note": "along its printed name"
+  },
+  "ridge-run-lower": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE RUN (LOWER)",
+   "note": "along its printed name"
+  },
+  "ridge-run-upper": {
+   "polylines": [
+    14,
+    23
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE RUN (UPPER)",
+   "note": "along its printed name"
+  },
+  "sams-alley-lower": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "SAM'S ALLEY (LOWER)",
+   "note": "along its printed name"
+  },
+  "sams-alley-upper": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "SAM'S ALLEY (UPPER)",
+   "note": "along its printed name"
+  },
+  "shenanigans": {
+   "polylines": [
+    58
+   ],
+   "confidence": "high",
+   "mapName": "SHENANIGANS",
+   "note": "along its printed name"
+  },
+  "skid-row": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "SKID ROW",
+   "note": "along its printed name"
+  },
+  "south-ridge": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "SOUTH RIDGE",
+   "note": "along its printed name"
+  },
+  "southside-park": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "SOUTHSIDE PARK",
+   "note": "along its printed name"
+  },
+  "starfish": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "STARFISH",
+   "note": "along its printed name"
+  },
+  "stiles-lower": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "STILES (LOWER)",
+   "note": "along its printed name"
+  },
+  "stiles-upper": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "STILES (UPPER)",
+   "note": "along its printed name"
+  },
+  "stomping-grounds-terrain-park": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "STOMPING GROUNDS TERRAIN PARK",
+   "note": "along its printed name"
+  },
+  "sundance": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "SUNDANCE",
+   "note": "along its printed name"
+  },
+  "teakettle-trail": {
+   "polylines": [
+    1,
+    2,
+    3,
+    39
+   ],
+   "confidence": "high",
+   "mapName": "TEAKETTLE TRAIL",
+   "note": "its group | along its printed name"
+  },
+  "the-face": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "THE FACE",
+   "note": "along its printed name"
+  },
+  "the-great-divide": {
+   "polylines": [
+    4,
+    5,
+    26
+   ],
+   "confidence": "high",
+   "mapName": "THE GREAT DIVIDE",
+   "note": "its group | along its printed name"
+  },
+  "trial-run": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "TRIAL RUN",
+   "note": "along its printed name"
+  },
+  "white-lightning": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "WHITE LIGHTNING",
+   "note": "along its printed name"
+  }
+ }
+}

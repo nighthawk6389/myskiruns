@@ -296,6 +296,17 @@ Park City's checks: drawing-order checks (`seq*.py`, now `tools/trailmap/pieces.
 | `und.py` | und.py x0,y0,x1,y1 zoom out: the map crop (map px) with named pieces thin (their colour), undecided ones thick red with their ids, names' labels as in names.json. |
 | `und2.py` | und2.py OUT_DIR [cols rows]: tiles of the map (with a margin) holding undecided pieces; in each, every piece drawn thin in its colour with id:name labels for named ones near undecided ones, undecided ones thick red with ids. |
 
+## schweitzer
+
+Schweitzer's crops and checks (the work folder `work/schweitzer/<panel>`, after `prepare.py`). What they showed is in
+`resorts/schweitzer/names.py`.
+
+| file | what it did |
+|---|---|
+| `schweitzer/show.py` | show.py <panel> <out dir> <zoom> [--built] x0,y0,x1,y1 ...: review crops with prepare.py's labels, symbols and cat tracks (--built: pdf_resort.py's pieces and names) on a grid |
+| `schweitzer/diamonds.py` | diamonds.py <panel>: the print's black diamonds and double diamonds (dark four-cornered blobs on a white halo), each with the nearest label, as names.py SYMBOLS rows to check on crops |
+| `schweitzer/editions.py` | editions.py [work dir]: the 2024-25 Outback Bowl image against the 2025-26 one, every place they differ, side-by-side crops |
+
 ## snowbasin
 
 Snowbasin's crops for settling its pieces (`thin_crops.py`: the map with every piece drawn thin over it, so the map's
