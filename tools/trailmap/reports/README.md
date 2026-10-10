@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer and Alta keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta and Beaver Creek keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -53,6 +53,10 @@ Northstar's `report.json` is the trail widget's feed (the page's second `FR.Terr
 Common Crawl's capture of 2026-02-19 (CC-MAIN-2026-08, the page without `.aspx`; CC-MAIN-2025-47, -2025-51 and
 -2026-04 have none): 103 rows, Lookout Bypass under both Northwest Territory and Lookout Mountain, the terrain parks
 as their own area (`resorts/northstar/README.md` has the commands).
+
+Beaver Creek's `report.json` is the trail widget's feed (`feed_04`) in Common Crawl's capture of 2026-02-07
+(CC-MAIN-2026-08, `cc_lookup.py` on `com,beavercreek)/the-mountain/mountain-conditions/terrain-and-lift-status`; the
+index found none in CC-MAIN-2026-04): 183 rows, the homeowner skiways (Resort Skiways) and McCoy Park among them.
 
 ## mtnfeed / mtnpowder (Palisades Tahoe, and many independent resorts)
 

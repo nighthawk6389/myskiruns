@@ -425,6 +425,16 @@ const RESORT_ADS = {
     negatives: ['summer', 'mountain bike', 'bike park', 'golf', 'hiking', 'real estate', 'condo', 'jobs', 'ritz carlton',
       'ice skating'],
   },
+  'beaver-creek': {
+    short: 'Beaver Creek',
+    path: 'Beaver-Creek',
+    area: 'Birds of Prey to Arrowhead',
+    names: ['beaver creek colorado', 'beaver creek ski resort', 'beaver creek resort'],
+    keywords: [],
+    // the village's lodging and summer, the other Beaver Creeks (the Arizona and Pennsylvania towns, the state parks)
+    negatives: ['summer', 'mountain bike', 'golf', 'hiking', 'real estate', 'condo', 'jobs', 'wedding', 'hotel',
+      'arizona', 'state park', 'ohio', 'oregon', 'cookie'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

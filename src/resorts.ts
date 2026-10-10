@@ -170,6 +170,7 @@ export const RESORTS: ResortEntry[] = [
   ], ['Schweitzer Mountain', 'Sandpoint']),
   oneMap('alta', 'Alta', 'Utah', () => import('./data/resorts/alta/trails'), () => import('./data/resorts/alta/trailPaths.json'), ['Alta Ski Area', 'Little Cottonwood Canyon']),
   oneMap('northstar', 'Northstar', 'California', () => import('./data/resorts/northstar/trails'), () => import('./data/resorts/northstar/trailPaths.json'), ['Northstar California', 'Lake Tahoe', 'Truckee']),
+  oneMap('beaver-creek', 'Beaver Creek', 'Colorado', () => import('./data/resorts/beaver-creek/trails'), () => import('./data/resorts/beaver-creek/trailPaths.json'), ['Beaver Creek Resort', 'Bachelor Gulch', 'Arrowhead', 'Avon', 'Vail Valley']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

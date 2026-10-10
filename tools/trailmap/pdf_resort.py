@@ -518,6 +518,24 @@ class Resort:
             for j, m, at_sym in ms:
                 assign[pid].add(names[j]['name'])
                 why[pid] = f"{'symbol' if at_sym else 'end'} of {names[j]['name']}"
+        # maps printing each run's symbol on its line partway along it, the name beside (resort.SYMBOL_ON_LINE;
+        # Beaver Creek): the piece of the symbol's colour passing under a named symbol takes the name (one ending at
+        # the symbol is left to the ends' match)
+        if getattr(R, 'SYMBOL_ON_LINE', False):
+            off = getattr(R, 'SYMBOL_OFF_LINE', 1.5) * R.SCALE
+            for j, n in enumerate(names):
+                s = n.get('sym')
+                if not s or not n['printed']:
+                    continue
+                want = CLS.get(n.get('symbol'))
+                near = sorted((self.nearest_on(p['pt'], s['c'])[0], p['id']) for p in P if p['cls'] == want)
+                if not near or near[0][0] > s['r'] + off:
+                    continue
+                p = P[near[0][1]]
+                if min(math.dist(s['c'], p['pt'][k]) for k in (0, -1)) <= s['r'] + off:
+                    continue
+                assign[p['id']].add(n['name'])
+                why[p['id']] = f"under the symbol of {n['name']}"
         gap = {names[j]['name'] for j, _m in used_term}  # names printed in a gap of their line
         # a piece running along a name's characters
         short = getattr(R, 'ALONG_SHORT', False)  # also names of two or three characters (T2, OZ)
@@ -622,7 +640,11 @@ class Resort:
         # then the stretches traced on crops
         traced = {}
         glades = set(getattr(R, 'GLADES', ()))
-        along = (gap | set(getattr(R, 'LABEL_LINE', ()))) - set(getattr(R, 'NO_STRETCH', ())) - glades
+        # resort.NO_STRETCH: names (or (name, (x, y)): the one label of it printed near that point, map px) printed beside
+        # their line, not in a gap of it
+        no_stretch = getattr(R, 'NO_STRETCH', ())
+        along = (gap | set(getattr(R, 'LABEL_LINE', ()))) - {t for t in no_stretch if isinstance(t, str)} - glades
+        no_stretch_at = [t for t in no_stretch if not isinstance(t, str)]
         beside = set()  # labels (name indices) printed beside their line
         if getattr(R, 'NO_STRETCH_BESIDE', False):  # maps printing names both ways: a line already runs beside it
             # (the label's own line, as named after the decisions, runs along its characters; a name printed twice,
@@ -634,7 +656,8 @@ class Resort:
         for j, n in enumerate(names):
             if (n['name'] in along and j not in beside and n['printed'] and n['printed'] not in two_line
                     and not n.get('two_line')
-                    and not glade_name(R, n['name'])):
+                    and not glade_name(R, n['name'])
+                    and not any(nm == n['name'] and math.dist(q, n['c']) < 40 for nm, q in no_stretch_at)):
                 pts = self.stretch(n)
                 if doubles_back(pts):
                     continue  # a name printed on two lines (one under the other): no line along it

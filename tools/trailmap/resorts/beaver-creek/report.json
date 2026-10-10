@@ -1,0 +1,920 @@
+{
+ "_source": "Beaver Creek's terrain and lift status page (https://www.beavercreek.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx), its trail widget's FR.TerrainStatusFeed, as Common Crawl captured it on 2026-02-07 (CC-MAIN-2026-08); tools/trailmap/reports/feed_trails.py",
+ "trails": [
+  [
+   "Dakota Skiway",
+   "Arrowhead",
+   "Green"
+  ],
+  [
+   "Little Brave Lower",
+   "Arrowhead",
+   "Green"
+  ],
+  [
+   "Little Brave Upper",
+   "Arrowhead",
+   "Green"
+  ],
+  [
+   "Piece O' Cake",
+   "Arrowhead",
+   "Green"
+  ],
+  [
+   "Stirrup",
+   "Arrowhead",
+   "Green"
+  ],
+  [
+   "Cresta",
+   "Arrowhead",
+   "Blue"
+  ],
+  [
+   "Cresta",
+   "Arrowhead",
+   "Blue"
+  ],
+  [
+   "Cross Bow",
+   "Arrowhead",
+   "Blue"
+  ],
+  [
+   "Gallagher Glade",
+   "Arrowhead",
+   "Blue"
+  ],
+  [
+   "Golden Bear",
+   "Arrowhead",
+   "Blue"
+  ],
+  [
+   "Pow Wow",
+   "Arrowhead",
+   "Blue"
+  ],
+  [
+   "Flint",
+   "Arrowhead",
+   "Black"
+  ],
+  [
+   "Tomahawk",
+   "Arrowhead",
+   "Black"
+  ],
+  [
+   "Wapiti",
+   "Arrowhead",
+   "Black"
+  ],
+  [
+   "Intertwine - Upper",
+   "Bachelor Gulch",
+   "Green"
+  ],
+  [
+   "Maverick",
+   "Bachelor Gulch",
+   "Green"
+  ],
+  [
+   "Sawbuck",
+   "Bachelor Gulch",
+   "Green"
+  ],
+  [
+   "Cabin Fever Lower",
+   "Bachelor Gulch",
+   "Blue"
+  ],
+  [
+   "Cabin Fever Upper",
+   "Bachelor Gulch",
+   "Blue"
+  ],
+  [
+   "Coyote Glade",
+   "Bachelor Gulch",
+   "Blue"
+  ],
+  [
+   "Grubstake",
+   "Bachelor Gulch",
+   "Blue"
+  ],
+  [
+   "Gunder's Lower",
+   "Bachelor Gulch",
+   "Blue"
+  ],
+  [
+   "Gunder's Upper",
+   "Bachelor Gulch",
+   "Blue"
+  ],
+  [
+   "Roughlock",
+   "Bachelor Gulch",
+   "Blue"
+  ],
+  [
+   "Sourdough’s Slide",
+   "Bachelor Gulch",
+   "Blue"
+  ],
+  [
+   "Springtooth",
+   "Bachelor Gulch",
+   "Blue"
+  ],
+  [
+   "Golden Eagle Flyway",
+   "Birds of Prey",
+   "Green"
+  ],
+  [
+   "Dally Alley",
+   "Birds of Prey",
+   "Blue"
+  ],
+  [
+   "Redtail",
+   "Birds of Prey",
+   "Blue"
+  ],
+  [
+   "Golden Eagle - Lower",
+   "Birds of Prey",
+   "Black"
+  ],
+  [
+   "Goshawk Lower",
+   "Birds of Prey",
+   "Black"
+  ],
+  [
+   "Goshawk Upper",
+   "Birds of Prey",
+   "Black"
+  ],
+  [
+   "Kestrel  Lower",
+   "Birds of Prey",
+   "Black"
+  ],
+  [
+   "Kestrel  Middle",
+   "Birds of Prey",
+   "Black"
+  ],
+  [
+   "Kestrel  Upper",
+   "Birds of Prey",
+   "Black"
+  ],
+  [
+   "Golden Eagle - Upper",
+   "Birds of Prey",
+   "DoubleBlack"
+  ],
+  [
+   "Middle Golden Eagle",
+   "Birds of Prey",
+   "DoubleBlack"
+  ],
+  [
+   "Peregrine - Lower",
+   "Birds of Prey",
+   "DoubleBlack"
+  ],
+  [
+   "Peregrine - Middle",
+   "Birds of Prey",
+   "DoubleBlack"
+  ],
+  [
+   "Peregrine - Upper",
+   "Birds of Prey",
+   "DoubleBlack"
+  ],
+  [
+   "Borders Loop",
+   "Elkhorn",
+   "Blue"
+  ],
+  [
+   "Gee",
+   "Elkhorn",
+   "Blue"
+  ],
+  [
+   "Haw",
+   "Elkhorn",
+   "Blue"
+  ],
+  [
+   "Home Run",
+   "Elkhorn",
+   "Blue"
+  ],
+  [
+   "Settlers Way",
+   "Elkhorn",
+   "Blue"
+  ],
+  [
+   "Camp Robber RD",
+   "Grouse Mountain",
+   "Black"
+  ],
+  [
+   "Raven Ridge - Lower",
+   "Grouse Mountain",
+   "Black"
+  ],
+  [
+   "Raven Ridge - Upper",
+   "Grouse Mountain",
+   "Black"
+  ],
+  [
+   "Royal Elk Glade",
+   "Grouse Mountain",
+   "Black"
+  ],
+  [
+   "Screech Owl",
+   "Grouse Mountain",
+   "Black"
+  ],
+  [
+   "Bald Eagle",
+   "Grouse Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Falcon Park",
+   "Grouse Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Osprey",
+   "Grouse Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Ptarmigan",
+   "Grouse Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Ruffed Grouse",
+   "Grouse Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Leav the Beav",
+   "Beaver Creek Landing",
+   "Green"
+  ],
+  [
+   "BC Expressway - Lower",
+   "Larkspur",
+   "Green"
+  ],
+  [
+   "BC Expressway - Upper",
+   "Larkspur",
+   "Green"
+  ],
+  [
+   "Primrose- BG to AH",
+   "Larkspur",
+   "Green"
+  ],
+  [
+   "Blue Bell",
+   "Larkspur",
+   "Blue"
+  ],
+  [
+   "Larkspur - Lower",
+   "Larkspur",
+   "Blue"
+  ],
+  [
+   "Larkspur - Upper",
+   "Larkspur",
+   "Blue"
+  ],
+  [
+   "Paintbrush",
+   "Larkspur",
+   "Blue"
+  ],
+  [
+   "Loco",
+   "Larkspur",
+   "Black"
+  ],
+  [
+   "Lupine",
+   "Larkspur",
+   "Black"
+  ],
+  [
+   "Shooting Star",
+   "Larkspur",
+   "Black"
+  ],
+  [
+   "Three Tree Gully",
+   "Larkspur",
+   "Black"
+  ],
+  [
+   "Yarrow",
+   "Larkspur",
+   "Black"
+  ],
+  [
+   "Beginner Area Ch. #2",
+   "Beaver Creek Lower",
+   "Green"
+  ],
+  [
+   "Cinch - Lower",
+   "Beaver Creek Lower",
+   "Green"
+  ],
+  [
+   "Dally - Lower",
+   "Beaver Creek Lower",
+   "Green"
+  ],
+  [
+   "Dally - Upper",
+   "Beaver Creek Lower",
+   "Green"
+  ],
+  [
+   "Haymeadow",
+   "Beaver Creek Lower",
+   "Green"
+  ],
+  [
+   "1876",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Assay",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Barrel Stave",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Bear Trap",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Big Bark/Little Bark",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Centennial - Flats",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Corkscrew",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Gold Dust",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Gold Rush",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Harrier - Upper",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Latigo Flats",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Lower Latigo",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Toyota Race Center",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "Upper Latigo",
+   "Beaver Creek Lower",
+   "Blue"
+  ],
+  [
+   "4 Get About It",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Addy's",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Bootleg",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Buckboard",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Centennial - Finish Face",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Centennial - Willy's Face",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Fools Gold",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Gary’s",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Golden Eagle Connector",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Harrier - Lower",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Heads Up",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Helmut's",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Moonshine",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Stickline",
+   "Beaver Creek Lower",
+   "Black"
+  ],
+  [
+   "Lumber Yard",
+   "Beaver Creek Lower",
+   "TerrainPark"
+  ],
+  [
+   "Bridle",
+   "Rose Bowl",
+   "Green"
+  ],
+  [
+   "Ripperoo's Retreat",
+   "Rose Bowl",
+   "Green"
+  ],
+  [
+   "C - Prime",
+   "Rose Bowl",
+   "Blue"
+  ],
+  [
+   "Stone Creek Meadows",
+   "Rose Bowl",
+   "Blue"
+  ],
+  [
+   "Cataract",
+   "Rose Bowl",
+   "Black"
+  ],
+  [
+   "Ripsaw",
+   "Rose Bowl",
+   "Black"
+  ],
+  [
+   "Spider",
+   "Rose Bowl",
+   "Black"
+  ],
+  [
+   "Web",
+   "Rose Bowl",
+   "Black"
+  ],
+  [
+   "Stone Creek Chutes",
+   "Rose Bowl",
+   "Extreme"
+  ],
+  [
+   "Intertwine - Lower",
+   "Strawberry Park",
+   "Green"
+  ],
+  [
+   "Primrose- Straw. Park to BG",
+   "Strawberry Park",
+   "Green"
+  ],
+  [
+   "Primrose-Larkspur to Straw",
+   "Strawberry Park",
+   "Green"
+  ],
+  [
+   "Bitterroot",
+   "Strawberry Park",
+   "Blue"
+  ],
+  [
+   "Overshot",
+   "Strawberry Park",
+   "Blue"
+  ],
+  [
+   "President Ford's - Lower",
+   "Strawberry Park",
+   "Blue"
+  ],
+  [
+   "Stacker - Lower",
+   "Strawberry Park",
+   "Blue"
+  ],
+  [
+   "President Ford's - Upper",
+   "Strawberry Park",
+   "Black"
+  ],
+  [
+   "Stacker - Upper",
+   "Strawberry Park",
+   "Black"
+  ],
+  [
+   "Thresher Glade",
+   "Strawberry Park",
+   "Black"
+  ],
+  [
+   "Booth Gardens",
+   "Beaver Creek Upper",
+   "Green"
+  ],
+  [
+   "Centennial - Hohum",
+   "Beaver Creek Upper",
+   "Green"
+  ],
+  [
+   "Cinch - Upper",
+   "Beaver Creek Upper",
+   "Green"
+  ],
+  [
+   "Mystic Island",
+   "Beaver Creek Upper",
+   "Green"
+  ],
+  [
+   "Piney",
+   "Beaver Creek Upper",
+   "Green"
+  ],
+  [
+   "Powell",
+   "Beaver Creek Upper",
+   "Green"
+  ],
+  [
+   "Red Buffalo",
+   "Beaver Creek Upper",
+   "Green"
+  ],
+  [
+   "Sheephorn - Upper",
+   "Beaver Creek Upper",
+   "Green"
+  ],
+  [
+   "Solitude",
+   "Beaver Creek Upper",
+   "Green"
+  ],
+  [
+   "Jack Rabbit Alley",
+   "Beaver Creek Upper",
+   "Blue"
+  ],
+  [
+   "Mystic Maze",
+   "Beaver Creek Upper",
+   "Blue"
+  ],
+  [
+   "Sheephorn - Escape",
+   "Beaver Creek Upper",
+   "Blue"
+  ],
+  [
+   "Centennial - Spruce Face",
+   "Beaver Creek Upper",
+   "Black"
+  ],
+  [
+   "Gosawk Connector",
+   "Beaver Creek Upper",
+   "Black"
+  ],
+  [
+   "Sheephorn",
+   "Beaver Creek Upper",
+   "Black"
+  ],
+  [
+   "Park 101",
+   "Beaver Creek Upper",
+   "TerrainPark"
+  ],
+  [
+   "Zoom Room",
+   "Beaver Creek Upper",
+   "TerrainPark"
+  ],
+  [
+   "Anderson's Alley",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Bear Paw",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Bedstraw",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Borders",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Charter Skiway",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Cold Snap",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Creekside",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Easy Come Easy Go",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Everkrisp",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Ford's Way",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Highlands Skiway",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Homefire",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Lamplighter",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Legacy",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Meander",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Pines/Chateau",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Rhubarb",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Ridge Rider",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Ridgepoint",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Roughlock",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Saddleridge Skiway",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Second Chance",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Solitaire",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Tall Timber",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Wampum",
+   "Resort Skiways",
+   "Green"
+  ],
+  [
+   "Elkhorn Skiway",
+   "Resort Skiways",
+   "Blue"
+  ],
+  [
+   "Holden SKiway",
+   "Resort Skiways",
+   "Blue"
+  ],
+  [
+   "McCoy Skiway",
+   "Resort Skiways",
+   "Blue"
+  ],
+  [
+   "Affinity",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Bliss",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Enchantment",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Exploration",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Harmony",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Journey",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Kinship",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Reflection",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Sanctuary",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Serenity",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Splendor",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Tranquility",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Unwind",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Venture",
+   "McCoy Park",
+   "Green"
+  ],
+  [
+   "Discovery",
+   "McCoy Park",
+   "Blue"
+  ],
+  [
+   "Endeavor",
+   "McCoy Park",
+   "Blue"
+  ],
+  [
+   "Freedom",
+   "McCoy Park",
+   "Blue"
+  ]
+ ]
+}

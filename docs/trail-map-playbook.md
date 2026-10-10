@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's thirty-three resorts got their overlays, written so the next resort (or the next season of one of
+How the app's thirty-four resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -82,7 +82,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
   same name in this season's map and that this season prints no other, then take the strokes, text and symbols
   from the old export (Wildcat). Where the current map is only an image, the same works against the image: find
   every place it differs from the old page, leave out what it no longer prints and trace what it prints anew
-  (Heavenly).
+  (Heavenly; Beaver Creek, whose site has only its CDN image, from skimap.org's 2023 export).
 - **Ask for the layered file:** a resort's own Illustrator or PDF export with live layers removes most of the
   work (Killington's metadata shows a flattened Illustrator file).
 
@@ -193,7 +193,7 @@ outside their clip (last season's names left in the file: drop them), names on l
    it the symbol printed by it (`SYMBOL_OF`).
 3. Then A's steps 5-7. Expect more pieces to settle on crops: centre lines fork at junctions.
 
-### D. An older export registered on this season's map (Wildcat, Heavenly; Deer Valley the other way round)
+### D. An older export registered on this season's map (Wildcat, Heavenly, Beaver Creek; Deer Valley the other way round)
 
 When this season's PDF is flattened, outlined or missing but an older export of the same artwork has live layers:
 1. `register_pages.py --pdf old.pdf --page 0 --image this_season.png [--box ...]`: the affine (SIFT, RANSAC); keep
@@ -271,6 +271,7 @@ names really are paint:
 | names in their own case | `AS_PRINTED = True` | Smugglers' Notch |
 | a symbol off its name's line ends, or out of reach | `SYMBOL_OF`; `SYMBOL_CENTRE = True` (above or below the middle) | Park City; Sunday River |
 | a symbol beside its line, not on it | `SYMBOL_OFF_LINE` | Wildcat |
+| each run's symbol on its line partway along it, the name beside: the piece under a named symbol takes the name | `SYMBOL_ON_LINE` | Beaver Creek |
 | symbols and names along the run, not at its start | `CUT_AT_SYMBOLS = False` and `CUTS` by hand | Wildcat |
 | symbols with no name (tree areas) | `LOOSE_SYMBOLS` (what they are) | Wildcat |
 | a misread symbol | `SYMBOL_FIX` | |
@@ -280,7 +281,7 @@ names really are paint:
 | a leader from a name box to its line | `ON_CIRCLE` (the leader's far end) | Smugglers' Notch |
 | glades: names that don't say so; a "glades" that isn't one; glades drawn as their own line style | `GLADES`; `NOT_GLADES`; `GLADE_LINES` | Whistler Blackcomb |
 | parks; names with no line | `PARKS`; `NO_LINE` (a marker, with why) | Hunter |
-| the whole label is the run's line; no stretch along a name | `LABEL_LINE`; `NO_STRETCH` | Hunter, Heavenly |
+| the whole label is the run's line; no stretch along a name (or one label of it: `(name, (x, y))`) | `LABEL_LINE`; `NO_STRETCH` | Hunter, Heavenly, Beaver Creek |
 | areas | `AREAS`, `area(c)`, `AREA_OF` (from the report) | Big Sky |
 | several panels | `PANELS` here, a `panels/<panel>/resort.py` each | Whistler Blackcomb |
 | an older export on this season's image | `AFFINE`, `GONE` | Heavenly |
@@ -335,7 +336,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the thirty-three resorts settled, so the next ones come out alike:
+What the thirty-four resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -631,6 +632,7 @@ give the same.
 | [Alta](#alta) | PDF strokes, outlined black names, rounded symbols | `pdf_resort.py`, glyph sheets | `regen.sh` | strokes and glyph names, faces with no line |
 | [Schweitzer](#schweitzer) | two images, runs painted with no line; two interactive maps | the groups' names and symbols on the prints, the stretch along each name, `names.py` | `regen.sh` | an image-only map of runs with no lines |
 | [Northstar](#northstar) | PDF lines as filled outlines holding several runs, names as white glyphs haloed in the line's colour | `pdf_outline_lines.py` centre lines, the halo's colour as the rating, cuts at each junction | `regen.sh` | one outline for several runs |
+| [Beaver Creek](#beaver-creek) | this season's map an image only (CDN); a 2023 vector export of the artwork | registration, glyph names, symbols on the lines (`SYMBOL_ON_LINE`) | `regen.sh` | a Vail Resorts map with no PDF this season |
 
 ## Killington
 
@@ -1732,6 +1734,54 @@ Lookout Mountain, the Village; the terrain parks Mt. Pluto's) · `tools/trailmap
 - **Checked:** every overlay on crops (`overlay_audit.py`, 17 sheets, every cell read; Crosscut's, Upper Main
   Street's, West Ridge's, The Chute's and Schwarzstrasse's extra lines, and Christmas Tree's doubled stretch, fixed
   and read again); `compare.py` against the report; hover 265/265.
+
+## Beaver Creek
+
+168 trails (148 + 20) · Colorado · one map · areas: the trail report's (Beaver Creek Upper and Lower, Birds of Prey,
+Rose Bowl, Grouse Mountain, Larkspur, Strawberry Park, Bachelor Gulch, McCoy Park, Arrowhead, Elkhorn, the resort
+skiways, the Landing) · `tools/trailmap/resorts/beaver-creek/`.
+
+- **Source:** beavercreek.com links no PDF this season: the map is the CDN painting
+  `scene7.vailresorts.com/is/image/vailresorts/20251006_BC_winter-trail_map_001` (4990x4453 px, PNG at full width),
+  the map image (above the partners' band). skimap.org keeps the 2023-24 export of the same artwork as a vector
+  PDF (map 25267, InDesign, 2023-10-04: the painting itself 242,000 vector drawings, trail lines strokes, names
+  outlined glyphs, symbols fills). Both SHA-256s are checked.
+- **Route:** recipe D: the PDF's page registered on the image (`register_pages.py`, 2664 inliers, median 0.09 px,
+  `AFFINE` in `resort.py`); `checks/editions.py` finds where they differ: the lodges' and restaurants' icons, dash
+  phases, and Dakota Skiway, new at Arrowhead (its name and circle `EXTRA`, its dotted line `TRACED`). Lines
+  (`prepare.py`): 0.66 pt strokes in green, blue and black (dashed: roads and catwalks; 0.71 pt dotted: the
+  homeowner skiways), West Fall Road's dashes in the squares' blue, the two gladed zones' brown lines (the legend's
+  Gladed Zone: Three Tree Gully, Jack Rabbit Alley), and one skiway drawn as filled dots (chained into a piece:
+  Creekside's). Names: `pdf_glyphs.py`, a new condensed font read on contact sheets (`letters.json`; one B and one N
+  shape first misread as V and C), the symbols fills (`--rect-squares`: the squares are rectangles). Each run's
+  symbol is printed on its line, often partway along it, the name beside: `SYMBOL_ON_LINE` names the piece under a
+  named symbol (a `pdf_resort.py` setting new with this map). 43 names printed in two or three parts (`JOIN`).
+- **Rebuild:** `tools/trailmap/resorts/beaver-creek/regen.sh` (1 min).
+- **Truth:** the trail report (`report.json`): the terrain feed as Common Crawl captured it on 2026-02-07 (183 rows,
+  the homeowner skiways and McCoy Park's beginner runs among them; typos fixed in `resort.py`: Holden SKiway,
+  Gosawk Connector). Runs the report splits into parts and the map prints once are one trail named as printed
+  (Kestrel, Peregrine, Larkspur, Cinch, Dally, Latigo, Primrose, Intertwine, Gunder's, Cabin Fever, Little Brave,
+  Raven Ridge, Upper and Lower Stirrup; the report's BC Expressway and Pines/Chateau are the map's Beaver Creek
+  Mountain Expressway and Borders-Pines-Chateau Skiway); where the map prints a part's own symbol, the parts are
+  trails: Centennial's four (Hohum, Spruce Face, Willy's Face, Finish Face, each by its symbol: `RENAME_AT`),
+  President Ford's and Stacker (a square on each line under the Strawberry Park lift with no name: - Lower).
+  Not printed: Beginner Area Ch. #2, Camp Robber Rd, Golden Eagle Connector (probably the unnamed black traverse
+  from West Fall Road), Ripperoo's Retreat, Bear Cave and Gold Mine (named only in the kids' zones box). Ratings
+  kept from the map where the report differs: Borders and Ridge Rider (blue squares; the report green), Goshawk
+  Upper, Heads Up, 4 Get About It, Royal Elk Glade (double diamonds; black), Ptarmigan and Ruffed Grouse (single
+  diamonds; double black), Sheephorn - Escape (a circle; blue); Wapiti prints a diamond by its name and squares on
+  its line (`RATING`: black, as the report).
+- **Decisions:** 42 pieces settled on crops (`decisions.py`, by points: the continuation of a run past a catwalk,
+  links to the next run, Centennial's parts), 3 cuts where one skiway carries two runs (Highlands and Charter
+  Skiways, Upper and Lower Stirrup, Maverick and Second Chance, at the second's circle), 10 pieces no trail (links
+  with no name, a stub by a glade's diamond, the brown mark by a kids' zone). `NO_STRETCH` for names printed beside
+  their symbol, not in a gap of their line (Maverick, Solitaire, Charter Skiway, Tall Timber, Roughlock, one of
+  Leav the Beav's two labels: a `(name, (x, y))` entry, new with this map). Markers: the parks, the kids' zones,
+  glades and chutes printed with no line.
+- **Checked:** every overlay on crops (`overlay_audit.py`, 42 sheets, every cell read; Centennial's parts, the
+  stretches beside their symbols and Middle Golden Eagle's two branches fixed and read again); `compare.py` against
+  the report; hover 462/464 (the two misses where Piney's and Powell's lines meet and run on together below the
+  Cinch catwalk: either name is right); the app check.
 
 # Part 4. Methods in detail
 

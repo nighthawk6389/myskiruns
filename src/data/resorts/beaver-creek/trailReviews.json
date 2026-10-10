@@ -1,0 +1,186 @@
+{
+ "reviews": {
+  "zoom-room": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    38.26,
+    12.28
+   ]
+  },
+  "park-101": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    37.05,
+    13.26
+   ]
+  },
+  "big-bark": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    19.66,
+    33.97
+   ]
+  },
+  "tombstone-territory": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    24.99,
+    34.15
+   ]
+  },
+  "little-bark": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    18.14,
+    35.1
+   ]
+  },
+  "heads-up": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    24.71,
+    36.83
+   ]
+  },
+  "blue-bell": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    55.53,
+    41.45
+   ]
+  },
+  "paintbrush": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    55.11,
+    42.76
+   ]
+  },
+  "4-get-about-it": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    25.95,
+    43.43
+   ]
+  },
+  "lumber-yard": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    33.09,
+    44.87
+   ]
+  },
+  "aspen-alley": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.29,
+    51.57
+   ]
+  },
+  "sourdoughs-slide": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    72.2,
+    53.25
+   ]
+  },
+  "buckaroo-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    24.87,
+    56.54
+   ]
+  },
+  "homefire": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T11:13:20.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.41,
+    70.07
+   ]
+  }
+ }
+}

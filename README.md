@@ -5,11 +5,11 @@ overlay on the map, with its name and rating, so you tap the run you just skied 
 works offline on the mountain, installs to a phone's home screen, and can sync your trips between devices with an
 optional account. Live at **[www.myskiruns.app](https://www.myskiruns.app)**.
 
-Thirty-three resorts so far, 4,868 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
-Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Vail, Breckenridge, Keystone, Copper Mountain,
-Winter Park, Steamboat, Snowmass, Aspen Mountain, Buttermilk, Park City, Deer Valley, Snowbasin, Alta, Big Sky,
-Whitefish Mountain, Schweitzer, Palisades Tahoe, Northstar, Heavenly, Mammoth Mountain, Mt. Bachelor and Whistler
-Blackcomb.
+Thirty-four resorts so far, 5,036 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
+Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Vail, Beaver Creek, Breckenridge, Keystone,
+Copper Mountain, Winter Park, Steamboat, Snowmass, Aspen Mountain, Buttermilk, Park City, Deer Valley, Snowbasin,
+Alta, Big Sky, Whitefish Mountain, Schweitzer, Palisades Tahoe, Northstar, Heavenly, Mammoth Mountain, Mt. Bachelor
+and Whistler Blackcomb.
 
 Most of the work in this repository is the **trail-map pipeline**: getting every trail's overlay onto its own
 drawn line, with the right name, on maps that were never made to be machine-read. How it is done, resort by
@@ -76,6 +76,7 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 | Sunday River | Maine | 137 (116 + 21) | 1 | PDF strokes, outlined names, insets | `tools/trailmap/resorts/sunday-river/regen.sh` |
 | Sugarloaf | Maine | 175 (127 + 48) | 1 | PDF strokes, outlined names, numbered key circles, a raster inset | `tools/trailmap/resorts/sugarloaf/regen.sh` |
 | Vail | Colorado | 194 (173 + 21) | 3 | three raster paintings (no PDF); raster line detection | `tools/trailmap/resorts/vail/regen.sh` |
+| Beaver Creek | Colorado | 168 (148 + 20) | 1 | this season's map an image only; the 2023 export's strokes and outlined names registered on it, each run's symbol on its line | `tools/trailmap/resorts/beaver-creek/regen.sh` |
 | Breckenridge | Colorado | 197 (157 + 40) | 1 | PDF strokes and text over a sharper CDN painting | `tools/trailmap/resorts/breckenridge/regen.sh` |
 | Keystone | Colorado | 145 (120 + 25) | 1 | PDF strokes, outlined names, CDN painting | `tools/trailmap/resorts/keystone/regen.sh` |
 | Copper Mountain | Colorado | 128 (104 + 24) | 1 | PDF lines and names both as filled outlines | `tools/trailmap/resorts/copper-mountain/regen.sh` |
@@ -279,8 +280,8 @@ the playbook's [Part 5](docs/trail-map-playbook.md#part-5-what-we-tried-and-what
 
 ## What's left
 
-1. **A person's confirmation** for the thirty resorts Claude checked on crops instead of the review page
-   (Sugarbush through Alta), if wanted: the Trail Check page can be published for any resort ([playbook,
+1. **A person's confirmation** for the thirty-one resorts Claude checked on crops instead of the review page
+   (Sugarbush through Beaver Creek), if wanted: the Trail Check page can be published for any resort ([playbook,
    Part 4](docs/trail-map-playbook.md#auditing-on-crops-or-the-human-review-page)).
 2. **Shared tooling:** a legend file per map feeding the extraction and the readers' prompts; readers run from a
    script instead of an interactive session ([playbook, Part 5](docs/trail-map-playbook.md#scaling-to-many-maps)).

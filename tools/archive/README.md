@@ -53,6 +53,22 @@ turned into decisions.py entries keyed by points on it (`seg_decisions.py`); and
 | `aspen-mountain/seg_decisions.py` | seg_decisions.py <resort>/<panel> id 'Name@arc\|Name@arc\|-': the CUTS, CHECKED and UNNAMED entries for those stretches |
 | `aspen-mountain/piece_crops.py` | piece_crops.py <resort>/<panel> out id ...: a crop of each piece alone, about 900 px |
 
+## beaver-creek
+
+Beaver Creek's triage and crops (the work folder `work/beaver-creek`, after `pdf_resort.py beaver-creek build`): the
+2023 PDF's stroke and fill tallies that found the trail strokes among the painting's, whether another resort's
+letters.json reads its glyphs, which cluster a misread letter came from, the printed names against the report, and
+the piece crops the decisions cite. The edition check is maintained: `resorts/beaver-creek/checks/editions.py`.
+
+| file | what it did |
+|---|---|
+| `beaver-creek/stroke_tally.py` | stroke_tally.py <pdf>: the stroke classes (colour, width, dashed) that aren't the painting's grey-brown, with their counts and lengths |
+| `beaver-creek/trail_strokes.py` | trail_strokes.py <pdf>: the strokes in the three trail colours by width, dash pattern and cap, with an example drawing each |
+| `beaver-creek/lettercover.py` | lettercover.py <glyphs.json> <letters.json> ...: how many of a map's glyphs each resort's letters.json reads (a font met before) |
+| `beaver-creek/whichletter.py` | whichletter.py <char>: each letters.json entry read as that character, with the glyphs around its uses (a misread shape: TOMVSTONE's B read as V) |
+| `beaver-creek/names_list.py` | names_list.py <resort>: every printed name after the reading, as the report spells it or not, with its symbol and whether a piece carries it |
+| `beaver-creek/piece_crops.py` | piece_crops.py <work dir> <out.png> <ids>: each piece alone in magenta on a zoomed crop, the named symbols around it (OTHERS=1: the other pieces too) |
+
 ## big-sky
 
 Big Sky's checks while its pieces were settled: crops of the PDF sharp around pieces and names, drawing order, junctions, overlaps (now `tools/trailmap/pdf_overlaps.py`), the OpenStreetMap cross-check (now `tools/trailmap/osm_check.py`), and the names against the trail report.
