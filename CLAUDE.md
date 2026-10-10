@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Ski-run tracker for twenty-six resorts (React 19 + TS + Vite). The hard part is
+Ski-run tracker for twenty-seven resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
@@ -65,7 +65,8 @@ the already-assigned path (that is circular).
   export of its map's artwork, registered on the current image, and Deer
   Valley's an earlier one registered on the later flattened image; Steamboat
   has no PDF: its interactive map's SVG is the vector layer; Mammoth's PDF draws
-  no trail lines: its interactive maps' SVGs give them); Whiteface's,
+  no trail lines: its interactive maps' SVGs give them; Buttermilk's is drawn
+  like Snowmass's); Whiteface's,
   Winter Park's, Breckenridge's, Copper Mountain's and Keystone's by their own
   scripts; Okemo's, Sugarbush's and Jay Peak's from their archived readings.
   Change those, not the generated files. A new resort gets such a folder too,

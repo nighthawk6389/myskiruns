@@ -1,0 +1,355 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "big-face-hollow": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "BIG FACE HOLLOW",
+   "note": "along Big Face Hollow"
+  },
+  "blue-grouse": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "BLUE GROUSE",
+   "note": "checked on a crop"
+  },
+  "camp-bird": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "CAMP BIRD",
+   "note": "along Camp Bird"
+  },
+  "larkspur": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "LARKSPUR",
+   "note": "along Larkspur"
+  },
+  "little-teaser": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE TEASER",
+   "note": "along Little Teaser"
+  },
+  "lower-larkspur": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LARKSPUR",
+   "note": "along Lower Larkspur"
+  },
+  "reds-rover": {
+   "polylines": [
+    55
+   ],
+   "confidence": "high",
+   "mapName": "RED'S ROVER",
+   "note": "checked on a crop"
+  },
+  "teaser": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "TEASER",
+   "note": "along Teaser"
+  },
+  "toms-thumb": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "TOM'S THUMB",
+   "note": "along Tom's Thumb"
+  },
+  "westward-ho": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "WESTWARD HO",
+   "note": "checked on a crop"
+  },
+  "buckskin": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "BUCKSKIN",
+   "note": "checked on a crop"
+  },
+  "eagle-hill": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "EAGLE HILL",
+   "note": "along Eagle Hill"
+  },
+  "javelin": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "JAVELIN",
+   "note": "along Javelin"
+  },
+  "klaus-way": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "KLAUS' WAY",
+   "note": "checked on a crop"
+  },
+  "magic-carpet": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "MAGIC CARPET",
+   "note": "along Magic Carpet"
+  },
+  "oregon-trail": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "OREGON TRAIL",
+   "note": "along Oregon Trail"
+  },
+  "ptarmigan": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "PTARMIGAN",
+   "note": "along Ptarmigan"
+  },
+  "ptarmigan-glade": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "PTARMIGAN GLADE",
+   "note": "checked on a crop"
+  },
+  "rabbit-run": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "RABBIT RUN",
+   "note": "checked on a crop"
+  },
+  "racers-edge": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "RACER'S EDGE",
+   "note": "checked on a crop"
+  },
+  "sterner": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "STERNER",
+   "note": "along Sterner"
+  },
+  "sterner-gulch": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "STERNER GULCH",
+   "note": "along Sterner Gulch"
+  },
+  "tiehack-trail": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "TIEHACK TRAIL",
+   "note": "along Tiehack Trail"
+  },
+  "timberdoodle-glade": {
+   "polylines": [
+    5,
+    6,
+    7
+   ],
+   "confidence": "high",
+   "mapName": "TIMBERDOODLE GLADE",
+   "note": "checked on a crop"
+  },
+  "baby-doe": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "BABY DOE",
+   "note": "along Baby Doe"
+  },
+  "bear": {
+   "polylines": [
+    23,
+    46,
+    47
+   ],
+   "confidence": "high",
+   "mapName": "BEAR",
+   "note": "along Bear | checked on a crop"
+  },
+  "columbine": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "COLUMBINE",
+   "note": "along Columbine"
+  },
+  "friedls": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "FRIEDL'S",
+   "note": "along Friedl's"
+  },
+  "government": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "GOVERNMENT",
+   "note": "along Government"
+  },
+  "homestead-road": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "HOMESTEAD ROAD",
+   "note": "along Homestead Road"
+  },
+  "jacobs-ladder": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "JACOB'S LADDER",
+   "note": "along Jacob's Ladder"
+  },
+  "lovers-lane": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "LOVER'S LANE",
+   "note": "along Lover's Lane"
+  },
+  "lower-savio": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SAVIO",
+   "note": "along Lower Savio"
+  },
+  "midway-avenue": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "MIDWAY AVENUE",
+   "note": "checked on a crop"
+  },
+  "no-problem": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "NO PROBLEM",
+   "note": "along No Problem"
+  },
+  "ridge-trail-lower": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE TRAIL (LOWER)",
+   "note": "along Ridge Trail (Lower)"
+  },
+  "ridge-trail-upper": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE TRAIL (UPPER)",
+   "note": "along Ridge Trail (Upper)"
+  },
+  "savio-upper": {
+   "polylines": [
+    32,
+    53
+   ],
+   "confidence": "high",
+   "mapName": "SAVIO (UPPER)",
+   "note": "along Savio (Upper) | checked on a crop"
+  },
+  "spruce-upper": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "SPRUCE (UPPER)",
+   "note": "checked on a crop"
+  },
+  "spruce-face": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "SPRUCE FACE",
+   "note": "along Spruce Face"
+  },
+  "sterner-catwalk": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "STERNER CATWALK",
+   "note": "along Sterner Catwalk"
+  },
+  "super-pipe": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "SUPER PIPE",
+   "note": "checked on a crop"
+  },
+  "uncle-chucks-glades": {
+   "polylines": [
+    13,
+    14
+   ],
+   "confidence": "high",
+   "mapName": "UNCLE CHUCKS GLADES",
+   "note": "checked on a crop"
+  }
+ }
+}

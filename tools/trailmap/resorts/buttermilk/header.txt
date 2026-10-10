@@ -1,0 +1,18 @@
+// Buttermilk's 2025-26 trail map (aspensnowmass.com: the resort's "layered"
+// PDF, one page, drawn like Snowmass's). The lines are the PDF's own: blue,
+// black and green strokes, and the green dots of the "least difficult way
+// down" (Homestead Road from the top to the base, and Bear's lower part).
+// Every name is white text on a pill in its run's colour, set along its own
+// line: the rating is the pill's colour (green, blue, black); the map has no
+// expert terrain. Names are spelled as the trail report spells them
+// (report.json: the resort's grooming feed); RIDGE and TRAIL, printed on
+// Ridge Trail's green upper line and its blue lower one, are the report's two
+// Ridge Trails; Ptarmigan Glade is printed but not on the report. The uphill
+// routes and the parks the map doesn't print (Panda Park, Teaser Park, Family
+// Cross, the Mini Pipe, the Snow Cross, Alex's Alley) are left out. Where one
+// line carries two runs, decisions.py cuts it where they part (Klaus' Way and
+// Racer's Edge, Buckskin and Rabbit Run, Spruce and the Super Pipe, Blue
+// Grouse and Westward Ho, Savio and its cut-across). Panda Hill, printed with
+// no line (the beginner area at the base): a marker at its name. Areas: the
+// three printed bases with the report's lift areas.
+// x/y/baseY/width are unused layout fields.

@@ -62,6 +62,15 @@ Big Sky's checks while its pieces were settled: crops of the PDF sharp around pi
 | `ratecmp.py` | ratecmp.py: Big Sky's trails.ts ratings and mountains vs the trail report (tools/trailmap/resorts/big-sky/report.json). |
 | `rostercmp.py` | rostercmp.py [panel ...]: the panels' names vs the resort feed: names not in it, and feed trails no panel prints. |
 
+## buttermilk
+
+Buttermilk's helper for keying its decisions to points on their pieces (`snap.py`, a one-panel version of
+`snowmass/at.py`; `snowmass/only.py` drew the crops' pieces). What it settled is in `resorts/buttermilk/decisions.py`.
+
+| file | what it did |
+|---|---|
+| `buttermilk/snap.py` | snap.py <work dir> x,y ...: the two pieces nearest each point, with the nearest point on each |
+
 ## deer-valley
 
 Deer Valley's analyses: the October PDF rendered on the November image and diffed (`diff.py`, `clusters.py`,

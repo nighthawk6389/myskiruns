@@ -5,8 +5,8 @@ area. It is the best check on a map's reading: names as the resort spells them (
 abbreviations), the rating of each run against the symbol printed by it, the area or lift pod each belongs to, and
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
-Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth and
-Snowmass keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
+Snowmass and Buttermilk keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -81,8 +81,9 @@ Its grooming report page loads `https://www.aspensnowmass.com/AspenSnowmass/Groo
 (plain curl; `mountain=` also takes the other three mountains): every trail by lift area (`areas`, each with its
 `trails`), with its difficulty (beginner, intermediate, advanced, expert, extreme, terrain-park), listed out of
 season too. `feed_trails.py` reads it (beginner Green, intermediate Blue, advanced Black, expert DoubleBlack, extreme
-Extreme, terrain-park TerrainPark); Snowmass's `report.json` was fetched on 2026-10-09. Its uphill routes are an area
-of their own (Uphill Routes), left out of the trail list.
+Extreme, terrain-park TerrainPark); Snowmass's `report.json` was fetched on 2026-10-09, Buttermilk's
+(`mountain=Buttermilk`) on 2026-10-10. Their uphill routes are an area of their own (Uphill Routes), left out of the
+trail list. Out of season the feed for Aspen Mountain (`mountain=AspenMountain`, its page's id) lists no trails.
 
 ```bash
 mkdir -p work/snowmass/report

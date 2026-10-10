@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's twenty-six resorts got their overlays, written so the next resort (or the next season of one of
+How the app's twenty-seven resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -61,7 +61,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 
 | the source gives you | route | done this way | start from |
 |---|---|---|---|
-| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`) | Hunter, Big Sky; Snowmass for a map rated by colour |
+| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Buttermilk (the same kind, one panel) | Hunter, Big Sky; Snowmass for a map rated by colour |
 | vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels) | Sunday River, Park City |
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor | Mt. Bachelor |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
@@ -324,7 +324,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the twenty-six resorts settled, so the next ones come out alike:
+What the twenty-seven resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -612,6 +612,7 @@ give the same.
 | [Steamboat](#steamboat) | an image; the interactive map's SVG | `vicomap.py`, lines routed onto the image's, `GROUPED` | `regen.sh` | an image-only map with an interactive map |
 | [Mammoth Mountain](#mammoth-mountain) | a PDF with no trail lines, names as text; two interactive maps' SVGs | `vicomap.py` lines registered on the painting, names spelled as the groups, `GROUPED` | `regen.sh` | a map with no lines but an interactive map |
 | [Snowmass](#snowmass) | PDF strokes and filled casings, names as text on pills in the run's colour | `pdf_resort.py`, the rating from the pill's colour (`COLOR_SYMBOL`) | `regen.sh` | a map rated by its names' colours |
+| [Buttermilk](#buttermilk) | the same kind, one panel; the dotted way down | as Snowmass | `regen.sh` | a small map of that kind |
 
 ## Killington
 
@@ -1431,6 +1432,42 @@ Knob), each with the trail report's lift areas whose runs come down from it · `
 - **Checked:** every overlay on crops (`overlay_audit.py`, 29 and 7 sheets, every cell read; the cells that showed
   a problem fixed and read again); `compare.py` against the report; hover 332/332 (main) and 75/75 (Hanging
   Valley).
+
+## Buttermilk
+
+44 trails (43 + 1) · Colorado · one map · areas: its three printed bases (Main Buttermilk, Tiehack, West Buttermilk),
+the trail report's lift areas · `tools/trailmap/resorts/buttermilk/`.
+
+- **Source:** the 2025-26 PDF that aspensnowmass.com's Buttermilk trail-map page links ("layered", plain curl),
+  drawn like Snowmass's (Part 3, "Snowmass"): trail lines as vectors over two 100 dpi paintings, every name white
+  text on a pill in the run's colour, no symbol by any name, no expert terrain. Lines: blue (in two blues), black and
+  green 1.12 pt strokes; the uphill routes are orange dashes over black ones, the "least difficult way down" green
+  dots (a dashed 1.5 pt stroke): Homestead Road's line from the top to the base, and Bear's lower part.
+- **Route:** `prepare.py`: the page rendered at 3 px/pt with both paintings upscaled (`matte_pdf_layer.py
+  --resample`); the solid strokes (`extract_pdf_vectors.py --solid`, the legend and the logo left out) and the green
+  dots, one piece per path; names from `pdf_labels.py` in the names' Semibold (the lifts', lodges' and notices' are
+  Bold), each one's pill colour sampled round its letters. `pdf_resort.py` with `COLOR_SYMBOL`, `ALONG_FIRST`,
+  `ALONG_SHORT`, `NO_STRETCH_BESIDE`; names printed in parts joined (`JOIN`: UNCLE CHUCK'S GLADES, MIDWAY AVENUE,
+  TIMBER DOODLE GLADE and PTARMIGAN GLADE, each GLADE pinned by where it is printed); HOMESTEAD ROAD and LOWER SAVIO
+  printed either side of a lift or a road (`RENAME`, `RENAME_AT`).
+- **Rebuild:** `tools/trailmap/resorts/buttermilk/regen.sh` (15 s); it checks the PDF's SHA-256.
+- **Truth:** the trail report (`report.json`: the grooming feed, `mountain=Buttermilk`, fetched 2026-10-10; its
+  uphill routes left out). RIDGE and TRAIL, printed on Ridge Trail's green upper line and its blue lower one, are the
+  report's two Ridge Trails (green and blue): Ridge Trail (Upper) and (Lower). Not printed: Northeast Passage, and the
+  parks Panda Park, Teaser Park, Family Cross, the Mini Pipe and the Tiehack Snow Cross. JACOB'S LADDER is the
+  report's Alex's Alley (formerly Jacob's ladder): the map's name is kept, a park as the report has it. The report's
+  Timberdoodle Glad and Uncle Chucks Glades shown as Timberdoodle Glade and Uncle Chuck's Glades; Ptarmigan Glade is
+  printed and not on the report. Ratings agree but Spruce (Upper)'s (a black pill; the report: green; the map's
+  kept).
+- **Decisions** (every piece settled on `grid_crop.py` crops): 7 cuts where one path carries two runs (Klaus' Way and
+  Racer's Edge, Buckskin and Rabbit Run, Spruce and the Super Pipe, Blue Grouse and Westward Ho, Red's Rover and the
+  run-out at the foot of West Buttermilk, Savio and its cut-across and its summit traverse); the three lines through
+  TIMBER DOODLE GLADE and the two through UNCLE CHUCK'S GLADES are those glades'; 7 lines with no name printed
+  (connectors, the summit traverse, the run-outs). Panda Hill, printed with no line (the beginner area at the base):
+  a marker.
+- **Checked:** every overlay on crops (`overlay_audit.py`, 11 sheets, every cell read; the two it showed wrong,
+  Red's Rover's run-out and a cut-across named Ridge Trail, fixed and read again); `compare.py` against the report;
+  hover 130/130.
 
 # Part 4. Methods in detail
 

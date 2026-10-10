@@ -356,6 +356,16 @@ const RESORT_ADS = {
     negatives: ['snowmass mountain 14er', 'snowmass lake', 'maroon bells', 'rodeo', 'balloon festival',
       'mountain bike', 'bike park', 'hiking', 'conference center', 'golf'],
   },
+  buttermilk: {
+    short: 'Buttermilk',
+    path: 'Buttermilk',
+    area: 'Tiehack to West Buttermilk',
+    names: ['buttermilk', 'buttermilk aspen', 'buttermilk mountain'],
+    keywords: [],
+    // the drink and the recipes, the X Games broadcast
+    negatives: ['recipe', 'pancakes', 'biscuits', 'substitute', 'ranch', 'falls', 'x games tickets', 'mountain bike',
+      'hiking'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

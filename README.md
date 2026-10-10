@@ -5,10 +5,10 @@ overlay on the map, with its name and rating, so you tap the run you just skied 
 works offline on the mountain, installs to a phone's home screen, and can sync your trips between devices with an
 optional account. Live at **[www.myskiruns.app](https://www.myskiruns.app)**.
 
-Twenty-six resorts so far, 4,139 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
+Twenty-seven resorts so far, 4,183 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
 Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Vail, Breckenridge, Keystone, Copper
-Mountain, Winter Park, Steamboat, Snowmass, Park City, Deer Valley, Big Sky, Palisades Tahoe, Heavenly, Mammoth
-Mountain, Mt. Bachelor and Whistler Blackcomb.
+Mountain, Winter Park, Steamboat, Snowmass, Buttermilk, Park City, Deer Valley, Big Sky, Palisades Tahoe, Heavenly,
+Mammoth Mountain, Mt. Bachelor and Whistler Blackcomb.
 
 Most of the work in this repository is the **trail-map pipeline**: getting every trail's overlay onto its own
 drawn line, with the right name, on maps that were never made to be machine-read. How it is done, resort by
@@ -81,6 +81,7 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 | Winter Park | Colorado | 172 (114 + 58) | 1 | PDF strokes, text with no Unicode map | `tools/trailmap/resorts/winter-park/regen.sh` |
 | Steamboat | Colorado | 189 (144 + 45) | 1 | the map as an image; its interactive map's SVG as the vector layer, routed onto the print's lines | `tools/trailmap/resorts/steamboat/regen.sh` |
 | Snowmass | Colorado | 124 (114 + 10) | 2 | PDF strokes and filled casings, names as text on pills in the run's colour | `tools/trailmap/resorts/snowmass/regen.sh` |
+| Buttermilk | Colorado | 44 (43 + 1) | 1 | PDF strokes, names as text on pills in the run's colour (Snowmass's kind) | `tools/trailmap/resorts/buttermilk/regen.sh` |
 | Park City Mountain | Utah | 345 (252 + 93) | 1 | PDF strokes, outlined names, a redrawn inset | `tools/trailmap/resorts/park-city/regen.sh` |
 | Deer Valley | Utah | 207 (181 + 26) | 1 | an earlier export's strokes and outlined names on this season's flattened image; checked against the interactive map | `tools/trailmap/resorts/deer-valley/regen.sh` |
 | Big Sky | Montana | 323 (290 + 33) | 3 | three PDFs of strokes and text | `tools/trailmap/resorts/big-sky/regen.sh` |
@@ -271,8 +272,8 @@ the playbook's [Part 5](docs/trail-map-playbook.md#part-5-what-we-tried-and-what
 
 ## What's left
 
-1. **A person's confirmation** for the twenty-three resorts Claude checked on crops instead of the review page
-   (Sugarbush through Snowmass), if wanted: the Trail Check page can be published for any resort ([playbook,
+1. **A person's confirmation** for the twenty-four resorts Claude checked on crops instead of the review page
+   (Sugarbush through Buttermilk), if wanted: the Trail Check page can be published for any resort ([playbook,
    Part 4](docs/trail-map-playbook.md#auditing-on-crops-or-the-human-review-page)).
 2. **Shared tooling:** a legend file per map feeding the extraction and the readers' prompts; readers run from a
    script instead of an interactive session ([playbook, Part 5](docs/trail-map-playbook.md#scaling-to-many-maps)).
