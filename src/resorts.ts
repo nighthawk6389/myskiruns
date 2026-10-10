@@ -178,6 +178,10 @@ export const RESORTS: ResortEntry[] = [
   ], ['Big Bear Mountain Resort', 'Snow Summit', 'Bear Mountain', 'Snow Valley', 'Big Bear Lake']),
   oneMap('jackson-hole', 'Jackson Hole', 'Wyoming', () => import('./data/resorts/jackson-hole/trails'), () => import('./data/resorts/jackson-hole/trailPaths.json'), ['Jackson Hole Mountain Resort', 'Teton Village', 'Jackson']),
   oneMap('snowbird', 'Snowbird', 'Utah', () => import('./data/resorts/snowbird/trails'), () => import('./data/resorts/snowbird/trailPaths.json'), ['Snowbird Ski Resort', 'Little Cottonwood Canyon', 'Mineral Basin', 'Salt Lake City']),
+  panels('arapahoe-basin', 'Arapahoe Basin', 'Colorado', () => import('./data/resorts/arapahoe-basin/trails'), [
+    { id: 'frontside', name: 'Frontside & The Beavers', paths: () => import('./data/resorts/arapahoe-basin/panels/frontside/trailPaths.json') },
+    { id: 'zuma-bowl', name: 'Zuma Bowl', paths: () => import('./data/resorts/arapahoe-basin/panels/zuma-bowl/trailPaths.json') },
+  ], ['A-Basin', 'Arapahoe Basin Ski Area', 'Montezuma Bowl', 'Pallavicini', 'Summit County']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

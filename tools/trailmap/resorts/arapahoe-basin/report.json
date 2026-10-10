@@ -1,0 +1,760 @@
+{
+"_source": "arapahoebasin.com/snow-report/ (Terrain & Lift Status, server-rendered), fetched 2026-10-10 out of season; status_report.py",
+"trails": [
+[
+"Lower Chisholm Trail",
+"Front Side Terrain",
+null
+],
+[
+"Sundance",
+"Front Side Terrain",
+null
+],
+[
+"Upper Chisholm Trail",
+"Front Side Terrain",
+null
+],
+[
+"Wrangler",
+"Front Side Terrain",
+null
+],
+[
+"High Noon",
+"Front Side Terrain",
+null
+],
+[
+"Lynx Lane",
+"Front Side Terrain",
+null
+],
+[
+"Moose Hollow",
+"Front Side Terrain",
+null
+],
+[
+"North Fork",
+"Front Side Terrain",
+null
+],
+[
+"Ramrod",
+"Front Side Terrain",
+null
+],
+[
+"TB Glades",
+"Front Side Terrain",
+null
+],
+[
+"Weasel Way",
+"Front Side Terrain",
+null
+],
+[
+"Dercum's Gulch",
+"Front Side Terrain",
+null
+],
+[
+"Humbug",
+"Front Side Terrain",
+null
+],
+[
+"Jamie's Face",
+"Front Side Terrain",
+null
+],
+[
+"Lenawee Face",
+"Front Side Terrain",
+null
+],
+[
+"Norway Face",
+"Front Side Terrain",
+null
+],
+[
+"Norway Mountain Run",
+"Front Side Terrain",
+null
+],
+[
+"Powerline",
+"Front Side Terrain",
+null
+],
+[
+"Dragon",
+"Front Side Terrain",
+null
+],
+[
+"East Gully",
+"Front Side Terrain",
+null
+],
+[
+"Falcon",
+"Front Side Terrain",
+null
+],
+[
+"Gentry",
+"Front Side Terrain",
+null
+],
+[
+"Half Moon Glades",
+"Front Side Terrain",
+null
+],
+[
+"Lenawee Parks",
+"Front Side Terrain",
+null
+],
+[
+"Mountain Goat Alley",
+"Front Side Terrain",
+null
+],
+[
+"West Gully",
+"Front Side Terrain",
+null
+],
+[
+"Cornice Run",
+"Front Side Terrain",
+null
+],
+[
+"King Cornice",
+"Front Side Terrain",
+null
+],
+[
+"Knolls",
+"Front Side Terrain",
+null
+],
+[
+"West Wall",
+"Front Side Terrain",
+null
+],
+[
+"Grizzly Road",
+"Pallavicini",
+null
+],
+[
+"North Chute",
+"Pallavicini",
+null
+],
+[
+"Nose",
+"Pallavicini",
+null
+],
+[
+"Powder Keg",
+"Pallavicini",
+null
+],
+[
+"Slalom Slope",
+"Pallavicini",
+null
+],
+[
+"South Chute",
+"Pallavicini",
+null
+],
+[
+"Wildcat",
+"Pallavicini",
+null
+],
+[
+"Challenger",
+"Pallavicini",
+null
+],
+[
+"No Name",
+"Pallavicini",
+null
+],
+[
+"Radical",
+"Pallavicini",
+null
+],
+[
+"Scudder",
+"Pallavicini",
+null
+],
+[
+"Exhibition",
+"Pallavicini",
+null
+],
+[
+"Standard",
+"Pallavicini",
+null
+],
+[
+"The Gulch",
+"Pallavicini",
+null
+],
+[
+"13 Cornices",
+"Pallavicini",
+null
+],
+[
+"Bear Trap",
+"Pallavicini",
+null
+],
+[
+"International",
+"Pallavicini",
+null
+],
+[
+"My Chute",
+"Pallavicini",
+null
+],
+[
+"North Glade",
+"Pallavicini",
+null
+],
+[
+"Roller Coaster",
+"Pallavicini",
+null
+],
+[
+"Timber Glades",
+"Pallavicini",
+null
+],
+[
+"East Avenue",
+"Pallavicini",
+null
+],
+[
+"Gauthier",
+"Pallavicini",
+null
+],
+[
+"Pali Wog",
+"Pallavicini",
+null
+],
+[
+"Rock Garden",
+"Pallavicini",
+null
+],
+[
+"1st Alley - David's Run",
+"Pallavicini",
+null
+],
+[
+"3rd Alley",
+"Pallavicini",
+null
+],
+[
+"Turbo",
+"Pallavicini",
+null
+],
+[
+"4th Alley (West Alley)",
+"Pallavicini",
+null
+],
+[
+"West Turbo",
+"Pallavicini",
+null
+],
+[
+"Pali Main Street",
+"Pallavicini",
+null
+],
+[
+"The Spine",
+"Pallavicini",
+null
+],
+[
+"Pali Face",
+"Pallavicini",
+null
+],
+[
+"2nd Alley",
+"Pallavicini",
+null
+],
+[
+"Loafer",
+"The Beavers",
+null
+],
+[
+"Davis",
+"The Beavers",
+null
+],
+[
+"Ptarmigan",
+"The Beavers",
+null
+],
+[
+"Marmot",
+"The Beavers",
+null
+],
+[
+"Beaver Bowl",
+"The Beavers",
+null
+],
+[
+"Alex",
+"The Beavers",
+null
+],
+[
+"Jaeger",
+"The Beavers",
+null
+],
+[
+"Digger",
+"The Beavers",
+null
+],
+[
+"Jetta",
+"The Beavers",
+null
+],
+[
+"Face Shot Gully",
+"The Beavers",
+null
+],
+[
+"Thick & Thin",
+"The Beavers",
+null
+],
+[
+"Bailey Bros.",
+"The Beavers",
+null
+],
+[
+"East Woods",
+"The Beavers",
+null
+],
+[
+"Castor",
+"The Beavers",
+null
+],
+[
+"Porcupine",
+"The Beavers",
+null
+],
+[
+"Faculty Club",
+"The Beavers",
+null
+],
+[
+"Hauk",
+"The Beavers",
+null
+],
+[
+"Drummond",
+"The Beavers",
+null
+],
+[
+"Pioneer Willy",
+"The Beavers",
+null
+],
+[
+"Glockenspiel Glade",
+"The Beavers",
+null
+],
+[
+"Bighorn",
+"The Beavers",
+null
+],
+[
+"Dreamcatcher",
+"The Beavers",
+null
+],
+[
+"Peaceful Valley",
+"The Beavers",
+null
+],
+[
+"The Last Waltz",
+"The Beavers",
+null
+],
+[
+"Tinker Toy",
+"The Beavers",
+null
+],
+[
+"Todd's Ridge",
+"The Beavers",
+null
+],
+[
+"Cooper",
+"Montezuma Bowl",
+null
+],
+[
+"Elk Meadows",
+"Montezuma Bowl",
+null
+],
+[
+"Independence",
+"Montezuma Bowl",
+null
+],
+[
+"Gentling",
+"Montezuma Bowl",
+null
+],
+[
+"Miner's Glade",
+"Montezuma Bowl",
+null
+],
+[
+"Ned's Cache",
+"Montezuma Bowl",
+null
+],
+[
+"Shining Light",
+"Montezuma Bowl",
+null
+],
+[
+"Bierstadt",
+"Montezuma Bowl",
+null
+],
+[
+"Grays",
+"Montezuma Bowl",
+null
+],
+[
+"Lightning Traverse",
+"Montezuma Bowl",
+null
+],
+[
+"Log Roll",
+"Montezuma Bowl",
+null
+],
+[
+"Mountain Goat Traverse",
+"Montezuma Bowl",
+null
+],
+[
+"Northern Spy",
+"Montezuma Bowl",
+null
+],
+[
+"Placer Junction",
+"Montezuma Bowl",
+null
+],
+[
+"Tieze's Claim",
+"Montezuma Bowl",
+null
+],
+[
+"Torreys",
+"Montezuma Bowl",
+null
+],
+[
+"Black Bear",
+"Montezuma Bowl",
+null
+],
+[
+"Durrance",
+"Montezuma Bowl",
+null
+],
+[
+"Groswold",
+"Montezuma Bowl",
+null
+],
+[
+"Long Chute",
+"Montezuma Bowl",
+null
+],
+[
+"Max",
+"Montezuma Bowl",
+null
+],
+[
+"Zuma Cornice",
+"Montezuma Bowl",
+null
+],
+[
+"Elephant's Trunk - Upper",
+"Montezuma Bowl",
+null
+],
+[
+"End Zone",
+"Montezuma Bowl",
+null
+],
+[
+"Eureka",
+"Montezuma Bowl",
+null
+],
+[
+"Davo's Glade",
+"Montezuma Bowl",
+null
+],
+[
+"Jump",
+"Montezuma Bowl",
+null
+],
+[
+"Montezuma's Revenge",
+"Montezuma Bowl",
+null
+],
+[
+"Schauffler",
+"Montezuma Bowl",
+null
+],
+[
+"Winning Card",
+"Montezuma Bowl",
+null
+],
+[
+"Black Forest",
+"Montezuma Bowl",
+null
+],
+[
+"Crags",
+"Montezuma Bowl",
+null
+],
+[
+"Davo",
+"Montezuma Bowl",
+null
+],
+[
+"Lightning Trees",
+"Montezuma Bowl",
+null
+],
+[
+"Elephant's Trunk - Lower",
+"Montezuma Bowl",
+null
+],
+[
+"SG 1",
+"Steep Gullies",
+null
+],
+[
+"SG 2",
+"Steep Gullies",
+null
+],
+[
+"SG 3",
+"Steep Gullies",
+null
+],
+[
+"SG 4",
+"Steep Gullies",
+null
+],
+[
+"SG 5",
+"Steep Gullies",
+null
+],
+[
+"The Cellar",
+"Steep Gullies",
+null
+],
+[
+"Bald Spot",
+"Steep Gullies",
+null
+],
+[
+"Janitors Only",
+"Steep Gullies",
+null
+],
+[
+"Christmas Trees",
+"Steep Gullies",
+null
+],
+[
+"Grand Portage",
+"Steep Gullies",
+null
+],
+[
+"Steep Gullies Hike Back Trail",
+"Steep Gullies",
+null
+],
+[
+"Below the Traverse",
+"East Wall",
+null
+],
+[
+"Land of the Giants",
+"East Wall",
+null
+],
+[
+"Corner Chute",
+"East Wall",
+null
+],
+[
+"North Pole",
+"East Wall",
+null
+],
+[
+"North Y Chute",
+"East Wall",
+null
+],
+[
+"Snorkel Nose",
+"East Wall",
+null
+],
+[
+"South Y Chute",
+"East Wall",
+null
+],
+[
+"Tree Chutes 1-8",
+"East Wall",
+null
+],
+[
+"Willy's Wide",
+"East Wall",
+null
+],
+[
+"Molly Hogan",
+"Molly Hogan",
+null
+],
+[
+"Pika Place",
+"Molly Hogan",
+null
+],
+[
+"Molly's Magic Carpet (Ghost)",
+"Molly Hogan",
+null
+],
+[
+"Uphill Access - Morning",
+"Molly Hogan",
+null
+],
+[
+"Uphill Access - Night",
+"Molly Hogan",
+null
+],
+[
+"Uphill Access - Open Hours",
+"Molly Hogan",
+null
+]
+]
+}

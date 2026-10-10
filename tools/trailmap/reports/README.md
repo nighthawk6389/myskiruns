@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole and Snowbird keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird and Arapahoe Basin keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -158,6 +158,14 @@ python3 -I tools/trailmap/resorts/snowbasin/mountain_report.py work/snowbasin/cc
 (name, difficulty, status), out of season too (all closed). A run under two lifts is listed under each.
 `resorts/alta/status_report.py` reads it into `report.json` (fetched 2026-10-10; the Nordic track left out by
 `resort.py`).
+
+## Arapahoe Basin
+
+Its snow report page (arapahoebasin.com/snow-report/, "Terrain & Lift Status") is server-rendered: per terrain area
+its lifts, under each the zones and under those the runs, with an open/closed icon each and a difficulty icon on only a
+handful. `fetch_page.cjs` saves it (`page.html`); `tools/trailmap/resorts/arapahoe-basin/status_report.py` reads the
+lists into `report.json` (151 rows on 2026-10-10, out of season: every run listed, closed; the area as the report's
+terrain area, the rating mostly null). The carpet and the uphill-access rows are no runs (`resort.py` leaves them out).
 
 ## Smugglers' Notch
 

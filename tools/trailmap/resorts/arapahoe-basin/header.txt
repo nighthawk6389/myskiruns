@@ -1,0 +1,26 @@
+// Arapahoe Basin's 2025-26 winter trail map PDF (arapahoebasin.com's
+// trail-maps page: one page, VistaMap's artwork), in two panels: the Frontside
+// & The Beavers (with Pallavicini, the Steep Gullies and the East Wall) and
+// Zuma Bowl (Montezuma Bowl), each its own painting under one vector layer.
+// Names are spelled as the resort's snow report spells them (report.json: its
+// Terrain & Lift Status, every run under its terrain area); its runs' ratings
+// are the map's symbols. The map draws a line (thin strokes in the trail
+// colours; Grand Portage, a skiing traverse, in black dashes) for the groomed
+// and gladed runs, the traverses and the Steep Gullies: those overlays are its
+// lines, named by the name printed in a gap of each or by its symbol, or
+// settled on crops (decisions.py). The other runs are a name printed down the
+// slope from its symbol with no line: the stretch along the name is the
+// overlay; the faces, chutes, gullies, glades, woods and trees with no line,
+// the names printed level (Land of the Giants, Lower East Wall, Pallavicini,
+// Bald Spot, The Cellar) and those on two lines are markers. CHISHOLM is
+// printed three times: Upper Chisholm Trail by the lodge, Lower Chisholm
+// Trail below. Elephant's Trunk is printed once (the report's Upper and
+// Lower): one trail. The Steep Gullies (SG 1 to 5) print no symbol: the
+// area's EX, double black; East Wall Traverse and Grand Portage, printed with
+// none, black by their lines. Printed but not in the report: The Landing
+// Strip, Cabin Glades, Pallavicini, Pali Cornice, Lower East Wall, East Wall
+// Traverse. Not on this map: Below the Traverse, Black Forest, Davo. The hike
+// back trails (uphill) and the hiking routes have no overlay. Area
+// elevations: each area's lift top (the 2025 Master Development Plan), the
+// East Wall the summit as printed (13,050 ft). x/y/baseY/width are unused
+// layout fields.

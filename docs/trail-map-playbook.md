@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's thirty-four resorts got their overlays, written so the next resort (or the next season of one of
+How the app's thirty-eight resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -62,7 +62,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 | the source gives you | route | done this way | start from |
 |---|---|---|---|
 | trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
-| vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels), Alta (rounded symbols, `pdf_symbols.py --rounded --max-square`) | Sunday River, Park City |
+| vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels), Alta (rounded symbols, `pdf_symbols.py --rounded --max-square`), Arapahoe Basin (one page of two paintings, two panels; most runs a name with no line: the stretch along it, `LABEL_LINE`) | Sunday River, Park City; Alta or Arapahoe Basin for rounded symbols |
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor, Northstar (white names haloed in the line's colour: the halo is the colour, and is dropped from the lines; one united outline for the runs that meet, cut at each junction) | Mt. Bachelor; Northstar for united outlines |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
 | a painting with no lines, names as text | every run traced along its painted cut by trace readers (Part 4) | Jay Peak | Jay Peak |
@@ -347,7 +347,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the thirty-four resorts settled, so the next ones come out alike:
+What the thirty-eight resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -647,6 +647,7 @@ give the same.
 | [Northstar](#northstar) | PDF lines as filled outlines holding several runs, names as white glyphs haloed in the line's colour | `pdf_outline_lines.py` centre lines, the halo's colour as the rating, cuts at each junction | `regen.sh` | one outline for several runs |
 | [Beaver Creek](#beaver-creek) | this season's map an image only (CDN); a 2023 vector export of the artwork | registration, glyph names, symbols on the lines (`SYMBOL_ON_LINE`) | `regen.sh` | a Vail Resorts map with no PDF this season |
 | [Big Bear](#big-bear) | three images, no PDF: one print drawing the lines, two painting the runs with none; three interactive maps | the print's own lines named by their symbols; the interactive maps' lines and stretches along the names elsewhere; `names.py` | `regen.sh` | an image-only map whose panels differ in kind |
+| [Arapahoe Basin](#arapahoe-basin) | one PDF page of two paintings under strokes and outlined black names; most runs a name and a symbol with no line | `pdf_resort.py` per panel, glyph sheets, the stretch along each name with no line (`LABEL_LINE`) | `regen.sh` | strokes and glyph names where many runs have no line |
 
 ## Killington
 
@@ -1920,6 +1921,54 @@ report's three areas too) · `tools/trailmap/resorts/big-bear/`.
 - **Checked:** every overlay on crops (`overlay_audit.py`, 9, 8 and 8 sheets, every cell read; Off Chute, Miracle
   Mile, Easy Street, Outlaw's Alley, The Gulch, the Cat Track, Bubble Gum and Snow Valley's six stubs fixed and read
   again); `compare.py` against the report; hover 95/95, 87/87, 93/93; the app check.
+
+## Arapahoe Basin
+
+148 trails (122 + 26) · Colorado · two panels: the Frontside & The Beavers, and Zuma Bowl · areas: the report's
+terrain areas (Front Side, Pallavicini, The Beavers, Montezuma Bowl, Steep Gullies, East Wall, Molly Hogan) ·
+`tools/trailmap/resorts/arapahoe-basin/`.
+
+- **Source:** the 2025-26 winter trail map PDF arapahoebasin.com's trail-maps page links ("a basin map 2025.pdf",
+  plain curl; it redirects to the site's CDN): one page, VistaMap's artwork, two paintings (5460x3617 and 3093x2616,
+  about 4.2 px/pt) under one vector layer, the Frontside below and Zuma Bowl in a frame at the top right. Each is a
+  panel, rendered at 3.5 px/pt over its clip (no matte: the paintings are sharp enough). Lines: strokes in black,
+  blue (two shades) and green, 0.5 pt on the Frontside and 0.75 pt in Zuma, for the groomed and gladed runs, the
+  traverses and the Steep Gullies; Grand Portage, a skiing traverse, 1.5 pt black dashes on a white casing; the hiking
+  routes (black lines with arrowheads and hiker icons), the hike-back trails and the summer activities' outlines are
+  thin black strokes too, settled as no trail. **Most runs have no line**: the open faces, chutes, gullies, glades
+  and woods are a name printed down the slope from its symbol. Names: outlined near-black glyphs on a white halo (no
+  text at all), read once on nine contact sheets (`letters.json`, 188 shapes). Symbols: fills with rounded corners,
+  diamonds 4.8 pt and 6.1 pt (Zuma), squares 4 to 6, circles 5 to 7; the EX double diamond is one outline with the
+  white E and X cut out (`pdf_symbols.py --rounded --max-square 8 --max-diamond 6.5`, fills under 3.5 pt left out).
+- **Route:** `prepare.py`: the glyphs collected and decoded for the whole page (`pdf_glyphs.py labels`), each panel
+  taking those inside its clip; strokes 0.45 to 0.8 pt (`extract_pdf_vectors.py`), then the 1.5 pt dashes
+  (`--append`); the legend and the Steep Gullies note excluded. `pdf_resort.py` per panel with `ALONG_FIRST`,
+  `ALONG_NEAREST`, `NO_STRETCH_BESIDE`, `SYMBOL_CENTRE`, `SYMBOL_REACH` 12 pt. The runs with no line printed down the
+  slope from their symbol get the stretch along the name (`LABEL_LINE`, 54 on the Frontside and 18 in Zuma); the
+  names printed level (Land of the Giants, Lower East Wall, Pallavicini, Bald Spot, The Cellar), on two lines, or
+  calling themselves chutes, glades, woods or trees with no line are markers. CHISHOLM, printed three times, is
+  Upper Chisholm Trail by the lodge and Lower Chisholm Trail below (`RENAME_AT`). The summer, base-area, deck,
+  elevation and area-title labels are dropped.
+- **Rebuild:** `tools/trailmap/resorts/arapahoe-basin/regen.sh` (10 s); it checks the PDF's SHA-256.
+- **Truth:** the trail report (`report.json`: the snow report page's Terrain & Lift Status, server-rendered, every
+  run under its terrain area, lift and zone; `status_report.py`, fetched 2026-10-10 out of season; the carpet and
+  uphill-access rows left out). It rates almost nothing (a handful of icons), so the ratings are the map's symbols.
+  Names as the report spells them: 1st Alley - David's Run for DAVID'S RUN, 4th Alley (West Alley), TB Glades for TB
+  GLADE, Davo's Glade for DAVOS GLADE. Elephant's Trunk, printed once, is one trail (the report's Upper and Lower).
+  The Steep Gullies (SG 1 to 5) print no symbol: the area's EX ("EX ONLY" in its note), double black; East Wall
+  Traverse and Grand Portage, printed with none, black by their lines (`DEFAULT_SYMBOL`). Printed but not in the
+  report: The Landing Strip, Cabin Glades, Pallavicini, Pali Cornice, Lower East Wall, East Wall Traverse (`AREA_OF`).
+  In the report and not printed: Below the Traverse, Black Forest, Davo. Areas' elevations: each one's lift top from
+  the resort's 2025 Master Development Plan (Table 1: Lenawee Express 12,465 ft, Pallavicini 12,115, Beavers 12,458,
+  Zuma 12,475, Molly Hogan 10,870), the East Wall's the summit as printed (13,050 ft).
+- **Decisions** (every piece settled on crops): the five Steep Gullies' lines by their SG labels beside them (SG 2's
+  in two pieces), Ramrod's line on below the Aerial Adventure Park, Ned's Cache's line on from Gentling's foot, Zuma
+  Cornice's line west along the ridge; Elephant's Trunk's stretch traced (printed on two lines). Not trails: the Via
+  Ferrata's and the Aerial Adventure Park's outlines, four hiking routes, the two hike-back trails, and the blue link
+  from the Pallavicini top to West Wall and Davis (no name printed).
+- **Checked:** every overlay on crops (`overlay_audit.py`, 13 and 4 sheets, every cell read); every diamond and EX
+  on `symbol_audit.py --mode diamonds`; `compare.py` against the report; hover 290/290 and 86/86; the app check;
+  a rebuild from an empty work folder, byte for byte.
 
 # Part 4. Methods in detail
 

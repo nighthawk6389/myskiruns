@@ -1,0 +1,43 @@
+{
+ "reviews": {
+  "long-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:38.000Z",
+   "by": "claude",
+   "labelAt": [
+    45.76,
+    33.32
+   ]
+  },
+  "placer-junction": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:38.000Z",
+   "by": "claude",
+   "labelAt": [
+    51.54,
+    52.98
+   ]
+  },
+  "lightning-trees": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:38.000Z",
+   "by": "claude",
+   "labelAt": [
+    45.06,
+    78.48
+   ]
+  }
+ }
+}

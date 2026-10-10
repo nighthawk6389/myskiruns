@@ -1,0 +1,303 @@
+{
+ "reviews": {
+  "norway-face": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    49.98,
+    22.13
+   ]
+  },
+  "corner-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    21.05,
+    22.43
+   ]
+  },
+  "south-y-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    13.29,
+    29.24
+   ]
+  },
+  "land-of-the-giants": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    28.26,
+    29.35
+   ]
+  },
+  "north-y-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    12.48,
+    31.09
+   ]
+  },
+  "jamies-face": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    45.19,
+    32.05
+   ]
+  },
+  "south-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    53.22,
+    34.86
+   ]
+  },
+  "east-gully": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    30.45,
+    34.9
+   ]
+  },
+  "face-shot-gully": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    63.43,
+    36.05
+   ]
+  },
+  "mountain-goat-alley": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    40.08,
+    37.05
+   ]
+  },
+  "north-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    50.97,
+    37.56
+   ]
+  },
+  "tree-chutes-1-8": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    11.38,
+    37.68
+   ]
+  },
+  "lower-east-wall": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    21.36,
+    37.9
+   ]
+  },
+  "east-woods": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    63.58,
+    38.53
+   ]
+  },
+  "pallavicini": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    59.04,
+    41.12
+   ]
+  },
+  "weasel-way": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    29.61,
+    48.41
+   ]
+  },
+  "my-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    48.66,
+    48.7
+   ]
+  },
+  "pali-face": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    58.86,
+    49.3
+   ]
+  },
+  "13-cornices": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    45.77,
+    52.18
+   ]
+  },
+  "bald-spot": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    80.56,
+    56.22
+   ]
+  },
+  "the-cellar": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.19,
+    58.48
+   ]
+  },
+  "christmas-trees": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    57.47,
+    73.43
+   ]
+  },
+  "pika-place": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:33:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    38.65,
+    77.2
+   ]
+  }
+ }
+}

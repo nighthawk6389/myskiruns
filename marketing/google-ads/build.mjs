@@ -481,6 +481,20 @@ const RESORT_ADS = {
     negatives: ['bird', 'junco', 'snowbirds', 'florida', 'arizona', 'rv', 'canadair', 'airshow', 'summer', 'hiking',
       'mountain coaster', 'oktoberfest', 'cliff lodge', 'hotel', 'lodging', 'jobs', 'wedding'],
   },
+  'arapahoe-basin': {
+    short: 'Arapahoe Basin',
+    path: 'A-Basin',
+    area: 'Pallavicini to Zuma Bowl',
+    // "a basin" alone is any basin: only with the ski area's names
+    names: ['arapahoe basin', 'a basin ski area', 'arapahoe basin ski area'],
+    keywords: [
+      ['a basin trail map', 'exact'],
+      ['a basin ski map', 'phrase'],
+    ],
+    // the summer (the via ferrata, the aerial park, the concerts), the season passes and the jobs
+    negatives: ['summer', 'via ferrata', 'aerial adventure park', 'zip line', 'concert', 'hiking', 'mountain bike',
+      'jobs', 'wedding', 'hotel', 'lodging', 'webcam', 'parking'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */
@@ -705,6 +719,9 @@ const PANEL_SITELINKS = {
   'big-bear': [
     { panel: 'bear-mountain', peak: 'bear-mountain', text: 'Bear Mountain Trail Map', line: 'Geronimo, Park Run, Central Park' },
     { panel: 'snow-valley', peak: 'snow-valley', text: 'Snow Valley Trail Map', line: 'Wine Rock to Thunder Mountain' },
+  ],
+  'arapahoe-basin': [
+    { panel: 'zuma-bowl', peak: 'montezuma-bowl', text: 'Zuma Bowl Trail Map', line: 'Zuma Cornice to Elk Meadows' },
   ],
 };
 

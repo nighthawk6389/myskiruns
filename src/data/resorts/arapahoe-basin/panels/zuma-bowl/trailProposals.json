@@ -1,0 +1,251 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "bierstadt": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "BIERSTADT",
+   "note": "along its printed name"
+  },
+  "black-bear": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "BLACK BEAR",
+   "note": "along its printed name"
+  },
+  "cooper": {
+   "polylines": [
+    9,
+    10,
+    21
+   ],
+   "confidence": "high",
+   "mapName": "COOPER",
+   "note": "symbol of Cooper | end of Cooper | along its printed name"
+  },
+  "crags": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "CRAGS",
+   "note": "along its printed name"
+  },
+  "davos-glade": {
+   "noLine": true,
+   "label": [
+    20.0,
+    55.08
+   ],
+   "confidence": "high"
+  },
+  "durrance": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "DURRANCE",
+   "note": "along its printed name"
+  },
+  "elephants-trunk": {
+   "polylines": [
+    6,
+    41
+   ],
+   "confidence": "high",
+   "mapName": "ELEPHANT'S TRUNK",
+   "note": "end of Elephant's Trunk | traced along the drawn line"
+  },
+  "elk-meadows": {
+   "polylines": [
+    1,
+    8,
+    30
+   ],
+   "confidence": "high",
+   "mapName": "ELK MEADOWS",
+   "note": "symbol of Elk Meadows | end of Elk Meadows | along its printed name"
+  },
+  "end-zone": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "END ZONE",
+   "note": "along its printed name"
+  },
+  "eureka": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "EUREKA",
+   "note": "along its printed name"
+  },
+  "gentling": {
+   "polylines": [
+    0,
+    20
+   ],
+   "confidence": "high",
+   "mapName": "GENTLING",
+   "note": "symbol of Gentling | along its printed name"
+  },
+  "grays": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "GRAYS",
+   "note": "along its printed name"
+  },
+  "groswold": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "GROSWOLD",
+   "note": "along its printed name"
+  },
+  "independence": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "INDEPENDENCE",
+   "note": "along its printed name"
+  },
+  "jump": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "JUMP",
+   "note": "along its printed name"
+  },
+  "lightning-traverse": {
+   "polylines": [
+    12,
+    13,
+    38
+   ],
+   "confidence": "high",
+   "mapName": "LIGHTNING TRAVERSE",
+   "note": "end of Lightning Traverse | symbol of Lightning Traverse | along its printed name"
+  },
+  "log-roll": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "LOG ROLL",
+   "note": "along its printed name"
+  },
+  "max": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "MAX",
+   "note": "along its printed name"
+  },
+  "miners-glade": {
+   "noLine": true,
+   "label": [
+    40.49,
+    54.32
+   ],
+   "confidence": "high"
+  },
+  "montezumas-revenge": {
+   "polylines": [
+    14,
+    15,
+    39
+   ],
+   "confidence": "high",
+   "mapName": "MONTEZUMA'S REVENGE",
+   "note": "end of Montezuma's Revenge | symbol of Montezuma's Revenge | along its printed name"
+  },
+  "mountain-goat-traverse": {
+   "polylines": [
+    2,
+    7,
+    17
+   ],
+   "confidence": "high",
+   "mapName": "MOUNTAIN GOAT TRAVERSE",
+   "note": "symbol of Mountain Goat Traverse | end of Mountain Goat Traverse | along its printed name"
+  },
+  "neds-cache": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "NED'S CACHE",
+   "note": "checked on a crop"
+  },
+  "northern-spy": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "NORTHERN SPY",
+   "note": "along its printed name"
+  },
+  "schauffler": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "SCHAUFFLER",
+   "note": "along its printed name"
+  },
+  "shining-light": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "SHINING LIGHT",
+   "note": "along its printed name"
+  },
+  "tiezes-claim": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "TIEZE'S CLAIM",
+   "note": "along its printed name"
+  },
+  "torreys": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "TORREYS",
+   "note": "along its printed name"
+  },
+  "winning-card": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "WINNING CARD",
+   "note": "along its printed name"
+  },
+  "zuma-cornice": {
+   "polylines": [
+    3,
+    5,
+    16
+   ],
+   "confidence": "high",
+   "mapName": "ZUMA CORNICE",
+   "note": "checked on a crop | end of Zuma Cornice | along its printed name"
+  }
+ }
+}

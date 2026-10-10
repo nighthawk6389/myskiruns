@@ -39,6 +39,18 @@ Browser checks of the app written along the way (offline, the first visit on a s
 | `shot.cjs` | Desktop and phone screenshots of one resort from a build, with page errors |
 | `shot_run.sh` | Serves the scratch build and runs shot.cjs |
 
+## arapahoe-basin
+
+Arapahoe Basin's triage view: the PDF's candidate trail stroke classes (the black, both blues and the green at the
+widths the tally showed) drawn in vivid colours over a faded render, which showed the 0.5 and 0.75 pt strokes are the
+runs and the hiking routes, and the second blue a shade of the first. Everything else was done with the maintained
+tools (`pdf_classes.py`, `grid_crop.py`, `overlay_audit.py`, `symbol_audit.py`); the decisions are in
+`resorts/arapahoe-basin/panels/<panel>/decisions.py`.
+
+| file | what it did |
+|---|---|
+| `arapahoe-basin/classes_view.py` | classes_view.py <pdf> <out.png> <scale> x0,y0,x1,y1: the chosen stroke classes drawn over the faded page |
+
 ## aspen-mountain
 
 Aspen Mountain's helpers for settling its long multi-run paths: each piece's junctions and printed names along it, by

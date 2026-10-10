@@ -1,0 +1,814 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "cabin-glades": {
+   "noLine": true,
+   "label": [
+    31.86,
+    35.51
+   ],
+   "confidence": "high"
+  },
+  "cornice-run": {
+   "polylines": [
+    16,
+    32,
+    83
+   ],
+   "confidence": "high",
+   "mapName": "CORNICE RUN",
+   "note": "symbol of Cornice Run | end of Cornice Run | along its printed name"
+  },
+  "dercums-gulch": {
+   "polylines": [
+    9,
+    10,
+    94
+   ],
+   "confidence": "high",
+   "mapName": "DERCUM'S GULCH",
+   "note": "symbol of Dercum's Gulch | end of Dercum's Gulch | along its printed name"
+  },
+  "dragon": {
+   "polylines": [
+    11,
+    12,
+    93
+   ],
+   "confidence": "high",
+   "mapName": "DRAGON",
+   "note": "symbol of Dragon | end of Dragon | along its printed name"
+  },
+  "falcon": {
+   "polylines": [
+    90
+   ],
+   "confidence": "high",
+   "mapName": "FALCON",
+   "note": "along its printed name"
+  },
+  "gentry": {
+   "polylines": [
+    100
+   ],
+   "confidence": "high",
+   "mapName": "GENTRY",
+   "note": "along its printed name"
+  },
+  "half-moon-glades": {
+   "noLine": true,
+   "label": [
+    34.39,
+    35.58
+   ],
+   "confidence": "high"
+  },
+  "high-noon": {
+   "polylines": [
+    38,
+    39,
+    141
+   ],
+   "confidence": "high",
+   "mapName": "HIGH NOON",
+   "note": "end of High Noon | symbol of High Noon | along its printed name"
+  },
+  "humbug": {
+   "polylines": [
+    80
+   ],
+   "confidence": "high",
+   "mapName": "HUMBUG",
+   "note": "along its printed name"
+  },
+  "king-cornice": {
+   "polylines": [
+    89
+   ],
+   "confidence": "high",
+   "mapName": "KING CORNICE",
+   "note": "along its printed name"
+  },
+  "knolls": {
+   "polylines": [
+    84
+   ],
+   "confidence": "high",
+   "mapName": "KNOLLS",
+   "note": "along its printed name"
+  },
+  "lenawee-face": {
+   "polylines": [
+    68,
+    69,
+    81
+   ],
+   "confidence": "high",
+   "mapName": "LENAWEE FACE",
+   "note": "symbol of Lenawee Face | end of Lenawee Face | along its printed name"
+  },
+  "lenawee-parks": {
+   "polylines": [
+    95
+   ],
+   "confidence": "high",
+   "mapName": "LENAWEE PARKS",
+   "note": "along its printed name"
+  },
+  "lower-chisholm-trail": {
+   "polylines": [
+    19,
+    20,
+    21,
+    149,
+    155
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CHISHOLM TRAIL",
+   "note": "symbol of Lower Chisholm Trail | end of Lower Chisholm Trail | along its printed name"
+  },
+  "lynx-lane": {
+   "polylines": [
+    121
+   ],
+   "confidence": "high",
+   "mapName": "LYNX LANE",
+   "note": "along its printed name"
+  },
+  "moose-hollow": {
+   "polylines": [
+    55,
+    159
+   ],
+   "confidence": "high",
+   "mapName": "MOOSE HOLLOW",
+   "note": "symbol of Moose Hollow | along its printed name"
+  },
+  "north-fork": {
+   "polylines": [
+    152
+   ],
+   "confidence": "high",
+   "mapName": "NORTH FORK",
+   "note": "along its printed name"
+  },
+  "norway-mountain-run": {
+   "polylines": [
+    85
+   ],
+   "confidence": "high",
+   "mapName": "NORWAY MOUNTAIN RUN",
+   "note": "along its printed name"
+  },
+  "powerline": {
+   "polylines": [
+    79
+   ],
+   "confidence": "high",
+   "mapName": "POWERLINE",
+   "note": "along its printed name"
+  },
+  "ramrod": {
+   "polylines": [
+    40,
+    41,
+    72,
+    151
+   ],
+   "confidence": "high",
+   "mapName": "RAMROD",
+   "note": "symbol of Ramrod | end of Ramrod | checked on a crop | along its printed name"
+  },
+  "sundance": {
+   "polylines": [
+    22,
+    23,
+    134
+   ],
+   "confidence": "high",
+   "mapName": "SUNDANCE",
+   "note": "symbol of Sundance | end of Sundance | along its printed name"
+  },
+  "tb-glades": {
+   "noLine": true,
+   "label": [
+    33.99,
+    44.5
+   ],
+   "confidence": "high"
+  },
+  "the-landing-strip": {
+   "polylines": [
+    5,
+    14,
+    15,
+    116,
+    136
+   ],
+   "confidence": "high",
+   "mapName": "THE LANDING STRIP",
+   "note": "end of The Landing Strip | symbol of The Landing Strip | along its printed name"
+  },
+  "upper-chisholm-trail": {
+   "polylines": [
+    24,
+    67,
+    128
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CHISHOLM TRAIL",
+   "note": "end of Upper Chisholm Trail | symbol of Upper Chisholm Trail | along its printed name"
+  },
+  "west-gully": {
+   "polylines": [
+    53,
+    54,
+    98
+   ],
+   "confidence": "high",
+   "mapName": "WEST GULLY",
+   "note": "end of West Gully | symbol of West Gully | along its printed name"
+  },
+  "west-wall": {
+   "polylines": [
+    48,
+    49,
+    92
+   ],
+   "confidence": "high",
+   "mapName": "WEST WALL",
+   "note": "end of West Wall | symbol of West Wall | along its printed name"
+  },
+  "wrangler": {
+   "polylines": [
+    13,
+    18,
+    157
+   ],
+   "confidence": "high",
+   "mapName": "WRANGLER",
+   "note": "symbol of Wrangler | end of Wrangler | along its printed name"
+  },
+  "1st-alley-davids-run": {
+   "polylines": [
+    135
+   ],
+   "confidence": "high",
+   "mapName": "1ST ALLEY - DAVID'S RUN",
+   "note": "along its printed name"
+  },
+  "2nd-alley": {
+   "polylines": [
+    138
+   ],
+   "confidence": "high",
+   "mapName": "2ND ALLEY",
+   "note": "along its printed name"
+  },
+  "3rd-alley": {
+   "polylines": [
+    146
+   ],
+   "confidence": "high",
+   "mapName": "3RD ALLEY",
+   "note": "along its printed name"
+  },
+  "4th-alley-west-alley": {
+   "polylines": [
+    148
+   ],
+   "confidence": "high",
+   "mapName": "4TH ALLEY (WEST ALLEY)",
+   "note": "along its printed name"
+  },
+  "bear-trap": {
+   "polylines": [
+    153
+   ],
+   "confidence": "high",
+   "mapName": "BEAR TRAP",
+   "note": "along its printed name"
+  },
+  "challenger": {
+   "polylines": [
+    120
+   ],
+   "confidence": "high",
+   "mapName": "CHALLENGER",
+   "note": "along its printed name"
+  },
+  "east-avenue": {
+   "polylines": [
+    127
+   ],
+   "confidence": "high",
+   "mapName": "EAST AVENUE",
+   "note": "along its printed name"
+  },
+  "exhibition": {
+   "polylines": [
+    144
+   ],
+   "confidence": "high",
+   "mapName": "EXHIBITION",
+   "note": "along its printed name"
+  },
+  "gauthier": {
+   "polylines": [
+    150
+   ],
+   "confidence": "high",
+   "mapName": "GAUTHIER",
+   "note": "along its printed name"
+  },
+  "grizzly-road": {
+   "polylines": [
+    6,
+    7,
+    114
+   ],
+   "confidence": "high",
+   "mapName": "GRIZZLY ROAD",
+   "note": "end of Grizzly Road | symbol of Grizzly Road | along its printed name"
+  },
+  "international": {
+   "polylines": [
+    44,
+    45,
+    142
+   ],
+   "confidence": "high",
+   "mapName": "INTERNATIONAL",
+   "note": "end of International | symbol of International | along its printed name"
+  },
+  "no-name": {
+   "polylines": [
+    130
+   ],
+   "confidence": "high",
+   "mapName": "NO NAME",
+   "note": "along its printed name"
+  },
+  "north-glade": {
+   "noLine": true,
+   "label": [
+    52.69,
+    45.91
+   ],
+   "confidence": "high"
+  },
+  "nose": {
+   "polylines": [
+    103
+   ],
+   "confidence": "high",
+   "mapName": "NOSE",
+   "note": "along its printed name"
+  },
+  "pali-cornice": {
+   "polylines": [
+    33,
+    34,
+    110
+   ],
+   "confidence": "high",
+   "mapName": "PALI CORNICE",
+   "note": "end of Pali Cornice | symbol of Pali Cornice | along its printed name"
+  },
+  "pali-main-street": {
+   "polylines": [
+    46,
+    47,
+    124
+   ],
+   "confidence": "high",
+   "mapName": "PALI MAIN STREET",
+   "note": "end of Pali Main Street | symbol of Pali Main Street | along its printed name"
+  },
+  "pali-wog": {
+   "polylines": [
+    8,
+    35,
+    154
+   ],
+   "confidence": "high",
+   "mapName": "PALI WOG",
+   "note": "end of Pali Wog | symbol of Pali Wog | along its printed name"
+  },
+  "powder-keg": {
+   "polylines": [
+    113
+   ],
+   "confidence": "high",
+   "mapName": "POWDER KEG",
+   "note": "along its printed name"
+  },
+  "radical": {
+   "polylines": [
+    126
+   ],
+   "confidence": "high",
+   "mapName": "RADICAL",
+   "note": "along its printed name"
+  },
+  "rock-garden": {
+   "polylines": [
+    145
+   ],
+   "confidence": "high",
+   "mapName": "ROCK GARDEN",
+   "note": "along its printed name"
+  },
+  "roller-coaster": {
+   "polylines": [
+    147
+   ],
+   "confidence": "high",
+   "mapName": "ROLLER COASTER",
+   "note": "along its printed name"
+  },
+  "scudder": {
+   "polylines": [
+    117
+   ],
+   "confidence": "high",
+   "mapName": "SCUDDER",
+   "note": "along its printed name"
+  },
+  "slalom-slope": {
+   "polylines": [
+    105
+   ],
+   "confidence": "high",
+   "mapName": "SLALOM SLOPE",
+   "note": "along its printed name"
+  },
+  "standard": {
+   "polylines": [
+    42,
+    43,
+    143
+   ],
+   "confidence": "high",
+   "mapName": "STANDARD",
+   "note": "end of Standard | symbol of Standard | along its printed name"
+  },
+  "the-gulch": {
+   "polylines": [
+    139
+   ],
+   "confidence": "high",
+   "mapName": "THE GULCH",
+   "note": "along its printed name"
+  },
+  "the-spine": {
+   "polylines": [
+    131
+   ],
+   "confidence": "high",
+   "mapName": "THE SPINE",
+   "note": "along its printed name"
+  },
+  "timber-glades": {
+   "noLine": true,
+   "label": [
+    55.0,
+    49.61
+   ],
+   "confidence": "high"
+  },
+  "turbo": {
+   "polylines": [
+    140
+   ],
+   "confidence": "high",
+   "mapName": "TURBO",
+   "note": "along its printed name"
+  },
+  "west-turbo": {
+   "polylines": [
+    137
+   ],
+   "confidence": "high",
+   "mapName": "WEST TURBO",
+   "note": "along its printed name"
+  },
+  "wildcat": {
+   "polylines": [
+    99
+   ],
+   "confidence": "high",
+   "mapName": "WILDCAT",
+   "note": "along its printed name"
+  },
+  "alex": {
+   "polylines": [
+    107
+   ],
+   "confidence": "high",
+   "mapName": "ALEX",
+   "note": "along its printed name"
+  },
+  "bailey-bros": {
+   "polylines": [
+    123
+   ],
+   "confidence": "high",
+   "mapName": "BAILEY BROS.",
+   "note": "along its printed name"
+  },
+  "beaver-bowl": {
+   "polylines": [
+    65,
+    66,
+    91
+   ],
+   "confidence": "high",
+   "mapName": "BEAVER BOWL",
+   "note": "end of Beaver Bowl | symbol of Beaver Bowl | along its printed name"
+  },
+  "bighorn": {
+   "polylines": [
+    106
+   ],
+   "confidence": "high",
+   "mapName": "BIGHORN",
+   "note": "along its printed name"
+  },
+  "castor": {
+   "polylines": [
+    129
+   ],
+   "confidence": "high",
+   "mapName": "CASTOR",
+   "note": "along its printed name"
+  },
+  "davis": {
+   "polylines": [
+    25,
+    26,
+    27,
+    97,
+    112
+   ],
+   "confidence": "high",
+   "mapName": "DAVIS",
+   "note": "end of Davis | symbol of Davis | along its printed name"
+  },
+  "digger": {
+   "polylines": [
+    104
+   ],
+   "confidence": "high",
+   "mapName": "DIGGER",
+   "note": "along its printed name"
+  },
+  "dreamcatcher": {
+   "polylines": [
+    102
+   ],
+   "confidence": "high",
+   "mapName": "DREAMCATCHER",
+   "note": "along its printed name"
+  },
+  "drummond": {
+   "polylines": [
+    132
+   ],
+   "confidence": "high",
+   "mapName": "DRUMMOND",
+   "note": "along its printed name"
+  },
+  "faculty-club": {
+   "polylines": [
+    115
+   ],
+   "confidence": "high",
+   "mapName": "FACULTY CLUB",
+   "note": "along its printed name"
+  },
+  "glockenspiel-glade": {
+   "noLine": true,
+   "label": [
+    86.27,
+    38.43
+   ],
+   "confidence": "high"
+  },
+  "hauk": {
+   "polylines": [
+    133
+   ],
+   "confidence": "high",
+   "mapName": "HAUK",
+   "note": "along its printed name"
+  },
+  "jaeger": {
+   "polylines": [
+    118
+   ],
+   "confidence": "high",
+   "mapName": "JAEGER",
+   "note": "along its printed name"
+  },
+  "jetta": {
+   "polylines": [
+    111
+   ],
+   "confidence": "high",
+   "mapName": "JETTA",
+   "note": "along its printed name"
+  },
+  "loafer": {
+   "polylines": [
+    28,
+    29,
+    30,
+    31,
+    76,
+    82,
+    119
+   ],
+   "confidence": "high",
+   "mapName": "LOAFER",
+   "note": "end of Loafer | symbol of Loafer | along its printed name"
+  },
+  "marmot": {
+   "polylines": [
+    63,
+    64,
+    88
+   ],
+   "confidence": "high",
+   "mapName": "MARMOT",
+   "note": "end of Marmot | symbol of Marmot | along its printed name"
+  },
+  "peaceful-valley": {
+   "polylines": [
+    96
+   ],
+   "confidence": "high",
+   "mapName": "PEACEFUL VALLEY",
+   "note": "along its printed name"
+  },
+  "pioneer-willy": {
+   "polylines": [
+    122
+   ],
+   "confidence": "high",
+   "mapName": "PIONEER WILLY",
+   "note": "along its printed name"
+  },
+  "porcupine": {
+   "polylines": [
+    125
+   ],
+   "confidence": "high",
+   "mapName": "PORCUPINE",
+   "note": "along its printed name"
+  },
+  "ptarmigan": {
+   "polylines": [
+    61,
+    62,
+    87
+   ],
+   "confidence": "high",
+   "mapName": "PTARMIGAN",
+   "note": "end of Ptarmigan | symbol of Ptarmigan | along its printed name"
+  },
+  "the-last-waltz": {
+   "polylines": [
+    70
+   ],
+   "confidence": "high",
+   "mapName": "THE LAST WALTZ",
+   "note": "along The Last Waltz"
+  },
+  "thick-thin": {
+   "polylines": [
+    108
+   ],
+   "confidence": "high",
+   "mapName": "THICK & THIN",
+   "note": "along its printed name"
+  },
+  "tinker-toy": {
+   "polylines": [
+    101
+   ],
+   "confidence": "high",
+   "mapName": "TINKER TOY",
+   "note": "along its printed name"
+  },
+  "todds-ridge": {
+   "polylines": [
+    109
+   ],
+   "confidence": "high",
+   "mapName": "TODD'S RIDGE",
+   "note": "along its printed name"
+  },
+  "grand-portage": {
+   "polylines": [
+    73,
+    74,
+    158
+   ],
+   "confidence": "high",
+   "mapName": "GRAND PORTAGE",
+   "note": "end of Grand Portage | along its printed name"
+  },
+  "janitors-only": {
+   "polylines": [
+    156
+   ],
+   "confidence": "high",
+   "mapName": "JANITORS ONLY",
+   "note": "along its printed name"
+  },
+  "sg-1": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "SG 1",
+   "note": "checked on a crop"
+  },
+  "sg-2": {
+   "polylines": [
+    2,
+    57
+   ],
+   "confidence": "high",
+   "mapName": "SG 2",
+   "note": "checked on a crop"
+  },
+  "sg-3": {
+   "polylines": [
+    58
+   ],
+   "confidence": "high",
+   "mapName": "SG 3",
+   "note": "checked on a crop"
+  },
+  "sg-4": {
+   "polylines": [
+    59
+   ],
+   "confidence": "high",
+   "mapName": "SG 4",
+   "note": "checked on a crop"
+  },
+  "sg-5": {
+   "polylines": [
+    60
+   ],
+   "confidence": "high",
+   "mapName": "SG 5",
+   "note": "checked on a crop"
+  },
+  "east-wall-traverse": {
+   "polylines": [
+    36,
+    37,
+    86
+   ],
+   "confidence": "high",
+   "mapName": "EAST WALL TRAVERSE",
+   "note": "end of East Wall Traverse | along its printed name"
+  },
+  "north-pole": {
+   "polylines": [
+    75
+   ],
+   "confidence": "high",
+   "mapName": "NORTH POLE",
+   "note": "along its printed name"
+  },
+  "snorkel-nose": {
+   "polylines": [
+    78
+   ],
+   "confidence": "high",
+   "mapName": "SNORKEL NOSE",
+   "note": "along its printed name"
+  },
+  "willys-wide": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "WILLY'S WIDE",
+   "note": "along its printed name"
+  },
+  "molly-hogan": {
+   "polylines": [
+    160
+   ],
+   "confidence": "high",
+   "mapName": "MOLLY HOGAN",
+   "note": "along its printed name"
+  }
+ }
+}
