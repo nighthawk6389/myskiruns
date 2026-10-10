@@ -1,0 +1,645 @@
+{
+ "_source": "Alta's lift and terrain status page (https://www.alta.com/lift-terrain-status, plain curl: window.Alta, every lift's runs), fetched 2026-10-10, out of season: every run listed closed",
+ "trails": [
+  [
+   "Patsey Marley",
+   "Sunnyside",
+   "Green"
+  ],
+  [
+   "Crooked Mile",
+   "Sunnyside",
+   "Green"
+  ],
+  [
+   "Sugar Way",
+   "Sunnyside",
+   "Green"
+  ],
+  [
+   "Dipsy Doodle",
+   "Sunnyside",
+   "Green"
+  ],
+  [
+   "Sunnyside",
+   "Sunnyside",
+   "Green"
+  ],
+  [
+   "Blue Bell",
+   "Sunnyside",
+   "Blue"
+  ],
+  [
+   "Home Run",
+   "Sunnyside",
+   "Green"
+  ],
+  [
+   "Race Hill",
+   "Sunnyside",
+   "Blue"
+  ],
+  [
+   "Vail Ridge",
+   "Sunnyside",
+   "Black"
+  ],
+  [
+   "Over the River",
+   "Sunnyside",
+   "Green"
+  ],
+  [
+   "Summer Road",
+   "Sunnyside",
+   "Green"
+  ],
+  [
+   "Challenger",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "No. 9 Express",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Sleepy Hollow",
+   "Supreme",
+   "Blue"
+  ],
+  [
+   "Upper Big Dipper",
+   "Supreme",
+   "Blue"
+  ],
+  [
+   "Big Dipper",
+   "Supreme",
+   "Blue"
+  ],
+  [
+   "Rock N' Roll",
+   "Supreme",
+   "Blue"
+  ],
+  [
+   "3 Bears",
+   "Supreme",
+   "Blue"
+  ],
+  [
+   "Vicky's",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Catherine's Outrun",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Last Chance",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Snowshoe Hill",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Sunset",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "So Long",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Sidewinder",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Back Forty",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Spiney Chutes",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Piney Glade",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Supreme Challenge",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Hammer Head",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Aviary",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Upper Sleepy Hollow",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "East Castle",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Castle Apron",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Devil's Castle",
+   "Supreme",
+   "Black"
+  ],
+  [
+   "Devil's Elbow",
+   "Sugarloaf",
+   "Blue"
+  ],
+  [
+   "Rollercoaster",
+   "Sugarloaf",
+   "Blue"
+  ],
+  [
+   "Razor Back",
+   "Sugarloaf",
+   "Blue"
+  ],
+  [
+   "Sugar Bowl",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Gravy Boat",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "East Baldy Traverse (EBT)",
+   "Sugarloaf",
+   "Blue"
+  ],
+  [
+   "Extrovert",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Amen",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Supreme Access",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Devil's Castle",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Cecret Chutes",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Cabin Hill",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Cecret Saddle",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Chartreuse",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Glory Gulch",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Running Dog Nose",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Glory Hole",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Yellow Trail",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "East Greeley",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "East Baldy",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Baldy Chutes",
+   "Sugarloaf",
+   "Black"
+  ],
+  [
+   "Rustler Four",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Devil's Way",
+   "Collins",
+   "Blue"
+  ],
+  [
+   "Collin's Face",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Race Course",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Mambo",
+   "Collins",
+   "Blue"
+  ],
+  [
+   "High Main Street",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Main Street",
+   "Collins",
+   "Blue"
+  ],
+  [
+   "Spring Valley",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Strawberry",
+   "Collins",
+   "Blue"
+  ],
+  [
+   "Sunspot",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Race Course Saddle",
+   "Collins",
+   "Blue"
+  ],
+  [
+   "Saddle Traverse",
+   "Collins",
+   "Blue"
+  ],
+  [
+   "Corkscrew",
+   "Collins",
+   "Blue"
+  ],
+  [
+   "Nina's",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Lower Rustler",
+   "Collins",
+   "Blue"
+  ],
+  [
+   "Meadow",
+   "Collins",
+   "Blue"
+  ],
+  [
+   "Nordic Ski Track - 3km",
+   "Collins",
+   "Green"
+  ],
+  [
+   "Lower Sunspot",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Yellow Trail",
+   "Collins",
+   "Black"
+  ],
+  [
+   "East Greeley",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Eddie's High Nowhere",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Gunsight",
+   "Collins",
+   "Black"
+  ],
+  [
+   "High Greeley",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Greeley Bowl",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Greeley Hill",
+   "Collins",
+   "Black"
+  ],
+  [
+   "High Traverse",
+   "Collins",
+   "Black"
+  ],
+  [
+   "High Race Course",
+   "Collins",
+   "Black"
+  ],
+  [
+   "High Sunspot",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Spruces",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Columbine",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Watson Line",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Annie's",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Jake's",
+   "Collins",
+   "Black"
+  ],
+  [
+   "No Name",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Santa Claus",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Jitterbug",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Christmas Tree",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Stone Crusher",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Lone Pine",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Alf's High Rustler",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Regal Chute",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Hourglass Chute",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Eagle's Nest",
+   "Collins",
+   "Black"
+  ],
+  [
+   "North Rustler",
+   "Collins",
+   "Black"
+  ],
+  [
+   "High Nowhere",
+   "Collins",
+   "Black"
+  ],
+  [
+   "180 Bend",
+   "Collins",
+   "Black"
+  ],
+  [
+   "West Rustler",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Fred's Slot",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Ballroom",
+   "Collins",
+   "Blue"
+  ],
+  [
+   "Harold's",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Shoulder Traverse",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Baldy Shoulder",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Tombstone",
+   "Collins",
+   "Black"
+  ],
+  [
+   "Collin's Face",
+   "Wildcat",
+   "Black"
+  ],
+  [
+   "Mambo",
+   "Wildcat",
+   "Blue"
+  ],
+  [
+   "Corkscrew",
+   "Wildcat",
+   "Blue"
+  ],
+  [
+   "Nina's",
+   "Wildcat",
+   "Black"
+  ],
+  [
+   "Lower Rustler",
+   "Wildcat",
+   "Blue"
+  ],
+  [
+   "Meadow",
+   "Wildcat",
+   "Blue"
+  ],
+  [
+   "Aggie's Alley",
+   "Wildcat",
+   "Blue"
+  ],
+  [
+   "Blitz",
+   "Wildcat",
+   "Black"
+  ],
+  [
+   "Taint",
+   "Wildcat",
+   "Blue"
+  ],
+  [
+   "Stimulation",
+   "Wildcat",
+   "Black"
+  ],
+  [
+   "Johnson's Warm-up",
+   "Wildcat",
+   "Black"
+  ],
+  [
+   "Punch Bowl",
+   "Wildcat",
+   "Black"
+  ],
+  [
+   "Baldy Shoulder",
+   "Wildcat",
+   "Black"
+  ],
+  [
+   "Bear Paw",
+   "Wildcat",
+   "Black"
+  ],
+  [
+   "Rock Gully",
+   "Wildcat",
+   "Black"
+  ],
+  [
+   "Wildcat Face",
+   "Wildcat",
+   "Black"
+  ],
+  [
+   "Wildcat Bowl",
+   "Wildcat",
+   "Black"
+  ],
+  [
+   "Westward Ho",
+   "Wildcat",
+   "Black"
+  ],
+  [
+   "Blackjack/Snowbird Return",
+   "Wildcat",
+   "Black"
+  ]
+ ]
+}

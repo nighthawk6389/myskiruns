@@ -83,7 +83,7 @@ def extract(a):
             ratio, size = r.width / r.height, r.height
             if typ == 'diamond' and 1.3 < ratio < 1.8:
                 typ = 'double-diamond'
-            elif not 0.8 < ratio < 1.25 or size > (a.max_diamond if typ == 'diamond' else 7):
+            elif not 0.8 < ratio < 1.25 or size > (a.max_diamond if typ == 'diamond' else a.max_square):
                 continue
         else:
             if kinds not in (['l'] * 3, ['l'] * 4, ['qu'], ['re']):
@@ -151,6 +151,8 @@ def main():
     ap.add_argument('--rounded', action='store_true',
                     help='symbols have rounded corners (lines and curves): squares and diamonds are judged by their '
                          'bounding box, and a diamond-coloured fill 1.3-1.8x as wide as tall is a double diamond')
+    ap.add_argument('--max-square', type=float, default=7,
+                    help='with --rounded: the largest square or circle, pt (Hunter\'s are under 7; Alta\'s 8)')
     ap.add_argument('--exclude', action='append', default=[], help='x0,y0,x1,y1 in PDF points, e.g. the legend')
     ap.add_argument('--out', required=True)
     ap.add_argument('--check', help="labels.json from seed_roster.py: compare with the trails' difficulties")

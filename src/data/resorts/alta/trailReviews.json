@@ -1,0 +1,446 @@
+{
+ "reviews": {
+  "baldy-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    78.81,
+    13.82
+   ]
+  },
+  "east-castle": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    25.39,
+    14.83
+   ]
+  },
+  "devils-castle": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    45.14,
+    15.42
+   ]
+  },
+  "east-baldy": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    66.45,
+    15.97
+   ]
+  },
+  "castle-apron": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    32.99,
+    18.19
+   ]
+  },
+  "baldy-shoulder": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    80.56,
+    26.34
+   ]
+  },
+  "high-race-course": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    63.24,
+    28.7
+   ]
+  },
+  "cecret-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    41.48,
+    28.95
+   ]
+  },
+  "glory-hole": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    55.64,
+    31.76
+   ]
+  },
+  "spruces": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    66.0,
+    31.85
+   ]
+  },
+  "high-sunspot": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    61.73,
+    32.86
+   ]
+  },
+  "yellow-trail": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    58.28,
+    33.19
+   ]
+  },
+  "cabin-hill": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    41.74,
+    34.16
+   ]
+  },
+  "last-chance": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    2.24,
+    34.24
+   ]
+  },
+  "spiney-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    16.4,
+    35.97
+   ]
+  },
+  "sunset": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    8.49,
+    36.18
+   ]
+  },
+  "vickys": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    28.27,
+    36.34
+   ]
+  },
+  "aviary": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    26.88,
+    36.68
+   ]
+  },
+  "hammer-head": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    26.22,
+    37.27
+   ]
+  },
+  "snowshoe-hill": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    5.45,
+    40.84
+   ]
+  },
+  "east-greeley": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    57.88,
+    41.51
+   ]
+  },
+  "supreme-access": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    39.69,
+    51.05
+   ]
+  },
+  "high-greeley": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    61.94,
+    54.62
+   ]
+  },
+  "annies": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    67.39,
+    54.83
+   ]
+  },
+  "jakes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    67.11,
+    56.89
+   ]
+  },
+  "no-name": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    68.07,
+    59.75
+   ]
+  },
+  "santa-claus": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    67.72,
+    61.09
+   ]
+  },
+  "greeley-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    62.55,
+    62.27
+   ]
+  },
+  "jitterbug": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    67.46,
+    62.44
+   ]
+  },
+  "west-rustler": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    71.19,
+    64.33
+   ]
+  },
+  "greeley-hill": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    55.85,
+    69.92
+   ]
+  },
+  "bear-paw": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    81.55,
+    71.22
+   ]
+  },
+  "vail-ridge": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    42.71,
+    73.82
+   ]
+  },
+  "summer-road": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T05:15:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    34.85,
+    86.51
+   ]
+  }
+ }
+}

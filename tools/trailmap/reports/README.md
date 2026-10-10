@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar and Schweitzer keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer and Alta keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -130,6 +130,13 @@ python3 -I tools/trailmap/resorts/snowbasin/mountain_report.py work/snowbasin/cc
 `https://skiwhitefish.com/snowreport/` (plain curl) lists every run under its lift, each with its difficulty icon
 (an inline SVG: a circle, a square, one diamond or two) and status, out of season too (all closed).
 `resorts/whitefish/snow_report.py` reads it into `report.json` (fetched 2026-10-10).
+
+## Alta
+
+`https://www.alta.com/lift-terrain-status` (plain curl) sets `window.Alta = {...}` in the page: every lift with its runs
+(name, difficulty, status), out of season too (all closed). A run under two lifts is listed under each.
+`resorts/alta/status_report.py` reads it into `report.json` (fetched 2026-10-10; the Nordic track left out by
+`resort.py`).
 
 ## Smugglers' Notch
 

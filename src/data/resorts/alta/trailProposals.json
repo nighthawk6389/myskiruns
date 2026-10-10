@@ -1,0 +1,823 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "blue-bell": {
+   "polylines": [
+    112,
+    113,
+    222
+   ],
+   "confidence": "high",
+   "mapName": "BLUE BELL",
+   "note": "end of Blue Bell | symbol of Blue Bell | along its printed name"
+  },
+  "crooked-mile": {
+   "polylines": [
+    120,
+    121,
+    235
+   ],
+   "confidence": "high",
+   "mapName": "CROOKED MILE",
+   "note": "end of Crooked Mile | symbol of Crooked Mile | along its printed name"
+  },
+  "dipsy-doodle": {
+   "polylines": [
+    118,
+    119,
+    218
+   ],
+   "confidence": "high",
+   "mapName": "DIPSY DOODLE",
+   "note": "end of Dipsy Doodle | symbol of Dipsy Doodle | along its printed name"
+  },
+  "home-run": {
+   "polylines": [
+    116,
+    117,
+    231
+   ],
+   "confidence": "high",
+   "mapName": "HOME RUN",
+   "note": "end of Home Run | symbol of Home Run | along its printed name"
+  },
+  "over-the-river": {
+   "polylines": [
+    145,
+    146,
+    217
+   ],
+   "confidence": "high",
+   "mapName": "OVER THE RIVER",
+   "note": "symbol of Over the River | end of Over the River | along its printed name"
+  },
+  "patsey-marley": {
+   "polylines": [
+    122,
+    123,
+    239
+   ],
+   "confidence": "high",
+   "mapName": "PATSEY MARLEY",
+   "note": "end of Patsey Marley | symbol of Patsey Marley | along its printed name"
+  },
+  "race-hill": {
+   "polylines": [
+    114,
+    115,
+    149,
+    226
+   ],
+   "confidence": "high",
+   "mapName": "RACE HILL",
+   "note": "end of Race Hill | symbol of Race Hill | checked on a crop | along its printed name"
+  },
+  "sugar-way": {
+   "polylines": [
+    110,
+    111,
+    219
+   ],
+   "confidence": "high",
+   "mapName": "SUGAR WAY",
+   "note": "end of Sugar Way | symbol of Sugar Way | along its printed name"
+  },
+  "sunnyside": {
+   "polylines": [
+    141,
+    142,
+    220
+   ],
+   "confidence": "high",
+   "mapName": "SUNNYSIDE",
+   "note": "end of Sunnyside | symbol of Sunnyside | along its printed name"
+  },
+  "3-bears": {
+   "polylines": [
+    130,
+    131
+   ],
+   "confidence": "high",
+   "mapName": "3 BEARS",
+   "note": "end of 3 Bears | symbol of 3 Bears"
+  },
+  "back-forty": {
+   "polylines": [
+    137,
+    138,
+    196
+   ],
+   "confidence": "high",
+   "mapName": "BACK FORTY",
+   "note": "end of Back Forty | symbol of Back Forty | along its printed name"
+  },
+  "big-dipper": {
+   "polylines": [
+    124,
+    125,
+    177
+   ],
+   "confidence": "high",
+   "mapName": "BIG DIPPER",
+   "note": "end of Big Dipper | symbol of Big Dipper | along its printed name"
+  },
+  "catherines-outrun": {
+   "polylines": [
+    147,
+    148,
+    216
+   ],
+   "confidence": "high",
+   "mapName": "CATHERINE'S OUTRUN",
+   "note": "end of Catherine's Outrun | along its printed name"
+  },
+  "challenger": {
+   "polylines": [
+    166,
+    167,
+    178
+   ],
+   "confidence": "high",
+   "mapName": "CHALLENGER",
+   "note": "end of Challenger | symbol of Challenger | along its printed name"
+  },
+  "no-9-express": {
+   "polylines": [
+    168,
+    169,
+    175
+   ],
+   "confidence": "high",
+   "mapName": "NO. 9 EXPRESS",
+   "note": "end of No. 9 Express | symbol of No. 9 Express | along its printed name"
+  },
+  "piney-glade": {
+   "noLine": true,
+   "label": [
+    16.54,
+    31.09
+   ],
+   "confidence": "high"
+  },
+  "rock-n-roll": {
+   "polylines": [
+    126,
+    127,
+    163,
+    184
+   ],
+   "confidence": "high",
+   "mapName": "ROCK N' ROLL",
+   "note": "end of Rock N' Roll | symbol of Rock N' Roll | checked on a crop | along its printed name"
+  },
+  "sidewinder": {
+   "polylines": [
+    135,
+    136,
+    182
+   ],
+   "confidence": "high",
+   "mapName": "SIDEWINDER",
+   "note": "end of Sidewinder | symbol of Sidewinder | along its printed name"
+  },
+  "sleepy-hollow": {
+   "polylines": [
+    165,
+    189
+   ],
+   "confidence": "high",
+   "mapName": "SLEEPY HOLLOW",
+   "note": "symbol of Sleepy Hollow | along its printed name"
+  },
+  "so-long": {
+   "polylines": [
+    133,
+    134,
+    187
+   ],
+   "confidence": "high",
+   "mapName": "SO LONG",
+   "note": "end of So Long | symbol of So Long | along its printed name"
+  },
+  "supreme-challenge": {
+   "polylines": [
+    139,
+    140
+   ],
+   "confidence": "high",
+   "mapName": "SUPREME CHALLENGE",
+   "note": "end of Supreme Challenge | symbol of Supreme Challenge"
+  },
+  "upper-big-dipper": {
+   "polylines": [
+    128,
+    129,
+    173
+   ],
+   "confidence": "high",
+   "mapName": "UPPER BIG DIPPER",
+   "note": "symbol of Upper Big Dipper | end of Upper Big Dipper | along its printed name"
+  },
+  "upper-sleepy-hollow": {
+   "polylines": [
+    170,
+    171,
+    176
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SLEEPY HOLLOW",
+   "note": "symbol of Upper Sleepy Hollow | end of Upper Sleepy Hollow | along its printed name"
+  },
+  "amen": {
+   "polylines": [
+    58,
+    59,
+    197
+   ],
+   "confidence": "high",
+   "mapName": "AMEN",
+   "note": "end of Amen | symbol of Amen | along its printed name"
+  },
+  "cecret-saddle": {
+   "polylines": [
+    54,
+    55,
+    180
+   ],
+   "confidence": "high",
+   "mapName": "CECRET SADDLE",
+   "note": "end of Cecret Saddle | symbol of Cecret Saddle | along its printed name"
+  },
+  "chartreuse": {
+   "polylines": [
+    62,
+    63,
+    211
+   ],
+   "confidence": "high",
+   "mapName": "CHARTREUSE",
+   "note": "symbol of Chartreuse | end of Chartreuse | along its printed name"
+  },
+  "devils-elbow": {
+   "polylines": [
+    155,
+    156,
+    157,
+    160,
+    174,
+    193
+   ],
+   "confidence": "high",
+   "mapName": "DEVIL'S ELBOW",
+   "note": "symbol of Devil's Elbow | end of Devil's Elbow | checked on a crop | along its printed name"
+  },
+  "east-baldy-traverse-ebt": {
+   "polylines": [
+    11,
+    12,
+    172
+   ],
+   "confidence": "high",
+   "mapName": "EAST BALDY TRAVERSE (EBT)",
+   "note": "end of East Baldy Traverse (EBT) | symbol of East Baldy Traverse (EBT) | along its printed name"
+  },
+  "extrovert": {
+   "polylines": [
+    60,
+    61,
+    206
+   ],
+   "confidence": "high",
+   "mapName": "EXTROVERT",
+   "note": "end of Extrovert | symbol of Extrovert | along its printed name"
+  },
+  "glory-gulch": {
+   "polylines": [
+    64,
+    65,
+    201
+   ],
+   "confidence": "high",
+   "mapName": "GLORY GULCH",
+   "note": "symbol of Glory Gulch | end of Glory Gulch | along its printed name"
+  },
+  "gravy-boat": {
+   "polylines": [
+    50,
+    51
+   ],
+   "confidence": "high",
+   "mapName": "GRAVY BOAT",
+   "note": "end of Gravy Boat | symbol of Gravy Boat"
+  },
+  "razor-back": {
+   "polylines": [
+    13,
+    14,
+    186
+   ],
+   "confidence": "high",
+   "mapName": "RAZOR BACK",
+   "note": "end of Razor Back | symbol of Razor Back | along its printed name"
+  },
+  "rollercoaster": {
+   "polylines": [
+    17,
+    18,
+    194
+   ],
+   "confidence": "high",
+   "mapName": "ROLLERCOASTER",
+   "note": "end of Rollercoaster | symbol of Rollercoaster | along its printed name"
+  },
+  "running-dog-nose": {
+   "polylines": [
+    56,
+    57
+   ],
+   "confidence": "high",
+   "mapName": "RUNNING DOG NOSE",
+   "note": "symbol of Running Dog Nose | checked on a crop"
+  },
+  "sugar-bowl": {
+   "polylines": [
+    52,
+    53
+   ],
+   "confidence": "high",
+   "mapName": "SUGAR BOWL",
+   "note": "checked on a crop | symbol of Sugar Bowl"
+  },
+  "180-bend": {
+   "polylines": [
+    93,
+    94,
+    245
+   ],
+   "confidence": "high",
+   "mapName": "180 BEND",
+   "note": "end of 180 Bend | symbol of 180 Bend | along its printed name"
+  },
+  "alfs-high-rustler": {
+   "polylines": [
+    95,
+    96,
+    228
+   ],
+   "confidence": "high",
+   "mapName": "ALF'S HIGH RUSTLER",
+   "note": "end of Alf's High Rustler | symbol of Alf's High Rustler | along its printed name"
+  },
+  "ballroom": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "BALLROOM",
+   "note": "checked on a crop"
+  },
+  "christmas-tree": {
+   "polylines": [
+    158,
+    159,
+    221
+   ],
+   "confidence": "high",
+   "mapName": "CHRISTMAS TREE",
+   "note": "symbol of Christmas Tree | end of Christmas Tree | along its printed name"
+  },
+  "collins-face": {
+   "polylines": [
+    72,
+    73,
+    236
+   ],
+   "confidence": "high",
+   "mapName": "COLLIN'S FACE",
+   "note": "end of Collin's Face | symbol of Collin's Face | along its printed name"
+  },
+  "columbine": {
+   "polylines": [
+    42,
+    44,
+    204
+   ],
+   "confidence": "high",
+   "mapName": "COLUMBINE",
+   "note": "symbol of Columbine | end of Columbine | along its printed name"
+  },
+  "corkscrew": {
+   "polylines": [
+    103,
+    104,
+    244
+   ],
+   "confidence": "high",
+   "mapName": "CORKSCREW",
+   "note": "end of Corkscrew | symbol of Corkscrew | along its printed name"
+  },
+  "devils-way": {
+   "polylines": [
+    15,
+    16,
+    179
+   ],
+   "confidence": "high",
+   "mapName": "DEVIL'S WAY",
+   "note": "end of Devil's Way | symbol of Devil's Way | along its printed name"
+  },
+  "eagles-nest": {
+   "polylines": [
+    87,
+    88,
+    229
+   ],
+   "confidence": "high",
+   "mapName": "EAGLE'S NEST",
+   "note": "end of Eagle's Nest | symbol of Eagle's Nest | along its printed name"
+  },
+  "eddies-high-nowhere": {
+   "polylines": [
+    48,
+    49,
+    208
+   ],
+   "confidence": "high",
+   "mapName": "EDDIE'S HIGH NOWHERE",
+   "note": "symbol of Eddie's High Nowhere | end of Eddie's High Nowhere | along its printed name"
+  },
+  "freds-slot": {
+   "polylines": [
+    2,
+    37,
+    191
+   ],
+   "confidence": "high",
+   "mapName": "FRED'S SLOT",
+   "note": "end of Fred's Slot | symbol of Fred's Slot | along its printed name"
+  },
+  "gunsight": {
+   "polylines": [
+    46,
+    47,
+    212
+   ],
+   "confidence": "high",
+   "mapName": "GUNSIGHT",
+   "note": "symbol of Gunsight | end of Gunsight | along its printed name"
+  },
+  "harolds": {
+   "polylines": [
+    150,
+    151,
+    181
+   ],
+   "confidence": "high",
+   "mapName": "HAROLD'S",
+   "note": "end of Harold's | symbol of Harold's | along its printed name"
+  },
+  "high-main-street": {
+   "polylines": [
+    23,
+    246
+   ],
+   "confidence": "high",
+   "mapName": "HIGH MAIN STREET",
+   "note": "symbol of High Main Street | traced along the drawn line"
+  },
+  "high-nowhere": {
+   "polylines": [
+    83,
+    84,
+    240
+   ],
+   "confidence": "high",
+   "mapName": "HIGH NOWHERE",
+   "note": "end of High Nowhere | symbol of High Nowhere | along its printed name"
+  },
+  "high-traverse": {
+   "polylines": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    202
+   ],
+   "confidence": "high",
+   "mapName": "HIGH TRAVERSE",
+   "note": "checked on a crop | symbol of High Traverse | end of High Traverse | along its printed name"
+  },
+  "lone-pine": {
+   "polylines": [
+    99,
+    100,
+    233
+   ],
+   "confidence": "high",
+   "mapName": "LONE PINE",
+   "note": "end of Lone Pine | symbol of Lone Pine | along its printed name"
+  },
+  "lower-rustler": {
+   "polylines": [
+    97,
+    98,
+    243
+   ],
+   "confidence": "high",
+   "mapName": "LOWER RUSTLER",
+   "note": "end of Lower Rustler | symbol of Lower Rustler | along its printed name"
+  },
+  "lower-sunspot": {
+   "polylines": [
+    153,
+    154,
+    213
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SUNSPOT",
+   "note": "end of Lower Sunspot | symbol of Lower Sunspot | along its printed name"
+  },
+  "main-street": {
+   "polylines": [
+    24,
+    25,
+    188
+   ],
+   "confidence": "high",
+   "mapName": "MAIN STREET",
+   "note": "end of Main Street | symbol of Main Street | along its printed name"
+  },
+  "mambo": {
+   "polylines": [
+    20,
+    21,
+    22,
+    185,
+    207
+   ],
+   "confidence": "high",
+   "mapName": "MAMBO",
+   "note": "symbol of Mambo | end of Mambo | along its printed name"
+  },
+  "meadow": {
+   "polylines": [
+    105,
+    106,
+    230
+   ],
+   "confidence": "high",
+   "mapName": "MEADOW",
+   "note": "end of Meadow | symbol of Meadow | along its printed name"
+  },
+  "ninas": {
+   "polylines": [
+    74,
+    164,
+    238
+   ],
+   "confidence": "high",
+   "mapName": "NINA'S",
+   "note": "symbol of Nina's | end of Nina's | along its printed name"
+  },
+  "north-rustler": {
+   "polylines": [
+    85,
+    86,
+    242
+   ],
+   "confidence": "high",
+   "mapName": "NORTH RUSTLER",
+   "note": "end of North Rustler | symbol of North Rustler | along its printed name"
+  },
+  "race-course": {
+   "polylines": [
+    38,
+    39,
+    192
+   ],
+   "confidence": "high",
+   "mapName": "RACE COURSE",
+   "note": "symbol of Race Course | checked on a crop | along its printed name"
+  },
+  "race-course-saddle": {
+   "polylines": [
+    109
+   ],
+   "confidence": "high",
+   "mapName": "RACE COURSE SADDLE",
+   "note": "checked on a crop"
+  },
+  "regal-chute": {
+   "polylines": [
+    90,
+    91,
+    225
+   ],
+   "confidence": "high",
+   "mapName": "REGAL CHUTE",
+   "note": "end of Regal Chute | symbol of Regal Chute | along its printed name"
+  },
+  "rustler-four": {
+   "polylines": [
+    89,
+    92,
+    237
+   ],
+   "confidence": "high",
+   "mapName": "RUSTLER FOUR",
+   "note": "checked on a crop | symbol of Rustler Four | along its printed name"
+  },
+  "saddle-traverse": {
+   "polylines": [
+    107,
+    108,
+    209
+   ],
+   "confidence": "high",
+   "mapName": "SADDLE TRAVERSE",
+   "note": "symbol of Saddle Traverse | end of Saddle Traverse | along its printed name"
+  },
+  "shoulder-traverse": {
+   "polylines": [
+    70,
+    71
+   ],
+   "confidence": "high",
+   "mapName": "SHOULDER TRAVERSE",
+   "note": "symbol of Shoulder Traverse | checked on a crop"
+  },
+  "spring-valley": {
+   "polylines": [
+    1,
+    36,
+    190
+   ],
+   "confidence": "high",
+   "mapName": "SPRING VALLEY",
+   "note": "end of Spring Valley | symbol of Spring Valley | along its printed name"
+  },
+  "stone-crusher": {
+   "polylines": [
+    101,
+    102,
+    224
+   ],
+   "confidence": "high",
+   "mapName": "STONE CRUSHER",
+   "note": "end of Stone Crusher | symbol of Stone Crusher | along its printed name"
+  },
+  "strawberry": {
+   "polylines": [
+    28,
+    29,
+    205
+   ],
+   "confidence": "high",
+   "mapName": "STRAWBERRY",
+   "note": "symbol of Strawberry | end of Strawberry | along its printed name"
+  },
+  "sunspot": {
+   "polylines": [
+    40,
+    41,
+    195
+   ],
+   "confidence": "high",
+   "mapName": "SUNSPOT",
+   "note": "symbol of Sunspot | end of Sunspot | along its printed name"
+  },
+  "tombstone": {
+   "polylines": [
+    152,
+    161,
+    183
+   ],
+   "confidence": "high",
+   "mapName": "TOMBSTONE",
+   "note": "end of Tombstone | symbol of Tombstone | along its printed name"
+  },
+  "watson-line": {
+   "polylines": [
+    43,
+    45,
+    210
+   ],
+   "confidence": "high",
+   "mapName": "WATSON LINE",
+   "note": "symbol of Watson Line | end of Watson Line | along its printed name"
+  },
+  "aggies-alley": {
+   "polylines": [
+    68,
+    69,
+    203
+   ],
+   "confidence": "high",
+   "mapName": "AGGIE'S ALLEY",
+   "note": "symbol of Aggie's Alley | end of Aggie's Alley | along its printed name"
+  },
+  "blackjack-snowbird-return": {
+   "polylines": [
+    143,
+    241
+   ],
+   "confidence": "high",
+   "mapName": "BLACKJACK/SNOWBIRD RETURN",
+   "note": "end of Blackjack/Snowbird Return | along its printed name"
+  },
+  "blitz": {
+   "polylines": [
+    66,
+    67,
+    198
+   ],
+   "confidence": "high",
+   "mapName": "BLITZ",
+   "note": "symbol of Blitz | end of Blitz | along its printed name"
+  },
+  "johnsons-warm-up": {
+   "polylines": [
+    32,
+    33,
+    214
+   ],
+   "confidence": "high",
+   "mapName": "JOHNSON'S WARM-UP",
+   "note": "symbol of Johnson's Warm-up | checked on a crop | along its printed name"
+  },
+  "punch-bowl": {
+   "polylines": [
+    34,
+    35,
+    215
+   ],
+   "confidence": "high",
+   "mapName": "PUNCH BOWL",
+   "note": "symbol of Punch Bowl | end of Punch Bowl | along its printed name"
+  },
+  "rock-gully": {
+   "polylines": [
+    75,
+    76,
+    223
+   ],
+   "confidence": "high",
+   "mapName": "ROCK GULLY",
+   "note": "end of Rock Gully | symbol of Rock Gully | along its printed name"
+  },
+  "stimulation": {
+   "polylines": [
+    30,
+    31,
+    200
+   ],
+   "confidence": "high",
+   "mapName": "STIMULATION",
+   "note": "symbol of Stimulation | end of Stimulation | along its printed name"
+  },
+  "taint": {
+   "polylines": [
+    26,
+    27,
+    199
+   ],
+   "confidence": "high",
+   "mapName": "TAINT",
+   "note": "symbol of Taint | end of Taint | along its printed name"
+  },
+  "westward-ho": {
+   "polylines": [
+    81,
+    82,
+    234
+   ],
+   "confidence": "high",
+   "mapName": "WESTWARD HO",
+   "note": "end of Westward Ho | symbol of Westward Ho | along its printed name"
+  },
+  "wildcat-bowl": {
+   "polylines": [
+    79,
+    80,
+    232
+   ],
+   "confidence": "high",
+   "mapName": "WILDCAT BOWL",
+   "note": "end of Wildcat Bowl | symbol of Wildcat Bowl | along its printed name"
+  },
+  "wildcat-face": {
+   "polylines": [
+    77,
+    78,
+    227
+   ],
+   "confidence": "high",
+   "mapName": "WILDCAT FACE",
+   "note": "end of Wildcat Face | symbol of Wildcat Face | along its printed name"
+  }
+ }
+}

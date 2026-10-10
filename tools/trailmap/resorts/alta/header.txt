@@ -1,0 +1,21 @@
+// Alta Ski Area's 2025-26 trail map (alta.com: the resort's PDF, one
+// Illustrator page; James Niehues's painting under a vector layer). The
+// lines are the PDF's own: black, blue and green strokes, solid, dashed (the
+// traverses) or dotted (the easier ways down); the controlled-access areas'
+// purple outlines are no runs. Names are outlined black glyphs printed along
+// their run's line, read from their shapes; the rating is the symbol by the
+// name (a rounded diamond, square or circle). Names are spelled as the
+// resort's lift and terrain status page spells them (report.json): 180 Bend,
+// 3 Bears, Santa Claus, East Baldy Traverse (EBT) for EBT to COLLINS, Spiney
+// Chutes for the SPINEY CHUTES AREA. The faces, bowls and chutes printed with
+// a diamond and no line, and the names on two lines with none, are markers at
+// their names (Baldy Chutes, the Greeleys, the Castles, Cecret Chutes and
+// others); High Main Street, printed on two lines in a gap of its line, has
+// that stretch traced. Lines no name is printed on that go on from a run
+// carry its name (the High Traverse's dashes along the ridge, Ballroom's and
+// Shoulder Traverse's, Devil's Elbow's and Rock N' Roll's dotted ways); the
+// links between ways down have no overlay. Ratings are the map's: Lower
+// Rustler's diamond and Sugar Way's square (the report has them blue and
+// green); Supreme Access, printed with no symbol, black as the report has it.
+// The report's Hourglass Chute is not printed. Areas: the report's lifts.
+// x/y/baseY/width are unused layout fields.

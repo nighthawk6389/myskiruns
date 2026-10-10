@@ -405,6 +405,16 @@ const RESORT_ADS = {
     negatives: ['summer', 'mountain bike', 'bike park', 'hiking', 'lake pend oreille', 'real estate', 'condo', 'jobs',
       'engineering', 'wedding'],
   },
+  alta: {
+    short: 'Alta',
+    path: 'Alta',
+    area: 'Collins to Supreme',
+    names: ['alta ski area', 'alta utah skiing', 'alta ski resort'],
+    keywords: [],
+    // the town, the lodges and the summer, the other Altas (the city, the Norwegian ski area, the car)
+    negatives: ['summer', 'wildflower', 'hiking', 'lodge', 'peruvian', 'jobs', 'real estate', 'norway', 'california',
+      'loma', 'snowboard'],
+  },
   northstar: {
     short: 'Northstar',
     path: 'Northstar',

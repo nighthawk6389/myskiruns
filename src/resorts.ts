@@ -168,6 +168,7 @@ export const RESORTS: ResortEntry[] = [
     { id: 'schweitzer-bowl', name: 'Schweitzer Bowl', paths: () => import('./data/resorts/schweitzer/panels/schweitzer-bowl/trailPaths.json') },
     { id: 'outback-bowl', name: 'Outback Bowl', paths: () => import('./data/resorts/schweitzer/panels/outback-bowl/trailPaths.json') },
   ], ['Schweitzer Mountain', 'Sandpoint']),
+  oneMap('alta', 'Alta', 'Utah', () => import('./data/resorts/alta/trails'), () => import('./data/resorts/alta/trailPaths.json'), ['Alta Ski Area', 'Little Cottonwood Canyon']),
   oneMap('northstar', 'Northstar', 'California', () => import('./data/resorts/northstar/trails'), () => import('./data/resorts/northstar/trailPaths.json'), ['Northstar California', 'Lake Tahoe', 'Truckee']),
 ];
 
