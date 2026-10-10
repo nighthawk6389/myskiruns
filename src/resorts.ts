@@ -164,6 +164,7 @@ export const RESORTS: ResortEntry[] = [
     { id: 'north-side', name: 'North Side', paths: () => import('./data/resorts/whitefish/panels/north-side/trailPaths.json') },
     { id: 'hellroaring', name: 'Hellroaring Basin', paths: () => import('./data/resorts/whitefish/panels/hellroaring/trailPaths.json') },
   ], ['Big Mountain', 'Whitefish']),
+  oneMap('northstar', 'Northstar', 'California', () => import('./data/resorts/northstar/trails'), () => import('./data/resorts/northstar/trailPaths.json'), ['Northstar California', 'Lake Tahoe', 'Truckee']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

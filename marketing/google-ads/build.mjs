@@ -395,6 +395,16 @@ const RESORT_ADS = {
     negatives: ['lake', 'fishing', 'fish', 'summer', 'mountain bike', 'bike park', 'hiking', 'zip line', 'jobs',
       'real estate'],
   },
+  northstar: {
+    short: 'Northstar',
+    path: 'Northstar',
+    area: 'Mt. Pluto to Lookout Mountain',
+    names: ['northstar california', 'northstar ski resort', 'northstar tahoe'],
+    keywords: [],
+    // the village's shops and the summer, the bike park, the golf course
+    negatives: ['summer', 'mountain bike', 'bike park', 'golf', 'hiking', 'real estate', 'condo', 'jobs', 'ritz carlton',
+      'ice skating'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

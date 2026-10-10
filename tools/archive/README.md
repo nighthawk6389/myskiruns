@@ -183,6 +183,20 @@ width is a line's) and `resorts/mt-bachelor/checks/missed.py`.
 | `mt-bachelor/near.py` | near.py <pdf> x,y ...: the PDF drawings whose box holds each map px point (Mt. Bachelor's clip and scale), with colour, width and drawing order |
 | `mt-bachelor/dbg_outline.py` | dbg_outline.py <pdf> <seqno>: one drawing's outlines through `pdf_outline_lines.py`'s centre line, width, length and area |
 
+## northstar
+
+Northstar's crops and checks for settling its pieces (the work folder `work/northstar`, after
+`pdf_resort.py northstar build`). Its outlines carry several runs each, so most decisions are cuts at junctions: these
+find them and key them by points that resolve to the right part. What the crops showed is in
+`resorts/northstar/decisions.py`.
+
+| file | what it did |
+|---|---|
+| `northstar/colour_crops.py` | colour_crops.py <work dir> <out dir> <zoom> x0,y0,x1,y1 ... (or `piece <id> ...`): review crops with each piece in its own bright colour, its id and name at its middle |
+| `northstar/sharp_turns.py` | sharp_turns.py [work dir] [max angle]: the points where a piece turns back sharply (a centre line traced from one run's line into another's), candidate cuts |
+| `northstar/on_points.py` | on_points.py <piece id> x,y ...: each cut's point on the piece and the points 30 px either side, with the distance to the nearest other piece (`--at <id>[:fraction]` for a point on a piece after the cuts) |
+| `northstar/overlaps.py` | overlaps.py [work dir]: stretches where two differently named pieces run along each other (a doubled outline, a shared foot) |
+
 ## okemo
 
 The helpers Okemo's six tile readers and five trace readers wrote for themselves in their work folders (crops, symbol sheets, writing their result files, an OpenStreetMap fit), kept as written. Okemo's pipeline and the readings themselves are in `tools/trailmap/resorts/okemo/`.

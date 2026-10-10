@@ -1,0 +1,26 @@
+// Northstar's 2025-26 trail map (northstarcalifornia.com: the resort's PDF,
+// page 1; Alex Tait's painting under a vector layer). The lines are the
+// PDF's own: every trail line is a filled outline in blue, black or green,
+// taken along its middle; the names are white capitals printed on their line,
+// each letter haloed in the line's colour, and the rating is the symbol on
+// the line by the name, else that colour. Names are spelled as the trail
+// report spells them (report.json: the terrain feed, February 2026). One
+// outline often carries several runs: decisions.py cuts it where each starts
+// (the summits of Mt. Pluto and Lookout Mountain, the Grouse Alleys and The
+// Flume, Axe Handle and Stump Alley, the Ridges, Lookout Road and Drifter,
+// the Pioneers, Boondocks and Lookout Bypass, Skid Trail, Lumberjack and the
+// Main Streets, Gateway and Timber Line, Iron Horse and Why Not), and where a
+// run's outline goes on along another's line (Northern Lights' down Christmas
+// Tree's, Stump Alley's down Luggi's, Castle Peak's down Drifter's) leaves
+// that line to the run printed on it. Lines no name is printed on that go on
+// from a run carry its name (Iron Horse from the summit and on to the
+// Backside Express, Prosser's summit line, Christmas Tree's two run-outs,
+// Timber Line to its lift); the links between runs and the label leader
+// lines have no overlay, nor has the line below The Chute's foot, which has a
+// square of its own and no name (perhaps the report's Lower Chute). Cowboy
+// Pass and Bearly are their labels. The terrain parks (orange pills), the
+// glades, the Kids Adventure Zone's four (numbered signs, named in its box)
+// and Carpet Bowl (in the Mid-Mountain inset) are markers at their names;
+// Sidewinder has its run-out line. The report's Coyote Crossing, Drifter
+// Connector and Lower Chute are not printed. Areas: the report's.
+// x/y/baseY/width are unused layout fields.

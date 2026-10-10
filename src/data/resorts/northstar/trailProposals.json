@@ -1,0 +1,731 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "axe-handle": {
+   "polylines": [
+    74,
+    101
+   ],
+   "confidence": "high",
+   "mapName": "AXE HANDLE",
+   "note": "along Axe Handle | checked on a crop"
+  },
+  "cascades": {
+   "polylines": [
+    73
+   ],
+   "confidence": "high",
+   "mapName": "CASCADES",
+   "note": "along Cascades"
+  },
+  "cats-face": {
+   "polylines": [
+    76
+   ],
+   "confidence": "high",
+   "mapName": "CAT'S FACE",
+   "note": "along Cat's Face"
+  },
+  "crosscut": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "CROSSCUT",
+   "note": "along Crosscut"
+  },
+  "delight": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "DELIGHT",
+   "note": "along Delight"
+  },
+  "drop-off": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "DROP OFF",
+   "note": "along Drop Off"
+  },
+  "dutchman": {
+   "polylines": [
+    72
+   ],
+   "confidence": "high",
+   "mapName": "DUTCHMAN",
+   "note": "along Dutchman"
+  },
+  "east-ridge": {
+   "polylines": [
+    71
+   ],
+   "confidence": "high",
+   "mapName": "EAST RIDGE",
+   "note": "along East Ridge"
+  },
+  "flying-squirrel": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "FLYING SQUIRREL",
+   "note": "along Flying Squirrel"
+  },
+  "hornets-nest": {
+   "polylines": [
+    58
+   ],
+   "confidence": "high",
+   "mapName": "HORNET'S NEST",
+   "note": "along Hornet's Nest"
+  },
+  "jibboom": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "JIBBOOM",
+   "note": "along Jibboom"
+  },
+  "loggers-loop": {
+   "polylines": [
+    62
+   ],
+   "confidence": "high",
+   "mapName": "LOGGER'S LOOP",
+   "note": "along Logger's Loop"
+  },
+  "lookout-road": {
+   "polylines": [
+    105
+   ],
+   "confidence": "high",
+   "mapName": "LOOKOUT ROAD",
+   "note": "along Lookout Road"
+  },
+  "lower-grouse-alley": {
+   "polylines": [
+    102
+   ],
+   "confidence": "high",
+   "mapName": "LOWER GROUSE ALLEY",
+   "note": "along Lower Grouse Alley"
+  },
+  "lower-main-street": {
+   "polylines": [
+    117
+   ],
+   "confidence": "high",
+   "mapName": "LOWER MAIN STREET",
+   "note": "along Lower Main Street"
+  },
+  "luggis": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "LUGGI'S",
+   "note": "along Luggi's"
+  },
+  "lumberjack": {
+   "polylines": [
+    116
+   ],
+   "confidence": "high",
+   "mapName": "LUMBERJACK",
+   "note": "along Lumberjack"
+  },
+  "powder-bowl": {
+   "polylines": [
+    54,
+    55
+   ],
+   "confidence": "high",
+   "mapName": "POWDER BOWL",
+   "note": "along Powder Bowl"
+  },
+  "sawmill-glade": {
+   "noLine": true,
+   "label": [
+    9.36,
+    37.95
+   ],
+   "confidence": "high"
+  },
+  "sidewinder": {
+   "polylines": [
+    95
+   ],
+   "confidence": "high",
+   "mapName": "SIDEWINDER",
+   "note": "checked on a crop"
+  },
+  "skid-trail": {
+   "polylines": [
+    61
+   ],
+   "confidence": "high",
+   "mapName": "SKID TRAIL",
+   "note": "along Skid Trail"
+  },
+  "spring-board": {
+   "polylines": [
+    98
+   ],
+   "confidence": "high",
+   "mapName": "SPRING BOARD",
+   "note": "along Spring Board"
+  },
+  "stump-alley": {
+   "polylines": [
+    100
+   ],
+   "confidence": "high",
+   "mapName": "STUMP ALLEY",
+   "note": "along Stump Alley"
+  },
+  "surprise": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "SURPRISE",
+   "note": "along Surprise"
+  },
+  "the-chute": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "THE CHUTE",
+   "note": "along The Chute"
+  },
+  "the-flume": {
+   "polylines": [
+    103
+   ],
+   "confidence": "high",
+   "mapName": "THE FLUME",
+   "note": "along The Flume"
+  },
+  "the-plunge": {
+   "polylines": [
+    97
+   ],
+   "confidence": "high",
+   "mapName": "THE PLUNGE",
+   "note": "along The Plunge"
+  },
+  "toninis": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "TONINI'S",
+   "note": "along Tonini's"
+  },
+  "upper-grouse-alley": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "UPPER GROUSE ALLEY",
+   "note": "along Upper Grouse Alley"
+  },
+  "upper-jibboom": {
+   "polylines": [
+    119
+   ],
+   "confidence": "high",
+   "mapName": "UPPER JIBBOOM",
+   "note": "along Upper Jibboom"
+  },
+  "upper-main-street": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "UPPER MAIN STREET",
+   "note": "along Upper Main Street"
+  },
+  "west-ridge": {
+   "polylines": [
+    104
+   ],
+   "confidence": "high",
+   "mapName": "WEST RIDGE",
+   "note": "along West Ridge"
+  },
+  "backdoor": {
+   "polylines": [
+    6,
+    7,
+    45
+   ],
+   "confidence": "high",
+   "mapName": "BACKDOOR",
+   "note": "symbol of Backdoor | along Backdoor"
+  },
+  "burnout": {
+   "polylines": [
+    99
+   ],
+   "confidence": "high",
+   "mapName": "BURNOUT",
+   "note": "along Burnout"
+  },
+  "castle-peak": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "CASTLE PEAK",
+   "note": "along Castle Peak"
+  },
+  "challenger": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "CHALLENGER",
+   "note": "along Challenger"
+  },
+  "down-under": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "DOWN UNDER",
+   "note": "along Down Under"
+  },
+  "drifter": {
+   "polylines": [
+    70,
+    106
+   ],
+   "confidence": "high",
+   "mapName": "DRIFTER",
+   "note": "along Drifter"
+  },
+  "follow-me": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "FOLLOW ME",
+   "note": "along Follow Me"
+  },
+  "iron-horse": {
+   "polylines": [
+    4,
+    5,
+    40,
+    124
+   ],
+   "confidence": "high",
+   "mapName": "IRON HORSE",
+   "note": "checked on a crop | along Iron Horse"
+  },
+  "lower-burnout": {
+   "polylines": [
+    90
+   ],
+   "confidence": "high",
+   "mapName": "LOWER BURNOUT",
+   "note": "along Lower Burnout"
+  },
+  "monument-glade": {
+   "noLine": true,
+   "label": [
+    52.79,
+    15.73
+   ],
+   "confidence": "high"
+  },
+  "polaris": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "POLARIS",
+   "note": "along Polaris"
+  },
+  "promised-land": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "PROMISED LAND",
+   "note": "along Promised Land"
+  },
+  "rail-splitter": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "RAIL SPLITTER",
+   "note": "along Rail Splitter"
+  },
+  "sierra-grande": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "SIERRA GRANDE",
+   "note": "along Sierra Grande"
+  },
+  "the-islands": {
+   "polylines": [
+    107
+   ],
+   "confidence": "high",
+   "mapName": "THE ISLANDS",
+   "note": "along The Islands"
+  },
+  "the-rapids": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "THE RAPIDS",
+   "note": "along The Rapids"
+  },
+  "why-not": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "WHY NOT",
+   "note": "along Why Not"
+  },
+  "boondocks": {
+   "polylines": [
+    65,
+    113
+   ],
+   "confidence": "high",
+   "mapName": "BOONDOCKS",
+   "note": "along Boondocks"
+  },
+  "christmas-tree": {
+   "polylines": [
+    20,
+    66,
+    126
+   ],
+   "confidence": "high",
+   "mapName": "CHRISTMAS TREE",
+   "note": "checked on a crop | along Christmas Tree"
+  },
+  "cowboy-pass": {
+   "polylines": [
+    127
+   ],
+   "confidence": "high",
+   "mapName": "COWBOY PASS",
+   "note": "along its printed name"
+  },
+  "deerskin": {
+   "polylines": [
+    8,
+    29
+   ],
+   "confidence": "high",
+   "mapName": "DEERSKIN",
+   "note": "end of Deerskin | along Deerskin"
+  },
+  "easy-street": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "along Easy Street"
+  },
+  "gateway": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "GATEWAY",
+   "note": "along Gateway"
+  },
+  "goldmine": {
+   "polylines": [
+    67,
+    69
+   ],
+   "confidence": "high",
+   "mapName": "GOLDMINE",
+   "note": "end of Goldmine | along Goldmine"
+  },
+  "home-run": {
+   "polylines": [
+    17,
+    22,
+    121
+   ],
+   "confidence": "high",
+   "mapName": "HOME RUN",
+   "note": "along Home Run | continuation"
+  },
+  "hoot-owl": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "HOOT OWL",
+   "note": "along Hoot Owl"
+  },
+  "lower-lions-way": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LION'S WAY",
+   "note": "checked on a crop"
+  },
+  "lower-pioneer": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "LOWER PIONEER",
+   "note": "along Lower Pioneer"
+  },
+  "northern-lights": {
+   "polylines": [
+    68
+   ],
+   "confidence": "high",
+   "mapName": "NORTHERN LIGHTS",
+   "note": "along Northern Lights"
+  },
+  "overland-trail": {
+   "polylines": [
+    123
+   ],
+   "confidence": "high",
+   "mapName": "OVERLAND TRAIL",
+   "note": "checked on a crop"
+  },
+  "sodergrens": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "SODERGREN'S",
+   "note": "along Sodergren's"
+  },
+  "the-face": {
+   "polylines": [
+    64
+   ],
+   "confidence": "high",
+   "mapName": "THE FACE",
+   "note": "along The Face"
+  },
+  "the-glades": {
+   "polylines": [
+    42,
+    83
+   ],
+   "confidence": "high",
+   "mapName": "THE GLADES",
+   "note": "symbol of The Glades | along The Glades"
+  },
+  "the-gulch": {
+   "polylines": [
+    27,
+    32
+   ],
+   "confidence": "high",
+   "mapName": "THE GULCH",
+   "note": "along The Gulch | symbol of The Gulch"
+  },
+  "the-gully": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "THE GULLY",
+   "note": "along The Gully"
+  },
+  "timberline": {
+   "polylines": [
+    87,
+    120
+   ],
+   "confidence": "high",
+   "mapName": "TIMBERLINE",
+   "note": "checked on a crop | along Timberline"
+  },
+  "upper-lions-way": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LION'S WAY",
+   "note": "end of Upper Lion's Way"
+  },
+  "upper-pioneer": {
+   "polylines": [
+    115
+   ],
+   "confidence": "high",
+   "mapName": "UPPER PIONEER",
+   "note": "along Upper Pioneer"
+  },
+  "wood-cutter": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "WOOD CUTTER",
+   "note": "along Wood Cutter"
+  },
+  "boca": {
+   "polylines": [
+    108
+   ],
+   "confidence": "high",
+   "mapName": "BOCA",
+   "note": "along Boca"
+  },
+  "gooseneck": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "GOOSENECK",
+   "note": "along Gooseneck"
+  },
+  "lookout-bypass": {
+   "polylines": [
+    63,
+    114
+   ],
+   "confidence": "high",
+   "mapName": "LOOKOUT BYPASS",
+   "note": "along Lookout Bypass"
+  },
+  "lookout-glade": {
+   "noLine": true,
+   "label": [
+    62.07,
+    59.3
+   ],
+   "confidence": "high"
+  },
+  "martis": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "MARTIS",
+   "note": "along Martis"
+  },
+  "prosser": {
+   "polylines": [
+    109,
+    110
+   ],
+   "confidence": "high",
+   "mapName": "PROSSER",
+   "note": "checked on a crop | along Prosser"
+  },
+  "schwarzstrasse": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "SCHWARZSTRASSE",
+   "note": "along Schwarzstrasse"
+  },
+  "stampede": {
+   "polylines": [
+    28,
+    111
+   ],
+   "confidence": "high",
+   "mapName": "STAMPEDE",
+   "note": "along Stampede"
+  },
+  "sugar-pine-glade": {
+   "noLine": true,
+   "label": [
+    45.36,
+    53.0
+   ],
+   "confidence": "high"
+  },
+  "the-camp-glade": {
+   "noLine": true,
+   "label": [
+    38.65,
+    74.26
+   ],
+   "confidence": "high"
+  },
+  "washoe": {
+   "polylines": [
+    2,
+    112
+   ],
+   "confidence": "high",
+   "mapName": "WASHOE",
+   "note": "along Washoe"
+  },
+  "webber": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "WEBBER",
+   "note": "along Webber"
+  },
+  "bearly": {
+   "polylines": [
+    128
+   ],
+   "confidence": "high",
+   "mapName": "BEARLY",
+   "note": "along its printed name"
+  },
+  "condo-run": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "CONDO RUN",
+   "note": "along Condo Run"
+  },
+  "coyote-fork": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "COYOTE FORK",
+   "note": "along Coyote Fork"
+  },
+  "the-woods": {
+   "polylines": [
+    59
+   ],
+   "confidence": "high",
+   "mapName": "THE WOODS",
+   "note": "along The Woods"
+  },
+  "village-run": {
+   "polylines": [
+    118
+   ],
+   "confidence": "high",
+   "mapName": "VILLAGE RUN",
+   "note": "along Village Run"
+  }
+ }
+}

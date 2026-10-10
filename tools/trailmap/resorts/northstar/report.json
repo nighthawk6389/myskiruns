@@ -1,0 +1,520 @@
+{
+ "_source": "Northstar's terrain feed (FR.TerrainStatusFeed, the trail widget's copy) on https://www.northstarcalifornia.com/the-mountain/mountain-conditions/terrain-and-lift-status as Common Crawl captured it on 2026-02-19 (CC-MAIN-2026-08; out of season the feed lists no trails)",
+ "trails": [
+  [
+   "Lookout Bypass",
+   "Lookout Mountain",
+   "Blue"
+  ],
+  [
+   "Schwarzstrasse",
+   "Lookout Mountain",
+   "Blue"
+  ],
+  [
+   "Washoe",
+   "Lookout Mountain",
+   "Blue"
+  ],
+  [
+   "Boca",
+   "Lookout Mountain",
+   "Black"
+  ],
+  [
+   "Gooseneck",
+   "Lookout Mountain",
+   "Black"
+  ],
+  [
+   "Lookout Glade",
+   "Lookout Mountain",
+   "Black"
+  ],
+  [
+   "Martis",
+   "Lookout Mountain",
+   "Black"
+  ],
+  [
+   "Prosser",
+   "Lookout Mountain",
+   "Black"
+  ],
+  [
+   "Stampede",
+   "Lookout Mountain",
+   "Black"
+  ],
+  [
+   "Sugar Pine Glade",
+   "Lookout Mountain",
+   "Black"
+  ],
+  [
+   "The Camp Glade",
+   "Lookout Mountain",
+   "Black"
+  ],
+  [
+   "Webber",
+   "Lookout Mountain",
+   "Black"
+  ],
+  [
+   "Lower Main Street",
+   "Mt. Pluto",
+   "Green"
+  ],
+  [
+   "Lumberjack",
+   "Mt. Pluto",
+   "Green"
+  ],
+  [
+   "Skid Trail",
+   "Mt. Pluto",
+   "Green"
+  ],
+  [
+   "Upper Main Street",
+   "Mt. Pluto",
+   "Green"
+  ],
+  [
+   "Axe Handle",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Bear Crawl",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Cascades",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Cat's Face",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Coyote Crossing",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Delight",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Drop Off",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Dutchman",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Eagle Chute",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "East Ridge",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Flying Squirrel",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Logger's Loop",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Lookout Road",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Lower Grouse Alley",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Luggi's",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Powder Bowl",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Stump Alley",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "The Chute",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "The Flume",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Upper Jibboom",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "West Ridge",
+   "Mt. Pluto",
+   "Blue"
+  ],
+  [
+   "Crosscut",
+   "Mt. Pluto",
+   "Black"
+  ],
+  [
+   "Hornet's Nest",
+   "Mt. Pluto",
+   "Black"
+  ],
+  [
+   "Jibboom",
+   "Mt. Pluto",
+   "Black"
+  ],
+  [
+   "Sawmill Glade",
+   "Mt. Pluto",
+   "Black"
+  ],
+  [
+   "Spring Board",
+   "Mt. Pluto",
+   "Black"
+  ],
+  [
+   "Surprise",
+   "Mt. Pluto",
+   "Black"
+  ],
+  [
+   "The Plunge",
+   "Mt. Pluto",
+   "Black"
+  ],
+  [
+   "Tonini's",
+   "Mt. Pluto",
+   "Black"
+  ],
+  [
+   "Upper Grouse Alley",
+   "Mt. Pluto",
+   "Black"
+  ],
+  [
+   "Carpet Bowl",
+   "Northwest Territory",
+   "Green"
+  ],
+  [
+   "Easy Street",
+   "Northwest Territory",
+   "Green"
+  ],
+  [
+   "Lower Lion's Way",
+   "Northwest Territory",
+   "Green"
+  ],
+  [
+   "The Gulch",
+   "Northwest Territory",
+   "Green"
+  ],
+  [
+   "Wood Cutter",
+   "Northwest Territory",
+   "Green"
+  ],
+  [
+   "Bobcat Bowl",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Boondocks",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Christmas Tree",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Cowboy Pass",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Deerskin",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Gateway",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Goldmine",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Home Run",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Hoot Owl",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Lookout Bypass",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Lower Pioneer",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Northern Lights",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Overland Trail",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Sodergren's",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "The Face",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "The Glades",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "The Gully",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Timberline",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Upper Lion's Way",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Upper Pioneer",
+   "Northwest Territory",
+   "Blue"
+  ],
+  [
+   "Lower Chute",
+   "Terrain Parks",
+   "Blue"
+  ],
+  [
+   "Forerunner",
+   "Terrain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Moonshine",
+   "Terrain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Pinball",
+   "Terrain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Pipeline",
+   "Terrain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Playground",
+   "Terrain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Sidewinder",
+   "Terrain Parks",
+   "TerrainPark"
+  ],
+  [
+   "The Straits",
+   "Terrain Parks",
+   "TerrainPark"
+  ],
+  [
+   "Backdoor",
+   "The Backside",
+   "Blue"
+  ],
+  [
+   "Castle Peak",
+   "The Backside",
+   "Blue"
+  ],
+  [
+   "Drifter",
+   "The Backside",
+   "Blue"
+  ],
+  [
+   "Drifter Connector",
+   "The Backside",
+   "Blue"
+  ],
+  [
+   "Lower Burnout",
+   "The Backside",
+   "Blue"
+  ],
+  [
+   "The Islands",
+   "The Backside",
+   "Blue"
+  ],
+  [
+   "Burnout",
+   "The Backside",
+   "Black"
+  ],
+  [
+   "Challenger",
+   "The Backside",
+   "Black"
+  ],
+  [
+   "Down Under",
+   "The Backside",
+   "Black"
+  ],
+  [
+   "Follow Me",
+   "The Backside",
+   "Black"
+  ],
+  [
+   "Iron Horse",
+   "The Backside",
+   "Black"
+  ],
+  [
+   "Monument Glade",
+   "The Backside",
+   "Black"
+  ],
+  [
+   "Polaris",
+   "The Backside",
+   "Black"
+  ],
+  [
+   "Promised Land",
+   "The Backside",
+   "Black"
+  ],
+  [
+   "Rail Splitter",
+   "The Backside",
+   "Black"
+  ],
+  [
+   "Sierra Grande",
+   "The Backside",
+   "Black"
+  ],
+  [
+   "The Rapids",
+   "The Backside",
+   "Black"
+  ],
+  [
+   "Why Not",
+   "The Backside",
+   "Black"
+  ],
+  [
+   "Bearly",
+   "Village at Northstar",
+   "Green"
+  ],
+  [
+   "Condo Run",
+   "Village at Northstar",
+   "Green"
+  ],
+  [
+   "Village Run",
+   "Village at Northstar",
+   "Green"
+  ],
+  [
+   "Coyote Fork",
+   "Village at Northstar",
+   "Blue"
+  ],
+  [
+   "Lynx Luge",
+   "Village at Northstar",
+   "Blue"
+  ],
+  [
+   "The Woods",
+   "Village at Northstar",
+   "Blue"
+  ]
+ ]
+}

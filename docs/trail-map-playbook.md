@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's thirty resorts got their overlays, written so the next resort (or the next season of one of
+How the app's thirty-one resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -63,7 +63,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 |---|---|---|---|
 | trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
 | vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels) | Sunday River, Park City |
-| lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor | Mt. Bachelor |
+| lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor, Northstar (white names haloed in the line's colour: the halo is the colour, and is dropped from the lines; one united outline for the runs that meet, cut at each junction) | Mt. Bachelor; Northstar for united outlines |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
 | a painting with no lines, names as text | every run traced along its painted cut by trace readers (Part 4) | Jay Peak | Jay Peak |
 | only raster images, but an interactive map whose SVG draws the same artwork (Alterra's resorts-interactive.com) | `vicomap.py parse --detail`: its lines, letters and symbols grouped by trail; registered on the image, each line routed onto the image's own line, named by its group (`GROUPED`); the print's redrawn spots traced (`trace_ink.py`) | Steamboat | Steamboat |
@@ -333,7 +333,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the thirty resorts settled, so the next ones come out alike:
+What the thirty-one resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -626,6 +626,7 @@ give the same.
 | [Buttermilk](#buttermilk) | the same kind, one panel; the dotted way down | as Snowmass | `regen.sh` | a small map of that kind |
 | [Snowbasin](#snowbasin) | PDF strokes and text over a painting, symbols on the lines; a few lines as filled outlines | `pdf_resort.py`; the report from a Common Crawl capture of an HTML table | `regen.sh` | names printed along their lines, symbols on them |
 | [Whitefish Mountain](#whitefish-mountain) | three small web JPEGs, no PDF | the map read on crops (`names.py`), lines routed on the painting (`route_trace.py`) | `regen.sh` | a map only published as small images |
+| [Northstar](#northstar) | PDF lines as filled outlines holding several runs, names as white glyphs haloed in the line's colour | `pdf_outline_lines.py` centre lines, the halo's colour as the rating, cuts at each junction | `regen.sh` | one outline for several runs |
 
 ## Killington
 
@@ -1602,6 +1603,52 @@ sides, the areas too) · `tools/trailmap/resorts/whitefish/`.
   showed a route on a neighbouring line, Central Avenue, Hope Slope, Ski Way, Under Easy, Middle Fork and Toni
   Matt's top, given waypoints where they strayed and read again, and seven markers moved onto their labels);
   `compare.py` against the report; hover 175/175, 61/61, 44/44.
+
+## Northstar
+
+99 trails (83 + 16) · California · one map · areas: the trail report's (Mt. Pluto, The Backside, Northwest Territory,
+Lookout Mountain, the Village; the terrain parks Mt. Pluto's) · `tools/trailmap/resorts/northstar/`.
+
+- **Source:** the 2025-26 PDF northstarcalifornia.com's trail-map page links (Vail Resorts: fetched from inside the
+  page, `fetch_pdf.cjs`; skimap.org's map 36907 is the same file), page 1 (page 2 is the village directory): Alex
+  Tait's painting in 100 tiles at 150 dpi under an Illustrator vector layer. Every trail line is a filled outline
+  (the artwork's strokes outlined and united), blue, black or green, each colour in two shades; where runs meet, one
+  outline holds several of them. Names are white capitals on the line itself, each letter haloed by a fill in the
+  line's colour: outlined glyphs, and some as live text (Frutiger UltraBlack, Folio ExtraBold; a curved one's halo
+  copy drawn one letter at a time); the lifts' names white on red bands. Symbols are fills on the line by the name.
+  The terrain parks are orange pills with white names and no line; the Kids Adventure Zone's four are numbered
+  smiley signs on blue squares, named only in their box; Carpet Bowl is printed only in the Mid-Mountain inset.
+- **Route:** `prepare.py`: the page at 3 px/pt; the centre lines of the outlines in both shades of each colour
+  (`pdf_outline_lines.py`), less the halos (a piece under 25 pt lying on white letters' boxes), the slow zone's
+  hatching, closed outlines under 80 pt and three icons drawn in the trail colours; the glyphs read once on contact
+  sheets (`letters.json`) and the live text; each name's colour the halo under its letters (a vote), else its live
+  copy's; symbols from `pdf_symbols.py`, less the kids' signs' squares. The legend, the Mid-Mountain inset, the kids'
+  box and the partners' bar are left out. `pdf_resort.py` with `ALONG_NEAREST`, `ALONG_FIRST`, `NO_STRETCH_BESIDE`;
+  ten names printed in two parts joined (`JOIN`, `JOIN_GAP` 40 pt, AXE read as EX: renamed), the lifts' names dropped,
+  Cowboy Pass and Bearly their labels' stretch (`LABEL_LINE`), the kids' four and Carpet Bowl as `EXTRA` markers.
+- **Rebuild:** `tools/trailmap/resorts/northstar/regen.sh` (3 min: the outlines' centre lines are slow); it checks
+  the PDF's SHA-256.
+- **Truth:** the trail report (`report.json`): the terrain feed of the terrain-and-lift-status page as Common Crawl
+  captured it on 2026-02-19 (the reports README, "Northstar"), 103 rows. Every printed name is on it and every rating
+  agrees; not printed: Coyote Crossing, Drifter Connector, Lower Chute (a terrain-park run; the unnamed line with a
+  square below The Chute's foot may be it).
+- **Decisions** (every piece settled on crops; `tools/archive/northstar/colour_crops.py` draws each piece in its own
+  colour, `sharp_turns.py` finds where a centre line turns back into another run's line, `on_points.py` the points
+  either side of a cut, `overlaps.py` two named pieces along one line): 30 cuts where one outline carries several
+  runs (the summits of Mt. Pluto and Lookout Mountain, the Grouse Alleys and The Flume, Axe Handle and Stump Alley,
+  the Ridges, Lookout Road and Drifter, The Islands, Boca, Prosser and Stampede, Gooseneck, Schwarzstrasse and
+  Washoe, Home Run, Boondocks and Lookout Bypass, the Pioneers, Skid Trail, Lumberjack and the Main Streets, Goldmine
+  and Upper Jibboom, Gateway and Timber Line, the Lion's Ways, Iron Horse and Why Not; Northern Lights' outline run on
+  down Christmas Tree's line); three trims where a run's outline goes on along another's to their common foot (Home
+  Run's doubled stretch, Stump Alley onto Luggi's, Castle Peak onto Drifter's); lines no name is printed on that go
+  on from a run given its name (Iron Horse from the summit and on to the Backside Express, Prosser's summit line,
+  Christmas Tree's two run-outs, Timber Line to its lift, Overland Trail's under its two-line name); 24 pieces no
+  trail: label leaders, missed letter halos and badges, and links with no name (from West Ridge's foot to Goldmine,
+  under the Lookout Link, below The Chute, past the kids' signs). Markers: the parks, the glades, the kids' four,
+  Carpet Bowl.
+- **Checked:** every overlay on crops (`overlay_audit.py`, 17 sheets, every cell read; Crosscut's, Upper Main
+  Street's, West Ridge's, The Chute's and Schwarzstrasse's extra lines, and Christmas Tree's doubled stretch, fixed
+  and read again); `compare.py` against the report; hover 265/265.
 
 # Part 4. Methods in detail
 
