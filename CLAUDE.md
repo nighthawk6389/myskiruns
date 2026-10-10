@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Ski-run tracker for twenty-seven resorts (React 19 + TS + Vite). The hard part is
+Ski-run tracker for twenty-eight resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
@@ -61,12 +61,12 @@ the already-assigned path (that is circular).
   readings and decisions: Vail's from `names.py` + `decisions.py`; Hunter's and
   every PDF resort after it from `resort.py` + `decisions.py` through
   `tools/trailmap/pdf_resort.py` (per panel in `panels/<panel>/` for Whistler
-  Blackcomb, Palisades Tahoe, Big Sky, Heavenly, Mammoth and Snowmass; Heavenly's PDF is an older
+  Blackcomb, Palisades Tahoe, Big Sky, Heavenly, Mammoth, Snowmass and Aspen Mountain; Heavenly's PDF is an older
   export of its map's artwork, registered on the current image, and Deer
   Valley's an earlier one registered on the later flattened image; Steamboat
   has no PDF: its interactive map's SVG is the vector layer; Mammoth's PDF draws
-  no trail lines: its interactive maps' SVGs give them; Buttermilk's is drawn
-  like Snowmass's); Whiteface's,
+  no trail lines: its interactive maps' SVGs give them; Aspen Mountain's and
+  Buttermilk's are drawn like Snowmass's); Whiteface's,
   Winter Park's, Breckenridge's, Copper Mountain's and Keystone's by their own
   scripts; Okemo's, Sugarbush's and Jay Peak's from their archived readings.
   Change those, not the generated files. A new resort gets such a folder too,

@@ -1,0 +1,396 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "buddy-system": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "BUDDY SYSTEM",
+   "note": "checked on a crop"
+  },
+  "hodge-podge": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "HODGE PODGE",
+   "note": "along Hodge Podge"
+  },
+  "hyrups": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "HYRUP'S",
+   "note": "along Hyrup's"
+  },
+  "jims": {
+   "polylines": [
+    0,
+    26
+   ],
+   "confidence": "high",
+   "mapName": "JIM'S",
+   "note": "along Jim's"
+  },
+  "kristi": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "KRISTI",
+   "note": "checked on a crop"
+  },
+  "lower-kristi": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "LOWER KRISTI",
+   "note": "checked on a crop"
+  },
+  "lower-walshs": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WALSH'S",
+   "note": "checked on a crop"
+  },
+  "mike-drop": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "MIKE DROP",
+   "note": "along Mike Drop"
+  },
+  "pancake-house-glade": {
+   "noLine": true,
+   "label": [
+    12.05,
+    20.76
+   ],
+   "confidence": "high"
+  },
+  "rideout": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "RIDEOUT",
+   "note": "along Rideout"
+  },
+  "walshs": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "WALSH'S",
+   "note": "checked on a crop"
+  },
+  "1-2-leaf": {
+   "polylines": [
+    20,
+    51
+   ],
+   "confidence": "high",
+   "mapName": "1 & 2 LEAF",
+   "note": "along 1 & 2 Leaf | checked on a crop"
+  },
+  "back-of-bell-1": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "BACK OF BELL #1",
+   "note": "along Back of Bell #1"
+  },
+  "back-of-bell-2": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "BACK OF BELL #2",
+   "note": "along Back of Bell #2"
+  },
+  "bell-meadow": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "BELL MEADOW",
+   "note": "along Bell Meadow"
+  },
+  "bellissimo": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "BELLISSIMO",
+   "note": "along Bellissimo"
+  },
+  "blazing-star": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "BLAZING STAR",
+   "note": "along Blazing Star"
+  },
+  "blondies": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "BLONDIE'S",
+   "note": "along Blondie's"
+  },
+  "buckhorn": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "BUCKHORN",
+   "note": "along Buckhorn"
+  },
+  "copper": {
+   "polylines": [
+    11,
+    12
+   ],
+   "confidence": "high",
+   "mapName": "COPPER",
+   "note": "checked on a crop | along Copper"
+  },
+  "copper-bowl": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "COPPER BOWL",
+   "note": "checked on a crop"
+  },
+  "copper-connector": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "COPPER CONNECTOR",
+   "note": "along Copper Connector"
+  },
+  "cutoff": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "CUTOFF",
+   "note": "along Cutoff"
+  },
+  "deer-park": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "DEER PARK",
+   "note": "along Deer Park"
+  },
+  "dipsy-doodle": {
+   "polylines": [
+    2,
+    49
+   ],
+   "confidence": "high",
+   "mapName": "DIPSY DOODLE",
+   "note": "along Dipsy Doodle | checked on a crop"
+  },
+  "easy-chair": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "EASY CHAIR",
+   "note": "along Easy Chair"
+  },
+  "fis-trail": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "FIS TRAIL",
+   "note": "along FIS Trail"
+  },
+  "face-of-bell": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "FACE OF BELL",
+   "note": "along Face of Bell"
+  },
+  "gents-ridge": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "GENT'S RIDGE",
+   "note": "checked on a crop"
+  },
+  "gretls": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "GRETL'S",
+   "note": "along Gretl's"
+  },
+  "knowltons": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "KNOWLTON'S",
+   "note": "along Knowlton's"
+  },
+  "lazy-boy": {
+   "polylines": [
+    13,
+    15
+   ],
+   "confidence": "high",
+   "mapName": "LAZY BOY",
+   "note": "continuation | along Lazy Boy"
+  },
+  "midnight": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "MIDNIGHT",
+   "note": "checked on a crop"
+  },
+  "midnight-glades": {
+   "noLine": true,
+   "label": [
+    80.8,
+    31.61
+   ],
+   "confidence": "high"
+  },
+  "midway-road": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "MIDWAY ROAD",
+   "note": "along Midway Road"
+  },
+  "north-american": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "NORTH AMERICAN",
+   "note": "along North American"
+  },
+  "north-star": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "NORTH STAR",
+   "note": "checked on a crop"
+  },
+  "pump-house-hill": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "PUMP HOUSE HILL",
+   "note": "checked on a crop"
+  },
+  "pussyfoot": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "PUSSYFOOT",
+   "note": "along Pussyfoot"
+  },
+  "reds-run": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "RED'S RUN",
+   "note": "along Red's Run"
+  },
+  "ridge-of-bell": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE OF BELL",
+   "note": "checked on a crop"
+  },
+  "seiberts": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "SEIBERT'S",
+   "note": "along Seibert's"
+  },
+  "silver-bell": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "SILVER BELL",
+   "note": "along Silver Bell"
+  },
+  "silver-dip": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "SILVER DIP",
+   "note": "checked on a crop"
+  },
+  "spar-gulch": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "SPAR GULCH",
+   "note": "checked on a crop"
+  },
+  "summit": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "SUMMIT",
+   "note": "along Summit"
+  },
+  "sunrise-sunset": {
+   "polylines": [
+    33,
+    34
+   ],
+   "confidence": "high",
+   "mapName": "SUNRISE/SUNSET",
+   "note": "along Sunrise/Sunset | checked on a crop"
+  },
+  "tourtelotte-park": {
+   "polylines": [
+    9,
+    17
+   ],
+   "confidence": "high",
+   "mapName": "TOURTELOTTE PARK",
+   "note": "continuation | along Tourtelotte Park"
+  }
+ }
+}

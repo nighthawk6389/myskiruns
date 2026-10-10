@@ -152,6 +152,11 @@ export const RESORTS: ResortEntry[] = [
     { id: 'main', name: 'Whole mountain', paths: () => import('./data/resorts/snowmass/panels/main/trailPaths.json') },
     { id: 'hanging-valley', name: 'Hanging Valley', paths: () => import('./data/resorts/snowmass/panels/hanging-valley/trailPaths.json') },
   ], ['Aspen Snowmass', 'Aspen']),
+  panels('aspen-mountain', 'Aspen Mountain', 'Colorado', () => import('./data/resorts/aspen-mountain/trails'), [
+    { id: 'main', name: 'Whole mountain', paths: () => import('./data/resorts/aspen-mountain/panels/main/trailPaths.json') },
+    { id: 'summit', name: 'Summit', paths: () => import('./data/resorts/aspen-mountain/panels/summit/trailPaths.json') },
+    { id: 'heros', name: "Hero's", paths: () => import('./data/resorts/aspen-mountain/panels/heros/trailPaths.json') },
+  ], ['Ajax', 'Aspen Snowmass', 'Aspen']),
   oneMap('buttermilk', 'Buttermilk', 'Colorado', () => import('./data/resorts/buttermilk/trails'), () => import('./data/resorts/buttermilk/trailPaths.json'), ['Aspen Snowmass', 'Aspen']),
 ];
 

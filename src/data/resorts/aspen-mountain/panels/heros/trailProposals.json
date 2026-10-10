@@ -1,0 +1,312 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "buddy-system": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "BUDDY SYSTEM",
+   "note": "along Buddy System"
+  },
+  "cory-bob": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "CORY-BOB",
+   "note": "along Cory-Bob"
+  },
+  "dkine-bowl": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "D'KINE BOWL",
+   "note": "along D'Kine Bowl"
+  },
+  "e-e-k": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "E.E.K.!",
+   "note": "along E.E.K.!"
+  },
+  "e-m-ski-2-glade": {
+   "noLine": true,
+   "label": [
+    51.54,
+    54.84
+   ],
+   "confidence": "high"
+  },
+  "el-avalanchero-glade": {
+   "noLine": true,
+   "label": [
+    37.07,
+    50.14
+   ],
+   "confidence": "high"
+  },
+  "ellis": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "ELLI'S",
+   "note": "along Elli's"
+  },
+  "fat-city": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "FAT CITY",
+   "note": "along Fat City"
+  },
+  "first-tracks": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "FIRST TRACKS",
+   "note": "along First Tracks"
+  },
+  "harriss-wall": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "HARRIS'S WALL",
+   "note": "along Harris's Wall"
+  },
+  "heres-to": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "HERE'S TO...",
+   "note": "along Here's To..."
+  },
+  "hodge-podge": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "HODGE PODGE",
+   "note": "along Hodge Podge"
+  },
+  "hyrups": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "HYRUP'S",
+   "note": "along Hyrup's"
+  },
+  "jims": {
+   "polylines": [
+    27,
+    31
+   ],
+   "confidence": "high",
+   "mapName": "JIM'S",
+   "note": "along Jim's"
+  },
+  "kristi": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "KRISTI",
+   "note": "along Kristi"
+  },
+  "legal-tender": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "LEGAL TENDER",
+   "note": "along Legal Tender"
+  },
+  "lens-cap": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "LENS CAP",
+   "note": "along Lens Cap"
+  },
+  "loushins": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "LOUSHIN'S",
+   "note": "along Loushin's"
+  },
+  "lower-kristi": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "LOWER KRISTI",
+   "note": "along Lower Kristi"
+  },
+  "lower-walshs": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WALSH'S",
+   "note": "along Lower Walsh's"
+  },
+  "mike-drop": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "MIKE DROP",
+   "note": "along Mike Drop"
+  },
+  "ollies-yot": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "OLLIE'S YOT",
+   "note": "along Ollie's Yot"
+  },
+  "pancake-house-glade": {
+   "noLine": true,
+   "label": [
+    30.2,
+    36.25
+   ],
+   "confidence": "high"
+  },
+  "papa-bear": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "PAPA BEAR",
+   "note": "along Papa Bear"
+  },
+  "powerline": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "POWERLINE",
+   "note": "along Powerline"
+  },
+  "rewrite": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "REWRITE",
+   "note": "along Rewrite"
+  },
+  "rideout": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "RIDEOUT",
+   "note": "along Rideout"
+  },
+  "starwalk": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "STARWALK",
+   "note": "along Starwalk"
+  },
+  "walshs": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "WALSH'S",
+   "note": "along Walsh's"
+  },
+  "1-2-leaf": {
+   "polylines": [
+    25,
+    26,
+    38
+   ],
+   "confidence": "high",
+   "mapName": "1 & 2 LEAF",
+   "note": "checked on a crop | end of 1 & 2 Leaf | along its printed name"
+  },
+  "bellissimo": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "BELLISSIMO",
+   "note": "along Bellissimo"
+  },
+  "buckhorn": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "BUCKHORN",
+   "note": "along Buckhorn"
+  },
+  "copper": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "COPPER",
+   "note": "along Copper"
+  },
+  "dipsy-doodle": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "DIPSY DOODLE",
+   "note": "along Dipsy Doodle"
+  },
+  "easy-chair": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "EASY CHAIR",
+   "note": "checked on a crop"
+  },
+  "lazy-boy": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "LAZY BOY",
+   "note": "along Lazy Boy"
+  },
+  "north-star": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "NORTH STAR",
+   "note": "along North Star"
+  },
+  "silver-bell": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "SILVER BELL",
+   "note": "along Silver Bell"
+  }
+ }
+}

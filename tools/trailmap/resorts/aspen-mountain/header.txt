@@ -1,0 +1,23 @@
+// Aspen Mountain's 2025-26 trail map (aspensnowmass.com: the resort's PDF,
+// one page, drawn like Snowmass's), drawn as three panels: the whole
+// mountain, and its two insets, the summit and Hero's (drawn larger, with the
+// names of Hero's runs the main map leaves out). The lines are the PDF's own:
+// blue and black strokes, and the extreme terrain's cased lines (a thin
+// yellow stroke over a black one, or a yellow casing: the Traynor chutes).
+// Every name is white text on a pill in its run's colour, set along its own
+// line: the rating is the pill's colour (blue, black; the map has no green
+// runs), a black run double black where its own line is cased in yellow,
+// carries a pair of diamonds, or an EX mark is printed by its name. No trail
+// report could be read (the resort's feed lists no trails for Aspen Mountain
+// out of season): names are as printed, title case (GENTELMEN'S RIDGE is the
+// line of GENT'S RIDGE). Where one line carries several runs, decisions.py
+// cuts it where they part: the whole map's line from Dipsy Doodle along
+// Buckhorn and Midway Road, down Ruthie's Run, along Magnifico Road and Tower
+// Ten Road; Silver Dip, Spar Gulch, Kleenex Corner, Upper Little Nell and
+// Little Nell; Summer Road, Lower Roch Run and W 5th Ave; and others. 1 & 2
+// Leaf and Sunrise/Sunset are two runs on two lines each. Names with no line
+// (the glades, the Bell Mountain faces, Hero's Chutes, Traynor Ridge, North
+// American and Sunrise/Sunset on the whole map): markers at the label.
+// Areas: the two printed summits, Hero's (its lift's terrain) and Aspen
+// Mountain.
+// x/y/baseY/width are unused layout fields.

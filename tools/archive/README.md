@@ -39,6 +39,20 @@ Browser checks of the app written along the way (offline, the first visit on a s
 | `shot.cjs` | Desktop and phone screenshots of one resort from a build, with page errors |
 | `shot_run.sh` | Serves the scratch build and runs shot.cjs |
 
+## aspen-mountain
+
+Aspen Mountain's helpers for settling its long multi-run paths: each piece's junctions and printed names along it, by
+arc length (`junctions.py`); a first plan of cuts between two names' spans (`cut_plan.py`); a piece's stretches
+turned into decisions.py entries keyed by points on it (`seg_decisions.py`); and one crop per piece, alone
+(`piece_crops.py`). What they settled is in `resorts/aspen-mountain/panels/<panel>/decisions.py`.
+
+| file | what it did |
+|---|---|
+| `aspen-mountain/junctions.py` | junctions.py <resort>/<panel> id ...: other pieces' ends on each piece and the names printed along it, by arc length |
+| `aspen-mountain/cut_plan.py` | cut_plan.py <resort>/<panel>: for each piece with several names, a cut at the junction between each two names' spans |
+| `aspen-mountain/seg_decisions.py` | seg_decisions.py <resort>/<panel> id 'Name@arc\|Name@arc\|-': the CUTS, CHECKED and UNNAMED entries for those stretches |
+| `aspen-mountain/piece_crops.py` | piece_crops.py <resort>/<panel> out id ...: a crop of each piece alone, about 900 px |
+
 ## big-sky
 
 Big Sky's checks while its pieces were settled: crops of the PDF sharp around pieces and names, drawing order, junctions, overlaps (now `tools/trailmap/pdf_overlaps.py`), the OpenStreetMap cross-check (now `tools/trailmap/osm_check.py`), and the names against the trail report.

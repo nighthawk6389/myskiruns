@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's twenty-seven resorts got their overlays, written so the next resort (or the next season of one of
+How the app's twenty-eight resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -61,7 +61,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 
 | the source gives you | route | done this way | start from |
 |---|---|---|---|
-| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Buttermilk (the same kind, one panel) | Hunter, Big Sky; Snowmass for a map rated by colour |
+| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels) and Buttermilk (one panel) | Hunter, Big Sky; Snowmass for a map rated by colour |
 | vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels) | Sunday River, Park City |
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor | Mt. Bachelor |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
@@ -324,7 +324,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the twenty-seven resorts settled, so the next ones come out alike:
+What the twenty-eight resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -612,6 +612,7 @@ give the same.
 | [Steamboat](#steamboat) | an image; the interactive map's SVG | `vicomap.py`, lines routed onto the image's, `GROUPED` | `regen.sh` | an image-only map with an interactive map |
 | [Mammoth Mountain](#mammoth-mountain) | a PDF with no trail lines, names as text; two interactive maps' SVGs | `vicomap.py` lines registered on the painting, names spelled as the groups, `GROUPED` | `regen.sh` | a map with no lines but an interactive map |
 | [Snowmass](#snowmass) | PDF strokes and filled casings, names as text on pills in the run's colour | `pdf_resort.py`, the rating from the pill's colour (`COLOR_SYMBOL`) | `regen.sh` | a map rated by its names' colours |
+| [Aspen Mountain](#aspen-mountain) | the same kind, three panels; no trail report | as Snowmass, names spelled as printed | `regen.sh` | a map of that kind with insets |
 | [Buttermilk](#buttermilk) | the same kind, one panel; the dotted way down | as Snowmass | `regen.sh` | a small map of that kind |
 
 ## Killington
@@ -1432,6 +1433,50 @@ Knob), each with the trail report's lift areas whose runs come down from it · `
 - **Checked:** every overlay on crops (`overlay_audit.py`, 29 and 7 sheets, every cell read; the cells that showed
   a problem fixed and read again); `compare.py` against the report; hover 332/332 (main) and 75/75 (Hanging
   Valley).
+
+## Aspen Mountain
+
+129 trails (121 + 8) · Colorado · three panels: the whole mountain and its two insets, the summit and Hero's (drawn
+larger, with the names of Hero's runs the main map leaves out) · areas: Hero's (its lift's terrain, as the map's
+notice groups it) and Aspen Mountain · `tools/trailmap/resorts/aspen-mountain/`.
+
+- **Source:** the 2025-26 PDF that aspensnowmass.com's Aspen Mountain trail-maps page links (plain curl; not named
+  like the other three, `2526aspenmountainwebsite.pdf`), drawn like Snowmass's (Part 3, "Snowmass"): trail lines as
+  vectors over three 100 dpi paintings, every name white text on a pill in the run's colour, no symbol by any name.
+  No green runs. Lines: blue and black strokes (1 pt on the main map, 0.67-0.69 in the insets; the text halos are
+  other widths); the extreme terrain is a black line under a thin yellow stroke, or in a yellow casing drawn as a
+  filled outline (the Traynor chutes); expert-only runs carry a pair of diamonds on their line; EX marks (two
+  diamonds with E and X, text or shapes) on the Traynor chutes.
+- **Route:** `prepare.py`, per panel (each panel its own clip and scale, 3 and 6 px/pt; the main panel leaves the
+  insets, the notice between them, the legend and the logo out): the page rendered with the three paintings upscaled
+  (`matte_pdf_layer.py --resample`); the strokes in the panel's width, the casings' centre lines and the thin yellow
+  strokes, one piece per path, each inset's lines cut at its frame (the PDF masks them, they run on under it); names
+  from `pdf_labels.py` in the names' Semibold; a black name double black where its own line is a cased one or carries
+  a pair of diamonds, an EX mark is by it, or (a name with no line of its own: Hero's Chutes) a pair of diamonds is by
+  it. Names printed in two or three lines joined per panel (`JOIN`, a part pinned by where it is printed where the
+  same word repeats: LOWER, GLADE, RUN, RIDGE). `pdf_resort.py` with `COLOR_SYMBOL`, `ALONG_FIRST`, `ALONG_SHORT`,
+  `NO_STRETCH_BESIDE`; Blondie's and Blazing Star, whose lines run on hidden under their pills, get stretches along
+  them (`LABEL_LINE`).
+- **Rebuild:** `tools/trailmap/resorts/aspen-mountain/regen.sh` (20 s); it checks the PDF's SHA-256.
+- **Truth:** none could be read: out of season the grooming feed lists no trails for Aspen Mountain
+  (`mountain=AspenMountain`), and Common Crawl's January 2026 capture of its grooming-report page holds no list (the
+  page loads it). Names are as printed, spelled out in `resort.py` (`NAMES`; NIAGRA as printed); GENTELMEN'S RIDGE,
+  printed along the ridge, and GENT'S RIDGE, at its foot, are one line (Gent's Ridge); E=m(SKI)² GLADE with its 2
+  set on its second line. In season, read the feed and check with `compare.py`.
+- **Decisions** (every piece settled on `grid_crop.py` crops; `tools/archive/aspen-mountain/` has the helpers): the
+  main map draws long paths that carry several runs, each cut at the junction between two printed names (24 cuts on
+  the main map, 7 in the summit's inset): Dipsy Doodle, Buckhorn and Midway Road to Tourtelotte Park, down Ruthie's
+  Run, round the top of Shadow Mountain, Magnifico Road and Tower Ten Road on one path; Silver Dip, Spar Gulch,
+  Kleenex Corner, Upper Little Nell and Little Nell on another; Summer Road, Lower Roch Run, Summer Road again and W
+  5th Ave on a third. Summer Road's two stretches are joined along LOWER ROCH RUN's line, traced again for it
+  (`TRACED`; left to `trails:apply`, they would be joined down the black Aztec and Spring Pitch). 1 & 2 Leaf and
+  Sunrise/Sunset are two runs, two lines each; Tourtelotte Park two lines either side of its name. Connectors and
+  traverses with no name printed: 4, 1 and 1 `UNNAMED`. Markers: the glades and faces with no line (Pancake House,
+  Midnight, El Avalanchero, E=m(Ski)² Glade, Nose of Bell), Hero's Chutes #1 and #2, Traynor Ridge.
+- **Checked:** every overlay on crops (`overlay_audit.py`, 27, 12 and 10 sheets, every cell read; the cells that
+  showed a problem fixed and read again: Corkscrew's and Corkscrew Gully's blue tails, Tourtelotte Park's western
+  line, Blazing Star, Summer Road); hover 306/306 (main), 140/140 (summit), 108/108 (Hero's: before the insets' lines
+  were cut at their frames, Lazy Boy's ran off the panel).
 
 ## Buttermilk
 

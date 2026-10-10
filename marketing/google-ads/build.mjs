@@ -356,6 +356,16 @@ const RESORT_ADS = {
     negatives: ['snowmass mountain 14er', 'snowmass lake', 'maroon bells', 'rodeo', 'balloon festival',
       'mountain bike', 'bike park', 'hiking', 'conference center', 'golf'],
   },
+  'aspen-mountain': {
+    short: 'Aspen Mountain',
+    path: 'Aspen-Mountain',
+    area: 'Ajax, from Bell to the Ridge',
+    names: ['aspen mountain', 'ajax', 'aspen ajax'],
+    keywords: [],
+    // the town, the other Aspen mountains' own groups, the summer gondola and the trees
+    negatives: ['aspen tree', 'aspen trees', 'aspen colorado hotels', 'summer', 'hiking', 'mountain bike', 'concert',
+      'food and wine', 'ajax cleaner', 'ajax amsterdam', 'ajax football'],
+  },
   buttermilk: {
     short: 'Buttermilk',
     path: 'Buttermilk',

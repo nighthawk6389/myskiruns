@@ -1,0 +1,56 @@
+{
+ "reviews": {
+  "heros-chutes-1": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T01:42:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    22.77,
+    31.71
+   ]
+  },
+  "heros-chutes-2": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T01:42:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    28.69,
+    32.77
+   ]
+  },
+  "nose-of-bell": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T01:42:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    42.87,
+    57.41
+   ]
+  },
+  "traynor-ridge": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T01:42:17.000Z",
+   "by": "claude",
+   "labelAt": [
+    72.46,
+    64.68
+   ]
+  }
+ }
+}
