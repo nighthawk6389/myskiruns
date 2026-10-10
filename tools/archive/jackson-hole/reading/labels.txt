@@ -1,0 +1,175 @@
+# NAME | colour | points first..last letter (map px) | note
+g00
+Central Chute | black | (392,527) (392,440) (402,427) (448,397) | bends: CENTRAL up, CHUTE up-right
+Wally World | black | (325,500) (410,580)
+Bivouac | black | (325,565) (395,610)
+Cheyenne Bowl | black | (447,530) | two lines CHEYENNE/BOWL
+Rendezvous Trail | blue | (280,562) ... continues down
+Hanging Rock | blue | (465,435) (592,367)
+Laramie Traverse | blue | (465,442) (615,502)
+g01
+Rendezvous Bowl | black | (545,305) | two lines
+East Ridge Traverse | black | (635,295) (722,430)
+Corbet's Couloir | black | (675,285) (760,405)
+Dog Face | black | (632,392) (617,465)
+Tensleep | black | (820,430) (900,455)
+Tensleep Bowl | black | (958,428) | two lines
+Expert Chutes | black | (855,522) (977,522)
+Broadway | black | (987,495) (985,575)...
+Laramie Bowl | black | (743,565) | two lines
+Flip Point | black | (680,535) (715,625)
+Bird In The Hand | black | (480,612) (603,524)
+Bernie's Bowl | black | (512,550) | two lines
+Horn's Hole Traverse | blue | (895,595) ... (1000,592)
+g02
+Headwall | black | (1172,452) (1272,452)
+Downhill | black | (1010,487) (1016,552)
+Snag Tree | black | (1055,497) (1060,577)
+Cirque | black | (1070,515) (1135,515)
+Pair-a-chutes | black | (1117,592) (1165,505) | reads bottom-up
+Coombs | black | (1192,557) (1207,485) | bottom-up
+Beartooth | black | (1425,540) (1447,625)... continues
+g03
+Casper Bowl | black | (1480,492) (1610,492) | +(ACCESS THROUGH GATES ONLY) below
+Moccasin | black | (1575,610) (1602,545) | bottom-up
+Fremont | black | (1595,627) (1620,565) | bottom-up
+Shot 9 | black | (1667,572) (1682,542)
+Shot 8 | black | (1688,590) (1702,545)
+Shot 7 | black | (1705,615) (1720,570)
+Sheridan Bowl | black | (1772,530) (1798,635)
+Limber Pine Chute | black | (1850,585) | two lines LIMBER PINE / CHUTE
+g06
+Rendezvous Trail | blue | (280,565) (283,615) (300,640) (330,660) (362,682) | curved: RENDEZ down, VOUS TRAIL diagonal
+g07
+Two in the Bush | black | (465,662) (568,636)
+Alta Chute 1 | black | (650,630) (715,665)
+Alta Chute 2 | black | (632,650) (712,685)
+Alta Chute 3 | black | (632,668) (710,707)
+Split Rock | black | (525,722) (590,672)
+Pepi's Run | black | (640,727) (652,815)
+Laramie | blue | (740,668) (757,590) | bottom-up
+Grand | blue | (840,752) (850,695) | bottom-up
+Riverton Bowl | black | (917,742) (985,842)
+Gannett | blue | (895,780) (930,850)
+South Pass Traverse | blue | (747,860) (937,905)
+Cheyenne Gully | black | (550,835) (592,975)
+g08
+Paint Brush | black | (985,640) (1037,697) | check
+Tower Three Chute | black | (935,655) (1047,722)
+Hoops Gap | black | (1000,737) (1070,775)
+Thunder | black | (1030,782) (1092,812)
+Amphitheater | blue | (1085,665) (1107,795)
+Nez Perce Traverse | blue | (1100,667) (1237,712)
+Cascade | black | (1222,692) (1272,635) | bottom-up
+Ranger | black | (1302,622) (1335,668)
+Upper Sundance | blue | (1340,605) (1410,730) | check start
+Woolsey Woods | black | (1445,700) | two lines
+Gros Ventre | blue | (1250,870) (1278,762) | upper, bottom-up
+Amphitheater Traverse | blue | (1270,795) (1425,777)
+Teton Traverse | blue | (1262,862) (1370,890)
+Sundance | blue | (1407,825) (1418,920)
+Croaky Point | blue | (1435,802) (1500,865)... continues
+Avalanche | black | (1260,910) (1350,955)
+g09
+Casper Traverse | black | (1395,602) (1460,645) (1522,690)
+Liar's Slide | black | (1560,697) (1625,642) | bottom-up
+Dayton Bowl | black | (1830,682) (1885,598) | bottom-up
+Easy Does It | blue | (1557,835) (1575,745) | bottom-up
+Camp Ground | blue | (1520,868) (1505,760) | bottom-up
+Croaky Point | blue | (1435,802) (1500,865) (1530,895)
+Sundog | blue | (1587,872) (1612,802) | bottom-up
+Sleeping Indian | blue | (1632,915) (1705,785) | bottom-up
+Wide Open | blue | (1720,880) (1772,800) | bottom-up
+Moran Traverse | blue | (1795,775) (1915,808)
+Moran Woods | black | (1790,945) (1845,815) | bottom-up
+Kemmerer | black | (1872,930) (1885,840) | bottom-up
+Togwotee Pass Traverse | blue | (1790,975) (1900,965) (1982,962)
+Washakie Glade | black | (1995,738) (2008,885)
+g10
+Crags Run | blue | (2027,680) (2115,725)
+Grizzly Glade | black | (2102,737) (2145,860)
+Moran Face | black | (2063,820) | two lines
+Symmetry | blue | (2275,850) (2345,822) | bottom-up
+Upper Werner | blue | (2132,935) (2245,855) | bottom-up
+Easiest Way | blue | (2295,893) | two lines
+St. John's | blue | (2307,965) (2367,890) | bottom-up
+Moran | blue | (2060,965) (2103,930) | bottom-up
+g11
+Pathfinder | black | (2590,935) ... continues (g17)
+g12
+South Hoback | black | (120,1007) (248,1007) | label above its line? (line from (170,1000) down)
+Middle Hoback | black | (247,1067) (382,1067)
+North Hoback | black | (390,1117) ... (g13)
+g13
+North Hoback | black | (390,1115) (520,1115)
+Lower Sublette Ridge | black | (695,1002) (685,1205)
+Rawlin's Bowl | black | (772,992) (790,1120) | printed RAWLINS BOWL
+South Colter Ridge | black | (825,985) (887,1145)
+Buffalo Bowl | black | (930,1012) (970,1137)
+North Colter Ridge | black | (995,1105) (1007,1295)
+Union Pass Traverse | blue | (520,1310) (685,1325)... continues
+g14
+Lander Bowl | blue | (980,950) (1075,1042)
+Dick's Ditch | black | (1185,995) (1175,1102)
+Tram Line | blue | (1107,1097) (1132,1180)
+Elk Alley | black | (1087,1120) (1122,1212)
+Gros Ventre | blue | (1230,1110) (1230,1225) | lower label
+F.I.S. Cut | blue | (1247,1187) (1297,1125) | bottom-up
+Slalom | blue | (1310,1172) (1320,1242)
+Cowboy Couloir | black | (1357,1160) | two lines COWBOY / COULOIR
+Lower Sundance | blue | (1392,1172) (1400,1325)
+Blacktail | blue | (1420,1065) (1488,1005) | bottom-up
+Nez Perce | blue | (1437,1105) (1500,1055)... bottom-up continues
+Jackson Face | black | (1475,1127) (1477,1252)
+U.P. Connection | blue | (1155,1257) ... continues
+g15
+Ashley Ridge (blue) | blue | (1685,1005) (1710,1095) | which part?
+Ashley Ridge (black) | black | (1715,1125) (1785,1195) | which part?
+South Pass Traverse | blue | (1792,1085) | two lines SOUTH PASS / TRAVERSE
+Teton Traverse | blue | (1715,968) (1830,1005) | 2nd label
+Kemmerer (blue) | blue | (1852,1090) (1862,1015) | bottom-up; which part?
+Solitude Gully | black | (1865,1087) (1927,1002) | bottom-up
+Beaver Tooth | black | (1640,1087) (1665,1215)
+Werner | blue | (1805,1205) (1850,1147) | bottom-up; which part?
+Hanna? | blue | (1960,1240) (1992,1202) | check
+Teewino..? | blue | (1970,1270) (1995,1240) | check
+g16
+Werner? | blue | (2020,1040) (2065,990) | bottom-up; check
+Upper Hanna | blue | (2010,1125) (2022,1062) | bottom-up
+Teewinot | blue | (2057,1145) (2090,1060) | bottom-up; which part?
+Teewinot Face | black | (2183,1002) | two lines
+Buck Run | blue | (2130,1145) (2200,1130)
+Secret Slope | black | (2160,1240) (2215,1167) | bottom-up
+South Pass Traverse | blue | (2050,1230) (2197,1257) | 4th label
+Saratoga Bowl | black | (2455,1013) | two lines
+Big Horn | black | (2465,1062) ... continues
+Saratoga Bowl Traverse | black | (2305,1297) (2500,1225) ... continues
+g17
+Crowheart | black | (2490,955) (2550,1042)
+Pathfinder | black | (2590,935) (2685,992)
+Big Horn | black | (2465,1062) (2517,1135)
+Saratoga Bowl Traverse | black | (2305,1297) (2500,1225) (2530,1210)
+g19
+Way Home | blue | (822,1402) (900,1372) | bottom-up
+g20
+U.P. Connection | blue | (1155,1257) (1215,1325) (1262,1368)
+Eagle's Rest Cutoff | blue | (1375,1447) (1480,1500) | printed EAGLE'S REST CUT OFF
+Eagle's Rest | green | (1460,1378) (1482,1490)
+Eagle's Rest Terrain Park | park pill | (1435,1440) | orange pill, small text
+g21
+Pooh Bear | green | (1510,1345) (1507,1452)
+Antelope Flats | green | (1550,1470) (1605,1340) | bottom-up
+Antelope Flats Terrain Park | park pill | (1580,1465)
+Lower Werner | green | (1640,1440) (1700,1340) | bottom-up -> Werner (Lower)
+Bronco Terrain Park | park pill | (1665,1462) (1790,1350) | black text on the orange pill
+Lower Teewinot | green | (1740,1425) (1892,1387) | -> Teewinot (Lower)
+Stash Park - Antelope Flats | icon | (1620,1418)
+Stash Park - Ashley Ridge | icon | (1720,1030)
+Stash Park - Campground | icon | (1525,790)
+g22
+St. John's (2nd)? | blue | (2110,1357) (2185,1322) | bottom-up; Extension?
+extra
+Jerry's Way | blue | (1000,598) (1075,650)
+Lupine Way | blue | (1160,632) (1255,605) | bottom-left to up-right
+Greybull | black | (1527,630) (1538,555) | bottom-up
+Surprise | black | (1482,968) (1500,905) | bottom-up

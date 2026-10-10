@@ -1,0 +1,407 @@
+{
+ "reviews": {
+  "tensleep-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    31.93,
+    22.53
+   ]
+  },
+  "headwall": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    40.83,
+    23.79
+   ]
+  },
+  "casper-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    51.43,
+    25.95
+   ]
+  },
+  "cirque": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    36.53,
+    27.05
+   ]
+  },
+  "expert-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    30.73,
+    27.53
+   ]
+  },
+  "cheyenne-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    14.9,
+    27.89
+   ]
+  },
+  "shot-9": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    55.77,
+    28.89
+   ]
+  },
+  "bernies-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    17.07,
+    28.95
+   ]
+  },
+  "laramie-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    24.77,
+    29.74
+   ]
+  },
+  "shot-8": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    56.43,
+    29.89
+   ]
+  },
+  "moccasin": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    52.93,
+    30.26
+   ]
+  },
+  "beartooth": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    47.93,
+    30.74
+   ]
+  },
+  "sheridan-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:25:38.000Z",
+   "by": "claude",
+   "labelAt": [
+    59.57,
+    30.74
+   ]
+  },
+  "limber-pine-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    61.67,
+    30.79
+   ]
+  },
+  "shot-7": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    57.07,
+    31.21
+   ]
+  },
+  "greybull": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:11:24.000Z",
+   "by": "claude",
+   "labelAt": [
+    51.07,
+    31.32
+   ]
+  },
+  "fremont": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    53.43,
+    31.37
+   ]
+  },
+  "dayton-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    61.87,
+    33.74
+   ]
+  },
+  "stash-park-campground": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    50.83,
+    41.58
+   ]
+  },
+  "moran-face": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    68.77,
+    43.16
+   ]
+  },
+  "teewinot-face": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    72.77,
+    52.74
+   ]
+  },
+  "south-hoback": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    6.13,
+    53.0
+   ]
+  },
+  "saratoga-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    81.83,
+    53.32
+   ]
+  },
+  "stash-park-ashley-ridge": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    57.33,
+    54.21
+   ]
+  },
+  "middle-hoback": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    10.4,
+    56.21
+   ]
+  },
+  "north-hoback": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    14.1,
+    58.74
+   ]
+  },
+  "secret-slope": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    72.8,
+    63.37
+   ]
+  },
+  "bronco-terrain-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    57.6,
+    74.0
+   ]
+  },
+  "stash-park-antelope-flats": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    54.0,
+    74.63
+   ]
+  },
+  "eagles-rest-terrain-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    47.83,
+    75.79
+   ]
+  },
+  "antelope-flats-terrain-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:10:47.000Z",
+   "by": "claude",
+   "labelAt": [
+    52.67,
+    77.11
+   ]
+  }
+ }
+}

@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek and Big Bear keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear and Jackson Hole keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -83,6 +83,15 @@ Outback Bowl runs, and the cross-country trails (left out: no run of the alpine 
 Big Bear Mountain Resort's (mtnfeed path `big-bear-mountain`, resorts 57, 58 and 173: Bear Mountain, Snow Summit,
 Snow Valley, all three in one request) was fetched out of season (2026-10-10): 93 rows, each mountain an area, its
 two pipes as rows with a Halfpipe icon of their own.
+
+## Jackson Hole
+
+Its grooming and mountain report pages (jacksonhole.com/grooming-report, a Nuxt site) load one feed,
+`https://jacksonhole-prod.zaneray.com/api/all.json` (plain curl; `fetch_page.cjs` found it): snow, weather, lifts and
+every winter run (`trails`: name, trailLevel GREEN_CIRCLE, BLUE_SQUARE, DOUBLE_BLUE_SQUARE, BLACK_DIAMOND,
+DOUBLE_BLACK_DIAMOND, TERRAIN_PARKS), listed out of season too, with no area.
+`tools/trailmap/resorts/jackson-hole/report_feed.py` reads it into `report.json` (145 rows on 2026-10-10; the double
+blue square as DoubleBlue).
 
 ## Big Sky
 

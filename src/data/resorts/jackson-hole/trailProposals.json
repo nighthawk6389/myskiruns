@@ -1,0 +1,896 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "alta-chute-1": {
+   "polylines": [
+    101
+   ],
+   "confidence": "high",
+   "mapName": "ALTA CHUTE 1",
+   "note": "along its printed name"
+  },
+  "alta-chute-2": {
+   "polylines": [
+    102
+   ],
+   "confidence": "high",
+   "mapName": "ALTA CHUTE 2",
+   "note": "along its printed name"
+  },
+  "alta-chute-3": {
+   "polylines": [
+    103
+   ],
+   "confidence": "high",
+   "mapName": "ALTA CHUTE 3",
+   "note": "along its printed name"
+  },
+  "amphitheater": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "AMPHITHEATER",
+   "note": "its group"
+  },
+  "amphitheater-traverse": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "AMPHITHEATER TRAVERSE",
+   "note": "its group"
+  },
+  "antelope-flats": {
+   "polylines": [
+    107
+   ],
+   "confidence": "high",
+   "mapName": "ANTELOPE FLATS",
+   "note": "along its printed name"
+  },
+  "ashley-ridge-lower": {
+   "polylines": [
+    83
+   ],
+   "confidence": "high",
+   "mapName": "ASHLEY RIDGE (LOWER)",
+   "note": "its group"
+  },
+  "ashley-ridge-upper": {
+   "polylines": [
+    82
+   ],
+   "confidence": "high",
+   "mapName": "ASHLEY RIDGE (UPPER)",
+   "note": "its group"
+  },
+  "avalanche": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "AVALANCHE",
+   "note": "its group"
+  },
+  "beaver-tooth": {
+   "polylines": [
+    86
+   ],
+   "confidence": "high",
+   "mapName": "BEAVER TOOTH",
+   "note": "its group"
+  },
+  "bird-in-the-hand": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "BIRD IN THE HAND",
+   "note": "its group"
+  },
+  "bivouac": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "BIVOUAC",
+   "note": "its group"
+  },
+  "blacktail": {
+   "polylines": [
+    78
+   ],
+   "confidence": "high",
+   "mapName": "BLACKTAIL",
+   "note": "its group"
+  },
+  "broadway": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "BROADWAY",
+   "note": "its group"
+  },
+  "buffalo-bowl": {
+   "polylines": [
+    66
+   ],
+   "confidence": "high",
+   "mapName": "BUFFALO BOWL",
+   "note": "its group"
+  },
+  "camp-ground": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "CAMP GROUND",
+   "note": "its group"
+  },
+  "cascade": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "CASCADE",
+   "note": "its group"
+  },
+  "casper-traverse": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "CASPER TRAVERSE",
+   "note": "its group"
+  },
+  "central-chute": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "CENTRAL CHUTE",
+   "note": "its group"
+  },
+  "cheyenne-gully": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "CHEYENNE GULLY",
+   "note": "its group"
+  },
+  "coombs": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "COOMBS",
+   "note": "its group"
+  },
+  "corbets-couloir": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "CORBET'S COULOIR",
+   "note": "its group"
+  },
+  "cowboy-couloir": {
+   "polylines": [
+    76
+   ],
+   "confidence": "high",
+   "mapName": "COWBOY COULOIR",
+   "note": "its group"
+  },
+  "croaky-point": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "CROAKY POINT",
+   "note": "its group"
+  },
+  "dicks-ditch": {
+   "polylines": [
+    70
+   ],
+   "confidence": "high",
+   "mapName": "DICK'S DITCH",
+   "note": "its group"
+  },
+  "dog-face": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "DOG FACE",
+   "note": "its group"
+  },
+  "downhill": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "DOWNHILL",
+   "note": "its group"
+  },
+  "eagles-rest": {
+   "polylines": [
+    109
+   ],
+   "confidence": "high",
+   "mapName": "EAGLE'S REST",
+   "note": "along its printed name"
+  },
+  "eagles-rest-cutoff": {
+   "polylines": [
+    110
+   ],
+   "confidence": "high",
+   "mapName": "EAGLE'S REST CUTOFF",
+   "note": "along its printed name"
+  },
+  "east-ridge-traverse": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "EAST RIDGE TRAVERSE",
+   "note": "its group"
+  },
+  "easy-does-it": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "EASY DOES IT",
+   "note": "its group"
+  },
+  "elk-alley": {
+   "polylines": [
+    72
+   ],
+   "confidence": "high",
+   "mapName": "ELK ALLEY",
+   "note": "its group"
+  },
+  "f-i-s-cut": {
+   "polylines": [
+    74
+   ],
+   "confidence": "high",
+   "mapName": "F.I.S. CUT",
+   "note": "its group"
+  },
+  "flip-point": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "FLIP POINT",
+   "note": "its group"
+  },
+  "gannett": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "GANNETT",
+   "note": "its group"
+  },
+  "grand": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "GRAND",
+   "note": "its group"
+  },
+  "gros-ventre-lower": {
+   "polylines": [
+    73
+   ],
+   "confidence": "high",
+   "mapName": "GROS VENTRE (LOWER)",
+   "note": "its group"
+  },
+  "gros-ventre-upper": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "GROS VENTRE (UPPER)",
+   "note": "its group"
+  },
+  "hanging-rock": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "HANGING ROCK",
+   "note": "its group"
+  },
+  "hoops-gap": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "HOOPS GAP",
+   "note": "its group"
+  },
+  "horns-hole-traverse": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "HORN'S HOLE TRAVERSE",
+   "note": "its group"
+  },
+  "jackson-face": {
+   "polylines": [
+    80
+   ],
+   "confidence": "high",
+   "mapName": "JACKSON FACE",
+   "note": "its group"
+  },
+  "jerrys-way": {
+   "polylines": [
+    98
+   ],
+   "confidence": "high",
+   "mapName": "JERRY'S WAY",
+   "note": "its group"
+  },
+  "kemmerer-lower": {
+   "polylines": [
+    84
+   ],
+   "confidence": "high",
+   "mapName": "KEMMERER (LOWER)",
+   "note": "its group"
+  },
+  "kemmerer-upper": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "KEMMERER (UPPER)",
+   "note": "its group"
+  },
+  "lander-bowl": {
+   "polylines": [
+    69
+   ],
+   "confidence": "high",
+   "mapName": "LANDER BOWL",
+   "note": "its group"
+  },
+  "laramie": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "LARAMIE",
+   "note": "its group"
+  },
+  "laramie-traverse": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "LARAMIE TRAVERSE",
+   "note": "its group"
+  },
+  "liars-slide": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "LIAR'S SLIDE",
+   "note": "its group"
+  },
+  "lower-sublette-ridge": {
+   "polylines": [
+    63
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SUBLETTE RIDGE",
+   "note": "its group"
+  },
+  "lupine-way": {
+   "polylines": [
+    99
+   ],
+   "confidence": "high",
+   "mapName": "LUPINE WAY",
+   "note": "its group"
+  },
+  "moran-traverse": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "MORAN TRAVERSE",
+   "note": "its group"
+  },
+  "moran-woods": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "MORAN WOODS",
+   "note": "its group"
+  },
+  "nez-perce": {
+   "polylines": [
+    79
+   ],
+   "confidence": "high",
+   "mapName": "NEZ PERCE",
+   "note": "its group"
+  },
+  "nez-perce-traverse": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "NEZ PERCE TRAVERSE",
+   "note": "its group"
+  },
+  "north-colter-ridge": {
+   "polylines": [
+    67
+   ],
+   "confidence": "high",
+   "mapName": "NORTH COLTER RIDGE",
+   "note": "its group"
+  },
+  "paint-brush": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "PAINT BRUSH",
+   "note": "its group"
+  },
+  "pair-a-chutes": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "PAIR-A-CHUTES",
+   "note": "its group"
+  },
+  "pepis-run": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "PEPI'S RUN",
+   "note": "its group"
+  },
+  "pooh-bear": {
+   "polylines": [
+    105
+   ],
+   "confidence": "high",
+   "mapName": "POOH BEAR",
+   "note": "along its printed name"
+  },
+  "ranger": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "RANGER",
+   "note": "its group"
+  },
+  "rawlins-bowl": {
+   "polylines": [
+    64
+   ],
+   "confidence": "high",
+   "mapName": "RAWLIN'S BOWL",
+   "note": "its group"
+  },
+  "rendezvous-bowl": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "RENDEZVOUS BOWL",
+   "note": "its group"
+  },
+  "rendezvous-trail": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "RENDEZVOUS TRAIL",
+   "note": "its group"
+  },
+  "riverton-bowl": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "RIVERTON BOWL",
+   "note": "its group"
+  },
+  "slalom": {
+   "polylines": [
+    75
+   ],
+   "confidence": "high",
+   "mapName": "SLALOM",
+   "note": "its group"
+  },
+  "sleeping-indian": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "SLEEPING INDIAN",
+   "note": "its group"
+  },
+  "snag-tree": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "SNAG TREE",
+   "note": "its group"
+  },
+  "solitude-gully": {
+   "polylines": [
+    85
+   ],
+   "confidence": "high",
+   "mapName": "SOLITUDE GULLY",
+   "note": "its group"
+  },
+  "south-colter-ridge": {
+   "polylines": [
+    65
+   ],
+   "confidence": "high",
+   "mapName": "SOUTH COLTER RIDGE",
+   "note": "its group"
+  },
+  "south-pass-traverse": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "SOUTH PASS TRAVERSE",
+   "note": "its group"
+  },
+  "split-rock": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "SPLIT ROCK",
+   "note": "its group"
+  },
+  "sundance": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "SUNDANCE",
+   "note": "its group"
+  },
+  "sundance-lower": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "SUNDANCE (LOWER)",
+   "note": "its group"
+  },
+  "sundance-upper": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "SUNDANCE (UPPER)",
+   "note": "its group"
+  },
+  "sundog": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "SUNDOG",
+   "note": "its group"
+  },
+  "surprise": {
+   "polylines": [
+    100
+   ],
+   "confidence": "high",
+   "mapName": "SURPRISE",
+   "note": "its group"
+  },
+  "tensleep": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "TENSLEEP",
+   "note": "its group"
+  },
+  "teton-traverse": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "TETON TRAVERSE",
+   "note": "its group"
+  },
+  "thunder": {
+   "polylines": [
+    31,
+    32
+   ],
+   "confidence": "high",
+   "mapName": "THUNDER",
+   "note": "its group"
+  },
+  "togwotee-pass-traverse": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "TOGWOTEE PASS TRAVERSE",
+   "note": "its group"
+  },
+  "tower-three-chute": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "TOWER THREE CHUTE",
+   "note": "its group"
+  },
+  "tram-line": {
+   "polylines": [
+    71
+   ],
+   "confidence": "high",
+   "mapName": "TRAM LINE",
+   "note": "its group"
+  },
+  "two-in-the-bush": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "TWO IN THE BUSH",
+   "note": "its group"
+  },
+  "u-p-connection": {
+   "polylines": [
+    81
+   ],
+   "confidence": "high",
+   "mapName": "U.P. CONNECTION",
+   "note": "its group"
+  },
+  "union-pass-traverse": {
+   "polylines": [
+    68
+   ],
+   "confidence": "high",
+   "mapName": "UNION PASS TRAVERSE",
+   "note": "its group"
+  },
+  "wally-world": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "WALLY WORLD",
+   "note": "its group"
+  },
+  "way-home": {
+   "polylines": [
+    104
+   ],
+   "confidence": "high",
+   "mapName": "WAY HOME",
+   "note": "along its printed name"
+  },
+  "wide-open": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "WIDE OPEN",
+   "note": "its group"
+  },
+  "woolsey-woods": {
+   "noLine": true,
+   "label": [
+    48.17,
+    36.84
+   ],
+   "confidence": "high"
+  },
+  "big-horn": {
+   "polylines": [
+    94
+   ],
+   "confidence": "high",
+   "mapName": "BIG HORN",
+   "note": "its group"
+  },
+  "buck-run": {
+   "polylines": [
+    93
+   ],
+   "confidence": "high",
+   "mapName": "BUCK RUN",
+   "note": "its group"
+  },
+  "crags-run": {
+   "polylines": [
+    55
+   ],
+   "confidence": "high",
+   "mapName": "CRAGS RUN",
+   "note": "its group"
+  },
+  "crowheart": {
+   "polylines": [
+    96,
+    97
+   ],
+   "confidence": "high",
+   "mapName": "CROWHEART",
+   "note": "its group"
+  },
+  "easiest-way": {
+   "polylines": [
+    58
+   ],
+   "confidence": "high",
+   "mapName": "EASIEST WAY",
+   "note": "its group"
+  },
+  "grizzly-glade": {
+   "noLine": true,
+   "label": [
+    70.73,
+    41.68
+   ],
+   "confidence": "high"
+  },
+  "hanna-lower": {
+   "polylines": [
+    88
+   ],
+   "confidence": "high",
+   "mapName": "HANNA (LOWER)",
+   "note": "its group"
+  },
+  "hanna-upper": {
+   "polylines": [
+    91
+   ],
+   "confidence": "high",
+   "mapName": "HANNA (UPPER)",
+   "note": "its group"
+  },
+  "moran": {
+   "polylines": [
+    61
+   ],
+   "confidence": "high",
+   "mapName": "MORAN",
+   "note": "its group"
+  },
+  "pathfinder": {
+   "polylines": [
+    62
+   ],
+   "confidence": "high",
+   "mapName": "PATHFINDER",
+   "note": "its group"
+  },
+  "saratoga-bowl-traverse": {
+   "polylines": [
+    95
+   ],
+   "confidence": "high",
+   "mapName": "SARATOGA BOWL TRAVERSE",
+   "note": "its group"
+  },
+  "st-johns": {
+   "polylines": [
+    59,
+    60
+   ],
+   "confidence": "high",
+   "mapName": "ST. JOHN'S",
+   "note": "its group"
+  },
+  "symmetry": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "SYMMETRY",
+   "note": "its group"
+  },
+  "teewinot-lower": {
+   "polylines": [
+    108
+   ],
+   "confidence": "high",
+   "mapName": "TEEWINOT (LOWER)",
+   "note": "along its printed name"
+  },
+  "teewinot-upper": {
+   "polylines": [
+    92
+   ],
+   "confidence": "high",
+   "mapName": "TEEWINOT (UPPER)",
+   "note": "its group"
+  },
+  "teewinot-gully": {
+   "polylines": [
+    89
+   ],
+   "confidence": "high",
+   "mapName": "TEEWINOT GULLY",
+   "note": "its group"
+  },
+  "washakie-glade": {
+   "noLine": true,
+   "label": [
+    66.63,
+    42.89
+   ],
+   "confidence": "high"
+  },
+  "werner": {
+   "polylines": [
+    87
+   ],
+   "confidence": "high",
+   "mapName": "WERNER",
+   "note": "its group"
+  },
+  "werner-lower": {
+   "polylines": [
+    106
+   ],
+   "confidence": "high",
+   "mapName": "WERNER (LOWER)",
+   "note": "along its printed name"
+  },
+  "werner-middle": {
+   "polylines": [
+    90
+   ],
+   "confidence": "high",
+   "mapName": "WERNER (MIDDLE)",
+   "note": "its group"
+  },
+  "werner-upper": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "WERNER (UPPER)",
+   "note": "its group"
+  }
+ }
+}

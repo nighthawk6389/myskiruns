@@ -1,0 +1,20 @@
+// Jackson Hole Mountain Resort's 2025-26 trail map (jacksonhole.com: one
+// 3000x1900 PNG, James Niehues's painting; no PDF, no interactive map). Each
+// run is a thin line in its colour with its name printed in a gap of it in
+// the same colour: the name's colour is the rating, the report's double black
+// diamonds and the resort's double blue squares (advanced intermediate: blue
+// here) taken from the trail report (report.json: the feed jacksonhole.com's
+// report pages load). The map was read on zoomed crops (names.py: each name's
+// label and its run's line as points) and each line routed along the painted
+// one; the base area's runs, printed in the slow zones' hatching, and the
+// Alta Chutes are the stretch along their printed names. Runs printed in
+// parts are the report's parts (Upper and Lower Sundance, Gros Ventre,
+// Kemmerer, Ashley Ridge, Hanna, Teewinot, Werner's three); St. John's is
+// printed twice, above and below the Saratoga Bowl Traverse: one trail. The
+// bowls, faces, chutes printed with no line, the parks and the Stash's three
+// parks are markers. Areas: Rendezvous Mountain and Après Vous Mountain (east
+// of the Teton lift and the Teewinot lift's west side). Not on this map:
+// Cirque Gully, St. John's Extension (perhaps the lower St. John's), The
+// Crags, Timbered Island. Printed and not in the report: Laramie Bowl, the
+// Eagle's Rest and Antelope Flats parks. x/y/baseY/width are unused layout
+// fields.

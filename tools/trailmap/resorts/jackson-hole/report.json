@@ -1,0 +1,730 @@
+{
+ "_source": "Jackson Hole Mountain Resort's mountain and grooming report (jacksonhole.com/grooming-report: the feed it loads, jacksonhole-prod.zaneray.com/api/all.json), fetched 2026-10-10 out of season (every run listed, closed for the season); tools/trailmap/resorts/jackson-hole/report_feed.py",
+ "trails": [
+  [
+   "Nez Perce",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Washakie Glade",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "South Pass Traverse",
+   "",
+   "Blue"
+  ],
+  [
+   "Hanging Rock",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Tram Line",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "South Hoback",
+   "",
+   "Black"
+  ],
+  [
+   "Liar's Slide",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Togwotee Pass Traverse",
+   "",
+   "Blue"
+  ],
+  [
+   "Lower Sublette Ridge",
+   "",
+   "Black"
+  ],
+  [
+   "Sundance (Upper)",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Moran Woods",
+   "",
+   "Black"
+  ],
+  [
+   "Easy Does It",
+   "",
+   "Blue"
+  ],
+  [
+   "Beaver Tooth",
+   "",
+   "Black"
+  ],
+  [
+   "Alta Chute 1",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Eagle's Rest",
+   "",
+   "Green"
+  ],
+  [
+   "Bivouac",
+   "",
+   "Black"
+  ],
+  [
+   "Alta Chute 2",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Alta Chute 3",
+   "",
+   "Black"
+  ],
+  [
+   "Horn's Hole Traverse",
+   "",
+   "Blue"
+  ],
+  [
+   "Teewinot (Lower)",
+   "",
+   "Green"
+  ],
+  [
+   "Woolsey Woods",
+   "",
+   "Black"
+  ],
+  [
+   "Moccasin",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Solitude Gully",
+   "",
+   "Black"
+  ],
+  [
+   "Gannett",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Pathfinder",
+   "",
+   "Black"
+  ],
+  [
+   "Greybull",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "St. John's Extension",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Sundance",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Headwall",
+   "",
+   "Black"
+  ],
+  [
+   "Secret Slope",
+   "",
+   "Black"
+  ],
+  [
+   "Teton Traverse",
+   "",
+   "Blue"
+  ],
+  [
+   "F.I.S. Cut",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Sundance (Lower)",
+   "",
+   "Blue"
+  ],
+  [
+   "Amphitheater",
+   "",
+   "Blue"
+  ],
+  [
+   "Buffalo Bowl",
+   "",
+   "Black"
+  ],
+  [
+   "Eagle's Rest Cutoff",
+   "",
+   "Blue"
+  ],
+  [
+   "Timbered Island",
+   "",
+   "Blue"
+  ],
+  [
+   "Way Home",
+   "",
+   "Blue"
+  ],
+  [
+   "Saratoga Bowl",
+   "",
+   "Black"
+  ],
+  [
+   "Nez Perce Traverse",
+   "",
+   "Blue"
+  ],
+  [
+   "Teewinot (Upper)",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Moran Face",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Sleeping Indian",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Rawlin's Bowl",
+   "",
+   "Black"
+  ],
+  [
+   "South Colter Ridge",
+   "",
+   "Black"
+  ],
+  [
+   "St. John's",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Bernie's Bowl",
+   "",
+   "Black"
+  ],
+  [
+   "Rendezvous Bowl",
+   "",
+   "Black"
+  ],
+  [
+   "Moran (Lower)",
+   "",
+   "Blue"
+  ],
+  [
+   "Flip Point",
+   "",
+   "Black"
+  ],
+  [
+   "Wally World",
+   "",
+   "Black"
+  ],
+  [
+   "Kemmerer (Lower)",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Moran Traverse",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Dayton Bowl",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Croaky Point",
+   "",
+   "Blue"
+  ],
+  [
+   "Union Pass Traverse",
+   "",
+   "Blue"
+  ],
+  [
+   "Lupine Way",
+   "",
+   "Blue"
+  ],
+  [
+   "Coombs",
+   "",
+   "Black"
+  ],
+  [
+   "Paint Brush",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Werner",
+   "",
+   "Blue"
+  ],
+  [
+   "Bird In The Hand",
+   "",
+   "Black"
+  ],
+  [
+   "Kemmerer (Upper)",
+   "",
+   "Black"
+  ],
+  [
+   "Sheridan Bowl",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Crags Run",
+   "",
+   "Blue"
+  ],
+  [
+   "Moran (Upper)",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Jackson Face",
+   "",
+   "Black"
+  ],
+  [
+   "Expert Chutes",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Pooh Bear",
+   "",
+   "Green"
+  ],
+  [
+   "Limber Pine Chute",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Laramie",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Slalom",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Jerry's Way",
+   "",
+   "Blue"
+  ],
+  [
+   "Dick's Ditch (Upper)",
+   "",
+   "Black"
+  ],
+  [
+   "Amphitheater Traverse",
+   "",
+   "Blue"
+  ],
+  [
+   "Central Chute",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "The Crags",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Gros Ventre (Lower)",
+   "",
+   "Blue"
+  ],
+  [
+   "Lander Bowl",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Broadway",
+   "",
+   "Black"
+  ],
+  [
+   "Hanna (Lower)",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Crowheart",
+   "",
+   "Black"
+  ],
+  [
+   "Elk Alley",
+   "",
+   "Black"
+  ],
+  [
+   "U.P. Connection",
+   "",
+   "Blue"
+  ],
+  [
+   "Split Rock",
+   "",
+   "Black"
+  ],
+  [
+   "Fremont",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Thunder",
+   "",
+   "Black"
+  ],
+  [
+   "Werner (Middle)",
+   "",
+   "Blue"
+  ],
+  [
+   "North Colter Ridge",
+   "",
+   "Black"
+  ],
+  [
+   "Ashley Ridge (Upper)",
+   "",
+   "Blue"
+  ],
+  [
+   "Sundog",
+   "",
+   "Blue"
+  ],
+  [
+   "Snag Tree",
+   "",
+   "Black"
+  ],
+  [
+   "Antelope Flats",
+   "",
+   "Green"
+  ],
+  [
+   "Teewinot Face",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Teewinot Gully",
+   "",
+   "Blue"
+  ],
+  [
+   "Symmetry",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Cirque",
+   "",
+   "Black"
+  ],
+  [
+   "Easiest Way",
+   "",
+   "Blue"
+  ],
+  [
+   "Two in the Bush",
+   "",
+   "Black"
+  ],
+  [
+   "Bronco Terrain Park",
+   "",
+   "TerrainPark"
+  ],
+  [
+   "Dog Face",
+   "",
+   "Black"
+  ],
+  [
+   "Hoops Gap",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "North Hoback",
+   "",
+   "Black"
+  ],
+  [
+   "Hanna (Upper)",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Surprise",
+   "",
+   "Black"
+  ],
+  [
+   "Tensleep Bowl",
+   "",
+   "Black"
+  ],
+  [
+   "Grizzly Glade",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Tower Three Chute",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Cascade",
+   "",
+   "Black"
+  ],
+  [
+   "Laramie Traverse",
+   "",
+   "Blue"
+  ],
+  [
+   "Pair-a-chutes",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Stash Park - Ashley Ridge",
+   "",
+   "TerrainPark"
+  ],
+  [
+   "Pepi's Run",
+   "",
+   "Black"
+  ],
+  [
+   "Middle Hoback",
+   "",
+   "Black"
+  ],
+  [
+   "Blacktail",
+   "",
+   "Blue"
+  ],
+  [
+   "Riverton Bowl",
+   "",
+   "Black"
+  ],
+  [
+   "Cheyenne Gully",
+   "",
+   "Black"
+  ],
+  [
+   "Big Horn",
+   "",
+   "Black"
+  ],
+  [
+   "Tensleep",
+   "",
+   "Black"
+  ],
+  [
+   "Ranger",
+   "",
+   "Black"
+  ],
+  [
+   "Rendezvous Trail",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Werner (Lower)",
+   "",
+   "Green"
+  ],
+  [
+   "Wide Open",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Cowboy Couloir",
+   "",
+   "Black"
+  ],
+  [
+   "Casper Bowl",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Gros Ventre (Upper)",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Corbet's Couloir",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Dick's Ditch (Lower)",
+   "",
+   "Black"
+  ],
+  [
+   "Werner (Upper)",
+   "",
+   "Blue"
+  ],
+  [
+   "Grand",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Casper Traverse",
+   "",
+   "Black"
+  ],
+  [
+   "Cheyenne Bowl",
+   "",
+   "Black"
+  ],
+  [
+   "East Ridge Traverse",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Saratoga Bowl Traverse",
+   "",
+   "Black"
+  ],
+  [
+   "Beartooth",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Ashley Ridge (Lower)",
+   "",
+   "Black"
+  ],
+  [
+   "Cirque Gully",
+   "",
+   "Blue"
+  ],
+  [
+   "Stash Park - Campground",
+   "",
+   "TerrainPark"
+  ],
+  [
+   "Shot 7",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Camp Ground",
+   "",
+   "Blue"
+  ],
+  [
+   "Avalanche",
+   "",
+   "Black"
+  ],
+  [
+   "Shot 9",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Downhill",
+   "",
+   "Black"
+  ],
+  [
+   "Shot 8",
+   "",
+   "DoubleBlack"
+  ],
+  [
+   "Buck Run",
+   "",
+   "DoubleBlue"
+  ],
+  [
+   "Stash Park - Antelope Flats",
+   "",
+   "TerrainPark"
+  ]
+ ]
+}

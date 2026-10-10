@@ -71,7 +71,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 | only raster images | `raster_lines.py` + `raster_symbols.py` (or `lineDetector.mjs`), pieces named on review tiles or by readers | Vail (three panels), Killington | Vail |
 | only images, runs painted as slopes with no line (names along them), and an interactive map whose SVG groups each run's letters and symbol | the groups' letters and symbols registered on the print (`register_pages.py --ref`), what they lack read on crops (`names.py`); each run's overlay the stretch along its printed name (`LABEL_LINE`), the few drawn lines routed on the print | Schweitzer (two panels) | Schweitzer; Heavenly for a map whose runs have no line |
 | only images, one print drawing each run's line and the others painting runs with no line, and an interactive map per panel whose groups hold each run's symbols and an older line (no letters) | each SVG registered on its print (`register_pages.py --ref`), the groups' symbols placed on it, a label at each; where the print draws lines, its own (colour masks, `raster_lines.py`'s clean and skeleton pieces; the black kept only near an interactive-map black line, the trees left out), named by the symbol at each run's top; where it draws none, the groups' lines as they are (Mammoth's), with the stretch along the printed name (`LABEL_LINE`) for a run in no group or with a stub of a line; what the groups lack read on crops (`names.py`) | Big Bear (three panels: Snow Summit drawn, Bear Mountain and Snow Valley painted) | Big Bear; Mammoth, Schweitzer |
-| only small web JPEGs, lines blurred into the painting or in casings | the map read on zoomed crops: each name, its symbol, its run's line as waypoints (`names.py`), each line routed along the painted one (`route_trace.py`), the pieces named by the reading (`GROUPED`) | Whitefish Mountain (three panels) | Whitefish |
+| only small web JPEGs, lines blurred into the painting or in casings; or one good image whose lines are too thin and faint for detection | the map read on zoomed crops: each name, its symbol, its run's line as waypoints (`names.py`), each line routed along the painted one (`route_trace.py`), the pieces named by the reading (`GROUPED`) | Whitefish Mountain (three panels), Jackson Hole (one PNG, rated by the names' colours) | Whitefish; Jackson Hole for a map rated by colour |
 
 - **A low-resolution painting under good vectors:** `matte_pdf_layer.py` mattes the PDF's vector layer over a
   sharper copy of the painting (Breckenridge, from Vail Resorts' image CDN), a sharper image of the whole map
@@ -250,6 +250,16 @@ names really are paint:
    between them (`route_trace.py`, the casings made cheap too), one named piece per line (`GROUPED`); a name with
    no line is a marker at its label. Audit every overlay on crops: a route that strays onto a neighbouring line
    needs a waypoint where it left.
+5. **The same for a good image whose lines are too faint** (Jackson Hole: a lossless 3000 px PNG, but each run a
+   1-2 px line that blends into the snow, its name solid in the same colour). The masks find the letters and only
+   stretches of the lines (`raster_lines.py` traced a third of the runs), so read the map as in step 4, at 1x with
+   3x zooms for the waypoints. Give each line its label's first and last letters as waypoints (the name sits in a gap
+   of it): `prepare.py` crosses the label straight instead of routing through the letters, which zigzags. Snap
+   each label onto its letters (the letter-sized parts of its colour's mask near the line through its points),
+   keeping the reading where the snap would run past its ends or zigzag; a label kept as read is spread into
+   letter-spaced points (`pdf_resort.py` pushes a stretch's ends out by most of the spacing between its label's
+   points). Where a route still strays (a line beside another label, the trees' shadows), give the line's points
+   as they are (`'as read'`).
 
 ### `resort.py` settings, by what the crops show
 
@@ -509,11 +519,11 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 |---|---|
 | `tools/trailmap/extract_pdf_vectors.py` | Numbered pieces straight from a PDF's strokes in the trail colours: `--color`, `--min-width`/`--max-width`, `--append` another class, `--filled` (filled-and-stroked paths), `--outlined` (filled outlines), `--solid` (no dashed ones), `--exclude` boxes (legend, insets), `--min-length` (keep short stubs; with `--max-length` and `--append`, add only the stubs an earlier pass dropped), `--image` (the map at the same scale) |
 | `tools/trailmap/pdf_outline_lines.py` | Numbered pieces from a PDF whose lines are filled outlines, by their centre lines (recipe C): `--color` classes, `--dark` ones taken only `--dark-min` pt long or more, `--max-width`, `--min-length`, `--dash` (chain a dashed line), `--exclude` boxes, `--glyphs` + `--letters` (leave out the names' letters) |
-| `tools/trailmap/raster_lines.py` | Numbered pieces from a raster map: strict colour masks (`--palette`: Vail's, Steamboat's, Whitefish's), text and icons dropped, dashes linked, skeleton, junctions joined straight |
+| `tools/trailmap/raster_lines.py` | Numbered pieces from a raster map: strict colour masks (`--palette`: Vail's, Steamboat's, Whitefish's, Jackson Hole's), text and icons dropped, dashes linked, skeleton, junctions joined straight |
 | `tools/trailmap/split_pieces.py` | Cuts a piece at a point where it runs into a differently named trail |
 | `tools/trailmap/snap_trace.py` | A few rough points read off a grid crop snapped onto the painted line: a stretch the extraction missed |
 | `tools/trailmap/trace_ink.py` | The cheapest path along the painted line between a few points (`--rgb` or `--dark`): a stretch from its two ends, `--show` to check it |
-| `tools/trailmap/route_trace.py` | The same for every run of a map read on crops: a module (`Router(image, palette).route(cls, waypoints, casing)`) over `raster_lines.py`'s colour masks, casings cheap too, waypoints moved onto their line (Whitefish) |
+| `tools/trailmap/route_trace.py` | The same for every run of a map read on crops: a module (`Router(image, palette).route(cls, waypoints, casing)`) over `raster_lines.py`'s colour masks, casings cheap too, waypoints moved onto their line (Whitefish, Jackson Hole) |
 | `scripts/lib/lineDetector.mjs`, `scripts/tracePolylines.mjs`, `scripts/evaluateLines.mjs` | Killington's colour-line detector, its vectorisation into pieces, and its ground-truth score (`npm run lines:eval`) |
 
 **Names and symbols**
@@ -630,6 +640,7 @@ give the same.
 | [Buttermilk](#buttermilk) | the same kind, one panel; the dotted way down | as Snowmass | `regen.sh` | a small map of that kind |
 | [Snowbasin](#snowbasin) | PDF strokes and text over a painting, symbols on the lines; a few lines as filled outlines | `pdf_resort.py`; the report from a Common Crawl capture of an HTML table | `regen.sh` | names printed along their lines, symbols on them |
 | [Whitefish Mountain](#whitefish-mountain) | three small web JPEGs, no PDF | the map read on crops (`names.py`), lines routed on the painting (`route_trace.py`) | `regen.sh` | a map only published as small images |
+| [Jackson Hole](#jackson-hole) | one PNG, no PDF; thin lines faint in the snow, names in the run's colour | the map read on crops (`names.py`), lines routed on the painting, labels snapped to their letters | `regen.sh` | a good image whose lines detection can't follow |
 | [Alta](#alta) | PDF strokes, outlined black names, rounded symbols | `pdf_resort.py`, glyph sheets | `regen.sh` | strokes and glyph names, faces with no line |
 | [Schweitzer](#schweitzer) | two images, runs painted with no line; two interactive maps | the groups' names and symbols on the prints, the stretch along each name, `names.py` | `regen.sh` | an image-only map of runs with no lines |
 | [Northstar](#northstar) | PDF lines as filled outlines holding several runs, names as white glyphs haloed in the line's colour | `pdf_outline_lines.py` centre lines, the halo's colour as the rating, cuts at each junction | `regen.sh` | one outline for several runs |
@@ -1611,6 +1622,44 @@ sides, the areas too) · `tools/trailmap/resorts/whitefish/`.
   showed a route on a neighbouring line, Central Avenue, Hope Slope, Ski Way, Under Easy, Middle Fork and Toni
   Matt's top, given waypoints where they strayed and read again, and seven markers moved onto their labels);
   `compare.py` against the report; hover 175/175, 61/61, 44/44.
+
+## Jackson Hole
+
+142 trails (108 + 34) · Wyoming · one map · areas: Rendezvous Mountain and Après Vous Mountain (the map's two
+summits; the report has no areas: `resort.area()` divides them along the Teton lift and the Teewinot lift's west
+side) · `tools/trailmap/resorts/jackson-hole/`.
+
+- **Source:** jacksonhole.com's winter trail map page shows and links one image (plain curl): DatoCMS's asset
+  `1764786024-2025-26trailmapresized.png`, a 3000x1900 PNG as uploaded (`?fm=json` gives its size), James Niehues's
+  painting. No PDF, no interactive map; skimap.org's copies are the same image or smaller. Each run is a thin line
+  (1-2 px, solid or dashed) in its colour, green, blue or black, its name printed in a gap of it **in the same
+  colour**, with no symbols: the colour is the rating. Lifts red, the boundary orange dots, slow zones yellow or
+  green hatching, the parks orange pills, the Stash's three parks brown icons. Its SHA-256 is checked.
+- **Route:** recipe G, step 5: the map read on crops (`names.py`: per name its colour, its label's first and last
+  letters, and its run's line as points from where it starts, through its label, to where it ends), on 2x grid tiles
+  and 3x zooms; `prepare.py` routes each line along the painted one (`route_trace.py`, `raster_lines.py`'s
+  jackson-hole masks: the lines' lighter blue and greys as well as the names' solid colours), straight across its
+  own label, and snaps each label onto its letters. `pdf_resort.py` names each piece by the reading (`GROUPED`),
+  rates each name by its colour (`COLOR_SYMBOL`) and the report's double blacks (`RATING`); the base area's green
+  runs, printed in the slow zones' hatching, and the Alta Chutes, three labels with no line of their own, are the
+  stretch along their names (`LABEL_LINE`).
+- **Rebuild:** `tools/trailmap/resorts/jackson-hole/regen.sh` (5 s).
+- **Truth:** the trail report (`report.json`: the feed jacksonhole.com's report pages load,
+  `jacksonhole-prod.zaneray.com/api/all.json`, fetched 2026-10-10 out of season: 145 runs; `report_feed.py`). Names
+  as the report spells them; runs printed in parts are the report's parts (UPPER and LOWER SUNDANCE, the two GROS
+  VENTRE, KEMMERER black above and blue below, ASHLEY RIDGE blue and black, HANNA and UPPER HANNA, TEEWINOT and LOWER
+  TEEWINOT, UPPER WERNER and the two WERNERs: Middle and the plain one). The resort's double blue squares (advanced
+  intermediate) are blue. ST. JOHN'S is printed twice, above and below the Saratoga Bowl Traverse: one trail. Not
+  printed: Cirque Gully, St. John's Extension (perhaps the lower ST. JOHN'S), The Crags, Timbered Island. Printed and
+  not in the report: Laramie Bowl, the Eagle's Rest and Antelope Flats parks.
+- **Decisions:** none per piece: each line is one of the reading. Lines given as read where a route strayed
+  (Thunder's beside Hoops Gap's label, Crowheart's lower part beside the trees' shadows, Cowboy Couloir's short line
+  through its two-line label). Markers: the bowls, faces and chutes printed with no line (Tensleep Bowl, Headwall,
+  the Shots, the Hobacks, Casper and Cheyenne Bowls, Greybull, Moccasin, Fremont...), the glades (Grizzly and
+  Washakie), the parks and the Stash.
+- **Checked:** every overlay on crops (`overlay_audit.py`, 27 sheets of lines and 6 of markers, every cell read;
+  some 40 lines given more points where a route strayed or stopped short and read again, the long traverses on
+  larger cells); `compare.py` against the report; hover 358/358; the app check.
 
 ## Alta
 

@@ -194,6 +194,29 @@ Heavenly's analyses: registering the 2022-23 PDF on the 2024-25 image (now `tool
 | `tools/redraw.py` | redraw.py: redraw selected fills of a PDF page on a blank page (pymupdf Shape) and render it. Used as a module: redraw(page, drawings, scale, clip) -> RGB numpy array. |
 
 
+## jackson-hole
+
+Jackson Hole's reading (the work folder `work/jackson-hole`): the colour tallies and masks that showed the lines blend
+into the snow (the names are solid, the lines a lighter blue and grey), the letter clusters and the grid tiles the
+names were read on, the reading notes themselves (`reading/`: every label and line as read, turned into
+`resorts/jackson-hole/names.py` by `gen_names.py`, which reproduces it), and the views the routes were checked on
+before the audit.
+
+| file | what it did |
+|---|---|
+| `jackson-hole/colour_tally.py` | colour_tally.py <map> x0,y0,x1,y1 [n]: the commonest colours (16-level bins) in a box, the saturated ones marked |
+| `jackson-hole/masks_view.py` | masks_view.py <map> <out.png> x0,y0,x1,y1: the first blue, green and black masks drawn alone on the faded map |
+| `jackson-hole/clean_view.py` | clean_view.py <out.png> x0,y0,x1,y1: each mask (light) and what raster_lines.clean() keeps of it (dark): the lines dropped as text |
+| `jackson-hole/pieces_view.py` | pieces_view.py <map> <pieces.json> <out prefix>: pieces drawn by class on the faded map, in tiles (raster_lines.py found a third of the runs) |
+| `jackson-hole/letter_clusters.py` | letter_clusters.py <map> <out.json> <max> <min> <link>: letter-sized parts of each colour's mask chained into labels |
+| `jackson-hole/cluster_tiles.py` | cluster_tiles.py <map> <clusters.json> <out prefix> <w> <h>: the clusters numbered on the map, in tiles (which labels no reading covered) |
+| `jackson-hole/grid_tiles.py` | grid_tiles.py <map> <out prefix> <w> <h> <zoom> <step> x0,y0,x1,y1: 2x tiles with a labelled grid, the names read on them |
+| `jackson-hole/zoom.py` | zoom.py <map> <out.png> x0,y0,x1,y1 [zoom] [step]: one zoomed crop with a labelled grid (each line's waypoints read on these) |
+| `jackson-hole/route_test.py` | route_test.py <folder>: the reading's lines routed (route_trace.py) and drawn named on the map, before prepare.py did it |
+| `jackson-hole/overview_tiles.py` | overview_tiles.py <resort> <out prefix> <w> <h> x0,y0,x1,y1: every overlay of trailPaths.json drawn named, in tiles |
+| `jackson-hole/gen_names.py` | gen_names.py <folder>: `reading/labels.txt` and `lines.txt` as names.py's READING entries (the report's names for the parts printed UPPER, LOWER or once each) |
+| `jackson-hole/reading/` | labels.txt, lines.txt: the map as read on the crops, one line per label and per line |
+
 ## mammoth
 
 Mammoth's checks of its reading: each printed name's symbol against the trail report (`symbols_vs_report.py`), and a

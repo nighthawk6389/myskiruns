@@ -176,6 +176,7 @@ export const RESORTS: ResortEntry[] = [
     { id: 'bear-mountain', name: 'Bear Mountain', paths: () => import('./data/resorts/big-bear/panels/bear-mountain/trailPaths.json') },
     { id: 'snow-valley', name: 'Snow Valley', paths: () => import('./data/resorts/big-bear/panels/snow-valley/trailPaths.json') },
   ], ['Big Bear Mountain Resort', 'Snow Summit', 'Bear Mountain', 'Snow Valley', 'Big Bear Lake']),
+  oneMap('jackson-hole', 'Jackson Hole', 'Wyoming', () => import('./data/resorts/jackson-hole/trails'), () => import('./data/resorts/jackson-hole/trailPaths.json'), ['Jackson Hole Mountain Resort', 'Teton Village', 'Jackson']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

@@ -450,6 +450,21 @@ const RESORT_ADS = {
     negatives: ['summer', 'mountain bike', 'bike park', 'hiking', 'cabin', 'cabins', 'rental', 'lodging', 'hotel',
       'zoo', 'jobs', 'wedding', 'fishing', 'new york', 'harriman', 'state park', 'bridge'],
   },
+  'jackson-hole': {
+    short: 'Jackson Hole',
+    path: 'Jackson-Hole',
+    area: "Corbet's to Apres Vous",
+    // bare "jackson hole" is also the valley and the town: only with the resort's names or a map
+    names: ['jackson hole mountain resort', 'jackson hole ski resort', 'jackson hole', 'teton village'],
+    keywords: [
+      ['jackson hole ski trails', 'phrase'],
+      ['jackson hole ski map', 'exact'],
+    ],
+    // the valley's summer, its national parks and town, the other Jacksons
+    negatives: ['summer', 'mountain bike', 'bike park', 'hiking', 'yellowstone', 'grand teton national park', 'airport',
+      'rodeo', 'hotel', 'lodging', 'rental', 'real estate', 'jobs', 'wedding', 'fishing', 'rafting', 'elk refuge',
+      'mississippi', 'tennessee', 'michigan', 'florida'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */
