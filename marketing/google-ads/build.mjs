@@ -385,6 +385,16 @@ const RESORT_ADS = {
     // the summer and the concerts, the bike park
     negatives: ['summer', 'concert', 'blues and brews', 'mountain bike', 'bike park', 'hiking', 'wedding', 'jobs'],
   },
+  whitefish: {
+    short: 'Whitefish',
+    path: 'Whitefish',
+    area: 'Front Side to Hellroaring',
+    names: ['whitefish mountain resort', 'whitefish mountain', 'big mountain whitefish'],
+    keywords: [],
+    // the town's lake and the fishing, the summer and the bike park
+    negatives: ['lake', 'fishing', 'fish', 'summer', 'mountain bike', 'bike park', 'hiking', 'zip line', 'jobs',
+      'real estate'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

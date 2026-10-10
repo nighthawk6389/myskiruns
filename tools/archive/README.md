@@ -507,3 +507,13 @@ Whistler Blackcomb's checks: its GIS (ArcGIS run layer) against the map's meetin
 | `truth/near.py` | Print the nearest GIS runs to the middle of each named GIS run (for judging ambiguous aliases). |
 | `truth/wb_common.py` | Shared loading/normalisation for the Whistler Blackcomb ground-truth build. |
 | `truthcmp.py` | The map's trail names against the resort's feed and its GIS runs: names missing on either side |
+
+## whitefish
+
+Whitefish's crops for reading its map and checking the routed lines (`thin_crops.py`, `snowbasin/thin_crops.py` with
+the work folder as an argument: a panel's `pieces_cut.json`, else the detector's `lines.json`, drawn thin over the map
+with ids, names and a grid). What the crops showed is in `resorts/whitefish/names.py`.
+
+| file | what it did |
+|---|---|
+| `whitefish/thin_crops.py` | thin_crops.py <work dir> <out dir> <zoom> x0,y0,x1,y1 ... (or `piece <id> ...`): review crops with the pieces drawn thin |

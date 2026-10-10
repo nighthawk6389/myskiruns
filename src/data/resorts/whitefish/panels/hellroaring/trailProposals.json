@@ -1,0 +1,109 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "1000-turns": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "1000 TURNS",
+   "note": "its group"
+  },
+  "big-ravine": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "BIG RAVINE",
+   "note": "its group"
+  },
+  "swift-creek": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "SWIFT CREEK",
+   "note": "its group"
+  },
+  "toni-matt": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "TONI MATT",
+   "note": "its group"
+  },
+  "chets-stache": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "CHET'S STACHE",
+   "note": "its group"
+  },
+  "connies-coulee": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "CONNIE'S COULEE",
+   "note": "its group"
+  },
+  "glory-hole": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "GLORY HOLE",
+   "note": "its group"
+  },
+  "hell-fire": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "HELL FIRE",
+   "note": "its group"
+  },
+  "lacy-lane": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "LACY LANE",
+   "note": "its group"
+  },
+  "pats-ride": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "PAT'S RIDE",
+   "note": "its group"
+  },
+  "radjack": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "RADJACK",
+   "note": "its group"
+  },
+  "short-but-sweet": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "SHORT BUT SWEET",
+   "note": "its group"
+  },
+  "wing-and-a-prayer": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "WING AND A PRAYER",
+   "note": "its group"
+  }
+ }
+}

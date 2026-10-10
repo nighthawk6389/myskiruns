@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Ski-run tracker for twenty-nine resorts (React 19 + TS + Vite). The hard part is
+Ski-run tracker for thirty resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
@@ -38,7 +38,9 @@ the already-assigned path (that is circular).
   (`vicomap.py`) routed onto the image's own lines (Steamboat; on a PDF that
   draws no lines, its lines as they are: Mammoth), or raster line
   detection: `raster_lines.py` (Vail) or `scripts/lib/lineDetector.mjs`
-  (Killington, 97% F1). The printed symbol is the difficulty.
+  (Killington, 97% F1); with only small web JPEGs, the map read on crops and
+  each line routed along the painted one (`route_trace.py`, Whitefish). The
+  printed symbol is the difficulty.
 - Works: naming the pieces by reading them. Either numbered-tile readers
   (Claude sub-agents) or Claude itself on review tiles, recording each
   decision. Then a person on the Trail Check page, or, at the owner's call,
@@ -61,7 +63,8 @@ the already-assigned path (that is circular).
   readings and decisions: Vail's from `names.py` + `decisions.py`; Hunter's and
   every PDF resort after it from `resort.py` + `decisions.py` through
   `tools/trailmap/pdf_resort.py` (per panel in `panels/<panel>/` for Whistler
-  Blackcomb, Palisades Tahoe, Big Sky, Heavenly, Mammoth, Snowmass and Aspen Mountain; Heavenly's PDF is an older
+  Blackcomb, Palisades Tahoe, Big Sky, Heavenly, Mammoth, Snowmass, Aspen Mountain and Whitefish (no PDF:
+  its `names.py` is the map read on crops); Heavenly's PDF is an older
   export of its map's artwork, registered on the current image, and Deer
   Valley's an earlier one registered on the later flattened image; Steamboat
   has no PDF: its interactive map's SVG is the vector layer; Mammoth's PDF draws

@@ -1,0 +1,166 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "russs-street": {
+   "polylines": [
+    0,
+    1
+   ],
+   "confidence": "high",
+   "mapName": "RUSS'S STREET",
+   "note": "its group"
+  },
+  "big-creek": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "BIG CREEK",
+   "note": "its group"
+  },
+  "big-horn": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "BIG HORN",
+   "note": "its group"
+  },
+  "black-bear": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "BLACK BEAR",
+   "note": "its group"
+  },
+  "caribou": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "CARIBOU",
+   "note": "its group"
+  },
+  "georges-gorge": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "GEORGE'S GORGE",
+   "note": "its group"
+  },
+  "goat-haunt": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "GOAT HAUNT",
+   "note": "its group"
+  },
+  "gray-wolf": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "GRAY WOLF",
+   "note": "its group"
+  },
+  "hidden-meadow": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "HIDDEN MEADOW",
+   "note": "its group"
+  },
+  "hollywood": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "HOLLYWOOD",
+   "note": "its group"
+  },
+  "inside-road": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "INSIDE ROAD",
+   "note": "its group"
+  },
+  "kodiak": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "KODIAK",
+   "note": "its group"
+  },
+  "marmot": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "MARMOT",
+   "note": "its group"
+  },
+  "north-fork": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "NORTH FORK",
+   "note": "its group"
+  },
+  "one-grand-parade": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "ONE GRAND PARADE",
+   "note": "its group"
+  },
+  "outside-road": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "OUTSIDE ROAD",
+   "note": "its group"
+  },
+  "ridge-run": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE RUN",
+   "note": "its group"
+  },
+  "silvertip": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "SILVERTIP",
+   "note": "its group"
+  },
+  "whiskey-spring": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "WHISKEY SPRING",
+   "note": "its group"
+  },
+  "whitetail": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "WHITETAIL",
+   "note": "its group"
+  }
+ }
+}

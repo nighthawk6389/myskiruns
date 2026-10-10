@@ -1,0 +1,585 @@
+{
+ "_source": "Whitefish Mountain Resort's trail report: the run lists of https://skiwhitefish.com/snowreport/ as fetched on 2026-10-10 (every run listed, closed for the season), by lift",
+ "trails": [
+  [
+   "1000 Turns",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Bad Rock",
+   "Chair 1 - Big Mountain Express",
+   "Blue"
+  ],
+  [
+   "Bench Runs",
+   "Chair 1 - Big Mountain Express",
+   "Blue"
+  ],
+  [
+   "Big Face",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Big Ravine",
+   "Chair 1 - Big Mountain Express",
+   "Blue"
+  ],
+  [
+   "Cal's Country",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Chappy Hour",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Chute",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Corkscrew",
+   "Chair 1 - Big Mountain Express",
+   "Blue"
+  ],
+  [
+   "Easy Out",
+   "Chair 1 - Big Mountain Express",
+   "Green"
+  ],
+  [
+   "Elephant's Graveyard",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Elkweed",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Fault 2",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Fault 3",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Good Medicine",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Haskill Slide",
+   "Chair 1 - Big Mountain Express",
+   "DoubleBlack"
+  ],
+  [
+   "Headwall",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Heep Steep",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Inspiration",
+   "Chair 1 - Big Mountain Express",
+   "Blue"
+  ],
+  [
+   "Larch",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Little Bavaria",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Middle Fork",
+   "Chair 1 - Big Mountain Express",
+   "Blue"
+  ],
+  [
+   "Movie Land",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "No Name",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "North Bowl Face",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Over the Hill Gang",
+   "Chair 1 - Big Mountain Express",
+   "Blue"
+  ],
+  [
+   "Powder Bowl",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Ptarmigan Bowl",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Russ's Street",
+   "Chair 1 - Big Mountain Express",
+   "Blue"
+  ],
+  [
+   "Schmidt's Chute",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Toni Matt",
+   "Chair 1 - Big Mountain Express",
+   "Blue"
+  ],
+  [
+   "Upper Langley",
+   "Chair 1 - Big Mountain Express",
+   "Black"
+  ],
+  [
+   "Ed's Run",
+   "Chair 2 - Swift Creek Express",
+   "Blue"
+  ],
+  [
+   "Heaven",
+   "Chair 2 - Swift Creek Express",
+   "Blue"
+  ],
+  [
+   "Hellroaring",
+   "Chair 2 - Swift Creek Express",
+   "Blue"
+  ],
+  [
+   "Hibernation",
+   "Chair 2 - Swift Creek Express",
+   "Blue"
+  ],
+  [
+   "Home Again",
+   "Chair 2 - Swift Creek Express",
+   "Green"
+  ],
+  [
+   "Interstate",
+   "Chair 2 - Swift Creek Express",
+   "Green"
+  ],
+  [
+   "Mully's",
+   "Chair 2 - Swift Creek Express",
+   "Blue"
+  ],
+  [
+   "Nice Day",
+   "Chair 2 - Swift Creek Express",
+   "Blue"
+  ],
+  [
+   "Ranger Trail",
+   "Chair 2 - Swift Creek Express",
+   "Blue"
+  ],
+  [
+   "Sandi's",
+   "Chair 2 - Swift Creek Express",
+   "Black"
+  ],
+  [
+   "Swift Creek",
+   "Chair 2 - Swift Creek Express",
+   "Blue"
+  ],
+  [
+   "Wood Lot",
+   "Chair 2 - Swift Creek Express",
+   "Black"
+  ],
+  [
+   "Alpinglow Alley",
+   "Chair 3 - Tenderfoot",
+   "Green"
+  ],
+  [
+   "Central Avenue",
+   "Chair 3 - Tenderfoot",
+   "Blue"
+  ],
+  [
+   "Hailey's",
+   "Chair 3 - Tenderfoot",
+   "Green"
+  ],
+  [
+   "Hope Slope",
+   "Chair 3 - Tenderfoot",
+   "Green"
+  ],
+  [
+   "Ski Way",
+   "Chair 3 - Tenderfoot",
+   "Green"
+  ],
+  [
+   "Expressway",
+   "Chair 4 - Snow Ghost Express",
+   "Blue"
+  ],
+  [
+   "Friends of Langley",
+   "Chair 4 - Snow Ghost Express",
+   "Black"
+  ],
+  [
+   "Hogan's",
+   "Chair 4 - Snow Ghost Express",
+   "Blue"
+  ],
+  [
+   "Hogan's East",
+   "Chair 4 - Snow Ghost Express",
+   "Blue"
+  ],
+  [
+   "Langley",
+   "Chair 4 - Snow Ghost Express",
+   "Black"
+  ],
+  [
+   "Powder Trap",
+   "Chair 4 - Snow Ghost Express",
+   "Black"
+  ],
+  [
+   "Three Stooges",
+   "Chair 4 - Snow Ghost Express",
+   "Black"
+  ],
+  [
+   "Don's Descent",
+   "Chair 5 - East Rim",
+   "DoubleBlack"
+  ],
+  [
+   "East Rim",
+   "Chair 5 - East Rim",
+   "DoubleBlack"
+  ],
+  [
+   "East Rim Face",
+   "Chair 5 - East Rim",
+   "Black"
+  ],
+  [
+   "Evan's Heaven",
+   "Chair 5 - East Rim",
+   "Black"
+  ],
+  [
+   "First Creek",
+   "Chair 5 - East Rim",
+   "DoubleBlack"
+  ],
+  [
+   "Lee's Way",
+   "Chair 5 - East Rim",
+   "Black"
+  ],
+  [
+   "Moe Mentum",
+   "Chair 5 - East Rim",
+   "Blue"
+  ],
+  [
+   "Moose",
+   "Chair 5 - East Rim",
+   "Blue"
+  ],
+  [
+   "N.B.C.",
+   "Chair 5 - East Rim",
+   "DoubleBlack"
+  ],
+  [
+   "Whitey's",
+   "Chair 5 - East Rim",
+   "Black"
+  ],
+  [
+   "Barndance",
+   "Chair 6 - Base Lodge",
+   "Green"
+  ],
+  [
+   "Chipmunk",
+   "Chair 6 - Base Lodge",
+   "Green"
+  ],
+  [
+   "Huckleberry Patch",
+   "Chair 6 - Base Lodge",
+   "Green"
+  ],
+  [
+   "Big Horn",
+   "Chair 7 - Big Creek Express",
+   "DoubleBlack"
+  ],
+  [
+   "Black Bear",
+   "Chair 7 - Big Creek Express",
+   "Black"
+  ],
+  [
+   "Caribou",
+   "Chair 7 - Big Creek Express",
+   "Green"
+  ],
+  [
+   "George's Gorge",
+   "Chair 7 - Big Creek Express",
+   "Blue"
+  ],
+  [
+   "Goat Haunt",
+   "Chair 7 - Big Creek Express",
+   "Blue"
+  ],
+  [
+   "Gray Wolf",
+   "Chair 7 - Big Creek Express",
+   "Blue"
+  ],
+  [
+   "Hollywood",
+   "Chair 7 - Big Creek Express",
+   "Black"
+  ],
+  [
+   "Kodiak",
+   "Chair 7 - Big Creek Express",
+   "Black"
+  ],
+  [
+   "Marmot",
+   "Chair 7 - Big Creek Express",
+   "Black"
+  ],
+  [
+   "Silvertip",
+   "Chair 7 - Big Creek Express",
+   "Blue"
+  ],
+  [
+   "Whitetail",
+   "Chair 7 - Big Creek Express",
+   "Blue"
+  ],
+  [
+   "Chet's Stache",
+   "Chair 8 - Hellroaring",
+   "Black"
+  ],
+  [
+   "Connie's Coulee",
+   "Chair 8 - Hellroaring",
+   "Black"
+  ],
+  [
+   "Glory Hole",
+   "Chair 8 - Hellroaring",
+   "Black"
+  ],
+  [
+   "Gray's Golf Course",
+   "Chair 8 - Hellroaring",
+   "Black"
+  ],
+  [
+   "Hell Fire",
+   "Chair 8 - Hellroaring",
+   "Blue"
+  ],
+  [
+   "Lacy Lane",
+   "Chair 8 - Hellroaring",
+   "Blue"
+  ],
+  [
+   "Pat's Ride",
+   "Chair 8 - Hellroaring",
+   "Black"
+  ],
+  [
+   "Picture Chutes",
+   "Chair 8 - Hellroaring",
+   "DoubleBlack"
+  ],
+  [
+   "RadJack",
+   "Chair 8 - Hellroaring",
+   "Black"
+  ],
+  [
+   "Short but Sweet",
+   "Chair 8 - Hellroaring",
+   "Black"
+  ],
+  [
+   "Sling Shot",
+   "Chair 8 - Hellroaring",
+   "Black"
+  ],
+  [
+   "Teepee",
+   "Chair 8 - Hellroaring",
+   "Black"
+  ],
+  [
+   "The Back 9",
+   "Chair 8 - Hellroaring",
+   "Black"
+  ],
+  [
+   "Wing and a Prayer",
+   "Chair 8 - Hellroaring",
+   "DoubleBlack"
+  ],
+  [
+   "Lower Inspiration",
+   "Chair 9 - Easy Rider",
+   "Green"
+  ],
+  [
+   "Under Easy",
+   "Chair 9 - Easy Rider",
+   "Green"
+  ],
+  [
+   "Big Creek",
+   "Chair 11 - Flower Point",
+   "Blue"
+  ],
+  [
+   "Hidden Meadow",
+   "Chair 11 - Flower Point",
+   "Black"
+  ],
+  [
+   "Inside Road",
+   "Chair 11 - Flower Point",
+   "Blue"
+  ],
+  [
+   "North Fork",
+   "Chair 11 - Flower Point",
+   "Black"
+  ],
+  [
+   "One Grand Parade",
+   "Chair 11 - Flower Point",
+   "Blue"
+  ],
+  [
+   "Outside Road",
+   "Chair 11 - Flower Point",
+   "Black"
+  ],
+  [
+   "Ridge Run",
+   "Chair 11 - Flower Point",
+   "Blue"
+  ],
+  [
+   "Lodi Ridge",
+   "Bigfoot T-Bar 2",
+   "Blue"
+  ],
+  [
+   "Lynx",
+   "Bigfoot T-Bar 2",
+   "Blue"
+  ],
+  [
+   "Stumptown",
+   "Bigfoot T-Bar 2",
+   "Black"
+  ],
+  [
+   "Trapper's Trail",
+   "Bigfoot T-Bar 2",
+   "Blue"
+  ],
+  [
+   "Whiskey Spring",
+   "Bigfoot T-Bar 2",
+   "Blue"
+  ],
+  [
+   "Big Easy Carpet Area",
+   "Big Easy Carpet",
+   "Green"
+  ],
+  [
+   "2 Easy Carpet Area",
+   "2 Easy Carpet",
+   "Green"
+  ],
+  [
+   "2nd Street Park",
+   "Terrain Parks",
+   "Blue"
+  ],
+  [
+   "Central Avenue Park",
+   "Terrain Parks",
+   "Black"
+  ],
+  [
+   "Depot Terrain Park",
+   "Terrain Parks",
+   "Blue"
+  ],
+  [
+   "Goat Haunt SB Course",
+   "Terrain Parks",
+   "Blue"
+  ],
+  [
+   "Lower Central Avenue",
+   "Terrain Parks",
+   "Blue"
+  ],
+  [
+   "Minnow Park",
+   "Terrain Parks",
+   "Green"
+  ]
+ ]
+}

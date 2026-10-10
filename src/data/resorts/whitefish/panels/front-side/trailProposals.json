@@ -1,0 +1,389 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "1000-turns": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "1000 TURNS",
+   "note": "its group"
+  },
+  "2nd-street-park": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "2ND STREET PARK",
+   "note": "its group"
+  },
+  "alpinglow-alley": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "ALPINGLOW ALLEY",
+   "note": "its group"
+  },
+  "bad-rock": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "BAD ROCK",
+   "note": "its group"
+  },
+  "barndance": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "BARNDANCE",
+   "note": "its group"
+  },
+  "bench-runs": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "BENCH RUNS",
+   "note": "its group"
+  },
+  "big-ravine": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "BIG RAVINE",
+   "note": "its group"
+  },
+  "central-avenue": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "CENTRAL AVENUE",
+   "note": "its group"
+  },
+  "chipmunk": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "CHIPMUNK",
+   "note": "its group"
+  },
+  "chute": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "CHUTE",
+   "note": "its group"
+  },
+  "corkscrew": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "CORKSCREW",
+   "note": "its group"
+  },
+  "east-rim-face": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "EAST RIM FACE",
+   "note": "its group"
+  },
+  "eds-run": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "ED'S RUN",
+   "note": "its group"
+  },
+  "expressway": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "EXPRESSWAY",
+   "note": "its group"
+  },
+  "friends-of-langley": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "FRIENDS OF LANGLEY",
+   "note": "its group"
+  },
+  "haileys": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "HAILEY'S",
+   "note": "its group"
+  },
+  "heaven": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "HEAVEN",
+   "note": "its group"
+  },
+  "heep-steep": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "HEEP STEEP",
+   "note": "its group"
+  },
+  "hellroaring": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "HELLROARING",
+   "note": "its group"
+  },
+  "hibernation": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "HIBERNATION",
+   "note": "its group"
+  },
+  "hogans": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "HOGAN'S",
+   "note": "its group"
+  },
+  "hogans-east": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "HOGAN'S EAST",
+   "note": "its group"
+  },
+  "home-again": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "HOME AGAIN",
+   "note": "its group"
+  },
+  "hope-slope": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "HOPE SLOPE",
+   "note": "its group"
+  },
+  "huckleberry-patch": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "HUCKLEBERRY PATCH",
+   "note": "its group"
+  },
+  "inspiration": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "INSPIRATION",
+   "note": "its group"
+  },
+  "interstate": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "INTERSTATE",
+   "note": "its group"
+  },
+  "langley": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "LANGLEY",
+   "note": "its group"
+  },
+  "lower-inspiration": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "LOWER INSPIRATION",
+   "note": "its group"
+  },
+  "middle-fork": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE FORK",
+   "note": "its group"
+  },
+  "moe-mentum": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "MOE MENTUM",
+   "note": "its group"
+  },
+  "moose": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "MOOSE",
+   "note": "its group"
+  },
+  "mullys": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "MULLY'S",
+   "note": "its group"
+  },
+  "mullys-moguls": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "MULLY'S MOGULS",
+   "note": "its group"
+  },
+  "nice-day": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "NICE DAY",
+   "note": "its group"
+  },
+  "no-name": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "NO NAME",
+   "note": "its group"
+  },
+  "over-the-hill-gang": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "OVER THE HILL GANG",
+   "note": "its group"
+  },
+  "powder-trap": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "POWDER TRAP",
+   "note": "its group"
+  },
+  "ranger-trail": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "RANGER TRAIL",
+   "note": "its group"
+  },
+  "russs-street": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "RUSS'S STREET",
+   "note": "its group"
+  },
+  "ski-way": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "SKI WAY",
+   "note": "its group"
+  },
+  "swift-creek": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "SWIFT CREEK",
+   "note": "its group"
+  },
+  "three-stooges": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "THREE STOOGES",
+   "note": "its group"
+  },
+  "toni-matt": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "TONI MATT",
+   "note": "its group"
+  },
+  "under-easy": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "UNDER EASY",
+   "note": "its group"
+  },
+  "upper-langley": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LANGLEY",
+   "note": "its group"
+  },
+  "lodi-ridge": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "LODI RIDGE",
+   "note": "its group"
+  },
+  "lynx": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "LYNX",
+   "note": "its group"
+  }
+ }
+}

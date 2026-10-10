@@ -1,0 +1,69 @@
+{
+ "reviews": {
+  "sling-shot": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T03:10:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    45.61,
+    32.33
+   ]
+  },
+  "picture-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T03:10:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    44.91,
+    43.06
+   ]
+  },
+  "the-back-9": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T03:10:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    25.88,
+    44.94
+   ]
+  },
+  "teepee": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T03:10:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    64.85,
+    49.0
+   ]
+  },
+  "grays-golf-course": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T03:10:18.000Z",
+   "by": "claude",
+   "labelAt": [
+    39.29,
+    50.83
+   ]
+  }
+ }
+}

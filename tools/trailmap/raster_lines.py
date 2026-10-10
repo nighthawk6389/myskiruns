@@ -10,7 +10,8 @@ straight through junctions (a crossing yields two through pieces).
 dashes: Vail's Back Bowls 1.75, Blue Sky 2.7); --text-max is the largest glyph (px) to treat as text. Yellow sign
 boxes (WILDLIFE HABITAT) are found and blanked automatically. Writes {_source, polylines:[{id, cls, lengthPx,
 points}]} in percent of the image, like extract_pdf_vectors.py. The colour masks are tuned to Vail's 2025-26
-palette (--palette steamboat: Steamboat's 2026-27); check them on a new map (--debug draws what each class kept).
+palette (--palette steamboat: Steamboat's 2026-27; --palette whitefish: Whitefish's 2025-26 JPEGs, read on a 2x
+upscale); check them on a new map (--debug draws what each class kept).
 
 Requires: pip install pillow numpy opencv-python-headless scikit-image
 """
@@ -25,6 +26,13 @@ Image.MAX_IMAGE_PIXELS = None
 def masks(A, palette='vail'):
     r, g, b = (A[..., i].astype(np.int16) for i in range(3))
     mx = A.max(2).astype(np.int16); mn = A.min(2).astype(np.int16)
+    if palette == 'whitefish':  # Whitefish's 2025-26 web JPEGs: thin lines whose colour the JPEG blurs into the
+        # painting (blue about (30, 155, 220), green (5, 160, 70)), read on a 2x upscale
+        return {
+            'blue': (b > 150) & (b - r > 110) & (b - g > 30) & (r < 70) & (g > 90),
+            'green': (g > 110) & (g - r > 80) & (g - b > 40) & (r < 90),
+            'black': (mx < 60) & (mx - mn < 30),
+        }
     if palette == 'steamboat':  # Steamboat's 2026-27 map: a darker blue (53, 94, 153) and green (32, 145, 83)
         return {
             'blue': (b > 115) & (b - r > 60) & (b - g > 35) & (r < 110) & (g < 140),
@@ -328,8 +336,8 @@ def main():
     ap.add_argument('--k', type=float, default=1.0, help='scale of symbols and dashes relative to Vail Front Side')
     ap.add_argument('--text-max', type=int, default=36, help='largest glyph extent (px) to treat as text')
     ap.add_argument('--min-len', type=int, default=30, help='shortest piece kept (px)')
-    ap.add_argument('--palette', default='vail', choices=['vail', 'steamboat'],
-                    help="the colour masks: Vail's 2025-26 palette, or Steamboat's 2026-27")
+    ap.add_argument('--palette', default='vail', choices=['vail', 'steamboat', 'whitefish'],
+                    help="the colour masks: Vail's 2025-26 palette, Steamboat's 2026-27 or Whitefish's 2025-26")
     ap.add_argument('--debug', help='write the kept line pixels per class here')
     ap.add_argument('--source', help='text for the _source field')
     a = ap.parse_args()

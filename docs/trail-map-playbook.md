@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's twenty-nine resorts got their overlays, written so the next resort (or the next season of one of
+How the app's thirty resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -69,6 +69,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 | only raster images, but an interactive map whose SVG draws the same artwork (Alterra's resorts-interactive.com) | `vicomap.py parse --detail`: its lines, letters and symbols grouped by trail; registered on the image, each line routed onto the image's own line, named by its group (`GROUPED`); the print's redrawn spots traced (`trace_ink.py`) | Steamboat | Steamboat |
 | a PDF with names as text and symbols as fills over a painting, but no trail lines drawn; an interactive map of the same painting | `vicomap.py parse`: its lines, registered on the painting and kept as they are (nothing printed to route them onto), named by their group (`GROUPED`); `pdf_labels.py` names spelled as the groups; symbols from the fills by colour | Mammoth (two panels, two interactive maps) | Mammoth |
 | only raster images | `raster_lines.py` + `raster_symbols.py` (or `lineDetector.mjs`), pieces named on review tiles or by readers | Vail (three panels), Killington | Vail |
+| only small web JPEGs, lines blurred into the painting or in casings | the map read on zoomed crops: each name, its symbol, its run's line as waypoints (`names.py`), each line routed along the painted one (`route_trace.py`), the pieces named by the reading (`GROUPED`) | Whitefish Mountain (three panels) | Whitefish |
 
 - **A low-resolution painting under good vectors:** `matte_pdf_layer.py` mattes the PDF's vector layer over a
   sharper copy of the painting (Breckenridge, from Vail Resorts' image CDN), a sharper image of the whole map
@@ -238,6 +239,14 @@ names really are paint:
 3. Name the pieces on review tiles (`grid_crop.py`) and record every decision as a point on the map (Vail's
    `decisions.py`, `add.py`), never a piece id: re-tuning the detector renumbers every piece. Stretches the
    detector breaks (dashes through slow zones, a name printed in the line) are traced with `snap_trace.py`.
+4. **When the only copy is a small web JPEG** (Whitefish: 1600 px wide, no PDF, no interactive map), the detector
+   finds part of the lines at best: the JPEG blurs thin lines into the painting, and lines drawn in a casing keep
+   only a pixel of their colour. Read the map instead, on 2x zoomed grid crops of a 2x upscale: every name as
+   printed with its label's middle, its symbol, and its run's line as a few waypoints (its start, its end, a point
+   past each junction where it could take another line) in a `names.py`; route each line along the painted one
+   between them (`route_trace.py`, the casings made cheap too), one named piece per line (`GROUPED`); a name with
+   no line is a marker at its label. Audit every overlay on crops: a route that strays onto a neighbouring line
+   needs a waypoint where it left.
 
 ### `resort.py` settings, by what the crops show
 
@@ -324,7 +333,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the twenty-nine resorts settled, so the next ones come out alike:
+What the thirty resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -496,10 +505,11 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 |---|---|
 | `tools/trailmap/extract_pdf_vectors.py` | Numbered pieces straight from a PDF's strokes in the trail colours: `--color`, `--min-width`/`--max-width`, `--append` another class, `--filled` (filled-and-stroked paths), `--outlined` (filled outlines), `--solid` (no dashed ones), `--exclude` boxes (legend, insets), `--min-length` (keep short stubs; with `--max-length` and `--append`, add only the stubs an earlier pass dropped), `--image` (the map at the same scale) |
 | `tools/trailmap/pdf_outline_lines.py` | Numbered pieces from a PDF whose lines are filled outlines, by their centre lines (recipe C): `--color` classes, `--dark` ones taken only `--dark-min` pt long or more, `--max-width`, `--min-length`, `--dash` (chain a dashed line), `--exclude` boxes, `--glyphs` + `--letters` (leave out the names' letters) |
-| `tools/trailmap/raster_lines.py` | Numbered pieces from a raster map: strict colour masks (`--palette`: Vail's, Steamboat's), text and icons dropped, dashes linked, skeleton, junctions joined straight |
+| `tools/trailmap/raster_lines.py` | Numbered pieces from a raster map: strict colour masks (`--palette`: Vail's, Steamboat's, Whitefish's), text and icons dropped, dashes linked, skeleton, junctions joined straight |
 | `tools/trailmap/split_pieces.py` | Cuts a piece at a point where it runs into a differently named trail |
 | `tools/trailmap/snap_trace.py` | A few rough points read off a grid crop snapped onto the painted line: a stretch the extraction missed |
 | `tools/trailmap/trace_ink.py` | The cheapest path along the painted line between a few points (`--rgb` or `--dark`): a stretch from its two ends, `--show` to check it |
+| `tools/trailmap/route_trace.py` | The same for every run of a map read on crops: a module (`Router(image, palette).route(cls, waypoints, casing)`) over `raster_lines.py`'s colour masks, casings cheap too, waypoints moved onto their line (Whitefish) |
 | `scripts/lib/lineDetector.mjs`, `scripts/tracePolylines.mjs`, `scripts/evaluateLines.mjs` | Killington's colour-line detector, its vectorisation into pieces, and its ground-truth score (`npm run lines:eval`) |
 
 **Names and symbols**
@@ -615,6 +625,7 @@ give the same.
 | [Aspen Mountain](#aspen-mountain) | the same kind, three panels; no trail report | as Snowmass, names spelled as printed | `regen.sh` | a map of that kind with insets |
 | [Buttermilk](#buttermilk) | the same kind, one panel; the dotted way down | as Snowmass | `regen.sh` | a small map of that kind |
 | [Snowbasin](#snowbasin) | PDF strokes and text over a painting, symbols on the lines; a few lines as filled outlines | `pdf_resort.py`; the report from a Common Crawl capture of an HTML table | `regen.sh` | names printed along their lines, symbols on them |
+| [Whitefish Mountain](#whitefish-mountain) | three small web JPEGs, no PDF | the map read on crops (`names.py`), lines routed on the painting (`route_trace.py`) | `regen.sh` | a map only published as small images |
 
 ## Killington
 
@@ -1557,6 +1568,40 @@ runs, John Paul), each with the elevation printed where its lifts top out · `to
   (Sister's Bowl, Middle Bowl Cirque, Needles Cirque, Porky Cirque, Mt. Ogden Bowl, Lower Pyramid).
 - **Checked:** every overlay on crops (`overlay_audit.py`, 21 sheets, every cell read; No Name's, which ran along the
   ridge from the tram, cut and read again); `compare.py` against the report; hover 363/363.
+
+## Whitefish Mountain
+
+113 trails (76 + 37) · Montana · three panels: the Front Side, the North Side and Hellroaring Basin (the map's three
+sides, the areas too) · `tools/trailmap/resorts/whitefish/`.
+
+- **Source:** skiwhitefish.com's trail-maps page shows three JPEGs (plain curl), James Niehues's paintings: the
+  2025-26 Front Side (1600x913) and the 2024-25 North Side and Hellroaring Basin insets (1219x900, still the ones
+  linked). No PDF anywhere: not on the site (its media API is closed), not on skimap.org (the same JPEGs, the
+  2024-25 front side larger, 2400 px, but redrawn since), not in Common Crawl. Lines are thin (2 to 3 px at 2x),
+  green, blue and black; the "easiest route down" a green or blue line in a yellow casing, the night-skiing runs
+  in a purple one; names are text printed along the run's line, the symbol at its start; the open faces, bowls and
+  chutes are a name and a symbol with no line.
+- **Route:** `raster_lines.py --palette whitefish` (looser masks, for the JPEG) finds part of the plain lines and
+  none of the cased ones, so the map is read instead (recipe G, step 4): `names.py`, per panel, every name with its
+  label's middle and symbol and its run's line as waypoints, read on 2x zoomed grid crops of a 2x Lanczos upscale;
+  `prepare.py` routes each line along the painted one (`route_trace.py`); `pdf_resort.py` with the names as
+  `EXTRA` and the pieces named by the reading (`GROUPED`).
+- **Rebuild:** `tools/trailmap/resorts/whitefish/regen.sh` (15 s); it checks the three JPEGs' SHA-256.
+- **Truth:** the trail report (`report.json`: the snow report page's runs by lift, plain curl, fetched 2026-10-10,
+  every run listed out of season; `snow_report.py`). Names as the report spells them: the carpets as its
+  2 Easy Carpet Area and Big Easy Carpet Area, the parks 2nd Street Park and Depot Terrain Park, BENCH RUN its
+  Bench Runs. Every rating agrees (Minnow Park, printed with no symbol, green by the report: `RATING`). Not printed:
+  Easy Out and three park features (Central Avenue Park, Lower Central Avenue, Goat Haunt SB Course). Mully's Moguls
+  is printed and not on the report. Areas: the map's sides, Chair 7's, Chair 11's and the Bigfoot T-Bar's runs the
+  North Side's, Chair 8's Hellroaring Basin's.
+- **Decisions:** none to record: each piece is a line of the reading. Three Stooges, three short lines from Russ's
+  Street, is its middle one, through its diamond (`trails:apply` would join the three along Russ's Street). Runs on
+  two panels (Russ's Street, Toni Matt, Big Ravine, Swift Creek, 1000 Turns) have a line on each. Markers: the open
+  faces, bowls and chutes with no line (31 on the Front Side, Stumptown, 5 in Hellroaring Basin).
+- **Checked:** every overlay on crops (`overlay_audit.py`, 14, 4 and 3 sheets, every cell read; the ones that
+  showed a route on a neighbouring line, Central Avenue, Hope Slope, Ski Way, Under Easy, Middle Fork and Toni
+  Matt's top, given waypoints where they strayed and read again, and seven markers moved onto their labels);
+  `compare.py` against the report; hover 175/175, 61/61, 44/44.
 
 # Part 4. Methods in detail
 

@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass, Buttermilk and Snowbasin keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk, Snowbasin and Whitefish keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -116,6 +116,12 @@ python3 -I tools/trailmap/reports/warc_to_html.py work/snowbasin/cc/CC-MAIN-2026
 python3 -I tools/trailmap/resorts/snowbasin/mountain_report.py work/snowbasin/cc/page.html --source "..." \
   --out tools/trailmap/resorts/snowbasin/report.json
 ```
+
+## Whitefish Mountain
+
+`https://skiwhitefish.com/snowreport/` (plain curl) lists every run under its lift, each with its difficulty icon
+(an inline SVG: a circle, a square, one diamond or two) and status, out of season too (all closed).
+`resorts/whitefish/snow_report.py` reads it into `report.json` (fetched 2026-10-10).
 
 ## Smugglers' Notch
 

@@ -159,6 +159,11 @@ export const RESORTS: ResortEntry[] = [
   ], ['Ajax', 'Aspen Snowmass', 'Aspen']),
   oneMap('buttermilk', 'Buttermilk', 'Colorado', () => import('./data/resorts/buttermilk/trails'), () => import('./data/resorts/buttermilk/trailPaths.json'), ['Aspen Snowmass', 'Aspen']),
   oneMap('snowbasin', 'Snowbasin', 'Utah', () => import('./data/resorts/snowbasin/trails'), () => import('./data/resorts/snowbasin/trailPaths.json'), ['Ogden']),
+  panels('whitefish', 'Whitefish Mountain', 'Montana', () => import('./data/resorts/whitefish/trails'), [
+    { id: 'front-side', name: 'Front Side', paths: () => import('./data/resorts/whitefish/panels/front-side/trailPaths.json') },
+    { id: 'north-side', name: 'North Side', paths: () => import('./data/resorts/whitefish/panels/north-side/trailPaths.json') },
+    { id: 'hellroaring', name: 'Hellroaring Basin', paths: () => import('./data/resorts/whitefish/panels/hellroaring/trailPaths.json') },
+  ], ['Big Mountain', 'Whitefish']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

@@ -1,0 +1,12 @@
+// Whitefish Mountain Resort's trail maps (skiwhitefish.com: web JPEGs only,
+// James Niehues's paintings): the 2025-26 Front Side, and the 2024-25 North
+// Side and Hellroaring Basin insets the trail-maps page still links. No PDF
+// and no interactive map: each name, its symbol and its run's line were read
+// on zoomed crops (names.py), and each line routed along the painted one
+// between the points read on it (route_trace.py). Names are spelled as the
+// trail report spells them (report.json: the snow report's runs by lift).
+// Runs printed as a name and a symbol with no line (the open faces, bowls and
+// chutes off the summit and Hellroaring Basin) are markers at their names.
+// Areas: the map's three sides; Chair 7's, Chair 11's and the Bigfoot
+// T-Bar's runs are the North Side's, Chair 8's Hellroaring Basin's.
+// x/y/baseY/width are unused layout fields.
