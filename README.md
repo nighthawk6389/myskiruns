@@ -266,7 +266,11 @@ Vercel builds the app (`npm run build`) on every push and serves `dist/` with `a
 `main` go to production (www.myskiruns.app). `api/` runs as Node ESM (`"type": "module"`), so its relative imports
 need explicit `.js` extensions, or every request fails with a 500; `npx vercel build` reports a missing one as
 TS2835. Environment variables: the accounts' and the conditions store's, above. Nothing else to do for a new
-resort: the service worker's precache list and version are filled in by the build.
+resort: the service worker's precache list and version are filled in by the build. Push `main` on its own and check
+that a Production deployment came for the commit (`gh api 'repos/nighthawk6389/myskiruns/deployments?sha=<sha>'`
+lists each with its environment) before pushing the same commit to other branches: Arapahoe Basin's commit, pushed
+to `main` and two branches within a second, got two Preview deployments and no Production one, so the site stayed
+on the commit before until the next push to `main`.
 
 ## Marketing
 

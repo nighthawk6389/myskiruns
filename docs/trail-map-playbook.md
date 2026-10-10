@@ -49,7 +49,7 @@ assigned (it passes on a wrong line). The evidence is zoomed crops of the map, t
 | 9 | **Audit every overlay** | `overlay_audit.py` (one cell per trail: look at every one), `symbol_audit.py --mode off / ends / diamonds`, `pdf_overlaps.py`, ratings against the report; a matted image with `matte_check.py`; fix with a decision, a cut or a traced stretch, rebuild, look again | 1-3 h |
 | 10 | **Register it** | the map as a JPEG (quality 82, 2-4 MB) in `public/maps/`, an entry in `src/resorts.ts` (state, other places it's found by, panels), an ad group in `marketing/google-ads/build.mjs` (`npm run ads:build`), the docs: the README's table, its section in Part 3, CLAUDE.md's list of rebuilt resorts | 20 min |
 | 11 | **Verify** | `regen.sh` from an empty work folder, then `git status` shows nothing; `regen_all.sh` if a shared tool changed (every other resort unchanged); `hover_all.sh`; `node tools/app_check.cjs <url> --resort <id>`; `npx tsc -b && npx eslint . && npm test`; after an app change also `app_flows.cjs` and `offline_check.cjs` | 20 min |
-| 12 | **Commit and push** | one commit per resort, its message saying the source, the method, the decisions and the checks (the recent resorts' commits are the model) | |
+| 12 | **Commit and push** | one commit per resort, its message saying the source, the method, the decisions and the checks (the recent resorts' commits are the model); push `main` alone, check the commit got a Production deployment (the README's "Deploying"), and only then push it to other branches | |
 
 So far a single PDF map of strokes and text took one to two hours; a big map, several panels or glyph names four
 to eight; a map whose names can't be extracted two to four hours of readers plus a person's review.
