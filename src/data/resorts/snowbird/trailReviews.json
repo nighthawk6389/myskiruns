@@ -1,0 +1,329 @@
+{
+ "reviews": {
+  "baldys-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    58.18,
+    13.46
+   ]
+  },
+  "pipeline-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    45.83,
+    13.81
+   ]
+  },
+  "rasta-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    44.32,
+    17.21
+   ]
+  },
+  "west-baldy": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    14.58,
+    18.33
+   ]
+  },
+  "temptation-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:01:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    68.65,
+    19.97
+   ]
+  },
+  "boundary-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T14:01:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.77,
+    21.53
+   ]
+  },
+  "gad-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    38.91,
+    22.86
+   ]
+  },
+  "route-2-cliffs": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    20.57,
+    32.87
+   ]
+  },
+  "defiance-ledge": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    86.2,
+    33.43
+   ]
+  },
+  "mushroom-land": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    80.52,
+    34.94
+   ]
+  },
+  "get-serious-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    56.04,
+    35.46
+   ]
+  },
+  "gun-towers": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    4.17,
+    35.89
+   ]
+  },
+  "white-rabbit": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    82.66,
+    38.48
+   ]
+  },
+  "mozzarella-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    69.01,
+    39.04
+   ]
+  },
+  "figure-8-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    89.17,
+    41.29
+   ]
+  },
+  "livin-the-dream": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    55.83,
+    76.57
+   ]
+  },
+  "bookends-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    4.17,
+    82.61
+   ]
+  },
+  "hamilton-cliffs": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    24.48,
+    85.42
+   ]
+  },
+  "limber-pines": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    38.02,
+    87.49
+   ]
+  },
+  "sunday-saddle": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    2.6,
+    87.58
+   ]
+  },
+  "niagra": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    30.99,
+    87.58
+   ]
+  },
+  "gheen-gully": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    34.48,
+    88.01
+   ]
+  },
+  "fossil-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    43.65,
+    88.87
+   ]
+  },
+  "sunday-cliffs": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    6.51,
+    89.95
+   ]
+  },
+  "flora-cliffs": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-10T13:49:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    19.27,
+    89.95
+   ]
+  }
+ }
+}

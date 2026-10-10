@@ -71,7 +71,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 | only raster images | `raster_lines.py` + `raster_symbols.py` (or `lineDetector.mjs`), pieces named on review tiles or by readers | Vail (three panels), Killington | Vail |
 | only images, runs painted as slopes with no line (names along them), and an interactive map whose SVG groups each run's letters and symbol | the groups' letters and symbols registered on the print (`register_pages.py --ref`), what they lack read on crops (`names.py`); each run's overlay the stretch along its printed name (`LABEL_LINE`), the few drawn lines routed on the print | Schweitzer (two panels) | Schweitzer; Heavenly for a map whose runs have no line |
 | only images, one print drawing each run's line and the others painting runs with no line, and an interactive map per panel whose groups hold each run's symbols and an older line (no letters) | each SVG registered on its print (`register_pages.py --ref`), the groups' symbols placed on it, a label at each; where the print draws lines, its own (colour masks, `raster_lines.py`'s clean and skeleton pieces; the black kept only near an interactive-map black line, the trees left out), named by the symbol at each run's top; where it draws none, the groups' lines as they are (Mammoth's), with the stretch along the printed name (`LABEL_LINE`) for a run in no group or with a stub of a line; what the groups lack read on crops (`names.py`) | Big Bear (three panels: Snow Summit drawn, Bear Mountain and Snow Valley painted) | Big Bear; Mammoth, Schweitzer |
-| only small web JPEGs, lines blurred into the painting or in casings; or one good image whose lines are too thin and faint for detection | the map read on zoomed crops: each name, its symbol, its run's line as waypoints (`names.py`), each line routed along the painted one (`route_trace.py`), the pieces named by the reading (`GROUPED`) | Whitefish Mountain (three panels), Jackson Hole (one PNG, rated by the names' colours) | Whitefish; Jackson Hole for a map rated by colour |
+| only small web JPEGs, lines blurred into the painting or in casings; or one good image whose lines are too thin and faint for detection | the map read on zoomed crops: each name, its symbol, its run's line as waypoints (`names.py`), each line routed along the painted one (`route_trace.py`), the pieces named by the reading (`GROUPED`) | Whitefish Mountain (three panels), Jackson Hole (one PNG, rated by the names' colours), Snowbird (one JPEG, its PDF the same image) | Whitefish; Jackson Hole for a map rated by colour |
 
 - **A low-resolution painting under good vectors:** `matte_pdf_layer.py` mattes the PDF's vector layer over a
   sharper copy of the painting (Breckenridge, from Vail Resorts' image CDN), a sharper image of the whole map
@@ -642,6 +642,7 @@ give the same.
 | [Whitefish Mountain](#whitefish-mountain) | three small web JPEGs, no PDF | the map read on crops (`names.py`), lines routed on the painting (`route_trace.py`) | `regen.sh` | a map only published as small images |
 | [Jackson Hole](#jackson-hole) | one PNG, no PDF; thin lines faint in the snow, names in the run's colour | the map read on crops (`names.py`), lines routed on the painting, labels snapped to their letters | `regen.sh` | a good image whose lines detection can't follow |
 | [Alta](#alta) | PDF strokes, outlined black names, rounded symbols | `pdf_resort.py`, glyph sheets | `regen.sh` | strokes and glyph names, faces with no line |
+| [Snowbird](#snowbird) | one JPEG (its PDF the same image), two views in one; lines among blue-painted trees | the map read on crops (`names.py`), lines routed on the painting | `regen.sh` | a map whose PDF is only its image |
 | [Schweitzer](#schweitzer) | two images, runs painted with no line; two interactive maps | the groups' names and symbols on the prints, the stretch along each name, `names.py` | `regen.sh` | an image-only map of runs with no lines |
 | [Northstar](#northstar) | PDF lines as filled outlines holding several runs, names as white glyphs haloed in the line's colour | `pdf_outline_lines.py` centre lines, the halo's colour as the rating, cuts at each junction | `regen.sh` | one outline for several runs |
 | [Beaver Creek](#beaver-creek) | this season's map an image only (CDN); a 2023 vector export of the artwork | registration, glyph names, symbols on the lines (`SYMBOL_ON_LINE`) | `regen.sh` | a Vail Resorts map with no PDF this season |
@@ -1696,6 +1697,41 @@ Wildcat) · `tools/trailmap/resorts/alta/`.
   the names printed on two lines with none.
 - **Checked:** every overlay on crops (`overlay_audit.py`, 13 sheets, every cell read); `compare.py` against the
   report; hover 278/278.
+
+## Snowbird
+
+180 trails (155 + 25) · Utah · one map, two views (the front side above, Mineral Basin below) · areas: the trail
+report's sectors (Gad Valley, Peruvian Gulch, Mineral Basin) · `tools/trailmap/resorts/snowbird/`.
+
+- **Source:** snowbird.com's winter trail map page shows a 1920x2318 JPEG (plain curl, its CMS) and links a "Download the
+  Map" PDF (`/winter-trail-map/` redirects to `snowbird_trailmap_winter_2526.pdf`): one page holding the same image at
+  72 dpi, no vectors. skimap.org's editions are images too (2024's 2023-24 PDF the same kind). James Niehues's
+  painting: each run a thin line in its colour with its symbol on it (green circles, blue squares, black diamonds,
+  doubles for experts), the name along it in the same colour; the easier ways down cased dashes (blue and orange);
+  the bowls, faces and cliffs printed as a name and a symbol with no line. Its SHA-256 is checked.
+- **Route:** recipe G, step 5, as Jackson Hole: `raster_lines.py`'s masks keep about half the lines (broken where they
+  cross the blue-painted trees and shadows) and none of the cased ways (`tools/archive/snowbird/lines_view.py`), so the
+  map is read on 2x grid tiles and 3x zooms (`names.py`: each name, its colour or 'expert' where a double diamond is
+  printed by it, its label, its run's line as points). `prepare.py` is Jackson Hole's with the vail masks (`route_trace.py`
+  over the JPEG); `pdf_resort.py` rates each name by its colour and symbol (`COLOR_SYMBOL`, 'expert' a double diamond);
+  Chip's Access, printed along the cased way from the tram with no line read, is the stretch along its name.
+- **Rebuild:** `tools/trailmap/resorts/snowbird/regen.sh` (5 s).
+- **Truth:** the trail report (`report.json`: the DOR trail list snowbird.com's lift and trail report page loads,
+  `api.snowbird.com/api/v1/dor/drupal/trails`, fetched 2026-10-10 out of season: 175 runs by sector; `feed_trails.py`).
+  Names as the report spells them (FIELDS CUT-OFF its Fields Cutoff, NIAGARA its Niagra). Ratings as printed where
+  they differ: Hot Lips Gully blue (the report black), Lazy Susan and Tiny Tiger black diamonds (the report blue).
+  Printed and not in the report: Baldy's and Pipeline Bowls, Livin' the Dream, Hamilton, Flora and Sunday Cliffs,
+  Sunday Saddle. In the report and not printed: Lowest Bassackwards, Old Hollywood. Who Dunnit is printed twice along
+  the cased way down Gad Valley's west side, Lupine Loop twice in Mineral Basin, Mini Miners' Camp twice at Baby
+  Thunder: one trail each, a line at each.
+- **Decisions:** none per piece: each line is one of the reading. Lines given as read where a route strayed onto
+  another line, a label or the trees (Bass Highway's bend, Barry Barry Steep, Binx's Bumper, Hoop's, Lazy Susan, Old
+  Ladies, Road to Provo, Regulator Johnson, The Fin, Upper Chip's Run down its switchbacks, Junior's Powder Paradise,
+  Nash Flora Lode, Tail Feathers, Westward Ho, and others). Markers: the bowls, faces, cliffs and chutes printed with no
+  line.
+- **Checked:** every overlay on crops (`overlay_audit.py`, 39 sheets of lines and 5 of markers, every cell read; some 45
+  lines given points or taken as read and read again, two markers moved onto their labels); `compare.py` against the
+  report; hover 490/490; the app check.
 
 ## Schweitzer
 

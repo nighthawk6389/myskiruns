@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear and Jackson Hole keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole and Snowbird keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -124,6 +124,10 @@ The lift and trail report page (`mtbachelor.com/the-mountain/lift-trail-report/`
 `https://api.mtbachelor.com/api/v1/dor/drupal/trails` (plain curl; `/lifts` the lifts): every trail of every season,
 with its sector and rating (easiest, more difficult, most difficult, extreme). `feed_trails.py` reads such a list
 (the winter alpine and terrain-park trails; its sectors are the areas), as in `resorts/mt-bachelor/README.md`.
+
+Snowbird's lift and trail report page loads the same kind of list from
+`https://api.snowbird.com/api/v1/dor/drupal/trails` (plain curl): 175 winter runs on 2026-10-10, out of season, by
+sector (Gad Valley, Peruvian Gulch, Mineral Basin).
 
 ## Snowbasin
 

@@ -374,6 +374,20 @@ own line colours stay readable, with its id and name; or one piece alone in a bo
 |---|---|
 | `snowbasin/thin_crops.py` | thin_crops.py <out dir> <zoom> x0,y0,x1,y1 ... (or `piece <id> ...`): review crops of work/snowbasin/ with the pieces drawn thin, ids and names at their middles |
 
+## snowbird
+
+Snowbird's reading (the work folder `work/snowbird`): the line view that showed detection keeps only part of the
+lines, the reading notes (`reading/`: every label and line as read on the crops, turned into
+`resorts/snowbird/names.py` by `gen_names.py`, which reproduces it) and the helper that edited their lines during the
+audit. The crops themselves were made with `jackson-hole/grid_tiles.py` and `jackson-hole/zoom.py`.
+
+| file | what it did |
+|---|---|
+| `snowbird/lines_view.py` | lines_view.py <map> x0,y0,x1,y1 <out.png> [text max]: the colour masks' line pieces drawn on the faded map |
+| `snowbird/gen_names.py` | gen_names.py <folder>: `reading/labels.txt` and `lines.txt` as names.py's READING entries ('expert' where a double diamond is noted by a black name) |
+| `snowbird/fix_lines.py` | fix_lines.py NAME 'waypoints' ...: a line of the notes replaced (or added) |
+| `snowbird/reading/` | labels.txt, lines.txt: the map as read on the crops (the front side, then Mineral Basin) |
+
 ## snowmass
 
 Snowmass's helpers for settling its pieces on crops (run from the repo root after a build): which line a printed

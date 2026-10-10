@@ -1,0 +1,187 @@
+# NAME | colour | label points (first letter, last letter, bends; one point: two lines) | note
+West Baldy | black | (280,425) | two lines, double diamond
+Venus Line | black | (235,457) (262,497) | double diamond at (265,508)
+Fields of Glory | black | (228,512) (253,577) | double diamond (253,587)
+Thanks for the Memories | black | (180,557) (260,642) | double diamond (265,650)
+Mid-Baldy Traverse | black | (283,602) (305,515) | bottom-up; double diamond (307,500)
+High Baldy Traverse | black | (198,447) (220,392) | bottom-up; double diamond (238,352)
+Upper Primrose Path | black | (422,475) (475,405) | bottom-up; diamond (480,387)
+Upper Silver Fox | black | (460,487) (502,422) | bottom-up; double diamond (507,415)
+Great Scott | black | (555,475) (575,422) | bottom-up; double diamond (577,415)
+Upper Cirque | black | (575,497) (602,442) | bottom-up; double diamond (602,432)
+Middle Cirque | black | (585,540) (640,500) | bottom-up; diamond (642,495)
+Lower Cirque | black | (585,580) (642,550) | bottom-up; diamond (645,545)
+Cirque Traverse | black | (662,455) (690,523) | diamond (684,530)
+Pucker Brush | black | (707,467) (762,502) | diamond (767,507)
+Gad Chutes | black | (747,530) | two lines, double diamond
+Restaurant Roll | black | (732,585) (780,645) | double diamond (785,655)
+Chip's Bypass | blue | (472,540) (522,587) | cased easier way
+Hot Lips Gully | blue | (452,540) (470,620)
+Primrose Split | black | (420,577) (465,630)
+Regulator Johnson | black | (617,368) (690,413) | diamond (697,417)
+Road to Provo | black | (645,305) (713,322) | diamond (720,322)
+Old Ladies | black | (655,337) (695,368) | diamond (700,370)
+Shireen | black | (713,348) (738,375) | diamond (742,380)
+Mark Malu Fork | black | (770,335) (790,403) | diamond (795,407)
+Pipeline Bowl | black | (880,320) | two lines, no symbol
+Baldy's Bowl | black | (1117,312) | two lines, no symbol
+Rasta Chutes | black | (820,388) (882,390) | double diamond (850,400) below: chutes
+Knucklehead Traverse | black | (952,392) (1052,417) | diamond (1057,417)
+Hoop's | black | (937,428) (942,455) | diamond (938,417) above
+Bonar's Pass | black | (962,495) (975,435) | bottom-up; diamond (975,427)
+Bass Benches | black | (1007,490) (1050,445) | bottom-up; diamond (1052,437)
+Come From Behind Gully | black | (1085,452) | two lines, diamond (1099,430)
+Goblin Gully | black | (875,460) (917,502) | diamond (921,510)
+Upper Bassackwards | blue | (1002,510) (1095,477) | bottom-up; square (1099,475)
+Election | blue | (1012,547) (1052,530) | bottom-up; square (1057,530)
+Fields Cut-Off | blue | (860,552) (922,580) | square (924,580)
+Middle Bassackwards | blue | (945,557) (955,660) | square (952,662)
+Bicarbonate Gully | blue | (975,590) (987,662)
+Black Forest | black | (1035,602) (1095,622) | diamond (1100,625)
+Organ Grinder | black | (1020,607) (1035,675) | double diamond (1040,690)
+S.T.H. | black | (1110,552) (1115,580) | diamond (1115,545) above
+Regulator Gully | blue | (847,585) (902,655)
+Roger's Run | blue | (847,602) (882,665) | square (885,667)
+Temptation Chutes | black | (1318,463) | one line, double diamond (1332,473) below
+Red Lens Line | black | (1367,500) (1422,520) | diamond (1429,522)
+Boundary Bowl | black | (1474,499) | two lines, double diamond (1478,515)
+High Saddle | black | (1460,572) (1500,615) | double diamond (1507,620)
+Upper Tiger Tail | black | (1282,510) (1305,575) | diamond (1305,582)
+Middle Tiger Tail | black | (1325,625) (1350,680) | continues below
+Low Saddle | black | (1387,637) (1420,675) | continues below
+Bananas | blue | (1242,507) (1265,547) | square (1267,552)
+Gadzooks | black | (1200,545) (1230,572) | starts left of the tile; diamond (1235,580)
+Center of Gravity | black | (172,642) (227,700) | double diamond (233,710)
+The Keyhole | black | (170,742) (210,782) | double diamond (212,787)
+Keyhole Chute | black | (135,747) (165,800) | double diamond (167,802)
+Gun Towers | black | (80,832) | two lines, double diamond (80,845)
+Blackjack Traverse | black | (97,947) (150,872) | bottom-up; diamond (155,865)
+Middle Men's | black | (282,792) (302,745) | bottom-up; diamond (306,740)
+Hot Foot Gully | black | (307,787) (357,742) | bottom-up; diamond (360,737)
+Middle Chip's Run | blue | (310,732) (395,695) | bottom-up, on the cased easier way
+Hubba Bubba | blue | (357,717) (397,707)
+Phone 3 Shot | black | (282,970) (310,952) | bottom-up; diamond (315,950)
+Glen's | black | (507,705) (532,692) | bottom-up
+Tower 3 | black | (510,747) (542,725) | bottom-up; double diamond (547,717)
+Dalton's Draw | black | (590,812) (605,747) | bottom-up; double diamond (610,740)
+Wilma's | black | (700,777) (730,812) | double diamond (732,815)
+Wilbere Bowl | black | (735,755) (785,797) | double diamond (787,800)
+Barry Barry Steep | black | (730,690) (785,748) | double diamond (792,757)
+Upper Mach Schnell | black | (677,832) (702,925) | double diamond (705,930)
+Binx's Bumper | black | (740,865) (780,920) | double diamond (785,925)
+Route 2 Cliffs | black | (395,762) | two lines, double diamond (400,780)
+Jack Dog | black | (375,840) (400,822) | bottom-up; diamond (415,815)
+Sneaky Pete | black | (925,840) (930,785) | bottom-up; diamond (928,780)
+Jones Avenue | black | (978,792) (1018,838) | double diamond (1022,845)
+Get Serious Chutes | black | (1076,822) | two lines, double diamond (1078,838); #1 #2 #3 above
+Carbonate | black | (1105,795) (1138,830) | diamond (1140,832)
+Gad Gully | black | (1127,767) (1152,800) | diamond (1157,808)
+Upper Big Emma | blue | (875,835) (920,895) | square (920,898)
+Fluffy Bunny | black | (830,930) (845,875) | bottom-up; diamond (845,868)
+Blue Angel | black | (857,890) (893,925) | diamond (897,927)
+Middle Emma | green | (980,942) (1010,980)
+Ted's Bowl | black | (1222,752) (1265,727) | bottom-up; diamond (1270,722)
+The Fin | black | (1362,705) (1365,735) | double diamond (1366,742)
+Gad 2 Return | black | (1247,830) (1307,837) | diamond (1315,837)
+Lower Tiger Tail | black | (1352,837) (1385,907) | diamond (1387,910)
+Mozzarella Bowl | black | (1325,905) | two lines, diamond (1322,920)
+Thunder Bowl | black | (1475,732) (1520,692) | bottom-up; double diamond (1545,685)
+Exit Gully | black | (1472,837) (1497,877) | double diamond (1499,882)
+Mushroom Land | black | (1546,810) | two lines, double diamond
+White Rabbit | black | (1587,892) | two lines, double diamond
+Lower Bassackwards | blue | (1202,940) (1237,867) | bottom-up; square (1237,852)
+Easy Street | green | (1350,970) (1400,957) | bottom-up?
+Defiance Ledge | black | (1655,775) | two lines, double diamond (1655,792)
+Figure 8 Bowl | black | (1712,957) | two lines, double diamond (1712,972)
+Blackjack Gully | black | (250,1047) (255,982) | bottom-up
+Chip's Face | black | (305,1030) (320,985) | bottom-up
+Willows | black | (385,995) (385,1035) | diamond (385,1045)
+Chip's Run/Phone 3 Road | blue | (262,1047) (365,1095) | square (369,1096); printed CHIP'S RUN/PHONE 3 ROAD
+Oh My God | black | (322,1127) (335,1172) | diamond (339,1177)
+Lower Willows | black | (377,1112) (390,1180) | diamond (390,1187)
+Who Dunnit | blue | (117,1157) (160,1130) | bottom-up; the cased easier way
+Who Dunnit | blue | (187,1240) (242,1242) | square (246,1243)
+Lightning Tree Gully | black | (182,1130) (250,1195) | diamond (257,1197)
+Westward Ho (from Alta) | black | (80,1172) | two lines, diamond (88,1195)
+Who Cares | black | (107,1250) (147,1280) | diamond (153,1285)
+Lower Primrose Path | black | (425,1002) (460,1097) | diamond (462,1105)
+Adager | black | (487,1027) (497,1062) | diamond (500,1067)
+Lower Silver Fox | black | (540,1025) (565,1100) | diamond (567,1105)
+Route 4 Gully | black | (615,1102) (632,1157) | diamond (636,1162)
+Old Same Place | black | (640,1020) (667,1087) | diamond (670,1092)
+Lower Mach Schnell | black | (720,995) (735,1090) | diamond (736,1097)
+Harper's Ferry East | black | (772,1100) (795,1025) | bottom-up, continues right
+Lower Chip's | blue | (417,1145) (427,1200) | square (427,1202)
+Creek Road | green | (720,1230) (772,1237) | circle (780,1239)
+Harper's Ferry | black | (850,1017) (865,1077) | diamond (867,1090)
+Bass Highway | green | (800,1112) (852,1104) | circle (858,1103); the cased easier way
+Wilbere Ridge | blue | (940,1047) (990,1082) | square (994,1088)
+Lower Emma | green | (1098,1112) (1140,1150) | circle (1150,1153)
+Bryce's Run | blue | (1112,1167) (1160,1195) | square (1163,1203)
+Wilbere Cutoff | blue | (1012,1252) (1020,1190) | bottom-up; square (1022,1170)
+Cat Crew Cutoff | blue | (1070,1252) (1088,1185) | bottom-up; square (1077,1172)
+Miner's Road | green | (818,1212) (867,1195) | bottom-up; circle (875,1182)
+West 2nd South | green | (1300,1022) (1352,1067) | circle (1362,1077)
+Bluebell | blue | (1372,1012) (1395,1052) | square (1402,1052)
+Alice Avenue | green | (1412,1015) (1450,1055) | circle (1457,1062)
+Lazy Susan | black | (1462,1002) (1475,1035) | diamond (1478,1040); report blue
+Tiny Tiger | black | (1552,1075) (1580,1115) | diamond (1588,1120); report blue
+W. 2nd S. On-Ramp | blue | (1262,1105) (1350,1100) | square (1357,1102)
+Madam Annie's | blue | (1347,1108) (1377,1180) | square (1378,1185)
+Mini Miners' Camp | green | (1387,1070) (1412,1130) | circle (1412,1137); the upper label
+Mini Miners' Camp | green | (1497,1190) (1570,1212) | the lower label
+W. 2nd Short | green | (1385,1112) (1405,1162) | circle (1400,1168)
+W. 2nd Long | green | (1478,1182) (1505,1155) | bottom-up; circle (1505,1143)
+Thunder Junction | green | (1505,1200) (1560,1260) | circle (1563,1265)
+Thunder Alley | black | (1712,1052) (1725,1115) | diamond (1722,1127)
+Chickadee | green | (518,1342) (557,1322) | bottom-up; circle (562,1318)
+Chickadee Chutes | green | (530,1387) (602,1355) | bottom-up; circle (604,1350)
+Elbow Proper | blue | (1215,935) (1215,995) | square (1219,1000)
+Tricep | black | (1255,960) (1260,990) | diamond (1268,1000)
+Rothman Way | blue | (338,940) (395,957) | square (401,957); on the cased easier way
+Upper Chip's Run | blue | (395,412) (465,382) | bottom-up; square (472,377); on the cased easier way
+Condo Bypass | blue | (55,1335) (95,1345) | printed CONDO BYPASS RD., continues right
+Cliff Access | blue | (370,1300) (405,1320) | square below; continues right
+Upper Chip's Run | blue | (362,470) (366,518) | the vertical CHIP'S RUN label; square (365,527)
+# NAME | colour | label points (Mineral Basin view, the image's px) | note
+Path to Paradise | blue | (352,1770) (445,1738) | bottom-up; square (448,1737)
+Chip's Access | blue | (630,1714) (686,1707) | on the cased way from the tram's top
+Bookends Traverse | black | (130,1857) (175,1797) | bottom-up; diamond (180,1793)
+Bookends Bowl | black | (80,1915) | two lines, double diamond (80,1935)
+Bookmark Gully | black | (177,1907) (230,1945) | double diamond (236,1958)
+The Endoras | black | (190,1985) (232,2015) | double diamond (238,2022)
+Richie's Run | black | (177,2020) (215,2058) | double diamond (220,2064)
+Upper White Diamonds | black | (262,1880) (295,1822) | bottom-up; diamond (302,1824); printed WHITE DIAMONDS
+Junior's Powder Paradise | blue | (238,1910) (290,2005) | square (292,2008)
+Lower White Diamonds | blue | (357,1990) (400,2015) | continues right
+Silver Dipper | black | (340,1882) (345,1940) | diamond (345,1945)
+Nash Flora Lode | black | (380,1850) (390,1915) | diamond (390,1928)
+Sunday Saddle | black | (50,2030) | two lines, no symbol
+Sunday Cliffs | black | (125,2085) | two lines, no symbol
+Flora Cliffs | black | (370,2085) | two lines, no symbol
+Blue By You | black | (472,1860) (485,1905) | diamond (488,1915)
+Lone Star | black | (542,1860) (550,1900) | diamond (555,1905)
+High Stakes | black | (597,1818) (603,1860) | diamond (604,1866)
+Not Quite Corn | black | (667,1945) (675,1870) | bottom-up; diamond (670,1870)
+Double Down | black | (732,1955) (757,1900) | bottom-up; diamond (757,1898)
+Lupine Loop | blue | (765,1868) (800,1868) | continues right; the cased easier way
+Hamilton Cliffs | black | (470,1980) | two lines, no symbol
+Niagra | black | (595,2030) | one line, printed NIAGARA; double diamond (595,2042)
+Gheen Gully | black | (662,2040) | two lines, double diamond (662,2055)
+Limber Pines | black | (730,2028) | two lines, double diamond (730,2042)
+49er Gully | black | (862,1905) (865,1960) | printed 49ER GULLY; diamond (855,1905) above
+Split Rock Gully | black | (950,2020) (980,1960) | bottom-up; diamond (980,1952)
+Claim Jumper | blue | (1010,1850) (1040,1915) | square (1042,1922)
+Luckey Boy | blue | (1092,1915) (1130,1870) | bottom-up; square (1134,1867)
+Bird's Nest | blue | (1062,1966) (1172,1950) | bottom-up; square (1177,1946)
+Ski Patrol Gully | black | (1130,2092) (1180,2055) | bottom-up; diamond (1185,2048)
+Fossil Chutes | black | (838,2060) | two lines, double diamond (828,2078)
+Chamonix Chutes | black | (950,1735) | two lines, double diamond (950,1752)
+Chamonix Bowl | black | (885,1755) (895,1805) | continues below
+Livin' the Dream | black | (1072,1775) | two lines, double diamond (1072,1790); not in the report
+Altar Bowl | black | (198,2102) (237,2125) | double diamond (243,2132)
+Alimony Chutes | black | (290,2178) (355,2220) | double diamond (357,2230)
+Lupine Loop | blue | (733,2148) (775,2160) | the second label; square (787,2158)
+Tail Feathers | black | (912,2135) (900,2205) | diamond (915,2125) above
+Bassanova | blue | (800,2172) (850,2160) | bottom-up; square (855,2158)
+Chamonix Chutes | black | (925,1765) (935,1830) | along its line; double diamond (932,1842)?

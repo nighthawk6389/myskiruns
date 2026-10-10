@@ -5,11 +5,11 @@ overlay on the map, with its name and rating, so you tap the run you just skied 
 works offline on the mountain, installs to a phone's home screen, and can sync your trips between devices with an
 optional account. Live at **[www.myskiruns.app](https://www.myskiruns.app)**.
 
-Thirty-six resorts so far, 5,271 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
+Thirty-seven resorts so far, 5,451 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
 Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Vail, Beaver Creek, Breckenridge, Keystone,
 Copper Mountain, Winter Park, Steamboat, Snowmass, Aspen Mountain, Buttermilk, Park City, Deer Valley, Snowbasin,
-Alta, Big Sky, Whitefish Mountain, Jackson Hole, Schweitzer, Palisades Tahoe, Northstar, Heavenly, Mammoth Mountain,
-Big Bear, Mt. Bachelor and Whistler Blackcomb.
+Alta, Snowbird, Big Sky, Whitefish Mountain, Jackson Hole, Schweitzer, Palisades Tahoe, Northstar, Heavenly, Mammoth
+Mountain, Big Bear, Mt. Bachelor and Whistler Blackcomb.
 
 Most of the work in this repository is the **trail-map pipeline**: getting every trail's overlay onto its own
 drawn line, with the right name, on maps that were never made to be machine-read. How it is done, resort by
@@ -89,6 +89,7 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 | Deer Valley | Utah | 207 (181 + 26) | 1 | an earlier export's strokes and outlined names on this season's flattened image; checked against the interactive map | `tools/trailmap/resorts/deer-valley/regen.sh` |
 | Snowbasin | Utah | 125 (119 + 6) | 1 | PDF strokes (a few as filled outlines) and text over a painting | `tools/trailmap/resorts/snowbasin/regen.sh` |
 | Alta | Utah | 116 (81 + 35) | 1 | PDF strokes, outlined names, rounded symbols; the faces and chutes printed with no line are markers | `tools/trailmap/resorts/alta/regen.sh` |
+| Snowbird | Utah | 180 (155 + 25) | 1 | one image (its PDF the same image): the map read on crops, each line routed along the painted one | `tools/trailmap/resorts/snowbird/regen.sh` |
 | Big Sky | Montana | 323 (290 + 33) | 3 | three PDFs of strokes and text | `tools/trailmap/resorts/big-sky/regen.sh` |
 | Whitefish Mountain | Montana | 113 (76 + 37) | 3 | three small web JPEGs, no PDF: the map read on crops, each line routed along the painted one | `tools/trailmap/resorts/whitefish/regen.sh` |
 | Jackson Hole | Wyoming | 142 (108 + 34) | 1 | one image, no PDF, thin lines blending into the snow: the map read on crops, each line routed along the painted one | `tools/trailmap/resorts/jackson-hole/regen.sh` |
@@ -282,12 +283,12 @@ the playbook's [Part 5](docs/trail-map-playbook.md#part-5-what-we-tried-and-what
 
 ## What's left
 
-1. **A person's confirmation** for the thirty-three resorts Claude checked on crops instead of the review page
-   (Sugarbush through Jackson Hole), if wanted: the Trail Check page can be published for any resort ([playbook,
+1. **A person's confirmation** for the thirty-four resorts Claude checked on crops instead of the review page
+   (Sugarbush through Snowbird), if wanted: the Trail Check page can be published for any resort ([playbook,
    Part 4](docs/trail-map-playbook.md#auditing-on-crops-or-the-human-review-page)).
 2. **Shared tooling:** a legend file per map feeding the extraction and the readers' prompts; readers run from a
    script instead of an interactive session ([playbook, Part 5](docs/trail-map-playbook.md#scaling-to-many-maps)).
-3. The hover check passes 14,431 of 14,440 points (2026-10-10). The nine misses are points where two trails'
+3. The hover check passes 14,921 of 14,930 points (2026-10-10). The nine misses are points where two trails'
    overlays meet or share a stretch, where either name is right: Killington 2, Stowe 2, Beaver Creek 2, Big Sky's
    Bowl 1, Heavenly 1, Mt. Bachelor 1 (each resort's numbers are in the playbook's Part 3).
 4. Whiteface, Winter Park, Breckenridge, Copper Mountain and Keystone key their decisions by piece id, valid for

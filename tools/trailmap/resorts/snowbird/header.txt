@@ -1,0 +1,15 @@
+// Snowbird's 2025-26 trail map (snowbird.com: one 1920x2318 JPEG, James
+// Niehues's painting, the front side above and Mineral Basin below; its PDF
+// is the same image, with no vectors). Each run is a thin line in its colour
+// with its symbol on it and its name printed along it in the same colour. The
+// map was read on zoomed crops (names.py: each name's label and its run's
+// line as points) and each line routed along the painted one. Names and areas
+// are the resort's lift and trail report's (report.json: the DOR trail list
+// snowbird.com's report page loads); the rating is the colour and symbol as
+// printed: Hot Lips Gully is printed blue (the report black), Lazy Susan and
+// Tiny Tiger with black diamonds (the report blue). Who Dunnit is printed
+// twice along the cased way down Gad Valley's west side: one trail. The
+// bowls, faces, cliffs and chutes printed with no line are markers; Baldy's
+// and Pipeline Bowls, Livin' the Dream, Hamilton, Flora and Sunday Cliffs and
+// Sunday Saddle are printed and not in the report. Not on this map: Lowest
+// Bassackwards and Old Hollywood. x/y/baseY/width are unused layout fields.

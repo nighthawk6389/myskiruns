@@ -1,0 +1,880 @@
+{
+ "_source": "Snowbird's lift and trail report (snowbird.com/the-mountain/mountain-report/lift-trail-report: the DOR trail list it loads, api.snowbird.com/api/v1/dor/drupal/trails, plain curl), fetched 2026-10-10 out of season (every winter run listed, closed); tools/trailmap/reports/feed_trails.py",
+ "trails": [
+  [
+   "49er Gully",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Adager",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Alice Avenue",
+   "Gad Valley",
+   "Green"
+  ],
+  [
+   "Alimony Chutes",
+   "Mineral Basin",
+   "DoubleBlack"
+  ],
+  [
+   "Altar Bowl",
+   "Mineral Basin",
+   "DoubleBlack"
+  ],
+  [
+   "Bananas",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Barry Barry Steep",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Bass Benches",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Bass Highway",
+   "Gad Valley",
+   "Green"
+  ],
+  [
+   "Bassanova",
+   "Mineral Basin",
+   "Blue"
+  ],
+  [
+   "Bicarbonate Gully",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Old Hollywood",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Binx's Bumper",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Bird's Nest",
+   "Mineral Basin",
+   "Blue"
+  ],
+  [
+   "Black Forest",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Blackjack Gully",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Blackjack Traverse",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Blue Angel",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Blue By You",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Bluebell",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Bonar's Pass",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Tiny Tiger",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Lazy Susan",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Mini Miners' Camp",
+   "Gad Valley",
+   "Green"
+  ],
+  [
+   "West 2nd South",
+   "Gad Valley",
+   "Green"
+  ],
+  [
+   "W. 2nd Short",
+   "Gad Valley",
+   "Green"
+  ],
+  [
+   "Easy Street",
+   "Gad Valley",
+   "Green"
+  ],
+  [
+   "Thunder Junction",
+   "Gad Valley",
+   "Green"
+  ],
+  [
+   "Madam Annie's",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "W. 2nd S. On-Ramp",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Organ Grinder",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "S.T.H.",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Tricep",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Upper Bassackwards",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Gad Gully",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Gadzooks",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Election",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Lower Bassackwards",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Gad 2 Return",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Low Saddle",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Exit Gully",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "High Saddle",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Mushroom Land",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "White Rabbit",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Defiance Ledge",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Figure 8 Bowl",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Thunder Alley",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Temptation Chutes",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Ted's Bowl",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Upper Tiger Tail",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Middle Tiger Tail",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Mozzarella Bowl",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Boundary Bowl",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Red Lens Line",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Lower Tiger Tail",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Thunder Bowl",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Road to Provo",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Old Ladies",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Shireen",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Mark Malu Fork",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Rasta Chutes",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Knucklehead Traverse",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Hoop's",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Come From Behind Gully",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Goblin Gully",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Fields Cutoff",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Cirque Traverse",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Gad Chutes",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Restaurant Roll",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Wilbere Bowl",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Wilma's",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Regulator Johnson",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Pucker Brush",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Old Same Place",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Regulator Gully",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Roger's Run",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Middle Bassackwards",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Carbonate",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Get Serious Chutes",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Jones Avenue",
+   "Gad Valley",
+   "DoubleBlack"
+  ],
+  [
+   "Sneaky Pete",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Upper Big Emma",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Middle Emma",
+   "Gad Valley",
+   "Green"
+  ],
+  [
+   "Lower Emma",
+   "Gad Valley",
+   "Green"
+  ],
+  [
+   "Fluffy Bunny",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Wilbere Ridge",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Bryce's Run",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Cat Crew Cutoff",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Wilbere Cutoff",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Creek Road",
+   "Gad Valley",
+   "Green"
+  ],
+  [
+   "Miner's Road",
+   "Gad Valley",
+   "Green"
+  ],
+  [
+   "Harper's Ferry",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Harper's Ferry East",
+   "Gad Valley",
+   "Black"
+  ],
+  [
+   "Upper Primrose Path",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Great Scott",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Upper Cirque",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Middle Cirque",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Lower Cirque",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Glen's",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Tower 3",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Dalton's Draw",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Route 4 Gully",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Upper Mach Schnell",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Lower Mach Schnell",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Chip's Bypass",
+   "Peruvian Gulch",
+   "Blue"
+  ],
+  [
+   "Hot Lips Gully",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Primrose Split",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Mid-Baldy Traverse",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Middle Chip's Run",
+   "Peruvian Gulch",
+   "Blue"
+  ],
+  [
+   "Hubba Bubba",
+   "Peruvian Gulch",
+   "Blue"
+  ],
+  [
+   "Upper Silver Fox",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Lower Silver Fox",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Middle Men's",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Hot Foot Gully",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Route 2 Cliffs",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Jack Dog",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Chip's Run/Phone 3 Road",
+   "Peruvian Gulch",
+   "Blue"
+  ],
+  [
+   "Phone 3 Shot",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Chip's Face",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Oh My God",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Lower Willows",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Lower Chip's",
+   "Peruvian Gulch",
+   "Blue"
+  ],
+  [
+   "Lower Primrose Path",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Rothman Way",
+   "Peruvian Gulch",
+   "Blue"
+  ],
+  [
+   "Chip's Access",
+   "Peruvian Gulch",
+   "Blue"
+  ],
+  [
+   "Condo Bypass",
+   "Peruvian Gulch",
+   "Blue"
+  ],
+  [
+   "Lightning Tree Gully",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Whodunnit",
+   "Peruvian Gulch",
+   "Blue"
+  ],
+  [
+   "Who Cares",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Chickadee",
+   "Peruvian Gulch",
+   "Green"
+  ],
+  [
+   "Chickadee Chutes",
+   "Peruvian Gulch",
+   "Green"
+  ],
+  [
+   "Richie's Run",
+   "Mineral Basin",
+   "DoubleBlack"
+  ],
+  [
+   "The Endoras",
+   "Mineral Basin",
+   "DoubleBlack"
+  ],
+  [
+   "Bookmark Gully",
+   "Mineral Basin",
+   "DoubleBlack"
+  ],
+  [
+   "Bookends Bowl",
+   "Mineral Basin",
+   "DoubleBlack"
+  ],
+  [
+   "Path to Paradise",
+   "Mineral Basin",
+   "Blue"
+  ],
+  [
+   "Junior's Powder Paradise",
+   "Mineral Basin",
+   "Blue"
+  ],
+  [
+   "Nash Flora Lode",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Lone Star",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "High Stakes",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Not Quite Corn",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Double Down",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Lupine Loop",
+   "Mineral Basin",
+   "Blue"
+  ],
+  [
+   "Niagra",
+   "Mineral Basin",
+   "DoubleBlack"
+  ],
+  [
+   "Gheen Gully",
+   "Mineral Basin",
+   "DoubleBlack"
+  ],
+  [
+   "Limber Pines",
+   "Mineral Basin",
+   "DoubleBlack"
+  ],
+  [
+   "Fossil Chutes",
+   "Mineral Basin",
+   "DoubleBlack"
+  ],
+  [
+   "Chamonix Bowl",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Chamonix Chutes",
+   "Mineral Basin",
+   "DoubleBlack"
+  ],
+  [
+   "Claim Jumper",
+   "Mineral Basin",
+   "Blue"
+  ],
+  [
+   "Luckey Boy",
+   "Mineral Basin",
+   "Blue"
+  ],
+  [
+   "Split Rock Gully",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Ski Patrol Gully",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Tail Feathers",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Center of Gravity",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Fields of Glory",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "West Baldy",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "High Baldy Traverse",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Keyhole Chute",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Venus Line",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Silver Dipper",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Thanks for the Memories",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Willows",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "The Keyhole",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Gun Towers",
+   "Peruvian Gulch",
+   "DoubleBlack"
+  ],
+  [
+   "Westward Ho (from Alta)",
+   "Peruvian Gulch",
+   "Black"
+  ],
+  [
+   "Upper Chip's Run",
+   "Peruvian Gulch",
+   "Blue"
+  ],
+  [
+   "Lowest Bassackwards",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "Lower White Diamonds",
+   "Mineral Basin",
+   "Blue"
+  ],
+  [
+   "Bookends Traverse",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Upper White Diamonds",
+   "Mineral Basin",
+   "Black"
+  ],
+  [
+   "Cliff Access",
+   "Peruvian Gulch",
+   "Blue"
+  ],
+  [
+   "W. 2nd Long",
+   "Gad Valley",
+   "Green"
+  ],
+  [
+   "Elbow Proper",
+   "Gad Valley",
+   "Blue"
+  ],
+  [
+   "The Fin",
+   "Gad Valley",
+   "DoubleBlack"
+  ]
+ ]
+}

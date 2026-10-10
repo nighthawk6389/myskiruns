@@ -465,6 +465,22 @@ const RESORT_ADS = {
       'rodeo', 'hotel', 'lodging', 'rental', 'real estate', 'jobs', 'wedding', 'fishing', 'rafting', 'elk refuge',
       'mississippi', 'tennessee', 'michigan', 'florida'],
   },
+  snowbird: {
+    short: 'Snowbird',
+    path: 'Snowbird',
+    area: 'Gad Valley to Mineral Basin',
+    // bare "snowbird" also means the winter visitors (and the songbird): only with the resort's names or a map
+    names: ['snowbird utah', 'snowbird ski resort', 'snowbird resort', 'snowbird mineral basin'],
+    keywords: [
+      ['snowbird trail map', 'exact'],
+      ['snowbird ski map', 'exact'],
+      ['snowbird ski map', 'phrase'],
+      ['snowbird ski trails', 'phrase'],
+    ],
+    // the songbird, the winter residents (Florida, Arizona), the Canadair jet, the aerial tram's summer and lodge
+    negatives: ['bird', 'junco', 'snowbirds', 'florida', 'arizona', 'rv', 'canadair', 'airshow', 'summer', 'hiking',
+      'mountain coaster', 'oktoberfest', 'cliff lodge', 'hotel', 'lodging', 'jobs', 'wedding'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

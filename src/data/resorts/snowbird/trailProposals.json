@@ -1,0 +1,1246 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "alice-avenue": {
+   "polylines": [
+    108
+   ],
+   "confidence": "high",
+   "mapName": "ALICE AVENUE",
+   "note": "its group"
+  },
+  "bananas": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "BANANAS",
+   "note": "its group"
+  },
+  "barry-barry-steep": {
+   "polylines": [
+    59
+   ],
+   "confidence": "high",
+   "mapName": "BARRY BARRY STEEP",
+   "note": "its group"
+  },
+  "bass-benches": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "BASS BENCHES",
+   "note": "its group"
+  },
+  "bass-highway": {
+   "polylines": [
+    99
+   ],
+   "confidence": "high",
+   "mapName": "BASS HIGHWAY",
+   "note": "its group"
+  },
+  "bicarbonate-gully": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "BICARBONATE GULLY",
+   "note": "its group"
+  },
+  "binxs-bumper": {
+   "polylines": [
+    61
+   ],
+   "confidence": "high",
+   "mapName": "BINX'S BUMPER",
+   "note": "its group"
+  },
+  "black-forest": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "BLACK FOREST",
+   "note": "its group"
+  },
+  "blue-angel": {
+   "polylines": [
+    69
+   ],
+   "confidence": "high",
+   "mapName": "BLUE ANGEL",
+   "note": "its group"
+  },
+  "bluebell": {
+   "polylines": [
+    107
+   ],
+   "confidence": "high",
+   "mapName": "BLUEBELL",
+   "note": "its group"
+  },
+  "bonars-pass": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "BONAR'S PASS",
+   "note": "its group"
+  },
+  "bryces-run": {
+   "polylines": [
+    102
+   ],
+   "confidence": "high",
+   "mapName": "BRYCE'S RUN",
+   "note": "its group"
+  },
+  "carbonate": {
+   "polylines": [
+    65
+   ],
+   "confidence": "high",
+   "mapName": "CARBONATE",
+   "note": "its group"
+  },
+  "cat-crew-cutoff": {
+   "polylines": [
+    104
+   ],
+   "confidence": "high",
+   "mapName": "CAT CREW CUTOFF",
+   "note": "its group"
+  },
+  "come-from-behind-gully": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "COME FROM BEHIND GULLY",
+   "note": "its group"
+  },
+  "creek-road": {
+   "polylines": [
+    97
+   ],
+   "confidence": "high",
+   "mapName": "CREEK ROAD",
+   "note": "its group"
+  },
+  "easy-street": {
+   "polylines": [
+    78
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "its group"
+  },
+  "elbow-proper": {
+   "polylines": [
+    120
+   ],
+   "confidence": "high",
+   "mapName": "ELBOW PROPER",
+   "note": "its group"
+  },
+  "election": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "ELECTION",
+   "note": "its group"
+  },
+  "exit-gully": {
+   "polylines": [
+    76
+   ],
+   "confidence": "high",
+   "mapName": "EXIT GULLY",
+   "note": "its group"
+  },
+  "fields-cutoff": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "FIELDS CUTOFF",
+   "note": "its group"
+  },
+  "fluffy-bunny": {
+   "polylines": [
+    68
+   ],
+   "confidence": "high",
+   "mapName": "FLUFFY BUNNY",
+   "note": "its group"
+  },
+  "gad-2-return": {
+   "polylines": [
+    73
+   ],
+   "confidence": "high",
+   "mapName": "GAD 2 RETURN",
+   "note": "its group"
+  },
+  "gad-gully": {
+   "polylines": [
+    66
+   ],
+   "confidence": "high",
+   "mapName": "GAD GULLY",
+   "note": "its group"
+  },
+  "gadzooks": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "GADZOOKS",
+   "note": "its group"
+  },
+  "goblin-gully": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "GOBLIN GULLY",
+   "note": "its group"
+  },
+  "harpers-ferry": {
+   "polylines": [
+    98
+   ],
+   "confidence": "high",
+   "mapName": "HARPER'S FERRY",
+   "note": "its group"
+  },
+  "harpers-ferry-east": {
+   "polylines": [
+    95
+   ],
+   "confidence": "high",
+   "mapName": "HARPER'S FERRY EAST",
+   "note": "its group"
+  },
+  "high-saddle": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "HIGH SADDLE",
+   "note": "its group"
+  },
+  "hoops": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "HOOP'S",
+   "note": "its group"
+  },
+  "jones-avenue": {
+   "polylines": [
+    64
+   ],
+   "confidence": "high",
+   "mapName": "JONES AVENUE",
+   "note": "its group"
+  },
+  "knucklehead-traverse": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "KNUCKLEHEAD TRAVERSE",
+   "note": "its group"
+  },
+  "lazy-susan": {
+   "polylines": [
+    109
+   ],
+   "confidence": "high",
+   "mapName": "LAZY SUSAN",
+   "note": "its group"
+  },
+  "low-saddle": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "LOW SADDLE",
+   "note": "its group"
+  },
+  "lower-bassackwards": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "LOWER BASSACKWARDS",
+   "note": "its group"
+  },
+  "lower-emma": {
+   "polylines": [
+    101
+   ],
+   "confidence": "high",
+   "mapName": "LOWER EMMA",
+   "note": "its group"
+  },
+  "lower-tiger-tail": {
+   "polylines": [
+    74
+   ],
+   "confidence": "high",
+   "mapName": "LOWER TIGER TAIL",
+   "note": "its group"
+  },
+  "madam-annies": {
+   "polylines": [
+    112
+   ],
+   "confidence": "high",
+   "mapName": "MADAM ANNIE'S",
+   "note": "its group"
+  },
+  "mark-malu-fork": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "MARK MALU FORK",
+   "note": "its group"
+  },
+  "middle-bassackwards": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE BASSACKWARDS",
+   "note": "its group"
+  },
+  "middle-emma": {
+   "polylines": [
+    70
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE EMMA",
+   "note": "its group"
+  },
+  "middle-tiger-tail": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE TIGER TAIL",
+   "note": "its group"
+  },
+  "miners-road": {
+   "polylines": [
+    105
+   ],
+   "confidence": "high",
+   "mapName": "MINER'S ROAD",
+   "note": "its group"
+  },
+  "mini-miners-camp": {
+   "polylines": [
+    113
+   ],
+   "confidence": "high",
+   "mapName": "MINI MINERS' CAMP",
+   "note": "its group"
+  },
+  "old-ladies": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "OLD LADIES",
+   "note": "its group"
+  },
+  "old-same-place": {
+   "polylines": [
+    93
+   ],
+   "confidence": "high",
+   "mapName": "OLD SAME PLACE",
+   "note": "its group"
+  },
+  "organ-grinder": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "ORGAN GRINDER",
+   "note": "its group"
+  },
+  "pucker-brush": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "PUCKER BRUSH",
+   "note": "its group"
+  },
+  "red-lens-line": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "RED LENS LINE",
+   "note": "its group"
+  },
+  "regulator-gully": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "REGULATOR GULLY",
+   "note": "its group"
+  },
+  "regulator-johnson": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "REGULATOR JOHNSON",
+   "note": "its group"
+  },
+  "restaurant-roll": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "RESTAURANT ROLL",
+   "note": "its group"
+  },
+  "road-to-provo": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "ROAD TO PROVO",
+   "note": "its group"
+  },
+  "rogers-run": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "ROGER'S RUN",
+   "note": "its group"
+  },
+  "s-t-h": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "S.T.H.",
+   "note": "its group"
+  },
+  "shireen": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "SHIREEN",
+   "note": "its group"
+  },
+  "sneaky-pete": {
+   "polylines": [
+    63
+   ],
+   "confidence": "high",
+   "mapName": "SNEAKY PETE",
+   "note": "its group"
+  },
+  "teds-bowl": {
+   "polylines": [
+    71
+   ],
+   "confidence": "high",
+   "mapName": "TED'S BOWL",
+   "note": "its group"
+  },
+  "the-fin": {
+   "polylines": [
+    72
+   ],
+   "confidence": "high",
+   "mapName": "THE FIN",
+   "note": "its group"
+  },
+  "thunder-alley": {
+   "polylines": [
+    117
+   ],
+   "confidence": "high",
+   "mapName": "THUNDER ALLEY",
+   "note": "its group"
+  },
+  "thunder-bowl": {
+   "polylines": [
+    75
+   ],
+   "confidence": "high",
+   "mapName": "THUNDER BOWL",
+   "note": "its group"
+  },
+  "thunder-junction": {
+   "polylines": [
+    116
+   ],
+   "confidence": "high",
+   "mapName": "THUNDER JUNCTION",
+   "note": "its group"
+  },
+  "tiny-tiger": {
+   "polylines": [
+    110
+   ],
+   "confidence": "high",
+   "mapName": "TINY TIGER",
+   "note": "its group"
+  },
+  "tricep": {
+   "polylines": [
+    121
+   ],
+   "confidence": "high",
+   "mapName": "TRICEP",
+   "note": "its group"
+  },
+  "upper-bassackwards": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "UPPER BASSACKWARDS",
+   "note": "its group"
+  },
+  "upper-big-emma": {
+   "polylines": [
+    67
+   ],
+   "confidence": "high",
+   "mapName": "UPPER BIG EMMA",
+   "note": "its group"
+  },
+  "upper-tiger-tail": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "UPPER TIGER TAIL",
+   "note": "its group"
+  },
+  "w-2nd-long": {
+   "polylines": [
+    115
+   ],
+   "confidence": "high",
+   "mapName": "W. 2ND LONG",
+   "note": "its group"
+  },
+  "w-2nd-s-on-ramp": {
+   "polylines": [
+    111
+   ],
+   "confidence": "high",
+   "mapName": "W. 2ND S. ON-RAMP",
+   "note": "its group"
+  },
+  "w-2nd-short": {
+   "polylines": [
+    114
+   ],
+   "confidence": "high",
+   "mapName": "W. 2ND SHORT",
+   "note": "its group"
+  },
+  "west-2nd-south": {
+   "polylines": [
+    106
+   ],
+   "confidence": "high",
+   "mapName": "WEST 2ND SOUTH",
+   "note": "its group"
+  },
+  "wilbere-bowl": {
+   "polylines": [
+    58
+   ],
+   "confidence": "high",
+   "mapName": "WILBERE BOWL",
+   "note": "its group"
+  },
+  "wilbere-cutoff": {
+   "polylines": [
+    103
+   ],
+   "confidence": "high",
+   "mapName": "WILBERE CUTOFF",
+   "note": "its group"
+  },
+  "wilbere-ridge": {
+   "polylines": [
+    100
+   ],
+   "confidence": "high",
+   "mapName": "WILBERE RIDGE",
+   "note": "its group"
+  },
+  "wilmas": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "WILMA'S",
+   "note": "its group"
+  },
+  "adager": {
+   "polylines": [
+    90
+   ],
+   "confidence": "high",
+   "mapName": "ADAGER",
+   "note": "its group"
+  },
+  "blackjack-gully": {
+   "polylines": [
+    79
+   ],
+   "confidence": "high",
+   "mapName": "BLACKJACK GULLY",
+   "note": "its group"
+  },
+  "blackjack-traverse": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "BLACKJACK TRAVERSE",
+   "note": "its group"
+  },
+  "center-of-gravity": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "CENTER OF GRAVITY",
+   "note": "its group"
+  },
+  "chickadee": {
+   "polylines": [
+    118
+   ],
+   "confidence": "high",
+   "mapName": "CHICKADEE",
+   "note": "its group"
+  },
+  "chickadee-chutes": {
+   "polylines": [
+    119
+   ],
+   "confidence": "high",
+   "mapName": "CHICKADEE CHUTES",
+   "note": "its group"
+  },
+  "chips-access": {
+   "polylines": [
+    155
+   ],
+   "confidence": "high",
+   "mapName": "CHIP'S ACCESS",
+   "note": "along its printed name"
+  },
+  "chips-bypass": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "CHIP'S BYPASS",
+   "note": "its group"
+  },
+  "chips-face": {
+   "polylines": [
+    80
+   ],
+   "confidence": "high",
+   "mapName": "CHIP'S FACE",
+   "note": "its group"
+  },
+  "chips-run-phone-3-road": {
+   "polylines": [
+    82
+   ],
+   "confidence": "high",
+   "mapName": "CHIP'S RUN/PHONE 3 ROAD",
+   "note": "its group"
+  },
+  "cirque-traverse": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "CIRQUE TRAVERSE",
+   "note": "its group"
+  },
+  "cliff-access": {
+   "polylines": [
+    125
+   ],
+   "confidence": "high",
+   "mapName": "CLIFF ACCESS",
+   "note": "its group"
+  },
+  "condo-bypass": {
+   "polylines": [
+    124
+   ],
+   "confidence": "high",
+   "mapName": "CONDO BYPASS",
+   "note": "its group"
+  },
+  "daltons-draw": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "DALTON'S DRAW",
+   "note": "its group"
+  },
+  "fields-of-glory": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "FIELDS OF GLORY",
+   "note": "its group"
+  },
+  "glens": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "GLEN'S",
+   "note": "its group"
+  },
+  "great-scott": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "GREAT SCOTT",
+   "note": "its group"
+  },
+  "high-baldy-traverse": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "HIGH BALDY TRAVERSE",
+   "note": "its group"
+  },
+  "hot-foot-gully": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "HOT FOOT GULLY",
+   "note": "its group"
+  },
+  "hot-lips-gully": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "HOT LIPS GULLY",
+   "note": "its group"
+  },
+  "hubba-bubba": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "HUBBA BUBBA",
+   "note": "its group"
+  },
+  "jack-dog": {
+   "polylines": [
+    62
+   ],
+   "confidence": "high",
+   "mapName": "JACK DOG",
+   "note": "its group"
+  },
+  "keyhole-chute": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "KEYHOLE CHUTE",
+   "note": "its group"
+  },
+  "lightning-tree-gully": {
+   "polylines": [
+    86
+   ],
+   "confidence": "high",
+   "mapName": "LIGHTNING TREE GULLY",
+   "note": "its group"
+  },
+  "lower-chips": {
+   "polylines": [
+    96
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CHIP'S",
+   "note": "its group"
+  },
+  "lower-cirque": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CIRQUE",
+   "note": "its group"
+  },
+  "lower-mach-schnell": {
+   "polylines": [
+    94
+   ],
+   "confidence": "high",
+   "mapName": "LOWER MACH SCHNELL",
+   "note": "its group"
+  },
+  "lower-primrose-path": {
+   "polylines": [
+    89
+   ],
+   "confidence": "high",
+   "mapName": "LOWER PRIMROSE PATH",
+   "note": "its group"
+  },
+  "lower-silver-fox": {
+   "polylines": [
+    91
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SILVER FOX",
+   "note": "its group"
+  },
+  "lower-willows": {
+   "polylines": [
+    84
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WILLOWS",
+   "note": "its group"
+  },
+  "mid-baldy-traverse": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "MID-BALDY TRAVERSE",
+   "note": "its group"
+  },
+  "middle-chips-run": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE CHIP'S RUN",
+   "note": "its group"
+  },
+  "middle-cirque": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE CIRQUE",
+   "note": "its group"
+  },
+  "middle-mens": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE MEN'S",
+   "note": "its group"
+  },
+  "oh-my-god": {
+   "polylines": [
+    83
+   ],
+   "confidence": "high",
+   "mapName": "OH MY GOD",
+   "note": "its group"
+  },
+  "phone-3-shot": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "PHONE 3 SHOT",
+   "note": "its group"
+  },
+  "primrose-split": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "PRIMROSE SPLIT",
+   "note": "its group"
+  },
+  "rothman-way": {
+   "polylines": [
+    122
+   ],
+   "confidence": "high",
+   "mapName": "ROTHMAN WAY",
+   "note": "its group"
+  },
+  "route-4-gully": {
+   "polylines": [
+    92
+   ],
+   "confidence": "high",
+   "mapName": "ROUTE 4 GULLY",
+   "note": "its group"
+  },
+  "thanks-for-the-memories": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "THANKS FOR THE MEMORIES",
+   "note": "its group"
+  },
+  "the-keyhole": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "THE KEYHOLE",
+   "note": "its group"
+  },
+  "tower-3": {
+   "polylines": [
+    55
+   ],
+   "confidence": "high",
+   "mapName": "TOWER 3",
+   "note": "its group"
+  },
+  "upper-chips-run": {
+   "polylines": [
+    123
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CHIP'S RUN",
+   "note": "its group"
+  },
+  "upper-cirque": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CIRQUE",
+   "note": "its group"
+  },
+  "upper-mach-schnell": {
+   "polylines": [
+    60
+   ],
+   "confidence": "high",
+   "mapName": "UPPER MACH SCHNELL",
+   "note": "its group"
+  },
+  "upper-primrose-path": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "UPPER PRIMROSE PATH",
+   "note": "its group"
+  },
+  "upper-silver-fox": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SILVER FOX",
+   "note": "its group"
+  },
+  "venus-line": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "VENUS LINE",
+   "note": "its group"
+  },
+  "westward-ho-from-alta": {
+   "polylines": [
+    87
+   ],
+   "confidence": "high",
+   "mapName": "WESTWARD HO (FROM ALTA)",
+   "note": "its group"
+  },
+  "who-cares": {
+   "polylines": [
+    88
+   ],
+   "confidence": "high",
+   "mapName": "WHO CARES",
+   "note": "its group"
+  },
+  "whodunnit": {
+   "polylines": [
+    85
+   ],
+   "confidence": "high",
+   "mapName": "WHODUNNIT",
+   "note": "its group"
+  },
+  "willows": {
+   "polylines": [
+    81
+   ],
+   "confidence": "high",
+   "mapName": "WILLOWS",
+   "note": "its group"
+  },
+  "49er-gully": {
+   "polylines": [
+    143
+   ],
+   "confidence": "high",
+   "mapName": "49ER GULLY",
+   "note": "its group"
+  },
+  "alimony-chutes": {
+   "polylines": [
+    152
+   ],
+   "confidence": "high",
+   "mapName": "ALIMONY CHUTES",
+   "note": "its group"
+  },
+  "altar-bowl": {
+   "polylines": [
+    151
+   ],
+   "confidence": "high",
+   "mapName": "ALTAR BOWL",
+   "note": "its group"
+  },
+  "bassanova": {
+   "polylines": [
+    154
+   ],
+   "confidence": "high",
+   "mapName": "BASSANOVA",
+   "note": "its group"
+  },
+  "birds-nest": {
+   "polylines": [
+    147
+   ],
+   "confidence": "high",
+   "mapName": "BIRD'S NEST",
+   "note": "its group"
+  },
+  "blue-by-you": {
+   "polylines": [
+    136
+   ],
+   "confidence": "high",
+   "mapName": "BLUE BY YOU",
+   "note": "its group"
+  },
+  "bookends-traverse": {
+   "polylines": [
+    127
+   ],
+   "confidence": "high",
+   "mapName": "BOOKENDS TRAVERSE",
+   "note": "its group"
+  },
+  "bookmark-gully": {
+   "polylines": [
+    128
+   ],
+   "confidence": "high",
+   "mapName": "BOOKMARK GULLY",
+   "note": "its group"
+  },
+  "chamonix-bowl": {
+   "polylines": [
+    150
+   ],
+   "confidence": "high",
+   "mapName": "CHAMONIX BOWL",
+   "note": "its group"
+  },
+  "chamonix-chutes": {
+   "polylines": [
+    149
+   ],
+   "confidence": "high",
+   "mapName": "CHAMONIX CHUTES",
+   "note": "its group"
+  },
+  "claim-jumper": {
+   "polylines": [
+    145
+   ],
+   "confidence": "high",
+   "mapName": "CLAIM JUMPER",
+   "note": "its group"
+  },
+  "double-down": {
+   "polylines": [
+    140
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLE DOWN",
+   "note": "its group"
+  },
+  "high-stakes": {
+   "polylines": [
+    138
+   ],
+   "confidence": "high",
+   "mapName": "HIGH STAKES",
+   "note": "its group"
+  },
+  "juniors-powder-paradise": {
+   "polylines": [
+    132
+   ],
+   "confidence": "high",
+   "mapName": "JUNIOR'S POWDER PARADISE",
+   "note": "its group"
+  },
+  "lone-star": {
+   "polylines": [
+    137
+   ],
+   "confidence": "high",
+   "mapName": "LONE STAR",
+   "note": "its group"
+  },
+  "lower-white-diamonds": {
+   "polylines": [
+    133
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WHITE DIAMONDS",
+   "note": "its group"
+  },
+  "luckey-boy": {
+   "polylines": [
+    146
+   ],
+   "confidence": "high",
+   "mapName": "LUCKEY BOY",
+   "note": "its group"
+  },
+  "lupine-loop": {
+   "polylines": [
+    141,
+    142
+   ],
+   "confidence": "high",
+   "mapName": "LUPINE LOOP",
+   "note": "its group"
+  },
+  "nash-flora-lode": {
+   "polylines": [
+    135
+   ],
+   "confidence": "high",
+   "mapName": "NASH FLORA LODE",
+   "note": "its group"
+  },
+  "not-quite-corn": {
+   "polylines": [
+    139
+   ],
+   "confidence": "high",
+   "mapName": "NOT QUITE CORN",
+   "note": "its group"
+  },
+  "path-to-paradise": {
+   "polylines": [
+    126
+   ],
+   "confidence": "high",
+   "mapName": "PATH TO PARADISE",
+   "note": "its group"
+  },
+  "richies-run": {
+   "polylines": [
+    130
+   ],
+   "confidence": "high",
+   "mapName": "RICHIE'S RUN",
+   "note": "its group"
+  },
+  "silver-dipper": {
+   "polylines": [
+    134
+   ],
+   "confidence": "high",
+   "mapName": "SILVER DIPPER",
+   "note": "its group"
+  },
+  "ski-patrol-gully": {
+   "polylines": [
+    148
+   ],
+   "confidence": "high",
+   "mapName": "SKI PATROL GULLY",
+   "note": "its group"
+  },
+  "split-rock-gully": {
+   "polylines": [
+    144
+   ],
+   "confidence": "high",
+   "mapName": "SPLIT ROCK GULLY",
+   "note": "its group"
+  },
+  "tail-feathers": {
+   "polylines": [
+    153
+   ],
+   "confidence": "high",
+   "mapName": "TAIL FEATHERS",
+   "note": "its group"
+  },
+  "the-endoras": {
+   "polylines": [
+    129
+   ],
+   "confidence": "high",
+   "mapName": "THE ENDORAS",
+   "note": "its group"
+  },
+  "upper-white-diamonds": {
+   "polylines": [
+    131
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WHITE DIAMONDS",
+   "note": "its group"
+  }
+ }
+}
