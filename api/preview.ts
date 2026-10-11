@@ -1,5 +1,5 @@
 // Vercel function: the app's page with a link's own title, description and
-// picture, for link-preview bots only (vercel.json sends them here for links
+// picture, for link-preview bots only (middleware.ts sends them here for links
 // with ?resort=; everyone else gets the static page). See api/_lib/preview.ts.
 // Relative imports need their .js extension (Vercel runs api/ as Node ESM).
 import { loadPreview, metaFor, recapOf, withMeta } from './_lib/preview.js';

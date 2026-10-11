@@ -293,8 +293,8 @@ picture. The site's own (`index.html`, between `<!-- link preview -->` markers) 
 naming a resort (`?resort=stowe`) shows "Stowe Trail Map" and the resort's map; a shared day (`&recap=...`) shows
 "<trip> at <resort>", its runs, new runs and date, and the map cropped to its runs, drawn in their colours.
 
-Link-preview bots don't run the app, so `vercel.json` sends them (by user agent, only for links with `?resort=`) to
-`api/preview.ts`, which returns the app's own page with those tags filled in; everyone else gets the static page as
+Link-preview bots don't run the app, so `middleware.ts` (Vercel Routing Middleware, which runs before the static
+files are served) sends them (by user agent, only for links with `?resort=`) to `api/preview.ts`, which returns the app's own page with those tags filled in; everyone else gets the static page as
 before. `api/og.ts` draws the picture (1200 x 630, with `sharp`) from the resort's map and the preview data the build
 writes to `dist/preview/<id>.json` (`vite.config.ts`). `tools/make_og_assets.cjs` redraws `public/og/` (the default
 picture and the badge in a map picture's corner). To see what a service will show, paste a link into

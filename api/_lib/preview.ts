@@ -1,7 +1,7 @@
 // Link previews: what iMessage, WhatsApp, Slack and the like show for a link
 // to the app. They don't run the app's script, so for a link naming a resort
 // (?resort=<id>) or a shared day (&recap=...) the page they get has its own
-// title, description and picture (vercel.json sends link-preview bots to
+// title, description and picture (middleware.ts sends link-preview bots to
 // api/preview.ts; everyone else gets the app as before). The picture
 // (api/og.ts) is the resort's map, cropped to the day's runs and drawn with
 // them, from the preview data the build writes (dist/preview/<id>.json,
