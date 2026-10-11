@@ -564,6 +564,20 @@ const RESORT_ADS = {
     negatives: ['michigan', 'thompsonville', 'mine', 'summit house', 'summer', 'hiking', 'mountain bike', 'hotel',
       'lodging', 'rental', 'real estate', 'jobs', 'wedding', 'webcam', 'gondola tickets', 'disc golf'],
   },
+  brighton: {
+    short: 'Brighton',
+    path: 'Brighton',
+    area: 'Great Western to Milly',
+    // Brighton is also a city (England, Michigan, Colorado) and a beach: only with the resort's names or a map
+    names: ['brighton resort', 'brighton ski resort', 'brighton utah skiing'],
+    keywords: [
+      ['brighton ski trails', 'phrase'],
+      ['brighton trail map utah', 'exact'],
+    ],
+    // the other Brightons, the summer and the lodge, the canyon's other resorts
+    negatives: ['england', 'uk', 'beach', 'pier', 'michigan', 'colorado', 'massachusetts', 'new york', 'summer',
+      'mountain bike', 'hiking', 'lodge', 'real estate', 'jobs', 'wedding', 'solitude'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

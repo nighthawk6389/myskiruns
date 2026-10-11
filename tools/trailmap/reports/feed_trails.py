@@ -1,7 +1,7 @@
 """A resort's trail report from a Vail Resorts terrain feed: the FR.TerrainStatusFeed object of its
 terrain-and-lift-status page (extract_feed.py writes each one to a JSON file), from an mtnpowder feed
 (mtnpowder.com/feed/v3.json: README.md, "mtnfeed / mtnpowder"), from a DOR trail list (README.md, "Mt. Bachelor") or
-from Aspen Snowmass's grooming feed (below), as report.json rows [name, area, difficulty label], in the feed's order.
+from Aspen Snowmass's grooming feed or from a Boyne resort's reportpal (both below), as report.json rows [name, area, difficulty label], in the feed's order.
 
     python3 -I tools/trailmap/reports/feed_trails.py work/heavenly/feed/FR.TerrainStatusFeed_1.json
     python3 -I tools/trailmap/reports/feed_trails.py FEED.json --out tools/trailmap/resorts/<id>/report.json \\
@@ -27,6 +27,11 @@ DoubleBlack, a park TerrainPark.
 Aspen Snowmass's grooming feed (`https://www.aspensnowmass.com/AspenSnowmass/GroomingReport/Feed?mountain=Snowmass`,
 plain curl; its grooming report page loads it) lists every trail by lift area, out of season too: beginner Green,
 intermediate Blue, advanced Black, expert DoubleBlack, extreme Extreme, terrain-park TerrainPark.
+
+A Boyne resort's reportpal (`https://www.<site>/api/reportpal?resortName=<code>&useReportPal=true`, plain curl: the
+site's current-conditions page loads it; Big Sky's code bs, Brighton's br) lists every trail by lift area, out of
+season too, rated by its difficultyIcon (beginner Green, intermediate Blue, advanced Black, expert DoubleBlack), and
+the terrain parks (TerrainPark) under their own area.
 """
 import argparse
 import collections
@@ -42,6 +47,8 @@ ICONS = {'GreenCircle': 'Green', 'BlueSquare': 'Blue', 'BlueBlueSquare': 'Double
 
 
 DOR = {'easiest': 'Green', 'more_difficult': 'Blue', 'most_difficult': 'Black', 'extreme': 'DoubleBlack'}
+# a Boyne resort's reportpal (README.md, "Big Sky"): difficultyIcon
+REPORTPAL = {'beginner': 'Green', 'intermediate': 'Blue', 'advanced': 'Black', 'expert': 'DoubleBlack'}
 # Aspen Snowmass's grooming feed (aspensnowmass.com/AspenSnowmass/GroomingReport/Feed?mountain=<mountain>)
 ASPEN = {'beginner': 'Green', 'intermediate': 'Blue', 'advanced': 'Black', 'expert': 'DoubleBlack', 'extreme': 'Extreme',
          'terrain-park': 'TerrainPark'}
@@ -54,6 +61,15 @@ def rows(feed):
             if t.get('season') == 'winter' and t.get('type') in ('alpine_trail', 'terrain_park_trail'):
                 rating = 'TerrainPark' if t['type'] == 'terrain_park_trail' else DOR.get(t['difficulty'], t['difficulty'])
                 out.append([t['name'].strip(), t['sector']['name'].strip().title(), rating])
+        return out
+    if 'facilities' in feed:  # a Boyne resort's reportpal: lift areas, each with its trails and parks
+        for area in feed['facilities']['areas']['area']:
+            for t in (area.get('trails') or {}).get('trail') or []:
+                out.append([t['name'].strip(), area['name'].strip(),
+                            REPORTPAL.get(t['difficultyIcon'], t['difficultyIcon'])])
+            for kind in ('parks', 'pipes'):
+                for t in ((area.get('freestyleTerrain') or {}).get(kind) or {}).get(kind[:-1]) or []:
+                    out.append([t['name'].strip(), area['name'].strip(), 'TerrainPark'])
         return out
     if 'areas' in feed:  # Aspen Snowmass's grooming feed: lift areas, each with its trails
         for area in feed['areas']:
@@ -75,8 +91,8 @@ def rows(feed):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split('\n\n')[0])
-    ap.add_argument('feed', help='one FR.TerrainStatusFeed object, an mtnpowder feed, a DOR trail list or an Aspen '
-                    'Snowmass grooming feed (JSON)')
+    ap.add_argument('feed', help='one FR.TerrainStatusFeed object, an mtnpowder feed, a DOR trail list, an Aspen '
+                    'Snowmass grooming feed or a reportpal (JSON)')
     ap.add_argument('--out', help='report.json to write the rows into')
     ap.add_argument('--key', default='trails', help='the key the rows go under (e.g. trails_2024_25 for a past season)')
     ap.add_argument('--source', help='"_source": where and when the feed was captured')

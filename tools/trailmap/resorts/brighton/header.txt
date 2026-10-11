@@ -1,0 +1,24 @@
+// Brighton Resort's 2025-26 trail map (brightonresort.com's trail-maps page:
+// one Illustrator page, James Niehues's painting under a vector layer). The
+// lines are the PDF's own 0.8 pt strokes in the runs' colours (green, blue,
+// black; the parks orange), one stroke often carrying a run and the next:
+// cut where the next one's symbol or name starts. Names are outlined glyphs
+// in Eurostile Condensed Heavy, read from their shapes (five set as text);
+// the rating is the symbol printed by the name. Names are spelled as the
+// resort's trail report spells them (report.json): Pick 'Em Up, Racecourse
+// (Snake Creek Access) for RACE COURSE. The bowls, chutes and glades printed
+// with no line are markers at their names (Snake Bowl, Milly Bowl, Elevator,
+// Sawbuck, Short Shot, Diagonal Chute, Boll Weevil, Spaghetti, Captain Hook,
+// Wally's World); names printed with no symbol are rated by their line's
+// colour (Great Divide, Mary Back), or a bowl's or chute's black where they
+// have none (Elevator and Wally's World black, Diagonal Chute double black as
+// the chutes beside it; Snake Bowl and Milly Bowl as the report rates them).
+// The map also names runs the report doesn't list (Boll Weevil, Boundary
+// Chute, Captain Hook, Diagonal Chute, Elevator, Elk Park Access, Great
+// Western, Hawkeye Access, Scree Chute, Scree Slope, Slalom Hill, Sol Bright
+// Access, Spaghetti, Wally's World), each in the area of the lift it is
+// reached from; the report's Explorer Main and Simon's Way (the Explorer
+// lift's beginner lines) and Upper Majestic park are not named on it. The
+// lines no name is printed by (links, run-outs, the boundary's black line)
+// have no overlay. Areas: the report's lifts.
+// x/y/baseY/width are unused layout fields.

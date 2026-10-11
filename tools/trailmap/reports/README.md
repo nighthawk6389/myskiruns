@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird, Arapahoe Basin, Telluride, Crested Butte, Mount Snow, Stratton and Crystal Mountain keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird, Arapahoe Basin, Telluride, Crested Butte, Mount Snow, Stratton, Crystal Mountain and Brighton keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -106,6 +106,12 @@ The site's own scripts call `https://www.bigskyresort.com/api/reportpal?resortNa
 advanced intermediate, advanced, expert, high exposure). `tools/trailmap/resorts/big-sky/report.json` keeps name,
 area and rating as of 2026-09-24.
 
+Brighton's site (Boyne's too) serves the same reportpal: `https://www.brightonresort.com/api/reportpal?resortName=br&useReportPal=true`
+(plain curl), every trail by lift area with its difficultyIcon and the terrain parks under their own area, listed
+out of season too. `feed_trails.py` reads it (beginner Green, intermediate Blue, advanced Black, expert DoubleBlack,
+the parks TerrainPark): Brighton's `report.json`, 81 rows on 2026-10-11. Other Boyne resorts' codes are their own
+(Big Sky bs, Brighton br).
+
 ## Aspen Snowmass
 
 Its grooming report page loads `https://www.aspensnowmass.com/AspenSnowmass/GroomingReport/Feed?mountain=Snowmass`
@@ -194,7 +200,7 @@ page; read it in headless Chromium, as above, out of the page text).
 |---|---|
 | `fetch_page.cjs` | Renders a page in headless Chromium through the agent proxy; saves the HTML, its text, every JSON-ish response and the list of requests |
 | `extract_feed.py` | Every `X = {json}` assignment of a TerrainStatusFeed-like variable in a page, one JSON file each |
-| `feed_trails.py` | One FR.TerrainStatusFeed, mtnpowder feed or DOR trail list → report rows `[name, area, rating]`, printed or written into a `report.json` |
+| `feed_trails.py` | One FR.TerrainStatusFeed, mtnpowder feed, DOR trail list, Aspen Snowmass grooming feed or Boyne reportpal → report rows `[name, area, rating]`, printed or written into a `report.json` |
 | `cc_query.sh` | Common Crawl's CDX index: the captures of a URL pattern in the given crawls (retries) |
 | `cc_lookup.py` | The same without the index server (binary search of `cluster.idx` with range requests); `--fetch` downloads the WARC records |
 | `warc_to_html.py` | One WARC response record → the page's HTML as served |

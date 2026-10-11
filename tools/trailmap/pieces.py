@@ -10,6 +10,11 @@ for a resort read by pdf_resort.py (run its regen.sh first: the pieces and their
         # the PDF stroke each piece came from (its seqno: the drawing order) and the strokes drawn just before and
         # after it with their pieces' names: an artwork usually draws one run's strokes one after another, so a piece
         # drawn among another run's strokes is worth a second look
+    python3 tools/trailmap/pieces.py at brighton 55:0.15 55:0.6 18
+        # the point (map px) a fraction along each piece (default halfway): a point for decisions.py that lies on it
+    python3 tools/trailmap/pieces.py draw brighton 1690,1270,1900,1520 4 work/brighton/d.png 56 55 18
+        # the given pieces alone over the crop, each in its own colour with its id, a ring at its first point: which
+        # stroke runs where, where one ends and the next starts
 
 Map px are the work folder's map.png px (the grid of the review tiles and decisions.py).
 """
@@ -123,6 +128,42 @@ def seq(a):
                 print(f'    {"->" if q == s[0] else "  "} seqno {q}: {", ".join(f"{p} {name_of(r, p)}" for p in near) or "(no piece)"}')
 
 
+def at(a):
+    r = built(a.resort)
+    P = {p['id']: p for p in r.P}
+    for arg in a.points:
+        pid, _, f = arg.partition(':')
+        q = r.pts_of(P[int(pid)])
+        cum = [0.0]
+        for u, v in zip(q, q[1:]):
+            cum.append(cum[-1] + math.dist(u, v))
+        t = float(f or 0.5) * cum[-1]
+        k = next((i for i in range(1, len(cum)) if cum[i] >= t), len(cum) - 1)
+        u, v = q[k - 1], q[k]
+        w = (t - cum[k - 1]) / ((cum[k] - cum[k - 1]) or 1)
+        print(arg, (round(u[0] + w * (v[0] - u[0])), round(u[1] + w * (v[1] - u[1]))), name_of(r, int(pid)))
+
+
+def draw(a):
+    from PIL import Image, ImageDraw
+    r = built(a.resort)
+    x0, y0, x1, y1 = map(int, a.box.split(','))
+    z = float(a.zoom)
+    im = Image.open(r.work('map.png')).convert('RGB').crop((x0, y0, x1, y1))
+    im = im.resize((int((x1 - x0) * z), int((y1 - y0) * z)))
+    d = ImageDraw.Draw(im)
+    cols = [(255, 0, 255), (0, 200, 255), (255, 140, 0), (0, 220, 0), (255, 0, 0), (120, 0, 255)]
+    P = {p['id']: p for p in r.P}
+    for k, pid in enumerate(a.ids):
+        c = cols[k % len(cols)]
+        q = [((x - x0) * z, (y - y0) * z) for x, y in r.pts_of(P[int(pid)])]
+        d.line(q, fill=c, width=5)
+        d.text(q[len(q) // 2], pid, fill=c)
+        d.ellipse([q[0][0] - 6, q[0][1] - 6, q[0][0] + 6, q[0][1] + 6], outline=c, width=3)
+    im.save(a.out)
+    print(a.out, im.size)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split('\n\n')[0])
     sub = ap.add_subparsers(dest='cmd', required=True)
@@ -140,8 +181,17 @@ def main():
     s.add_argument('--k', type=int, default=3, help='strokes before and after')
     s.add_argument('--pdf')
     s.add_argument('--page', type=int, default=0)
+    t = sub.add_parser('at')
+    t.add_argument('resort')
+    t.add_argument('points', nargs='+', help='<piece id>[:<fraction along it>]')
+    d = sub.add_parser('draw')
+    d.add_argument('resort')
+    d.add_argument('box')
+    d.add_argument('zoom')
+    d.add_argument('out')
+    d.add_argument('ids', nargs='+')
     a = ap.parse_args()
-    {'info': info, 'pair': pair, 'seq': seq}[a.cmd](a)
+    {'info': info, 'pair': pair, 'seq': seq, 'at': at, 'draw': draw}[a.cmd](a)
 
 
 if __name__ == '__main__':

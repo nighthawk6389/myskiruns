@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's forty-three resorts got their overlays, written so the next resort (or the next season of one of
+How the app's forty-four resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -62,7 +62,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 | the source gives you | route | done this way | start from |
 |---|---|---|---|
 | trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Crystal Mountain (rounded symbols; its Northway inset image a panel read on crops, Telluride's way), Mount Snow (recipe D: one older export's strokes, another's text; rated by the names' colours), Stratton (recipe D: an export five seasons older, its changes read on crops), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
-| vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels), Alta (rounded symbols, `pdf_symbols.py --rounded --max-square`), Arapahoe Basin (one page of two paintings, two panels; most runs a name with no line: the stretch along it, `LABEL_LINE`), Telluride (names in the runs' colours, the EX double black; its hike-to terrain on two inset images read on crops, Whitefish's way) | Sunday River, Park City; Alta or Arapahoe Basin for rounded symbols |
+| vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels), Alta (rounded symbols, `pdf_symbols.py --rounded --max-square`), Arapahoe Basin (one page of two paintings, two panels; most runs a name with no line: the stretch along it, `LABEL_LINE`), Telluride (names in the runs' colours, the EX double black; its hike-to terrain on two inset images read on crops, Whitefish's way), Brighton (a font of its own; long strokes each carrying a run and the next, cut where the next one's symbol or name starts) | Sunday River, Park City; Alta or Arapahoe Basin for rounded symbols |
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor, Northstar (white names haloed in the line's colour: the halo is the colour, and is dropped from the lines; one united outline for the runs that meet, cut at each junction), Crested Butte (dashed black runs a fill per dash, linked; the boundary's dots never chained; its extreme terrain and an inset of numbered runs markers) | Mt. Bachelor; Northstar for united outlines; Crested Butte for dashed lines |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
 | a painting with no lines, names as text | every run traced along its painted cut by trace readers (Part 4) | Jay Peak | Jay Peak |
@@ -366,7 +366,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the forty-three resorts settled, so the next ones come out alike:
+What the forty-four resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -590,7 +590,7 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 | tool | what it does |
 |---|---|
 | `tools/trailmap/grid_crop.py` | A zoomed crop with a labelled pixel grid, optionally the pieces (`id:name`), overlays and symbols: review tiles and coordinates |
-| `tools/trailmap/pieces.py` | For a `pdf_resort.py` resort: `info` (pieces and names in a box), `pair` (a crop plain and annotated side by side), `seq` (a piece's place in the PDF's drawing order among other runs' strokes) |
+| `tools/trailmap/pieces.py` | For a `pdf_resort.py` resort: `info` (pieces and names in a box), `pair` (a crop plain and annotated side by side), `seq` (a piece's place in the PDF's drawing order among other runs' strokes), `at` (the point a fraction along a piece, for `decisions.py`), `draw` (chosen pieces alone over a crop, each in its own colour: where one stroke ends and the next starts) |
 | `tools/trailmap/piece_sheet.py` | Each piece alone on its own crop: maps where one line carries several runs |
 | `tools/trailmap/overlay_audit.py` | One cell per trail: its overlay thick, the others thin, its printed labels boxed, how it was named. The main audit |
 | `tools/trailmap/region_audit.py` | Every overlay tagged with its name over zoomed regions: the whole map at a glance |
@@ -673,6 +673,7 @@ give the same.
 | [Mount Snow](#mount-snow) | this season's map an image only (its PDF flattened at 72 dpi; the CDN's PNG); a 2023-24 export's strokes, a 2024-25 uphill map's text; an inset | two exports registered on the image (the inset on its own), names rated by their colour (`COLOR_SYMBOL`), the inset's names placed on crops (`EXTRA`) | `regen.sh` | lines and names from two older exports |
 | [Crystal Mountain](#crystal-mountain) | a vector PDF (the painting vector art) of 1.5 pt strokes, text and rounded symbols; the Northway inset image; an interactive map | `pdf_resort.py`, the interactive map's lines settling choices; the inset read on crops (`names.py`, `route_trace.py` on its black ink) | `regen.sh` | a PDF plus one image inset; a site behind a bot check |
 | [Stratton](#stratton) | this season's PDF flattened (one image); the 2020-21 export of the artwork with live strokes, text and fills | registration, the changes since read on crops (`GONE`, `MOVED`, traced lines) | `regen.sh` | an export several seasons older than the map |
+| [Brighton](#brighton) | PDF strokes (one stroke often two runs), outlined names in a font of its own, symbols on the lines | `pdf_resort.py`, glyph sheets, cuts where the next run's symbol or name starts | `regen.sh` | strokes that carry several runs each |
 
 ## Killington
 
@@ -2236,6 +2237,53 @@ North, High Campbell, South, Lower Mountain) · `tools/trailmap/resorts/crystal-
 - **Checked:** every overlay on crops (`overlay_audit.py`, 26 + 6 sheets, every cell read; Downhill's and Rolling
   Knolls' pieces fixed and read again); `compare.py` against the report; hover 242/242 and 44/44; the app check; a
   rebuild from an empty work folder, byte for byte.
+
+## Brighton
+
+91 trails (81 + 10) · Utah · one panel · areas: the report's lifts (Great Western Express, Snake Creek Express, Crest
+6, Milly Express, Majestic, Explorer, Terrain Park) · `tools/trailmap/resorts/brighton/`.
+
+- **Source:** the 2025-26 winter trail map PDF that brightonresort.com's trail-maps page links (its Sanity CDN, plain
+  curl): one Illustrator page, James Niehues's painting at 312 dpi under a vector layer. Every run is a 0.8 pt stroke
+  in its rating's colour (green, blue, black; the parks orange; two blues and two blacks, a stroke or two in each
+  other shade), the lifts red 1.6 pt; the names outlined glyphs in Eurostile Condensed Heavy, black or a near-black,
+  on a white halo (five set as text: Pine Martin, a Thunder Road, Candyland, Pee-Wee, Golden Needle); the symbols
+  fills on the line by the name (green circles, blue squares, near-black diamonds, two side by side a double). Its
+  SHA-256 is checked.
+- **Route (recipe B):** `prepare.py`: the page rendered at 4 px/pt, the 0.7-0.9 pt strokes in the runs' colours
+  (`extract_pdf_vectors.py`), the glyphs (`pdf_glyphs.py`: 420 shapes read on contact sheets into `letters.json`, a
+  font no earlier map used; M and W one shape turned over, `--turned WM`; i, l and I one shape, the misreads spelled
+  in `RENAME`), the text names (`pdf_labels.py`), `pdf_symbols.py`. `pdf_resort.py` with `SYMBOL_REACH` 10,
+  `END_REACH` 8, `ALONG` 5, `NO_STRETCH_BESIDE` (names printed beside their lines as well as in gaps); the peaks', the
+  areas' and the base's capitals left out (`is_name`); six names on two lines joined; 2nd Face read on from Majestic
+  Main's last letter (`SPLIT`).
+- **Rebuild:** `tools/trailmap/resorts/brighton/regen.sh` (1 min); it checks the PDF's SHA-256.
+- **Truth:** the trail report (`report.json`): the resort's reportpal (`brightonresort.com/api/reportpal?
+  resortName=br&useReportPal=true`, Big Sky's kind; `feed_trails.py` reads it now), fetched out of season on
+  2026-10-11, 81 rows. Spellings are the report's (Pick 'Em Up, Racecourse (Snake Creek Access) for RACE COURSE).
+  Printed but not in it (14: Boll Weevil, Boundary Chute, Captain Hook, Diagonal Chute, Elevator, Elk Park Access,
+  Great Western, Hawkeye Access, Scree Chute, Scree Slope, Slalom Hill, Sol Bright Access, Spaghetti, Wally's World;
+  Rockin' R is the report's Rockin's R): spelled as printed, each in the area of the lift it is reached from
+  (`AREA_OF`). Not printed: Explorer Main and Simon's Way (the Explorer lift's beginner lines carry no name) and the
+  Upper Majestic park. Ratings are the printed symbols, all as the report's once the symbols out of reach were placed
+  (`SYMBOL_OF`: Pick 'Em Up's circle where Great Divide's name also starts, Hard Coin's, Lone Pine's, Randy's
+  Chute's, Cat Track's, Powder Alley's, Spaghetti's); the names with none take their line's colour (Great Divide,
+  Mary Back) or a bowl's or chute's black (`DEFAULT_SYMBOL`). Areas' elevations: each lift's top (OpenStreetMap on the
+  USGS's 10 m model, `lift_tops.py`).
+- **Decisions** (`decisions.py`): the strokes are long and carry a run and the next, so most of the work is cuts where
+  the next run's symbol or name starts (Elk Park Access, Elk Park and Golden Needle; Pioneer and Great Divide; Scree
+  Slope and Scree Chute; Lone Pine and Randy's Chute; Chute 2 and Wee Willow; Face, 2nd Face and Zane's; SS Traverse
+  and Powder Alley; Mary Main and Lower Mary; Mary Back and Lost Maid; Christy Bowl and Slalom Hill; Main Street,
+  Canyon and Waterfall); the Crest 6 top's lines (Thunder Road's start, Tantamount's and Snow Drift's off Pacific
+  Highway's, Pacific Highway on past the lift's label to Shoulder's); the parks' lane down the Majestic lift; Rein's
+  Run's two lines either side of its name. `pieces.py at` (a point along a piece) and `draw` (pieces over a crop)
+  were added for these. Not trails: the links and run-outs with no name (one from Rockin' R to Scout's name, two black
+  stubs with a diamond under Thunder Road, one under Great Divide), the Explorer lift's beginner lines, the parks'
+  lane (the report's Upper and Lower Majestic), the black line down the ski-area boundary. The bowls, chutes and
+  glades printed with no line are markers at their names (10).
+- **Checked:** every overlay on crops (`overlay_audit.py`, 16 sheets, every cell read; the stretches beside Face,
+  Candyland, Shoulder and Slalom Hill dropped and Shoulder's line split, read again); `compare.py` against the
+  report; hover 253/253; the app check; a rebuild from an empty work folder, byte for byte.
 
 # Part 4. Methods in detail
 

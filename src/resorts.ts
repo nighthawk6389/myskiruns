@@ -199,6 +199,8 @@ export const RESORTS: ResortEntry[] = [
     { id: 'main', name: 'Crystal Mountain', paths: () => import('./data/resorts/crystal-mountain/panels/main/trailPaths.json') },
     { id: 'northway', name: 'Northway', paths: () => import('./data/resorts/crystal-mountain/panels/northway/trailPaths.json') },
   ], ['Crystal Mountain Resort', 'Mt. Rainier Gondola', 'Northway', 'Southback', 'Enumclaw']),
+  oneMap('brighton', 'Brighton', 'Utah', () => import('./data/resorts/brighton/trails'), () => import('./data/resorts/brighton/trailPaths.json'),
+    ['Brighton Resort', 'Big Cottonwood Canyon', 'Milly', 'Great Western', 'Salt Lake City']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

@@ -1,0 +1,134 @@
+{
+ "reviews": {
+  "snake-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T10:44:46.000Z",
+   "by": "claude",
+   "labelAt": [
+    49.57,
+    28.16
+   ]
+  },
+  "elevator": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T10:44:46.000Z",
+   "by": "claude",
+   "labelAt": [
+    82.03,
+    29.98
+   ]
+  },
+  "wallys-world": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T10:44:46.000Z",
+   "by": "claude",
+   "labelAt": [
+    30.56,
+    30.63
+   ]
+  },
+  "sawbuck": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T10:44:46.000Z",
+   "by": "claude",
+   "labelAt": [
+    46.93,
+    32.75
+   ]
+  },
+  "milly-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T10:44:46.000Z",
+   "by": "claude",
+   "labelAt": [
+    82.03,
+    34.26
+   ]
+  },
+  "diagonal-chute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T10:44:46.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.45,
+    49.77
+   ]
+  },
+  "short-shot": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T10:44:46.000Z",
+   "by": "claude",
+   "labelAt": [
+    45.08,
+    57.95
+   ]
+  },
+  "boll-weevil": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T10:44:46.000Z",
+   "by": "claude",
+   "labelAt": [
+    83.45,
+    67.52
+   ]
+  },
+  "spaghetti": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T10:44:46.000Z",
+   "by": "claude",
+   "labelAt": [
+    87.56,
+    70.95
+   ]
+  },
+  "captain-hook": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T10:44:46.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.71,
+    82.75
+   ]
+  }
+ }
+}

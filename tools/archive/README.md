@@ -99,6 +99,19 @@ and not the trees, and the symbols the interactive maps' groups don't carry (Ger
 | `big-bear/symbols_missed.py` | symbols_missed.py <map.png> <printed.json> <min> <max>: green circles, blue squares and black diamonds of that size on the print that printed.json doesn't have |
 | `big-bear/symbols_all.py` | symbols_all.py <map.png> <min> <max>: every symbol of that size on the print, side-by-side diamonds as a double (Snow Valley's, read into names.py) |
 
+## brighton
+
+Brighton's glyph reading (the work folder `work/brighton`, after `pdf_glyphs.py collect`): whether any resort's
+letters.json already read its font (none did: Eurostile Condensed Heavy, new here), and, once the shapes were read,
+each misread label's letters with the glyph shape each came from (M and W one shape turned over, `--turned WM`;
+i, l and I one shape, their dots apart: the shapes misread fixed with `pdf_glyphs.py read`, the rest in RENAME).
+The points along pieces and the pieces drawn over crops that the decisions needed are `pieces.py at` and `draw` now.
+
+| file | what it did |
+|---|---|
+| `brighton/letters_fit.py` | letters_fit.py <glyphs.json>: how many of a new map's glyphs each resort's letters.json already reads |
+| `brighton/label_clusters.py` | label_clusters.py <glyphs.json> <labels.json> [text ...]: each label (or those containing a text) with every letter's glyph cluster, to find the shape a misread letter came from |
+
 ## big-sky
 
 Big Sky's checks while its pieces were settled: crops of the PDF sharp around pieces and names, drawing order, junctions, overlaps (now `tools/trailmap/pdf_overlaps.py`), the OpenStreetMap cross-check (now `tools/trailmap/osm_check.py`), and the names against the trail report.

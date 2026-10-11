@@ -1,0 +1,410 @@
+{
+ "_source": "Brighton Resort's trail report: brightonresort.com/api/reportpal?resortName=br&useReportPal=true (its current-conditions page), fetched out of season on 2026-10-11: name, lift area, difficulty (the parks under Terrain Park)",
+ "trails": [
+  [
+   "Pacific Highway",
+   "Crest 6",
+   "Blue"
+  ],
+  [
+   "Thunder Road",
+   "Crest 6",
+   "Blue"
+  ],
+  [
+   "Wintergreen",
+   "Crest 6",
+   "Blue"
+  ],
+  [
+   "Tantamount",
+   "Crest 6",
+   "Blue"
+  ],
+  [
+   "Snow Drift",
+   "Crest 6",
+   "Blue"
+  ],
+  [
+   "Wren Hollow",
+   "Crest 6",
+   "Black"
+  ],
+  [
+   "Lower Mary",
+   "Crest 6",
+   "Blue"
+  ],
+  [
+   "Mary Main",
+   "Crest 6",
+   "Blue"
+  ],
+  [
+   "Explorer Main",
+   "Explorer",
+   "Green"
+  ],
+  [
+   "Simon's Way",
+   "Explorer",
+   "Green"
+  ],
+  [
+   "Western Trail",
+   "Great Western Express",
+   "Blue"
+  ],
+  [
+   "Elk Park",
+   "Great Western Express",
+   "Blue"
+  ],
+  [
+   "Wrangler",
+   "Great Western Express",
+   "Black"
+  ],
+  [
+   "Aspen Glo",
+   "Great Western Express",
+   "Black"
+  ],
+  [
+   "Golden Needle",
+   "Great Western Express",
+   "Blue"
+  ],
+  [
+   "Rockin's R",
+   "Great Western Express",
+   "Black"
+  ],
+  [
+   "Silver Spur",
+   "Great Western Express",
+   "Black"
+  ],
+  [
+   "Desperado",
+   "Great Western Express",
+   "Black"
+  ],
+  [
+   "Elk Park Ridge",
+   "Great Western Express",
+   "Black"
+  ],
+  [
+   "Endless Winter",
+   "Great Western Express",
+   "DoubleBlack"
+  ],
+  [
+   "Old Western",
+   "Great Western Express",
+   "Blue"
+  ],
+  [
+   "Rein's Run",
+   "Great Western Express",
+   "DoubleBlack"
+  ],
+  [
+   "Clark's Roost",
+   "Great Western Express",
+   "DoubleBlack"
+  ],
+  [
+   "True Grit",
+   "Great Western Express",
+   "DoubleBlack"
+  ],
+  [
+   "Face",
+   "Majestic",
+   "Black"
+  ],
+  [
+   "Shoulder",
+   "Majestic",
+   "Blue"
+  ],
+  [
+   "Powder Alley",
+   "Majestic",
+   "Blue"
+  ],
+  [
+   "Cat Track",
+   "Majestic",
+   "Blue"
+  ],
+  [
+   "Scout",
+   "Majestic",
+   "Blue"
+  ],
+  [
+   "Majestic Main",
+   "Majestic",
+   "Blue"
+  ],
+  [
+   "Lower Majestic",
+   "Majestic",
+   "Green"
+  ],
+  [
+   "Racecourse (Snake Creek Access)",
+   "Majestic",
+   "Blue"
+  ],
+  [
+   "Mary Back",
+   "Majestic",
+   "Green"
+  ],
+  [
+   "Lost Maid",
+   "Majestic",
+   "Green"
+  ],
+  [
+   "SS Traverse",
+   "Majestic",
+   "Blue"
+  ],
+  [
+   "Short Shot",
+   "Majestic",
+   "Black"
+  ],
+  [
+   "JBs",
+   "Majestic",
+   "Blue"
+  ],
+  [
+   "Hawkeye",
+   "Majestic",
+   "Blue"
+  ],
+  [
+   "Milly Access",
+   "Majestic",
+   "Blue"
+  ],
+  [
+   "2nd Face",
+   "Majestic",
+   "Black"
+  ],
+  [
+   "Zane's",
+   "Majestic",
+   "Black"
+  ],
+  [
+   "Little Milly",
+   "Milly Express",
+   "Black"
+  ],
+  [
+   "Backbone",
+   "Milly Express",
+   "Blue"
+  ],
+  [
+   "Backdoor",
+   "Milly Express",
+   "Blue"
+  ],
+  [
+   "Devil's Dip",
+   "Milly Express",
+   "Black"
+  ],
+  [
+   "Wee Willow",
+   "Milly Express",
+   "Black"
+  ],
+  [
+   "Main Street",
+   "Milly Express",
+   "Green"
+  ],
+  [
+   "Canyon",
+   "Milly Express",
+   "Green"
+  ],
+  [
+   "Evergreen",
+   "Milly Express",
+   "Blue"
+  ],
+  [
+   "Easy Out",
+   "Milly Express",
+   "Blue"
+  ],
+  [
+   "Exhibition",
+   "Milly Express",
+   "Black"
+  ],
+  [
+   "Perris Bowl",
+   "Milly Express",
+   "Blue"
+  ],
+  [
+   "Christy Bowl",
+   "Milly Express",
+   "Blue"
+  ],
+  [
+   "Milly Bowl",
+   "Milly Express",
+   "Black"
+  ],
+  [
+   "State Street",
+   "Milly Express",
+   "Green"
+  ],
+  [
+   "Lone Pine",
+   "Milly Express",
+   "Black"
+  ],
+  [
+   "Randy's Chute",
+   "Milly Express",
+   "DoubleBlack"
+  ],
+  [
+   "Chute 2",
+   "Milly Express",
+   "Black"
+  ],
+  [
+   "Waterfall",
+   "Milly Express",
+   "Green"
+  ],
+  [
+   "Majestic Access",
+   "Milly Express",
+   "Blue"
+  ],
+  [
+   "Pioneer",
+   "Snake Creek Express",
+   "Blue"
+  ],
+  [
+   "Sunshine",
+   "Snake Creek Express",
+   "Green"
+  ],
+  [
+   "Thor",
+   "Snake Creek Express",
+   "Blue"
+  ],
+  [
+   "Pine Martin",
+   "Snake Creek Express",
+   "Blue"
+  ],
+  [
+   "Ziggy",
+   "Snake Creek Express",
+   "Blue"
+  ],
+  [
+   "Doyle's Dive",
+   "Snake Creek Express",
+   "Black"
+  ],
+  [
+   "Hard Coin",
+   "Snake Creek Express",
+   "DoubleBlack"
+  ],
+  [
+   "Sawbuck",
+   "Snake Creek Express",
+   "DoubleBlack"
+  ],
+  [
+   "Snake Bowl",
+   "Snake Creek Express",
+   "DoubleBlack"
+  ],
+  [
+   "Thunderhead",
+   "Snake Creek Express",
+   "Blue"
+  ],
+  [
+   "Lower Pioneer",
+   "Snake Creek Express",
+   "Blue"
+  ],
+  [
+   "Chicken Out",
+   "Snake Creek Express",
+   "Blue"
+  ],
+  [
+   "Lonestar",
+   "Snake Creek Express",
+   "Blue"
+  ],
+  [
+   "Pick Em Up",
+   "Snake Creek Express",
+   "Green"
+  ],
+  [
+   "Great Divide",
+   "Snake Creek Express",
+   "Blue"
+  ],
+  [
+   "Lower Thunder Road",
+   "Snake Creek Express",
+   "Green"
+  ],
+  [
+   "My-O-My",
+   "Terrain Park",
+   "TerrainPark"
+  ],
+  [
+   "Candyland",
+   "Terrain Park",
+   "TerrainPark"
+  ],
+  [
+   "Pee-Wee",
+   "Terrain Park",
+   "TerrainPark"
+  ],
+  [
+   "Upper Majestic",
+   "Terrain Park",
+   "TerrainPark"
+  ],
+  [
+   "Lower Majestic",
+   "Terrain Park",
+   "TerrainPark"
+  ]
+ ]
+}
