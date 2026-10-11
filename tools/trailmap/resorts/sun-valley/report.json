@@ -1,0 +1,705 @@
+{
+ "_source": "Sun Valley's interactive maps (mountain.live: SunValley-BaldMountain, SunValley-DollarMountain staticPoiData), fetched 2026-10-11; rows [name, area, rating]",
+ "trails": [
+  [
+   "29 Turns",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "42nd Street",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Arnold's Run",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Aujus",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Bear Den",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Blue Grouse",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Bowl Lane",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Brick's Island",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Broadway",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Broadway Face",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Broadway Family Cross Course",
+   "Bald Mountain",
+   "TerrainPark"
+  ],
+  [
+   "Byron's Park",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Christin's Silver",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Christmas Bowl",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Christmas Lane",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Christmas Ridge",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Cold Springs Chutes",
+   "Bald Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Cold Springs Cut Off",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "College Hike Park",
+   "Bald Mountain",
+   "TerrainPark"
+  ],
+  [
+   "Cut Off",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Deer-Hollow",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Easter Bowl",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Exhibition",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Fire Trail",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Foxy Forest",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "French Connection",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Graduate",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Gretchen's Gold",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Gun Tower Lane",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Hour Glass",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "I-80",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Inhibition",
+   "Bald Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "International",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Kaitlyn's Bowl",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Kenny's",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Kinderspielplatz",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Lefty Bowl",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Leigh Lane",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Lilly Marlane",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Little Easter Bowl",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Little Scorpion",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Lookout Bowl",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Lookout Lane",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Lower Broadway",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Lower Can-Can",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Lower Canyon",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Lower Christmas Bowl",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Lower College",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Lower Cozy",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Lower Flying Squirrel",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Lower French Dip",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Lower Greyhawk",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Lower Hemingway",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Lower Holiday",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Lower Janss Pass",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Lower Limelight",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Lower Olympic",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Lower Picabo's Street",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Lower River Run",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Lower Warm Springs",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Machine RD",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Maiden Lane",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Mayday Bowl",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Mid Christmas Bowl",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Mid Cozy",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Mid Greyhawk",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Mid Hemingway",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Mid Holiday",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Mid Inhibition",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Mid Limelight",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Mid Picabo's Street",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Mid River Lane",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Mid River Run",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Mid Warm Springs",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Muffy's Medals",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Numbers",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Olympic",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Olympic Lane",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Olympic Ridge",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Pete's Lane",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Pine-Martin Plunge",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Pioneer Bowl",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Race Arena",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Red-Headed Woodpecker",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Ridge",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Ridge S. Slopes",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Rock Garden",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Roundhouse Lane",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Roundhouse Slope",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Saddle Up Park",
+   "Bald Mountain",
+   "TerrainPark"
+  ],
+  [
+   "Sheep Camp",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Showtime Park",
+   "Bald Mountain",
+   "TerrainPark"
+  ],
+  [
+   "Sigi's Bowl",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Sleeping Bear",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Sunny Side Bowl",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Sunrise Bowl",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Sunset Strip",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "The Flume",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "The Glades",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Three Bears",
+   "Bald Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Tim's",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Under Graduate",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Upper Can-Can",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Upper Canyon",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Upper College",
+   "Bald Mountain",
+   "Green"
+  ],
+  [
+   "Upper Cozy",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Upper Flying Squirrel",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Upper French Dip",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Upper Greyhawk",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Upper Hemingway",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Upper Holiday",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Upper Janss Pass",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Upper Limelight",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Upper Picabo's Street",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Upper River Run",
+   "Bald Mountain",
+   "Black"
+  ],
+  [
+   "Upper Warm Springs",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Warm Springs Face",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Wolverton",
+   "Bald Mountain",
+   "Blue"
+  ],
+  [
+   "Arrowhead Way",
+   "Dollar Mountain",
+   "Green"
+  ],
+  [
+   "Bitterroot Bowl",
+   "Dollar Mountain",
+   "Black"
+  ],
+  [
+   "Cabin Practice",
+   "Dollar Mountain",
+   "Green"
+  ],
+  [
+   "Dollar Face",
+   "Dollar Mountain",
+   "Blue"
+  ],
+  [
+   "Dragon's Back",
+   "Dollar Mountain",
+   "Black"
+  ],
+  [
+   "Elkhorn Bowl",
+   "Dollar Mountain",
+   "Green"
+  ],
+  [
+   "Elkhorn Face",
+   "Dollar Mountain",
+   "Blue"
+  ],
+  [
+   "Forbidden Fruit",
+   "Dollar Mountain",
+   "Green"
+  ],
+  [
+   "Hidden Valley",
+   "Dollar Mountain",
+   "Green"
+  ],
+  [
+   "Joint Venture",
+   "Dollar Mountain",
+   "Green"
+  ],
+  [
+   "Mineshaft",
+   "Dollar Mountain",
+   "TerrainPark"
+  ],
+  [
+   "Motherlode",
+   "Dollar Mountain",
+   "TerrainPark"
+  ],
+  [
+   "Name Dropper",
+   "Dollar Mountain",
+   "TerrainPark"
+  ],
+  [
+   "New Bowl",
+   "Dollar Mountain",
+   "Blue"
+  ],
+  [
+   "Old Bowl",
+   "Dollar Mountain",
+   "Blue"
+  ],
+  [
+   "Otto's Run",
+   "Dollar Mountain",
+   "Blue"
+  ],
+  [
+   "Poverty Flats",
+   "Dollar Mountain",
+   "Green"
+  ],
+  [
+   "Sepp's Bowl",
+   "Dollar Mountain",
+   "Green"
+  ],
+  [
+   "Sluice Box",
+   "Dollar Mountain",
+   "TerrainPark"
+  ],
+  [
+   "Sunny's Adventure Park",
+   "Dollar Mountain",
+   "TerrainPark"
+  ],
+  [
+   "Train Yard",
+   "Dollar Mountain",
+   "TerrainPark"
+  ],
+  [
+   "Trestles",
+   "Dollar Mountain",
+   "TerrainPark"
+  ]
+ ]
+}

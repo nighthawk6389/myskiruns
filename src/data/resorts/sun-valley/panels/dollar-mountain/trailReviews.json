@@ -1,0 +1,134 @@
+{
+ "reviews": {
+  "elkhorn-face": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:16.000Z",
+   "by": "claude",
+   "labelAt": [
+    32.08,
+    18.36
+   ]
+  },
+  "bitterroot-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:16.000Z",
+   "by": "claude",
+   "labelAt": [
+    82.87,
+    21.41
+   ]
+  },
+  "dragons-back": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:16.000Z",
+   "by": "claude",
+   "labelAt": [
+    73.96,
+    34.87
+   ]
+  },
+  "trestles": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:16.000Z",
+   "by": "claude",
+   "labelAt": [
+    81.79,
+    52.83
+   ]
+  },
+  "motherlode": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:16.000Z",
+   "by": "claude",
+   "labelAt": [
+    85.48,
+    56.98
+   ]
+  },
+  "sluice-box": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:16.000Z",
+   "by": "claude",
+   "labelAt": [
+    59.52,
+    57.93
+   ]
+  },
+  "name-dropper": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:16.000Z",
+   "by": "claude",
+   "labelAt": [
+    87.87,
+    59.53
+   ]
+  },
+  "mineshaft": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:16.000Z",
+   "by": "claude",
+   "labelAt": [
+    70.15,
+    60.63
+   ]
+  },
+  "sunnys-adventure-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:16.000Z",
+   "by": "claude",
+   "labelAt": [
+    55.81,
+    62.38
+   ]
+  },
+  "train-yard": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:16.000Z",
+   "by": "claude",
+   "labelAt": [
+    82.34,
+    62.48
+   ]
+  }
+ }
+}

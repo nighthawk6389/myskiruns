@@ -213,6 +213,10 @@ export const RESORTS: ResortEntry[] = [
   ], ['Stevens Pass Resort', 'Mill Valley', 'Seventh Heaven', 'Skykomish', 'Leavenworth']),
   oneMap('loon', 'Loon Mountain', 'New Hampshire', () => import('./data/resorts/loon/trails'), () => import('./data/resorts/loon/trailPaths.json'),
     ['Loon', 'Loon Mountain Resort', 'South Peak', 'North Peak', 'Lincoln', 'White Mountains']),
+  panels('sun-valley', 'Sun Valley', 'Idaho', () => import('./data/resorts/sun-valley/trails'), [
+    { id: 'bald-mountain', name: 'Bald Mountain', paths: () => import('./data/resorts/sun-valley/panels/bald-mountain/trailPaths.json') },
+    { id: 'dollar-mountain', name: 'Dollar Mountain', paths: () => import('./data/resorts/sun-valley/panels/dollar-mountain/trailPaths.json') },
+  ], ['Sun Valley Resort', 'Bald Mountain', 'Baldy', 'Dollar Mountain', 'Ketchum']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

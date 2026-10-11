@@ -1,0 +1,846 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "arnolds-run": {
+   "polylines": [
+    95,
+    97,
+    197
+   ],
+   "confidence": "high",
+   "mapName": "ARNOLD'S RUN",
+   "note": "symbol of Arnold's Run | end of Arnold's Run | along its printed name"
+  },
+  "aujus": {
+   "polylines": [
+    76,
+    77,
+    226
+   ],
+   "confidence": "high",
+   "mapName": "AUJUS",
+   "note": "checked on a crop | symbol of Aujus | along its printed name"
+  },
+  "blue-grouse": {
+   "polylines": [
+    48,
+    50,
+    167
+   ],
+   "confidence": "high",
+   "mapName": "BLUE GROUSE",
+   "note": "symbol of Blue Grouse | end of Blue Grouse | along its printed name"
+  },
+  "bowl-lane": {
+   "polylines": [
+    130,
+    131,
+    149
+   ],
+   "confidence": "high",
+   "mapName": "BOWL LANE",
+   "note": "symbol of Bowl Lane | end of Bowl Lane | along its printed name"
+  },
+  "bricks-island": {
+   "polylines": [
+    100,
+    108,
+    211
+   ],
+   "confidence": "high",
+   "mapName": "BRICK'S ISLAND",
+   "note": "symbol of Brick's Island | end of Brick's Island | along its printed name"
+  },
+  "broadway": {
+   "polylines": [
+    140,
+    141,
+    161
+   ],
+   "confidence": "high",
+   "mapName": "BROADWAY",
+   "note": "end of Broadway | symbol of Broadway | along its printed name"
+  },
+  "byrons-park": {
+   "polylines": [
+    31,
+    32,
+    168
+   ],
+   "confidence": "high",
+   "mapName": "BYRON'S PARK",
+   "note": "end of Byron's Park | symbol of Byron's Park | along its printed name"
+  },
+  "christins-silver": {
+   "polylines": [
+    29,
+    30,
+    156
+   ],
+   "confidence": "high",
+   "mapName": "CHRISTIN'S SILVER",
+   "note": "symbol of Christin's Silver | end of Christin's Silver | along its printed name"
+  },
+  "christmas-lane": {
+   "polylines": [
+    15,
+    16,
+    179
+   ],
+   "confidence": "high",
+   "mapName": "CHRISTMAS LANE",
+   "note": "end of Christmas Lane | symbol of Christmas Lane | along its printed name"
+  },
+  "christmas-ridge": {
+   "polylines": [
+    17,
+    18,
+    153
+   ],
+   "confidence": "high",
+   "mapName": "CHRISTMAS RIDGE",
+   "note": "end of Christmas Ridge | symbol of Christmas Ridge | along its printed name"
+  },
+  "cold-springs-cut-off": {
+   "polylines": [
+    35,
+    36,
+    196
+   ],
+   "confidence": "high",
+   "mapName": "COLD SPRINGS CUT OFF",
+   "note": "symbol of Cold Springs Cut Off | end of Cold Springs Cut Off | along its printed name"
+  },
+  "cut-off": {
+   "polylines": [
+    49,
+    51,
+    170
+   ],
+   "confidence": "high",
+   "mapName": "CUT OFF",
+   "note": "symbol of Cut Off | end of Cut Off | along its printed name"
+  },
+  "exhibition": {
+   "polylines": [
+    43,
+    44,
+    215
+   ],
+   "confidence": "high",
+   "mapName": "EXHIBITION",
+   "note": "symbol of Exhibition | end of Exhibition | along its printed name"
+  },
+  "fire-trail": {
+   "polylines": [
+    164
+   ],
+   "confidence": "high",
+   "mapName": "FIRE TRAIL",
+   "note": "along its printed name"
+  },
+  "french-connection": {
+   "polylines": [
+    13,
+    14,
+    229
+   ],
+   "confidence": "high",
+   "mapName": "FRENCH CONNECTION",
+   "note": "end of French Connection | symbol of French Connection | along its printed name"
+  },
+  "graduate": {
+   "polylines": [
+    70,
+    71,
+    193
+   ],
+   "confidence": "high",
+   "mapName": "GRADUATE",
+   "note": "checked on a crop | end of Graduate | along its printed name"
+  },
+  "gretchens-gold": {
+   "polylines": [
+    25,
+    26,
+    162
+   ],
+   "confidence": "high",
+   "mapName": "GRETCHEN'S GOLD",
+   "note": "symbol of Gretchen's Gold | end of Gretchen's Gold | along its printed name"
+  },
+  "gun-tower-lane": {
+   "polylines": [
+    0,
+    1,
+    186
+   ],
+   "confidence": "high",
+   "mapName": "GUN TOWER LANE",
+   "note": "symbol of Gun Tower Lane | end of Gun Tower Lane | along its printed name"
+  },
+  "hour-glass": {
+   "polylines": [
+    182
+   ],
+   "confidence": "high",
+   "mapName": "HOUR GLASS",
+   "note": "along its printed name"
+  },
+  "i-80": {
+   "polylines": [
+    11,
+    12,
+    150,
+    163
+   ],
+   "confidence": "high",
+   "mapName": "I-80",
+   "note": "end of I-80 | symbol of I-80 | along its printed name"
+  },
+  "inhibition": {
+   "polylines": [
+    33,
+    34,
+    207
+   ],
+   "confidence": "high",
+   "mapName": "INHIBITION",
+   "note": "end of Inhibition | symbol of Inhibition | along its printed name"
+  },
+  "international": {
+   "polylines": [
+    93,
+    94,
+    154
+   ],
+   "confidence": "high",
+   "mapName": "INTERNATIONAL",
+   "note": "symbol of International | end of International | along its printed name"
+  },
+  "kennys": {
+   "polylines": [
+    4,
+    5,
+    183
+   ],
+   "confidence": "high",
+   "mapName": "KENNY'S",
+   "note": "end of Kenny's | symbol of Kenny's | along its printed name"
+  },
+  "leigh-lane": {
+   "polylines": [
+    137,
+    138,
+    152
+   ],
+   "confidence": "high",
+   "mapName": "LEIGH LANE",
+   "note": "end of Leigh Lane | symbol of Leigh Lane | along its printed name"
+  },
+  "lilly-marlane": {
+   "polylines": [
+    2,
+    3,
+    199
+   ],
+   "confidence": "high",
+   "mapName": "LILLY MARLANE",
+   "note": "end of Lilly Marlane | symbol of Lilly Marlane | along its printed name"
+  },
+  "little-scorpion": {
+   "polylines": [
+    222
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE SCORPION",
+   "note": "along its printed name"
+  },
+  "lookout-lane": {
+   "polylines": [
+    144,
+    145,
+    148
+   ],
+   "confidence": "high",
+   "mapName": "LOOKOUT LANE",
+   "note": "symbol of Lookout Lane | end of Lookout Lane | along its printed name"
+  },
+  "lower-broadway": {
+   "polylines": [
+    139,
+    195
+   ],
+   "confidence": "high",
+   "mapName": "LOWER BROADWAY",
+   "note": "end of Lower Broadway | along its printed name"
+  },
+  "lower-can-can": {
+   "polylines": [
+    66,
+    67,
+    219
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CAN-CAN",
+   "note": "symbol of Lower Can-Can | end of Lower Can-Can | along its printed name"
+  },
+  "lower-canyon": {
+   "polylines": [
+    39,
+    40,
+    210
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CANYON",
+   "note": "symbol of Lower Canyon | end of Lower Canyon | along its printed name"
+  },
+  "lower-college": {
+   "polylines": [
+    21,
+    22,
+    203
+   ],
+   "confidence": "high",
+   "mapName": "LOWER COLLEGE",
+   "note": "symbol of Lower College | end of Lower College | along its printed name"
+  },
+  "lower-cozy": {
+   "polylines": [
+    116,
+    120,
+    221
+   ],
+   "confidence": "high",
+   "mapName": "LOWER COZY",
+   "note": "end of Lower Cozy | symbol of Lower Cozy | along its printed name"
+  },
+  "lower-flying-squirrel": {
+   "polylines": [
+    96,
+    123,
+    209
+   ],
+   "confidence": "high",
+   "mapName": "LOWER FLYING SQUIRREL",
+   "note": "symbol of Lower Flying Squirrel | end of Lower Flying Squirrel | along its printed name"
+  },
+  "lower-french-dip": {
+   "polylines": [
+    74,
+    75,
+    225
+   ],
+   "confidence": "high",
+   "mapName": "LOWER FRENCH DIP",
+   "note": "symbol of Lower French Dip | end of Lower French Dip | along its printed name"
+  },
+  "lower-greyhawk": {
+   "polylines": [
+    118,
+    119,
+    227
+   ],
+   "confidence": "high",
+   "mapName": "LOWER GREYHAWK",
+   "note": "symbol of Lower Greyhawk | end of Lower Greyhawk | along its printed name"
+  },
+  "lower-hemingway": {
+   "polylines": [
+    117,
+    121,
+    223
+   ],
+   "confidence": "high",
+   "mapName": "LOWER HEMINGWAY",
+   "note": "end of Lower Hemingway | symbol of Lower Hemingway | along its printed name"
+  },
+  "lower-holiday": {
+   "polylines": [
+    45,
+    46,
+    204
+   ],
+   "confidence": "high",
+   "mapName": "LOWER HOLIDAY",
+   "note": "symbol of Lower Holiday | end of Lower Holiday | along its printed name"
+  },
+  "lower-janss-pass": {
+   "polylines": [
+    72,
+    73,
+    212
+   ],
+   "confidence": "high",
+   "mapName": "LOWER JANSS PASS",
+   "note": "symbol of Lower Janss Pass | end of Lower Janss Pass | along its printed name"
+  },
+  "lower-limelight": {
+   "polylines": [
+    86,
+    87,
+    180
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LIMELIGHT",
+   "note": "symbol of Lower Limelight | end of Lower Limelight | along its printed name"
+  },
+  "lower-olympic": {
+   "polylines": [
+    37,
+    38,
+    231
+   ],
+   "confidence": "high",
+   "mapName": "LOWER OLYMPIC",
+   "note": "symbol of Lower Olympic | end of Lower Olympic | along its printed name"
+  },
+  "lower-picabos-street": {
+   "polylines": [
+    98,
+    99,
+    200
+   ],
+   "confidence": "high",
+   "mapName": "LOWER PICABO'S STREET",
+   "note": "symbol of Lower Picabo's Street | end of Lower Picabo's Street | along its printed name"
+  },
+  "lower-river-run": {
+   "polylines": [
+    142,
+    143,
+    230
+   ],
+   "confidence": "high",
+   "mapName": "LOWER RIVER RUN",
+   "note": "end of Lower River Run | symbol of Lower River Run | along its printed name"
+  },
+  "lower-warm-springs": {
+   "polylines": [
+    132,
+    133,
+    224
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WARM SPRINGS",
+   "note": "end of Lower Warm Springs | symbol of Lower Warm Springs | along its printed name"
+  },
+  "machine-rd": {
+   "polylines": [
+    6,
+    7,
+    8,
+    177
+   ],
+   "confidence": "high",
+   "mapName": "MACHINE RD",
+   "note": "end of Machine RD | symbol of Machine RD | checked on a crop | along its printed name"
+  },
+  "maiden-lane": {
+   "polylines": [
+    129
+   ],
+   "confidence": "high",
+   "mapName": "MAIDEN LANE",
+   "note": "checked on a crop"
+  },
+  "mid-cozy": {
+   "polylines": [
+    104,
+    105,
+    206
+   ],
+   "confidence": "high",
+   "mapName": "MID COZY",
+   "note": "symbol of Mid Cozy | end of Mid Cozy | along its printed name"
+  },
+  "mid-greyhawk": {
+   "polylines": [
+    102,
+    107,
+    205
+   ],
+   "confidence": "high",
+   "mapName": "MID GREYHAWK",
+   "note": "symbol of Mid Greyhawk | end of Mid Greyhawk | along its printed name"
+  },
+  "mid-hemingway": {
+   "polylines": [
+    103,
+    106,
+    208
+   ],
+   "confidence": "high",
+   "mapName": "MID HEMINGWAY",
+   "note": "symbol of Mid Hemingway | end of Mid Hemingway | along its printed name"
+  },
+  "mid-holiday": {
+   "polylines": [
+    60,
+    61,
+    192
+   ],
+   "confidence": "high",
+   "mapName": "MID HOLIDAY",
+   "note": "symbol of Mid Holiday | end of Mid Holiday | along its printed name"
+  },
+  "mid-inhibition": {
+   "polylines": [
+    184
+   ],
+   "confidence": "high",
+   "mapName": "MID INHIBITION",
+   "note": "along its printed name"
+  },
+  "mid-limelight": {
+   "polylines": [
+    83,
+    84,
+    85,
+    165
+   ],
+   "confidence": "high",
+   "mapName": "MID LIMELIGHT",
+   "note": "symbol of Mid Limelight | checked on a crop | end of Mid Limelight | along its printed name"
+  },
+  "mid-picabos-street": {
+   "polylines": [
+    80,
+    187
+   ],
+   "confidence": "high",
+   "mapName": "MID PICABO'S STREET",
+   "note": "end of Mid Picabo's Street | along its printed name"
+  },
+  "mid-river-lane": {
+   "polylines": [
+    19,
+    20,
+    198
+   ],
+   "confidence": "high",
+   "mapName": "MID RIVER LANE",
+   "note": "end of Mid River Lane | symbol of Mid River Lane | along its printed name"
+  },
+  "mid-river-run": {
+   "polylines": [
+    52,
+    53,
+    189
+   ],
+   "confidence": "high",
+   "mapName": "MID RIVER RUN",
+   "note": "symbol of Mid River Run | end of Mid River Run | along its printed name"
+  },
+  "mid-warm-springs": {
+   "polylines": [
+    91,
+    92,
+    172
+   ],
+   "confidence": "high",
+   "mapName": "MID WARM SPRINGS",
+   "note": "symbol of Mid Warm Springs | end of Mid Warm Springs | along its printed name"
+  },
+  "muffys-medals": {
+   "polylines": [
+    27,
+    28,
+    160
+   ],
+   "confidence": "high",
+   "mapName": "MUFFY'S MEDALS",
+   "note": "symbol of Muffy's Medals | end of Muffy's Medals | along its printed name"
+  },
+  "numbers": {
+   "polylines": [
+    173
+   ],
+   "confidence": "high",
+   "mapName": "NUMBERS",
+   "note": "along its printed name"
+  },
+  "olympic": {
+   "polylines": [
+    41,
+    42,
+    217
+   ],
+   "confidence": "high",
+   "mapName": "OLYMPIC",
+   "note": "symbol of Olympic | end of Olympic | along its printed name"
+  },
+  "olympic-lane": {
+   "polylines": [
+    126,
+    127,
+    128,
+    218,
+    228
+   ],
+   "confidence": "high",
+   "mapName": "OLYMPIC LANE",
+   "note": "end of Olympic Lane | symbol of Olympic Lane | along its printed name"
+  },
+  "olympic-ridge": {
+   "polylines": [
+    122
+   ],
+   "confidence": "high",
+   "mapName": "OLYMPIC RIDGE",
+   "note": "checked on a crop"
+  },
+  "petes-lane": {
+   "polylines": [
+    9,
+    10,
+    171
+   ],
+   "confidence": "high",
+   "mapName": "PETE'S LANE",
+   "note": "end of Pete's Lane | symbol of Pete's Lane | along its printed name"
+  },
+  "race-arena": {
+   "polylines": [
+    101,
+    109,
+    216
+   ],
+   "confidence": "high",
+   "mapName": "RACE ARENA",
+   "note": "symbol of Race Arena | end of Race Arena | along its printed name"
+  },
+  "ridge": {
+   "polylines": [
+    23,
+    24,
+    159
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE",
+   "note": "symbol of Ridge | end of Ridge | along its printed name"
+  },
+  "rock-garden": {
+   "polylines": [
+    178
+   ],
+   "confidence": "high",
+   "mapName": "ROCK GARDEN",
+   "note": "along its printed name"
+  },
+  "roundhouse-lane": {
+   "polylines": [
+    124,
+    125,
+    176
+   ],
+   "confidence": "high",
+   "mapName": "ROUNDHOUSE LANE",
+   "note": "symbol of Roundhouse Lane | end of Roundhouse Lane | along its printed name"
+  },
+  "roundhouse-slope": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "ROUNDHOUSE SLOPE",
+   "note": "checked on a crop"
+  },
+  "sleeping-bear": {
+   "polylines": [
+    220
+   ],
+   "confidence": "high",
+   "mapName": "SLEEPING BEAR",
+   "note": "along its printed name"
+  },
+  "sunset-strip": {
+   "polylines": [
+    147
+   ],
+   "confidence": "high",
+   "mapName": "SUNSET STRIP",
+   "note": "checked on a crop"
+  },
+  "the-glades": {
+   "noLine": true,
+   "label": [
+    12.82,
+    37.22
+   ],
+   "confidence": "high"
+  },
+  "three-bears": {
+   "polylines": [
+    201
+   ],
+   "confidence": "high",
+   "mapName": "THREE BEARS",
+   "note": "along its printed name"
+  },
+  "under-graduate": {
+   "polylines": [
+    68,
+    69,
+    214
+   ],
+   "confidence": "high",
+   "mapName": "UNDER GRADUATE",
+   "note": "symbol of Under Graduate | end of Under Graduate | along its printed name"
+  },
+  "upper-can-can": {
+   "polylines": [
+    64,
+    65,
+    202
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CAN-CAN",
+   "note": "symbol of Upper Can-Can | end of Upper Can-Can | along its printed name"
+  },
+  "upper-canyon": {
+   "polylines": [
+    54,
+    55,
+    191
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CANYON",
+   "note": "symbol of Upper Canyon | end of Upper Canyon | along its printed name"
+  },
+  "upper-college": {
+   "polylines": [
+    135,
+    136,
+    158
+   ],
+   "confidence": "high",
+   "mapName": "UPPER COLLEGE",
+   "note": "end of Upper College | symbol of Upper College | along its printed name"
+  },
+  "upper-cozy": {
+   "polylines": [
+    112,
+    115,
+    185
+   ],
+   "confidence": "high",
+   "mapName": "UPPER COZY",
+   "note": "symbol of Upper Cozy | end of Upper Cozy | along its printed name"
+  },
+  "upper-flying-squirrel": {
+   "polylines": [
+    134,
+    146,
+    181
+   ],
+   "confidence": "high",
+   "mapName": "UPPER FLYING SQUIRREL",
+   "note": "symbol of Upper Flying Squirrel | end of Upper Flying Squirrel | along its printed name"
+  },
+  "upper-french-dip": {
+   "polylines": [
+    62,
+    63,
+    213
+   ],
+   "confidence": "high",
+   "mapName": "UPPER FRENCH DIP",
+   "note": "symbol of Upper French Dip | end of Upper French Dip | along its printed name"
+  },
+  "upper-greyhawk": {
+   "polylines": [
+    110,
+    113,
+    190
+   ],
+   "confidence": "high",
+   "mapName": "UPPER GREYHAWK",
+   "note": "symbol of Upper Greyhawk | end of Upper Greyhawk | along its printed name"
+  },
+  "upper-hemingway": {
+   "polylines": [
+    111,
+    114,
+    188
+   ],
+   "confidence": "high",
+   "mapName": "UPPER HEMINGWAY",
+   "note": "symbol of Upper Hemingway | end of Upper Hemingway | along its printed name"
+  },
+  "upper-holiday": {
+   "polylines": [
+    56,
+    57,
+    175
+   ],
+   "confidence": "high",
+   "mapName": "UPPER HOLIDAY",
+   "note": "symbol of Upper Holiday | end of Upper Holiday | along its printed name"
+  },
+  "upper-janss-pass": {
+   "polylines": [
+    194
+   ],
+   "confidence": "high",
+   "mapName": "UPPER JANSS PASS",
+   "note": "along its printed name"
+  },
+  "upper-limelight": {
+   "polylines": [
+    81,
+    82,
+    155
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LIMELIGHT",
+   "note": "symbol of Upper Limelight | end of Upper Limelight | along its printed name"
+  },
+  "upper-picabos-street": {
+   "polylines": [
+    79,
+    169
+   ],
+   "confidence": "high",
+   "mapName": "UPPER PICABO'S STREET",
+   "note": "end of Upper Picabo's Street | along its printed name"
+  },
+  "upper-river-run": {
+   "polylines": [
+    58,
+    59,
+    166
+   ],
+   "confidence": "high",
+   "mapName": "UPPER RIVER RUN",
+   "note": "symbol of Upper River Run | end of Upper River Run | along its printed name"
+  },
+  "upper-warm-springs": {
+   "polylines": [
+    88,
+    151
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WARM SPRINGS",
+   "note": "symbol of Upper Warm Springs | along its printed name"
+  },
+  "warm-springs-face": {
+   "polylines": [
+    89,
+    90,
+    157
+   ],
+   "confidence": "high",
+   "mapName": "WARM SPRINGS FACE",
+   "note": "symbol of Warm Springs Face | end of Warm Springs Face | along its printed name"
+  },
+  "wolverton": {
+   "polylines": [
+    174
+   ],
+   "confidence": "high",
+   "mapName": "WOLVERTON",
+   "note": "along its printed name"
+  }
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "arrowhead-way": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "ARROWHEAD WAY",
+   "note": "checked on a crop"
+  },
+  "cabin-practice": {
+   "polylines": [
+    15,
+    16,
+    17,
+    26
+   ],
+   "confidence": "high",
+   "mapName": "CABIN PRACTICE",
+   "note": "symbol of Cabin Practice | end of Cabin Practice | checked on a crop | along its printed name"
+  },
+  "dollar-face": {
+   "polylines": [
+    7,
+    8,
+    24
+   ],
+   "confidence": "high",
+   "mapName": "DOLLAR FACE",
+   "note": "symbol of Dollar Face | end of Dollar Face | along its printed name"
+  },
+  "elkhorn-bowl": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "ELKHORN BOWL",
+   "note": "checked on a crop"
+  },
+  "forbidden-fruit": {
+   "polylines": [
+    3,
+    4,
+    20
+   ],
+   "confidence": "high",
+   "mapName": "FORBIDDEN FRUIT",
+   "note": "symbol of Forbidden Fruit | checked on a crop"
+  },
+  "hidden-valley": {
+   "polylines": [
+    13,
+    14,
+    25
+   ],
+   "confidence": "high",
+   "mapName": "HIDDEN VALLEY",
+   "note": "symbol of Hidden Valley | end of Hidden Valley | along its printed name"
+  },
+  "joint-venture": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "JOINT VENTURE",
+   "note": "checked on a crop"
+  },
+  "new-bowl": {
+   "polylines": [
+    9,
+    10,
+    23
+   ],
+   "confidence": "high",
+   "mapName": "NEW BOWL",
+   "note": "symbol of New Bowl | end of New Bowl | along its printed name"
+  },
+  "old-bowl": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "OLD BOWL",
+   "note": "traced along the drawn line"
+  },
+  "ottos-run": {
+   "polylines": [
+    5,
+    6,
+    22
+   ],
+   "confidence": "high",
+   "mapName": "OTTO'S RUN",
+   "note": "symbol of Otto's Run | end of Otto's Run | along its printed name"
+  },
+  "poverty-flats": {
+   "polylines": [
+    18,
+    19,
+    27
+   ],
+   "confidence": "high",
+   "mapName": "POVERTY FLATS",
+   "note": "checked on a crop | end of Poverty Flats | along its printed name"
+  },
+  "sepps-bowl": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "SEPP'S BOWL",
+   "note": "traced along the drawn line"
+  }
+ }
+}

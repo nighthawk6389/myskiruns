@@ -1,0 +1,316 @@
+{
+ "reviews": {
+  "saddle-up-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    50.05,
+    10.15
+   ]
+  },
+  "broadway-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    23.1,
+    11.79
+   ]
+  },
+  "broadway-face": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    28.32,
+    12.01
+   ]
+  },
+  "easter-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    41.67,
+    12.36
+   ]
+  },
+  "mayday-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    35.8,
+    12.41
+   ]
+  },
+  "kaitlyns-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    31.77,
+    13.42
+   ]
+  },
+  "sigis-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    29.98,
+    13.51
+   ]
+  },
+  "little-easter-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    43.38,
+    13.6
+   ]
+  },
+  "lefty-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    33.12,
+    13.65
+   ]
+  },
+  "lookout-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    37.77,
+    14.58
+   ]
+  },
+  "christmas-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    43.83,
+    17.81
+   ]
+  },
+  "ridge-s-slopes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    43.25,
+    20.82
+   ]
+  },
+  "showtime-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    45.8,
+    21.05
+   ]
+  },
+  "29-turns": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:40:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    14.38,
+    21.13
+   ]
+  },
+  "sunrise-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    10.32,
+    24.5
+   ]
+  },
+  "mid-christmas-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    35.52,
+    26.76
+   ]
+  },
+  "sunny-side-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    53.12,
+    28.27
+   ]
+  },
+  "cold-springs-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:40:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    16.0,
+    29.69
+   ]
+  },
+  "lower-christmas-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    30.0,
+    33.36
+   ]
+  },
+  "tims": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:40:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    45.38,
+    35.0
+   ]
+  },
+  "pioneer-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:40:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    44.75,
+    38.99
+   ]
+  },
+  "bear-den": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:40:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    40.3,
+    40.1
+   ]
+  },
+  "42nd-street": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:39:15.000Z",
+   "by": "claude",
+   "labelAt": [
+    50.5,
+    41.52
+   ]
+  },
+  "sheep-camp": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:40:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    39.62,
+    45.72
+   ]
+  }
+ }
+}

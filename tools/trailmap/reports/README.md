@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird, Arapahoe Basin, Telluride, Crested Butte, Mount Snow, Stratton, Crystal Mountain, Brighton, Solitude, Snowshoe and Loon keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird, Arapahoe Basin, Telluride, Crested Butte, Mount Snow, Stratton, Crystal Mountain, Brighton, Solitude, Snowshoe, Loon and Sun Valley keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -85,6 +85,12 @@ areas (Frontside, North, High Campbell, South, Lower Mountain).
 
 Loon's (Boyne reportpal, `resortName=lm`) was fetched out of season (2026-10-11): 93 rows in six areas, the Nordic
 trails and uphill routes among them (no runs of the alpine map: `resort.py` leaves them out).
+
+Sun Valley's is its interactive maps' (mountain.live, `public.mountain.live/interactive-map/v1/map/name/<map>` for
+`SunValley-BaldMountain` and `SunValley-DollarMountain`, then each map's `/staticPoiData?lang=en`; the items whose
+`data.type` is `TRAIL` and `trailType` `DOWNHILL_SKIING`, rated by `trailLevel`; `resorts/sun-valley/report_ml.py`),
+fetched 2026-10-11: 140 rows, the two mountains as areas. Its runs' `paths` are drawn on another picture than the
+print and don't fit it: the list only.
 
 Stevens Pass has none to keep (2026-10-11): its status page (`/the-mountain/mountain-conditions/lift-and-terrain-status.aspx`)
 lists no trail out of season, and Common Crawl's only capture of it (CC-MAIN-2025-47, 2025-11-13, before opening)

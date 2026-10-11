@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Ski-run tracker for forty-nine resorts (React 19 + TS + Vite). The hard part is
+Ski-run tracker for fifty resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
@@ -73,12 +73,14 @@ the already-assigned path (that is circular).
   lines, its `names.py` read on crops), Arapahoe Basin and Stevens Pass (one PDF of two paintings), Telluride (a PDF
   and two inset images, their `names.py` read on crops) and Crested Butte (a PDF and its inset of numbered
   runs; its painting swapped for an older PDF's sharper copy), Crystal Mountain (a PDF and its Northway
-  inset image, its `names.py` read on crops), and Jackson Hole and Snowbird (no vector PDF: their `names.py`
+  inset image, its `names.py` read on crops), Sun Valley (two images, each with an older export registered
+  on it), and Jackson Hole and Snowbird (no vector PDF: their `names.py`
   is the map read on crops, as Whitefish's); Heavenly's PDF is an older
   export of its map's artwork, registered on the current image, and Deer
   Valley's an earlier one registered on the later flattened image, and Beaver Creek's 2023 export on this season's
   CDN image, and Mount Snow's two older exports (the 2023-24 PDF's lines, the 2024-25 uphill map's
-  names) on its CDN image, and Stratton's 2020-21 export on its flattened 2025-26 PDF; Steamboat
+  names) on its CDN image, and Stratton's 2020-21 export on its flattened 2025-26 PDF, and Sun Valley's
+  2023-24 exports on this season's two images (their least-difficult-way-down dots the cat tracks' lines); Steamboat
   has no PDF: its interactive map's SVG is the vector layer, and so are Snowshoe's (an image only), Solitude's (a flattened PDF) and Loon's (an image that draws no lines); Mammoth's PDF draws
   no trail lines: its interactive maps' SVGs give them; Aspen Mountain's and
   Buttermilk's are drawn like Snowmass's); Whiteface's,

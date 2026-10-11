@@ -1,0 +1,25 @@
+// Sun Valley's 2026-27 trail maps (sunvalley.com's trail-maps page):
+// Bald Mountain and Dollar Mountain, each a map panel, each a PDF holding
+// one picture and nothing else. skimap.org keeps the 2023-24 vector exports
+// of both artworks (Bald 24666, Dollar 24667): each is registered on this
+// season's image (an affine, SIFT on the page's render), and its strokes,
+// glyphs and symbols are put on the image through it. Runs are 1 pt (Bald)
+// and 0.75 pt (Dollar) strokes in their colours; on Bald the 4 pt green and
+// blue dots of the least difficult way down are the only line the cat tracks
+// on it have (Leigh Lane, Bowl Lane, Roundhouse Lane, Olympic Lane, Upper
+// College, Lower Warm Springs, Upper Flying Squirrel...). Names are outlined
+// black glyphs (pdf_glyphs.py; shapes read on contact sheets: letters.json),
+// "U./M./L." spelled Upper, Mid, Lower; the symbol is on the line (two
+// diamonds: double black). Lines this season's print changed are settled on
+// crops: Old Bowl and Sepp's Bowl on Dollar traced along the painted line,
+// Graduation's old line left out, Sunset Strip cut from Lower College's
+// line at its circle. Names printed with no line (the bowls, faces, glades,
+// parks, and runs this print adds: 29 Turns, Cold Springs Chutes, Bear Den,
+// Pioneer Bowl, Tim's, Sheep Camp) are markers at their names; runs printed
+// down the fall line with no line have the stretch along the name. The
+// trail list is the resort's interactive maps' (mountain.live), whose
+// ratings agree with the printed symbols; eight of its names this print
+// doesn't show as runs (the kids' adventure trails and Kinderspielplatz,
+// College Hike Park, the Broadway family cross course, The Flume) are left
+// out. Areas are the two mountains. x/y/baseY/width are unused layout
+// fields.

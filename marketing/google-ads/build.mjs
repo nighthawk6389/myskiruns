@@ -37,7 +37,7 @@ const CAMPAIGNS = [
   // resort trail-map searches in Vermont, New York, New Hampshire and Maine;
   // French too: Quebec skiers fill Jay Peak, Stowe and the rest
   { key: 'east', name: 'Trail Maps - East', budget: 5, cpcLimit: 1, languages: 'en;fr' },
-  // Colorado, Montana, Utah, California, Oregon and British Columbia
+  // Colorado, Montana, Utah, Idaho, California, Oregon, Washington and British Columbia
   { key: 'west', name: 'Trail Maps - West', budget: 5, cpcLimit: 1, languages: 'en' },
   // people looking for a way to track their runs, at any resort
   { key: 'tracker', name: 'Ski Run Tracker', budget: 5, cpcLimit: 1.5, languages: 'en' },
@@ -638,6 +638,23 @@ const RESORT_ADS = {
     // the bird, the coin, the summer (the gondola rides, the zip lines, the bikes), lodging
     negatives: ['bird', 'birds', 'call', 'dollar', 'coin', 'lake', 'summer', 'zip line', 'zipline', 'bike park',
       'mountain bike', 'hiking', 'lodging', 'condo', 'hotel', 'jobs', 'wedding'],
+  },
+  'sun-valley': {
+    short: 'Sun Valley',
+    path: 'Sun-Valley',
+    area: 'Baldy & Dollar Mountain',
+    // bare "sun valley" is also a Los Angeles neighbourhood and towns in Nevada and elsewhere: only with Idaho's
+    // names or a map
+    names: ['sun valley idaho', 'sun valley resort'],
+    keywords: [
+      ['sun valley trail map', 'exact'],
+      ['sun valley ski map', 'exact'],
+      ['baldy sun valley trail map', 'exact'],
+      ['dollar mountain trail map', 'exact'],
+    ],
+    // the other Sun Valleys, the summer (golf, the ice show, the bikes), the lodge and the conferences
+    negatives: ['los angeles', 'california', 'nevada', 'reno', 'arizona', 'golf', 'ice show', 'summer',
+      'mountain bike', 'hiking', 'lodge', 'inn', 'real estate', 'jobs', 'wedding', 'film festival', 'writers'],
   },
 };
 
