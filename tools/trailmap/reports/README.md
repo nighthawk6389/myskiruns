@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird, Arapahoe Basin, Telluride, Crested Butte, Mount Snow, Stratton, Crystal Mountain, Brighton and Solitude keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird, Arapahoe Basin, Telluride, Crested Butte, Mount Snow, Stratton, Crystal Mountain, Brighton, Solitude and Snowshoe keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -82,6 +82,9 @@ Outback Bowl runs, and the cross-country trails (left out: no run of the alpine 
 
 Crystal Mountain's (mtnfeed path `crystal-mountain`, resort 80) was fetched out of season (2026-10-11): 86 rows in five
 areas (Frontside, North, High Campbell, South, Lower Mountain).
+
+Snowshoe's (mtnfeed path `snowshoe`, resort 2) was fetched out of season (2026-10-11): 65 rows in two areas (Snowshoe,
+Silver Creek), the glades with a Glades icon of their own.
 
 Solitude's (mtnfeed path `solitude`, resort 65) was fetched out of season (2026-10-11): 107 rows in eight areas, the
 Nordic area's cross-country and snowshoe trails among them (no runs of the alpine map: `resort.py` leaves them out).

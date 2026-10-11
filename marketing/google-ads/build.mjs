@@ -28,10 +28,10 @@ const SITE = 'https://www.myskiruns.app/';
 // What the CSVs can't set (location option, AI Max, automatically created
 // assets, EU political ads) is set by hand: README.md, "Settings".
 
-const EAST = new Set(['Vermont', 'New York', 'New Hampshire', 'Maine']);
+const EAST = new Set(['Vermont', 'New York', 'New Hampshire', 'Maine', 'West Virginia']);
 // states and provinces east to west, for lists in ads (others go last)
-const REGION_ORDER = ['Vermont', 'New York', 'New Hampshire', 'Maine', 'Colorado', 'Montana', 'Utah', 'California', 'Oregon',
-  'British Columbia'];
+const REGION_ORDER = ['Vermont', 'New York', 'New Hampshire', 'Maine', 'West Virginia', 'Colorado', 'Montana', 'Utah',
+  'California', 'Oregon', 'British Columbia'];
 
 const CAMPAIGNS = [
   // resort trail-map searches in Vermont, New York, New Hampshire and Maine;
@@ -592,6 +592,20 @@ const RESORT_ADS = {
     negatives: ['quotes', 'book', 'song', 'lyrics', 'poem', 'meditation', 'nordic', 'snowshoe', 'summer', 'mountain bike',
       'hiking', 'lodging', 'inn', 'condo', 'real estate', 'jobs', 'wedding', 'brighton'],
   },
+  snowshoe: {
+    short: 'Snowshoe',
+    path: 'Snowshoe',
+    area: 'Basin to Silver Creek',
+    // snowshoe is also the footwear and snowshoeing: only with the resort's names or a map
+    names: ['snowshoe mountain', 'snowshoe mountain resort', 'snowshoe wv skiing'],
+    keywords: [
+      ['snowshoe ski trails', 'phrase'],
+      ['snowshoe wv trail map', 'exact'],
+    ],
+    // the footwear and the sport, the summer and the bike park, lodging
+    negatives: ['buy', 'msr', 'tubbs', 'summer', 'bike park', 'mountain bike', 'hiking', 'lodging', 'condo',
+      'real estate', 'jobs', 'wedding'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */
@@ -619,7 +633,8 @@ const TRAIL_MAP_NEGATIVES = [
   'bike', 'bikes', 'biking', 'mtb', 'mountain bike', 'mountain biking', 'bike park', 'hike', 'hikes',
   'hiking', 'summer', 'golf', 'disc golf', 'zipline', 'zip line', 'alpine slide', 'coaster',
   'trail running', 'foliage', 'fishing', 'camping', 'horseback', 'atv', 'snowmobile', 'snowmobiling',
-  'snowshoe', 'snowshoeing', 'nordic', 'cross country', 'xc', 'fat bike', 'tubing', 'ice skating',
+  // (not "snowshoe": Snowshoe Mountain is a resort; the sport's other words instead)
+  'snowshoes', 'snowshoeing', 'snowshoe tour', 'snowshoe tours', 'snowshoe rental', 'nordic', 'cross country', 'xc', 'fat bike', 'tubing', 'ice skating',
   'waterpark', 'water park',
   // lodging, food, property
   'hotel', 'hotels', 'lodging', 'condo', 'condos', 'airbnb', 'vrbo', 'rental', 'rentals', 'real estate',

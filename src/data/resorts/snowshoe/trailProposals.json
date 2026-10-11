@@ -1,0 +1,558 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "black-bear": {
+   "polylines": [
+    80,
+    81
+   ],
+   "confidence": "high",
+   "mapName": "BLACK BEAR",
+   "note": "its group"
+  },
+  "camp-4": {
+   "polylines": [
+    85,
+    114
+   ],
+   "confidence": "high",
+   "mapName": "CAMP 4",
+   "note": "its group | along its printed name"
+  },
+  "camp-99": {
+   "polylines": [
+    2,
+    3,
+    110
+   ],
+   "confidence": "high",
+   "mapName": "CAMP 99",
+   "note": "its group | along its printed name"
+  },
+  "choker": {
+   "polylines": [
+    23,
+    24,
+    115
+   ],
+   "confidence": "high",
+   "mapName": "CHOKER",
+   "note": "its group | along its printed name"
+  },
+  "cross-cut": {
+   "polylines": [
+    33,
+    34,
+    104
+   ],
+   "confidence": "high",
+   "mapName": "CROSS CUT",
+   "note": "its group | along its printed name"
+  },
+  "cut-off": {
+   "polylines": [
+    65,
+    134
+   ],
+   "confidence": "high",
+   "mapName": "CUT OFF",
+   "note": "its group | along its printed name"
+  },
+  "gandy-dancer": {
+   "polylines": [
+    31,
+    32,
+    112
+   ],
+   "confidence": "high",
+   "mapName": "GANDY DANCER",
+   "note": "its group | along its printed name"
+  },
+  "gangway": {
+   "polylines": [
+    83,
+    84
+   ],
+   "confidence": "high",
+   "mapName": "GANGWAY",
+   "note": "its group"
+  },
+  "grabhammer": {
+   "polylines": [
+    21,
+    22,
+    125
+   ],
+   "confidence": "high",
+   "mapName": "GRABHAMMER",
+   "note": "its group | along its printed name"
+  },
+  "heisler-way": {
+   "polylines": [
+    78,
+    79,
+    103
+   ],
+   "confidence": "high",
+   "mapName": "HEISLER WAY",
+   "note": "its group | along its printed name"
+  },
+  "j-hook": {
+   "polylines": [
+    25,
+    26,
+    106
+   ],
+   "confidence": "high",
+   "mapName": "J-HOOK",
+   "note": "its group | along its printed name"
+  },
+  "knot-bumper": {
+   "polylines": [
+    19,
+    20,
+    116
+   ],
+   "confidence": "high",
+   "mapName": "KNOT BUMPER",
+   "note": "its group | along its printed name"
+  },
+  "knot-bumper-glades": {
+   "noLine": true,
+   "label": [
+    20.37,
+    42.56
+   ],
+   "confidence": "high"
+  },
+  "log-slide": {
+   "polylines": [
+    76,
+    77,
+    124
+   ],
+   "confidence": "high",
+   "mapName": "LOG SLIDE",
+   "note": "its group | along its printed name"
+  },
+  "lower-ballhooter": {
+   "polylines": [
+    52,
+    136
+   ],
+   "confidence": "high",
+   "mapName": "LOWER BALLHOOTER",
+   "note": "its group | along its printed name"
+  },
+  "lower-cupp-run": {
+   "polylines": [
+    9,
+    131
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CUPP RUN",
+   "note": "its group | along its printed name"
+  },
+  "lower-flume": {
+   "polylines": [
+    63,
+    64
+   ],
+   "confidence": "high",
+   "mapName": "LOWER FLUME",
+   "note": "its group"
+  },
+  "lower-hootenanny": {
+   "polylines": [
+    55,
+    56,
+    118
+   ],
+   "confidence": "high",
+   "mapName": "LOWER HOOTENANNY",
+   "note": "its group | along its printed name"
+  },
+  "lower-shays-revenge": {
+   "polylines": [
+    10,
+    11,
+    12,
+    130
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SHAY'S REVENGE",
+   "note": "its group | along its printed name"
+  },
+  "lower-whistlepunk": {
+   "polylines": [
+    70,
+    71,
+    72
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WHISTLEPUNK",
+   "note": "its group"
+  },
+  "mid-flume": {
+   "polylines": [
+    59,
+    60,
+    127
+   ],
+   "confidence": "high",
+   "mapName": "MID FLUME",
+   "note": "its group | along its printed name"
+  },
+  "mid-whistlepunk": {
+   "polylines": [
+    73,
+    74,
+    121
+   ],
+   "confidence": "high",
+   "mapName": "MID WHISTLEPUNK",
+   "note": "its group | along its printed name"
+  },
+  "moonshine": {
+   "polylines": [
+    42,
+    117
+   ],
+   "confidence": "high",
+   "mapName": "MOONSHINE",
+   "note": "its group | along its printed name"
+  },
+  "powder-monkey": {
+   "polylines": [
+    68,
+    69,
+    129
+   ],
+   "confidence": "high",
+   "mapName": "POWDER MONKEY",
+   "note": "its group | along its printed name"
+  },
+  "powderidge": {
+   "polylines": [
+    86,
+    87,
+    108
+   ],
+   "confidence": "high",
+   "mapName": "POWDERIDGE",
+   "note": "its group | along its printed name"
+  },
+  "sawmill": {
+   "polylines": [
+    0,
+    1,
+    109
+   ],
+   "confidence": "high",
+   "mapName": "SAWMILL",
+   "note": "its group | along its printed name"
+  },
+  "sawmill-glades": {
+   "noLine": true,
+   "label": [
+    4.0,
+    32.18
+   ],
+   "confidence": "high"
+  },
+  "single-tree": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "SINGLE TREE",
+   "note": "its group"
+  },
+  "skidder": {
+   "polylines": [
+    66,
+    67,
+    101
+   ],
+   "confidence": "high",
+   "mapName": "SKIDDER",
+   "note": "its group | along its printed name"
+  },
+  "skip-jack": {
+   "polylines": [
+    27,
+    28,
+    120
+   ],
+   "confidence": "high",
+   "mapName": "SKIP JACK",
+   "note": "its group | along its printed name"
+  },
+  "spruce": {
+   "polylines": [
+    29,
+    30,
+    119
+   ],
+   "confidence": "high",
+   "mapName": "SPRUCE",
+   "note": "its group | along its printed name"
+  },
+  "stemwinder": {
+   "polylines": [
+    111
+   ],
+   "confidence": "high",
+   "mapName": "STEMWINDER",
+   "note": "along its printed name"
+  },
+  "sunset-glades": {
+   "noLine": true,
+   "label": [
+    88.4,
+    33.02
+   ],
+   "confidence": "high"
+  },
+  "tail-tree": {
+   "polylines": [
+    35,
+    105
+   ],
+   "confidence": "high",
+   "mapName": "TAIL TREE",
+   "note": "its group | along its printed name"
+  },
+  "upper-ballhooter": {
+   "polylines": [
+    53,
+    54,
+    126
+   ],
+   "confidence": "high",
+   "mapName": "UPPER BALLHOOTER",
+   "note": "its group | along its printed name"
+  },
+  "upper-cupp-run": {
+   "polylines": [
+    7,
+    8,
+    122
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CUPP RUN",
+   "note": "its group | along its printed name"
+  },
+  "upper-flume": {
+   "polylines": [
+    57,
+    58,
+    100
+   ],
+   "confidence": "high",
+   "mapName": "UPPER FLUME",
+   "note": "its group | along its printed name"
+  },
+  "upper-hootenanny": {
+   "polylines": [
+    97,
+    98,
+    107
+   ],
+   "confidence": "high",
+   "mapName": "UPPER HOOTENANNY",
+   "note": "its group | along its printed name"
+  },
+  "upper-shays-revenge": {
+   "polylines": [
+    4,
+    5,
+    6,
+    113
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SHAY'S REVENGE",
+   "note": "its group | along its printed name"
+  },
+  "upper-whistlepunk": {
+   "polylines": [
+    75,
+    143
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WHISTLEPUNK",
+   "note": "its group | traced along the drawn line"
+  },
+  "whiffletree": {
+   "polylines": [
+    61,
+    62
+   ],
+   "confidence": "high",
+   "mapName": "WHIFFLETREE",
+   "note": "its group"
+  },
+  "widowmaker": {
+   "polylines": [
+    13,
+    14,
+    102
+   ],
+   "confidence": "high",
+   "mapName": "WIDOWMAKER",
+   "note": "its group | along its printed name"
+  },
+  "bear-claw": {
+   "polylines": [
+    15,
+    16,
+    132
+   ],
+   "confidence": "high",
+   "mapName": "BEAR CLAW",
+   "note": "its group | along its printed name"
+  },
+  "bluehorn": {
+   "polylines": [
+    37,
+    38,
+    140
+   ],
+   "confidence": "high",
+   "mapName": "BLUEHORN",
+   "note": "its group | along its printed name"
+  },
+  "buck-saw": {
+   "polylines": [
+    50,
+    51,
+    123
+   ],
+   "confidence": "high",
+   "mapName": "BUCK SAW",
+   "note": "its group | along its printed name"
+  },
+  "cant-hook": {
+   "polylines": [
+    88,
+    142
+   ],
+   "confidence": "high",
+   "mapName": "CANT HOOK",
+   "note": "its group | traced along the drawn line"
+  },
+  "cascade": {
+   "polylines": [
+    43,
+    44,
+    133
+   ],
+   "confidence": "high",
+   "mapName": "CASCADE",
+   "note": "its group | along its printed name"
+  },
+  "cubb-run": {
+   "polylines": [
+    91,
+    92,
+    93,
+    94
+   ],
+   "confidence": "high",
+   "mapName": "CUBB RUN",
+   "note": "its group"
+  },
+  "flying-eagle": {
+   "polylines": [
+    17,
+    18,
+    139
+   ],
+   "confidence": "high",
+   "mapName": "FLYING EAGLE",
+   "note": "its group | along its printed name"
+  },
+  "flying-eagle-glades": {
+   "noLine": true,
+   "label": [
+    73.83,
+    61.84
+   ],
+   "confidence": "high"
+  },
+  "fox-chase": {
+   "polylines": [
+    46,
+    135
+   ],
+   "confidence": "high",
+   "mapName": "FOX CHASE",
+   "note": "its group | along its printed name"
+  },
+  "greenhorn": {
+   "polylines": [
+    89,
+    90,
+    137
+   ],
+   "confidence": "high",
+   "mapName": "GREENHORN",
+   "note": "its group | along its printed name"
+  },
+  "knife-blade": {
+   "polylines": [
+    95,
+    96
+   ],
+   "confidence": "high",
+   "mapName": "KNIFE BLADE",
+   "note": "its group"
+  },
+  "laurel-run": {
+   "polylines": [
+    48,
+    49,
+    141
+   ],
+   "confidence": "high",
+   "mapName": "LAUREL RUN",
+   "note": "its group | along its printed name"
+  },
+  "little-spruce": {
+   "polylines": [
+    45,
+    47
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE SPRUCE",
+   "note": "its group | checked on a crop"
+  },
+  "robertsons-run": {
+   "polylines": [
+    99
+   ],
+   "confidence": "high",
+   "mapName": "ROBERTSON'S RUN",
+   "note": "its group"
+  },
+  "slaymaker": {
+   "polylines": [
+    41,
+    128
+   ],
+   "confidence": "high",
+   "mapName": "SLAYMAKER",
+   "note": "its group | along its printed name"
+  },
+  "spur": {
+   "polylines": [
+    39,
+    40,
+    138
+   ],
+   "confidence": "high",
+   "mapName": "SPUR",
+   "note": "its group | along its printed name"
+  }
+ }
+}

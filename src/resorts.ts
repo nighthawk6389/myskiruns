@@ -203,6 +203,8 @@ export const RESORTS: ResortEntry[] = [
     ['Brighton Resort', 'Big Cottonwood Canyon', 'Milly', 'Great Western', 'Salt Lake City']),
   oneMap('solitude', 'Solitude', 'Utah', () => import('./data/resorts/solitude/trails'), () => import('./data/resorts/solitude/trailPaths.json'),
     ['Solitude Mountain Resort', 'Big Cottonwood Canyon', 'Honeycomb Canyon', 'Eagle Ridge', 'Salt Lake City']),
+  oneMap('snowshoe', 'Snowshoe', 'West Virginia', () => import('./data/resorts/snowshoe/trails'), () => import('./data/resorts/snowshoe/trailPaths.json'),
+    ['Snowshoe Mountain', 'Silver Creek', 'Western Territory', 'Cupp Run', 'Pocahontas County']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

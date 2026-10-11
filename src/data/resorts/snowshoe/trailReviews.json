@@ -1,0 +1,82 @@
+{
+ "reviews": {
+  "shamrock": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:21:44.000Z",
+   "by": "claude",
+   "labelAt": [
+    40.83,
+    26.73
+   ]
+  },
+  "grab-hook": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:19:30.000Z",
+   "by": "claude",
+   "labelAt": [
+    25.1,
+    39.2
+   ]
+  },
+  "progression-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:21:44.000Z",
+   "by": "claude",
+   "labelAt": [
+    36.67,
+    56.81
+   ]
+  },
+  "evolution-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:21:44.000Z",
+   "by": "claude",
+   "labelAt": [
+    40.27,
+    60.69
+   ]
+  },
+  "mountaineer-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:21:44.000Z",
+   "by": "claude",
+   "labelAt": [
+    64.63,
+    62.05
+   ]
+  },
+  "timberjack-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:21:44.000Z",
+   "by": "claude",
+   "labelAt": [
+    64.4,
+    87.0
+   ]
+  }
+ }
+}

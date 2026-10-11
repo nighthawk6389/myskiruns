@@ -24,8 +24,11 @@ Trail Maps - East,,horseback,Campaign negative phrase
 Trail Maps - East,,atv,Campaign negative phrase
 Trail Maps - East,,snowmobile,Campaign negative phrase
 Trail Maps - East,,snowmobiling,Campaign negative phrase
-Trail Maps - East,,snowshoe,Campaign negative phrase
+Trail Maps - East,,snowshoes,Campaign negative phrase
 Trail Maps - East,,snowshoeing,Campaign negative phrase
+Trail Maps - East,,snowshoe tour,Campaign negative phrase
+Trail Maps - East,,snowshoe tours,Campaign negative phrase
+Trail Maps - East,,snowshoe rental,Campaign negative phrase
 Trail Maps - East,,nordic,Campaign negative phrase
 Trail Maps - East,,cross country,Campaign negative phrase
 Trail Maps - East,,xc,Campaign negative phrase
@@ -179,8 +182,11 @@ Trail Maps - West,,horseback,Campaign negative phrase
 Trail Maps - West,,atv,Campaign negative phrase
 Trail Maps - West,,snowmobile,Campaign negative phrase
 Trail Maps - West,,snowmobiling,Campaign negative phrase
-Trail Maps - West,,snowshoe,Campaign negative phrase
+Trail Maps - West,,snowshoes,Campaign negative phrase
 Trail Maps - West,,snowshoeing,Campaign negative phrase
+Trail Maps - West,,snowshoe tour,Campaign negative phrase
+Trail Maps - West,,snowshoe tours,Campaign negative phrase
+Trail Maps - West,,snowshoe rental,Campaign negative phrase
 Trail Maps - West,,nordic,Campaign negative phrase
 Trail Maps - West,,cross country,Campaign negative phrase
 Trail Maps - West,,xc,Campaign negative phrase
@@ -848,3 +854,15 @@ Trail Maps - West,Solitude,real estate,Negative phrase
 Trail Maps - West,Solitude,jobs,Negative phrase
 Trail Maps - West,Solitude,wedding,Negative phrase
 Trail Maps - West,Solitude,brighton,Negative phrase
+Trail Maps - East,Snowshoe,buy,Negative phrase
+Trail Maps - East,Snowshoe,msr,Negative phrase
+Trail Maps - East,Snowshoe,tubbs,Negative phrase
+Trail Maps - East,Snowshoe,summer,Negative phrase
+Trail Maps - East,Snowshoe,bike park,Negative phrase
+Trail Maps - East,Snowshoe,mountain bike,Negative phrase
+Trail Maps - East,Snowshoe,hiking,Negative phrase
+Trail Maps - East,Snowshoe,lodging,Negative phrase
+Trail Maps - East,Snowshoe,condo,Negative phrase
+Trail Maps - East,Snowshoe,real estate,Negative phrase
+Trail Maps - East,Snowshoe,jobs,Negative phrase
+Trail Maps - East,Snowshoe,wedding,Negative phrase

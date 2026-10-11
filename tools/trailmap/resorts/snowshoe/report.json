@@ -1,0 +1,330 @@
+{
+ "_source": "Snowshoe Mountain's trail report: the conditions widget's mtnpowder feed (resort 2, mtnfeed config snowshoe.json), fetched out of season on 2026-10-11: name, area, rating (from its icon)",
+ "trails": [
+  [
+   "Black Bear",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Camp 4",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Camp 99",
+   "Snowshoe",
+   "Black"
+  ],
+  [
+   "Choker",
+   "Snowshoe",
+   "Black"
+  ],
+  [
+   "Cross Cut",
+   "Snowshoe",
+   "Blue"
+  ],
+  [
+   "Cut Off",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Evolution Park",
+   "Snowshoe",
+   "TerrainPark"
+  ],
+  [
+   "Gandy Dancer",
+   "Snowshoe",
+   "Blue"
+  ],
+  [
+   "Gangway",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Grabhammer",
+   "Snowshoe",
+   "Black"
+  ],
+  [
+   "Grab Hook",
+   "Snowshoe",
+   "Blue"
+  ],
+  [
+   "Heisler Way",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "J-hook",
+   "Snowshoe",
+   "Blue"
+  ],
+  [
+   "Knot Bumper",
+   "Snowshoe",
+   "Black"
+  ],
+  [
+   "Knot bumper Glades",
+   "Snowshoe",
+   "DoubleBlack"
+  ],
+  [
+   "Log Slide",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Lower Ballhooter",
+   "Snowshoe",
+   "Blue"
+  ],
+  [
+   "Lower Cupp Run",
+   "Snowshoe",
+   "Black"
+  ],
+  [
+   "Lower Flume",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Lower Hootenanny",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Lower Shay's Revenge",
+   "Snowshoe",
+   "DoubleBlack"
+  ],
+  [
+   "Lower Whistlepunk",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Mid Flume",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Mid Whistlepunk",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Moonshine",
+   "Snowshoe",
+   "Blue"
+  ],
+  [
+   "Powderidge",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Powder Monkey",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Progression Park",
+   "Snowshoe",
+   "TerrainPark"
+  ],
+  [
+   "Sawmill",
+   "Snowshoe",
+   "Black"
+  ],
+  [
+   "Sawmill Glades",
+   "Snowshoe",
+   "Glades"
+  ],
+  [
+   "Shamrock",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Single Tree",
+   "Snowshoe",
+   "Blue"
+  ],
+  [
+   "Skidder",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Skip Jack",
+   "Snowshoe",
+   "Blue"
+  ],
+  [
+   "Spruce",
+   "Snowshoe",
+   "Blue"
+  ],
+  [
+   "Stemwinder",
+   "Snowshoe",
+   "Blue"
+  ],
+  [
+   "Sunset Glades",
+   "Snowshoe",
+   "Glades"
+  ],
+  [
+   "Tail Tree",
+   "Snowshoe",
+   "Blue"
+  ],
+  [
+   "Upper Ballhooter",
+   "Snowshoe",
+   "Blue"
+  ],
+  [
+   "Upper Cupp Run",
+   "Snowshoe",
+   "Black"
+  ],
+  [
+   "Upper Flume",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Upper Hootenanny",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Upper Shay's Revenge",
+   "Snowshoe",
+   "Black"
+  ],
+  [
+   "Upper Whistlepunk",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Whiffletree",
+   "Snowshoe",
+   "Green"
+  ],
+  [
+   "Widowmaker",
+   "Snowshoe",
+   "Black"
+  ],
+  [
+   "Bear Claw",
+   "Silver Creek",
+   "Black"
+  ],
+  [
+   "Bluehorn",
+   "Silver Creek",
+   "Blue"
+  ],
+  [
+   "Buck Saw",
+   "Silver Creek",
+   "Blue"
+  ],
+  [
+   "Cant Hook",
+   "Silver Creek",
+   "Green"
+  ],
+  [
+   "Cascade",
+   "Silver Creek",
+   "Blue"
+  ],
+  [
+   "Cubb Run",
+   "Silver Creek",
+   "Green"
+  ],
+  [
+   "Cubb Run Ext.",
+   "Silver Creek",
+   "Green"
+  ],
+  [
+   "Flying Eagle",
+   "Silver Creek",
+   "Black"
+  ],
+  [
+   "Flying Eagle Glades",
+   "Silver Creek",
+   "Glades"
+  ],
+  [
+   "Fox Chase",
+   "Silver Creek",
+   "Blue"
+  ],
+  [
+   "Greenhorn",
+   "Silver Creek",
+   "Green"
+  ],
+  [
+   "Knife Blade",
+   "Silver Creek",
+   "Green"
+  ],
+  [
+   "Laurel Run",
+   "Silver Creek",
+   "Blue"
+  ],
+  [
+   "Little Spruce",
+   "Silver Creek",
+   "Blue"
+  ],
+  [
+   "Mountaineer Park",
+   "Silver Creek",
+   "TerrainPark"
+  ],
+  [
+   "Robertson's Run",
+   "Silver Creek",
+   "Green"
+  ],
+  [
+   "Slaymaker",
+   "Silver Creek",
+   "Blue"
+  ],
+  [
+   "Spur",
+   "Silver Creek",
+   "Blue"
+  ],
+  [
+   "Timberjack Park",
+   "Silver Creek",
+   "TerrainPark"
+  ]
+ ]
+}

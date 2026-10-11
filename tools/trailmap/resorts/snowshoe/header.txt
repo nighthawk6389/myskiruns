@@ -1,0 +1,19 @@
+// Snowshoe Mountain's 2025-26 trail map (snowshoemtn.com's maps page: an
+// image only, James Niehues's painting of Snowshoe Basin and Silver Creek,
+// the Western Territory an inset on the right). The lines and names are its
+// interactive map's (resorts-interactive.com map 1814), whose SVG is this
+// map's vector layer drawn again, every trail's line, letters and symbol
+// grouped under its name; registered on the image in two parts (the main map,
+// the Western Territory inset) and each line routed onto the print's own
+// (Silver Creek's lie some 5 px off). Names are spelled as the resort's trail
+// report spells them (report.json); ratings are the printed symbols (Lower
+// Shay's Revenge's two squares double black; Knot Bumper Glades' one diamond
+// black, the report has it double black). The terrain parks and the glades,
+// in no group of the interactive map, are markers at their printed names
+// (the parks blue), as are Shamrock and Grab Hook. Little Spruce runs from its
+// square down to Fox Chase's (the interactive map's Fox Chase); Cant Hook,
+// Cut-off, Moonshine, Tail Tree, Upper Whistlepunk, Lower Ballhooter and
+// Stemwinder, whose interactive-map lines are stubs or none, follow their
+// names printed on their lines. Not on this map: the report's Cubb Run Ext.
+// Areas: the report's (Snowshoe, Silver Creek).
+// x/y/baseY/width are unused layout fields.

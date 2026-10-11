@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's forty-five resorts got their overlays, written so the next resort (or the next season of one of
+How the app's forty-six resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -66,7 +66,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor, Northstar (white names haloed in the line's colour: the halo is the colour, and is dropped from the lines; one united outline for the runs that meet, cut at each junction), Crested Butte (dashed black runs a fill per dash, linked; the boundary's dots never chained; its extreme terrain and an inset of numbered runs markers) | Mt. Bachelor; Northstar for united outlines; Crested Butte for dashed lines |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
 | a painting with no lines, names as text | every run traced along its painted cut by trace readers (Part 4) | Jay Peak | Jay Peak |
-| only raster images, but an interactive map whose SVG draws the same artwork (Alterra's resorts-interactive.com) | `vicomap.py parse --detail`: its lines, letters and symbols grouped by trail; registered on the image, each line routed onto the image's own line, named by its group (`GROUPED`); the print's redrawn spots traced (`trace_ink.py`) | Steamboat, Solitude (its PDF one flattened image; the lines lie on the print's within a pixel: kept as they are, not routed; the runs rated by their colour, `COLOR_SYMBOL`) | Steamboat |
+| only raster images, but an interactive map whose SVG draws the same artwork (Alterra's resorts-interactive.com) | `vicomap.py parse --detail`: its lines, letters and symbols grouped by trail; registered on the image, each line routed onto the image's own line, named by its group (`GROUPED`); the print's redrawn spots traced (`trace_ink.py`) | Steamboat, Solitude (its PDF one flattened image; the lines lie on the print's within a pixel: kept as they are, not routed; the runs rated by their colour, `COLOR_SYMBOL`), Snowshoe (the print's inset registered apart, `WT_AFFINE`; the parks and glades in no group, `EXTRA`) | Steamboat |
 | a PDF with names as text and symbols as fills over a painting, but no trail lines drawn; an interactive map of the same painting | `vicomap.py parse`: its lines, registered on the painting and kept as they are (nothing printed to route them onto), named by their group (`GROUPED`); `pdf_labels.py` names spelled as the groups; symbols from the fills by colour | Mammoth (two panels, two interactive maps) | Mammoth |
 | only raster images | `raster_lines.py` + `raster_symbols.py` (or `lineDetector.mjs`), pieces named on review tiles or by readers | Vail (three panels), Killington | Vail |
 | only images, runs painted as slopes with no line (names along them), and an interactive map whose SVG groups each run's letters and symbol | the groups' letters and symbols registered on the print (`register_pages.py --ref`), what they lack read on crops (`names.py`); each run's overlay the stretch along its printed name (`LABEL_LINE`), the few drawn lines routed on the print | Schweitzer (two panels) | Schweitzer; Heavenly for a map whose runs have no line |
@@ -366,7 +366,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the forty-five resorts settled, so the next ones come out alike:
+What the forty-six resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -675,6 +675,7 @@ give the same.
 | [Stratton](#stratton) | this season's PDF flattened (one image); the 2020-21 export of the artwork with live strokes, text and fills | registration, the changes since read on crops (`GONE`, `MOVED`, traced lines) | `regen.sh` | an export several seasons older than the map |
 | [Brighton](#brighton) | PDF strokes (one stroke often two runs), outlined names in a font of its own, symbols on the lines | `pdf_resort.py`, glyph sheets, cuts where the next run's symbol or name starts | `regen.sh` | strokes that carry several runs each |
 | [Solitude](#solitude) | its PDF one flattened image; the interactive map's SVG; the runs print no symbol | Steamboat's `prepare.py` without the routing (the SVG's lines lie on the print's), `GROUPED`, the rating from the line's colour (`COLOR_SYMBOL`) | `regen.sh` | an Alterra map whose PDF is flattened |
+| [Snowshoe](#snowshoe) | an image only; the interactive map's SVG, drawing the inset elsewhere | Steamboat's `prepare.py`, two registrations, `GROUPED`; the parks, glades and stubbed runs read on crops | `regen.sh` | an Alterra map whose inset the interactive map places apart |
 
 ## Killington
 
@@ -2322,6 +2323,41 @@ Solitude Canyon, Evergreen Peak, Eagle Ridge, Moonbeam Area) · `tools/trailmap/
 - **Checked:** every overlay on crops (`overlay_audit.py`, 15 sheets, every cell read; Back Door's line and the
   stretches doubling a line under its name fixed and read again); `compare.py` against the report; hover 209/209;
   the app check; a rebuild from an empty work folder, byte for byte.
+
+## Snowshoe
+
+64 trails (54 + 10) · West Virginia · one panel · areas: the report's (Snowshoe, Silver Creek) ·
+`tools/trailmap/resorts/snowshoe/`.
+
+- **Source:** the 2025-26 winter trail map image that snowshoemtn.com's maps page links (`wintermap.jpg`, 3000 x 1500
+  px, plain curl; no PDF this season: skimap.org's 2024-25 PDF draws the lines as strokes over a 100 dpi painting,
+  and its 2025-26 copy is this image): James Niehues's painting of Snowshoe Basin and Silver Creek, the Western
+  Territory an inset on the right, the safety text below (cropped off: `CLIP`). The interactive map
+  (resorts-interactive.com map 1814, plain curl) is this artwork's vector layer: 55 groups, every trail's line,
+  letters and symbol, the Western Territory drawn west of the main mountain. Both files' SHA-256s are checked.
+- **Route (Steamboat's):** `prepare.py` is Steamboat's for this map: the SVG parsed, registered in two parts
+  (`register_pages.py --ref` on the SVG's painting: the main map 1466 inliers, median 0.17 px, `VICOMAP_AFFINE`; the
+  Western Territory 4075 inliers, median 0.21 px, `WT_AFFINE`, for the SVG's units west of `WT_SPLIT`), each line
+  routed onto the print's ink in its colour (`ROUTE`: Silver Creek's interactive-map lines lie some 5 px off the
+  print's). Symbols up to 32 units (larger than Steamboat's); a letter T, eight straight sides, is not two diamonds
+  (only a fill twice as long as wide is). `pdf_resort.py` with `GROUPED`, `NO_STRETCH_BESIDE`.
+- **Rebuild:** `tools/trailmap/resorts/snowshoe/regen.sh` (1 min); it checks both files' SHA-256s.
+- **Truth:** the trail report (`report.json`): the conditions widget's mtnpowder feed (resort 2, mtnfeed config
+  `snowshoe.json`), fetched out of season on 2026-10-11, 65 rows. The four parks and four glades have no group in
+  the interactive map: placed where printed on crops (`EXTRA`; the parks blue, each glade with its diamond), and so
+  is Shamrock (its circle). Ratings are the printed symbols; Lower Shay's Revenge's two squares (the inset's double
+  diamond) are in no symbol of its group (`RATING`); Knot Bumper Glades prints one diamond (the report: double
+  black). Not on the map: Cubb Run Ext. Areas' elevations: each one's highest lift top (OpenStreetMap on the USGS's
+  10 m model, `lift_tops.py`).
+- **Decisions** (`decisions.py`, `resort.py`): where the interactive map draws a run only as a stub, or not at all,
+  its name is printed on its line: the stretch along the name (`LABEL_LINE`: Cut-off, Moonshine, Tail Tree, Lower
+  Ballhooter, Stemwinder), traced where the name sits on two lines or the dashes (`TRACED`: Upper Whistlepunk, Cant
+  Hook); the blue line from Little Spruce's square down to Fox Chase's is Little Spruce (the interactive map's Fox
+  Chase; the print's two squares start two runs); the stub at the end of Gangway's name is no line (`UNNAMED`).
+- **Checked:** every overlay on crops (`overlay_audit.py`, 11 sheets, every cell read; the nine fixed above read
+  again); `compare.py` against the report; hover 172/172; the app check; a rebuild from an empty work folder, byte
+  for byte. The ads build: West Virginia joins the East campaign, and the campaigns' negative "snowshoe" (which
+  blocked the resort's own keywords) is the sport's other words now.
 
 # Part 4. Methods in detail
 
