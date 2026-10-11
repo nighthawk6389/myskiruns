@@ -14,6 +14,8 @@ interface TrailPathProps {
   weight: number;
   /** current zoom; the stage is CSS-scaled, which non-scaling strokes don't undo */
   zoom: number;
+  /** someone's shared day: the runs drawn bold in their own colours */
+  bold?: boolean;
 }
 
 // Widths are screen pixels (non-scaling strokes, divided by the CSS zoom), so
@@ -23,15 +25,18 @@ const W_LINE = 1.3;
 // skied trails are drawn bolder so the day's runs stand out
 const W_LINE_SKIED = 2.2;
 const W_LINE_HOVER = 3.5;
+// a shared day's runs: bold, in their difficulty's colour, as on the recap card
+const W_LINE_BOLD = 4;
 
-export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, isVisible, weight, zoom }: TrailPathProps) {
+export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, isVisible, weight, zoom, bold = false }: TrailPathProps) {
   if (!isVisible) return null;
 
   const baseColor = trail.difficulty === 'double-black' ? '#ef4444' : DIFFICULTY_COLORS[trail.difficulty];
-  const color = isSkied ? '#fbbf24' : baseColor;
+  const strong = bold && isSkied;
+  const color = isSkied && !strong ? '#fbbf24' : baseColor;
   // widths in screen px: undo the stage's CSS zoom
   const px = weight / zoom;
-  const lineW = (isHovered ? W_LINE_HOVER : isSkied ? W_LINE_SKIED : W_LINE) * px;
+  const lineW = (strong ? W_LINE_BOLD + (isHovered ? 1.5 : 0) : isHovered ? W_LINE_HOVER : isSkied ? W_LINE_SKIED : W_LINE) * px;
   const line = {
     fill: 'none',
     strokeLinecap: 'round' as const,
@@ -48,8 +53,8 @@ export function TrailPath({ trail, segments, isSkied, skiedBefore, isHovered, is
             points={points}
             {...line}
             stroke="#fff"
-            strokeOpacity={isHovered ? 0.95 : isSkied ? 0.9 : 0.45}
-            strokeWidth={lineW + (isHovered ? 2.5 : isSkied ? 1.6 : 0.9) * px}
+            strokeOpacity={strong || isHovered ? 0.95 : isSkied ? 0.9 : 0.45}
+            strokeWidth={lineW + (strong ? 3 : isHovered ? 2.5 : isSkied ? 1.6 : 0.9) * px}
           />
           <polyline
             points={points}

@@ -3,6 +3,7 @@ import type { Trip } from '../../hooks/useTrips';
 import type { Resort } from '../../resorts';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_UI_COLORS } from '../../types';
 import { DIFFICULTY_ORDER, summarizeTrip, summaryText } from './summary';
+import { RecapShare } from '../RecapShare/RecapShare';
 import styles from './TripSummary.module.css';
 
 interface TripSummaryProps {
@@ -18,12 +19,30 @@ const dayLabel = (date: string) =>
   new Date(`${date}T12:00:00`).toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
 const timeLabel = (d: Date) => d.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
 
+/** The trip's dates: "Sat, Feb 14", or its first and last day with runs. */
+function datesLabel(days: string[], startDate: string): string {
+  if (!days.length) return `Starts ${dayLabel(startDate)}`;
+  return `${dayLabel(days[0])}${days.length > 1 ? ` – ${dayLabel(days.at(-1)!)}` : ''}`;
+}
+
 /** Recap of one trip: totals, new trails, difficulty mix, progress by peak
- * and a day-by-day log, with a share/copy button. */
+ * and a day-by-day log, with "Share your day" (a card and a link) and a
+ * plain-text share. */
 export function TripSummary({ trip, trips, resort, onClose, onLocateTrail }: TripSummaryProps) {
   const { trails, peaks } = resort;
   const s = useMemo(() => summarizeTrip(trip, trips, trails, peaks), [trip, trips, trails, peaks]);
   const [shareStatus, setShareStatus] = useState('');
+  const [recapOpen, setRecapOpen] = useState(false);
+  const recap = useMemo(
+    () => ({
+      name: trip.name,
+      start: s.days[0]?.date ?? trip.startDate,
+      days: s.days.length,
+      newCount: s.newTrails.length,
+      trailIds: s.trails.map((t) => t.id),
+    }),
+    [trip.name, trip.startDate, s],
+  );
   const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -64,11 +83,7 @@ export function TripSummary({ trip, trips, resort, onClose, onLocateTrail }: Tri
         <header className={styles.header}>
           <div>
             <h2 id="trip-summary-title" className={styles.title}>{trip.name}</h2>
-            <div className={styles.subtitle}>
-              {s.days.length
-                ? `${dayLabel(s.days[0].date)}${s.days.length > 1 ? ` – ${dayLabel(s.days.at(-1)!.date)}` : ''}`
-                : `Starts ${dayLabel(trip.startDate)}`}
-            </div>
+            <div className={styles.subtitle}>{datesLabel(s.days.map((d) => d.date), trip.startDate)}</div>
           </div>
           <button ref={closeRef} className={styles.close} onClick={onClose} aria-label="Close summary">
             ✕
@@ -168,10 +183,22 @@ export function TripSummary({ trip, trips, resort, onClose, onLocateTrail }: Tri
         {total > 0 && (
           <footer className={styles.footer}>
             {shareStatus && <span className={styles.shareStatus} role="status">{shareStatus}</span>}
-            <button className={styles.share} onClick={share}>
-              Share summary
+            <button className={styles.shareText} onClick={share}>
+              Share as text
+            </button>
+            <button className={styles.share} onClick={() => setRecapOpen(true)}>
+              Share your day
             </button>
           </footer>
+        )}
+        {recapOpen && (
+          <RecapShare
+            resort={resort}
+            recap={recap}
+            dates={datesLabel(s.days.map((d) => d.date), trip.startDate)}
+            text={summaryText(trip, s, trails.length, resort.name)}
+            onClose={() => setRecapOpen(false)}
+          />
         )}
       </div>
     </div>

@@ -19,11 +19,22 @@ interface TrailSheetProps {
   onHover: (id: string | null) => void;
   onClose: () => void;
   conditions: Conditions;
+  /** a shared day: the trail's name and rating only */
+  readOnly?: boolean;
 }
 
 /** Bottom sheet listing the trails under a tap, nearest first, each with a
  * large button to mark or unmark it on the current trip. */
-export function TrailSheet({ candidates, skiedTrails, skiedEver, onMark, onHover, onClose, conditions }: TrailSheetProps) {
+export function TrailSheet({
+  candidates,
+  skiedTrails,
+  skiedEver,
+  onMark,
+  onHover,
+  onClose,
+  conditions,
+  readOnly = false,
+}: TrailSheetProps) {
   // On touch screens the tap that opened the sheet is followed by a synthetic
   // click at the same spot; ignore input briefly so it can't hit a button.
   const armed = useRef(false);
@@ -64,44 +75,56 @@ export function TrailSheet({ candidates, skiedTrails, skiedEver, onMark, onHover
                 {DIFFICULTY_LABELS[trail.difficulty]}
                 {trail.isGlade && ' · Glade'}
                 {trail.isTerrainPark && ' · Park'}
-                {skied ? ' · Skied this trip' : skiedEver.has(trail.id) ? ' · Skied on an earlier trip' : ''}
+                {readOnly
+                  ? skied && ' · Skied that day'
+                  : skied
+                    ? ' · Skied this trip'
+                    : skiedEver.has(trail.id)
+                      ? ' · Skied on an earlier trip'
+                      : ''}
               </div>
-              <div className={styles.conditions} role="group" aria-label={`Conditions on ${trail.name} today`}>
-                <button
-                  className={`${styles.thumb} ${mine === 1 ? styles.thumbUp : ''}`}
-                  onClick={() => armed.current && conditions.vote(trail.id, 1)}
-                  aria-pressed={mine === 1}
-                  aria-label={`Good conditions (${counts.up})`}
-                  title="Good conditions today"
-                >
-                  👍 <span>{counts.up}</span>
-                </button>
-                <button
-                  className={`${styles.thumb} ${mine === -1 ? styles.thumbDown : ''}`}
-                  onClick={() => armed.current && conditions.vote(trail.id, -1)}
-                  aria-pressed={mine === -1}
-                  aria-label={`Poor conditions (${counts.down})`}
-                  title="Poor conditions today"
-                >
-                  👎 <span>{counts.down}</span>
-                </button>
-                <span className={styles.conditionsNote}>today</span>
-              </div>
-              {reported.length > 0 && (
-                <div className={styles.tagSummary}>
-                  {reported.map(({ tag, count }) => (
-                    <span key={tag.key}>
-                      {tag.emoji} {tag.label}
-                      {count > 1 && <b> {count}</b>}
-                    </span>
-                  ))}
-                </div>
+              {!readOnly && (
+                <>
+                  <div className={styles.conditions} role="group" aria-label={`Conditions on ${trail.name} today`}>
+                    <button
+                      className={`${styles.thumb} ${mine === 1 ? styles.thumbUp : ''}`}
+                      onClick={() => armed.current && conditions.vote(trail.id, 1)}
+                      aria-pressed={mine === 1}
+                      aria-label={`Good conditions (${counts.up})`}
+                      title="Good conditions today"
+                    >
+                      👍 <span>{counts.up}</span>
+                    </button>
+                    <button
+                      className={`${styles.thumb} ${mine === -1 ? styles.thumbDown : ''}`}
+                      onClick={() => armed.current && conditions.vote(trail.id, -1)}
+                      aria-pressed={mine === -1}
+                      aria-label={`Poor conditions (${counts.down})`}
+                      title="Poor conditions today"
+                    >
+                      👎 <span>{counts.down}</span>
+                    </button>
+                    <span className={styles.conditionsNote}>today</span>
+                  </div>
+                  {reported.length > 0 && (
+                    <div className={styles.tagSummary}>
+                      {reported.map(({ tag, count }) => (
+                        <span key={tag.key}>
+                          {tag.emoji} {tag.label}
+                          {count > 1 && <b> {count}</b>}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </>
               )}
             </div>
-            <button className={skied ? styles.sheetUndo : styles.sheetMark} onClick={() => armed.current && onMark(trail)}>
-              {skied ? 'Remove' : 'Skied it'}
-            </button>
-            {(mine || myTags.length > 0) && (
+            {!readOnly && (
+              <button className={skied ? styles.sheetUndo : styles.sheetMark} onClick={() => armed.current && onMark(trail)}>
+                {skied ? 'Remove' : 'Skied it'}
+              </button>
+            )}
+            {!readOnly && (mine || myTags.length > 0) && (
               <div className={styles.tagPicker} role="group" aria-label={`What's ${trail.name} like? Pick up to ${MAX_TAGS}`}>
                 <span className={styles.tagPrompt}>What's it like?</span>
                 {CONDITION_TAGS.map((tag) => {
@@ -122,7 +145,7 @@ export function TrailSheet({ candidates, skiedTrails, skiedEver, onMark, onHover
           </div>
         );
       })}
-      {conditions.mode === 'local' && (
+      {!readOnly && conditions.mode === 'local' && (
         <div className={styles.sheetFootnote}>Condition votes are saved on this device only; sharing isn't set up yet.</div>
       )}
     </div>

@@ -39,6 +39,10 @@ interface ImageMapProps {
   conditions: Conditions;
   /** whose map, trails and overlays to show; remount (key) when it changes */
   resort: Resort;
+  /** someone's shared day: a tap names the trail, nothing can be marked or voted on */
+  readOnly?: boolean;
+  /** the panel to open first, ahead of ?panel= */
+  firstPanel?: string;
   ref?: React.Ref<ImageMapHandle>;
 }
 
@@ -137,9 +141,21 @@ function viewOfTrail(path: Overlay, fitW: number, fitH: number, w: number, h: nu
   return { k, tx: w / 2 - ((x0 + x1) / 2) * k, ty: cy - ((y0 + y1) / 2) * k };
 }
 
-/** The panel to open first: ?panel=<id> when the resort has it, else its first. */
-function initialPanel(resort: Resort): string {
-  const want = typeof location !== 'undefined' ? new URLSearchParams(location.search).get('panel') : null;
+/** The view that shows every overlay given (a shared day's runs): their
+ * extent with a margin, between the whole map and 4x. */
+function viewOfTrails(paths: Overlay[], fitW: number, fitH: number, w: number, h: number): View | null {
+  const pts = paths.flatMap((p) => (p.label ? [p.label] : p.segments.flat()));
+  if (!pts.length) return null;
+  const xs = pts.map((q) => (q[0] * fitW) / 100);
+  const ys = pts.map((q) => (q[1] * fitH) / 100);
+  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
+  const k = Math.min(4, Math.max(1, Math.min((w * 0.85) / (x1 - x0 || 1), (h * 0.8) / (y1 - y0 || 1))));
+  return { k, tx: w / 2 - ((x0 + x1) / 2) * k, ty: h / 2 - ((y0 + y1) / 2) * k };
+}
+
+/** The panel to open first: the one asked for, else ?panel=<id> when the resort has it, else its first. */
+function initialPanel(resort: Resort, first?: string): string {
+  const want = first ?? (typeof location !== 'undefined' ? new URLSearchParams(location.search).get('panel') : null);
   return (resort.maps.find((m) => m.id === want) ?? resort.maps[0]).id;
 }
 
@@ -153,6 +169,8 @@ export function ImageMap({
   showHint,
   conditions,
   resort,
+  readOnly = false,
+  firstPanel,
   ref,
 }: ImageMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -177,7 +195,7 @@ export function ImageMap({
 
   // a resort drawn on several panels (Vail) shows one at a time
   const panels = resort.maps;
-  const [panelId, setPanelId] = useState(() => initialPanel(resort));
+  const [panelId, setPanelId] = useState(() => initialPanel(resort, firstPanel));
   const panel = panels.find((p) => p.id === panelId) ?? panels[0];
   // a trail picked on another panel, to zoom to once that panel has loaded
   const pendingFocus = useRef<string | null>(null);
@@ -438,6 +456,17 @@ export function ImageMap({
   };
   useImperativeHandle(ref, () => ({ focusTrail }));
 
+  // a shared day opens each panel on its runs, once the map and its size are known
+  const fitted = useRef<string | null>(null);
+  useEffect(() => {
+    if (!readOnly || !imageLoaded || !fitW || view || fitted.current === panel.id) return;
+    fitted.current = panel.id;
+    const shown = [...filteredTrailIds].map((t) => panel.paths[t]).filter(Boolean);
+    const v = viewOfTrails(shown, fitW, fitH, box.w, box.h);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- a one-off first view, after layout
+    if (v) setView(clampView(v, fitW, fitH, box.w, box.h));
+  }, [readOnly, imageLoaded, fitW, fitH, box.w, box.h, view, panel, filteredTrailIds]);
+
   // Escape closes the sheet
   useEffect(() => {
     if (!sheet) return;
@@ -559,6 +588,7 @@ export function ImageMap({
                     isVisible={filteredTrailIds.has(trail.id)}
                     weight={weight}
                     zoom={cv.k}
+                    bold={readOnly}
                   />
                 );
               })}
@@ -709,6 +739,7 @@ export function ImageMap({
           onMark={mark}
           onHover={onHoverTrail}
           conditions={conditions}
+          readOnly={readOnly}
           onClose={() => {
             setSheet(null);
             onHoverTrail(null);

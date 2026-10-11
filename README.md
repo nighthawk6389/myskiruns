@@ -54,7 +54,14 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
   powder, moguls, icy, ...); votes are shared with everyone for 24 hours, and the list opens with "Good conditions
   today". No account is involved: each device sends a random id, one vote per trail.
 - **Trip summary:** trails skied, new trails, days, the difficulty mix, progress by area and a day-by-day log;
-  "Share summary" uses the phone's share sheet.
+  "Share as text" uses the phone's share sheet.
+- **Share your day.** From the trip summary: a picture of the day, as a story (1080 x 1920) or a square post
+  (1080 x 1080): the resort's map cropped to the runs skied, drawn in their colours, with the numbers, the
+  difficulty mix and (on a story) the runs' names. "Share image" sends it through the share sheet (or saves it
+  where there is none). "Share link" / "Copy link" give a link that opens the day for anyone as a read-only map,
+  zoomed to the runs, with the list and the numbers, and "Track your own runs" into the app. The trip travels in
+  the link itself (`?resort=<id>&recap=...`), so there is no server, no account and nothing stored; opening one
+  never touches the visitor's own trips.
 - **Offline and on the home screen.** A service worker caches the app with every resort's trail data, and each
   map once it has been shown, so the app opens without signal; "Add to Home Screen" installs it.
 - **Your data stays on the device** (`localStorage`), with Export / Import backup in the ⋯ menu. **With an account**
@@ -193,7 +200,7 @@ work/                    git-ignored: downloads and intermediate files of the pi
 | command | what it does |
 |---|---|
 | `npm run dev` / `build` / `preview` | the app: dev server, production build, a local preview of the build |
-| `npm test` | the trip merge and sync rules (random three-device histories) and the resort search |
+| `npm test` | the trip merge and sync rules (random three-device histories), the resort search, and recap links (every resort's trail ids hash apart) |
 | `npm run lint` | ESLint (with `npx tsc -b`, the check before every commit) |
 | `npm run trails:apply -- --resort <id> [--panel <p>]` | proposals + reviews → `trailPaths.json`, the overlays the app draws |
 | `npm run reviews:import -- <export dir> --resort <id>` | the Trail Check page's export → `trailReviews.json` |
@@ -205,6 +212,7 @@ work/                    git-ignored: downloads and intermediate files of the pi
 | `python3 tools/trailmap/overlay_audit.py --resort <id> --out <dir>` | one audit cell per trail: its overlay on the map, its labels boxed |
 | `node tools/app_check.cjs <url> --resort <id>` | a resort in the real app: found by the search, every panel loads with overlays, phone layout |
 | `node tools/app_flows.cjs [dist]` | phone flows (tap, mark, undo, summary, panels), two tabs, backups |
+| `node tools/recap_check.cjs <url> --resort <id>` | "Share your day": both cards drawn (saved to look at), the link copied and opened in a fresh browser, read-only, on a desktop and a phone |
 | `node tools/offline_check.cjs [dist]` | offline: first visit, reload without the server, a deploy, the load-error screen |
 | `node tools/accounts_check.cjs` | accounts: two devices sign in, sync, edit offline, delete (with `scripts/mockSupabase.cjs`) |
 | `python3 tools/check_doc_paths.py` | every repo path the docs mention exists (after moving or renaming a script) |
@@ -221,6 +229,10 @@ listed in the playbook's [Part 2](docs/trail-map-playbook.md#part-2-tools), with
 - **The map** (`src/components/ImageMap/`) draws the overlays as SVG over the map image, in percent of the image,
   at a constant on-screen width. A tap or hover names the nearest trail to the pointer (the same test the hover
   check uses), and the sheet lists every trail within a finger's width.
+- **Recaps** (`src/recap/`): `link.ts` packs a trip into a link (its name, first day, day count, new-run count,
+  and each run as five characters of a hash of its trail id, so a link survives a resort's trail list being
+  rebuilt); `card.ts` draws the card on a canvas from the map the app already shows (same origin, cached
+  offline), so it works without signal. `RecapView` is the read-only page a link opens.
 - **Trips** are a log of events merged, never overwritten (`src/trips/log.ts`): a trip's name and date come from the
   copy edited last, a run is kept if it was marked after it was last unmarked, and deletions stay as markers so they
   reach other devices. The merge is commutative, associative and idempotent; `npm test` checks it on random

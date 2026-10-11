@@ -10,6 +10,8 @@ import { ImageMap, type ImageMapHandle } from './components/ImageMap/ImageMap';
 import { TripBar } from './components/TripBar/TripBar';
 import { TripSummary } from './components/TripSummary/TripSummary';
 import { ResortPicker } from './components/ResortPicker/ResortPicker';
+import { RecapView } from './components/RecapView/RecapView';
+import { decodeRecap } from './recap/link';
 import styles from './App.module.css';
 
 const RESORT_KEY = 'myskiruns.resort';
@@ -28,9 +30,19 @@ function initialResortId(): string {
 
 function App() {
   const [resortId, setResortId] = useState(initialResortId);
+  // someone's shared day (?recap=), shown read-only until the visitor moves on
+  const [recapPayload, setRecapPayload] = useState(() => new URLSearchParams(location.search).get('recap'));
   // the resort on screen: while the next one's data loads, the current one stays
   const shownId = useDeferredValue(resortId);
+  const leaveRecap = () => {
+    if (!recapPayload) return;
+    setRecapPayload(null);
+    const url = new URL(location.href);
+    url.searchParams.delete('recap');
+    history.replaceState(history.state, '', url);
+  };
   const chooseResort = (id: string) => {
+    leaveRecap();
     const next = resortEntry(id).id;
     setResortId(next);
     try {
@@ -43,14 +55,29 @@ function App() {
   return (
     <Suspense fallback={<Splash picker={picker}>Loading {resortEntry(shownId).name}…</Splash>}>
       <LoadError key={shownId} resortId={shownId} picker={picker}>
-        <LoadedResort id={shownId} picker={picker} />
+        <LoadedResort id={shownId} picker={picker} recapPayload={recapPayload} onLeaveRecap={() => chooseResort(shownId)} />
       </LoadError>
     </Suspense>
   );
 }
 
-function LoadedResort({ id, picker }: { id: string; picker: ReactNode }) {
+function LoadedResort({
+  id,
+  picker,
+  recapPayload,
+  onLeaveRecap,
+}: {
+  id: string;
+  picker: ReactNode;
+  recapPayload: string | null;
+  onLeaveRecap: () => void;
+}) {
   const resort = use(loadResort(id));
+  const recap = useMemo(
+    () => (recapPayload ? decodeRecap(recapPayload, resort.trails.map((t) => t.id)) : null),
+    [recapPayload, resort.trails],
+  );
+  if (recap) return <RecapView key={`recap-${resort.id}`} resort={resort} recap={recap} onExit={onLeaveRecap} />;
   // everything below is per resort: remounting resets map view, filters,
   // conditions and the trip in view
   return <ResortApp key={resort.id} resort={resort} picker={picker} />;
