@@ -17,6 +17,10 @@ import { reportMark } from './marks';
 import styles from './App.module.css';
 
 const RESORT_KEY = 'myskiruns.resort';
+// index.html's title: the site's, for the home page (search engines index it as the site, not as a resort)
+const SITE_TITLE = document.title;
+// the address names a resort (an ad, a search result, a shared link): its tab is titled by it
+const RESORT_IN_URL = new URLSearchParams(location.search).has('resort');
 
 /** The resort from ?resort=<id>, else the last one used on this device. */
 function initialResortId(): string {
@@ -49,8 +53,11 @@ function App() {
     url.searchParams.delete('recap');
     history.replaceState(history.state, '', url);
   };
+  // the tab is titled by the resort once the address named one or the visitor picked one
+  const [titled, setTitled] = useState(RESORT_IN_URL);
   const chooseResort = (id: string, trailId?: string) => {
     leaveRecap();
+    setTitled(true);
     const next = resortEntry(id).id;
     setResortId(next);
     if (trailId) {
@@ -73,6 +80,7 @@ function App() {
           recapPayload={recapPayload}
           onLeaveRecap={() => chooseResort(shownId)}
           focus={focus?.resortId === shownId ? focus : null}
+          titled={titled}
         />
       </LoadError>
     </Suspense>
@@ -91,12 +99,14 @@ function LoadedResort({
   recapPayload,
   onLeaveRecap,
   focus,
+  titled,
 }: {
   id: string;
   picker: ReactNode;
   recapPayload: string | null;
   onLeaveRecap: () => void;
   focus: Focus | null;
+  titled: boolean;
 }) {
   const resort = use(loadResort(id));
   const recap = useMemo(
@@ -106,7 +116,7 @@ function LoadedResort({
   if (recap) return <RecapView key={`recap-${resort.id}`} resort={resort} recap={recap} onExit={onLeaveRecap} />;
   // everything below is per resort: remounting resets map view, filters,
   // conditions and the trip in view
-  return <ResortApp key={resort.id} resort={resort} picker={picker} focus={focus} />;
+  return <ResortApp key={resort.id} resort={resort} picker={picker} focus={focus} titled={titled} />;
 }
 
 function Picker({
@@ -174,7 +184,17 @@ class LoadError extends Component<
   }
 }
 
-function ResortApp({ resort, picker, focus }: { resort: Resort; picker: ReactNode; focus: Focus | null }) {
+function ResortApp({
+  resort,
+  picker,
+  focus,
+  titled,
+}: {
+  resort: Resort;
+  picker: ReactNode;
+  focus: Focus | null;
+  titled: boolean;
+}) {
   const { trails } = resort;
   const {
     trips,
@@ -235,10 +255,12 @@ function ResortApp({ resort, picker, focus }: { resort: Resort; picker: ReactNod
   );
 
   // the tab names the resort's map: searches (and ads) for "<resort> trail
-  // map" land on ?resort=<id>
+  // map" land on ?resort=<id>. The home page keeps the site's title, though
+  // it opens on a resort (the last one used, else the first): a search engine
+  // indexes it as the site, not as Killington.
   useEffect(() => {
-    document.title = `${resort.name} Trail Map · My Ski Runs`;
-  }, [resort.name]);
+    document.title = titled ? `${resort.name} Trail Map · My Ski Runs` : SITE_TITLE;
+  }, [resort.name, titled]);
 
   return (
     <div className={styles.app}>

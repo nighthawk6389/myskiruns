@@ -161,6 +161,15 @@ function previewData(): Plugin {
   }
 }
 
+// index.html's %RESORT_COUNT%: how many resorts src/resorts.ts lists (the site's title and description)
+function resortCount(): Plugin {
+  return {
+    name: 'resort-count',
+    transformIndexHtml: (html) =>
+      html.replaceAll('%RESORT_COUNT%', String((readFileSync('src/resorts.ts', 'utf8').match(/\n {2}(oneMap|panels)\('/g) ?? []).length)),
+  }
+}
+
 // the Supabase project for accounts: VITE_SUPABASE_* or, as Vercel's Supabase
 // integration names them, NEXT_PUBLIC_SUPABASE_* (src/account/account.ts)
 const ENV_PREFIX = ['VITE_', 'NEXT_PUBLIC_']
@@ -179,6 +188,7 @@ export default defineConfig(({ mode }) => {
         configurePreviewServer: (server) => void server.middlewares.use(localApi(env)),
       },
       previewData(),
+      resortCount(),
       // without accounts the Supabase client is never loaded
       serviceWorkerBuild(accounts ? null : /^assets\/supabase-/),
     ],
