@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Ski-run tracker for forty-eight resorts (React 19 + TS + Vite). The hard part is
+Ski-run tracker for forty-nine resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
@@ -37,7 +37,7 @@ the already-assigned path (that is circular).
   names. With no PDF, an Alterra resort's interactive map's SVG
   (`vicomap.py`) routed onto the image's own lines (Steamboat, Snowshoe; as they are
   where they lie on the print's within a pixel: Solitude's flattened PDF;
-  on a PDF that draws no lines, its lines as they are: Mammoth), or raster line
+  on a PDF or image that draws no lines, its lines as they are: Mammoth, Loon), or raster line
   detection: `raster_lines.py` (Vail) or `scripts/lib/lineDetector.mjs`
   (Killington, 97% F1); with only small web JPEGs, or lines too thin and faint
   for detection, the map read on crops and each line routed along the painted
@@ -79,7 +79,7 @@ the already-assigned path (that is circular).
   Valley's an earlier one registered on the later flattened image, and Beaver Creek's 2023 export on this season's
   CDN image, and Mount Snow's two older exports (the 2023-24 PDF's lines, the 2024-25 uphill map's
   names) on its CDN image, and Stratton's 2020-21 export on its flattened 2025-26 PDF; Steamboat
-  has no PDF: its interactive map's SVG is the vector layer, and so are Snowshoe's (an image only) and Solitude's (a flattened PDF); Mammoth's PDF draws
+  has no PDF: its interactive map's SVG is the vector layer, and so are Snowshoe's (an image only), Solitude's (a flattened PDF) and Loon's (an image that draws no lines); Mammoth's PDF draws
   no trail lines: its interactive maps' SVGs give them; Aspen Mountain's and
   Buttermilk's are drawn like Snowmass's); Whiteface's,
   Winter Park's, Breckenridge's, Copper Mountain's and Keystone's by their own

@@ -1,0 +1,470 @@
+{
+ "_source": "Loon Mountain's trail report: the reportpal feed (loonmtn.com/api/reportpal?resortName=lm), fetched out of season on 2026-10-11 (updated 2026-10-01); rows [name, area, rating]",
+ "trails": [
+  [
+   "Bucksaw",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Haulback",
+   "North Peak",
+   "Blue"
+  ],
+  [
+   "Lower Flume",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Lower Walking Boss Woods",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Lower Walking Boss",
+   "North Peak",
+   "Blue"
+  ],
+  [
+   "Sunset",
+   "North Peak",
+   "Blue"
+  ],
+  [
+   "Upper Flume",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Upper Walking Boss Woods",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Upper Walking Boss",
+   "North Peak",
+   "Black"
+  ],
+  [
+   "Chipper",
+   "South Peak",
+   "Green"
+  ],
+  [
+   "Escape Route",
+   "South Peak",
+   "Green"
+  ],
+  [
+   "Fox Run",
+   "South Peak",
+   "Green"
+  ],
+  [
+   "Homeowner Trails",
+   "South Peak",
+   "Green"
+  ],
+  [
+   "Jack Pot",
+   "South Peak",
+   "Green"
+  ],
+  [
+   "Sidewinder",
+   "South Peak",
+   "Green"
+  ],
+  [
+   "Stillwater",
+   "South Peak",
+   "Green"
+  ],
+  [
+   "Lincoln Woods",
+   "South Peak",
+   "Green"
+  ],
+  [
+   "Blazer",
+   "South Peak",
+   "Blue"
+  ],
+  [
+   "Boom Run",
+   "South Peak",
+   "Blue"
+  ],
+  [
+   "Camp Out",
+   "South Peak",
+   "Blue"
+  ],
+  [
+   "Cruiser",
+   "South Peak",
+   "Blue"
+  ],
+  [
+   "Jobber",
+   "South Peak",
+   "Black"
+  ],
+  [
+   "Lower Stinger",
+   "South Peak",
+   "Blue"
+  ],
+  [
+   "Upper Stinger",
+   "South Peak",
+   "Blue"
+  ],
+  [
+   "Wildwood",
+   "South Peak",
+   "Blue"
+  ],
+  [
+   "Lower Twitcher",
+   "South Peak",
+   "Black"
+  ],
+  [
+   "Ripsaw",
+   "South Peak",
+   "DoubleBlack"
+  ],
+  [
+   "Undercut",
+   "South Peak",
+   "DoubleBlack"
+  ],
+  [
+   "Upper Twitcher",
+   "South Peak",
+   "Black"
+  ],
+  [
+   "Blue Ox",
+   "West Basin",
+   "Blue"
+  ],
+  [
+   "Coolidge Street",
+   "West Basin",
+   "Blue"
+  ],
+  [
+   "Lower Northstar",
+   "West Basin",
+   "Blue"
+  ],
+  [
+   "Lower Rumrunner",
+   "West Basin",
+   "Blue"
+  ],
+  [
+   "Lower Speakeasy",
+   "West Basin",
+   "Blue"
+  ],
+  [
+   "Rampasture",
+   "West Basin",
+   "Blue"
+  ],
+  [
+   "Sarsaparilla",
+   "West Basin",
+   "Green"
+  ],
+  [
+   "Snubber",
+   "West Basin",
+   "Green"
+  ],
+  [
+   "Upper Northstar",
+   "West Basin",
+   "Black"
+  ],
+  [
+   "Upper Rumrunner",
+   "West Basin",
+   "Black"
+  ],
+  [
+   "Mini Pipe",
+   "West Basin",
+   "TerrainPark"
+  ],
+  [
+   "Angel Street",
+   "Loon Peak",
+   "Black"
+  ],
+  [
+   "Basin Street",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Bear Claw Extension",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Bear Island Bypass",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Bear Pause",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Big Dipper",
+   "Loon Peak",
+   "Black"
+  ],
+  [
+   "Brookway Extension",
+   "Loon Peak",
+   "Green"
+  ],
+  [
+   "Brookway",
+   "Loon Peak",
+   "Green"
+  ],
+  [
+   "Cant Dog",
+   "Loon Peak",
+   "Black"
+  ],
+  [
+   "Crosscut",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Dropline",
+   "Loon Peak",
+   "Green"
+  ],
+  [
+   "Exodus",
+   "Loon Peak",
+   "Green"
+  ],
+  [
+   "Flying Fox",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Grand Junction",
+   "Loon Peak",
+   "Green"
+  ],
+  [
+   "Hannah's Bypass",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Harder Way",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Little Sister",
+   "Loon Peak",
+   "Green"
+  ],
+  [
+   "Loon Mountain Park",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Lower Bear Claw",
+   "Loon Peak",
+   "Green"
+  ],
+  [
+   "Lower Picked Rock",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Mike's Way",
+   "Loon Peak",
+   "Black"
+  ],
+  [
+   "Missing Link",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Off The Grid",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Picaroon",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Rolling Bear",
+   "Loon Peak",
+   "Black"
+  ],
+  [
+   "Seven Brothers",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Skidder",
+   "Loon Peak",
+   "Black"
+  ],
+  [
+   "Springboard",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Summit Loop",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Link",
+   "Loon Peak",
+   "Green"
+  ],
+  [
+   "Triple Trouble",
+   "Loon Peak",
+   "Black"
+  ],
+  [
+   "Upper Bear Claw",
+   "Loon Peak",
+   "Green"
+  ],
+  [
+   "Upper Picked Rock",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Upper Speakeasy",
+   "Loon Peak",
+   "Blue"
+  ],
+  [
+   "Lil' Stash",
+   "Loon Peak",
+   "TerrainPark"
+  ],
+  [
+   "Progression Park",
+   "Loon Peak",
+   "TerrainPark"
+  ],
+  [
+   "Loon Mountain Park",
+   "Loon Peak",
+   "TerrainPark"
+  ],
+  [
+   "Little Sister Park",
+   "Loon Peak",
+   "TerrainPark"
+  ],
+  [
+   "Springboard Park",
+   "Loon Peak",
+   "TerrainPark"
+  ],
+  [
+   "Top Secret Parks",
+   "Loon Peak",
+   "TerrainPark"
+  ],
+  [
+   "Superpipe",
+   "Loon Peak",
+   "TerrainPark"
+  ],
+  [
+   "Loon Peak - Octagon",
+   "Uphill Routes",
+   null
+  ],
+  [
+   "Loon Peak - Governor Adams",
+   "Uphill Routes",
+   null
+  ],
+  [
+   "South Peak Escape Route",
+   "Uphill Routes",
+   null
+  ],
+  [
+   "South Peak Pemi Route",
+   "Uphill Routes",
+   null
+  ],
+  [
+   "Serendipity",
+   "Nordic",
+   "Green"
+  ],
+  [
+   "Black Mountain",
+   "Nordic",
+   "Green"
+  ],
+  [
+   "Hancock",
+   "Nordic",
+   "Blue"
+  ],
+  [
+   "Potash",
+   "Nordic",
+   "Blue"
+  ],
+  [
+   "Whaleback",
+   "Nordic",
+   "Blue"
+  ],
+  [
+   "Lower Bypass",
+   "Nordic",
+   "Black"
+  ],
+  [
+   "Ted's Bypass",
+   "Nordic",
+   "Black"
+  ],
+  [
+   "VonRyan's Express",
+   "Nordic",
+   "Black"
+  ]
+ ]
+}

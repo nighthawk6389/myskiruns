@@ -5,12 +5,12 @@ overlay on the map, with its name and rating, so you tap the run you just skied 
 works offline on the mountain, installs to a phone's home screen, and can sync your trips between devices with an
 optional account. Live at **[www.myskiruns.app](https://www.myskiruns.app)**.
 
-Forty-eight resorts so far, 6,660 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch, Mount
-Snow, Stratton, Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Snowshoe, Vail, Beaver
-Creek, Breckenridge, Keystone, Arapahoe Basin, Copper Mountain, Winter Park, Steamboat, Snowmass, Aspen Mountain,
-Buttermilk, Telluride, Crested Butte, Park City, Deer Valley, Snowbasin, Alta, Snowbird, Brighton, Solitude, Big
-Sky, Whitefish Mountain, Jackson Hole, Schweitzer, Palisades Tahoe, Northstar, Heavenly, Mammoth Mountain, Big
-Bear, Mt. Bachelor, Mt. Hood Meadows, Crystal Mountain, Stevens Pass and Whistler Blackcomb.
+Forty-nine resorts so far, 6,735 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch, Mount
+Snow, Stratton, Whiteface, Hunter Mountain, Wildcat Mountain, Loon Mountain, Sunday River, Sugarloaf, Snowshoe,
+Vail, Beaver Creek, Breckenridge, Keystone, Arapahoe Basin, Copper Mountain, Winter Park, Steamboat, Snowmass,
+Aspen Mountain, Buttermilk, Telluride, Crested Butte, Park City, Deer Valley, Snowbasin, Alta, Snowbird, Brighton,
+Solitude, Big Sky, Whitefish Mountain, Jackson Hole, Schweitzer, Palisades Tahoe, Northstar, Heavenly, Mammoth
+Mountain, Big Bear, Mt. Bachelor, Mt. Hood Meadows, Crystal Mountain, Stevens Pass and Whistler Blackcomb.
 
 Most of the work in this repository is the **trail-map pipeline**: getting every trail's overlay onto its own
 drawn line, with the right name, on maps that were never made to be machine-read. How it is done, resort by
@@ -76,6 +76,7 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 | Whiteface | New York | 98 (95 + 3) | 1 | PDF strokes and text (skimap.org) | `tools/trailmap/resorts/whiteface/regen.sh` |
 | Hunter Mountain | New York | 70 (66 + 4) | 1 | PDF strokes and text over a vector painting | `tools/trailmap/resorts/hunter/regen.sh` |
 | Wildcat Mountain | New Hampshire | 48 (47 + 1) | 1 | an older export's strokes and text on this season's image | `tools/trailmap/resorts/wildcat/regen.sh` |
+| Loon Mountain | New Hampshire | 75 (73 + 2) | 1 | an image that draws no lines; its interactive map's SVG as the vector layer, its lines kept as they are | `tools/trailmap/resorts/loon/regen.sh` |
 | Sunday River | Maine | 137 (116 + 21) | 1 | PDF strokes, outlined names, insets | `tools/trailmap/resorts/sunday-river/regen.sh` |
 | Sugarloaf | Maine | 175 (127 + 48) | 1 | PDF strokes, outlined names, numbered key circles, a raster inset | `tools/trailmap/resorts/sugarloaf/regen.sh` |
 | Snowshoe | West Virginia | 64 (54 + 10) | 1 | an image only; its interactive map's SVG as the vector layer (Steamboat's way), the Western Territory inset registered apart | `tools/trailmap/resorts/snowshoe/regen.sh` |
@@ -299,12 +300,12 @@ the playbook's [Part 5](docs/trail-map-playbook.md#part-5-what-we-tried-and-what
 
 ## What's left
 
-1. **A person's confirmation** for the forty-five resorts Claude checked on crops instead of the review page
-   (Sugarbush through Stevens Pass), if wanted: the Trail Check page can be published for any resort ([playbook,
+1. **A person's confirmation** for the forty-six resorts Claude checked on crops instead of the review page
+   (Sugarbush through Loon), if wanted: the Trail Check page can be published for any resort ([playbook,
    Part 4](docs/trail-map-playbook.md#auditing-on-crops-or-the-human-review-page)).
 2. **Shared tooling:** a legend file per map feeding the extraction and the readers' prompts; readers run from a
    script instead of an interactive session ([playbook, Part 5](docs/trail-map-playbook.md#scaling-to-many-maps)).
-3. The hover check passes 17,965 of 17,974 points (2026-10-11). The nine misses are points where two trails'
+3. The hover check passes 18,186 of 18,195 points (2026-10-11). The nine misses are points where two trails'
    overlays meet or share a stretch, where either name is right: Killington 2, Stowe 2, Beaver Creek 2, Big Sky's
    Bowl 1, Heavenly 1, Mt. Bachelor 1 (each resort's numbers are in the playbook's Part 3).
 4. Whiteface, Winter Park, Breckenridge, Copper Mountain and Keystone key their decisions by piece id, valid for

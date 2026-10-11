@@ -625,6 +625,20 @@ const RESORT_ADS = {
     negatives: ['road conditions', 'pass report', 'cameras', 'webcam', 'closure', 'highway', 'wsdot', 'pct', 'hiking',
       'bike park', 'summer', 'lodging', 'jobs'],
   },
+  loon: {
+    short: 'Loon',
+    path: 'Loon',
+    area: 'North Peak to South Peak',
+    // "loon" alone is the bird (and the Canadian dollar): only with the resort's names or a map
+    names: ['loon mountain', 'loon mountain resort', 'loon ski'],
+    keywords: [
+      ['loon trail map', 'exact'],
+      ['loon nh trail map', 'exact'],
+    ],
+    // the bird, the coin, the summer (the gondola rides, the zip lines, the bikes), lodging
+    negatives: ['bird', 'birds', 'call', 'dollar', 'coin', 'lake', 'summer', 'zip line', 'zipline', 'bike park',
+      'mountain bike', 'hiking', 'lodging', 'condo', 'hotel', 'jobs', 'wedding'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

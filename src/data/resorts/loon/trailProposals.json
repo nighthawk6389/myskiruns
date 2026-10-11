@@ -1,0 +1,597 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "bucksaw": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "BUCKSAW",
+   "note": "its group"
+  },
+  "haulback": {
+   "polylines": [
+    53
+   ],
+   "confidence": "high",
+   "mapName": "HAULBACK",
+   "note": "its group"
+  },
+  "lower-flume": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "LOWER FLUME",
+   "note": "its group"
+  },
+  "lower-walking-boss": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WALKING BOSS",
+   "note": "its group"
+  },
+  "lower-walking-boss-woods": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WALKING BOSS WOODS",
+   "note": "its group"
+  },
+  "sunset": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "SUNSET",
+   "note": "its group"
+  },
+  "upper-flume": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "UPPER FLUME",
+   "note": "its group"
+  },
+  "upper-walking-boss": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WALKING BOSS",
+   "note": "its group"
+  },
+  "upper-walking-boss-woods": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WALKING BOSS WOODS",
+   "note": "its group"
+  },
+  "angel-street": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "ANGEL STREET",
+   "note": "its group"
+  },
+  "basin-street": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "BASIN STREET",
+   "note": "its group"
+  },
+  "bear-claw-extension": {
+   "polylines": [
+    55
+   ],
+   "confidence": "high",
+   "mapName": "BEAR CLAW EXTENSION",
+   "note": "its group"
+  },
+  "bear-island-bypass": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "BEAR ISLAND BYPASS",
+   "note": "its group"
+  },
+  "bear-pause": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "BEAR PAUSE",
+   "note": "its group"
+  },
+  "big-dipper": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "BIG DIPPER",
+   "note": "its group"
+  },
+  "brookway": {
+   "polylines": [
+    58
+   ],
+   "confidence": "high",
+   "mapName": "BROOKWAY",
+   "note": "its group"
+  },
+  "brookway-extension": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "BROOKWAY EXTENSION",
+   "note": "its group"
+  },
+  "cant-dog": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "CANT DOG",
+   "note": "its group"
+  },
+  "crosscut": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "CROSSCUT",
+   "note": "its group"
+  },
+  "dropline": {
+   "polylines": [
+    60
+   ],
+   "confidence": "high",
+   "mapName": "DROPLINE",
+   "note": "its group"
+  },
+  "exodus": {
+   "polylines": [
+    67
+   ],
+   "confidence": "high",
+   "mapName": "EXODUS",
+   "note": "its group"
+  },
+  "flying-fox": {
+   "polylines": [
+    45,
+    46
+   ],
+   "confidence": "high",
+   "mapName": "FLYING FOX",
+   "note": "its group"
+  },
+  "grand-junction": {
+   "polylines": [
+    65
+   ],
+   "confidence": "high",
+   "mapName": "GRAND JUNCTION",
+   "note": "its group"
+  },
+  "hannahs-bypass": {
+   "polylines": [
+    52
+   ],
+   "confidence": "high",
+   "mapName": "HANNAH'S BYPASS",
+   "note": "its group"
+  },
+  "harder-way": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "HARDER WAY",
+   "note": "its group"
+  },
+  "link": {
+   "polylines": [
+    59
+   ],
+   "confidence": "high",
+   "mapName": "LINK",
+   "note": "its group"
+  },
+  "little-sister": {
+   "polylines": [
+    62
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE SISTER",
+   "note": "its group"
+  },
+  "loon-mountain-park": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "LOON MOUNTAIN PARK",
+   "note": "its group"
+  },
+  "lower-bear-claw": {
+   "polylines": [
+    61
+   ],
+   "confidence": "high",
+   "mapName": "LOWER BEAR CLAW",
+   "note": "its group"
+  },
+  "lower-picked-rock": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "LOWER PICKED ROCK",
+   "note": "its group"
+  },
+  "mikes-way": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "MIKE'S WAY",
+   "note": "its group"
+  },
+  "missing-link": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "MISSING LINK",
+   "note": "its group"
+  },
+  "off-the-grid": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "OFF THE GRID",
+   "note": "its group"
+  },
+  "picaroon": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "PICAROON",
+   "note": "its group"
+  },
+  "rolling-bear": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "ROLLING BEAR",
+   "note": "its group"
+  },
+  "seven-brothers": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "SEVEN BROTHERS",
+   "note": "its group"
+  },
+  "skidder": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "SKIDDER",
+   "note": "its group"
+  },
+  "springboard": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "SPRINGBOARD",
+   "note": "its group"
+  },
+  "summit-loop": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "SUMMIT LOOP",
+   "note": "its group"
+  },
+  "triple-trouble": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "TRIPLE TROUBLE",
+   "note": "its group"
+  },
+  "upper-bear-claw": {
+   "polylines": [
+    66
+   ],
+   "confidence": "high",
+   "mapName": "UPPER BEAR CLAW",
+   "note": "its group"
+  },
+  "upper-picked-rock": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "UPPER PICKED ROCK",
+   "note": "its group"
+  },
+  "upper-speakeasy": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SPEAKEASY",
+   "note": "its group"
+  },
+  "blue-ox": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "BLUE OX",
+   "note": "its group"
+  },
+  "coolidge-street": {
+   "polylines": [
+    32
+   ],
+   "confidence": "high",
+   "mapName": "COOLIDGE STREET",
+   "note": "its group"
+  },
+  "lower-northstar": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "LOWER NORTHSTAR",
+   "note": "its group"
+  },
+  "lower-rumrunner": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "LOWER RUMRUNNER",
+   "note": "its group"
+  },
+  "lower-speakeasy": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SPEAKEASY",
+   "note": "its group"
+  },
+  "rampasture": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "RAMPASTURE",
+   "note": "its group"
+  },
+  "sarsaparilla": {
+   "polylines": [
+    64
+   ],
+   "confidence": "high",
+   "mapName": "SARSAPARILLA",
+   "note": "its group"
+  },
+  "snubber": {
+   "polylines": [
+    63
+   ],
+   "confidence": "high",
+   "mapName": "SNUBBER",
+   "note": "its group"
+  },
+  "upper-northstar": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "UPPER NORTHSTAR",
+   "note": "its group"
+  },
+  "upper-rumrunner": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "UPPER RUMRUNNER",
+   "note": "its group"
+  },
+  "blazer": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "BLAZER",
+   "note": "its group"
+  },
+  "boom-run": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "BOOM RUN",
+   "note": "its group"
+  },
+  "camp-out": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "CAMP OUT",
+   "note": "its group"
+  },
+  "chipper": {
+   "polylines": [
+    73,
+    74
+   ],
+   "confidence": "high",
+   "mapName": "CHIPPER",
+   "note": "its group"
+  },
+  "cruiser": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "CRUISER",
+   "note": "its group"
+  },
+  "escape-route": {
+   "polylines": [
+    79
+   ],
+   "confidence": "high",
+   "mapName": "ESCAPE ROUTE",
+   "note": "its group"
+  },
+  "fox-run": {
+   "polylines": [
+    77
+   ],
+   "confidence": "high",
+   "mapName": "FOX RUN",
+   "note": "its group"
+  },
+  "homeowner-trails": {
+   "polylines": [
+    68,
+    69,
+    70,
+    71,
+    72
+   ],
+   "confidence": "high",
+   "mapName": "HOMEOWNER TRAILS",
+   "note": "its group"
+  },
+  "jack-pot": {
+   "polylines": [
+    76
+   ],
+   "confidence": "high",
+   "mapName": "JACK POT",
+   "note": "its group"
+  },
+  "jobber": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "JOBBER",
+   "note": "its group"
+  },
+  "lincoln-woods": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "LINCOLN WOODS",
+   "note": "its group"
+  },
+  "lower-stinger": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "LOWER STINGER",
+   "note": "its group"
+  },
+  "lower-twitcher": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "LOWER TWITCHER",
+   "note": "its group"
+  },
+  "ripsaw": {
+   "polylines": [
+    20,
+    21
+   ],
+   "confidence": "high",
+   "mapName": "RIPSAW",
+   "note": "its group"
+  },
+  "sidewinder": {
+   "polylines": [
+    78
+   ],
+   "confidence": "high",
+   "mapName": "SIDEWINDER",
+   "note": "its group"
+  },
+  "stillwater": {
+   "polylines": [
+    75
+   ],
+   "confidence": "high",
+   "mapName": "STILLWATER",
+   "note": "its group"
+  },
+  "undercut": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "UNDERCUT",
+   "note": "its group"
+  },
+  "upper-stinger": {
+   "polylines": [
+    26,
+    80
+   ],
+   "confidence": "high",
+   "mapName": "UPPER STINGER",
+   "note": "its group | along its printed name"
+  },
+  "upper-twitcher": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "UPPER TWITCHER",
+   "note": "its group"
+  },
+  "wildwood": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "WILDWOOD",
+   "note": "its group"
+  }
+ }
+}

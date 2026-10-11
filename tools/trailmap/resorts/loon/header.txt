@@ -1,0 +1,16 @@
+// Loon Mountain's winter trail map (loonmtn.com's mountain-maps page: one
+// image, 2500x1406 px, in a Photoshop PDF; Rob Smith's painting, the Black
+// Ridge expansion shaded in). The print draws no trail lines: each run is a
+// cut through the trees with its name and symbol printed in it. The lines are
+// the resort's interactive map's (resorts-interactive.com map 14), whose SVG
+// draws the same painting with every trail's line, letters and symbol grouped
+// under its name, registered on the image (median 0.11 px) and kept as they
+// are, down each cut. Names and ratings as the trail report (the reportpal
+// feed) and the printed symbols, which agree (the interactive map's own
+// symbols differ for Undercut, two diamonds as printed, and Lower Walking Boss
+// Woods, one). Lil' Stash (its logo in the woods left of Lower Bear Claw)
+// and the Air Site (its freestyle pill under the North Peak lift) are park
+// markers; the report's other parks print only a pill or a halfpipe icon on a
+// run, no name: left out, as are its Nordic trails and uphill routes. Areas:
+// the report's (North Peak, Loon Peak, West Basin, South Peak), with the
+// summits printed. x/y/baseY/width are unused layout fields.
