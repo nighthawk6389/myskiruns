@@ -4,12 +4,16 @@ import './index.css'
 import App from './App.tsx'
 import { startAccounts } from './account/account'
 import { startOffline } from './offline'
+import { startAnalytics } from './analytics'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
   </StrictMode>,
 )
+
+// usage counts (Vercel Web Analytics; on only in builds made on Vercel)
+startAnalytics()
 
 // optional sign-in and trip sync (src/account/account.ts); off unless set up
 startAccounts()

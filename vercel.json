@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        { "type": "query", "key": "resort" },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*(bot|Bot|BOT|facebookexternalhit|Facebot|WhatsApp|Slack|Discord|Telegram|Skype|LinkedIn|Pinterest|redditbot|Embedly|Iframely|vkShare|Google-InspectionTool|Applebot).*"
+        }
+      ],
+      "destination": "/api/preview"
+    }
+  ]
+}

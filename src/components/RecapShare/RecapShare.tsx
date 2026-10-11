@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { Resort } from '../../resorts';
 import { CARD_SIZES, canvasToBlob, drawRecapCard, type CardSize } from '../../recap/card';
 import { recapUrl, type Recap } from '../../recap/link';
+import { track } from '../../analytics';
 import styles from './RecapShare.module.css';
 
 interface RecapShareProps {
@@ -110,6 +111,7 @@ export function RecapShare({ resort, recap, dates, text, onClose }: RecapSharePr
     document.body.append(a);
     a.click();
     a.remove();
+    track('Recap shared', { how: 'image saved', size, resort: resort.id });
     setStatus('Image saved');
   };
 
@@ -122,6 +124,7 @@ export function RecapShare({ resort, recap, dates, text, onClose }: RecapSharePr
     }
     try {
       await navigator.share({ files: [file], title: recap.name, text: `${text}\n${url}` });
+      track('Recap shared', { how: 'image', size, resort: resort.id });
     } catch (err) {
       if (err instanceof DOMException && err.name === 'AbortError') return;
       setStatus('Could not share the image');
@@ -132,9 +135,11 @@ export function RecapShare({ resort, recap, dates, text, onClose }: RecapSharePr
     try {
       if (navigator.share) {
         await navigator.share({ title: recap.name, text, url });
+        track('Recap shared', { how: 'link', resort: resort.id });
         return;
       }
       await navigator.clipboard.writeText(url);
+      track('Recap shared', { how: 'link copied', resort: resort.id });
       setStatus('Link copied');
     } catch (err) {
       if (err instanceof DOMException && err.name === 'AbortError') return;
@@ -145,6 +150,7 @@ export function RecapShare({ resort, recap, dates, text, onClose }: RecapSharePr
   const copyLink = async () => {
     try {
       await navigator.clipboard.writeText(url);
+      track('Recap shared', { how: 'link copied', resort: resort.id });
       setStatus('Link copied');
     } catch {
       setStatus('Could not copy the link');

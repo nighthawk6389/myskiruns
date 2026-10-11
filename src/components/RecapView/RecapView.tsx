@@ -5,6 +5,7 @@ import { bestPanel } from '../../recap/card';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_UI_COLORS, type Difficulty, type Trail } from '../../types';
 import { ImageMap, type ImageMapHandle } from '../ImageMap/ImageMap';
 import { useConditions } from '../../hooks/useConditions';
+import { track } from '../../analytics';
 import appStyles from '../../App.module.css';
 import styles from './RecapView.module.css';
 
@@ -44,6 +45,8 @@ export function RecapView({ resort, recap, onExit }: RecapViewProps) {
   const pct = total ? Math.round((trails.length / total) * 100) : 0;
   const firstPanel = bestPanel(resort, recap.trailIds).id;
 
+  useEffect(() => track('Recap viewed', { resort: resort.id, runs: recap.trailIds.length }), [resort.id, recap.trailIds.length]);
+
   useEffect(() => {
     document.title = `${recap.name || 'A ski day'} at ${resort.name} · My Ski Runs`;
   }, [recap.name, resort.name]);
@@ -55,7 +58,13 @@ export function RecapView({ resort, recap, onExit }: RecapViewProps) {
           <span className={appStyles.logo}>⛷</span>
           <span>My Ski Runs</span>
         </div>
-        <button className={styles.cta} onClick={onExit}>
+        <button
+          className={styles.cta}
+          onClick={() => {
+            track('Recap: track your own', { resort: resort.id });
+            onExit();
+          }}
+        >
           Track your own runs
         </button>
       </header>

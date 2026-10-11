@@ -12,6 +12,7 @@ import { TripSummary } from './components/TripSummary/TripSummary';
 import { ResortPicker } from './components/ResortPicker/ResortPicker';
 import { RecapView } from './components/RecapView/RecapView';
 import { decodeRecap } from './recap/link';
+import { track } from './analytics';
 import styles from './App.module.css';
 
 const RESORT_KEY = 'myskiruns.resort';
@@ -148,11 +149,11 @@ function ResortApp({ resort, picker }: { resort: Resort; picker: ReactNode }) {
     activeTrip,
     skiedThisTrip: skiedTrails,
     skiedEver,
-    createTrip,
+    createTrip: newTrip,
     selectTrip,
     updateTrip,
     deleteTrip,
-    toggleRun: toggle,
+    toggleRun,
     exportJson,
     importJson,
   } = useTrips(resort.id, resort.name);
@@ -171,6 +172,20 @@ function ResortApp({ resort, picker }: { resort: Resort; picker: ReactNode }) {
   const mapRef = useRef<ImageMapHandle>(null);
   const conditions = useConditions(resort.id);
   const [summaryOpen, setSummaryOpen] = useState(false);
+  const toggle = (id: string) => {
+    if (!skiedTrails.has(id)) track('Run marked', { resort: resort.id });
+    toggleRun(id);
+  };
+  const createTrip: typeof newTrip = (...args) => {
+    track('Trip created', { resort: resort.id });
+    return newTrip(...args);
+  };
+  const openSummary = () => {
+    track('Summary opened', { resort: resort.id });
+    setSummaryOpen(true);
+  };
+
+  useEffect(() => track('Resort opened', { resort: resort.id }), [resort.id]);
 
   const filteredTrailIds = useMemo(
     () => new Set(filteredTrails.map((t) => t.id)),
@@ -200,7 +215,7 @@ function ResortApp({ resort, picker }: { resort: Resort; picker: ReactNode }) {
             onDelete={deleteTrip}
             onExport={exportJson}
             onImport={importJson}
-            onSummary={() => setSummaryOpen(true)}
+            onSummary={openSummary}
           />
         </div>
       </header>
@@ -235,7 +250,7 @@ function ResortApp({ resort, picker }: { resort: Resort; picker: ReactNode }) {
             skiedTrails={skiedTrails}
             skiedEver={skiedEver}
             tripName={activeTrip?.name ?? null}
-            onOpenSummary={activeTrip ? () => setSummaryOpen(true) : undefined}
+            onOpenSummary={activeTrip ? openSummary : undefined}
           />
           <TrailList
             trails={filteredTrails}

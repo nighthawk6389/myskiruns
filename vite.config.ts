@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto'
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join, relative, resolve } from 'node:path'
-import { defineConfig, loadEnv, type Connect, type Plugin } from 'vite'
+import { defineConfig, loadEnv, transformWithEsbuild, type Connect, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import { accountEnv, handleAccount } from './api/_lib/account'
 import { handleConditions, memoryStores } from './api/_lib/conditions'
@@ -62,6 +62,59 @@ function serviceWorkerBuild(skip: RegExp | null): Plugin {
   }
 }
 
+// Writes dist/preview/<id>.json for each resort in src/resorts.ts: its name,
+// its trails' ids and ratings, and each map panel's image and overlays. The
+// link-preview functions (api/preview.ts, api/og.ts) read it to title a shared
+// link and draw its picture, without loading the app's own bundles.
+function previewData(): Plugin {
+  let root = '.'
+  let outDir = 'dist'
+  return {
+    name: 'preview-data',
+    apply: 'build',
+    configResolved: (config) => {
+      root = config.root
+      outDir = resolve(config.root, config.build.outDir)
+    },
+    async writeBundle() {
+      const src = readFileSync(join(root, 'src/resorts.ts'), 'utf8')
+      const q = `(?:'((?:[^'\\\\]|\\\\.)*)'|"([^"]*)")`
+      const head = new RegExp(`\\n  (oneMap|panels)\\('([a-z0-9-]+)', ${q}, ${q}`, 'g')
+      const unq = (a?: string, b?: string) => (a ?? b ?? '').replace(/\\'/g, "'")
+      const out = join(outDir, 'preview')
+      mkdirSync(out, { recursive: true })
+      const entries = [...src.matchAll(head)]
+      for (const [i, m] of entries.entries()) {
+        const [, kind, id] = m
+        const block = src.slice(m.index, entries[i + 1]?.index ?? src.length)
+        const dir = join(root, 'src/data/resorts', id)
+        const code = (await transformWithEsbuild(readFileSync(join(dir, 'trails.ts'), 'utf8'), 'trails.ts', { loader: 'ts', format: 'esm' })).code
+        const { trails } = (await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`)) as {
+          trails: { id: string; difficulty: string }[]
+        }
+        const panels =
+          kind === 'panels'
+            ? [...block.matchAll(/\{ id: '([^']+)', name: (?:'([^']*)'|"([^"]*)")/g)].map((p) => ({
+                id: p[1],
+                name: p[2] ?? p[3],
+                map: `/maps/${id}-${p[1]}.jpg`,
+                file: join(dir, 'panels', p[1], 'trailPaths.json'),
+              }))
+            : [{ id: 'map', name: 'Trail map', map: `/maps/${id}.jpg`, file: join(dir, 'trailPaths.json') }]
+        const data = {
+          id,
+          name: unq(m[3], m[4]),
+          region: unq(m[5], m[6]),
+          trails: Object.fromEntries(trails.map((t) => [t.id, t.difficulty])),
+          panels: panels.map(({ file, ...p }) => ({ ...p, paths: JSON.parse(readFileSync(file, 'utf8')).trails })),
+        }
+        writeFileSync(join(out, `${id}.json`), JSON.stringify(data))
+      }
+      if (entries.length < 2) throw new Error('preview-data: no resorts found in src/resorts.ts')
+    },
+  }
+}
+
 // the Supabase project for accounts: VITE_SUPABASE_* or, as Vercel's Supabase
 // integration names them, NEXT_PUBLIC_SUPABASE_* (src/account/account.ts)
 const ENV_PREFIX = ['VITE_', 'NEXT_PUBLIC_']
@@ -79,10 +132,13 @@ export default defineConfig(({ mode }) => {
         configureServer: (server) => void server.middlewares.use(localApi(env)),
         configurePreviewServer: (server) => void server.middlewares.use(localApi(env)),
       },
+      previewData(),
       // without accounts the Supabase client is never loaded
       serviceWorkerBuild(accounts ? null : /^assets\/supabase-/),
     ],
     envPrefix: ENV_PREFIX,
+    // usage counts (src/analytics.ts) only from builds made on Vercel
+    define: { __ANALYTICS__: JSON.stringify(Boolean(process.env.VERCEL)) },
     build: {
       rollupOptions: {
         output: {

@@ -58,6 +58,8 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET' || url.origin !== self.location.origin) return;
   // live data (trail conditions) always goes to the network
   if (url.pathname.startsWith('/api/')) return;
+  // Vercel's own (the analytics script and its counts) stays Vercel's to cache
+  if (url.pathname.startsWith('/_vercel/')) return;
 
   if (req.mode === 'navigate') {
     event.respondWith(

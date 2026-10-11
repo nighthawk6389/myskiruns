@@ -200,7 +200,7 @@ work/                    git-ignored: downloads and intermediate files of the pi
 | command | what it does |
 |---|---|
 | `npm run dev` / `build` / `preview` | the app: dev server, production build, a local preview of the build |
-| `npm test` | the trip merge and sync rules (random three-device histories), the resort search, and recap links (every resort's trail ids hash apart) |
+| `npm test` | the trip merge and sync rules (random three-device histories), the resort search, recap links (every resort's trail ids hash apart) and link previews |
 | `npm run lint` | ESLint (with `npx tsc -b`, the check before every commit) |
 | `npm run trails:apply -- --resort <id> [--panel <p>]` | proposals + reviews → `trailPaths.json`, the overlays the app draws |
 | `npm run reviews:import -- <export dir> --resort <id>` | the Trail Check page's export → `trailReviews.json` |
@@ -212,6 +212,7 @@ work/                    git-ignored: downloads and intermediate files of the pi
 | `python3 tools/trailmap/overlay_audit.py --resort <id> --out <dir>` | one audit cell per trail: its overlay on the map, its labels boxed |
 | `node tools/app_check.cjs <url> --resort <id>` | a resort in the real app: found by the search, every panel loads with overlays, phone layout |
 | `node tools/app_flows.cjs [dist]` | phone flows (tap, mark, undo, summary, panels), two tabs, backups |
+| `node tools/make_og_assets.cjs` | redraw the link previews' fixed pictures (`public/og/`) |
 | `node tools/recap_check.cjs <url> --resort <id>` | "Share your day": both cards drawn (saved to look at), the link copied and opened in a fresh browser, read-only, on a desktop and a phone |
 | `node tools/offline_check.cjs [dist]` | offline: first visit, reload without the server, a deploy, the load-error screen |
 | `node tools/accounts_check.cjs` | accounts: two devices sign in, sync, edit offline, delete (with `scripts/mockSupabase.cjs`) |
@@ -284,6 +285,30 @@ The 👍/👎 votes and tags are shared through `api/conditions.ts`, a Vercel fu
 resort: add Upstash Redis from the Vercel Marketplace and connect it to the project (it sets `KV_REST_API_URL` and
 `KV_REST_API_TOKEN`; `UPSTASH_REDIS_REST_URL` / `_TOKEN` work too). Until then the endpoint answers 503 and the app
 keeps votes on the device (the sheet says so). Votes count for 24 hours; each device sends a random id.
+
+## Link previews
+
+A link to the app pasted into iMessage, WhatsApp, Slack, Discord and the like shows a title, a line of text and a
+picture. The site's own (`index.html`, between `<!-- link preview -->` markers) uses `public/og/default.jpg`. A link
+naming a resort (`?resort=stowe`) shows "Stowe Trail Map" and the resort's map; a shared day (`&recap=...`) shows
+"<trip> at <resort>", its runs, new runs and date, and the map cropped to its runs, drawn in their colours.
+
+Link-preview bots don't run the app, so `vercel.json` sends them (by user agent, only for links with `?resort=`) to
+`api/preview.ts`, which returns the app's own page with those tags filled in; everyone else gets the static page as
+before. `api/og.ts` draws the picture (1200 x 630, with `sharp`) from the resort's map and the preview data the build
+writes to `dist/preview/<id>.json` (`vite.config.ts`). `tools/make_og_assets.cjs` redraws `public/og/` (the default
+picture and the badge in a map picture's corner). To see what a service will show, paste a link into
+[opengraph.xyz](https://www.opengraph.xyz) or Facebook's Sharing Debugger.
+
+## Analytics
+
+Vercel Web Analytics counts page views, with no cookies (so no consent banner), and a few events (`src/analytics.ts`):
+Resort opened, Run marked, Trip created, Summary opened, Share dialog opened, Recap shared (how: image, image saved,
+link, link copied, text), Recap viewed, Recap: track your own. A shared day's link has its trip taken out of the URL
+before it is counted. Only builds made on Vercel send anything, so local builds and the browser checks don't.
+
+To turn it on: Vercel dashboard → the project → **Analytics** → **Enable** (Web Analytics), then redeploy. Page views
+show on every plan; the custom events show on Vercel's Pro plan (on Hobby they are dropped).
 
 ## Deploying
 

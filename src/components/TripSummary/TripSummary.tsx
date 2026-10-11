@@ -4,6 +4,7 @@ import type { Resort } from '../../resorts';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_UI_COLORS } from '../../types';
 import { DIFFICULTY_ORDER, summarizeTrip, summaryText } from './summary';
 import { RecapShare } from '../RecapShare/RecapShare';
+import { track } from '../../analytics';
 import styles from './TripSummary.module.css';
 
 interface TripSummaryProps {
@@ -57,9 +58,11 @@ export function TripSummary({ trip, trips, resort, onClose, onLocateTrail }: Tri
     try {
       if (navigator.share) {
         await navigator.share({ title: trip.name, text });
+        track('Recap shared', { how: 'text', resort: resort.id });
         return;
       }
       await navigator.clipboard.writeText(text);
+      track('Recap shared', { how: 'text copied', resort: resort.id });
       setShareStatus('Copied to clipboard');
     } catch (err) {
       // the share sheet was dismissed; nothing to report
@@ -186,7 +189,13 @@ export function TripSummary({ trip, trips, resort, onClose, onLocateTrail }: Tri
             <button className={styles.shareText} onClick={share}>
               Share as text
             </button>
-            <button className={styles.share} onClick={() => setRecapOpen(true)}>
+            <button
+              className={styles.share}
+              onClick={() => {
+                track('Share dialog opened', { resort: resort.id });
+                setRecapOpen(true);
+              }}
+            >
               Share your day
             </button>
           </footer>
