@@ -308,6 +308,19 @@ width is a line's) and `resorts/mt-bachelor/checks/missed.py`.
 | `mt-bachelor/near.py` | near.py <pdf> x,y ...: the PDF drawings whose box holds each map px point (Mt. Bachelor's clip and scale), with colour, width and drawing order |
 | `mt-bachelor/dbg_outline.py` | dbg_outline.py <pdf> <seqno>: one drawing's outlines through `pdf_outline_lines.py`'s centre line, width, length and area |
 
+## mt-hood-meadows
+
+Mt. Hood Meadows' first look at its PDF, whose map page is some 226,000 drawings (the painting is vectors; a
+`pdf_inspect.py --vec` render of it took too long): the page's drawings pickled once and tallied by stroke colour and
+width and by fill colour (which colours and widths the runs, the uphill routes and the boundary are drawn in), and
+the run-coloured strokes drawn alone from the pickle. The letters came from Beaver Creek's letters.json (the same
+font; `brighton/letters_fit.py` found it).
+
+| file | what it did |
+|---|---|
+| `mt-hood-meadows/hood_classes.py` | hood_classes.py <pdf> <page> <out>: pickles the page's drawings to <out>.pkl and prints the strokes by (colour, width) and the fills by colour, small or big |
+| `mt-hood-meadows/hood_draw.py` | hood_draw.py <out>.pkl <zoom> <png>: the 0.69 pt green, blue and black strokes and the 2.78 pt green and black ones drawn alone on white |
+
 ## northstar
 
 Northstar's crops and checks for settling its pieces (the work folder `work/northstar`, after

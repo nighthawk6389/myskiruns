@@ -606,6 +606,15 @@ const RESORT_ADS = {
     negatives: ['buy', 'msr', 'tubbs', 'summer', 'bike park', 'mountain bike', 'hiking', 'lodging', 'condo',
       'real estate', 'jobs', 'wedding'],
   },
+  'mt-hood-meadows': {
+    short: 'Hood Meadows',
+    path: 'Mt-Hood-Meadows',
+    area: 'Cascade to Heather Canyon',
+    names: ['mt hood meadows', 'mount hood meadows', 'hood meadows'],
+    keywords: [],
+    // the mountain's climbs and its other ski areas (Timberline, Skibowl), the summer
+    negatives: ['climb', 'climbing', 'summit', 'timberline', 'skibowl', 'cooper spur', 'camping', 'hiking'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

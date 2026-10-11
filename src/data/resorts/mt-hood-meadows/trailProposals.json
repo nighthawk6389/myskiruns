@@ -1,0 +1,752 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "arena": {
+   "polylines": [
+    130,
+    131,
+    146
+   ],
+   "confidence": "high",
+   "mapName": "ARENA",
+   "note": "end of ARENA | symbol of ARENA | along its printed name"
+  },
+  "boulevard": {
+   "polylines": [
+    3,
+    4,
+    152
+   ],
+   "confidence": "high",
+   "mapName": "BOULEVARD",
+   "note": "end of BOULEVARD | symbol of BOULEVARD | along its printed name"
+  },
+  "catacombs": {
+   "polylines": [
+    5,
+    6,
+    148
+   ],
+   "confidence": "high",
+   "mapName": "CATACOMBS",
+   "note": "end of CATACOMBS | symbol of CATACOMBS | along its printed name"
+  },
+  "elevator": {
+   "polylines": [
+    84,
+    85,
+    149
+   ],
+   "confidence": "high",
+   "mapName": "ELEVATOR",
+   "note": "end of ELEVATOR | symbol of ELEVATOR | along its printed name"
+  },
+  "gulch": {
+   "polylines": [
+    138
+   ],
+   "confidence": "high",
+   "mapName": "GULCH",
+   "note": "checked on a crop"
+  },
+  "lower-elevator": {
+   "polylines": [
+    83,
+    155
+   ],
+   "confidence": "high",
+   "mapName": "LOWER ELEVATOR",
+   "note": "end of LOWER ELEVATOR | along its printed name"
+  },
+  "outer-limits": {
+   "polylines": [
+    10,
+    11,
+    135,
+    150
+   ],
+   "confidence": "high",
+   "mapName": "OUTER LIMITS",
+   "note": "end of OUTER LIMITS | checked on a crop | along its printed name"
+  },
+  "sunburst": {
+   "polylines": [
+    7,
+    8,
+    147
+   ],
+   "confidence": "high",
+   "mapName": "SUNBURST",
+   "note": "end of SUNBURST | symbol of SUNBURST | along its printed name"
+  },
+  "texas-trails": {
+   "polylines": [
+    1,
+    2,
+    145
+   ],
+   "confidence": "high",
+   "mapName": "TEXAS TRAILS",
+   "note": "end of TEXAS TRAILS | symbol of TEXAS TRAILS | along its printed name"
+  },
+  "dental-floss": {
+   "polylines": [
+    168
+   ],
+   "confidence": "high",
+   "mapName": "DENTAL FLOSS",
+   "note": "along its printed name"
+  },
+  "gingivitis": {
+   "polylines": [
+    129,
+    165
+   ],
+   "confidence": "high",
+   "mapName": "GINGIVITIS",
+   "note": "end of GINGIVITIS | along its printed name"
+  },
+  "jigsaw": {
+   "polylines": [
+    140,
+    141,
+    167
+   ],
+   "confidence": "high",
+   "mapName": "JIGSAW",
+   "note": "end of JIGSAW | symbol of JIGSAW | along its printed name"
+  },
+  "lucky-lady": {
+   "polylines": [
+    26,
+    27,
+    157
+   ],
+   "confidence": "high",
+   "mapName": "LUCKY LADY",
+   "note": "end of LUCKY LADY | symbol of LUCKY LADY | along its printed name"
+  },
+  "mitchell-creek": {
+   "polylines": [
+    128,
+    142,
+    175
+   ],
+   "confidence": "high",
+   "mapName": "MITCHELL CREEK",
+   "note": "end of MITCHELL CREEK | symbol of MITCHELL CREEK | along its printed name"
+  },
+  "my-ty": {
+   "polylines": [
+    25,
+    139,
+    170
+   ],
+   "confidence": "high",
+   "mapName": "MY TY",
+   "note": "symbol of MY TY | end of MY TY | along its printed name"
+  },
+  "nates-other-way": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "NATE'S OTHER WAY",
+   "note": "end of NATE'S OTHER WAY"
+  },
+  "nates-way": {
+   "polylines": [
+    23,
+    24,
+    153
+   ],
+   "confidence": "high",
+   "mapName": "NATE'S WAY",
+   "note": "end of NATE'S WAY | symbol of NATE'S WAY | along its printed name"
+  },
+  "south-canyon": {
+   "polylines": [
+    122,
+    123,
+    124,
+    190
+   ],
+   "confidence": "high",
+   "mapName": "SOUTH CANYON",
+   "note": "end of SOUTH CANYON | symbol of SOUTH CANYON | checked on a crop | along its printed name"
+  },
+  "sunrise-parking-runout": {
+   "polylines": [
+    121
+   ],
+   "confidence": "high",
+   "mapName": "SUNRISE PARKING RUNOUT",
+   "note": "along SUNRISE PARKING RUNOUT"
+  },
+  "vista-ridge": {
+   "polylines": [
+    20,
+    21,
+    22,
+    151,
+    163
+   ],
+   "confidence": "high",
+   "mapName": "VISTA RIDGE",
+   "note": "end of VISTA RIDGE | symbol of VISTA RIDGE | along its printed name"
+  },
+  "apollo": {
+   "polylines": [
+    79,
+    80,
+    186
+   ],
+   "confidence": "high",
+   "mapName": "APOLLO",
+   "note": "end of APOLLO | symbol of APOLLO | along its printed name"
+  },
+  "columbia": {
+   "polylines": [
+    115,
+    116,
+    189
+   ],
+   "confidence": "high",
+   "mapName": "COLUMBIA",
+   "note": "end of COLUMBIA | symbol of COLUMBIA | along its printed name"
+  },
+  "discovery": {
+   "polylines": [
+    12,
+    13,
+    160
+   ],
+   "confidence": "high",
+   "mapName": "DISCOVERY",
+   "note": "end of DISCOVERY | symbol of DISCOVERY | along its printed name"
+  },
+  "discovery-ridge": {
+   "polylines": [
+    132,
+    133,
+    134,
+    159
+   ],
+   "confidence": "high",
+   "mapName": "DISCOVERY RIDGE",
+   "note": "end of DISCOVERY RIDGE | symbol of DISCOVERY RIDGE | checked on a crop | along its printed name"
+  },
+  "gemini": {
+   "polylines": [
+    73,
+    74,
+    188
+   ],
+   "confidence": "high",
+   "mapName": "GEMINI",
+   "note": "end of GEMINI | symbol of GEMINI | along its printed name"
+  },
+  "inner-limits": {
+   "polylines": [
+    9,
+    154
+   ],
+   "confidence": "high",
+   "mapName": "INNER LIMITS",
+   "note": "end of INNER LIMITS | along its printed name"
+  },
+  "mercury": {
+   "polylines": [
+    81,
+    82,
+    164
+   ],
+   "confidence": "high",
+   "mapName": "MERCURY",
+   "note": "end of MERCURY | symbol of MERCURY | along its printed name"
+  },
+  "netties-run": {
+   "polylines": [
+    75,
+    76,
+    172
+   ],
+   "confidence": "high",
+   "mapName": "NETTIE'S RUN",
+   "note": "end of NETTIE'S RUN | symbol of NETTIE'S RUN | along its printed name"
+  },
+  "shooting-star-ridge": {
+   "polylines": [
+    77,
+    78,
+    166
+   ],
+   "confidence": "high",
+   "mapName": "SHOOTING STAR RIDGE",
+   "note": "end of SHOOTING STAR RIDGE | symbol of SHOOTING STAR RIDGE | along its printed name"
+  },
+  "tillicum": {
+   "polylines": [
+    46,
+    47,
+    179
+   ],
+   "confidence": "high",
+   "mapName": "TILLICUM",
+   "note": "end of TILLICUM | symbol of TILLICUM | along its printed name"
+  },
+  "titan": {
+   "polylines": [
+    70,
+    71,
+    196
+   ],
+   "confidence": "high",
+   "mapName": "TITAN",
+   "note": "end of TITAN | symbol of TITAN | along its printed name"
+  },
+  "voyager": {
+   "polylines": [
+    69,
+    72,
+    187
+   ],
+   "confidence": "high",
+   "mapName": "VOYAGER",
+   "note": "end of VOYAGER | symbol of VOYAGER | along its printed name"
+  },
+  "1-bowl": {
+   "polylines": [
+    120
+   ],
+   "confidence": "high",
+   "mapName": "1 BOWL",
+   "note": "checked on a crop"
+  },
+  "blue-face": {
+   "polylines": [
+    59,
+    60,
+    169
+   ],
+   "confidence": "high",
+   "mapName": "BLUE FACE",
+   "note": "end of BLUE FACE | symbol of BLUE FACE | along its printed name"
+  },
+  "breezeway": {
+   "polylines": [
+    50,
+    51,
+    173
+   ],
+   "confidence": "high",
+   "mapName": "BREEZEWAY",
+   "note": "end of BREEZEWAY | symbol of BREEZEWAY | along its printed name"
+  },
+  "cascade-skiway": {
+   "polylines": [
+    18,
+    19,
+    158
+   ],
+   "confidence": "high",
+   "mapName": "CASCADE SKIWAY",
+   "note": "end of CASCADE SKIWAY | symbol of CASCADE SKIWAY | along its printed name"
+  },
+  "chunky-swirly": {
+   "polylines": [
+    16,
+    17,
+    161
+   ],
+   "confidence": "high",
+   "mapName": "CHUNKY SWIRLY",
+   "note": "symbol of CHUNKY SWIRLY | end of CHUNKY SWIRLY | along its printed name"
+  },
+  "erics-corner": {
+   "polylines": [
+    63,
+    64,
+    195
+   ],
+   "confidence": "high",
+   "mapName": "ERIC'S CORNER",
+   "note": "end of ERIC'S CORNER | symbol of ERIC'S CORNER | along its printed name"
+  },
+  "jacobs-ladder": {
+   "polylines": [
+    56,
+    57,
+    171
+   ],
+   "confidence": "high",
+   "mapName": "JACOB'S LADDER",
+   "note": "end of JACOB'S LADDER | symbol of JACOB'S LADDER | along its printed name"
+  },
+  "lower-face": {
+   "polylines": [
+    58,
+    184
+   ],
+   "confidence": "high",
+   "mapName": "LOWER FACE",
+   "note": "end of LOWER FACE | along its printed name"
+  },
+  "middlefork": {
+   "polylines": [
+    52,
+    53,
+    176
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLEFORK",
+   "note": "end of MIDDLEFORK | symbol of MIDDLEFORK | along its printed name"
+  },
+  "north-canyon": {
+   "polylines": [
+    43,
+    44,
+    45,
+    48,
+    49,
+    156,
+    181
+   ],
+   "confidence": "high",
+   "mapName": "NORTH CANYON",
+   "note": "symbol of NORTH CANYON | end of NORTH CANYON | continuation | along its printed name"
+  },
+  "powder-keg": {
+   "polylines": [
+    61,
+    62,
+    174
+   ],
+   "confidence": "high",
+   "mapName": "POWDER KEG",
+   "note": "end of POWDER KEG | symbol of POWDER KEG | along its printed name"
+  },
+  "reservoir-hill": {
+   "polylines": [
+    67,
+    68,
+    198
+   ],
+   "confidence": "high",
+   "mapName": "RESERVOIR HILL",
+   "note": "end of RESERVOIR HILL | symbol of RESERVOIR HILL | along its printed name"
+  },
+  "ridge-run": {
+   "polylines": [
+    14,
+    15,
+    162
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE RUN",
+   "note": "symbol of RIDGE RUN | end of RIDGE RUN | along its printed name"
+  },
+  "show-off": {
+   "polylines": [
+    118,
+    119,
+    193
+   ],
+   "confidence": "high",
+   "mapName": "SHOW OFF",
+   "note": "end of SHOW OFF | symbol of SHOW OFF | along its printed name"
+  },
+  "wee-bee-gee-bee": {
+   "polylines": [
+    54,
+    55,
+    180
+   ],
+   "confidence": "high",
+   "mapName": "WEE BEE GEE BEE",
+   "note": "end of WEE BEE GEE BEE | symbol of WEE BEE GEE BEE | along its printed name"
+  },
+  "whoopee": {
+   "polylines": [
+    40,
+    197
+   ],
+   "confidence": "high",
+   "mapName": "WHOOPEE",
+   "note": "end of WHOOPEE | along its printed name"
+  },
+  "beaver-tail": {
+   "polylines": [
+    36,
+    37,
+    183
+   ],
+   "confidence": "high",
+   "mapName": "BEAVER TAIL",
+   "note": "end of BEAVER TAIL | symbol of BEAVER TAIL | along its printed name"
+  },
+  "daisy-bowl": {
+   "polylines": [
+    125,
+    143,
+    178
+   ],
+   "confidence": "high",
+   "mapName": "DAISY BOWL",
+   "note": "end of DAISY BOWL | symbol of DAISY BOWL | along its printed name"
+  },
+  "speedwell": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "SPEEDWELL",
+   "note": "along SPEEDWELL"
+  },
+  "waterfall": {
+   "polylines": [
+    38,
+    39,
+    192
+   ],
+   "confidence": "high",
+   "mapName": "WATERFALL",
+   "note": "end of WATERFALL | symbol of WATERFALL | along its printed name"
+  },
+  "accordion-bowl": {
+   "polylines": [
+    137
+   ],
+   "confidence": "high",
+   "mapName": "ACCORDION BOWL",
+   "note": "checked on a crop"
+  },
+  "heather-canyon-runout": {
+   "polylines": [
+    117,
+    144,
+    211
+   ],
+   "confidence": "high",
+   "mapName": "HEATHER CANYON RUNOUT",
+   "note": "end of HEATHER CANYON RUNOUT | checked on a crop | along its printed name"
+  },
+  "hinterlands": {
+   "polylines": [
+    136
+   ],
+   "confidence": "high",
+   "mapName": "HINTERLANDS",
+   "note": "checked on a crop"
+  },
+  "rams-head": {
+   "polylines": [
+    126,
+    127,
+    194
+   ],
+   "confidence": "high",
+   "mapName": "RAM'S HEAD",
+   "note": "symbol of RAM'S HEAD | end of RAM'S HEAD | along its printed name"
+  },
+  "stadium": {
+   "polylines": [
+    65,
+    66,
+    199
+   ],
+   "confidence": "high",
+   "mapName": "STADIUM",
+   "note": "end of STADIUM | symbol of STADIUM | along its printed name"
+  },
+  "trillium": {
+   "polylines": [
+    41,
+    42,
+    191
+   ],
+   "confidence": "high",
+   "mapName": "TRILLIUM",
+   "note": "end of TRILLIUM | symbol of TRILLIUM | along its printed name"
+  },
+  "breakaway": {
+   "polylines": [
+    103,
+    104,
+    209
+   ],
+   "confidence": "high",
+   "mapName": "BREAKAWAY",
+   "note": "end of BREAKAWAY | symbol of BREAKAWAY | along its printed name"
+  },
+  "forest-park": {
+   "polylines": [
+    94,
+    95,
+    208
+   ],
+   "confidence": "high",
+   "mapName": "FOREST PARK",
+   "note": "end of FOREST PARK | checked on a crop | along its printed name"
+  },
+  "kinnikinick": {
+   "polylines": [
+    97,
+    98,
+    206
+   ],
+   "confidence": "high",
+   "mapName": "KINNIKINICK",
+   "note": "end of KINNIKINICK | symbol of KINNIKINICK | along its printed name"
+  },
+  "knot-hole": {
+   "polylines": [
+    101,
+    102,
+    212
+   ],
+   "confidence": "high",
+   "mapName": "KNOT HOLE",
+   "note": "end of KNOT HOLE | symbol of KNOT HOLE | along its printed name"
+  },
+  "lady-finger": {
+   "polylines": [
+    86,
+    87,
+    201
+   ],
+   "confidence": "high",
+   "mapName": "LADY FINGER",
+   "note": "end of LADY FINGER | symbol of LADY FINGER | along its printed name"
+  },
+  "lady-slipper": {
+   "polylines": [
+    92,
+    93,
+    204
+   ],
+   "confidence": "high",
+   "mapName": "LADY SLIPPER",
+   "note": "end of LADY SLIPPER | symbol of LADY SLIPPER | along its printed name"
+  },
+  "lady-slipper-bowl": {
+   "polylines": [
+    90,
+    91,
+    200
+   ],
+   "confidence": "high",
+   "mapName": "LADY SLIPPER BOWL",
+   "note": "end of LADY SLIPPER BOWL | symbol of LADY SLIPPER BOWL | along its printed name"
+  },
+  "lower-outrigger": {
+   "polylines": [
+    105,
+    106,
+    210
+   ],
+   "confidence": "high",
+   "mapName": "LOWER OUTRIGGER",
+   "note": "end of LOWER OUTRIGGER | symbol of LOWER OUTRIGGER | along its printed name"
+  },
+  "outrigger": {
+   "polylines": [
+    113,
+    114,
+    203
+   ],
+   "confidence": "high",
+   "mapName": "OUTRIGGER",
+   "note": "end of OUTRIGGER | symbol of OUTRIGGER | along its printed name"
+  },
+  "pipeline": {
+   "polylines": [
+    88,
+    89,
+    202
+   ],
+   "confidence": "high",
+   "mapName": "PIPELINE",
+   "note": "end of PIPELINE | symbol of PIPELINE | along its printed name"
+  },
+  "skillit": {
+   "polylines": [
+    111,
+    112,
+    215
+   ],
+   "confidence": "high",
+   "mapName": "SKILLIT",
+   "note": "end of SKILLIT | symbol of SKILLIT | along its printed name"
+  },
+  "skiway": {
+   "polylines": [
+    107,
+    108,
+    213
+   ],
+   "confidence": "high",
+   "mapName": "SKIWAY",
+   "note": "end of SKIWAY | symbol of SKIWAY | along its printed name"
+  },
+  "tamarack": {
+   "polylines": [
+    96,
+    205
+   ],
+   "confidence": "high",
+   "mapName": "TAMARACK",
+   "note": "end of TAMARACK | along its printed name"
+  },
+  "willow": {
+   "polylines": [
+    109,
+    110,
+    214
+   ],
+   "confidence": "high",
+   "mapName": "WILLOW",
+   "note": "end of WILLOW | symbol of WILLOW | along its printed name"
+  },
+  "wy-east": {
+   "polylines": [
+    99,
+    100,
+    207
+   ],
+   "confidence": "high",
+   "mapName": "WY EAST",
+   "note": "end of WY EAST | symbol of WY EAST | along its printed name"
+  },
+  "fireweed": {
+   "polylines": [
+    33,
+    34,
+    177
+   ],
+   "confidence": "high",
+   "mapName": "FIREWEED",
+   "note": "symbol of FIREWEED | end of FIREWEED | along its printed name"
+  },
+  "nastar-hill": {
+   "polylines": [
+    31,
+    32,
+    185
+   ],
+   "confidence": "high",
+   "mapName": "NASTAR HILL",
+   "note": "end of NASTAR HILL | symbol of NASTAR HILL | along its printed name"
+  },
+  "wall-flower": {
+   "polylines": [
+    29,
+    30,
+    182
+   ],
+   "confidence": "high",
+   "mapName": "WALL FLOWER",
+   "note": "end of WALL FLOWER | symbol of WALL FLOWER | along its printed name"
+  }
+ }
+}

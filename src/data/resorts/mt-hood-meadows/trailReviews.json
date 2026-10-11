@@ -1,0 +1,654 @@
+{
+ "reviews": {
+  "superbowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    65.54,
+    16.09
+   ]
+  },
+  "dallas-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    53.36,
+    20.1
+   ]
+  },
+  "clark-canyon": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    72.61,
+    22.14
+   ]
+  },
+  "heather-canyon": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    63.19,
+    22.25
+   ]
+  },
+  "a-zone": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    59.45,
+    22.63
+   ]
+  },
+  "silver-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    61.54,
+    24.81
+   ]
+  },
+  "gold-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    62.17,
+    26.66
+   ]
+  },
+  "highlands": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    67.1,
+    27.1
+   ]
+  },
+  "sunrise-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    73.97,
+    27.42
+   ]
+  },
+  "marmot-ridge": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    44.29,
+    28.0
+   ]
+  },
+  "diamond-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    63.07,
+    28.79
+   ]
+  },
+  "hammer-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    74.43,
+    29.17
+   ]
+  },
+  "lowlands": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    68.78,
+    29.82
+   ]
+  },
+  "memorial-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    63.62,
+    30.77
+   ]
+  },
+  "conan-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    74.75,
+    31.45
+   ]
+  },
+  "heather-woods": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    71.19,
+    31.7
+   ]
+  },
+  "twilight-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    65.01,
+    32.54
+   ]
+  },
+  "11-2-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    44.81,
+    33.77
+   ]
+  },
+  "pluto": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    65.54,
+    33.93
+   ]
+  },
+  "2-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    42.52,
+    34.78
+   ]
+  },
+  "i-hear-cars": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    16.61,
+    35.57
+   ]
+  },
+  "3-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    40.52,
+    36.44
+   ]
+  },
+  "moon-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    66.93,
+    36.57
+   ]
+  },
+  "3d": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    56.41,
+    37.15
+   ]
+  },
+  "4-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    37.3,
+    38.04
+   ]
+  },
+  "o-ring": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    57.8,
+    38.29
+   ]
+  },
+  "roach-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    53.91,
+    38.34
+   ]
+  },
+  "1-2-moon-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    68.29,
+    38.59
+   ]
+  },
+  "5-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    34.7,
+    39.79
+   ]
+  },
+  "rock-garden": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    59.51,
+    40.63
+   ]
+  },
+  "banked-slalom": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    23.22,
+    42.51
+   ]
+  },
+  "the-zoo": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    9.36,
+    43.82
+   ]
+  },
+  "absolute-magnitude": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    73.51,
+    43.98
+   ]
+  },
+  "nastar-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    18.81,
+    44.14
+   ]
+  },
+  "jacks-woods": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    73.22,
+    45.97
+   ]
+  },
+  "superpipe": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    21.54,
+    46.3
+   ]
+  },
+  "endor": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    65.68,
+    49.56
+   ]
+  },
+  "private-reserve": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    60.75,
+    50.6
+   ]
+  },
+  "rescue-hill": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    72.09,
+    51.96
+   ]
+  },
+  "jds": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.14,
+    52.45
+   ]
+  },
+  "elk-cliffs": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    64.32,
+    52.53
+   ]
+  },
+  "mini-gods": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    69.88,
+    54.06
+   ]
+  },
+  "s-r-cliffs": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    75.91,
+    54.71
+   ]
+  },
+  "fbw": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    79.01,
+    54.74
+   ]
+  },
+  "elk-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    65.8,
+    55.45
+   ]
+  },
+  "the-curtains": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    77.86,
+    56.07
+   ]
+  },
+  "yoda-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    62.14,
+    57.79
+   ]
+  },
+  "picnic-rock": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    55.91,
+    60.59
+   ]
+  },
+  "gods-wall": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    59.77,
+    61.98
+   ]
+  },
+  "fright-trees": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T12:14:26.000Z",
+   "by": "claude",
+   "labelAt": [
+    39.97,
+    69.74
+   ]
+  }
+ }
+}

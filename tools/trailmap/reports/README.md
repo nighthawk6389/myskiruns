@@ -83,6 +83,11 @@ Outback Bowl runs, and the cross-country trails (left out: no run of the alpine 
 Crystal Mountain's (mtnfeed path `crystal-mountain`, resort 80) was fetched out of season (2026-10-11): 86 rows in five
 areas (Frontside, North, High Campbell, South, Lower Mountain).
 
+Mt. Hood Meadows has none to keep (2026-10-11): its site's trail list (`skihood.com/api/weather/trails`, the
+grooming report's) is empty out of season, Common Crawl's 2025-51 to 2026-08 crawls hold no capture of it, and the
+resort is on neither mtnfeed nor mountain.live. Its printed symbols are the ratings; OpenStreetMap's piste names
+were the spelling check.
+
 Snowshoe's (mtnfeed path `snowshoe`, resort 2) was fetched out of season (2026-10-11): 65 rows in two areas (Snowshoe,
 Silver Creek), the glades with a Glades icon of their own.
 

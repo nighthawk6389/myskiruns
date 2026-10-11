@@ -35,7 +35,8 @@ and is dropped. Difficulty symbols are fills too: an even four-sided fill in
 the --square colour is a square, in the --diamond colour a diamond (with
 --rounded also one whose corners are rounded, and with --rect-squares a
 near-square rectangle in the --square colour); two diamonds
-side by side (or one eight-sided fill) are a double diamond, and EX when
+side by side (or one eight-sided fill; with --overlapped-doubles one whose
+inner sides are cut where the two overlap) are a double diamond, and EX when
 small white letter fills sit inside; four curves (--circle-curves) in the
 --circle colour are a circle (with --any-circles, any closed fill of curves
 as wide as tall), and with --diamond-curves N, N curves in the --diamond
@@ -273,6 +274,19 @@ def labels(a):
     def inside(rect):
         return sum(1 for w in white if rect[0] < w[0] < rect[2] and rect[1] < w[1] < rect[3])
 
+    def overlapped(g, w, h):
+        """Two diamonds overlapping side by side, one fill (corners rounded or not): eight straight sides, four
+        even long ones (the outer) and four even short ones about half as long (cut where the diamonds cross);
+        about one and a half times as wide as tall."""
+        if '|' in g['kinds']:
+            return False
+        sides = sorted(v for c, v in zip(g['kinds'], g['sig']) if c == 'l' and v > 0.01)
+        curves = sum(v for c, v in zip(g['kinds'], g['sig']) if c == 'c')
+        if len(sides) != 8 or curves > 0.25 or not 1.3 * h < w < 1.8 * h:
+            return False
+        short, long_ = sides[:4], sides[4:]
+        return max(short) < a.even * min(short) and max(long_) < a.even * min(long_) and 0.35 < short[-1] / long_[0] < 0.65
+
     syms = []
     for g in G:
         k, s, big = g['kinds'], g['sig'], max(g['rect'][2] - g['rect'][0], g['rect'][3] - g['rect'][1]) >= a.sym_min
@@ -294,6 +308,8 @@ def labels(a):
             g['sym'] = 'ex' if inside(g['rect']) >= 2 else 'double-diamond'
         elif big and k == 'c' * a.circle_curves and g['col'] in a.circle:
             g['sym'] = 'circle'
+        elif big and a.overlapped_doubles and g['col'] in a.diamond and overlapped(g, w, h):
+            g['sym'] = 'double-diamond'  # two diamonds overlapping, one fill (Mt. Hood Meadows)
         elif big and a.diamond_curves and k == 'c' * a.diamond_curves and g['col'] in a.diamond:
             g['sym'] = 'diamond'  # a diamond drawn with curved sides (Deer Valley)
         elif (big and a.any_circles and g['col'] in a.circle and '|' not in k and k.count('c') >= 4
@@ -530,6 +546,9 @@ def main():
     lb.add_argument('--any-circles', action='store_true',
                     help='a closed fill of curves (at least four, any lines among them tiny) in a --circle colour, '
                          'as wide as tall, is a circle, however many curves it is drawn with')
+    lb.add_argument('--overlapped-doubles', action='store_true',
+                    help='one fill of two diamonds overlapping side by side (eight straight sides, four of them about '
+                         'half as long as the others) in a --diamond colour is a double diamond')
     lb.add_argument('--diamond-curves', type=int, default=0,
                     help='a fill of this many curves in a --diamond colour is a diamond (curved sides; default: none)')
     a = ap.parse_args()

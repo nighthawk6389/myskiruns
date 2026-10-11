@@ -205,6 +205,8 @@ export const RESORTS: ResortEntry[] = [
     ['Solitude Mountain Resort', 'Big Cottonwood Canyon', 'Honeycomb Canyon', 'Eagle Ridge', 'Salt Lake City']),
   oneMap('snowshoe', 'Snowshoe', 'West Virginia', () => import('./data/resorts/snowshoe/trails'), () => import('./data/resorts/snowshoe/trailPaths.json'),
     ['Snowshoe Mountain', 'Silver Creek', 'Western Territory', 'Cupp Run', 'Pocahontas County']),
+  oneMap('mt-hood-meadows', 'Mt. Hood Meadows', 'Oregon', () => import('./data/resorts/mt-hood-meadows/trails'), () => import('./data/resorts/mt-hood-meadows/trailPaths.json'),
+    ['Mount Hood Meadows', 'Mt. Hood', 'Heather Canyon', 'Hood River Meadows', 'Portland']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

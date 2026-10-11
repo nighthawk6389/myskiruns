@@ -606,6 +606,19 @@ Trail Maps - East,Snowshoe,snowshoe wv skiing trail map,Phrase,Enabled
 Trail Maps - East,Snowshoe,snowshoe wv skiing ski map,Phrase,Enabled
 Trail Maps - East,Snowshoe,snowshoe ski trails,Phrase,Enabled
 Trail Maps - East,Snowshoe,snowshoe wv trail map,Exact,Enabled
+Trail Maps - West,Mt. Hood Meadows,mt hood meadows trail map,Exact,Enabled
+Trail Maps - West,Mt. Hood Meadows,mt hood meadows ski map,Exact,Enabled
+Trail Maps - West,Mt. Hood Meadows,mt hood meadows trail map,Phrase,Enabled
+Trail Maps - West,Mt. Hood Meadows,mt hood meadows ski map,Phrase,Enabled
+Trail Maps - West,Mt. Hood Meadows,mt hood meadows ski trails,Phrase,Enabled
+Trail Maps - West,Mt. Hood Meadows,mt hood meadows trail list,Phrase,Enabled
+Trail Maps - West,Mt. Hood Meadows,mt hood meadows run map,Phrase,Enabled
+Trail Maps - West,Mt. Hood Meadows,mount hood meadows trail map,Exact,Enabled
+Trail Maps - West,Mt. Hood Meadows,mount hood meadows trail map,Phrase,Enabled
+Trail Maps - West,Mt. Hood Meadows,mount hood meadows ski map,Phrase,Enabled
+Trail Maps - West,Mt. Hood Meadows,hood meadows trail map,Exact,Enabled
+Trail Maps - West,Mt. Hood Meadows,hood meadows trail map,Phrase,Enabled
+Trail Maps - West,Mt. Hood Meadows,hood meadows ski map,Phrase,Enabled
 Ski Run Tracker,Ski Run Tracker,ski run tracker,Exact,Enabled
 Ski Run Tracker,Ski Run Tracker,ski trail tracker,Exact,Enabled
 Ski Run Tracker,Ski Run Tracker,track ski runs,Exact,Enabled

@@ -1,0 +1,18 @@
+// Mt. Hood Meadows' 2025-26 trail map (skihood.com's 20x17 trail map PDF, its
+// second page; the first is its back). Everything on it is vectors, the
+// painting too: runs are 0.69 pt strokes in their colours, each name printed
+// in a gap of its own line in outlined glyphs (pdf_glyphs.py, shapes read on
+// contact sheets: letters.json, Beaver Creek's font; Dallas Bowl set as
+// text), its symbol on the line by it (a double diamond is one fill of two
+// overlapping diamonds). The bowls, canyons, cliffs and the Private Reserve
+// print a name and a symbol under it, no line: markers at their names. Names
+// as the map prints them (its I and hyphen, and hyphen and apostrophe, are
+// one shape turned: Private Reserve, A-Zone, O-Ring, Nettie's Run); ratings
+// are the printed symbols (Daisy Bowl's square is printed turned: blue), the
+// parks blue (The Zoo, NASTAR Park, Forest Park, the Superpipe, the Banked
+// Slalom). Gulch's line runs from its square down to Gingivitis's; a black
+// line from the trees below Elk Bowl into Heather Canyon Runout prints no
+// name: no trail. The resort published no trail list this off-season (its
+// trail report is empty): areas are the lifts each run is skied from, read on
+// the map, with each lift's top (printed, else OpenStreetMap's lift on the
+// USGS elevation model). x/y/baseY/width are unused layout fields.
