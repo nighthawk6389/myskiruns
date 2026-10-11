@@ -1,0 +1,117 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "capitol": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "CAPITOL",
+   "note": "its group"
+  },
+  "confidence": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "CONFIDENCE",
+   "note": "its group"
+  },
+  "crystal": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "CRYSTAL",
+   "note": "its group"
+  },
+  "dihedral-chute": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "DIHEDRAL CHUTE",
+   "note": "its group"
+  },
+  "electric-shock": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "ELECTRIC SHOCK",
+   "note": "its group"
+  },
+  "genevieve": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "GENEVIEVE",
+   "note": "its group"
+  },
+  "la-rosa": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "LA ROSA",
+   "note": "its group"
+  },
+  "lakeview": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "LAKEVIEW",
+   "note": "its group"
+  },
+  "mountain-quail": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "MOUNTAIN QUAIL",
+   "note": "its group"
+  },
+  "nice-chute": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "NICE CHUTE",
+   "note": "its group"
+  },
+  "roy-boy": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "ROY BOY",
+   "note": "its group"
+  },
+  "seniors": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "SENIOR\u2019S",
+   "note": "its group"
+  },
+  "sunrise": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "SUNRISE",
+   "note": "its group"
+  },
+  "tram-shot": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "TRAM SHOT",
+   "note": "its group"
+  }
+ }
+}

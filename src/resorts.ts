@@ -182,6 +182,11 @@ export const RESORTS: ResortEntry[] = [
     { id: 'frontside', name: 'Frontside & The Beavers', paths: () => import('./data/resorts/arapahoe-basin/panels/frontside/trailPaths.json') },
     { id: 'zuma-bowl', name: 'Zuma Bowl', paths: () => import('./data/resorts/arapahoe-basin/panels/zuma-bowl/trailPaths.json') },
   ], ['A-Basin', 'Arapahoe Basin Ski Area', 'Montezuma Bowl', 'Pallavicini', 'Summit County']),
+  panels('telluride', 'Telluride', 'Colorado', () => import('./data/resorts/telluride/trails'), [
+    { id: 'main', name: 'Telluride', paths: () => import('./data/resorts/telluride/panels/main/trailPaths.json') },
+    { id: 'revelation', name: 'Revelation Bowl', paths: () => import('./data/resorts/telluride/panels/revelation/trailPaths.json') },
+    { id: 'black-iron-bowl', name: 'Palmyra & Black Iron', paths: () => import('./data/resorts/telluride/panels/black-iron-bowl/trailPaths.json') },
+  ], ['Telluride Ski Resort', 'Mountain Village', 'Palmyra Peak', 'Black Iron Bowl', 'Gold Hill']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

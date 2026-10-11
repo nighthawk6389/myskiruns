@@ -1,0 +1,29 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "see-forever": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "SEE FOREVER",
+   "note": "its group"
+  },
+  "majestic": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "MAJESTIC",
+   "note": "its group"
+  },
+  "silvercloud": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "SILVERCLOUD",
+   "note": "its group"
+  }
+ }
+}

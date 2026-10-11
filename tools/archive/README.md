@@ -471,6 +471,22 @@ The helpers Sugarbush's five tile readers wrote for themselves (label drafts, sy
 | `readers/r4/build.py` | Reader 4 writing its result file |
 | `readers/r4/labels_draft.py` | Reader 4's draft of the labels it saw, with their symbols |
 
+## telluride
+
+Telluride's helpers for settling its pieces on crops (the work folder `work/telluride/main`, after a build): the
+undecided pieces with their ends and the named pieces meeting each (`undecided.py`), a sheet of crops with one cell per
+piece, the piece thick and its neighbours named (`piece_sheet.py`), and the PDF's strokes near a tangle each drawn
+alone in its own colour with its drawing number (`strokes_view.py`: which stroke is Satisfaction's, which Plunge's).
+`classes_view.py` drew the candidate stroke classes at triage. What they settled is in
+`resorts/telluride/panels/main/decisions.py`.
+
+| file | what it did |
+|---|---|
+| `telluride/classes_view.py` | classes_view.py <pdf> <out.png> <scale> x0,y0,x1,y1 r,g,b@width=R,G,B[:dash\|:solid] ...: the chosen stroke classes over the faded page |
+| `telluride/undecided.py` | undecided.py <work panel dir> [ids]: each undecided piece (or those given): class, length, ends, the pieces meeting each end |
+| `telluride/piece_sheet.py` | piece_sheet.py <work panel dir> <out prefix> [ids] [--per 6] [--size 520]: crop sheets, one cell per piece |
+| `telluride/strokes_view.py` | strokes_view.py <pdf> <out.png> <zoom> x0,y0,x1,y1: every 0.9-1.1 pt trail-coloured stroke in its own colour with its drawing number |
+
 ## trailmap-apply-bridging
 
 The check of a change to `trails:apply`'s bridging rule: which trails' paths changed in every resort, drawn old against new.

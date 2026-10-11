@@ -1,0 +1,1090 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "meadows-north": {
+   "polylines": [
+    67,
+    78,
+    352
+   ],
+   "confidence": "high",
+   "mapName": "MEADOWS \u2013 NORTH",
+   "note": "end of Meadows \u2013 North | symbol of Meadows \u2013 North | along its printed name"
+  },
+  "meadows-south": {
+   "polylines": [
+    64,
+    65,
+    66,
+    354
+   ],
+   "confidence": "high",
+   "mapName": "MEADOWS \u2013 SOUTH",
+   "note": "continuation | end of Meadows \u2013 South | symbol of Meadows \u2013 South | along its printed name"
+  },
+  "the-peaks": {
+   "polylines": [
+    68,
+    69
+   ],
+   "confidence": "high",
+   "mapName": "THE PEAKS",
+   "note": "checked on a crop"
+  },
+  "boomerang": {
+   "polylines": [
+    37,
+    42,
+    186,
+    309
+   ],
+   "confidence": "high",
+   "mapName": "BOOMERANG",
+   "note": "end of Boomerang | checked on a crop | along its printed name"
+  },
+  "boomerang-lower": {
+   "polylines": [
+    63
+   ],
+   "confidence": "high",
+   "mapName": "BOOMERANG \u2013 LOWER",
+   "note": "along Boomerang \u2013 Lower"
+  },
+  "butterfly": {
+   "polylines": [
+    26,
+    108,
+    218,
+    331
+   ],
+   "confidence": "high",
+   "mapName": "BUTTERFLY",
+   "note": "checked on a crop | symbol of Butterfly | along its printed name"
+  },
+  "hermit": {
+   "polylines": [
+    24,
+    25,
+    325
+   ],
+   "confidence": "high",
+   "mapName": "HERMIT",
+   "note": "end of Hermit | checked on a crop | along its printed name"
+  },
+  "hoot-brown-terrain-park": {
+   "polylines": [
+    248
+   ],
+   "confidence": "high",
+   "mapName": "HOOT BROWN TERRAIN PARK",
+   "note": "checked on a crop"
+  },
+  "humboldt-draw": {
+   "polylines": [
+    19,
+    237,
+    310
+   ],
+   "confidence": "high",
+   "mapName": "HUMBOLDT DRAW",
+   "note": "end of Humboldt Draw | checked on a crop | along its printed name"
+  },
+  "misty-maiden": {
+   "polylines": [
+    39,
+    40,
+    41,
+    315,
+    341
+   ],
+   "confidence": "high",
+   "mapName": "MISTY MAIDEN",
+   "note": "end of Misty Maiden | symbol of Misty Maiden | along its printed name"
+  },
+  "nastar": {
+   "polylines": [
+    1,
+    8,
+    342
+   ],
+   "confidence": "high",
+   "mapName": "NASTAR",
+   "note": "along NASTAR | end of NASTAR | along its printed name"
+  },
+  "peek-a-boo": {
+   "polylines": [
+    17,
+    312
+   ],
+   "confidence": "high",
+   "mapName": "PEEK-A-BOO",
+   "note": "end of Peek-a-boo | along its printed name"
+  },
+  "pick-n-gad": {
+   "polylines": [
+    20,
+    21,
+    311
+   ],
+   "confidence": "high",
+   "mapName": "PICK \u2018N GAD",
+   "note": "end of Pick \u2018n Gad | symbol of Pick \u2018n Gad | along its printed name"
+  },
+  "sheridan-headwall": {
+   "polylines": [
+    187,
+    250,
+    326
+   ],
+   "confidence": "high",
+   "mapName": "SHERIDAN HEADWALL",
+   "note": "symbol of Sheridan Headwall | checked on a crop | along its printed name"
+  },
+  "smuggler": {
+   "polylines": [
+    22,
+    23,
+    328
+   ],
+   "confidence": "high",
+   "mapName": "SMUGGLER",
+   "note": "end of Smuggler | checked on a crop | along its printed name"
+  },
+  "village-bypass": {
+   "polylines": [
+    59,
+    60,
+    320,
+    338
+   ],
+   "confidence": "high",
+   "mapName": "VILLAGE BYPASS",
+   "note": "end of Village Bypass | checked on a crop | along its printed name"
+  },
+  "village-bypass-lower": {
+   "polylines": [
+    61,
+    62,
+    356
+   ],
+   "confidence": "high",
+   "mapName": "VILLAGE BYPASS \u2013 LOWER",
+   "note": "checked on a crop | traced along the drawn line"
+  },
+  "alta": {
+   "polylines": [
+    48,
+    49,
+    296
+   ],
+   "confidence": "high",
+   "mapName": "ALTA",
+   "note": "end of Alta | symbol of Alta | along its printed name"
+  },
+  "cake-walk": {
+   "polylines": [
+    43,
+    185,
+    188,
+    321,
+    333
+   ],
+   "confidence": "high",
+   "mapName": "CAKE WALK",
+   "note": "end of Cake Walk | symbol of Cake Walk | along its printed name"
+  },
+  "dew-drop": {
+   "polylines": [
+    46,
+    238,
+    293
+   ],
+   "confidence": "high",
+   "mapName": "DEW DROP",
+   "note": "symbol of Dew Drop | end of Dew Drop | along its printed name"
+  },
+  "dew-drop-drain": {
+   "polylines": [
+    47,
+    233,
+    308
+   ],
+   "confidence": "high",
+   "mapName": "DEW DROP \u2013 DRAIN",
+   "note": "symbol of Dew Drop \u2013 Drain | end of Dew Drop \u2013 Drain | along its printed name"
+  },
+  "henrys-north": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "HENRY\u2019S \u2013 NORTH",
+   "note": "along Henry\u2019s \u2013 North"
+  },
+  "henrys-south": {
+   "polylines": [
+    230
+   ],
+   "confidence": "high",
+   "mapName": "HENRY\u2019S \u2013 SOUTH",
+   "note": "along Henry\u2019s \u2013 South"
+  },
+  "ophir-loop": {
+   "polylines": [
+    55,
+    56,
+    83,
+    132,
+    184,
+    236,
+    287,
+    306
+   ],
+   "confidence": "high",
+   "mapName": "OPHIR LOOP",
+   "note": "checked on a crop | symbol of Ophir Loop | end of Ophir Loop | along its printed name"
+  },
+  "polar-queen": {
+   "polylines": [
+    44,
+    45,
+    51,
+    180,
+    286,
+    318
+   ],
+   "confidence": "high",
+   "mapName": "POLAR QUEEN",
+   "note": "symbol of Polar Queen | end of Polar Queen | checked on a crop | along its printed name"
+  },
+  "silver-tip": {
+   "polylines": [
+    12,
+    50,
+    301
+   ],
+   "confidence": "high",
+   "mapName": "SILVER TIP",
+   "note": "checked on a crop | end of Silver Tip | along its printed name"
+  },
+  "stormin-norman": {
+   "polylines": [
+    52,
+    183,
+    223,
+    292
+   ],
+   "confidence": "high",
+   "mapName": "STORMIN\u2019 NORMAN",
+   "note": "checked on a crop | end of Stormin\u2019 Norman | along its printed name"
+  },
+  "allais-alley": {
+   "polylines": [
+    102,
+    103,
+    271
+   ],
+   "confidence": "high",
+   "mapName": "ALLAIS ALLEY",
+   "note": "end of Allais Alley | checked on a crop | along its printed name"
+  },
+  "apex": {
+   "polylines": [
+    100,
+    101,
+    278
+   ],
+   "confidence": "high",
+   "mapName": "APEX",
+   "note": "end of Apex | symbol of Apex | along its printed name"
+  },
+  "chongos": {
+   "polylines": [
+    15,
+    84,
+    281
+   ],
+   "confidence": "high",
+   "mapName": "CHONGO\u2019S",
+   "note": "checked on a crop | end of Chongo\u2019s | along its printed name"
+  },
+  "giant-steps": {
+   "polylines": [
+    126,
+    159,
+    291
+   ],
+   "confidence": "high",
+   "mapName": "GIANT STEPS",
+   "note": "checked on a crop | end of Giant Steps | along its printed name"
+  },
+  "happy-thought": {
+   "polylines": [
+    124,
+    133,
+    268
+   ],
+   "confidence": "high",
+   "mapName": "HAPPY THOUGHT",
+   "note": "end of Happy Thought | checked on a crop | along its printed name"
+  },
+  "see-forever": {
+   "polylines": [
+    18,
+    58,
+    151,
+    152,
+    158,
+    264,
+    294
+   ],
+   "confidence": "high",
+   "mapName": "SEE FOREVER",
+   "note": "along See Forever | checked on a crop | symbol of See Forever | end of See Forever | along its printed name"
+  },
+  "silver-glade": {
+   "polylines": [
+    128,
+    357
+   ],
+   "confidence": "high",
+   "mapName": "SILVER GLADE",
+   "note": "end of Silver Glade | traced along the drawn line"
+  },
+  "sullys": {
+   "polylines": [
+    98,
+    99,
+    284
+   ],
+   "confidence": "high",
+   "mapName": "SULLY\u2019S",
+   "note": "end of Sully\u2019s | checked on a crop | along its printed name"
+  },
+  "woozleys-way": {
+   "polylines": [
+    153,
+    162,
+    216,
+    273
+   ],
+   "confidence": "high",
+   "mapName": "WOOZLEY\u2019S WAY",
+   "note": "end of Woozley\u2019s Way | checked on a crop | along its printed name"
+  },
+  "zulu-queen": {
+   "polylines": [
+    104,
+    105
+   ],
+   "confidence": "high",
+   "mapName": "ZULU QUEEN",
+   "note": "end of Zulu Queen | symbol of Zulu Queen"
+  },
+  "cimarron": {
+   "polylines": [
+    0,
+    113,
+    330
+   ],
+   "confidence": "high",
+   "mapName": "CIMARRON",
+   "note": "end of Cimarron | symbol of Cimarron | along its printed name"
+  },
+  "kids-hill": {
+   "polylines": [
+    57,
+    239,
+    350
+   ],
+   "confidence": "high",
+   "mapName": "KIDS HILL",
+   "note": "checked on a crop | symbol of Kids Hill | along its printed name"
+  },
+  "milk-run": {
+   "polylines": [
+    111,
+    189,
+    332
+   ],
+   "confidence": "high",
+   "mapName": "MILK RUN",
+   "note": "symbol of Milk Run | end of Milk Run | along its printed name"
+  },
+  "north-chute": {
+   "polylines": [
+    109,
+    110,
+    329
+   ],
+   "confidence": "high",
+   "mapName": "NORTH CHUTE",
+   "note": "end of North Chute | checked on a crop | along its printed name"
+  },
+  "orileys": {
+   "polylines": [
+    349
+   ],
+   "confidence": "high",
+   "mapName": "O\u2019RILEY\u2019S",
+   "note": "along its printed name"
+  },
+  "pandora": {
+   "polylines": [
+    112
+   ],
+   "confidence": "high",
+   "mapName": "PANDORA",
+   "note": "along Pandora"
+  },
+  "stumper": {
+   "polylines": [
+    14,
+    114,
+    215,
+    351
+   ],
+   "confidence": "high",
+   "mapName": "STUMPER",
+   "note": "end of Stumper | continuation | checked on a crop | along its printed name"
+  },
+  "telluride-trail": {
+   "polylines": [
+    32,
+    33,
+    38,
+    221,
+    319,
+    347
+   ],
+   "confidence": "high",
+   "mapName": "TELLURIDE TRAIL",
+   "note": "end of Telluride Trail | checked on a crop | along its printed name"
+  },
+  "bail-out": {
+   "polylines": [
+    9,
+    35,
+    91,
+    336
+   ],
+   "confidence": "high",
+   "mapName": "BAIL OUT",
+   "note": "end of Bail Out | continuation | symbol of Bail Out | along its printed name"
+  },
+  "cats-paw": {
+   "polylines": [
+    190,
+    346
+   ],
+   "confidence": "high",
+   "mapName": "CATS PAW",
+   "note": "end of Cats Paw | along its printed name"
+  },
+  "jaws": {
+   "polylines": [
+    10,
+    87,
+    339
+   ],
+   "confidence": "high",
+   "mapName": "JAWS",
+   "note": "end of Jaws | symbol of Jaws | along its printed name"
+  },
+  "lower-bail-out": {
+   "polylines": [
+    34,
+    36,
+    343
+   ],
+   "confidence": "high",
+   "mapName": "LOWER BAIL OUT",
+   "note": "end of Lower Bail Out | checked on a crop | along its printed name"
+  },
+  "mine-shaft": {
+   "polylines": [
+    90,
+    93,
+    344
+   ],
+   "confidence": "high",
+   "mapName": "MINE SHAFT",
+   "note": "checked on a crop | end of Mine Shaft | along its printed name"
+  },
+  "bushwacker": {
+   "polylines": [
+    89,
+    92,
+    130,
+    274,
+    313
+   ],
+   "confidence": "high",
+   "mapName": "BUSHWACKER",
+   "note": "symbol of Bushwacker | end of Bushwacker | along its printed name"
+  },
+  "captain-jacks": {
+   "polylines": [
+    304
+   ],
+   "confidence": "high",
+   "mapName": "CAPTAIN JACK\u2019S",
+   "note": "along its printed name"
+  },
+  "east-drain": {
+   "polylines": [
+    95,
+    300
+   ],
+   "confidence": "high",
+   "mapName": "EAST DRAIN",
+   "note": "end of East Drain | along its printed name"
+  },
+  "easy-out": {
+   "polylines": [
+    30,
+    31,
+    335
+   ],
+   "confidence": "high",
+   "mapName": "EASY OUT",
+   "note": "symbol of Easy Out | end of Easy Out | along its printed name"
+  },
+  "joint-point": {
+   "polylines": [
+    122,
+    123
+   ],
+   "confidence": "high",
+   "mapName": "JOINT POINT",
+   "note": "symbol of Joint Point | end of Joint Point"
+  },
+  "kant-mak-m": {
+   "polylines": [
+    115,
+    116,
+    117,
+    279,
+    316
+   ],
+   "confidence": "high",
+   "mapName": "KANT-MAK-M",
+   "note": "end of Kant-Mak-M | checked on a crop | along its printed name"
+  },
+  "last-chance": {
+   "polylines": [
+    81,
+    129
+   ],
+   "confidence": "high",
+   "mapName": "LAST CHANCE",
+   "note": "checked on a crop"
+  },
+  "log-pile": {
+   "polylines": [
+    82
+   ],
+   "confidence": "high",
+   "mapName": "LOG PILE",
+   "note": "along Log Pile"
+  },
+  "lookout-lower": {
+   "polylines": [
+    29,
+    327
+   ],
+   "confidence": "high",
+   "mapName": "LOOKOUT \u2013 LOWER",
+   "note": "end of Lookout \u2013 Lower | along its printed name"
+  },
+  "lookout-upper": {
+   "polylines": [
+    27,
+    28,
+    214,
+    305
+   ],
+   "confidence": "high",
+   "mapName": "LOOKOUT \u2013 UPPER",
+   "note": "checked on a crop | end of Lookout \u2013 Upper | symbol of Lookout \u2013 Upper | along its printed name"
+  },
+  "mammoth": {
+   "polylines": [
+    94,
+    118,
+    119,
+    275
+   ],
+   "confidence": "high",
+   "mapName": "MAMMOTH",
+   "note": "continuation | symbol of Mammoth | end of Mammoth | along its printed name"
+  },
+  "plunge": {
+   "polylines": [
+    88,
+    131,
+    298
+   ],
+   "confidence": "high",
+   "mapName": "PLUNGE",
+   "note": "checked on a crop | end of Plunge | along its printed name"
+  },
+  "plunge-lower": {
+   "polylines": [
+    86,
+    324
+   ],
+   "confidence": "high",
+   "mapName": "PLUNGE \u2013 LOWER",
+   "note": "end of Plunge \u2013 Lower | along its printed name"
+  },
+  "power-line": {
+   "polylines": [
+    224,
+    299
+   ],
+   "confidence": "high",
+   "mapName": "POWER LINE",
+   "note": "end of Power Line | along its printed name"
+  },
+  "satisfaction": {
+   "polylines": [
+    85,
+    290
+   ],
+   "confidence": "high",
+   "mapName": "SATISFACTION",
+   "note": "checked on a crop | along its printed name"
+  },
+  "spiral-stairs": {
+   "polylines": [
+    120,
+    121
+   ],
+   "confidence": "high",
+   "mapName": "SPIRAL STAIRS",
+   "note": "checked on a crop"
+  },
+  "west-drain": {
+   "polylines": [
+    96,
+    97,
+    302
+   ],
+   "confidence": "high",
+   "mapName": "WEST DRAIN",
+   "note": "symbol of West Drain | end of West Drain | along its printed name"
+  },
+  "bridges": {
+   "polylines": [
+    74,
+    345
+   ],
+   "confidence": "high",
+   "mapName": "BRIDGES",
+   "note": "end of Bridges | along its printed name"
+  },
+  "double-cabin": {
+   "polylines": [
+    70,
+    212,
+    222,
+    232,
+    303,
+    340,
+    353
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLE CABIN",
+   "note": "end of Double Cabin | checked on a crop | along its printed name"
+  },
+  "enchanted-forest": {
+   "polylines": [
+    54,
+    181,
+    211,
+    220
+   ],
+   "confidence": "high",
+   "mapName": "ENCHANTED FOREST",
+   "note": "checked on a crop"
+  },
+  "grouse-glade": {
+   "polylines": [
+    242
+   ],
+   "confidence": "high",
+   "mapName": "GROUSE GLADE",
+   "note": "along Grouse Glade"
+  },
+  "heritage-trail": {
+   "polylines": [
+    246
+   ],
+   "confidence": "high",
+   "mapName": "HERITAGE TRAIL",
+   "note": "along Heritage Trail"
+  },
+  "holy-cow": {
+   "polylines": [
+    106,
+    107,
+    317
+   ],
+   "confidence": "high",
+   "mapName": "HOLY COW",
+   "note": "checked on a crop | end of Holy Cow | along its printed name"
+  },
+  "lower-galloping-goose": {
+   "polylines": [
+    73,
+    75,
+    76,
+    77,
+    155,
+    334,
+    348,
+    355
+   ],
+   "confidence": "high",
+   "mapName": "LOWER GALLOPING GOOSE",
+   "note": "checked on a crop | end of Lower Galloping Goose | along its printed name"
+  },
+  "marmot": {
+   "polylines": [
+    11,
+    217,
+    323
+   ],
+   "confidence": "high",
+   "mapName": "MARMOT",
+   "note": "symbol of Marmot | end of Marmot | along its printed name"
+  },
+  "runaway-train": {
+   "polylines": [
+    182
+   ],
+   "confidence": "high",
+   "mapName": "RUNAWAY TRAIN",
+   "note": "checked on a crop"
+  },
+  "sundance": {
+   "polylines": [
+    53,
+    79,
+    80,
+    148,
+    314,
+    337
+   ],
+   "confidence": "high",
+   "mapName": "SUNDANCE",
+   "note": "end of Sundance | checked on a crop | along its printed name"
+  },
+  "teddys-way": {
+   "polylines": [
+    71,
+    72,
+    322
+   ],
+   "confidence": "high",
+   "mapName": "TEDDY\u2019S WAY",
+   "note": "end of Teddy\u2019s Way | checked on a crop | along its printed name"
+  },
+  "beginner-park": {
+   "polylines": [
+    249
+   ],
+   "confidence": "high",
+   "mapName": "BEGINNER PARK",
+   "note": "checked on a crop"
+  },
+  "little-maude": {
+   "polylines": [
+    196,
+    197,
+    285
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE MAUDE",
+   "note": "checked on a crop | end of Little Maude | along its printed name"
+  },
+  "nellie": {
+   "polylines": [
+    143,
+    144,
+    166,
+    288
+   ],
+   "confidence": "high",
+   "mapName": "NELLIE",
+   "note": "checked on a crop | along its printed name"
+  },
+  "ute-park": {
+   "polylines": [
+    176,
+    177,
+    178,
+    179,
+    247,
+    295
+   ],
+   "confidence": "high",
+   "mapName": "UTE PARK",
+   "note": "end of UTE Park | symbol of UTE Park | checked on a crop | along its printed name"
+  },
+  "galloping-goose": {
+   "polylines": [
+    140,
+    147,
+    267,
+    297
+   ],
+   "confidence": "high",
+   "mapName": "GALLOPING GOOSE",
+   "note": "along Galloping Goose | end of Galloping Goose | along its printed name"
+  },
+  "madison": {
+   "polylines": [
+    192,
+    198,
+    213,
+    280,
+    289
+   ],
+   "confidence": "high",
+   "mapName": "MADISON",
+   "note": "checked on a crop | end of Madison | along its printed name"
+  },
+  "magnolia": {
+   "polylines": [
+    138,
+    139,
+    161,
+    175,
+    266,
+    277
+   ],
+   "confidence": "high",
+   "mapName": "MAGNOLIA",
+   "note": "end of Magnolia | checked on a crop | symbol of Magnolia | along its printed name"
+  },
+  "may-girl": {
+   "polylines": [
+    208,
+    209,
+    227,
+    282
+   ],
+   "confidence": "high",
+   "mapName": "MAY GIRL",
+   "note": "checked on a crop | symbol of May Girl | along its printed name"
+  },
+  "prospect-creek": {
+   "polylines": [
+    234,
+    235,
+    307
+   ],
+   "confidence": "high",
+   "mapName": "PROSPECT CREEK",
+   "note": "checked on a crop | end of Prospect Creek | along its printed name"
+  },
+  "rock-roll": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "ROCK & ROLL",
+   "note": "along Rock & Roll"
+  },
+  "rockslide": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "ROCKSLIDE",
+   "note": "along Rockslide"
+  },
+  "sandia": {
+   "polylines": [
+    154,
+    156,
+    157,
+    270
+   ],
+   "confidence": "high",
+   "mapName": "SANDIA",
+   "note": "symbol of Sandia | checked on a crop | end of Sandia | along its printed name"
+  },
+  "stella": {
+   "polylines": [
+    137,
+    191,
+    272
+   ],
+   "confidence": "high",
+   "mapName": "STELLA",
+   "note": "end of Stella | checked on a crop | along its printed name"
+  },
+  "the-roll": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "THE ROLL",
+   "note": "along The Roll"
+  },
+  "audrey": {
+   "polylines": [
+    146,
+    269
+   ],
+   "confidence": "high",
+   "mapName": "AUDREY",
+   "note": "end of Audrey | along its printed name"
+  },
+  "confidence": {
+   "polylines": [
+    252,
+    258
+   ],
+   "confidence": "high",
+   "mapName": "CONFIDENCE",
+   "note": "checked on a crop | along its printed name"
+  },
+  "crystal": {
+   "polylines": [
+    141,
+    257
+   ],
+   "confidence": "high",
+   "mapName": "CRYSTAL",
+   "note": "checked on a crop | along its printed name"
+  },
+  "genevieve": {
+   "polylines": [
+    142,
+    255
+   ],
+   "confidence": "high",
+   "mapName": "GENEVIEVE",
+   "note": "checked on a crop | along its printed name"
+  },
+  "jackpot": {
+   "polylines": [
+    145,
+    193,
+    276
+   ],
+   "confidence": "high",
+   "mapName": "JACKPOT",
+   "note": "end of Jackpot | checked on a crop | along its printed name"
+  },
+  "la-rosa": {
+   "polylines": [
+    251,
+    256
+   ],
+   "confidence": "high",
+   "mapName": "LA ROSA",
+   "note": "checked on a crop | along its printed name"
+  },
+  "wildcat": {
+   "polylines": [
+    194
+   ],
+   "confidence": "high",
+   "mapName": "WILDCAT",
+   "note": "checked on a crop"
+  },
+  "andys-gold": {
+   "polylines": [
+    136,
+    165,
+    262
+   ],
+   "confidence": "high",
+   "mapName": "ANDY\u2019S GOLD",
+   "note": "end of Andy\u2019s Gold | checked on a crop | along its printed name"
+  },
+  "buzzs-glade": {
+   "polylines": [
+    3,
+    225
+   ],
+   "confidence": "high",
+   "mapName": "BUZZ\u2019S GLADE",
+   "note": "checked on a crop | end of Buzz\u2019s Glade"
+  },
+  "dynamo": {
+   "polylines": [
+    16,
+    207,
+    210,
+    219,
+    259,
+    261
+   ],
+   "confidence": "high",
+   "mapName": "DYNAMO",
+   "note": "end of Dynamo | continuation | along its printed name"
+  },
+  "electra": {
+   "polylines": [
+    2,
+    125,
+    265
+   ],
+   "confidence": "high",
+   "mapName": "ELECTRA",
+   "note": "checked on a crop | end of Electra | along its printed name"
+  },
+  "little-rose": {
+   "polylines": [
+    150,
+    164,
+    260
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE ROSE",
+   "note": "end of Little Rose | checked on a crop | along its printed name"
+  },
+  "millions": {
+   "polylines": [
+    134,
+    135,
+    263
+   ],
+   "confidence": "high",
+   "mapName": "MILLIONS",
+   "note": "end of Millions | symbol of Millions | along its printed name"
+  },
+  "woozleys-way-lower": {
+   "polylines": [
+    4,
+    199,
+    283
+   ],
+   "confidence": "high",
+   "mapName": "WOOZLEY\u2019S WAY \u2013 LOWER",
+   "note": "end of Woozley\u2019s Way \u2013 Lower | symbol of Woozley\u2019s Way \u2013 Lower | along its printed name"
+  },
+  "gold-hill-1": {
+   "polylines": [
+    253
+   ],
+   "confidence": "high",
+   "mapName": "GOLD HILL 1",
+   "note": "along its printed name"
+  },
+  "gold-hill-2": {
+   "polylines": [
+    254
+   ],
+   "confidence": "high",
+   "mapName": "GOLD HILL 2",
+   "note": "along its printed name"
+  }
+ }
+}

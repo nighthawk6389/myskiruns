@@ -1,0 +1,173 @@
+{
+ "reviews": {
+  "gold-hill-10": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    22.35,
+    35.16
+   ]
+  },
+  "gold-hill-9": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    20.32,
+    35.44
+   ]
+  },
+  "gold-hill-8": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    19.75,
+    36.93
+   ]
+  },
+  "gold-hill-7": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    19.39,
+    39.2
+   ]
+  },
+  "gold-hill-6": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    14.6,
+    46.31
+   ]
+  },
+  "palmyra-basin": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    31.03,
+    48.72
+   ]
+  },
+  "jellos-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    53.69,
+    59.16
+   ]
+  },
+  "dihedral-face": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    66.32,
+    60.51
+   ]
+  },
+  "westlake": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    74.12,
+    60.51
+   ]
+  },
+  "review": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    48.75,
+    63.21
+   ]
+  },
+  "sweet-martha": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    33.16,
+    68.89
+   ]
+  },
+  "zipper": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    48.49,
+    81.68
+   ]
+  },
+  "the-fans": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:25.000Z",
+   "by": "claude",
+   "labelAt": [
+    28.07,
+    83.66
+   ]
+  }
+ }
+}

@@ -1,0 +1,25 @@
+// Telluride's trail map: the 2024-25 PDF (tellurideskiresort.com's mountain
+// page, still the current one), James Niehues's painting under strokes and
+// outlined names in the runs' colours, and the two inset images the same page
+// shows of the hike-to terrain the map marks "See Reverse for Detail":
+// Revelation Bowl, and Palmyra Peak and Black Iron Bowl. Three panels. Names
+// are spelled as the resort's snow report spells them (report.json: its
+// snow-report plugin's list in Common Crawl's capture of 2026-02-12, every run
+// under its lift); runs the report splits into parts the map draws as one
+// line are one trail (Galloping Goose, Lower Galloping Goose, Double Cabin,
+// Misty Maiden, Boomerang, Cake Walk, Cimarron, Telluride Trail, Bushwacker,
+// See Forever, the Hoot Brown Terrain Park). Ratings are the printed symbols
+// (two circles green, two squares blue, the EX double black); where they
+// differ from the report the map's are kept: Rock & Roll, Rockslide and The
+// Roll (two diamonds; the report's black), Stumper (one; the report's double
+// black), The Fans (one; the report's double black). Sundance is printed
+// twice, blue above Teddy's Way and green below: one trail, blue as the
+// report rates it. The main map's lines are its own strokes, named by the name
+// printed in a gap of each or by its symbol, or settled on crops
+// (decisions.py); the insets' lines were read on crops and routed along the
+// painted ones (names.py). The open faces, bowls and numbered chutes with no
+// line are markers. Printed but not in the report: Capitol, Golden Cross. Not
+// on these maps: Lower Ophir Loop, Silver Tip Trees, Hoot Brown Hike Park.
+// Area elevations: each lift's top (the 2017 Master Development Plan), the
+// Prospect hike-to terrain Palmyra Peak as printed (13,150 ft). x/y/baseY/width
+// are unused layout fields.

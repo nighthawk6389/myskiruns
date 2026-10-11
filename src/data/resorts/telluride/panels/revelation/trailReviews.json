@@ -1,0 +1,43 @@
+{
+ "reviews": {
+  "golden-cross": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:24.000Z",
+   "by": "claude",
+   "labelAt": [
+    44.8,
+    42.71
+   ]
+  },
+  "bees-run": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:24.000Z",
+   "by": "claude",
+   "labelAt": [
+    18.81,
+    47.67
+   ]
+  },
+  "liberty-bell": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:17:24.000Z",
+   "by": "claude",
+   "labelAt": [
+    80.35,
+    54.1
+   ]
+  }
+ }
+}

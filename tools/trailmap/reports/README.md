@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird and Arapahoe Basin keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird, Arapahoe Basin and Telluride keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -166,6 +166,16 @@ its lifts, under each the zones and under those the runs, with an open/closed ic
 handful. `fetch_page.cjs` saves it (`page.html`); `tools/trailmap/resorts/arapahoe-basin/status_report.py` reads the
 lists into `report.json` (151 rows on 2026-10-10, out of season: every run listed, closed; the area as the report's
 terrain area, the rating mostly null). The carpet and the uphill-access rows are no runs (`resort.py` leaves them out).
+
+## Telluride
+
+Its snow report page (tellurideskiresort.com/snow-report/, "Terrain") is server-rendered by a WordPress plugin, but
+out of season it lists only some lifts' runs. The plugin also renders a plain page for scraping
+(`/snow-report-scrape/`) with every lift and run, a level icon each (novice, advanced_novice, intermediate,
+advanced_intermediate, expert, extreme: the map's one and two circles, one and two squares, one and two diamonds);
+Common Crawl captured it in season (2026-02-12, CC-MAIN-2026-08, `cc_lookup.py` on `com,tellurideskiresort)/snow-report`).
+`tools/trailmap/resorts/telluride/status_report.py` reads it (or the live page) into `report.json`: 157 rows, each
+run under its lift, the hike-to terrain under the lift's own "(Hike-To Terrain)" heading.
 
 ## Smugglers' Notch
 

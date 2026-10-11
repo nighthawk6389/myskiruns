@@ -1,0 +1,30 @@
+{
+ "reviews": {
+  "prospect-woods": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:09:22.000Z",
+   "by": "claude",
+   "labelAt": [
+    79.43,
+    34.13
+   ]
+  },
+  "gold-rush": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T01:09:22.000Z",
+   "by": "claude",
+   "labelAt": [
+    52.45,
+    49.37
+   ]
+  }
+ }
+}

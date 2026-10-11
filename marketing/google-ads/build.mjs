@@ -495,6 +495,20 @@ const RESORT_ADS = {
     negatives: ['summer', 'via ferrata', 'aerial adventure park', 'zip line', 'concert', 'hiking', 'mountain bike',
       'jobs', 'wedding', 'hotel', 'lodging', 'webcam', 'parking'],
   },
+  telluride: {
+    short: 'Telluride',
+    path: 'Telluride',
+    area: 'See Forever to Palmyra Peak',
+    // bare "telluride" is also the town and its festivals: only with the resort's names or a map
+    names: ['telluride ski resort', 'telluride', 'telluride mountain village'],
+    keywords: [
+      ['telluride ski trails', 'phrase'],
+      ['telluride ski map', 'exact'],
+    ],
+    // the town's festivals and summer, its lodging and the airport, the other Tellurides (the software)
+    negatives: ['film festival', 'bluegrass', 'jazz', 'festival', 'summer', 'mountain bike', 'hiking', 'golf', 'hotel',
+      'lodging', 'rental', 'real estate', 'airport', 'jobs', 'wedding', 'gondola hours', 'software', 'bitdefender'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */
@@ -722,6 +736,9 @@ const PANEL_SITELINKS = {
   ],
   'arapahoe-basin': [
     { panel: 'zuma-bowl', peak: 'montezuma-bowl', text: 'Zuma Bowl Trail Map', line: 'Zuma Cornice to Elk Meadows' },
+  ],
+  telluride: [
+    { panel: 'black-iron-bowl', peak: 'prospect-hike-to', text: 'Black Iron Bowl Map', line: 'Palmyra Peak and its chutes' },
   ],
 };
 

@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's thirty-eight resorts got their overlays, written so the next resort (or the next season of one of
+How the app's thirty-nine resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -62,7 +62,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 | the source gives you | route | done this way | start from |
 |---|---|---|---|
 | trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
-| vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels), Alta (rounded symbols, `pdf_symbols.py --rounded --max-square`), Arapahoe Basin (one page of two paintings, two panels; most runs a name with no line: the stretch along it, `LABEL_LINE`) | Sunday River, Park City; Alta or Arapahoe Basin for rounded symbols |
+| vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels), Alta (rounded symbols, `pdf_symbols.py --rounded --max-square`), Arapahoe Basin (one page of two paintings, two panels; most runs a name with no line: the stretch along it, `LABEL_LINE`), Telluride (names in the runs' colours, the EX double black; its hike-to terrain on two inset images read on crops, Whitefish's way) | Sunday River, Park City; Alta or Arapahoe Basin for rounded symbols |
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor, Northstar (white names haloed in the line's colour: the halo is the colour, and is dropped from the lines; one united outline for the runs that meet, cut at each junction) | Mt. Bachelor; Northstar for united outlines |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
 | a painting with no lines, names as text | every run traced along its painted cut by trace readers (Part 4) | Jay Peak | Jay Peak |
@@ -347,7 +347,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the thirty-eight resorts settled, so the next ones come out alike:
+What the thirty-nine resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -648,6 +648,7 @@ give the same.
 | [Beaver Creek](#beaver-creek) | this season's map an image only (CDN); a 2023 vector export of the artwork | registration, glyph names, symbols on the lines (`SYMBOL_ON_LINE`) | `regen.sh` | a Vail Resorts map with no PDF this season |
 | [Big Bear](#big-bear) | three images, no PDF: one print drawing the lines, two painting the runs with none; three interactive maps | the print's own lines named by their symbols; the interactive maps' lines and stretches along the names elsewhere; `names.py` | `regen.sh` | an image-only map whose panels differ in kind |
 | [Arapahoe Basin](#arapahoe-basin) | one PDF page of two paintings under strokes and outlined black names; most runs a name and a symbol with no line | `pdf_resort.py` per panel, glyph sheets, the stretch along each name with no line (`LABEL_LINE`) | `regen.sh` | strokes and glyph names where many runs have no line |
+| [Telluride](#telluride) | PDF strokes and outlined names in the runs' colours over a 100 dpi painting; two inset images of the hike-to terrain | `pdf_resort.py`, glyph sheets, every piece on per-piece crops; the insets read on crops (`names.py`, `route_trace.py`) | `regen.sh` | a PDF plus image insets, panels of two kinds |
 
 ## Killington
 
@@ -1969,6 +1970,58 @@ terrain areas (Front Side, Pallavicini, The Beavers, Montezuma Bowl, Steep Gulli
 - **Checked:** every overlay on crops (`overlay_audit.py`, 13 and 4 sheets, every cell read); every diamond and EX
   on `symbol_audit.py --mode diamonds`; `compare.py` against the report; hover 290/290 and 86/86; the app check;
   a rebuild from an empty work folder, byte for byte.
+
+## Telluride
+
+138 trails (120 + 18) · Colorado · three panels: Telluride (the whole map), Revelation Bowl, Palmyra & Black Iron · areas:
+the report's lifts (Chondola, Village Express, Polar Queen Express, Apex Lift, Lift 7, Oak Street Lift, Plunge Lift,
+Sunshine Express, Ute Park, Prospect Express and its hike-to terrain, Gold Hill Express and its hike-to terrain,
+Revelation Lift and its hike-to terrain) · `tools/trailmap/resorts/telluride/`.
+
+- **Source:** the trail map PDF tellurideskiresort.com's mountain page links ("DOWNLOAD MAP PDF",
+  2425_TSR_Trail-Map_layered-trailmap.pdf, plain curl; still the current one in October 2026): one Illustrator page,
+  James Niehues's painting embedded at only 100 dpi under the vector layer. Lines: 1 pt solid strokes in black, blue
+  and green over 2 pt white casings; glades white hatching; lifts red (dashed: the Revelation lift and the gondolas);
+  the terrain parks' freestyle terrain orange strokes 5 to 8 pt. Names: outlined glyphs (no text at all) in the
+  run's colour on a white halo, printed in a gap of the run's line, the symbols after it (rounded fills: one or two
+  circles, squares, diamonds; the extreme terrain's two outlined diamonds holding E and X); the Hoot Brown Terrain Park
+  a white name on its orange stroke, Beginner Park orange. The hike-to terrain the map marks "See Reverse for Detail"
+  is drawn only on two inset images the same page shows (revvy-23.24-1.png, Revelation Bowl, 962x878;
+  palmyra-23.24.png, Palmyra Peak and Black Iron Bowl, 962x704): panels of their own. All three SHA-256s are checked.
+- **Route:** `prepare.py`: the page at 3 px/pt with the painting upscaled (Lanczos) before rendering
+  (`matte_pdf_layer.py --resample`); the 0.9 to 1.1 pt solid strokes, then the orange park strokes (`--append`); the
+  glyphs in the four name colours read once on six contact sheets (`letters.json`, 182 shapes), two diamonds up to 1.65
+  of their width apart a double (`--double-dist 1.65`), the EX taken as double black. `pdf_resort.py` with
+  `SYMBOL_REACH` 10 pt (a double diamond's middle is up to 9 pt from its name; the second of two circles or squares,
+  about 11 pt, is left over and harmless); names on two lines joined, ENCHANTED and FOREST (printed apart along one
+  line) one name, and names printed more than once told apart by place (`RENAME_AT`: the blue BAIL OUT is Lower Bail
+  Out; the two MEADOWS either side of the chondola North and South). The insets are Whitefish's recipe: each image upscaled 2x, every name
+  with its symbol and each chute's line as waypoints read on crops (`names.py`), routed along the painted line
+  (`route_trace.py`), one piece per line (`GROUPED`); the numbered Gold Hill chutes and the bowls' faces markers.
+- **Rebuild:** `tools/trailmap/resorts/telluride/regen.sh` (11 s); it checks the three sources' SHA-256s.
+- **Truth:** the trail report (`report.json`): the snow report plugin's scrape page in Common Crawl's capture of
+  2026-02-12 (the live page lists only some lifts out of season; `status_report.py`). Runs it splits into parts the map
+  draws as one line are one trail (Galloping Goose, Lower Galloping Goose, Double Cabin, Misty Maiden, Boomerang, Cake
+  Walk, Cimarron, Telluride Trail, Bushwacker, See Forever, Hoot Brown Terrain Park; `ONE_RUN`); its named parts the
+  map prints apart stay apart (Plunge – Lower, Lookout – Upper and – Lower, Woozley's Way – Lower, Village Bypass –
+  Lower, Boomerang – Lower, Mine Shaft). Ratings are the symbols; the report differs on Rock & Roll, Rockslide and The
+  Roll (two diamonds; black on the report), Stumper and The Fans (one; double black on it): the map's kept. Sundance,
+  printed blue above Teddy's Way and green below, is one trail, blue as the report rates it. Printed but not in the
+  report: Capitol, Golden Cross. In the report and not printed: Lower Ophir Loop, Silver Tip Trees, Hoot Brown Hike
+  Park. Areas' elevations: each lift's top from the 2017 Master Development Plan (Table IV-1); the Prospect hike-to
+  terrain Palmyra Peak as printed (13,150 ft).
+- **Decisions** (`panels/main/decisions.py`, every piece settled on per-piece crops and 6-14x renders of the PDF):
+  the lines on below a run's symbol to the run it meets (the Gold Hill and Apex chutes, Plunge's side), the junction
+  tangles by Bon Vivant and Prospect Bowl, Boomerang's fork into Sheridan Headwall (cut), the one stroke holding
+  Genevieve and La Rosa (and Crystal and Confidence) up from the Prospect top (cut at the junction), the three
+  Meadows, the parks' orange strokes; Satisfaction's line, at first taken for Plunge's, settled by drawing each PDF
+  stroke alone (`tools/archive/telluride/strokes_view.py`). Not trails: arrows from icons and labels, the arrowheads
+  on the arrowed links between the Gold Hill and Prospect bases, three unnamed links. Traced: Lower Village Bypass and
+  Silver Glade through their labels.
+- **Checked:** every overlay on crops (`overlay_audit.py`, 13 + 1 + 3 sheets, every cell read; Jackpot, Audrey,
+  Madison, Wildcat, The Peaks, Nellie, Satisfaction and Silver Glade fixed and read again); every diamond on
+  `symbol_audit.py --mode diamonds`; `compare.py` against the report; hover 326/326, 12/12, 55/55; the app check; a
+  rebuild from an empty work folder, byte for byte.
 
 # Part 4. Methods in detail
 

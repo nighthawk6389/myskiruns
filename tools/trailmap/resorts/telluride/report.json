@@ -1,0 +1,790 @@
+{
+"_source": "Telluride's snow report plugin's scrape page (tellurideskiresort.com/snow-report-scrape/), Common Crawl capture 2026-02-12 (CC-MAIN-2026-08); status_report.py",
+"trails": [
+[
+"Meadows – South",
+"Chondola",
+"Green"
+],
+[
+"Meadows – North",
+"Chondola",
+"Green"
+],
+[
+"The Peaks",
+"Chondola",
+"Green"
+],
+[
+"Children’s Magic Carpet",
+"Childrens Magic Carpet",
+"Green"
+],
+[
+"Adult Magic Carpet",
+"Adult Magic Carpet",
+"Green"
+],
+[
+"Hermit",
+"Village Express",
+"Blue"
+],
+[
+"Hoot Brown Terrain Park – Lower",
+"Village Express",
+"Blue"
+],
+[
+"Hoot Brown Hike Park",
+"Village Express",
+"Blue"
+],
+[
+"NASTAR",
+"Village Express",
+"Blue"
+],
+[
+"Humboldt Draw",
+"Village Express",
+"Blue"
+],
+[
+"Misty Maiden – Upper",
+"Village Express",
+"Blue"
+],
+[
+"Sheridan Headwall",
+"Village Express",
+"Blue"
+],
+[
+"Smuggler",
+"Village Express",
+"Blue"
+],
+[
+"Misty Maiden – Lower",
+"Village Express",
+"Blue"
+],
+[
+"Misty Maiden – Middle",
+"Village Express",
+"Blue"
+],
+[
+"Butterfly",
+"Village Express",
+"Blue"
+],
+[
+"Boomerang – Upper",
+"Village Express",
+"Blue"
+],
+[
+"Boomerang – Middle",
+"Village Express",
+"Blue"
+],
+[
+"Boomerang – Lower",
+"Village Express",
+"Green"
+],
+[
+"Village Bypass – Lower",
+"Village Express",
+"Green"
+],
+[
+"Village Bypass",
+"Village Express",
+"Green"
+],
+[
+"Pick ‘n Gad",
+"Village Express",
+"Blue"
+],
+[
+"Peek-a-boo",
+"Village Express",
+"Blue"
+],
+[
+"Hoot Brown Terrain Park – Upper",
+"Village Express",
+"Blue"
+],
+[
+"Lower Ophir Loop",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Gold Rush",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Henry’s – South",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Henry’s – North",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Silver Tip",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Silver Tip Trees",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Stormin’ Norman",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Dew Drop – Drain",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Dew Drop",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Cake Walk – Upper",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Cake Walk – Lower",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Alta",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Ophir Loop",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Polar Queen",
+"Polar Queen Express",
+"Blue"
+],
+[
+"Happy Thought",
+"Apex Lift",
+"DoubleBlack"
+],
+[
+"See Forever (Lift 6 to Lift 7)",
+"Apex Lift",
+"Blue"
+],
+[
+"Silver Glade",
+"Apex Lift",
+"Black"
+],
+[
+"Sully’s",
+"Apex Lift",
+"DoubleBlack"
+],
+[
+"Giant Steps",
+"Apex Lift",
+"DoubleBlack"
+],
+[
+"Chongo’s",
+"Apex Lift",
+"DoubleBlack"
+],
+[
+"Apex",
+"Apex Lift",
+"Black"
+],
+[
+"Allais Alley",
+"Apex Lift",
+"DoubleBlack"
+],
+[
+"Zulu Queen",
+"Apex Lift",
+"DoubleBlack"
+],
+[
+"Woozley’s Way",
+"Apex Lift",
+"Blue"
+],
+[
+"Cimarron – Middle",
+"Lift 7",
+"Black"
+],
+[
+"Kids Hill",
+"Lift 7",
+"Blue"
+],
+[
+"Milk Run",
+"Lift 7",
+"Black"
+],
+[
+"North Chute",
+"Lift 7",
+"DoubleBlack"
+],
+[
+"Pandora",
+"Lift 7",
+"Black"
+],
+[
+"Stumper",
+"Lift 7",
+"DoubleBlack"
+],
+[
+"Cimarron – Upper",
+"Lift 7",
+"Black"
+],
+[
+"Telluride Trail – Lower (below Easy Out)",
+"Lift 7",
+"Blue"
+],
+[
+"Telluride Trail – Upper (above Easy Out)",
+"Lift 7",
+"Blue"
+],
+[
+"O’Riley’s",
+"Lift 7",
+"Black"
+],
+[
+"Mine Shaft (below Bail Out)",
+"Oak Street Lift",
+"DoubleBlack"
+],
+[
+"Lower Bail Out",
+"Oak Street Lift",
+"Blue"
+],
+[
+"Jaws",
+"Oak Street Lift",
+"Black"
+],
+[
+"Mine Shaft",
+"Oak Street Lift",
+"DoubleBlack"
+],
+[
+"Cats Paw",
+"Oak Street Lift",
+"DoubleBlack"
+],
+[
+"Bail Out",
+"Oak Street Lift",
+"Black"
+],
+[
+"Joint Point",
+"Plunge Lift",
+"Black"
+],
+[
+"Kant-Mak-M",
+"Plunge Lift",
+"DoubleBlack"
+],
+[
+"Last Chance",
+"Plunge Lift",
+"Blue"
+],
+[
+"Log Pile",
+"Plunge Lift",
+"Black"
+],
+[
+"Lookout – Upper",
+"Plunge Lift",
+"Blue"
+],
+[
+"Mammoth",
+"Plunge Lift",
+"Black"
+],
+[
+"Satisfaction",
+"Plunge Lift",
+"Black"
+],
+[
+"Spiral Stairs",
+"Plunge Lift",
+"DoubleBlack"
+],
+[
+"Lookout – Lower",
+"Plunge Lift",
+"Blue"
+],
+[
+"Easy Out",
+"Plunge Lift",
+"Blue"
+],
+[
+"East Drain",
+"Plunge Lift",
+"DoubleBlack"
+],
+[
+"Captain Jack’s",
+"Plunge Lift",
+"Black"
+],
+[
+"Bushwacker – Upper",
+"Plunge Lift",
+"Black"
+],
+[
+"Bushwacker – Lower",
+"Plunge Lift",
+"Black"
+],
+[
+"West Drain",
+"Plunge Lift",
+"DoubleBlack"
+],
+[
+"Power Line",
+"Plunge Lift",
+"DoubleBlack"
+],
+[
+"Plunge – Lower",
+"Plunge Lift",
+"Black"
+],
+[
+"Plunge",
+"Plunge Lift",
+"Black"
+],
+[
+"Heritage Trail",
+"Sunshine Express",
+"Blue"
+],
+[
+"Grouse Glade",
+"Sunshine Express",
+"Green"
+],
+[
+"Holy Cow",
+"Sunshine Express",
+"DoubleBlack"
+],
+[
+"Lower Galloping Goose (Upper)",
+"Sunshine Express",
+"Green"
+],
+[
+"Marmot",
+"Sunshine Express",
+"Blue"
+],
+[
+"Runaway Train",
+"Sunshine Express",
+"DoubleBlack"
+],
+[
+"Lower Galloping Goose (Lower)",
+"Sunshine Express",
+"Green"
+],
+[
+"Lower Galloping Goose (Middle)",
+"Sunshine Express",
+"Green"
+],
+[
+"Enchanted Forest",
+"Sunshine Express",
+"Blue"
+],
+[
+"Double Cabin (Upper)",
+"Sunshine Express",
+"Green"
+],
+[
+"Double Cabin (Lower)",
+"Sunshine Express",
+"Green"
+],
+[
+"Bridges",
+"Sunshine Express",
+"Green"
+],
+[
+"Sundance",
+"Sunshine Express",
+"Blue"
+],
+[
+"Teddy’s Way",
+"Sunshine Express",
+"Green"
+],
+[
+"Little Maude",
+"UTE Park",
+"Green"
+],
+[
+"Nellie",
+"UTE Park",
+"Green"
+],
+[
+"UTE Park",
+"UTE Park",
+"Green"
+],
+[
+"Beginner Park",
+"UTE Park",
+"Green"
+],
+[
+"Madison",
+"Prospect Express",
+"Green"
+],
+[
+"Magnolia",
+"Prospect Express",
+"Blue"
+],
+[
+"May Girl",
+"Prospect Express",
+"Green"
+],
+[
+"Prospect Woods",
+"Prospect Express",
+"Black"
+],
+[
+"Rock & Roll",
+"Prospect Express",
+"Black"
+],
+[
+"Rockslide",
+"Prospect Express",
+"Black"
+],
+[
+"Sandia",
+"Prospect Express",
+"Blue"
+],
+[
+"Stella",
+"Prospect Express",
+"Blue"
+],
+[
+"Galloping Goose – Upper",
+"Prospect Express",
+"Green"
+],
+[
+"Galloping Goose – Lower",
+"Prospect Express",
+"Green"
+],
+[
+"The Roll",
+"Prospect Express",
+"Black"
+],
+[
+"Prospect Creek",
+"Prospect Express",
+"Black"
+],
+[
+"Jackpot",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Jello’s Bowl",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Lakeview",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Mountain Quail",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Nice Chute",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Review",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Roy Boy",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Senior’s",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"La Rosa",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Genevieve",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Electric Shock",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Dihedral Face",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Dihedral Chute",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Crystal",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Confidence",
+"Prospect Express (Hike-To Terrain)",
+"Black"
+],
+[
+"Audrey",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Sunrise",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Sweet Martha",
+"Prospect Express (Hike-To Terrain)",
+"Black"
+],
+[
+"Palmyra Basin",
+"Prospect Express (Hike-To Terrain)",
+"Black"
+],
+[
+"Zipper",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Wildcat",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Westlake",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Tram Shot",
+"Prospect Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Little Rose",
+"Gold Hill Express",
+"DoubleBlack"
+],
+[
+"Millions",
+"Gold Hill Express",
+"DoubleBlack"
+],
+[
+"See Forever (Lift 14 to Lift 6)",
+"Gold Hill Express",
+"Blue"
+],
+[
+"Electra",
+"Gold Hill Express",
+"DoubleBlack"
+],
+[
+"Dynamo",
+"Gold Hill Express",
+"DoubleBlack"
+],
+[
+"Buzz’s Glade",
+"Gold Hill Express",
+"DoubleBlack"
+],
+[
+"Andy’s Gold",
+"Gold Hill Express",
+"DoubleBlack"
+],
+[
+"Woozley’s Way – Lower",
+"Gold Hill Express",
+"Blue"
+],
+[
+"The Fans",
+"Gold Hill Express (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"See Forever – Upper",
+"Revelation Lift",
+"Blue"
+],
+[
+"Liberty Bell",
+"Revelation Lift",
+"Black"
+],
+[
+"Majestic",
+"Revelation Lift",
+"Black"
+],
+[
+"Silvercloud",
+"Revelation Lift",
+"Black"
+],
+[
+"Gold Hill 1",
+"Revelation Lift",
+"DoubleBlack"
+],
+[
+"Bee’s Run",
+"Revelation Lift",
+"Black"
+],
+[
+"Gold Hill 2",
+"Revelation Lift (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Gold Hill 6",
+"Revelation Lift (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Gold Hill 7",
+"Revelation Lift (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Gold Hill 8",
+"Revelation Lift (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Gold Hill 9",
+"Revelation Lift (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"Gold Hill 10",
+"Revelation Lift (Hike-To Terrain)",
+"DoubleBlack"
+],
+[
+"North Meadows Carpet",
+"North Meadows Carpet",
+"Green"
+]
+]
+}
