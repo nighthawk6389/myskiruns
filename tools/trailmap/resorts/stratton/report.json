@@ -1,0 +1,620 @@
+{
+ "_source": "stratton.com's conditions widget feed (mtnpowder, resort 1, through its mtnfeed config v4.mtnfeed.com/resorts/stratton.json), fetched out of season on 2026-10-11; tools/trailmap/reports/README.md",
+ "trails": [
+  [
+   "Buck Shot",
+   "Glades",
+   "Blue"
+  ],
+  [
+   "Cabin Fever",
+   "Glades",
+   "Black"
+  ],
+  [
+   "Dancing Bear",
+   "Glades",
+   "Black"
+  ],
+  [
+   "Daniel's Web",
+   "Glades",
+   "Green"
+  ],
+  [
+   "Diamond in the Rough",
+   "Glades",
+   "Black"
+  ],
+  [
+   "Eclipse",
+   "Glades",
+   "Blue"
+  ],
+  [
+   "Emerald Forest",
+   "Glades",
+   "Blue"
+  ],
+  [
+   "Free Fall Gully",
+   "Glades",
+   "DoubleBlack"
+  ],
+  [
+   "Kidderbrook Ravine",
+   "Glades",
+   "DoubleBlack"
+  ],
+  [
+   "Moonbeam",
+   "Glades",
+   "Blue"
+  ],
+  [
+   "Moondance",
+   "Glades",
+   "DoubleBlack"
+  ],
+  [
+   "Shred Wood Forest",
+   "Glades",
+   "DoubleBlack"
+  ],
+  [
+   "Squirrel's Nest",
+   "Glades",
+   "DoubleBlack"
+  ],
+  [
+   "Test Pilot",
+   "Glades",
+   "DoubleBlack"
+  ],
+  [
+   "Vertigo",
+   "Glades",
+   "DoubleBlack"
+  ],
+  [
+   "West Pilot",
+   "Glades",
+   "Blue"
+  ],
+  [
+   "Why Not",
+   "Glades",
+   "DoubleBlack"
+  ],
+  [
+   "Downtowner",
+   "Learning Areas",
+   "Green"
+  ],
+  [
+   "Stage 1",
+   "Learning Areas",
+   "Green"
+  ],
+  [
+   "Tyrolienne",
+   "Learning Areas",
+   "Green"
+  ],
+  [
+   "Village Walk",
+   "Learning Areas",
+   "Green"
+  ],
+  [
+   "Beeline",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Betwixt",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Cabot's Run",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Craig's Run",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Daniel Webster",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Duck Soup",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "East Byrnes Side",
+   "Lower Mountain",
+   "TerrainPark"
+  ],
+  [
+   "Ethan's Alley",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Flukey's Run",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Grizzly Access",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Hemlock",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Lad's Legacy",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Lower Standard",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Lower Tamarack",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Mark's Run",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Old Log Road",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Old Smoothie",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Overpass",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Runaway",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Snow Bowl Alley",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Spillway",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Suntanner",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Tink's Link",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Tyrolienne Park",
+   "Lower Mountain",
+   "TerrainPark"
+  ],
+  [
+   "Underpass",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "White Birch",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Yodeler",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Yodeler Express",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "91",
+   "Sun Bowl",
+   "Green"
+  ],
+  [
+   "91 Extension",
+   "Sun Bowl",
+   "Green"
+  ],
+  [
+   "Big Ben",
+   "Sun Bowl",
+   "Green"
+  ],
+  [
+   "Buster's Trail",
+   "Sun Bowl",
+   "Blue"
+  ],
+  [
+   "Churchill Downs",
+   "Sun Bowl",
+   "Green"
+  ],
+  [
+   "Gentle Ben",
+   "Sun Bowl",
+   "Blue"
+  ],
+  [
+   "Home Run",
+   "Sun Bowl",
+   "Green"
+  ],
+  [
+   "Lower Down Easter",
+   "Sun Bowl",
+   "Blue"
+  ],
+  [
+   "Lower Kidderbrook",
+   "Sun Bowl",
+   "Green"
+  ],
+  [
+   "Lower Middlebrook",
+   "Sun Bowl",
+   "Green"
+  ],
+  [
+   "Main Line",
+   "Sun Bowl",
+   "Green"
+  ],
+  [
+   "Number 6",
+   "Sun Bowl",
+   "Blue"
+  ],
+  [
+   "Rick's Catch 22",
+   "Sun Bowl",
+   "Black"
+  ],
+  [
+   "Rising Star",
+   "Sun Bowl",
+   "Black"
+  ],
+  [
+   "Rowley's Run",
+   "Sun Bowl",
+   "Blue"
+  ],
+  [
+   "Shortcut Big Ben",
+   "Sun Bowl",
+   "Blue"
+  ],
+  [
+   "Shortcut Gentle Ben",
+   "Sun Bowl",
+   "Blue"
+  ],
+  [
+   "Solstice Way",
+   "Sun Bowl",
+   "Green"
+  ],
+  [
+   "Sunbeam",
+   "Sun Bowl",
+   "Blue"
+  ],
+  [
+   "Sunriser Supertrail",
+   "Sun Bowl",
+   "Blue"
+  ],
+  [
+   "Tree Top Way",
+   "Sun Bowl",
+   "Blue"
+  ],
+  [
+   "Way Home",
+   "Sun Bowl",
+   "Blue"
+  ],
+  [
+   "Lower Standard - Uphill",
+   "Uphill Travel",
+   "Green"
+  ],
+  [
+   "Lower & Upper Kidderbrook",
+   "Uphill Travel",
+   "Black"
+  ],
+  [
+   "Lower Wanderer, West Meadows, Mike's Way",
+   "Uphill Travel",
+   "Blue"
+  ],
+  [
+   "Old Log Rd, West Meadows, Mike's Way",
+   "Uphill Travel",
+   "Blue"
+  ],
+  [
+   "Sun Bowl, Home Run, 91, Main Base Area",
+   "Uphill Travel",
+   "Blue"
+  ],
+  [
+   "Yodeler, Underpass",
+   "Uphill Travel",
+   "Green"
+  ],
+  [
+   "Bear Bottom",
+   "Upper Mountain",
+   "Blue"
+  ],
+  [
+   "Bear Down",
+   "Upper Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Big D",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Black Bear",
+   "Upper Mountain",
+   "Blue"
+  ],
+  [
+   "Dino's Drop",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Drifter Link",
+   "Upper Mountain",
+   "Green"
+  ],
+  [
+   "Frank's Fall Line",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Free Fall",
+   "Upper Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Get My Drift",
+   "Upper Mountain",
+   "Blue"
+  ],
+  [
+   "Interstate",
+   "Upper Mountain",
+   "Blue"
+  ],
+  [
+   "Janeway Junction",
+   "Upper Mountain",
+   "Blue"
+  ],
+  [
+   "Liftline Cut Through",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Lower Drifter",
+   "Upper Mountain",
+   "Blue"
+  ],
+  [
+   "Lower East Meadow",
+   "Upper Mountain",
+   "Green"
+  ],
+  [
+   "Lower Grizzly Bear",
+   "Upper Mountain",
+   "Blue"
+  ],
+  [
+   "Lower Liftline",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Lower Slalom Glade",
+   "Upper Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Lower Spruce",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Lower Switchback",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Lower Wanderer",
+   "Upper Mountain",
+   "Green"
+  ],
+  [
+   "Lower West Meadow",
+   "Upper Mountain",
+   "Green"
+  ],
+  [
+   "Mike's Cut Through",
+   "Upper Mountain",
+   "Green"
+  ],
+  [
+   "Mike's Way",
+   "Upper Mountain",
+   "Green"
+  ],
+  [
+   "Old Number 8",
+   "Upper Mountain",
+   "Blue"
+  ],
+  [
+   "Polar Bear",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Rimeline",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Shooter",
+   "Upper Mountain",
+   "Blue"
+  ],
+  [
+   "Stevek",
+   "Upper Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Sun Bowl Express",
+   "Upper Mountain",
+   "Blue"
+  ],
+  [
+   "The Chute",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Upper Down Easter",
+   "Upper Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Upper Drifter",
+   "Upper Mountain",
+   "Blue"
+  ],
+  [
+   "Upper East Meadow",
+   "Upper Mountain",
+   "Green"
+  ],
+  [
+   "Upper Grizzly Bear",
+   "Upper Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Upper Kidderbrook",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Upper Liftline",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Upper Middlebrook",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Upper Slalom Glade",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Upper Spruce",
+   "Upper Mountain",
+   "DoubleBlack"
+  ],
+  [
+   "Upper Standard",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Upper Switchback",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Upper Tamarack",
+   "Upper Mountain",
+   "Black"
+  ],
+  [
+   "Upper Wanderer",
+   "Upper Mountain",
+   "Green"
+  ],
+  [
+   "Upper West Meadow",
+   "Upper Mountain",
+   "Green"
+  ],
+  [
+   "Work Road",
+   "Upper Mountain",
+   "Green"
+  ],
+  [
+   "World Cup",
+   "Upper Mountain",
+   "DoubleBlack"
+  ]
+ ]
+}

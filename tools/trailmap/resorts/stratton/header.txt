@@ -1,0 +1,22 @@
+// Stratton's 2025-26 trail map (James Niehues's painting): the resort's PDF
+// is flattened, the whole page one image, the map image. Its lines, names
+// and symbols come from the 2020-21 export of the same artwork (skimap.org
+// map 20146: every run a 1 pt dashed stroke, the names live text, the
+// symbols fills), registered on this season's image; what this season
+// prints otherwise was read on crops of it: the lower mountain's parks
+// redrawn (the Progression Park gone; Beeline, Betwixt, Suntanner,
+// Tyrolienne and East Byrnes Side now pills or names with their lines
+// moved), Suntanner's, Spillway's, Yodeler's, Shortcut Big Ben's, Village
+// Walk's and Tyrolienne's lines drawn anew (traced), and some names moved
+// or shortened. Names are spelled as the resort's trail report spells them
+// (report.json: the conditions feed, mtnpowder); ratings are the printed
+// symbols, and they all agree with it; the names printed with no symbol
+// (Beeline, Betwixt, Big Ben and the parks) take the report's. Not printed:
+// Stevek (a race venue in the legend's note) and the uphill routes. Lines
+// are named by the name printed along them or settled on crops
+// (decisions.py). Glades print no line: markers at their names, as Mike's
+// Cut Through (a leader into the trees) and Upper Down Easter. Area
+// elevations: the summit (the Summit Gondola's top) for the Upper Mountain
+// and the glades, the others the top of their highest lift (OpenStreetMap's
+// lift lines on the USGS's 10 m elevation model; tools/trailmap/lift_tops.py).
+// x/y/baseY/width are unused layout fields.

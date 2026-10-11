@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's forty-one resorts got their overlays, written so the next resort (or the next season of one of
+How the app's forty-two resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -61,7 +61,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 
 | the source gives you | route | done this way | start from |
 |---|---|---|---|
-| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Mount Snow (recipe D: one older export's strokes, another's text; rated by the names' colours), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
+| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Mount Snow (recipe D: one older export's strokes, another's text; rated by the names' colours), Stratton (recipe D: an export five seasons older, its changes read on crops), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
 | vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels), Alta (rounded symbols, `pdf_symbols.py --rounded --max-square`), Arapahoe Basin (one page of two paintings, two panels; most runs a name with no line: the stretch along it, `LABEL_LINE`), Telluride (names in the runs' colours, the EX double black; its hike-to terrain on two inset images read on crops, Whitefish's way) | Sunday River, Park City; Alta or Arapahoe Basin for rounded symbols |
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor, Northstar (white names haloed in the line's colour: the halo is the colour, and is dropped from the lines; one united outline for the runs that meet, cut at each junction), Crested Butte (dashed black runs a fill per dash, linked; the boundary's dots never chained; its extreme terrain and an inset of numbered runs markers) | Mt. Bachelor; Northstar for united outlines; Crested Butte for dashed lines |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
@@ -198,7 +198,7 @@ outside their clip (last season's names left in the file: drop them), names on l
    it the symbol printed by it (`SYMBOL_OF`).
 3. Then A's steps 5-7. Expect more pieces to settle on crops: centre lines fork at junctions.
 
-### D. An older export registered on this season's map (Wildcat, Heavenly, Beaver Creek, Mount Snow; Deer Valley the other way round)
+### D. An older export registered on this season's map (Wildcat, Heavenly, Beaver Creek, Mount Snow, Stratton; Deer Valley the other way round)
 
 When this season's PDF is flattened, outlined or missing but an older export of the same artwork has live layers:
 1. `register_pages.py --pdf old.pdf --page 0 --image this_season.png [--box ...]`: the affine (SIFT, RANSAC); keep
@@ -218,6 +218,15 @@ names outlined; the 2024-25 uphill-access map's live text for the names, some of
 both on the image and carry the second's points through the image onto the first's page (`prepare.py`'s
 `to_page`). An inset at another scale gets its own affine (`--clip` to the inset; a clip reaching past the page's
 edge is cut to it, as the page renders only inside its box).
+
+An export five seasons older (Stratton: the 2020-21 PDF on the 2025-26 flattened one) still registers to 0.14 px, but
+the vector layer has changed in places: render the old page on the new grid and diff it (`tools/archive/stratton/`:
+`editions_diff.py`, `diff_tiles.py`), score every old label, stroke and symbol on the new image (`find_labels.py`,
+`check_objects.py`: the share of its own pixels the new image still shows in its colour), and look for the new
+image's run-coloured pixels the old page has none of (`new_lines.py`). Then, in `resort.py`, what is gone (`GONE`),
+moved or shortened (`MOVED`: the old label's characters spaced along the new label's line), new (`NEW_LABELS`,
+`NEW_SYMBOLS`); in `decisions.py`, the old strokes no longer drawn (`UNNAMED`) and the lines drawn anew (`TRACED`,
+`trace_ink.py` along the line's colour). A line that runs past the new image's edge is trimmed to it (`TRIMS`).
 
 ### E. Names you can't extract (start from Okemo; Sugarbush)
 
@@ -357,7 +366,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the forty-one resorts settled, so the next ones come out alike:
+What the forty-two resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -662,6 +671,7 @@ give the same.
 | [Telluride](#telluride) | PDF strokes and outlined names in the runs' colours over a 100 dpi painting; two inset images of the hike-to terrain | `pdf_resort.py`, glyph sheets, every piece on per-piece crops; the insets read on crops (`names.py`, `route_trace.py`) | `regen.sh` | a PDF plus image insets, panels of two kinds |
 | [Crested Butte](#crested-butte) | PDF lines as filled outlines (the black runs dashed, a fill per dash), outlined names, a 72 dpi painting; an inset of numbered runs | `pdf_outline_lines.py` (`--linked`, `--undashed`), the 2022-23 PDF's painting swapped in (`--replace`), glyph sheets, every piece on per-piece crops | `regen.sh` | dashed outlined lines; a painting sharper in an older PDF |
 | [Mount Snow](#mount-snow) | this season's map an image only (its PDF flattened at 72 dpi; the CDN's PNG); a 2023-24 export's strokes, a 2024-25 uphill map's text; an inset | two exports registered on the image (the inset on its own), names rated by their colour (`COLOR_SYMBOL`), the inset's names placed on crops (`EXTRA`) | `regen.sh` | lines and names from two older exports |
+| [Stratton](#stratton) | this season's PDF flattened (one image); the 2020-21 export of the artwork with live strokes, text and fills | registration, the changes since read on crops (`GONE`, `MOVED`, traced lines) | `regen.sh` | an export several seasons older than the map |
 
 ## Killington
 
@@ -2140,6 +2150,51 @@ Side, Back Side, North Face, High Lift, Ten Peaks, Learning Area) · `tools/trai
   lifts, the North Face's lines, Boulder Pile, the inset and the hairpins of Skyline and Moonwalk at the summit on
   zoomed crops); `compare.py` against the report; hover 241/241; the app check; a rebuild from an empty work
   folder, byte for byte.
+
+## Stratton
+
+116 trails (98 + 18) · Vermont · one panel · areas: the report's (Upper Mountain, Lower Mountain, Sun Bowl, Glades,
+Learning Areas) · `tools/trailmap/resorts/stratton/`.
+
+- **Source:** the 2025-26 trail map PDF on stratton.com's interactive-trail-map page (`251021_wintermap.pdf`, plain
+  curl; the trail-maps page is a 404): James Niehues's painting flattened, the whole page one 3024 x 2880 image (168
+  dpi), the map image (the painting above the legend). Its interactive map (resorts-interactive.com 1822) is the
+  summer one only. skimap.org's 2025 and 2023 PDFs are flattened too; its 2022 one draws the lines as fills at
+  another scale; the 2020-21 trail map PDF (map 20146) is the same artwork with its layers live: every run a 1 pt
+  dashed stroke in green, blue or black, the names Brandon Grotesque Bold 6.5 pt text (black; the lifts' white), the
+  symbols fills (the runs' green, blue and black; the glades' circles and squares a green and a blue of their own, up
+  to 7.2 pt; black squares by some turned labels are diamonds). Both PDFs' SHA-256s are checked.
+- **Route (recipe D, then A):** the 2020-21 page registered on this season's image (`register_pages.py`: 11561
+  inliers, median 0.14 px; `AFFINE`); the extraction as Hunter's on its grid (`prepare.py`: strokes 0.9 to 1.1 pt,
+  `pdf_labels.py`, `pdf_symbols.py` twice for the two palettes; the legend and the uphill box left out). Five
+  seasons apart, the vector layer has changed in the lower mountain, found by diffing the two (the archive's
+  `stratton/` scripts, Part 1's recipe D): the Progression Park is gone (`GONE`, with Beeline's and Betwixt's squares
+  and Village Walk's circle); Beeline, Betwixt, Suntanner, Tyrolienne, East Byrnes Side, Big Ben and Shortcut Big Ben
+  are printed elsewhere or without PARK (`MOVED`), a second TYROLIENNE by the park's pill (`NEW_LABELS`,
+  `RENAME_AT`: the park; the other the learning area), four symbols new (`NEW_SYMBOLS`). `pdf_resort.py` with
+  `SYMBOL_REACH` 10, `END_REACH` 8, `ALONG` 4, `ALONG_NEAREST`; three names in two parts joined; the parks and the
+  names printed beside pills along their names (`LABEL_LINE`).
+- **Rebuild:** `tools/trailmap/resorts/stratton/regen.sh` (1 min); it checks both PDFs' SHA-256s.
+- **Truth:** the trail report (`report.json`): the conditions widget's mtnpowder feed (resort 1, its mtnfeed config
+  `stratton.json`), fetched out of season on 2026-10-11, 123 rows; its six uphill routes are no runs. Spellings are the
+  report's (The Chute for CHUTE, Upper and Lower Grizzly Bear, Janeway Junction, Liftline Cut Through, Number 6, Old
+  Number 8). Every printed symbol agrees with it; Beeline, Betwixt and Big Ben print none (`DEFAULT_SYMBOL`: the
+  report's), the parks blue. Not printed: Stevek (a race venue named only in the legend's note). Areas' elevations:
+  the Summit Gondola's top for the Upper Mountain and the glades, the others their highest lift's top (OpenStreetMap
+  on the USGS's 10 m model, `tools/trailmap/lift_tops.py`).
+- **Decisions** (`decisions.py`): Lower Kidderbrook up to the uphill route and down the boundary to the base; Free
+  Fall and Free Fall Gully beside their names (drawn double this season, as Bear Down and Upper Grizzly Bear: the old
+  single line between the two); Way Home, Lower West Meadow (through the family zone), Grizzly Access, Big D (beside
+  its name, from The Chute to Upper Tamarack's diamond). The old strokes this season no longer draws (Beeline's and
+  Betwixt's lines, Spillway's and Yodeler's tops drawn again some 10 px off, Village Walk's ends) are left out and the
+  new lines traced (Suntanner from the Mid Mountain Lodge to the American Express base, Spillway's and Yodeler's tops,
+  Shortcut Big Ben, Village Walk's and Tyrolienne's tails). Lower Wanderer's line runs past the image's right edge
+  (the old page is wider): trimmed to the edge, its two parts joined along it. Not trails: the boxes' leaders, a link
+  with no name. The glades print no line: markers at their names, as Mike's Cut Through (a leader into the trees)
+  and Upper Down Easter.
+- **Checked:** every overlay on crops (`overlay_audit.py`, 29 sheets, every cell read; Village Walk, Tink's Link,
+  Suntanner, Tyrolienne, Lower Wanderer fixed and read again); `compare.py` against the report; hover 312/312; the
+  app check; a rebuild from an empty work folder, byte for byte.
 
 # Part 4. Methods in detail
 

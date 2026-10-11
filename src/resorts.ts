@@ -193,6 +193,8 @@ export const RESORTS: ResortEntry[] = [
   ], ['Crested Butte Mountain Resort', 'CBMR', 'Mt. Crested Butte', 'The Extremes', 'North Face']),
   oneMap('mount-snow', 'Mount Snow', 'Vermont', () => import('./data/resorts/mount-snow/trails'), () => import('./data/resorts/mount-snow/trailPaths.json'),
     ['Mt. Snow', 'Carinthia', 'Sunbrook', 'North Face', 'West Dover']),
+  oneMap('stratton', 'Stratton', 'Vermont', () => import('./data/resorts/stratton/trails'), () => import('./data/resorts/stratton/trailPaths.json'),
+    ['Stratton Mountain', 'Stratton Mountain Resort', 'Sun Bowl', 'Bondville']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

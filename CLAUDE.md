@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Ski-run tracker for forty-one resorts (React 19 + TS + Vite). The hard part is
+Ski-run tracker for forty-two resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
@@ -76,7 +76,7 @@ the already-assigned path (that is circular).
   export of its map's artwork, registered on the current image, and Deer
   Valley's an earlier one registered on the later flattened image, and Beaver Creek's 2023 export on this season's
   CDN image, and Mount Snow's two older exports (the 2023-24 PDF's lines, the 2024-25 uphill map's
-  names) on its CDN image; Steamboat
+  names) on its CDN image, and Stratton's 2020-21 export on its flattened 2025-26 PDF; Steamboat
   has no PDF: its interactive map's SVG is the vector layer; Mammoth's PDF draws
   no trail lines: its interactive maps' SVGs give them; Aspen Mountain's and
   Buttermilk's are drawn like Snowmass's); Whiteface's,

@@ -485,6 +485,31 @@ in `vicomap.py parse --detail` / `fit-ink` and `resorts/steamboat/prepare.py`.
 | `steamboat/svg_on_map.py` | svg_on_map.py <image> <trails.json> a,b,c,d,e,f <out> [box ...]: the SVG's trail lines (and names) drawn on the image, cropped |
 | `steamboat/label_offsets.py` | Each group's letters' best offset (within 30 px) onto the print's ink in its colour, largest first |
 
+## stratton
+
+Stratton's helpers for finding what this season's flattened map prints otherwise than the 2020-21 export it takes
+its vectors from (after the registration, before `resorts/stratton/prepare.py` had its `GONE`, `MOVED`, `NEW_LABELS`
+and `NEW_SYMBOLS`): the old page rendered on the new grid and the two diffed (`editions_diff.py`, its regions;
+`diff_tiles.py`, tile by tile with the mask), each old label and run stroke scored by the difference along it
+(`check_old.py`), each old label searched for on the new image (`find_labels.py`: black letters on their halo), each
+old stroke and symbol scored by the share of its own pixels the new image still shows in its colour
+(`check_objects.py`), the new image's run-coloured pixels the old page has none of (`new_lines.py`), and crops: both
+editions side by side (`pair.py`), the old strokes with their drawing numbers over the new image
+(`old_strokes_over.py`), the 2022-23 export's fills (`fills22_over.py`: its dashes are fills at another scale, not
+used). What they settled is in `resorts/stratton/resort.py` and `decisions.py`.
+
+| file | what it did |
+|---|---|
+| `stratton/editions_diff.py` | editions_diff.py <work dir> <affine> <out dir> [box]: old_on_grid.png, the difference regions (regions.json) and a pair per region |
+| `stratton/diff_tiles.py` | diff_tiles.py <old_on_grid.png> <map2025.png> <out dir> [tile] [box]: tiles of old, new and the difference mask |
+| `stratton/check_old.py` | check_old.py <work dir> <affine>: the old labels and run strokes, most changed first |
+| `stratton/find_labels.py` | find_labels.py <work dir> <affine> [--reach] [--all]: each old label's best offset on the new image (found_labels.json) |
+| `stratton/check_objects.py` | check_objects.py <work dir> <affine> [--min] [--tol]: old strokes and symbols the new image no longer shows (found_objects.json) |
+| `stratton/new_lines.py` | new_lines.py <work dir> <affine> <out dir> [--away]: run-coloured pixels with none of the old page's near them |
+| `stratton/pair.py` | pair.py <old_on_grid.png> <map2025.png> box zoom out.png: both editions side by side with a grid |
+| `stratton/old_strokes_over.py` | old_strokes_over.py <work dir> <affine> box zoom out.png: the old run strokes, numbered, over the new image |
+| `stratton/fills22_over.py` | fills22_over.py <work dir> <affine> box zoom out.png: the 2022-23 export's run-coloured fills over the new image |
+
 ## sugarbush
 
 The helpers Sugarbush's five tile readers wrote for themselves (label drafts, symbol sheets, writing their result files). Sugarbush's pipeline and readings are in `tools/trailmap/resorts/sugarbush/`.

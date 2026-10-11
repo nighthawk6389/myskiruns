@@ -1,0 +1,1089 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "bear-bottom": {
+   "polylines": [
+    65,
+    66,
+    210
+   ],
+   "confidence": "high",
+   "mapName": "BEAR BOTTOM",
+   "note": "end of Bear Bottom | symbol of Bear Bottom | along its printed name"
+  },
+  "bear-down": {
+   "polylines": [
+    46,
+    193
+   ],
+   "confidence": "high",
+   "mapName": "BEAR DOWN",
+   "note": "end of Bear Down | along its printed name"
+  },
+  "big-d": {
+   "polylines": [
+    70
+   ],
+   "confidence": "high",
+   "mapName": "BIG D",
+   "note": "checked on a crop"
+  },
+  "black-bear": {
+   "polylines": [
+    56,
+    57,
+    58,
+    184,
+    212
+   ],
+   "confidence": "high",
+   "mapName": "BLACK BEAR",
+   "note": "end of Black Bear | symbol of Black Bear | along its printed name"
+  },
+  "dinos-drop": {
+   "polylines": [
+    117,
+    118,
+    215
+   ],
+   "confidence": "high",
+   "mapName": "DINO'S DROP",
+   "note": "end of Dino's Drop | symbol of Dino's Drop | along its printed name"
+  },
+  "drifter-link": {
+   "polylines": [
+    229
+   ],
+   "confidence": "high",
+   "mapName": "DRIFTER LINK",
+   "note": "along its printed name"
+  },
+  "franks-fall-line": {
+   "polylines": [
+    71,
+    72,
+    197
+   ],
+   "confidence": "high",
+   "mapName": "FRANK'S FALL LINE",
+   "note": "end of Frank's Fall Line | symbol of Frank's Fall Line | along its printed name"
+  },
+  "free-fall": {
+   "polylines": [
+    44,
+    45,
+    200
+   ],
+   "confidence": "high",
+   "mapName": "FREE FALL",
+   "note": "end of Free Fall | checked on a crop | along its printed name"
+  },
+  "get-my-drift": {
+   "polylines": [
+    88,
+    89,
+    187
+   ],
+   "confidence": "high",
+   "mapName": "GET MY DRIFT",
+   "note": "end of Get My Drift | symbol of Get My Drift | along its printed name"
+  },
+  "interstate": {
+   "polylines": [
+    109,
+    110,
+    204
+   ],
+   "confidence": "high",
+   "mapName": "INTERSTATE",
+   "note": "symbol of Interstate | end of Interstate | along its printed name"
+  },
+  "janeway-junction": {
+   "polylines": [
+    86,
+    87,
+    186
+   ],
+   "confidence": "high",
+   "mapName": "JANEWAY JUNCTION",
+   "note": "along Janeway Junction | symbol of Janeway Junction | along its printed name"
+  },
+  "liftline-cut-through": {
+   "polylines": [
+    104,
+    190
+   ],
+   "confidence": "high",
+   "mapName": "LIFTLINE CUT THROUGH",
+   "note": "end of Liftline Cut Through | along its printed name"
+  },
+  "lower-drifter": {
+   "polylines": [
+    113,
+    114,
+    209
+   ],
+   "confidence": "high",
+   "mapName": "LOWER DRIFTER",
+   "note": "end of Lower Drifter | symbol of Lower Drifter | along its printed name"
+  },
+  "lower-east-meadow": {
+   "polylines": [
+    102,
+    207
+   ],
+   "confidence": "high",
+   "mapName": "LOWER EAST MEADOW",
+   "note": "end of Lower East Meadow | along its printed name"
+  },
+  "lower-grizzly-bear": {
+   "polylines": [
+    67,
+    68,
+    217
+   ],
+   "confidence": "high",
+   "mapName": "LOWER GRIZZLY BEAR",
+   "note": "end of Lower Grizzly Bear | symbol of Lower Grizzly Bear | along its printed name"
+  },
+  "lower-liftline": {
+   "polylines": [
+    121,
+    122,
+    214
+   ],
+   "confidence": "high",
+   "mapName": "LOWER LIFTLINE",
+   "note": "end of Lower Liftline | symbol of Lower Liftline | along its printed name"
+  },
+  "lower-slalom-glade": {
+   "polylines": [
+    115,
+    116
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SLALOM GLADE",
+   "note": "end of Lower Slalom Glade | symbol of Lower Slalom Glade"
+  },
+  "lower-spruce": {
+   "polylines": [
+    123,
+    124,
+    222
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SPRUCE",
+   "note": "end of Lower Spruce | symbol of Lower Spruce | along its printed name"
+  },
+  "lower-switchback": {
+   "polylines": [
+    125,
+    126,
+    220
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SWITCHBACK",
+   "note": "end of Lower Switchback | symbol of Lower Switchback | along its printed name"
+  },
+  "lower-wanderer": {
+   "polylines": [
+    139,
+    140,
+    141,
+    180,
+    236,
+    264
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WANDERER",
+   "note": "symbol of Lower Wanderer | checked on a crop | along its printed name"
+  },
+  "lower-west-meadow": {
+   "polylines": [
+    99,
+    201
+   ],
+   "confidence": "high",
+   "mapName": "LOWER WEST MEADOW",
+   "note": "checked on a crop | along its printed name"
+  },
+  "mikes-way": {
+   "polylines": [
+    92,
+    93,
+    181
+   ],
+   "confidence": "high",
+   "mapName": "MIKE'S WAY",
+   "note": "end of Mike's Way | symbol of Mike's Way | along its printed name"
+  },
+  "old-number-8": {
+   "polylines": [
+    59,
+    60,
+    231
+   ],
+   "confidence": "high",
+   "mapName": "OLD NUMBER 8",
+   "note": "end of Old Number 8 | symbol of Old Number 8 | along its printed name"
+  },
+  "polar-bear": {
+   "polylines": [
+    61,
+    62,
+    202
+   ],
+   "confidence": "high",
+   "mapName": "POLAR BEAR",
+   "note": "symbol of Polar Bear | end of Polar Bear | along its printed name"
+  },
+  "rimeline": {
+   "polylines": [
+    73,
+    74,
+    213
+   ],
+   "confidence": "high",
+   "mapName": "RIMELINE",
+   "note": "end of Rimeline | symbol of Rimeline | along its printed name"
+  },
+  "shooter": {
+   "polylines": [
+    50,
+    51,
+    206
+   ],
+   "confidence": "high",
+   "mapName": "SHOOTER",
+   "note": "symbol of Shooter | end of Shooter | along its printed name"
+  },
+  "sun-bowl-express": {
+   "polylines": [
+    208
+   ],
+   "confidence": "high",
+   "mapName": "SUN BOWL EXPRESS",
+   "note": "along its printed name"
+  },
+  "the-chute": {
+   "polylines": [
+    54,
+    55,
+    183
+   ],
+   "confidence": "high",
+   "mapName": "THE CHUTE",
+   "note": "end of The Chute | symbol of The Chute | along its printed name"
+  },
+  "upper-drifter": {
+   "polylines": [
+    105,
+    106,
+    198
+   ],
+   "confidence": "high",
+   "mapName": "UPPER DRIFTER",
+   "note": "end of Upper Drifter | symbol of Upper Drifter | along its printed name"
+  },
+  "upper-east-meadow": {
+   "polylines": [
+    103,
+    194
+   ],
+   "confidence": "high",
+   "mapName": "UPPER EAST MEADOW",
+   "note": "end of Upper East Meadow | along its printed name"
+  },
+  "upper-grizzly-bear": {
+   "polylines": [
+    63,
+    64,
+    188
+   ],
+   "confidence": "high",
+   "mapName": "UPPER GRIZZLY BEAR",
+   "note": "symbol of Upper Grizzly Bear | end of Upper Grizzly Bear | along its printed name"
+  },
+  "upper-kidderbrook": {
+   "polylines": [
+    42,
+    43,
+    195
+   ],
+   "confidence": "high",
+   "mapName": "UPPER KIDDERBROOK",
+   "note": "end of Upper Kidderbrook | symbol of Upper Kidderbrook | along its printed name"
+  },
+  "upper-liftline": {
+   "polylines": [
+    84,
+    85,
+    199
+   ],
+   "confidence": "high",
+   "mapName": "UPPER LIFTLINE",
+   "note": "end of Upper Liftline | symbol of Upper Liftline | along its printed name"
+  },
+  "upper-middlebrook": {
+   "polylines": [
+    48,
+    49,
+    189
+   ],
+   "confidence": "high",
+   "mapName": "UPPER MIDDLEBROOK",
+   "note": "end of Upper Middlebrook | symbol of Upper Middlebrook | along its printed name"
+  },
+  "upper-slalom-glade": {
+   "polylines": [
+    107,
+    108
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SLALOM GLADE",
+   "note": "end of Upper Slalom Glade | symbol of Upper Slalom Glade"
+  },
+  "upper-spruce": {
+   "polylines": [
+    81,
+    82,
+    191
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SPRUCE",
+   "note": "end of Upper Spruce | symbol of Upper Spruce | along its printed name"
+  },
+  "upper-standard": {
+   "polylines": [
+    75,
+    76,
+    196
+   ],
+   "confidence": "high",
+   "mapName": "UPPER STANDARD",
+   "note": "end of Upper Standard | symbol of Upper Standard | along its printed name"
+  },
+  "upper-switchback": {
+   "polylines": [
+    83,
+    205
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SWITCHBACK",
+   "note": "end of Upper Switchback | along its printed name"
+  },
+  "upper-tamarack": {
+   "polylines": [
+    69,
+    203
+   ],
+   "confidence": "high",
+   "mapName": "UPPER TAMARACK",
+   "note": "end of Upper Tamarack | along its printed name"
+  },
+  "upper-wanderer": {
+   "polylines": [
+    90,
+    91,
+    182
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WANDERER",
+   "note": "end of Upper Wanderer | symbol of Upper Wanderer | along its printed name"
+  },
+  "upper-west-meadow": {
+   "polylines": [
+    100,
+    101,
+    192
+   ],
+   "confidence": "high",
+   "mapName": "UPPER WEST MEADOW",
+   "note": "end of Upper West Meadow | symbol of Upper West Meadow | along its printed name"
+  },
+  "work-road": {
+   "polylines": [
+    95,
+    96,
+    185
+   ],
+   "confidence": "high",
+   "mapName": "WORK ROAD",
+   "note": "end of Work Road | symbol of Work Road | along its printed name"
+  },
+  "world-cup": {
+   "polylines": [
+    119,
+    120,
+    219
+   ],
+   "confidence": "high",
+   "mapName": "WORLD CUP",
+   "note": "end of World Cup | symbol of World Cup | along its printed name"
+  },
+  "beeline": {
+   "polylines": [
+    232
+   ],
+   "confidence": "high",
+   "mapName": "BEELINE",
+   "note": "along its printed name"
+  },
+  "betwixt": {
+   "polylines": [
+    245
+   ],
+   "confidence": "high",
+   "mapName": "BETWIXT",
+   "note": "along its printed name"
+  },
+  "cabots-run": {
+   "polylines": [
+    137,
+    138,
+    241
+   ],
+   "confidence": "high",
+   "mapName": "CABOT'S RUN",
+   "note": "end of Cabot's Run | symbol of Cabot's Run | along its printed name"
+  },
+  "craigs-run": {
+   "polylines": [
+    166,
+    254
+   ],
+   "confidence": "high",
+   "mapName": "CRAIG'S RUN",
+   "note": "end of Craig's Run | along its printed name"
+  },
+  "daniel-webster": {
+   "polylines": [
+    167,
+    168,
+    258
+   ],
+   "confidence": "high",
+   "mapName": "DANIEL WEBSTER",
+   "note": "symbol of Daniel Webster | end of Daniel Webster | along its printed name"
+  },
+  "duck-soup": {
+   "polylines": [
+    156,
+    157,
+    235
+   ],
+   "confidence": "high",
+   "mapName": "DUCK SOUP",
+   "note": "end of Duck Soup | symbol of Duck Soup | along its printed name"
+  },
+  "east-byrnes-side": {
+   "polylines": [
+    260
+   ],
+   "confidence": "high",
+   "mapName": "EAST BYRNES SIDE",
+   "note": "along its printed name"
+  },
+  "ethans-alley": {
+   "polylines": [
+    142,
+    143,
+    261
+   ],
+   "confidence": "high",
+   "mapName": "ETHAN'S ALLEY",
+   "note": "end of Ethan's Alley | symbol of Ethan's Alley | along its printed name"
+  },
+  "flukeys-run": {
+   "polylines": [
+    133,
+    134,
+    242
+   ],
+   "confidence": "high",
+   "mapName": "FLUKEY'S RUN",
+   "note": "end of Flukey's Run | symbol of Flukey's Run | along its printed name"
+  },
+  "grizzly-access": {
+   "polylines": [
+    165
+   ],
+   "confidence": "high",
+   "mapName": "GRIZZLY ACCESS",
+   "note": "checked on a crop"
+  },
+  "hemlock": {
+   "polylines": [
+    131,
+    132,
+    233
+   ],
+   "confidence": "high",
+   "mapName": "HEMLOCK",
+   "note": "end of Hemlock | symbol of Hemlock | along its printed name"
+  },
+  "lads-legacy": {
+   "polylines": [
+    163,
+    164,
+    255
+   ],
+   "confidence": "high",
+   "mapName": "LAD'S LEGACY",
+   "note": "end of Lad's Legacy | symbol of Lad's Legacy | along its printed name"
+  },
+  "lower-standard": {
+   "polylines": [
+    144,
+    145,
+    227
+   ],
+   "confidence": "high",
+   "mapName": "LOWER STANDARD",
+   "note": "end of Lower Standard | symbol of Lower Standard | along its printed name"
+  },
+  "lower-tamarack": {
+   "polylines": [
+    161,
+    162,
+    237
+   ],
+   "confidence": "high",
+   "mapName": "LOWER TAMARACK",
+   "note": "end of Lower Tamarack | symbol of Lower Tamarack | along its printed name"
+  },
+  "marks-run": {
+   "polylines": [
+    111,
+    112,
+    256
+   ],
+   "confidence": "high",
+   "mapName": "MARK'S RUN",
+   "note": "end of Mark's Run | symbol of Mark's Run | along its printed name"
+  },
+  "old-log-road": {
+   "polylines": [
+    97,
+    98,
+    253
+   ],
+   "confidence": "high",
+   "mapName": "OLD LOG ROAD",
+   "note": "symbol of Old Log Road | end of Old Log Road | along its printed name"
+  },
+  "old-smoothie": {
+   "polylines": [
+    135,
+    136,
+    250
+   ],
+   "confidence": "high",
+   "mapName": "OLD SMOOTHIE",
+   "note": "end of Old Smoothie | symbol of Old Smoothie | along its printed name"
+  },
+  "overpass": {
+   "polylines": [
+    77,
+    78,
+    218
+   ],
+   "confidence": "high",
+   "mapName": "OVERPASS",
+   "note": "end of Overpass | symbol of Overpass | along its printed name"
+  },
+  "runaway": {
+   "polylines": [
+    158,
+    159,
+    248
+   ],
+   "confidence": "high",
+   "mapName": "RUNAWAY",
+   "note": "symbol of Runaway | end of Runaway | along its printed name"
+  },
+  "snow-bowl-alley": {
+   "polylines": [
+    127,
+    128,
+    224
+   ],
+   "confidence": "high",
+   "mapName": "SNOW BOWL ALLEY",
+   "note": "end of Snow Bowl Alley | symbol of Snow Bowl Alley | along its printed name"
+  },
+  "spillway": {
+   "polylines": [
+    152,
+    240,
+    279
+   ],
+   "confidence": "high",
+   "mapName": "SPILLWAY",
+   "note": "end of Spillway | along its printed name | traced along the drawn line"
+  },
+  "suntanner": {
+   "polylines": [
+    251,
+    277,
+    278
+   ],
+   "confidence": "high",
+   "mapName": "SUNTANNER",
+   "note": "along its printed name | traced along the drawn line"
+  },
+  "tinks-link": {
+   "polylines": [
+    151,
+    223
+   ],
+   "confidence": "high",
+   "mapName": "TINK'S LINK",
+   "note": "end of Tink's Link | along its printed name"
+  },
+  "tyrolienne-park": {
+   "polylines": [
+    263
+   ],
+   "confidence": "high",
+   "mapName": "TYROLIENNE PARK",
+   "note": "along its printed name"
+  },
+  "underpass": {
+   "polylines": [
+    79,
+    80,
+    221
+   ],
+   "confidence": "high",
+   "mapName": "UNDERPASS",
+   "note": "end of Underpass | symbol of Underpass | along its printed name"
+  },
+  "white-birch": {
+   "polylines": [
+    129,
+    130,
+    228
+   ],
+   "confidence": "high",
+   "mapName": "WHITE BIRCH",
+   "note": "end of White Birch | symbol of White Birch | along its printed name"
+  },
+  "yodeler": {
+   "polylines": [
+    154,
+    249,
+    280
+   ],
+   "confidence": "high",
+   "mapName": "YODELER",
+   "note": "end of Yodeler | along its printed name | traced along the drawn line"
+  },
+  "yodeler-express": {
+   "polylines": [
+    160,
+    247
+   ],
+   "confidence": "high",
+   "mapName": "YODELER EXPRESS",
+   "note": "end of Yodeler Express | along its printed name"
+  },
+  "91": {
+   "polylines": [
+    12,
+    13,
+    16,
+    17,
+    244,
+    271,
+    275
+   ],
+   "confidence": "high",
+   "mapName": "91",
+   "note": "end of 91 | symbol of 91 | along its printed name"
+  },
+  "91-extension": {
+   "polylines": [
+    18,
+    19,
+    274
+   ],
+   "confidence": "high",
+   "mapName": "91 EXTENSION",
+   "note": "end of 91 Extension | symbol of 91 Extension | along its printed name"
+  },
+  "big-ben": {
+   "polylines": [
+    265
+   ],
+   "confidence": "high",
+   "mapName": "BIG BEN",
+   "note": "along its printed name"
+  },
+  "busters-trail": {
+   "polylines": [
+    26,
+    27,
+    268
+   ],
+   "confidence": "high",
+   "mapName": "BUSTER'S TRAIL",
+   "note": "symbol of Buster's Trail | end of Buster's Trail | along its printed name"
+  },
+  "churchill-downs": {
+   "polylines": [
+    8,
+    9,
+    211
+   ],
+   "confidence": "high",
+   "mapName": "CHURCHILL DOWNS",
+   "note": "end of Churchill Downs | symbol of Churchill Downs | along its printed name"
+  },
+  "gentle-ben": {
+   "polylines": [
+    34,
+    35,
+    257
+   ],
+   "confidence": "high",
+   "mapName": "GENTLE BEN",
+   "note": "symbol of Gentle Ben | end of Gentle Ben | along its printed name"
+  },
+  "home-run": {
+   "polylines": [
+    36,
+    37,
+    267
+   ],
+   "confidence": "high",
+   "mapName": "HOME RUN",
+   "note": "end of Home Run | symbol of Home Run | along its printed name"
+  },
+  "lower-down-easter": {
+   "polylines": [
+    28,
+    29,
+    266
+   ],
+   "confidence": "high",
+   "mapName": "LOWER DOWN EASTER",
+   "note": "end of Lower Down Easter | symbol of Lower Down Easter | along its printed name"
+  },
+  "lower-kidderbrook": {
+   "polylines": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    239
+   ],
+   "confidence": "high",
+   "mapName": "LOWER KIDDERBROOK",
+   "note": "end of Lower Kidderbrook | checked on a crop | symbol of Lower Kidderbrook | along its printed name"
+  },
+  "lower-middlebrook": {
+   "polylines": [
+    6,
+    7,
+    238
+   ],
+   "confidence": "high",
+   "mapName": "LOWER MIDDLEBROOK",
+   "note": "end of Lower Middlebrook | symbol of Lower Middlebrook | along its printed name"
+  },
+  "main-line": {
+   "polylines": [
+    10,
+    11,
+    262
+   ],
+   "confidence": "high",
+   "mapName": "MAIN LINE",
+   "note": "end of Main Line | symbol of Main Line | along its printed name"
+  },
+  "number-6": {
+   "polylines": [
+    32,
+    33,
+    230
+   ],
+   "confidence": "high",
+   "mapName": "NUMBER 6",
+   "note": "end of Number 6 | symbol of Number 6 | along its printed name"
+  },
+  "ricks-catch-22": {
+   "polylines": [
+    20,
+    21,
+    246
+   ],
+   "confidence": "high",
+   "mapName": "RICK'S CATCH 22",
+   "note": "end of Rick's Catch 22 | symbol of Rick's Catch 22 | along its printed name"
+  },
+  "rising-star": {
+   "polylines": [
+    22,
+    23,
+    252
+   ],
+   "confidence": "high",
+   "mapName": "RISING STAR",
+   "note": "end of Rising Star | symbol of Rising Star | along its printed name"
+  },
+  "rowleys-run": {
+   "polylines": [
+    40,
+    41,
+    226
+   ],
+   "confidence": "high",
+   "mapName": "ROWLEY'S RUN",
+   "note": "end of Rowley's Run | symbol of Rowley's Run | along its printed name"
+  },
+  "shortcut-big-ben": {
+   "polylines": [
+    234,
+    281,
+    282
+   ],
+   "confidence": "high",
+   "mapName": "SHORTCUT BIG BEN",
+   "note": "along its printed name | traced along the drawn line"
+  },
+  "shortcut-gentle-ben": {
+   "polylines": [
+    225
+   ],
+   "confidence": "high",
+   "mapName": "SHORTCUT GENTLE BEN",
+   "note": "along its printed name"
+  },
+  "solstice-way": {
+   "polylines": [
+    14,
+    15,
+    276
+   ],
+   "confidence": "high",
+   "mapName": "SOLSTICE WAY",
+   "note": "end of Solstice Way | symbol of Solstice Way | along its printed name"
+  },
+  "sunbeam": {
+   "polylines": [
+    30,
+    31,
+    243
+   ],
+   "confidence": "high",
+   "mapName": "SUNBEAM",
+   "note": "symbol of Sunbeam | end of Sunbeam | along its printed name"
+  },
+  "sunriser-supertrail": {
+   "polylines": [
+    24,
+    25,
+    259
+   ],
+   "confidence": "high",
+   "mapName": "SUNRISER SUPERTRAIL",
+   "note": "end of Sunriser Supertrail | symbol of Sunriser Supertrail | along its printed name"
+  },
+  "tree-top-way": {
+   "polylines": [
+    38,
+    39,
+    273
+   ],
+   "confidence": "high",
+   "mapName": "TREE TOP WAY",
+   "note": "symbol of Tree Top Way | end of Tree Top Way | along its printed name"
+  },
+  "way-home": {
+   "polylines": [
+    52,
+    53,
+    216
+   ],
+   "confidence": "high",
+   "mapName": "WAY HOME",
+   "note": "end of Way Home | checked on a crop | along its printed name"
+  },
+  "buck-shot": {
+   "noLine": true,
+   "label": [
+    67.13,
+    52.5
+   ],
+   "confidence": "high"
+  },
+  "cabin-fever": {
+   "noLine": true,
+   "label": [
+    92.92,
+    56.38
+   ],
+   "confidence": "high"
+  },
+  "dancing-bear": {
+   "noLine": true,
+   "label": [
+    84.42,
+    37.99
+   ],
+   "confidence": "high"
+  },
+  "daniels-web": {
+   "noLine": true,
+   "label": [
+    51.22,
+    68.51
+   ],
+   "confidence": "high"
+  },
+  "diamond-in-the-rough": {
+   "noLine": true,
+   "label": [
+    42.13,
+    31.64
+   ],
+   "confidence": "high"
+  },
+  "eclipse": {
+   "noLine": true,
+   "label": [
+    27.51,
+    53.42
+   ],
+   "confidence": "high"
+  },
+  "emerald-forest": {
+   "noLine": true,
+   "label": [
+    79.33,
+    60.07
+   ],
+   "confidence": "high"
+  },
+  "free-fall-gully": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "FREE FALL GULLY",
+   "note": "checked on a crop"
+  },
+  "kidderbrook-ravine": {
+   "noLine": true,
+   "label": [
+    36.31,
+    25.38
+   ],
+   "confidence": "high"
+  },
+  "moonbeam": {
+   "noLine": true,
+   "label": [
+    98.41,
+    50.85
+   ],
+   "confidence": "high"
+  },
+  "moondance": {
+   "noLine": true,
+   "label": [
+    47.45,
+    28.97
+   ],
+   "confidence": "high"
+  },
+  "shred-wood-forest": {
+   "noLine": true,
+   "label": [
+    68.62,
+    34.55
+   ],
+   "confidence": "high"
+  },
+  "squirrels-nest": {
+   "noLine": true,
+   "label": [
+    36.38,
+    32.99
+   ],
+   "confidence": "high"
+  },
+  "test-pilot": {
+   "noLine": true,
+   "label": [
+    35.58,
+    21.4
+   ],
+   "confidence": "high"
+  },
+  "vertigo": {
+   "noLine": true,
+   "label": [
+    23.91,
+    37.65
+   ],
+   "confidence": "high"
+  },
+  "west-pilot": {
+   "noLine": true,
+   "label": [
+    89.45,
+    29.4
+   ],
+   "confidence": "high"
+  },
+  "why-not": {
+   "noLine": true,
+   "label": [
+    39.15,
+    41.05
+   ],
+   "confidence": "high"
+  },
+  "downtowner": {
+   "polylines": [
+    170,
+    171,
+    269
+   ],
+   "confidence": "high",
+   "mapName": "DOWNTOWNER",
+   "note": "end of Downtowner | symbol of Downtowner | along its printed name"
+  },
+  "stage-1": {
+   "polylines": [
+    174,
+    175,
+    272
+   ],
+   "confidence": "high",
+   "mapName": "STAGE 1",
+   "note": "end of Stage 1 | symbol of Stage 1 | along its printed name"
+  },
+  "tyrolienne": {
+   "polylines": [
+    284
+   ],
+   "confidence": "high",
+   "mapName": "TYROLIENNE",
+   "note": "traced along the drawn line"
+  },
+  "village-walk": {
+   "polylines": [
+    270,
+    283
+   ],
+   "confidence": "high",
+   "mapName": "VILLAGE WALK",
+   "note": "along its printed name | traced along the drawn line"
+  }
+ }
+}

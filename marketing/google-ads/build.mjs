@@ -536,6 +536,20 @@ const RESORT_ADS = {
     negatives: ['bike park', 'mountain bike', 'summer', 'golf', 'hotel', 'lodging', 'grand summit', 'rental',
       'real estate', 'jobs', 'wedding', 'webcam', 'brewfest', 'nordic'],
   },
+  stratton: {
+    short: 'Stratton',
+    path: 'Stratton',
+    area: 'Sun Bowl to the Summit',
+    // bare "stratton" is also a surname, a town in Colorado and the US Open's old home: only with the mountain
+    names: ['stratton mountain', 'stratton'],
+    keywords: [
+      ['stratton ski trails', 'phrase'],
+      ['stratton vt trail map', 'exact'],
+    ],
+    // the summer (the golf course, the bike park), its lodging and the village's shops, the other Strattons
+    negatives: ['golf', 'tennis', 'bike park', 'mountain bike', 'summer', 'hiking', 'hotel', 'lodging', 'rental',
+      'real estate', 'jobs', 'wedding', 'webcam', 'nordic', 'colorado', 'maine', 'oakmont'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */
