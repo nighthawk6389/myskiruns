@@ -1,0 +1,809 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "beaver-hill": {
+   "polylines": [
+    35,
+    36,
+    260
+   ],
+   "confidence": "high",
+   "mapName": "BEAVER HILL",
+   "note": "end of Beaver Hill | along its printed name"
+  },
+  "canyon": {
+   "polylines": [
+    80,
+    81,
+    247
+   ],
+   "confidence": "high",
+   "mapName": "CANYON",
+   "note": "end of Canyon | along its printed name"
+  },
+  "cascade": {
+   "polylines": [
+    76,
+    77,
+    202
+   ],
+   "confidence": "high",
+   "mapName": "CASCADE",
+   "note": "end of Cascade | along its printed name"
+  },
+  "charlies-chase": {
+   "polylines": [
+    42,
+    43,
+    257
+   ],
+   "confidence": "high",
+   "mapName": "CHARLIE'S CHASE",
+   "note": "checked on a crop | end of Charlie's Chase | along its printed name"
+  },
+  "choke": {
+   "polylines": [
+    31,
+    32,
+    228
+   ],
+   "confidence": "high",
+   "mapName": "CHOKE",
+   "note": "end of Choke | along its printed name"
+  },
+  "committed": {
+   "polylines": [
+    69,
+    70,
+    74,
+    75,
+    199
+   ],
+   "confidence": "high",
+   "mapName": "COMMITTED",
+   "note": "checked on a crop | end of Committed | along its printed name"
+  },
+  "coopers-junction": {
+   "polylines": [
+    156,
+    157,
+    258
+   ],
+   "confidence": "high",
+   "mapName": "COOPER'S JUNCTION",
+   "note": "end of Cooper's Junction | along its printed name"
+  },
+  "cut-off": {
+   "polylines": [
+    126,
+    127,
+    215
+   ],
+   "confidence": "high",
+   "mapName": "CUT-OFF",
+   "note": "end of Cut-Off | along its printed name"
+  },
+  "deer-run": {
+   "polylines": [
+    2,
+    3,
+    219
+   ],
+   "confidence": "high",
+   "mapName": "DEER RUN",
+   "note": "end of Deer Run | along its printed name"
+  },
+  "drifter": {
+   "polylines": [
+    84,
+    85,
+    200
+   ],
+   "confidence": "high",
+   "mapName": "DRIFTER",
+   "note": "end of Drifter | along its printed name"
+  },
+  "drop": {
+   "polylines": [
+    38,
+    39,
+    245
+   ],
+   "confidence": "high",
+   "mapName": "DROP",
+   "note": "end of Drop | along its printed name"
+  },
+  "ego-alley": {
+   "polylines": [
+    48,
+    49,
+    229
+   ],
+   "confidence": "high",
+   "mapName": "EGO ALLEY",
+   "note": "end of Ego Alley | along its printed name"
+  },
+  "high-traverse": {
+   "polylines": [
+    19,
+    20,
+    21,
+    22,
+    23,
+    108,
+    214
+   ],
+   "confidence": "high",
+   "mapName": "HIGH TRAVERSE",
+   "note": "checked on a crop | end of High Traverse | along its printed name"
+  },
+  "hop": {
+   "polylines": [
+    117,
+    123,
+    124,
+    211
+   ],
+   "confidence": "high",
+   "mapName": "HOP",
+   "note": "checked on a crop | end of Hop | along its printed name"
+  },
+  "illusion": {
+   "polylines": [
+    33,
+    34,
+    255
+   ],
+   "confidence": "high",
+   "mapName": "ILLUSION",
+   "note": "end of Illusion | along its printed name"
+  },
+  "ledge": {
+   "polylines": [
+    24,
+    25,
+    86,
+    87,
+    160,
+    204,
+    230
+   ],
+   "confidence": "high",
+   "mapName": "LEDGE",
+   "note": "end of Ledge | checked on a crop | along its printed name"
+  },
+  "link": {
+   "polylines": [
+    112,
+    113,
+    114,
+    115,
+    116,
+    118,
+    221
+   ],
+   "confidence": "high",
+   "mapName": "LINK",
+   "note": "checked on a crop | end of Link | along its printed name"
+  },
+  "little-john": {
+   "polylines": [
+    122,
+    154,
+    198
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE JOHN",
+   "note": "end of Little John | along its printed name"
+  },
+  "lodge": {
+   "polylines": [
+    107,
+    155,
+    216
+   ],
+   "confidence": "high",
+   "mapName": "LODGE",
+   "note": "end of Lodge | along its printed name"
+  },
+  "long-john": {
+   "polylines": [
+    0,
+    1,
+    4,
+    5,
+    167,
+    218,
+    249
+   ],
+   "confidence": "high",
+   "mapName": "LONG JOHN",
+   "note": "end of Long John | checked on a crop | along its printed name"
+  },
+  "low-traverse": {
+   "polylines": [
+    7,
+    8,
+    9,
+    110,
+    120,
+    232
+   ],
+   "confidence": "high",
+   "mapName": "LOW TRAVERSE",
+   "note": "end of Low Traverse | checked on a crop | along its printed name"
+  },
+  "lower-exhibition": {
+   "polylines": [
+    44,
+    45,
+    256
+   ],
+   "confidence": "high",
+   "mapName": "LOWER EXHIBITION",
+   "note": "end of Lower Exhibition | along its printed name"
+  },
+  "n-e-time": {
+   "polylines": [
+    26,
+    27,
+    226
+   ],
+   "confidence": "high",
+   "mapName": "N.E. TIME",
+   "note": "end of N.E. Time | along its printed name"
+  },
+  "one-more-time": {
+   "polylines": [
+    50,
+    51,
+    244
+   ],
+   "confidence": "high",
+   "mapName": "ONE MORE TIME",
+   "note": "end of One More Time | along its printed name"
+  },
+  "overbrook": {
+   "polylines": [
+    82,
+    83,
+    248
+   ],
+   "confidence": "high",
+   "mapName": "OVERBROOK",
+   "note": "end of Overbrook | along its printed name"
+  },
+  "pats-pitch": {
+   "polylines": [
+    40,
+    41,
+    242
+   ],
+   "confidence": "high",
+   "mapName": "PAT'S PITCH",
+   "note": "end of Pat's Pitch | along its printed name"
+  },
+  "ridge": {
+   "polylines": [
+    119,
+    121,
+    213
+   ],
+   "confidence": "high",
+   "mapName": "RIDGE",
+   "note": "end of Ridge | along its printed name"
+  },
+  "roller-coaster": {
+   "polylines": [
+    162,
+    163,
+    164,
+    165,
+    233,
+    254
+   ],
+   "confidence": "high",
+   "mapName": "ROLLER COASTER",
+   "note": "end of Roller Coaster | along its printed name"
+  },
+  "sap-bucket": {
+   "polylines": [
+    251
+   ],
+   "confidence": "high",
+   "mapName": "SAP BUCKET",
+   "note": "along its printed name"
+  },
+  "seasons-pass": {
+   "polylines": [
+    52,
+    53,
+    253
+   ],
+   "confidence": "high",
+   "mapName": "SEASONS PASS",
+   "note": "end of Seasons Pass | along its printed name"
+  },
+  "snowdance": {
+   "polylines": [
+    28,
+    29,
+    240
+   ],
+   "confidence": "high",
+   "mapName": "SNOWDANCE",
+   "note": "end of Snowdance | along its printed name"
+  },
+  "snowdance-pitch": {
+   "polylines": [
+    30,
+    130
+   ],
+   "confidence": "high",
+   "mapName": "SNOWDANCE PITCH",
+   "note": "checked on a crop | end of Snowdance Pitch"
+  },
+  "somerset-road": {
+   "polylines": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    236
+   ],
+   "confidence": "high",
+   "mapName": "SOMERSET ROAD",
+   "note": "checked on a crop | end of Somerset Road | along its printed name"
+  },
+  "south-bowl": {
+   "polylines": [
+    109,
+    111,
+    210
+   ],
+   "confidence": "high",
+   "mapName": "SOUTH BOWL",
+   "note": "end of South Bowl | along its printed name"
+  },
+  "sweet-sixteen": {
+   "polylines": [
+    131,
+    132,
+    250
+   ],
+   "confidence": "high",
+   "mapName": "SWEET SIXTEEN",
+   "note": "end of Sweet Sixteen | along its printed name"
+  },
+  "switchback": {
+   "polylines": [
+    159
+   ],
+   "confidence": "high",
+   "mapName": "SWITCHBACK",
+   "note": "end of Switchback"
+  },
+  "tin-lizzy": {
+   "polylines": [
+    55,
+    133,
+    259
+   ],
+   "confidence": "high",
+   "mapName": "TIN LIZZY",
+   "note": "end of Tin Lizzy | along its printed name"
+  },
+  "uncles": {
+   "polylines": [
+    125,
+    128,
+    217
+   ],
+   "confidence": "high",
+   "mapName": "UNCLES",
+   "note": "end of Uncles | along its printed name"
+  },
+  "upper-exhibition": {
+   "polylines": [
+    46,
+    47,
+    227
+   ],
+   "confidence": "high",
+   "mapName": "UPPER EXHIBITION",
+   "note": "end of Upper Exhibition | along its printed name"
+  },
+  "yard-sale": {
+   "polylines": [
+    37,
+    129,
+    252
+   ],
+   "confidence": "high",
+   "mapName": "YARD SALE",
+   "note": "end of Yard Sale | along its printed name"
+  },
+  "boulder-pile": {
+   "polylines": [
+    95,
+    96,
+    223
+   ],
+   "confidence": "high",
+   "mapName": "BOULDER PILE",
+   "note": "end of Boulder Pile | along its printed name"
+  },
+  "challenger": {
+   "polylines": [
+    99,
+    100,
+    197
+   ],
+   "confidence": "high",
+   "mapName": "CHALLENGER",
+   "note": "end of Challenger | along its printed name"
+  },
+  "chute": {
+   "polylines": [
+    72,
+    73,
+    196
+   ],
+   "confidence": "high",
+   "mapName": "CHUTE",
+   "note": "end of Chute | along its printed name"
+  },
+  "fallen-timbers": {
+   "polylines": [
+    97,
+    98,
+    201
+   ],
+   "confidence": "high",
+   "mapName": "FALLEN TIMBERS",
+   "note": "end of Fallen Timbers | along its printed name"
+  },
+  "free-fall": {
+   "polylines": [
+    67,
+    68,
+    207
+   ],
+   "confidence": "high",
+   "mapName": "FREE FALL",
+   "note": "end of Free Fall | along its printed name"
+  },
+  "jaws": {
+   "polylines": [
+    92,
+    93,
+    209
+   ],
+   "confidence": "high",
+   "mapName": "JAWS",
+   "note": "end of Jaws | along its printed name"
+  },
+  "little-steep": {
+   "polylines": [
+    94
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE STEEP",
+   "note": "end of Little Steep"
+  },
+  "olympic": {
+   "polylines": [
+    101,
+    102,
+    203
+   ],
+   "confidence": "high",
+   "mapName": "OLYMPIC",
+   "note": "end of Olympic | along its printed name"
+  },
+  "pdf": {
+   "polylines": [
+    90,
+    91,
+    205
+   ],
+   "confidence": "high",
+   "mapName": "PDF",
+   "note": "end of PDF | along its printed name"
+  },
+  "plummet": {
+   "polylines": [
+    88,
+    89,
+    206
+   ],
+   "confidence": "high",
+   "mapName": "PLUMMET",
+   "note": "end of Plummet | along its printed name"
+  },
+  "ripcord": {
+   "polylines": [
+    103,
+    104,
+    212
+   ],
+   "confidence": "high",
+   "mapName": "RIPCORD",
+   "note": "end of Ripcord | along its printed name"
+  },
+  "river-run": {
+   "polylines": [
+    105,
+    106,
+    225
+   ],
+   "confidence": "high",
+   "mapName": "RIVER RUN",
+   "note": "end of River Run | along its printed name"
+  },
+  "second-thoughts": {
+   "polylines": [
+    78,
+    79
+   ],
+   "confidence": "high",
+   "mapName": "SECOND THOUGHTS",
+   "note": "end of Second Thoughts"
+  },
+  "skyline": {
+   "polylines": [
+    71,
+    190,
+    192,
+    195
+   ],
+   "confidence": "high",
+   "mapName": "SKYLINE",
+   "note": "end of Skyline | checked on a crop | along its printed name"
+  },
+  "bear-paw": {
+   "polylines": [
+    161,
+    166,
+    193,
+    194,
+    208
+   ],
+   "confidence": "high",
+   "mapName": "BEAR PAW",
+   "note": "end of Bear Paw | checked on a crop | along its printed name"
+  },
+  "bear-trap": {
+   "polylines": [
+    188,
+    189
+   ],
+   "confidence": "high",
+   "mapName": "BEAR TRAP",
+   "note": "checked on a crop"
+  },
+  "big-dipper": {
+   "polylines": [
+    174,
+    175
+   ],
+   "confidence": "high",
+   "mapName": "BIG DIPPER",
+   "note": "checked on a crop"
+  },
+  "cloud-nine": {
+   "polylines": [
+    181,
+    182
+   ],
+   "confidence": "high",
+   "mapName": "CLOUD NINE",
+   "note": "checked on a crop"
+  },
+  "little-dipper": {
+   "polylines": [
+    168,
+    183
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE DIPPER",
+   "note": "checked on a crop"
+  },
+  "milky-way": {
+   "polylines": [
+    179,
+    180
+   ],
+   "confidence": "high",
+   "mapName": "MILKY WAY",
+   "note": "checked on a crop"
+  },
+  "moonbeam": {
+   "polylines": [
+    172,
+    173
+   ],
+   "confidence": "high",
+   "mapName": "MOONBEAM",
+   "note": "checked on a crop"
+  },
+  "moonwalk": {
+   "polylines": [
+    184,
+    185,
+    186
+   ],
+   "confidence": "high",
+   "mapName": "MOONWALK",
+   "note": "checked on a crop"
+  },
+  "one-small-step": {
+   "polylines": [
+    187
+   ],
+   "confidence": "high",
+   "mapName": "ONE SMALL STEP",
+   "note": "checked on a crop"
+  },
+  "shooting-star": {
+   "polylines": [
+    176,
+    177,
+    178
+   ],
+   "confidence": "high",
+   "mapName": "SHOOTING STAR",
+   "note": "checked on a crop"
+  },
+  "sunspot": {
+   "polylines": [
+    171,
+    191
+   ],
+   "confidence": "high",
+   "mapName": "SUNSPOT",
+   "note": "checked on a crop"
+  },
+  "thanks-walt": {
+   "polylines": [
+    169,
+    170
+   ],
+   "confidence": "high",
+   "mapName": "THANKS WALT",
+   "note": "checked on a crop"
+  },
+  "inferno": {
+   "polylines": [
+    56,
+    57,
+    237
+   ],
+   "confidence": "high",
+   "mapName": "INFERNO",
+   "note": "end of Inferno | along its printed name"
+  },
+  "iron-run": {
+   "polylines": [
+    139,
+    140,
+    238
+   ],
+   "confidence": "high",
+   "mapName": "IRON RUN",
+   "note": "end of Iron Run | along its printed name"
+  },
+  "lower-fools-gold": {
+   "polylines": [
+    137,
+    138,
+    243
+   ],
+   "confidence": "high",
+   "mapName": "LOWER FOOL'S GOLD",
+   "note": "end of Lower Fool's Gold | along its printed name"
+  },
+  "mineshaft": {
+   "polylines": [
+    152,
+    153,
+    222
+   ],
+   "confidence": "high",
+   "mapName": "MINESHAFT",
+   "note": "end of Mineshaft | along its printed name"
+  },
+  "narrow-gauge": {
+   "polylines": [
+    145,
+    146,
+    241
+   ],
+   "confidence": "high",
+   "mapName": "NARROW GAUGE",
+   "note": "end of Narrow Gauge | along its printed name"
+  },
+  "nitro": {
+   "polylines": [
+    135,
+    149,
+    231
+   ],
+   "confidence": "high",
+   "mapName": "NITRO",
+   "note": "end of Nitro | along its printed name"
+  },
+  "prospector": {
+   "polylines": [
+    147,
+    148,
+    234
+   ],
+   "confidence": "high",
+   "mapName": "PROSPECTOR",
+   "note": "end of Prospector | along its printed name"
+  },
+  "rusty-nail": {
+   "polylines": [
+    143,
+    144,
+    235
+   ],
+   "confidence": "high",
+   "mapName": "RUSTY NAIL",
+   "note": "end of Rusty Nail | along its printed name"
+  },
+  "the-farm": {
+   "polylines": [
+    150,
+    151,
+    239
+   ],
+   "confidence": "high",
+   "mapName": "THE FARM",
+   "note": "end of The Farm | along its printed name"
+  },
+  "the-gulch": {
+   "polylines": [
+    141,
+    142,
+    246
+   ],
+   "confidence": "high",
+   "mapName": "THE GULCH",
+   "note": "end of The Gulch | along its printed name"
+  },
+  "tunnel-vision": {
+   "polylines": [
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    224
+   ],
+   "confidence": "high",
+   "mapName": "TUNNEL VISION",
+   "note": "end of Tunnel Vision | checked on a crop | along its printed name"
+  },
+  "upper-fools-gold": {
+   "polylines": [
+    134,
+    136,
+    220
+   ],
+   "confidence": "high",
+   "mapName": "UPPER FOOL'S GOLD",
+   "note": "end of Upper Fool's Gold | along its printed name"
+  }
+ }
+}

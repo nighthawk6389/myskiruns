@@ -255,6 +255,22 @@ audit's readers). What they showed is in `resorts/mammoth/` (prepare.py, the pan
 | `mammoth/symbols_vs_report.py` | Each panel's names whose attached symbol differs from the report's rating, and the symbols no name took |
 | `mammoth/trail_context.py` | trail_context.py <trail_id> <out.png> <margin_px> <scale> [x0 y0 x1 y1]: one trail's overlay among the others, cropped |
 
+## mount-snow
+
+Mount Snow's helpers while registering its two older exports and settling its pieces (after
+`resorts/mount-snow/prepare.py`): the 2023-24 PDF's run strokes drawn through a trial affine on this season's image
+(`ov23.py`: how each registration was judged before its affine went into `resort.py`), that page rendered on the map
+image's grid (`ref2023.py`: read with `tools/trailmap/grid_crop.py` where this season's image is too soft), and the
+Sunbrook inset's pieces with their ids on a 3.5x render of the 2023-24 inset, whose names are legible there
+(`inset_ids.py`: the inset's `CHECKED` entries and `EXTRA` names). What they settled is in
+`resorts/mount-snow/decisions.py` and `resort.py`.
+
+| file | what it did |
+|---|---|
+| `mount-snow/ov23.py` | ov23.py <a,b,c,d,e,f> <out.png> [work dir]: the 2023-24 strokes through that affine on the faded 2025-26 image (half size) |
+| `mount-snow/ref2023.py` | ref2023.py [work dir]: <work dir>/ref2023.png, the 2023-24 page on the map image's grid |
+| `mount-snow/inset_ids.py` | inset_ids.py <out.png> [first id] [last id] [work dir]: the inset's pieces, with ids, on the 2023-24 inset |
+
 ## mt-bachelor
 
 Mt. Bachelor's look into a line the extraction missed (I-5's and Carnival's, drawn as one outline at their

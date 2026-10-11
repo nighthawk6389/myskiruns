@@ -1,0 +1,21 @@
+// Mount Snow's 2025-26 trail map: this season's image (Vail Resorts' CDN;
+// the resort's own PDF is the same page flattened at 72 dpi), its lines from
+// the 2023-24 trail map PDF's run strokes (skimap.org map 24777) and its
+// names from the 2024-25 uphill-access map's text (map 36693), two older
+// exports of the same artwork registered on this season's image. The
+// Sunbrook area behind the summit is drawn only in the map's inset (top
+// left): its lines are the inset's own strokes, its names read on crops.
+// Names are spelled as the resort's terrain report spells them (report.json:
+// the lift-and-terrain-status page's feed in Common Crawl's capture of
+// 2025-12-14); ratings are the colour each name is printed in (the map
+// prints no symbol by a name), Ripcord's its double diamond. Two differ from
+// the report: Low Traverse is printed blue (the report: green), and Ledge,
+// listed twice (blue and black), is printed black above and blue below: one
+// trail, rated the harder. The parks are rated blue. Lines are named by the
+// name printed along them or settled on crops (decisions.py). Printed with
+// no line (markers at their names): Shootout, Tramline, Short Fuse and Under
+// Pressure (glades and open slopes), and the Grommet, Junkyard and Launch
+// Pad parks. Area elevations: the summit as printed (3,600 ft), Carinthia's
+// the top of the Nitro Express (OpenStreetMap's lift line on the USGS's 10 m
+// elevation model; tools/trailmap/lift_tops.py). x/y/baseY/width are unused
+// layout fields.

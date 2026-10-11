@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's forty resorts got their overlays, written so the next resort (or the next season of one of
+How the app's forty-one resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -61,7 +61,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 
 | the source gives you | route | done this way | start from |
 |---|---|---|---|
-| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
+| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Mount Snow (recipe D: one older export's strokes, another's text; rated by the names' colours), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
 | vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels), Alta (rounded symbols, `pdf_symbols.py --rounded --max-square`), Arapahoe Basin (one page of two paintings, two panels; most runs a name with no line: the stretch along it, `LABEL_LINE`), Telluride (names in the runs' colours, the EX double black; its hike-to terrain on two inset images read on crops, Whitefish's way) | Sunday River, Park City; Alta or Arapahoe Basin for rounded symbols |
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor, Northstar (white names haloed in the line's colour: the halo is the colour, and is dropped from the lines; one united outline for the runs that meet, cut at each junction), Crested Butte (dashed black runs a fill per dash, linked; the boundary's dots never chained; its extreme terrain and an inset of numbered runs markers) | Mt. Bachelor; Northstar for united outlines; Crested Butte for dashed lines |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
@@ -84,7 +84,8 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
   same name in this season's map and that this season prints no other, then take the strokes, text and symbols
   from the old export (Wildcat). Where the current map is only an image, the same works against the image: find
   every place it differs from the old page, leave out what it no longer prints and trace what it prints anew
-  (Heavenly; Beaver Creek, whose site has only its CDN image, from skimap.org's 2023 export).
+  (Heavenly; Beaver Creek, whose site has only its CDN image, from skimap.org's 2023 export; Mount Snow, from two
+  exports: one PDF's lines, another's names as text).
 - **Ask for the layered file:** a resort's own Illustrator or PDF export with live layers removes most of the
   work (Killington's metadata shows a flattened Illustrator file).
 
@@ -197,7 +198,7 @@ outside their clip (last season's names left in the file: drop them), names on l
    it the symbol printed by it (`SYMBOL_OF`).
 3. Then A's steps 5-7. Expect more pieces to settle on crops: centre lines fork at junctions.
 
-### D. An older export registered on this season's map (Wildcat, Heavenly, Beaver Creek; Deer Valley the other way round)
+### D. An older export registered on this season's map (Wildcat, Heavenly, Beaver Creek, Mount Snow; Deer Valley the other way round)
 
 When this season's PDF is flattened, outlined or missing but an older export of the same artwork has live layers:
 1. `register_pages.py --pdf old.pdf --page 0 --image this_season.png [--box ...]`: the affine (SIFT, RANSAC); keep
@@ -211,6 +212,12 @@ When this season's PDF is flattened, outlined or missing but an older export of 
 The newer edition may be the flattened one and the older the vectors (Deer Valley: the October PDF's strokes and
 glyphs on the November image, `checks/editions.py` for every name, line and symbol that differs, the image's own
 additions traced). Read the names on the newer edition: it corrects the older one's (Ham Bug, now Humbug).
+
+Two older exports can each give what the other lacks (Mount Snow: the 2023-24 PDF's strokes for the lines, its
+names outlined; the 2024-25 uphill-access map's live text for the names, some of its lines clipped away): register
+both on the image and carry the second's points through the image onto the first's page (`prepare.py`'s
+`to_page`). An inset at another scale gets its own affine (`--clip` to the inset; a clip reaching past the page's
+edge is cut to it, as the page renders only inside its box).
 
 ### E. Names you can't extract (start from Okemo; Sugarbush)
 
@@ -350,7 +357,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the forty resorts settled, so the next ones come out alike:
+What the forty-one resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -566,6 +573,7 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 |---|---|
 | `tools/trailmap/reports/` | A resort's trail report: terrain feeds of Vail Resorts' sites (`fetch_page.cjs`, `extract_feed.py`, `feed_trails.py`), their Common Crawl captures (`cc_query.sh`, `cc_lookup.py`, `warc_to_html.py`), mtnfeed (`feed_trails.py` reads its feed too, and a DOR trail list like Mt. Bachelor's) and others (its README); `compare.py`: a resort's `trails.ts` against its `report.json` (runs only one lists, ratings, spellings; a run the report splits into upper and lower parts stands for the map's one run, or for the parts the map prints apart) |
 | `tools/trailmap/osm_check.py` | OpenStreetMap's runs: `fetch` a box from an Overpass mirror; `check` each piece against the runs projected by a local fit on the named pieces around it |
+| `tools/trailmap/lift_tops.py` | Each lift's top from OpenStreetMap's lift lines (`work/<id>/osm.json`) on the USGS's 10 m elevation model (api.opentopodata.org): an area's elevation where the resort publishes none (US resorts) |
 | `tools/trailmap/vicomap.py` | A resort's interactive map on resorts-interactive.com (Alterra's resorts): `fetch` its JSON and SVG, `parse` each trail's line and label (grouped by name in the SVG; `--detail`: each line's style, every fill, the paths outside the groups), `fit` the registration on the line pieces (`fit-ink`: on an image's line pixels, where there are no pieces yet), `check` every piece against the trail covering it (`--along`: stretch by stretch), `show` a trail's lines over the map |
 
 **Looking at pieces and overlays on crops**
@@ -653,6 +661,7 @@ give the same.
 | [Arapahoe Basin](#arapahoe-basin) | one PDF page of two paintings under strokes and outlined black names; most runs a name and a symbol with no line | `pdf_resort.py` per panel, glyph sheets, the stretch along each name with no line (`LABEL_LINE`) | `regen.sh` | strokes and glyph names where many runs have no line |
 | [Telluride](#telluride) | PDF strokes and outlined names in the runs' colours over a 100 dpi painting; two inset images of the hike-to terrain | `pdf_resort.py`, glyph sheets, every piece on per-piece crops; the insets read on crops (`names.py`, `route_trace.py`) | `regen.sh` | a PDF plus image insets, panels of two kinds |
 | [Crested Butte](#crested-butte) | PDF lines as filled outlines (the black runs dashed, a fill per dash), outlined names, a 72 dpi painting; an inset of numbered runs | `pdf_outline_lines.py` (`--linked`, `--undashed`), the 2022-23 PDF's painting swapped in (`--replace`), glyph sheets, every piece on per-piece crops | `regen.sh` | dashed outlined lines; a painting sharper in an older PDF |
+| [Mount Snow](#mount-snow) | this season's map an image only (its PDF flattened at 72 dpi; the CDN's PNG); a 2023-24 export's strokes, a 2024-25 uphill map's text; an inset | two exports registered on the image (the inset on its own), names rated by their colour (`COLOR_SYMBOL`), the inset's names placed on crops (`EXTRA`) | `regen.sh` | lines and names from two older exports |
 
 ## Killington
 
@@ -2070,7 +2079,7 @@ Side, Back Side, North Face, High Lift, Ten Peaks, Learning Area) · `tools/trai
   not in it: Lower Crystal, Middle Championship (black: one run with Upper and Lower Championship). Not printed:
   Breakfast Trail, Fallaway, Middle International, Short Cut, Upper Roller Coaster. Areas' elevations: no lift
   elevations are published, so each area's highest lift's top is OpenStreetMap's lift line on the USGS's 10 m
-  elevation model (`lift_tops.py`, api.opentopodata.org); High Lift's the summit as printed (12,162 ft).
+  elevation model (`tools/trailmap/lift_tops.py`, api.opentopodata.org); High Lift's the summit as printed (12,162 ft).
 - **Decisions** (`panels/main/decisions.py`, every piece settled on per-piece crops): squares printed on a run's line
   away from its name (`SYMBOL_OF`: Gus' Way, the Gallowiches, Lower Canaan, Lower Ruby Chief, Upper Ruby Chief), lines
   that run on from one name into the next run's (Upper Smith Hill, Peanut, Crystal, Daisy, Upper and Middle
@@ -2082,6 +2091,55 @@ Side, Back Side, North Face, High Lift, Ten Peaks, Learning Area) · `tools/trai
   Yellow Brick Road, Schofield Road, the Championships and High Nowhere fixed and read again); `compare.py` against the
   report (every rating agrees); hover 330/330, 13/13; the app check; a rebuild from an empty work folder, byte for
   byte.
+
+## Mount Snow
+
+85 trails (78 + 7) · Vermont · one panel · areas: the report's (Main Face, North Face, Sunbrook, Carinthia) ·
+`tools/trailmap/resorts/mount-snow/`.
+
+- **Source:** this season's map (VistaMap's painting) is a flattened PDF (the whole page one 72 dpi image) and the
+  same page on Vail Resorts' CDN as a 3175 px PNG (scene7 `20251103_SO_winter-trail_map_001`, plain curl): the map
+  image, cropped to the painting. Its vectors come from two older exports of the same artwork on skimap.org: the
+  2023-24 trail map PDF (map 24777: every run's line a 1.15 pt stroke in green, blue, black or the freestyle
+  terrain's orange, the Sunbrook inset's 0.61 pt; names outlined glyphs) and the 2024-25 winter uphill-access map
+  (map 36693: the names as live text, Futura Condensed Medium 16 pt, each printed twice, in the run's colour and in
+  black under it; under a white fade, some runs' lines clipped away). The map prints no symbol by a name: the
+  legend rates each run by its name's colour (green, blue, black; the parks orange); Ripcord's double diamond is
+  the one symbol. The Sunbrook area behind the summit is drawn only in the inset (top left). The three files'
+  SHA-256s are checked.
+- **Route (recipe D, then A):** each export registered on the image (`register_pages.py`): the 2023-24 page right of
+  its inset (`--clip 360,0,1458,915 --features 30000 --ratio 0.8 --thresh 3`: 1256 inliers, median 1.06 px, the
+  painting re-rendered a little since), its inset on this season's inset (`--clip 9,0,354,258`: 1054 inliers,
+  0.49 px), the uphill map (419 inliers, 0.41 px); the affines are in `resort.py`. A clip reaching above the page
+  first left the inset 16.5 px off: the tool now cuts a clip to the page, which renders only inside its box.
+  `prepare.py`: the strokes 1.0 to 1.3 pt in the four colours (`extract_pdf_vectors.py`, `--clip=` for a negative
+  clip), less the part this season's inset covers, then the inset's own strokes put on the image through its
+  affine; the names from the uphill map's text, a label whose characters all lie on a coloured label's (or a longer
+  one's) dropped as its copy, each point carried through the image onto the 2023-24 page. `pdf_resort.py` with
+  `COLOR_SYMBOL`, `SYMBOL_REACH` 0, `END_REACH` 14 pt, `ALONG` 4 pt and `ALONG_NEAREST`; SNOWDANCE over PITCH
+  joined, the tubing park dropped, THE JUNKYARD, BEARPAW and SWITCH BACK spelled as the report. The inset's names,
+  outlined glyphs in the 2023-24 PDF, are placed by hand at their labels with their symbols (`EXTRA`), read on a
+  3.5x render of that inset (`tools/archive/mount-snow/inset_ids.py`); where this season's image is too soft, the
+  2023-24 page rendered on the map's grid (`ref2023.py` there).
+- **Rebuild:** `tools/trailmap/resorts/mount-snow/regen.sh` (1 min); it checks the three files' SHA-256s.
+- **Truth:** the trail report (`report.json`): the terrain feed of mountsnow.com's `lift-and-terrain-status.aspx` in
+  Common Crawl's capture of 2025-12-14 (CC-MAIN-2025-51), 86 rows. Every printed name is in it and every run it lists
+  is printed. Ratings: Ripcord double black (its two diamonds, `RATING`); two differ from the report, kept as the map
+  prints them: Low Traverse (a blue name, the report green), and Ledge, listed twice (blue and black), printed
+  black above and blue below: one trail, rated the harder. The parks are rated blue. Areas' elevations: the summit
+  as printed (3,600 ft) for the Main Face, the North Face and Sunbrook; Carinthia's the top of the Nitro Express
+  (`tools/trailmap/lift_tops.py`, now a shared tool).
+- **Decisions** (`decisions.py`): every inset piece by the label on its line or the run it continues; on the main
+  face, Somerset Road's and Link's dashes broken at each lift, High and Low Traverse, Snowdance Pitch from the Canyon
+  top, Hop across the lift, the black Ledge from the summit, Committed's top from Skyline, Tunnel Vision's dashed
+  orange line, Long John from the summit to its label, Charlie's Chase under Sap Bucket's label. Not trails: three
+  links with no name. Printed with no line: Shootout, Tramline, Short Fuse and Under Pressure (glades and open slopes)
+  and the Grommet, Junkyard and Launch Pad parks, markers at their names; Sap Bucket, a glade beside Charlie's Chase,
+  the stretch along its name. Plummet's line carries Boulder Pile's below their junction, as the 2023-24 PDF draws it.
+- **Checked:** every overlay on crops (`overlay_audit.py`, 22 sheets, every cell read; the straight runs beside the
+  lifts, the North Face's lines, Boulder Pile, the inset and the hairpins of Skyline and Moonwalk at the summit on
+  zoomed crops); `compare.py` against the report; hover 241/241; the app check; a rebuild from an empty work
+  folder, byte for byte.
 
 # Part 4. Methods in detail
 

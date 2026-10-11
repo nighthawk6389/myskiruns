@@ -1,18 +1,20 @@
-"""Crested Butte's area elevations (resort.AREAS): the top of each area's highest lift, as OpenStreetMap draws the lift
-and the USGS's 10 m elevation model (NED, through api.opentopodata.org) gives the ground there. The map prints only
-the summit (12,162 ft) and the resort publishes no lift elevations.
+"""A resort's lift tops, for its area elevations (resort.AREAS) where the resort publishes none: each lift's two ends
+as OpenStreetMap draws the lift, and the ground there on the USGS's 10 m elevation model (NED, through
+api.opentopodata.org; US resorts only). The map's own printed elevations come first; this is for the rest.
 
-    python3 tools/trailmap/osm_check.py fetch crested-butte --bbox 38.86,-107.00,38.92,-106.93   # work/crested-butte/osm.json
-    python3 tools/trailmap/resorts/crested-butte/lift_tops.py
+    python3 tools/trailmap/osm_check.py fetch <id> --bbox south,west,north,east     # work/<id>/osm.json
+    python3 tools/trailmap/lift_tops.py <id>
 
-Prints each lift's two ends (m) and its top in feet. Run once (2026-10-11); the results are written into resort.py.
+Prints each lift's two ends (m) and its top in feet. Run once and write the results into the resort's resort.py,
+with where they came from (Crested Butte, Mount Snow).
 """
 import json
 import os
 import subprocess
+import sys
 import time
 
-REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../../..'))
+REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../..'))
 
 
 def ned(points):
@@ -23,7 +25,8 @@ def ned(points):
 
 
 def main():
-    d = json.load(open(os.path.join(REPO, 'work/crested-butte/osm.json')))
+    rid = sys.argv[1]
+    d = json.load(open(os.path.join(REPO, 'work', rid, 'osm.json')))
     for e in d.get('elements', d):
         t = e.get('tags', {})
         if e.get('type') != 'way' or 'aerialway' not in t or not e.get('geometry'):

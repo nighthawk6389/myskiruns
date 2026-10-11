@@ -1,0 +1,435 @@
+{
+ "_source": "mountsnow.com's lift-and-terrain-status page, the trail widget's FR.TerrainStatusFeed (feed_03), as Common Crawl captured it on 2025-12-14 (CC-MAIN-2025-51); tools/trailmap/reports/README.md",
+ "trails": [
+  [
+   "Grommet",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "Inferno",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "Iron Run",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "Junkyard",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "Lower Fool's Gold",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "Mineshaft",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "Narrow Gauge",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "Nitro",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "Prospector",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "Rusty Nail",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "The Farm",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "The Gulch",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "Tunnel Vision",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "Upper Fool's Gold",
+   "Carinthia",
+   "TerrainPark"
+  ],
+  [
+   "Beaver Hill",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "Canyon",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Cascade",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Charlie's Chase",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Choke",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Committed",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Cooper's Junction",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "Cut-Off",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Deer Run",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "Drifter",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Drop",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Ego Alley",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "High Traverse",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Hop",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Illusion",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Launch Pad",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "Ledge",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Ledge",
+   "Main Face",
+   "Black"
+  ],
+  [
+   "Link",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Little John",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Lodge",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Long John",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "Low Traverse",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "Lower Exhibition",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "N.E. Time",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "One More Time",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Overbrook",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Pat's Pitch",
+   "Main Face",
+   "Black"
+  ],
+  [
+   "Ridge",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Roller Coaster",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Sap Bucket",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Seasons Pass",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "Shootout",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Short Fuse",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Snowdance",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "Snowdance Pitch",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Somerset Road",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "South Bowl",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Sweet Sixteen",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "Switchback",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "Tin Lizzy",
+   "Main Face",
+   "Green"
+  ],
+  [
+   "Tramline",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Uncles",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Under Pressure",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Upper Exhibition",
+   "Main Face",
+   "Blue"
+  ],
+  [
+   "Yard Sale",
+   "Main Face",
+   "Black"
+  ],
+  [
+   "Boulder Pile",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Challenger",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Chute",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Fallen Timbers",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Free Fall",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Jaws",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Little Steep",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Olympic",
+   "North Face",
+   "Black"
+  ],
+  [
+   "PDF",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Plummet",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Ripcord",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "River Run",
+   "North Face",
+   "Blue"
+  ],
+  [
+   "Second Thoughts",
+   "North Face",
+   "Blue"
+  ],
+  [
+   "Skyline",
+   "North Face",
+   "Blue"
+  ],
+  [
+   "Bear Paw",
+   "Sunbrook",
+   "Green"
+  ],
+  [
+   "Bear Trap",
+   "Sunbrook",
+   "Black"
+  ],
+  [
+   "Big Dipper",
+   "Sunbrook",
+   "Blue"
+  ],
+  [
+   "Cloud Nine",
+   "Sunbrook",
+   "Blue"
+  ],
+  [
+   "Little Dipper",
+   "Sunbrook",
+   "Blue"
+  ],
+  [
+   "Milky Way",
+   "Sunbrook",
+   "Blue"
+  ],
+  [
+   "Moonbeam",
+   "Sunbrook",
+   "Blue"
+  ],
+  [
+   "Moonwalk",
+   "Sunbrook",
+   "Blue"
+  ],
+  [
+   "One Small Step",
+   "Sunbrook",
+   "Blue"
+  ],
+  [
+   "Shooting Star",
+   "Sunbrook",
+   "Blue"
+  ],
+  [
+   "Sunspot",
+   "Sunbrook",
+   "Blue"
+  ],
+  [
+   "Thanks Walt",
+   "Sunbrook",
+   "Blue"
+  ]
+ ]
+}

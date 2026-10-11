@@ -523,6 +523,17 @@ Trail Maps - West,Crested Butte,mt crested butte ski map,Phrase,Enabled
 Trail Maps - West,Crested Butte,crested butte ski trails,Phrase,Enabled
 Trail Maps - West,Crested Butte,crested butte ski map,Exact,Enabled
 Trail Maps - West,Crested Butte,cbmr trail map,Exact,Enabled
+Trail Maps - East,Mount Snow,mount snow trail map,Exact,Enabled
+Trail Maps - East,Mount Snow,mount snow ski map,Exact,Enabled
+Trail Maps - East,Mount Snow,mount snow trail map,Phrase,Enabled
+Trail Maps - East,Mount Snow,mount snow ski map,Phrase,Enabled
+Trail Maps - East,Mount Snow,mount snow ski trails,Phrase,Enabled
+Trail Maps - East,Mount Snow,mount snow trail list,Phrase,Enabled
+Trail Maps - East,Mount Snow,mount snow run map,Phrase,Enabled
+Trail Maps - East,Mount Snow,mt snow trail map,Exact,Enabled
+Trail Maps - East,Mount Snow,mt snow trail map,Phrase,Enabled
+Trail Maps - East,Mount Snow,mt snow ski map,Phrase,Enabled
+Trail Maps - East,Mount Snow,carinthia trail map,Exact,Enabled
 Ski Run Tracker,Ski Run Tracker,ski run tracker,Exact,Enabled
 Ski Run Tracker,Ski Run Tracker,ski trail tracker,Exact,Enabled
 Ski Run Tracker,Ski Run Tracker,track ski runs,Exact,Enabled

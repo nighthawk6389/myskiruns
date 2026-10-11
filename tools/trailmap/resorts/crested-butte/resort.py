@@ -13,10 +13,10 @@ PANELS = [('main', 'Crested Butte'), ('teocalli-bowls', 'Teocalli Bowls')]
 # captured it on 2026-02-12); the three beginner areas at the conveyors are no runs
 REPORT = [t for t in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'report.json')))['trails']
           if not t[0].startswith('Beginner Area')]
-# the report's areas, each with the top of its highest lift (lift_tops.py: OpenStreetMap's lift lines and the USGS's
-# 10 m elevation model; the resort publishes none): Front Side the Silver Queen Express, Back Side the Paradise
-# Express, North Face the North Face lift, Ten Peaks the Prospect lift, the Learning Area the Peachtree lift; High
-# Lift's terrain runs from the summit, printed on the map (12,162 ft)
+# the report's areas, each with the top of its highest lift (tools/trailmap/lift_tops.py: OpenStreetMap's lift
+# lines and the USGS's 10 m elevation model; the resort publishes none): Front Side the Silver Queen Express, Back
+# Side the Paradise Express, North Face the North Face lift, Ten Peaks the Prospect lift, the Learning Area the
+# Peachtree lift; High Lift's terrain runs from the summit, printed on the map (12,162 ft)
 AREAS = [('front-side', 'Front Side', 11460), ('back-side', 'Back Side', 11148), ('north-face', 'North Face', 11416),
          ('high-lift', 'High Lift', 12162), ('ten-peaks', 'Ten Peaks', 10173),
          ('learning-area', 'Learning Area', 9485)]

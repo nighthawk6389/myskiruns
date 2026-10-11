@@ -524,6 +524,18 @@ const RESORT_ADS = {
     negatives: ['wildflower', 'summer', 'mountain bike', 'bike park', 'hiking', 'golf', 'hotel', 'lodging', 'rental',
       'real estate', 'airport', 'jobs', 'wedding', 'webcam', 'nordic'],
   },
+  'mount-snow': {
+    short: 'Mount Snow',
+    path: 'Mount-Snow',
+    area: 'North Face to Carinthia',
+    names: ['mount snow', 'mt snow'],
+    keywords: [
+      ['carinthia trail map', 'exact'],
+    ],
+    // the summer (the bike park, the golf course, Brewers Fest), its lodging (the Grand Summit hotel)
+    negatives: ['bike park', 'mountain bike', 'summer', 'golf', 'hotel', 'lodging', 'grand summit', 'rental',
+      'real estate', 'jobs', 'wedding', 'webcam', 'brewfest', 'nordic'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

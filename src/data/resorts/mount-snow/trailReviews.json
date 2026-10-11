@@ -1,0 +1,95 @@
+{
+ "reviews": {
+  "shootout": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T03:23:21.000Z",
+   "by": "claude",
+   "labelAt": [
+    54.03,
+    26.76
+   ]
+  },
+  "tramline": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T03:23:21.000Z",
+   "by": "claude",
+   "labelAt": [
+    57.57,
+    27.65
+   ]
+  },
+  "short-fuse": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T03:23:21.000Z",
+   "by": "claude",
+   "labelAt": [
+    40.02,
+    49.61
+   ]
+  },
+  "under-pressure": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T03:23:21.000Z",
+   "by": "claude",
+   "labelAt": [
+    49.15,
+    53.26
+   ]
+  },
+  "junkyard": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T03:23:21.000Z",
+   "by": "claude",
+   "labelAt": [
+    15.8,
+    53.73
+   ]
+  },
+  "grommet": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T03:23:21.000Z",
+   "by": "claude",
+   "labelAt": [
+    13.0,
+    61.71
+   ]
+  },
+  "launch-pad": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T03:23:21.000Z",
+   "by": "claude",
+   "labelAt": [
+    47.89,
+    71.88
+   ]
+  }
+ }
+}

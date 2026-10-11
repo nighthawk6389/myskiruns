@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird, Arapahoe Basin, Telluride and Crested Butte keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird, Arapahoe Basin, Telluride, Crested Butte and Mount Snow keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -212,3 +212,22 @@ python3 -I tools/trailmap/reports/feed_trails.py work/crested-butte/cc/feeds/fee
 
 167 rows in six areas (Front Side, Back Side, North Face, High Lift, Ten Peaks, Learning Area), the Teocalli Bowls'
 numbered runs under High Lift.
+
+## Mount Snow
+
+mountsnow.com's status page is `/the-mountain/mountain-conditions/lift-and-terrain-status.aspx`, as Crested Butte's.
+Common Crawl captured it on 2025-12-14 (CC-MAIN-2025-51; the 2026 crawls hold only its other conditions pages), and
+`report.json` is its trail widget's feed (`feed_03`; `feed_02` is the lifts'):
+
+```bash
+python3 -I tools/trailmap/reports/cc_lookup.py CC-MAIN-2025-51 \
+  'com,mountsnow)/the-mountain/mountain-conditions/lift-and-terrain-status' work/mount-snow/cc --fetch
+python3 -I tools/trailmap/reports/warc_to_html.py work/mount-snow/cc/CC-MAIN-2025-51_20251214221654.warc \
+  work/mount-snow/cc/page.html
+python3 -I tools/trailmap/reports/extract_feed.py work/mount-snow/cc/page.html work/mount-snow/cc/feeds
+python3 -I tools/trailmap/reports/feed_trails.py work/mount-snow/cc/feeds/feed_03_FR_TerrainStatusFeed.json \
+  --out tools/trailmap/resorts/mount-snow/report.json --source "..."
+```
+
+86 rows in four areas (Main Face, North Face, Sunbrook, Carinthia); Ledge is listed twice (blue and black), the
+parks as TerrainPark.

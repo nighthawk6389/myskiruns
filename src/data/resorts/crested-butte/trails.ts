@@ -20,7 +20,7 @@ import type { Trail, PeakData } from '../../../types';
 // Extremes' open faces, bowls, chutes and glades print no line: markers at
 // their names, and the inset's runs at their numbers. Area elevations: the
 // top of each area's highest lift (OpenStreetMap's lift lines on the USGS's
-// 10 m elevation model; lift_tops.py), High Lift's the summit as printed
+// 10 m elevation model; tools/trailmap/lift_tops.py), High Lift's the summit as printed
 // (12,162 ft). x/y/baseY/width are unused layout fields.
 export const peaks: PeakData[] = [
   { id: 'front-side', name: 'Front Side', elevation: 11460, x: 0, y: 0, baseY: 0, width: 0 },

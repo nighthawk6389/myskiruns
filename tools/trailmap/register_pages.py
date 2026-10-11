@@ -41,7 +41,9 @@ def main():
     assert bool(a.pdf) != bool(a.ref), 'one of --pdf and --ref'
     if a.pdf:
         pg = pymupdf.open(a.pdf)[a.page]
-        clip = pymupdf.Rect(*map(float, a.clip.split(','))) if a.clip else pg.rect
+        # a page renders only inside its own box: a clip reaching past it is cut to it, so the matches' points are
+        # measured from where the render starts
+        clip = (pymupdf.Rect(*map(float, a.clip.split(','))) & pg.rect) if a.clip else pg.rect
     else:
         ref = Image.open(a.ref).convert('RGB')
         clip = pymupdf.Rect(*map(float, a.clip.split(','))) if a.clip else \

@@ -191,6 +191,8 @@ export const RESORTS: ResortEntry[] = [
     { id: 'main', name: 'Crested Butte', paths: () => import('./data/resorts/crested-butte/panels/main/trailPaths.json') },
     { id: 'teocalli-bowls', name: 'Teocalli Bowls', paths: () => import('./data/resorts/crested-butte/panels/teocalli-bowls/trailPaths.json') },
   ], ['Crested Butte Mountain Resort', 'CBMR', 'Mt. Crested Butte', 'The Extremes', 'North Face']),
+  oneMap('mount-snow', 'Mount Snow', 'Vermont', () => import('./data/resorts/mount-snow/trails'), () => import('./data/resorts/mount-snow/trailPaths.json'),
+    ['Mt. Snow', 'Carinthia', 'Sunbrook', 'North Face', 'West Dover']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];
