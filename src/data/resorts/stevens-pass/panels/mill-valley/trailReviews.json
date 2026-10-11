@@ -1,0 +1,82 @@
+{
+ "reviews": {
+  "polaris": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    86.83,
+    27.96
+   ]
+  },
+  "orion-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    63.4,
+    32.01
+   ]
+  },
+  "waybacks": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    33.17,
+    39.44
+   ]
+  },
+  "pegasus-gulch": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    51.51,
+    53.03
+   ]
+  },
+  "andromeda-face": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    72.55,
+    57.09
+   ]
+  },
+  "south-park": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    10.42,
+    61.09
+   ]
+  }
+ }
+}

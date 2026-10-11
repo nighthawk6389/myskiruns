@@ -83,6 +83,10 @@ Outback Bowl runs, and the cross-country trails (left out: no run of the alpine 
 Crystal Mountain's (mtnfeed path `crystal-mountain`, resort 80) was fetched out of season (2026-10-11): 86 rows in five
 areas (Frontside, North, High Campbell, South, Lower Mountain).
 
+Stevens Pass has none to keep (2026-10-11): its status page (`/the-mountain/mountain-conditions/lift-and-terrain-status.aspx`)
+lists no trail out of season, and Common Crawl's only capture of it (CC-MAIN-2025-47, 2025-11-13, before opening)
+lists none either. Its printed symbols are the ratings.
+
 Mt. Hood Meadows has none to keep (2026-10-11): its site's trail list (`skihood.com/api/weather/trails`, the
 grooming report's) is empty out of season, Common Crawl's 2025-51 to 2026-08 crawls hold no capture of it, and the
 resort is on neither mtnfeed nor mountain.live. Its printed symbols are the ratings; OpenStreetMap's piste names

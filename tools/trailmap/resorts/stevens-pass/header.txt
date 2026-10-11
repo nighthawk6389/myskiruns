@@ -1,0 +1,22 @@
+// Stevens Pass's winter trail map (stevenspass.com's trail-maps page links
+// the 2024-25 edition, 20241115_SV_winter-trail_map_001.pdf; no 2025-26
+// file exists under that season's names): two of James Niehues's
+// paintings (100 dpi) under one vector layer, the Front Side and Mill
+// Valley, each a map panel. Runs are 1.1 to 1.4 pt strokes in their
+// colours (dashed: roads and cat tracks; a yellow stroke beside the runs lit
+// at night), names outlined black glyphs (pdf_glyphs.py, a font of its own,
+// shapes read on contact sheets: letters.json), each printed along its line,
+// in a gap of it or beside it, the symbol on the line (two diamonds apart:
+// double black). Where one stroke carries two runs it is cut at the second
+// one's symbol (Double Diamond / Lower Diamond, Hog Heaven / Hog Wild, Rock
+// Garden / Lower Rock Garden, Gemini / Lower Aquarius). Names as printed;
+// ratings the printed symbols (Midway, the Mavericks and Training Grounds,
+// parks, blue). Thirteen names print no line: the eleven the map calls "for
+// reference only, not designated trails or runs" (Big Chief Bowl, Court's
+// Meadow, Schim's Meadow, Tye Bowl, Winnie Chutes; Pegasus Gulch, Andromeda
+// Face, Waybacks, Orion Chutes, South Park, Polaris), Barrier Bowl and
+// Elevator: markers at their names, black. The resort's trail list is empty
+// out of season and no capture of it holds a trail: areas are the lifts each
+// run is skied from, read on the map, with each lift's top (OpenStreetMap's
+// lift on the USGS elevation model). x/y/baseY/width are unused layout
+// fields.

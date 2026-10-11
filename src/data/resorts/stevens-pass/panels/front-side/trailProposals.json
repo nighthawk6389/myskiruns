@@ -1,0 +1,360 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "bobby-chute": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "BOBBY CHUTE",
+   "note": "end of BOBBY CHUTE"
+  },
+  "nancy-chute": {
+   "polylines": [
+    39,
+    47
+   ],
+   "confidence": "high",
+   "mapName": "NANCY CHUTE",
+   "note": "along NANCY CHUTE | along its printed name"
+  },
+  "solitude": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "SOLITUDE",
+   "note": "checked on a crop"
+  },
+  "double-diamond": {
+   "polylines": [
+    27,
+    48
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLE DIAMOND",
+   "note": "checked on a crop | along its printed name"
+  },
+  "lower-diamond": {
+   "polylines": [
+    43,
+    57
+   ],
+   "confidence": "high",
+   "mapName": "LOWER DIAMOND",
+   "note": "checked on a crop | along its printed name"
+  },
+  "trapper": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "TRAPPER",
+   "note": "along TRAPPER"
+  },
+  "wild-katz": {
+   "polylines": [
+    29
+   ],
+   "confidence": "high",
+   "mapName": "WILD KATZ",
+   "note": "along WILD KATZ"
+  },
+  "barrier-ridge": {
+   "polylines": [
+    17
+   ],
+   "confidence": "high",
+   "mapName": "BARRIER RIDGE",
+   "note": "along BARRIER RIDGE"
+  },
+  "exhibition": {
+   "polylines": [
+    35,
+    60
+   ],
+   "confidence": "high",
+   "mapName": "EXHIBITION",
+   "note": "end of EXHIBITION | along its printed name"
+  },
+  "lower-terminal": {
+   "polylines": [
+    42,
+    50
+   ],
+   "confidence": "high",
+   "mapName": "LOWER TERMINAL",
+   "note": "end of LOWER TERMINAL | along its printed name"
+  },
+  "marmot-meadows": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "MARMOT MEADOWS",
+   "note": "along MARMOT MEADOWS"
+  },
+  "panorama": {
+   "polylines": [
+    34
+   ],
+   "confidence": "high",
+   "mapName": "PANORAMA",
+   "note": "checked on a crop"
+  },
+  "skyline": {
+   "polylines": [
+    15,
+    16,
+    51,
+    56,
+    62
+   ],
+   "confidence": "high",
+   "mapName": "SKYLINE",
+   "note": "along SKYLINE | along its printed name"
+  },
+  "crest-trail": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "CREST TRAIL",
+   "note": "along CREST TRAIL"
+  },
+  "promenade": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "PROMENADE",
+   "note": "along PROMENADE"
+  },
+  "roller-coaster": {
+   "polylines": [
+    31,
+    49
+   ],
+   "confidence": "high",
+   "mapName": "ROLLER COASTER",
+   "note": "end of ROLLER COASTER | along its printed name"
+  },
+  "skid-road": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "SKID ROAD",
+   "note": "along SKID ROAD"
+  },
+  "i-5": {
+   "polylines": [
+    28
+   ],
+   "confidence": "high",
+   "mapName": "I-5",
+   "note": "checked on a crop"
+  },
+  "showcase": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "SHOWCASE",
+   "note": "along SHOWCASE"
+  },
+  "brennans-trail": {
+   "polylines": [
+    18
+   ],
+   "confidence": "high",
+   "mapName": "BRENNAN\u2019S TRAIL",
+   "note": "along BRENNAN\u2019S TRAIL"
+  },
+  "broadway": {
+   "polylines": [
+    19,
+    20
+   ],
+   "confidence": "high",
+   "mapName": "BROADWAY",
+   "note": "checked on a crop"
+  },
+  "midway": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "MIDWAY",
+   "note": "along its printed name"
+  },
+  "one-light": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "ONE LIGHT",
+   "note": "along ONE LIGHT"
+  },
+  "waterfall": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "WATERFALL",
+   "note": "checked on a crop"
+  },
+  "blue-trail": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "BLUE TRAIL",
+   "note": "along BLUE TRAIL"
+  },
+  "cloud-9": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "CLOUD 9",
+   "note": "along CLOUD 9"
+  },
+  "hagen-hill": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "HAGEN HILL",
+   "note": "along HAGEN HILL"
+  },
+  "hog-heaven": {
+   "polylines": [
+    14,
+    52
+   ],
+   "confidence": "high",
+   "mapName": "HOG HEAVEN",
+   "note": "checked on a crop | along its printed name"
+  },
+  "hog-wild": {
+   "polylines": [
+    44,
+    59
+   ],
+   "confidence": "high",
+   "mapName": "HOG WILD",
+   "note": "checked on a crop | along its printed name"
+  },
+  "hoot-n-holler": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "HOOT \u2019N HOLLER",
+   "note": "along HOOT \u2019N HOLLER"
+  },
+  "international": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "INTERNATIONAL",
+   "note": "checked on a crop"
+  },
+  "little-tree": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE TREE",
+   "note": "along LITTLE TREE"
+  },
+  "lower-rock-garden": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "LOWER ROCK GARDEN",
+   "note": "checked on a crop"
+  },
+  "parachute-1": {
+   "polylines": [
+    32,
+    53
+   ],
+   "confidence": "high",
+   "mapName": "PARACHUTE 1",
+   "note": "along PARACHUTE 1 | along its printed name"
+  },
+  "parachute-2": {
+   "polylines": [
+    33
+   ],
+   "confidence": "high",
+   "mapName": "PARACHUTE 2",
+   "note": "checked on a crop"
+  },
+  "rockn-blue": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "ROCK\u2019N BLUE",
+   "note": "along ROCK\u2019N BLUE"
+  },
+  "rock-garden": {
+   "polylines": [
+    37,
+    46
+   ],
+   "confidence": "high",
+   "mapName": "ROCK GARDEN",
+   "note": "checked on a crop | along its printed name"
+  },
+  "slow-poke": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "SLOW POKE",
+   "note": "along SLOW POKE"
+  },
+  "walls-st": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "WALLS ST.",
+   "note": "along WALLS ST."
+  },
+  "76-road": {
+   "polylines": [
+    0,
+    55
+   ],
+   "confidence": "high",
+   "mapName": "76 ROAD",
+   "note": "symbol of 76 ROAD | along its printed name"
+  },
+  "easy-street": {
+   "polylines": [
+    3,
+    5,
+    61
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "along EASY STREET | end of EASY STREET | along its printed name"
+  },
+  "tye-creek": {
+   "polylines": [
+    4,
+    58
+   ],
+   "confidence": "high",
+   "mapName": "TYE CREEK",
+   "note": "end of TYE CREEK | along its printed name"
+  }
+ }
+}

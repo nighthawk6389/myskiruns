@@ -1,0 +1,134 @@
+{
+ "reviews": {
+  "courts-meadow": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    80.74,
+    34.51
+   ]
+  },
+  "barrier-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    88.85,
+    37.29
+   ]
+  },
+  "schims-meadow": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    28.83,
+    38.22
+   ]
+  },
+  "tye-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    36.82,
+    39.39
+   ]
+  },
+  "winnie-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    91.83,
+    41.35
+   ]
+  },
+  "big-chief-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    7.37,
+    43.16
+   ]
+  },
+  "upper-mavericks": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    87.77,
+    58.02
+   ]
+  },
+  "training-grounds": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    48.14,
+    58.46
+   ]
+  },
+  "lower-mavericks": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.59,
+    65.4
+   ]
+  },
+  "elevator": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T13:10:58.000Z",
+   "by": "claude",
+   "labelAt": [
+    20.95,
+    70.72
+   ]
+  }
+ }
+}

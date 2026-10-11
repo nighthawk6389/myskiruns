@@ -1,0 +1,116 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "orion": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "ORION",
+   "note": "along ORION"
+  },
+  "pegasus": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "PEGASUS",
+   "note": "along PEGASUS"
+  },
+  "south-divide": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "SOUTH DIVIDE",
+   "note": "along SOUTH DIVIDE"
+  },
+  "aquarius": {
+   "polylines": [
+    1,
+    2
+   ],
+   "confidence": "high",
+   "mapName": "AQUARIUS",
+   "note": "along AQUARIUS | continuation"
+  },
+  "aquarius-face": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "AQUARIUS FACE",
+   "note": "checked on a crop"
+  },
+  "borealis": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "BOREALIS",
+   "note": "checked on a crop"
+  },
+  "corona-bowl": {
+   "polylines": [
+    13,
+    16
+   ],
+   "confidence": "high",
+   "mapName": "CORONA BOWL",
+   "note": "checked on a crop | end of CORONA BOWL"
+  },
+  "gemini": {
+   "polylines": [
+    5,
+    6
+   ],
+   "confidence": "high",
+   "mapName": "GEMINI",
+   "note": "checked on a crop | along GEMINI"
+  },
+  "lower-aquarius": {
+   "polylines": [
+    7,
+    17
+   ],
+   "confidence": "high",
+   "mapName": "LOWER AQUARIUS",
+   "note": "checked on a crop"
+  },
+  "lower-gemini": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "LOWER GEMINI",
+   "note": "along LOWER GEMINI"
+  },
+  "lower-voltage": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "LOWER VOLTAGE",
+   "note": "checked on a crop"
+  },
+  "outer-limits": {
+   "polylines": [
+    4,
+    8,
+    18,
+    19
+   ],
+   "confidence": "high",
+   "mapName": "OUTER LIMITS",
+   "note": "along OUTER LIMITS | checked on a crop | along its printed name"
+  },
+  "shooting-star": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "SHOOTING STAR",
+   "note": "along SHOOTING STAR"
+  }
+ }
+}

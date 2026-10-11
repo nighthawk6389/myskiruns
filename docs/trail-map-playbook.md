@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's forty-seven resorts got their overlays, written so the next resort (or the next season of one of
+How the app's forty-eight resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -62,7 +62,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 | the source gives you | route | done this way | start from |
 |---|---|---|---|
 | trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Crystal Mountain (rounded symbols; its Northway inset image a panel read on crops, Telluride's way), Mount Snow (recipe D: one older export's strokes, another's text; rated by the names' colours), Stratton (recipe D: an export five seasons older, its changes read on crops), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
-| vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels), Alta (rounded symbols, `pdf_symbols.py --rounded --max-square`), Arapahoe Basin (one page of two paintings, two panels; most runs a name with no line: the stretch along it, `LABEL_LINE`), Telluride (names in the runs' colours, the EX double black; its hike-to terrain on two inset images read on crops, Whitefish's way), Brighton (a font of its own; long strokes each carrying a run and the next, cut where the next one's symbol or name starts), Mt. Hood Meadows (the painting vectors too; double diamonds one fill of two overlapping, `--overlapped-doubles`; no trail report, the lifts read on the map as areas) | Sunday River, Park City; Alta or Arapahoe Basin for rounded symbols |
+| vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels), Alta (rounded symbols, `pdf_symbols.py --rounded --max-square`), Arapahoe Basin (one page of two paintings, two panels; most runs a name with no line: the stretch along it, `LABEL_LINE`), Telluride (names in the runs' colours, the EX double black; its hike-to terrain on two inset images read on crops, Whitefish's way), Brighton (a font of its own; long strokes each carrying a run and the next, cut where the next one's symbol or name starts), Mt. Hood Meadows (the painting vectors too; double diamonds one fill of two overlapping, `--overlapped-doubles`; no trail report, the lifts read on the map as areas), Stevens Pass (one page of two paintings, two panels; a symbol farther from its name on the larger-scale panel: `SYMBOL_REACH` per panel) | Sunday River, Park City; Alta or Arapahoe Basin for rounded symbols |
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor, Northstar (white names haloed in the line's colour: the halo is the colour, and is dropped from the lines; one united outline for the runs that meet, cut at each junction), Crested Butte (dashed black runs a fill per dash, linked; the boundary's dots never chained; its extreme terrain and an inset of numbered runs markers) | Mt. Bachelor; Northstar for united outlines; Crested Butte for dashed lines |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
 | a painting with no lines, names as text | every run traced along its painted cut by trace readers (Part 4) | Jay Peak | Jay Peak |
@@ -366,7 +366,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the forty-seven resorts settled, so the next ones come out alike:
+What the forty-eight resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -676,6 +676,7 @@ give the same.
 | [Brighton](#brighton) | PDF strokes (one stroke often two runs), outlined names in a font of its own, symbols on the lines | `pdf_resort.py`, glyph sheets, cuts where the next run's symbol or name starts | `regen.sh` | strokes that carry several runs each |
 | [Solitude](#solitude) | its PDF one flattened image; the interactive map's SVG; the runs print no symbol | Steamboat's `prepare.py` without the routing (the SVG's lines lie on the print's), `GROUPED`, the rating from the line's colour (`COLOR_SYMBOL`) | `regen.sh` | an Alterra map whose PDF is flattened |
 | [Snowshoe](#snowshoe) | an image only; the interactive map's SVG, drawing the inset elsewhere | Steamboat's `prepare.py`, two registrations, `GROUPED`; the parks, glades and stubbed runs read on crops | `regen.sh` | an Alterra map whose inset the interactive map places apart |
+| [Stevens Pass](#stevens-pass) | one PDF page of two 100 dpi paintings (Front Side, Mill Valley) under strokes and outlined names; no trail report | `pdf_resort.py` per panel, glyph sheets, the lifts as areas read on the map | `regen.sh` | one page of two paintings at different scales |
 | [Mt. Hood Meadows](#mt-hood-meadows) | a vector PDF (the painting vectors too) of strokes, outlined names and symbols; no trail report | `pdf_resort.py`, glyph sheets (Beaver Creek's font), the lifts as areas read on the map | `regen.sh` | strokes and glyph names with no trail list to check against |
 
 ## Killington
@@ -2359,6 +2360,46 @@ Solitude Canyon, Evergreen Peak, Eagle Ridge, Moonbeam Area) · `tools/trailmap/
   again); `compare.py` against the report; hover 172/172; the app check; a rebuild from an empty work folder, byte
   for byte. The ads build: West Virginia joins the East campaign, and the campaigns' negative "snowshoe" (which
   blocked the resort's own keywords) is the sport's other words now.
+
+## Stevens Pass
+
+71 trails (55 + 16) · Washington · two panels (Front Side, Mill Valley) · areas: its lifts (each run with the lift
+it is skied from, read on the map) · `tools/trailmap/resorts/stevens-pass/`.
+
+- **Source:** the winter trail map PDF stevenspass.com's trail-maps page links
+  (`20241115_SV_winter-trail_map_001.pdf`, the 2024-25 edition: no 2025-26 file under the season's dated names,
+  `find_source.cjs dates`, and none on the image CDN; fetched from inside the page, `fetch_pdf.cjs`, as Vail
+  Resorts' sites refuse curl). Its second page holds two of James Niehues's paintings side by side, each a 100 dpi
+  image under one vector layer: the Front Side, and Mill Valley (the back side) drawn at a larger scale. Each is a
+  panel (`PANELS`, `panels/<panel>/resort.py`), the page rendered at 3 px/pt over its `CLIP`. The PDF's SHA-256 is
+  checked.
+- **Route:** the runs' 1.1 to 1.4 pt strokes in blue, black and green (`extract_pdf_vectors.py`; dashed: roads and
+  cat tracks; a yellow stroke beside the runs lit at night left out). Names: outlined black glyphs in a font of
+  their own (`pdf_glyphs.py`, 220 shapes read on contact sheets; M and W one shape turned, `--turned WM`; Mill
+  Valley's symbols up to 15 pt, `--max-size 17`; a double diamond two diamonds apart, `--double-dist 1.6`). The
+  symbols sit on the line a gap past the name: `SYMBOL_REACH` 13 pt on the Front Side, 20 on Mill Valley (its larger
+  scale). Two-line names are joined (`JOIN`; `JOIN_GAP` 45 pt, as Bobby Chute and Corona Bowl print their two words
+  one after the other down the line); Lower Voltage's two lines read jumbled: placed by hand (`EXTRA`).
+- **Rebuild:** `tools/trailmap/resorts/stevens-pass/regen.sh` (1 min); it checks the PDF's SHA-256.
+- **Truth:** none in season: the status page's trail feed is empty out of season and Common Crawl's one capture
+  (November 2025, before opening) lists no trail. The printed symbols are the ratings, the parks blue; OpenStreetMap's
+  piste names agree with the readings. The map's own note calls eleven names "for reference only and not designated
+  trails or runs" (Big Chief Bowl, Court's Meadow, Schim's Meadow, Tye Bowl, Winnie Chutes; Pegasus Gulch, Andromeda
+  Face, Waybacks, Orion Chutes, South Park, Polaris): with Barrier Bowl and Elevator (no line either) they are
+  markers at their names, black. Areas: the ten lifts (`_AREAS`), tops from OpenStreetMap on the USGS's 10 m model
+  (`lift_tops.py`).
+- **Decisions** (`panels/*/decisions.py`): one stroke carries two runs, cut at the second one's symbol: Double
+  Diamond / Lower Diamond, Hog Heaven / Hog Wild, Rock Garden / Lower Rock Garden (where Little Tree leaves it),
+  Gemini / Lower Aquarius (Gemini's line runs on solid past its name to where Lower Aquarius and Lower Gemini start);
+  the line by Parachute 2's name is Parachute 2's (the auto-match gave both Parachutes' lines to one), Solitude's line
+  its own (not Nancy Chute's), Panorama's black line its own (not Skyline's); I-5's, International's, Broadway's (its
+  dashes down to Midway's park, then solid), Waterfall's (through the parks' bands), Borealis', Lower Voltage's,
+  Corona Bowl's and Aquarius Face's settled on crops; the dashed line from Aquarius' square down to Outer Limits' name
+  is Outer Limits'. No trail: a dashed track from Broadway at Midway to Skyline and a green way through the learning
+  terrain.
+- **Checked:** every overlay on crops (`overlay_audit.py`, 13 sheets, every cell read; Gemini, Lower Aquarius,
+  Outer Limits and Aquarius read again); hover 136/136 and 45/45; the app check; a rebuild from an empty work folder,
+  byte for byte.
 
 ## Mt. Hood Meadows
 

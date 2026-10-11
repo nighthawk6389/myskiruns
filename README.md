@@ -5,12 +5,12 @@ overlay on the map, with its name and rating, so you tap the run you just skied 
 works offline on the mountain, installs to a phone's home screen, and can sync your trips between devices with an
 optional account. Live at **[www.myskiruns.app](https://www.myskiruns.app)**.
 
-Forty-seven resorts so far, 6,589 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch, Mount
+Forty-eight resorts so far, 6,660 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch, Mount
 Snow, Stratton, Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Snowshoe, Vail, Beaver
 Creek, Breckenridge, Keystone, Arapahoe Basin, Copper Mountain, Winter Park, Steamboat, Snowmass, Aspen Mountain,
 Buttermilk, Telluride, Crested Butte, Park City, Deer Valley, Snowbasin, Alta, Snowbird, Brighton, Solitude, Big
 Sky, Whitefish Mountain, Jackson Hole, Schweitzer, Palisades Tahoe, Northstar, Heavenly, Mammoth Mountain, Big
-Bear, Mt. Bachelor, Mt. Hood Meadows, Crystal Mountain and Whistler Blackcomb.
+Bear, Mt. Bachelor, Mt. Hood Meadows, Crystal Mountain, Stevens Pass and Whistler Blackcomb.
 
 Most of the work in this repository is the **trail-map pipeline**: getting every trail's overlay onto its own
 drawn line, with the right name, on maps that were never made to be machine-read. How it is done, resort by
@@ -111,6 +111,7 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 | Mt. Bachelor | Oregon | 110 (72 + 38) | 1 | PDF lines and names both as filled outlines over a painting | `tools/trailmap/resorts/mt-bachelor/regen.sh` |
 | Mt. Hood Meadows | Oregon | 126 (76 + 50) | 1 | a vector PDF (the painting too): strokes, outlined names and symbols | `tools/trailmap/resorts/mt-hood-meadows/regen.sh` |
 | Crystal Mountain | Washington | 122 (76 + 46) | 2 | a vector PDF of strokes and text; its Northway inset image read on crops, the lines routed along the painted ones | `tools/trailmap/resorts/crystal-mountain/regen.sh` |
+| Stevens Pass | Washington | 71 (55 + 16) | 2 | one PDF of two paintings (Front Side, Mill Valley) under strokes and outlined names | `tools/trailmap/resorts/stevens-pass/regen.sh` |
 | Whistler Blackcomb | British Columbia | 232 (209 + 23) | 3 | one PDF read as a main map and two insets | `tools/trailmap/resorts/whistler-blackcomb/regen.sh` |
 
 "Lines" are trails drawn on their own line (or along their printed name, where the map draws no line), "markers"
@@ -298,12 +299,12 @@ the playbook's [Part 5](docs/trail-map-playbook.md#part-5-what-we-tried-and-what
 
 ## What's left
 
-1. **A person's confirmation** for the forty-four resorts Claude checked on crops instead of the review page
-   (Sugarbush through Mt. Hood Meadows), if wanted: the Trail Check page can be published for any resort ([playbook,
+1. **A person's confirmation** for the forty-five resorts Claude checked on crops instead of the review page
+   (Sugarbush through Stevens Pass), if wanted: the Trail Check page can be published for any resort ([playbook,
    Part 4](docs/trail-map-playbook.md#auditing-on-crops-or-the-human-review-page)).
 2. **Shared tooling:** a legend file per map feeding the extraction and the readers' prompts; readers run from a
    script instead of an interactive session ([playbook, Part 5](docs/trail-map-playbook.md#scaling-to-many-maps)).
-3. The hover check passes 17,784 of 17,793 points (2026-10-11). The nine misses are points where two trails'
+3. The hover check passes 17,965 of 17,974 points (2026-10-11). The nine misses are points where two trails'
    overlays meet or share a stretch, where either name is right: Killington 2, Stowe 2, Beaver Creek 2, Big Sky's
    Bowl 1, Heavenly 1, Mt. Bachelor 1 (each resort's numbers are in the playbook's Part 3).
 4. Whiteface, Winter Park, Breckenridge, Copper Mountain and Keystone key their decisions by piece id, valid for

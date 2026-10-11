@@ -615,6 +615,16 @@ const RESORT_ADS = {
     // the mountain's climbs and its other ski areas (Timberline, Skibowl), the summer
     negatives: ['climb', 'climbing', 'summit', 'timberline', 'skibowl', 'cooper spur', 'camping', 'hiking'],
   },
+  'stevens-pass': {
+    short: 'Stevens Pass',
+    path: 'Stevens-Pass',
+    area: 'Front Side & Mill Valley',
+    names: ['stevens pass', 'stevens pass ski', 'stevens pass resort'],
+    keywords: [],
+    // the highway pass itself (road conditions, cameras, closures), the Pacific Crest Trail's hikers, the summer
+    negatives: ['road conditions', 'pass report', 'cameras', 'webcam', 'closure', 'highway', 'wsdot', 'pct', 'hiking',
+      'bike park', 'summer', 'lodging', 'jobs'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

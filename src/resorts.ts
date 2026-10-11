@@ -207,6 +207,10 @@ export const RESORTS: ResortEntry[] = [
     ['Snowshoe Mountain', 'Silver Creek', 'Western Territory', 'Cupp Run', 'Pocahontas County']),
   oneMap('mt-hood-meadows', 'Mt. Hood Meadows', 'Oregon', () => import('./data/resorts/mt-hood-meadows/trails'), () => import('./data/resorts/mt-hood-meadows/trailPaths.json'),
     ['Mount Hood Meadows', 'Mt. Hood', 'Heather Canyon', 'Hood River Meadows', 'Portland']),
+  panels('stevens-pass', 'Stevens Pass', 'Washington', () => import('./data/resorts/stevens-pass/trails'), [
+    { id: 'front-side', name: 'Front Side', paths: () => import('./data/resorts/stevens-pass/panels/front-side/trailPaths.json') },
+    { id: 'mill-valley', name: 'Mill Valley', paths: () => import('./data/resorts/stevens-pass/panels/mill-valley/trailPaths.json') },
+  ], ['Stevens Pass Resort', 'Mill Valley', 'Seventh Heaven', 'Skykomish', 'Leavenworth']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];
