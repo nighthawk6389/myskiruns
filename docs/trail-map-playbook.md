@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's thirty-nine resorts got their overlays, written so the next resort (or the next season of one of
+How the app's forty resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -63,7 +63,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 |---|---|---|---|
 | trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
 | vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels), Alta (rounded symbols, `pdf_symbols.py --rounded --max-square`), Arapahoe Basin (one page of two paintings, two panels; most runs a name with no line: the stretch along it, `LABEL_LINE`), Telluride (names in the runs' colours, the EX double black; its hike-to terrain on two inset images read on crops, Whitefish's way) | Sunday River, Park City; Alta or Arapahoe Basin for rounded symbols |
-| lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor, Northstar (white names haloed in the line's colour: the halo is the colour, and is dropped from the lines; one united outline for the runs that meet, cut at each junction) | Mt. Bachelor; Northstar for united outlines |
+| lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor, Northstar (white names haloed in the line's colour: the halo is the colour, and is dropped from the lines; one united outline for the runs that meet, cut at each junction), Crested Butte (dashed black runs a fill per dash, linked; the boundary's dots never chained; its extreme terrain and an inset of numbered runs markers) | Mt. Bachelor; Northstar for united outlines; Crested Butte for dashed lines |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
 | a painting with no lines, names as text | every run traced along its painted cut by trace readers (Part 4) | Jay Peak | Jay Peak |
 | only raster images, but an interactive map whose SVG draws the same artwork (Alterra's resorts-interactive.com) | `vicomap.py parse --detail`: its lines, letters and symbols grouped by trail; registered on the image, each line routed onto the image's own line, named by its group (`GROUPED`); the print's redrawn spots traced (`trace_ink.py`) | Steamboat | Steamboat |
@@ -76,7 +76,8 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 - **A low-resolution painting under good vectors:** `matte_pdf_layer.py` mattes the PDF's vector layer over a
   sharper copy of the painting (Breckenridge, from Vail Resorts' image CDN), a sharper image of the whole map
   (Keystone), or a smooth upscale of the embedded painting (Copper Mountain, Sugarloaf, Smugglers' Notch; Park City
-  with `--resample`). A sharper image of the whole map is flattened: it already shows the PDF's translucent layers
+  with `--resample`), or the same painting embedded sharper in an older PDF (Crested Butte, `--replace`: compare the
+  two blurred first, so a repainted area is not swapped in). A sharper image of the whole map is flattened: it already shows the PDF's translucent layers
   (washes, Multiply bands, slow zones), so leave them to it (`--flattened`; Breckenridge's `matte.py` does the same).
 - **This season's PDF has flattened lines or outlined names, an older one has them live:** skimap.org keeps past
   exports of the same artwork. Register the two pages (`register_pages.py`), check that every old name lands on the
@@ -187,7 +188,9 @@ outside their clip (last season's names left in the file: drop them), names on l
    leave out the fills `pdf_glyphs.py` reads as letters (`--glyphs`, `--letters`: an I or a hyphen in a run's
    colour is as thin as its line), and take a dark outline as a line only if it is long (`--dark-min`). Then
    check that every outline in a run's colour is covered by a piece, a letter or a symbol (Mt. Bachelor's
-   `checks/missed.py`).
+   `checks/missed.py`). A dashed line drawn one fill per dash, in no order: `--linked` joins the dashes whose ends
+   face each other; dots of a boundary in a run's colour, many to a fill: `--undashed` keeps them from being chained
+   into a line (Crested Butte, both in its black).
 2. Names and symbols: B's `pdf_glyphs.py` passes. A cluster of names may be drawn grouped by shape (every G of
    the cluster, then every R...): `labels` then makes fragments of them (Mt. Bachelor's beginner area). Drop the
    fragments (`DROP`), place each name by hand where it is printed (`EXTRA`, in the report's spelling) and give
@@ -347,7 +350,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the thirty-nine resorts settled, so the next ones come out alike:
+What the forty resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -649,6 +652,7 @@ give the same.
 | [Big Bear](#big-bear) | three images, no PDF: one print drawing the lines, two painting the runs with none; three interactive maps | the print's own lines named by their symbols; the interactive maps' lines and stretches along the names elsewhere; `names.py` | `regen.sh` | an image-only map whose panels differ in kind |
 | [Arapahoe Basin](#arapahoe-basin) | one PDF page of two paintings under strokes and outlined black names; most runs a name and a symbol with no line | `pdf_resort.py` per panel, glyph sheets, the stretch along each name with no line (`LABEL_LINE`) | `regen.sh` | strokes and glyph names where many runs have no line |
 | [Telluride](#telluride) | PDF strokes and outlined names in the runs' colours over a 100 dpi painting; two inset images of the hike-to terrain | `pdf_resort.py`, glyph sheets, every piece on per-piece crops; the insets read on crops (`names.py`, `route_trace.py`) | `regen.sh` | a PDF plus image insets, panels of two kinds |
+| [Crested Butte](#crested-butte) | PDF lines as filled outlines (the black runs dashed, a fill per dash), outlined names, a 72 dpi painting; an inset of numbered runs | `pdf_outline_lines.py` (`--linked`, `--undashed`), the 2022-23 PDF's painting swapped in (`--replace`), glyph sheets, every piece on per-piece crops | `regen.sh` | dashed outlined lines; a painting sharper in an older PDF |
 
 ## Killington
 
@@ -2022,6 +2026,62 @@ Revelation Lift and its hike-to terrain) · `tools/trailmap/resorts/telluride/`.
   Madison, Wildcat, The Peaks, Nellie, Satisfaction and Silver Glade fixed and read again); every diamond on
   `symbol_audit.py --mode diamonds`; `compare.py` against the report; hover 326/326, 12/12, 55/55; the app check; a
   rebuild from an empty work folder, byte for byte.
+
+## Crested Butte
+
+161 trails (91 + 70) · Colorado · two panels: Crested Butte (the whole map), Teocalli Bowls · areas: the report's (Front
+Side, Back Side, North Face, High Lift, Ten Peaks, Learning Area) · `tools/trailmap/resorts/crested-butte/`.
+
+- **Source:** the 2025-26 trail map PDF skicb.com's trail-maps page links (Vail Resorts: fetched from inside the page,
+  `fetch_pdf.cjs`; skimap.org's map 36782 is the same file), page 2 (page 1 is the base area): James Niehues's painting
+  embedded at only 72 dpi under an InDesign vector layer. The CDN has no copy of it (no dated `_CB_winter-trail_map`
+  name answers on scene7), but skimap.org's 2022-23 PDF (map 23099) embeds the same painting at 269 dpi and the
+  Teocalli inset's at 300: identical to this season's but for the JPEG's noise (compared blurred, no difference over
+  11 levels), so they are swapped in for this season's before the page is rendered (`matte_pdf_layer.py --replace`,
+  new with this map). Lines: every run's line a filled outline (the artwork's strokes outlined) 2.2 pt wide in blue,
+  green or a near-black, a few left as 2 to 2.5 pt strokes; the black runs dashed, each dash a fill of its own, drawn
+  in no order; the boundary and the control fences dotted in the same black, many dots to a fill; lifts red. Names:
+  outlined glyphs in the run's colour on white halos (Keystone Ridge's letters drawn green and then black over them);
+  the lifts', the title's and the conveyors' a second black. Symbols: fills (squares drawn as rectangles; the extreme
+  terrain's double diamonds holding E and X, above the middle of their names). The Teocalli Bowls inset (lower left)
+  numbers its runs on the painting (glyphs) with a key in live text; the parks are white names on orange pills. Both
+  PDFs' SHA-256s are checked.
+- **Route (recipe C):** `prepare.py`: the page left of the legend and above the partners' band at 3 px/pt; the
+  outlines' centre lines (`pdf_outline_lines.py`) with three things new: the hidden copy of a letter (a fill with a
+  letter's box, within 0.15 pt) is no line either; `--undashed black`, so the boundary's and fences' dots are never
+  chained into a line; `--linked black --link-gap 8.5`, which joins the black runs' dashes end to end where two ends
+  face each other (the end directions over 5 pt: a rounded cap curls the last one); the strokes added (`--append`).
+  Glyphs read once on contact sheets (`letters.json`, 258 shapes; symbols up to 14 pt, `--max-size 14`, the diamonds
+  being 11 tall; `--rect-squares`), words split at 1.6 pt; I and l are one shape (an l inside a word). `pdf_resort.py`
+  with `SYMBOL_CENTRE` and `SYMBOL_REACH` 16 pt (the EX above a name's middle), `END_REACH` 11 pt (wide halos and EZ
+  signs in the line's gap), 60 names printed in two or three parts joined (`JOIN`, `JOIN_GAP` 30 pt: ROLLER and COASTER
+  sit either side of a dash of their line), the EZ signs, restaurants and logos dropped, the parks `EXTRA` at their
+  pills. The inset is a panel of markers: its numbers read as glyphs (`teocalli_letters.json`), each named from the key
+  (the top of the High Lift and the cat road out are no runs), at the number with its double diamond (`numbers.json`;
+  the panel's clip is its image, so its glades' markers land in percent of it).
+- **Rebuild:** `tools/trailmap/resorts/crested-butte/regen.sh` (1 min); it checks both PDFs' SHA-256s.
+- **Truth:** the trail report (`report.json`): the terrain feed of the lift-and-terrain-status page in Common Crawl's
+  capture of 2026-02-12 (CC-MAIN-2026-08; the page is `lift-and-terrain-status.aspx` here, not
+  `terrain-and-lift-status`), 167 rows, the three conveyors' beginner areas left out. Spellings are the report's
+  (Houston's Access for HOUSTON ACCESS, Fredo's North Face Cliffs for FREDO'S, Teo 2 for TEOCALLI 2 BOWL, Ally Loop for
+  ALLEY LOOP, Spellbound Glade, Roosters Run, Upper Keystone and Lower North Star for the KEYSTONE and NORTH STAR printed
+  above them). Every printed symbol agrees with the report; Avery, Eflin's Way, Lower North Star, Mach 1, Robel's,
+  Easy Out, Banana High Entrance and Silver Queen Road print none and take its rating (`DEFAULT_SYMBOL`). Printed but
+  not in it: Lower Crystal, Middle Championship (black: one run with Upper and Lower Championship). Not printed:
+  Breakfast Trail, Fallaway, Middle International, Short Cut, Upper Roller Coaster. Areas' elevations: no lift
+  elevations are published, so each area's highest lift's top is OpenStreetMap's lift line on the USGS's 10 m
+  elevation model (`lift_tops.py`, api.opentopodata.org); High Lift's the summit as printed (12,162 ft).
+- **Decisions** (`panels/main/decisions.py`, every piece settled on per-piece crops): squares printed on a run's line
+  away from its name (`SYMBOL_OF`: Gus' Way, the Gallowiches, Lower Canaan, Lower Ruby Chief, Upper Ruby Chief), lines
+  that run on from one name into the next run's (Upper Smith Hill, Peanut, Crystal, Daisy, Upper and Middle
+  Championship), Yellow Brick Road and Aspen Park Road each pieced together across their EZ signs and switchbacks,
+  Ruby Road along the whole traverse under Triangle and Monument. Not trails: the gates in the fences, arrowheads, the
+  letters of lift names, an icon. The Extremes' open faces, bowls, chutes and glades print no line: 57 markers at
+  their names, 13 at the inset's numbers.
+- **Checked:** every overlay on crops (`overlay_audit.py`, 25 + 2 sheets, every cell read; Ruby Road, Upper Keystone,
+  Yellow Brick Road, Schofield Road, the Championships and High Nowhere fixed and read again); `compare.py` against the
+  report (every rating agrees); hover 330/330, 13/13; the app check; a rebuild from an empty work folder, byte for
+  byte.
 
 # Part 4. Methods in detail
 

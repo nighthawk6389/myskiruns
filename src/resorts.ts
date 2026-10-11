@@ -187,6 +187,10 @@ export const RESORTS: ResortEntry[] = [
     { id: 'revelation', name: 'Revelation Bowl', paths: () => import('./data/resorts/telluride/panels/revelation/trailPaths.json') },
     { id: 'black-iron-bowl', name: 'Palmyra & Black Iron', paths: () => import('./data/resorts/telluride/panels/black-iron-bowl/trailPaths.json') },
   ], ['Telluride Ski Resort', 'Mountain Village', 'Palmyra Peak', 'Black Iron Bowl', 'Gold Hill']),
+  panels('crested-butte', 'Crested Butte', 'Colorado', () => import('./data/resorts/crested-butte/trails'), [
+    { id: 'main', name: 'Crested Butte', paths: () => import('./data/resorts/crested-butte/panels/main/trailPaths.json') },
+    { id: 'teocalli-bowls', name: 'Teocalli Bowls', paths: () => import('./data/resorts/crested-butte/panels/teocalli-bowls/trailPaths.json') },
+  ], ['Crested Butte Mountain Resort', 'CBMR', 'Mt. Crested Butte', 'The Extremes', 'North Face']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

@@ -509,6 +509,21 @@ const RESORT_ADS = {
     negatives: ['film festival', 'bluegrass', 'jazz', 'festival', 'summer', 'mountain bike', 'hiking', 'golf', 'hotel',
       'lodging', 'rental', 'real estate', 'airport', 'jobs', 'wedding', 'gondola hours', 'software', 'bitdefender'],
   },
+  'crested-butte': {
+    short: 'Crested Butte',
+    path: 'Crested-Butte',
+    area: 'The Extremes to Ten Peaks',
+    // bare "crested butte" is also the town (and the butte): only with the resort's names or a map
+    names: ['crested butte mountain resort', 'crested butte', 'mt crested butte'],
+    keywords: [
+      ['crested butte ski trails', 'phrase'],
+      ['crested butte ski map', 'exact'],
+      ['cbmr trail map', 'exact'],
+    ],
+    // the town's summer (the wildflowers, the mountain biking), its lodging and the airport
+    negatives: ['wildflower', 'summer', 'mountain bike', 'bike park', 'hiking', 'golf', 'hotel', 'lodging', 'rental',
+      'real estate', 'airport', 'jobs', 'wedding', 'webcam', 'nordic'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */
@@ -739,6 +754,9 @@ const PANEL_SITELINKS = {
   ],
   telluride: [
     { panel: 'black-iron-bowl', peak: 'prospect-hike-to', text: 'Black Iron Bowl Map', line: 'Palmyra Peak and its chutes' },
+  ],
+  'crested-butte': [
+    { panel: 'teocalli-bowls', peak: 'high-lift', text: 'Teocalli Bowls Map', line: 'The High Lift\'s 16 numbered runs' },
   ],
 };
 

@@ -131,6 +131,21 @@ Buttermilk's helper for keying its decisions to points on their pieces (`snap.py
 |---|---|
 | `buttermilk/snap.py` | snap.py <work dir> x,y ...: the two pieces nearest each point, with the nearest point on each |
 
+## crested-butte
+
+Crested Butte's helpers at triage and while settling its pieces (after `resorts/crested-butte/prepare.py`): each piece
+drawn over the map (`draw_pieces.py`: the first look at what `pdf_outline_lines.py` read), the dashed black fills
+each in its own colour (`dash_fills_view.py`: the boundary and the fences, which led to `--undashed` and `--linked`),
+and the label pairs whose joined text is a report name (`cb_joins.py`: the list `JOIN` was written from). The per-piece
+sheets and the undecided list came from `telluride/piece_sheet.py` (now `tools/trailmap/piece_sheet.py`) and
+`telluride/undecided.py`; what they settled is in `resorts/crested-butte/panels/main/decisions.py`.
+
+| file | what it did |
+|---|---|
+| `crested-butte/draw_pieces.py` | draw_pieces.py <map.png> <pieces.json> <out.png> [x0,y0,x1,y1]: the pieces in their classes' colours (with ids on a crop) |
+| `crested-butte/dash_fills_view.py` | dash_fills_view.py <pdf> <map.png> <out.png>: every black fill of four or more outlines, coloured, with its drawing number |
+| `crested-butte/cb_joins.py` | cb_joins.py: label pairs within 30 pt whose joined text is (or starts) a report name, and the labels the report doesn't list |
+
 ## deer-valley
 
 Deer Valley's analyses: the October PDF rendered on the November image and diffed (`diff.py`, `clusters.py`,

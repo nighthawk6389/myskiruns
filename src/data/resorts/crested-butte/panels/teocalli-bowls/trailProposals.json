@@ -1,0 +1,21 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "jack-in-the-box-glades": {
+   "noLine": true,
+   "label": [
+    37.96,
+    46.72
+   ],
+   "confidence": "high"
+  },
+  "uecker-glades": {
+   "noLine": true,
+   "label": [
+    65.2,
+    31.4
+   ],
+   "confidence": "high"
+  }
+ }
+}

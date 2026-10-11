@@ -6,7 +6,7 @@ abbreviations), the rating of each run against the symbol printed by it, the are
 the runs a map leaves out or prints twice. Resorts so far took it into account in `resort.py` (`NAMES` spelled by
 it, `RENAME`, `RATING`, `AREA_OF`; Smugglers' Notch, Whistler Blackcomb, Park City, Palisades Tahoe, Big Sky,
 Heavenly; Keystone's `REPORT_NAMES`), and Big Sky, Heavenly, Keystone, Deer Valley, Mt. Bachelor, Steamboat, Mammoth,
-Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird, Arapahoe Basin and Telluride keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
+Snowmass, Buttermilk, Snowbasin, Whitefish, Northstar, Schweitzer, Alta, Beaver Creek, Big Bear, Jackson Hole, Snowbird, Arapahoe Basin, Telluride and Crested Butte keep it as `tools/trailmap/resorts/<id>/report.json` (`_source`, then rows of `[name, area, rating]`). It isn't the truth
 about the map: where the two differ, the map's printed symbol is kept unless the map is ambiguous (two symbols),
 and each difference is listed in the resort's header.
 
@@ -193,3 +193,22 @@ page; read it in headless Chromium, as above, out of the page text).
 | `cc_lookup.py` | The same without the index server (binary search of `cluster.idx` with range requests); `--fetch` downloads the WARC records |
 | `warc_to_html.py` | One WARC response record → the page's HTML as served |
 | `compare.py` | A resort's `trails.ts` against its `report.json`: runs only one of them lists, ratings that differ, names spelled otherwise |
+
+## Crested Butte
+
+skicb.com's status page is `/the-mountain/mountain-conditions/lift-and-terrain-status.aspx` (the other Vail Resorts
+sites' `terrain-and-lift-status` gives no capture here). `report.json` is its trail widget's feed (`feed_04`) in Common
+Crawl's capture of 2026-02-12 (CC-MAIN-2026-08; the November 2025 and February 2025 captures exist too):
+
+```bash
+python3 -I tools/trailmap/reports/cc_lookup.py CC-MAIN-2026-08 \
+  'com,skicb)/the-mountain/mountain-conditions/lift-and-terrain-status' work/crested-butte/cc --fetch
+python3 -I tools/trailmap/reports/warc_to_html.py work/crested-butte/cc/CC-MAIN-2026-08_20260212224005.warc \
+  work/crested-butte/cc/page.html
+python3 -I tools/trailmap/reports/extract_feed.py work/crested-butte/cc/page.html work/crested-butte/cc/feeds
+python3 -I tools/trailmap/reports/feed_trails.py work/crested-butte/cc/feeds/feed_04_FR_TerrainStatusFeed.json \
+  --out tools/trailmap/resorts/crested-butte/report.json --source "..."
+```
+
+167 rows in six areas (Front Side, Back Side, North Face, High Lift, Ten Peaks, Learning Area), the Teocalli Bowls'
+numbered runs under High Lift.

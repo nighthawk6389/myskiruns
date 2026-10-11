@@ -1,0 +1,840 @@
+{
+ "_source": "skicb.com's lift-and-terrain-status page, the trail widget's FR.TerrainStatusFeed (feed_04), as Common Crawl captured it on 2026-02-12 (CC-MAIN-2026-08); tools/trailmap/reports/README.md",
+ "trails": [
+  [
+   "Bubba's Shortcut",
+   "Back Side",
+   "Green"
+  ],
+  [
+   "Yellow Brick Road",
+   "Back Side",
+   "Green"
+  ],
+  [
+   "Bear",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Black Eagle",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Breakfast Trail",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Bushwacker",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Conundrum",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Daisy",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Fallaway",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Floresta",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Gus' Way",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Houston's Access",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Lower Canaan",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Lower Forest Queen",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Lower Gallowich",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Lower Ruby Chief",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Lower Treasury",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Meander",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Middle Gallowich",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Paradise Access",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Paradise Bowl",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Rosebush Glades",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Ruby Access",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Ruby Steep",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Short Cut",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Upper Canaan",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Upper Conundrum",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Upper Forest Queen",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Upper Gallowich",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Upper Ruby Chief",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Upper Treasury",
+   "Back Side",
+   "Blue"
+  ],
+  [
+   "Bakery Trees",
+   "Back Side",
+   "Black"
+  ],
+  [
+   "Double Top Glades",
+   "Back Side",
+   "Black"
+  ],
+  [
+   "Git Some Glades",
+   "Back Side",
+   "Black"
+  ],
+  [
+   "Gully Glades",
+   "Back Side",
+   "Black"
+  ],
+  [
+   "Horseshoe",
+   "Back Side",
+   "Black"
+  ],
+  [
+   "Horseshoe Springs",
+   "Back Side",
+   "Black"
+  ],
+  [
+   "Keystone Ridge",
+   "Back Side",
+   "Black"
+  ],
+  [
+   "Mach 1",
+   "Back Side",
+   "Black"
+  ],
+  [
+   "Ptarmigan",
+   "Back Side",
+   "Black"
+  ],
+  [
+   "Resurrection",
+   "Back Side",
+   "Black"
+  ],
+  [
+   "Robel's",
+   "Back Side",
+   "Black"
+  ],
+  [
+   "Ruby Road",
+   "Back Side",
+   "Black"
+  ],
+  [
+   "Roosters Run",
+   "Back Side",
+   "DoubleBlack"
+  ],
+  [
+   "Tower 11 Chutes",
+   "Back Side",
+   "DoubleBlack"
+  ],
+  [
+   "Aspen Park Road",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Big Al's",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Houston",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Houston Canyon",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Kubler",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Lower Keystone",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Lower Twister",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Mineral Point",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Peanut",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Poverty Gulch",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Rollercoaster",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "T-Bar Road",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Upper Roller Coaster",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Warming House Hill",
+   "Front Side",
+   "Green"
+  ],
+  [
+   "Buckley",
+   "Front Side",
+   "Blue"
+  ],
+  [
+   "Lower Smith Hill",
+   "Front Side",
+   "Blue"
+  ],
+  [
+   "Silver Queen Road",
+   "Front Side",
+   "Blue"
+  ],
+  [
+   "Tulsa",
+   "Front Side",
+   "Blue"
+  ],
+  [
+   "Upper Park",
+   "Front Side",
+   "Blue"
+  ],
+  [
+   "Upper Smith Hill",
+   "Front Side",
+   "Blue"
+  ],
+  [
+   "Windy Gap",
+   "Front Side",
+   "Blue"
+  ],
+  [
+   "Banana Exit",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Crystal",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Hot Rocks",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Jokerville",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Lower Championship",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Lower International",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Lower North Star",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Middle International",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Middle Twister",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Monument",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Peoria",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Sylvanite",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Triangle",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Twister",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Upper Championship",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Upper International",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Upper Keystone",
+   "Front Side",
+   "Black"
+  ],
+  [
+   "Banana",
+   "Front Side",
+   "DoubleBlack"
+  ],
+  [
+   "Flatiron",
+   "Front Side",
+   "DoubleBlack"
+  ],
+  [
+   "Forest",
+   "Front Side",
+   "DoubleBlack"
+  ],
+  [
+   "Funnel",
+   "Front Side",
+   "DoubleBlack"
+  ],
+  [
+   "Hockey Rink",
+   "Front Side",
+   "DoubleBlack"
+  ],
+  [
+   "Peel",
+   "Front Side",
+   "DoubleBlack"
+  ],
+  [
+   "Sunset Ridge",
+   "Front Side",
+   "DoubleBlack"
+  ],
+  [
+   "Upper Forest",
+   "Front Side",
+   "DoubleBlack"
+  ],
+  [
+   "Upper Peel",
+   "Front Side",
+   "DoubleBlack"
+  ],
+  [
+   "Lower Twister Terrain Park",
+   "Front Side",
+   "TerrainPark"
+  ],
+  [
+   "Eflin's Way",
+   "High Lift",
+   "Black"
+  ],
+  [
+   "Banana High Entrance",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Big Chute",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Duey's",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Grounds",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Halfpipe",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Headwall",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Headwall Glades",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Jack In The Box Glades",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Liar's Bench",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Main Street",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Morning Glory",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Morning Woods",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Paradise Cliffs",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Peach Pit",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Peak",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Powder 8 Gully",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Solar Glaze",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Teo 2",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Teo Tongue",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Teocalli Bowl",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Town Park",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Uecker Glades",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Wolf's Lair",
+   "High Lift",
+   "DoubleBlack"
+  ],
+  [
+   "Augusta",
+   "Learning Area",
+   "Green"
+  ],
+  [
+   "Beginner Area - Aspen Conveyor",
+   "Learning Area",
+   "Green"
+  ],
+  [
+   "Beginner Area - Pine Conveyor",
+   "Learning Area",
+   "Green"
+  ],
+  [
+   "Beginner Area - Spruce Conveyor",
+   "Learning Area",
+   "Green"
+  ],
+  [
+   "High Tide",
+   "Learning Area",
+   "Green"
+  ],
+  [
+   "Rustler's Gulch",
+   "Learning Area",
+   "Green"
+  ],
+  [
+   "Avery",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Belleview",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Rachel's",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Schofield Road",
+   "North Face",
+   "Black"
+  ],
+  [
+   "Easy Out",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Fredo's North Face Cliffs",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Hard Slab",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Hawk's Nest",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "High Nowhere",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Highlife",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Last Steep",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Lower Third Bowl",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Old Pro",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Phoenix Bowl",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Phoenix Steps",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Pinball",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Rambo",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Sock-It-To-Me Ridge",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Spellbound Bowl",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Spellbound Glade",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Staircase",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "The Glades",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "The North Face",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Third Bowl",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Upper Third Bowl",
+   "North Face",
+   "DoubleBlack"
+  ],
+  [
+   "Ally Loop",
+   "Ten Peaks",
+   "Green"
+  ],
+  [
+   "Elk Ave.",
+   "Ten Peaks",
+   "Green"
+  ],
+  [
+   "Grand Traverse",
+   "Ten Peaks",
+   "Green"
+  ],
+  [
+   "Gunsight Pass",
+   "Ten Peaks",
+   "Green"
+  ],
+  [
+   "Little Queen",
+   "Ten Peaks",
+   "Green"
+  ],
+  [
+   "Mary Jo",
+   "Ten Peaks",
+   "Green"
+  ],
+  [
+   "Splain's Gulch",
+   "Ten Peaks",
+   "Green"
+  ],
+  [
+   "Topsy",
+   "Ten Peaks",
+   "Green"
+  ],
+  [
+   "Twin Bridges",
+   "Ten Peaks",
+   "Green"
+  ],
+  [
+   "Cascade",
+   "Ten Peaks",
+   "Blue"
+  ],
+  [
+   "Columbine Hill",
+   "Ten Peaks",
+   "Blue"
+  ],
+  [
+   "Deer Pass",
+   "Ten Peaks",
+   "Blue"
+  ],
+  [
+   "Elko Park",
+   "Ten Peaks",
+   "Blue"
+  ],
+  [
+   "Homeowners",
+   "Ten Peaks",
+   "Blue"
+  ],
+  [
+   "Little Lizzy",
+   "Ten Peaks",
+   "Blue"
+  ],
+  [
+   "North Pass",
+   "Ten Peaks",
+   "Blue"
+  ],
+  [
+   "Panion's Run",
+   "Ten Peaks",
+   "Blue"
+  ],
+  [
+   "Prospector",
+   "Ten Peaks",
+   "Blue"
+  ],
+  [
+   "Painter Boy Park",
+   "Ten Peaks",
+   "TerrainPark"
+  ]
+ ]
+}

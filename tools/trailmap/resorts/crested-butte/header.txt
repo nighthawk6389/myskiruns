@@ -1,0 +1,22 @@
+// Crested Butte Mountain Resort's trail map: the 2025-26 PDF (skicb.com's
+// trail-maps page), James Niehues's painting under a vector layer of filled
+// outlines (the runs' lines) and outlined names in the runs' colours, with
+// the painting swapped for the 2022-23 PDF's sharper copy of the same image.
+// Two panels: the map, and its Teocalli Bowls inset (the High Lift's bowls,
+// their runs numbered with a key). Names are spelled as the resort's terrain
+// report spells them (report.json: the lift-and-terrain-status page's feed
+// in Common Crawl's capture of 2026-02-12); ratings are the printed symbols
+// (the EX, double black), and they all agree with the report. Names printed
+// with no symbol take the report's rating: Avery, Eflin's Way, Lower North
+// Star, Mach 1, Robel's (black), Easy Out, Banana High Entrance (double
+// black), Silver Queen Road (blue). Printed but not in the report: Lower
+// Crystal and Middle Championship (black, on the Crystal and Championship
+// lines). Not on the map: Breakfast Trail, Fallaway, Middle International,
+// Short Cut, Upper Roller Coaster, and the three conveyors' beginner areas.
+// The main map's lines are its own outlines, named by the name printed in a
+// gap of each or by its symbol, or settled on crops (decisions.py). The
+// Extremes' open faces, bowls, chutes and glades print no line: markers at
+// their names, and the inset's runs at their numbers. Area elevations: the
+// top of each area's highest lift (OpenStreetMap's lift lines on the USGS's
+// 10 m elevation model; lift_tops.py), High Lift's the summit as printed
+// (12,162 ft). x/y/baseY/width are unused layout fields.

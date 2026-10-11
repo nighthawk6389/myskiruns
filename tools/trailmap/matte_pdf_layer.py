@@ -6,6 +6,7 @@ embedded painting upscaled with Lanczos instead of the renderer's blocky upscale
     python3 tools/trailmap/matte_pdf_layer.py --pdf map.pdf --out map.png --scale 2.8 --clip 0,90,1530,1080 \\
         [--background sharper.jpg] [--xref 23] [--page 0]
     python3 tools/trailmap/matte_pdf_layer.py --pdf map.pdf --out map.png --scale 2.5 --resample 461 --resample 463
+    python3 tools/trailmap/matte_pdf_layer.py --pdf map.pdf --out map.png --scale 3 --replace 6963=painting.png
 
 The vector layer comes from rendering the page twice with the painting swapped for flat white and then flat
 black: alpha = 1 - (white - black) / 255, colour = black render / alpha. --xref is the painting's image xref
@@ -21,6 +22,8 @@ coverage comes from renders with those forms emptied: opaque vector content is d
 over it, such as a legend swatch on the legend's white box) and the background shows as it is everywhere else.
 Used by the regen.sh or prepare.py of Copper Mountain (embedded painting) and Keystone (the scene7 copy of the
 whole map, --flattened), Sugarloaf, Smugglers' Notch, Whistler Blackcomb, Big Sky and Park City (--resample);
+--replace swaps an image for a sharper raster of the same artwork from elsewhere (Crested Butte: this season's
+painting is embedded at 72 dpi, the 2022-23 PDF's identical one at 269), resampled to the output scale.
 Breckenridge's image comes from its own version of the same method (resorts/breckenridge/matte.py, which uses
 translucent_forms() from here). Save the result as public/maps/<id>.jpg.
 
@@ -103,25 +106,32 @@ def main():
                          'with Lanczos to the output scale, then render the page as it is, so any clip or '
                          'placement is kept (Park City: its painting and the High Meadow Park inset\'s, clipped '
                          'to the inset frame)')
+    ap.add_argument('--replace', action='append', default=[], metavar='XREF=IMAGE',
+                    help='as --resample, but the copy is IMAGE: a sharper raster of that same image (another '
+                         'edition\'s embedded painting, Crested Butte\'s)')
     a = ap.parse_args()
     S = a.scale
     doc = pymupdf.open(a.pdf)
     page = doc[a.page]
     clip = pymupdf.Rect(*[float(v) for v in a.clip.split(',')]) if a.clip else page.rect
-    if a.resample:
-        for x in a.resample:
-            pm = pymupdf.Pixmap(doc, x)
-            if pm.colorspace.n != 3 or pm.alpha:
-                pm = pymupdf.Pixmap(pymupdf.csRGB, pm)
-            paint = Image.open(io.BytesIO(pm.tobytes('png'))).convert('RGB')
+    if a.resample or a.replace:
+        swaps = [(x, None) for x in a.resample] + [(int(r.split('=', 1)[0]), r.split('=', 1)[1]) for r in a.replace]
+        for x, src in swaps:
+            if src:
+                paint = Image.open(src).convert('RGB')
+            else:
+                pm = pymupdf.Pixmap(doc, x)
+                if pm.colorspace.n != 3 or pm.alpha:
+                    pm = pymupdf.Pixmap(pymupdf.csRGB, pm)
+                paint = Image.open(io.BytesIO(pm.tobytes('png'))).convert('RGB')
             r = page.get_image_rects(x)[0]
             f = S * r.width / paint.width  # output px per painting px
-            if f > 1:
+            if f > 1 or src:
                 big = paint.resize((round(paint.width * f), round(paint.height * f)), Image.LANCZOS)
                 page.replace_image(x, pixmap=pymupdf.Pixmap(pymupdf.csRGB, big.width, big.height, big.tobytes(), False))
         pix = page.get_pixmap(matrix=pymupdf.Matrix(S, S), clip=clip)
         pix.save(a.out)
-        print(a.out, (pix.width, pix.height), 'images resampled', a.resample)
+        print(a.out, (pix.width, pix.height), 'images resampled', a.resample, 'replaced', [x for x, _ in swaps[len(a.resample):]])
         return
     xref = a.xref or max(page.get_images(full=True), key=lambda im: im[2] * im[3])[0]
     W = render(a.pdf, a.page, xref, 255, S, clip)

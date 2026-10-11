@@ -1,0 +1,955 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "aspen-park-road": {
+   "polylines": [
+    10,
+    11,
+    12,
+    13,
+    134,
+    135,
+    136,
+    137,
+    138,
+    249
+   ],
+   "confidence": "high",
+   "mapName": "ASPEN PARK ROAD",
+   "note": "checked on a crop | along Aspen Park Road | along its printed name"
+  },
+  "banana-exit": {
+   "polylines": [
+    2,
+    3,
+    61,
+    251
+   ],
+   "confidence": "high",
+   "mapName": "BANANA EXIT",
+   "note": "end of Banana Exit | checked on a crop | along its printed name"
+  },
+  "big-als": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "BIG AL'S",
+   "note": "end of Big Al's"
+  },
+  "buckley": {
+   "polylines": [
+    4,
+    5,
+    268
+   ],
+   "confidence": "high",
+   "mapName": "BUCKLEY",
+   "note": "symbol of Buckley | end of Buckley | along its printed name"
+  },
+  "crystal": {
+   "polylines": [
+    57,
+    58,
+    242
+   ],
+   "confidence": "high",
+   "mapName": "CRYSTAL",
+   "note": "symbol of Crystal | checked on a crop | along its printed name"
+  },
+  "flatiron": {
+   "polylines": [
+    234
+   ],
+   "confidence": "high",
+   "mapName": "FLATIRON",
+   "note": "along its printed name"
+  },
+  "houston": {
+   "polylines": [
+    42,
+    43,
+    275
+   ],
+   "confidence": "high",
+   "mapName": "HOUSTON",
+   "note": "end of Houston | symbol of Houston | along its printed name"
+  },
+  "houston-canyon": {
+   "polylines": [
+    22,
+    130,
+    183
+   ],
+   "confidence": "high",
+   "mapName": "HOUSTON CANYON",
+   "note": "along Houston Canyon | checked on a crop | end of Houston Canyon"
+  },
+  "jokerville": {
+   "polylines": [
+    240
+   ],
+   "confidence": "high",
+   "mapName": "JOKERVILLE",
+   "note": "along its printed name"
+  },
+  "kubler": {
+   "polylines": [
+    44,
+    264
+   ],
+   "confidence": "high",
+   "mapName": "KUBLER",
+   "note": "symbol of Kubler | along its printed name"
+  },
+  "lower-championship": {
+   "polylines": [
+    179,
+    266
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CHAMPIONSHIP",
+   "note": "end of Lower Championship | along its printed name"
+  },
+  "lower-crystal": {
+   "polylines": [
+    155,
+    247
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CRYSTAL",
+   "note": "end of Lower Crystal | along its printed name"
+  },
+  "lower-international": {
+   "polylines": [
+    60,
+    133,
+    220,
+    260
+   ],
+   "confidence": "high",
+   "mapName": "LOWER INTERNATIONAL",
+   "note": "checked on a crop | end of Lower International | along its printed name"
+  },
+  "lower-keystone": {
+   "polylines": [
+    19,
+    20,
+    271
+   ],
+   "confidence": "high",
+   "mapName": "LOWER KEYSTONE",
+   "note": "end of Lower Keystone | symbol of Lower Keystone | along its printed name"
+  },
+  "lower-smith-hill": {
+   "polylines": [
+    280
+   ],
+   "confidence": "high",
+   "mapName": "LOWER SMITH HILL",
+   "note": "along its printed name"
+  },
+  "lower-twister": {
+   "polylines": [
+    182,
+    229
+   ],
+   "confidence": "high",
+   "mapName": "LOWER TWISTER",
+   "note": "end of Lower Twister | checked on a crop"
+  },
+  "middle-championship": {
+   "polylines": [
+    170
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE CHAMPIONSHIP",
+   "note": "checked on a crop"
+  },
+  "middle-twister": {
+   "polylines": [
+    154
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE TWISTER",
+   "note": "end of Middle Twister"
+  },
+  "mineral-point": {
+   "polylines": [
+    23,
+    24,
+    45,
+    267
+   ],
+   "confidence": "high",
+   "mapName": "MINERAL POINT",
+   "note": "symbol of Mineral Point | end of Mineral Point | checked on a crop | along its printed name"
+  },
+  "monument": {
+   "polylines": [
+    76,
+    77
+   ],
+   "confidence": "high",
+   "mapName": "MONUMENT",
+   "note": "symbol of Monument | checked on a crop"
+  },
+  "peanut": {
+   "polylines": [
+    18,
+    21,
+    46,
+    252
+   ],
+   "confidence": "high",
+   "mapName": "PEANUT",
+   "note": "checked on a crop | end of Peanut | along its printed name"
+  },
+  "peoria": {
+   "polylines": [
+    150,
+    246
+   ],
+   "confidence": "high",
+   "mapName": "PEORIA",
+   "note": "end of Peoria | along its printed name"
+  },
+  "poverty-gulch": {
+   "polylines": [
+    40,
+    41,
+    272
+   ],
+   "confidence": "high",
+   "mapName": "POVERTY GULCH",
+   "note": "symbol of Poverty Gulch | end of Poverty Gulch | along its printed name"
+  },
+  "rollercoaster": {
+   "polylines": [
+    49,
+    51,
+    52,
+    253
+   ],
+   "confidence": "high",
+   "mapName": "ROLLERCOASTER",
+   "note": "symbol of Rollercoaster | checked on a crop | end of Rollercoaster | along its printed name"
+  },
+  "silver-queen-road": {
+   "polylines": [
+    143,
+    235
+   ],
+   "confidence": "high",
+   "mapName": "SILVER QUEEN ROAD",
+   "note": "end of Silver Queen Road | along its printed name"
+  },
+  "sylvanite": {
+   "polylines": [
+    8,
+    217,
+    258
+   ],
+   "confidence": "high",
+   "mapName": "SYLVANITE",
+   "note": "symbol of Sylvanite | end of Sylvanite | along its printed name"
+  },
+  "t-bar-road": {
+   "polylines": [
+    219,
+    270
+   ],
+   "confidence": "high",
+   "mapName": "T-BAR ROAD",
+   "note": "end of T-Bar Road | along its printed name"
+  },
+  "triangle": {
+   "polylines": [
+    146,
+    147
+   ],
+   "confidence": "high",
+   "mapName": "TRIANGLE",
+   "note": "symbol of Triangle | checked on a crop"
+  },
+  "tulsa": {
+   "polylines": [
+    47,
+    50,
+    255
+   ],
+   "confidence": "high",
+   "mapName": "TULSA",
+   "note": "end of Tulsa | along its printed name"
+  },
+  "twister": {
+   "polylines": [
+    55,
+    56,
+    239
+   ],
+   "confidence": "high",
+   "mapName": "TWISTER",
+   "note": "end of Twister | checked on a crop | along its printed name"
+  },
+  "upper-championship": {
+   "polylines": [
+    171,
+    175
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CHAMPIONSHIP",
+   "note": "end of Upper Championship | checked on a crop"
+  },
+  "upper-international": {
+   "polylines": [
+    59,
+    218,
+    245
+   ],
+   "confidence": "high",
+   "mapName": "UPPER INTERNATIONAL",
+   "note": "end of Upper International | checked on a crop | along its printed name"
+  },
+  "upper-keystone": {
+   "polylines": [
+    149,
+    238
+   ],
+   "confidence": "high",
+   "mapName": "UPPER KEYSTONE",
+   "note": "end of Upper Keystone | along its printed name"
+  },
+  "upper-park": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "UPPER PARK",
+   "note": "symbol of Upper Park"
+  },
+  "upper-smith-hill": {
+   "polylines": [
+    221,
+    262
+   ],
+   "confidence": "high",
+   "mapName": "UPPER SMITH HILL",
+   "note": "checked on a crop | along its printed name"
+  },
+  "warming-house-hill": {
+   "polylines": [
+    131,
+    132,
+    168,
+    287
+   ],
+   "confidence": "high",
+   "mapName": "WARMING HOUSE HILL",
+   "note": "symbol of Warming House Hill | end of Warming House Hill | checked on a crop | along its printed name"
+  },
+  "windy-gap": {
+   "polylines": [
+    69,
+    156,
+    174,
+    233
+   ],
+   "confidence": "high",
+   "mapName": "WINDY GAP",
+   "note": "end of Windy Gap | symbol of Windy Gap | checked on a crop | along its printed name"
+  },
+  "bear": {
+   "polylines": [
+    152,
+    153,
+    254
+   ],
+   "confidence": "high",
+   "mapName": "BEAR",
+   "note": "checked on a crop | end of Bear | along its printed name"
+  },
+  "black-eagle": {
+   "polylines": [
+    94,
+    95,
+    278
+   ],
+   "confidence": "high",
+   "mapName": "BLACK EAGLE",
+   "note": "symbol of Black Eagle | end of Black Eagle | along its printed name"
+  },
+  "bubbas-shortcut": {
+   "polylines": [
+    75,
+    178
+   ],
+   "confidence": "high",
+   "mapName": "BUBBA'S SHORTCUT",
+   "note": "checked on a crop | end of Bubba's Shortcut"
+  },
+  "bushwacker": {
+   "polylines": [
+    79,
+    83,
+    281
+   ],
+   "confidence": "high",
+   "mapName": "BUSHWACKER",
+   "note": "symbol of Bushwacker | end of Bushwacker | along its printed name"
+  },
+  "conundrum": {
+   "polylines": [
+    294
+   ],
+   "confidence": "high",
+   "mapName": "CONUNDRUM",
+   "note": "along its printed name"
+  },
+  "daisy": {
+   "polylines": [
+    89,
+    127,
+    273
+   ],
+   "confidence": "high",
+   "mapName": "DAISY",
+   "note": "end of Daisy | checked on a crop | along its printed name"
+  },
+  "double-top-glades": {
+   "polylines": [
+    98,
+    99
+   ],
+   "confidence": "high",
+   "mapName": "DOUBLE TOP GLADES",
+   "note": "symbol of Double Top Glades | end of Double Top Glades"
+  },
+  "floresta": {
+   "polylines": [
+    90,
+    91,
+    282
+   ],
+   "confidence": "high",
+   "mapName": "FLORESTA",
+   "note": "symbol of Floresta | end of Floresta | along its printed name"
+  },
+  "git-some-glades": {
+   "noLine": true,
+   "label": [
+    18.59,
+    60.89
+   ],
+   "confidence": "high"
+  },
+  "gully-glades": {
+   "noLine": true,
+   "label": [
+    18.22,
+    55.46
+   ],
+   "confidence": "high"
+  },
+  "gus-way": {
+   "polylines": [
+    80,
+    81,
+    82,
+    290
+   ],
+   "confidence": "high",
+   "mapName": "GUS' WAY",
+   "note": "checked on a crop | end of Gus' Way | along its printed name"
+  },
+  "houstons-access": {
+   "polylines": [
+    176,
+    250
+   ],
+   "confidence": "high",
+   "mapName": "HOUSTON'S ACCESS",
+   "note": "end of Houston's Access | along its printed name"
+  },
+  "lower-canaan": {
+   "polylines": [
+    159,
+    160,
+    163,
+    276
+   ],
+   "confidence": "high",
+   "mapName": "LOWER CANAAN",
+   "note": "checked on a crop | along its printed name"
+  },
+  "lower-forest-queen": {
+   "polylines": [
+    84,
+    256
+   ],
+   "confidence": "high",
+   "mapName": "LOWER FOREST QUEEN",
+   "note": "symbol of Lower Forest Queen | along its printed name"
+  },
+  "lower-gallowich": {
+   "polylines": [
+    124,
+    126,
+    300
+   ],
+   "confidence": "high",
+   "mapName": "LOWER GALLOWICH",
+   "note": "end of Lower Gallowich | along its printed name"
+  },
+  "lower-ruby-chief": {
+   "polylines": [
+    112,
+    115,
+    116,
+    259
+   ],
+   "confidence": "high",
+   "mapName": "LOWER RUBY CHIEF",
+   "note": "checked on a crop | symbol of Lower Ruby Chief | end of Lower Ruby Chief | along its printed name"
+  },
+  "lower-treasury": {
+   "polylines": [
+    93,
+    292
+   ],
+   "confidence": "high",
+   "mapName": "LOWER TREASURY",
+   "note": "end of Lower Treasury | along its printed name"
+  },
+  "meander": {
+   "polylines": [
+    158,
+    274
+   ],
+   "confidence": "high",
+   "mapName": "MEANDER",
+   "note": "end of Meander | along its printed name"
+  },
+  "middle-gallowich": {
+   "polylines": [
+    125,
+    128,
+    129
+   ],
+   "confidence": "high",
+   "mapName": "MIDDLE GALLOWICH",
+   "note": "end of Middle Gallowich | checked on a crop"
+  },
+  "paradise-access": {
+   "polylines": [
+    206,
+    279
+   ],
+   "confidence": "high",
+   "mapName": "PARADISE ACCESS",
+   "note": "end of Paradise Access | along its printed name"
+  },
+  "paradise-bowl": {
+   "polylines": [
+    166,
+    167
+   ],
+   "confidence": "high",
+   "mapName": "PARADISE BOWL",
+   "note": "symbol of Paradise Bowl | checked on a crop"
+  },
+  "resurrection": {
+   "polylines": [
+    96,
+    97,
+    285
+   ],
+   "confidence": "high",
+   "mapName": "RESURRECTION",
+   "note": "symbol of Resurrection | end of Resurrection | along its printed name"
+  },
+  "rosebush-glades": {
+   "noLine": true,
+   "label": [
+    40.39,
+    63.5
+   ],
+   "confidence": "high"
+  },
+  "ruby-access": {
+   "polylines": [
+    78,
+    157,
+    257
+   ],
+   "confidence": "high",
+   "mapName": "RUBY ACCESS",
+   "note": "symbol of Ruby Access | checked on a crop | along its printed name"
+  },
+  "ruby-road": {
+   "polylines": [
+    65,
+    66,
+    67,
+    68,
+    145,
+    148,
+    237
+   ],
+   "confidence": "high",
+   "mapName": "RUBY ROAD",
+   "note": "checked on a crop | end of Ruby Road | along its printed name"
+  },
+  "ruby-steep": {
+   "polylines": [
+    177,
+    248
+   ],
+   "confidence": "high",
+   "mapName": "RUBY STEEP",
+   "note": "end of Ruby Steep | along its printed name"
+  },
+  "upper-canaan": {
+   "polylines": [
+    151,
+    162
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CANAAN",
+   "note": "checked on a crop | end of Upper Canaan"
+  },
+  "upper-conundrum": {
+   "polylines": [
+    165
+   ],
+   "confidence": "high",
+   "mapName": "UPPER CONUNDRUM",
+   "note": "end of Upper Conundrum"
+  },
+  "upper-forest-queen": {
+   "polylines": [
+    118,
+    243
+   ],
+   "confidence": "high",
+   "mapName": "UPPER FOREST QUEEN",
+   "note": "end of Upper Forest Queen | along its printed name"
+  },
+  "upper-gallowich": {
+   "polylines": [
+    86,
+    88,
+    164,
+    269
+   ],
+   "confidence": "high",
+   "mapName": "UPPER GALLOWICH",
+   "note": "symbol of Upper Gallowich | end of Upper Gallowich | checked on a crop | along its printed name"
+  },
+  "upper-ruby-chief": {
+   "polylines": [
+    70,
+    117,
+    241
+   ],
+   "confidence": "high",
+   "mapName": "UPPER RUBY CHIEF",
+   "note": "checked on a crop | along its printed name"
+  },
+  "upper-treasury": {
+   "polylines": [
+    85,
+    87,
+    92,
+    265
+   ],
+   "confidence": "high",
+   "mapName": "UPPER TREASURY",
+   "note": "end of Upper Treasury | checked on a crop | along its printed name"
+  },
+  "yellow-brick-road": {
+   "polylines": [
+    14,
+    15,
+    16,
+    17,
+    53,
+    119,
+    120,
+    121,
+    161,
+    244
+   ],
+   "confidence": "high",
+   "mapName": "YELLOW BRICK ROAD",
+   "note": "checked on a crop | continuation | end of Yellow Brick Road | along its printed name"
+  },
+  "easy-out": {
+   "polylines": [
+    106,
+    107
+   ],
+   "confidence": "high",
+   "mapName": "EASY OUT",
+   "note": "end of Easy Out"
+  },
+  "pinball": {
+   "polylines": [
+    108,
+    109,
+    261
+   ],
+   "confidence": "high",
+   "mapName": "PINBALL",
+   "note": "end of Pinball | symbol of Pinball | along its printed name"
+  },
+  "rambo": {
+   "polylines": [
+    104,
+    105,
+    263
+   ],
+   "confidence": "high",
+   "mapName": "RAMBO",
+   "note": "end of Rambo | symbol of Rambo | along its printed name"
+  },
+  "schofield-road": {
+   "polylines": [
+    123,
+    141,
+    142,
+    144,
+    236
+   ],
+   "confidence": "high",
+   "mapName": "SCHOFIELD ROAD",
+   "note": "end of Schofield Road | checked on a crop | continuation | along its printed name"
+  },
+  "spellbound-glade": {
+   "noLine": true,
+   "label": [
+    21.01,
+    33.93
+   ],
+   "confidence": "high"
+  },
+  "the-glades": {
+   "noLine": true,
+   "label": [
+    34.75,
+    37.6
+   ],
+   "confidence": "high"
+  },
+  "banana-high-entrance": {
+   "polylines": [
+    139,
+    140,
+    232
+   ],
+   "confidence": "high",
+   "mapName": "BANANA HIGH ENTRANCE",
+   "note": "end of Banana High Entrance | along its printed name"
+  },
+  "headwall-glades": {
+   "noLine": true,
+   "label": [
+    42.2,
+    19.8
+   ],
+   "confidence": "high"
+  },
+  "cascade": {
+   "polylines": [
+    28,
+    222,
+    230,
+    296
+   ],
+   "confidence": "high",
+   "mapName": "CASCADE",
+   "note": "end of Cascade | checked on a crop | along its printed name"
+  },
+  "columbine-hill": {
+   "polylines": [
+    25,
+    225,
+    289
+   ],
+   "confidence": "high",
+   "mapName": "COLUMBINE HILL",
+   "note": "symbol of Columbine Hill | end of Columbine Hill | along its printed name"
+  },
+  "deer-pass": {
+   "polylines": [
+    33,
+    231,
+    304
+   ],
+   "confidence": "high",
+   "mapName": "DEER PASS",
+   "note": "end of Deer Pass | along its printed name"
+  },
+  "elk-ave": {
+   "polylines": [
+    224
+   ],
+   "confidence": "high",
+   "mapName": "ELK AVE.",
+   "note": "along Elk Ave."
+  },
+  "elko-park": {
+   "polylines": [
+    29,
+    30,
+    302
+   ],
+   "confidence": "high",
+   "mapName": "ELKO PARK",
+   "note": "end of Elko Park | checked on a crop | along its printed name"
+  },
+  "gunsight-pass": {
+   "polylines": [
+    36,
+    37,
+    38,
+    39,
+    295
+   ],
+   "confidence": "high",
+   "mapName": "GUNSIGHT PASS",
+   "note": "end of Gunsight Pass | checked on a crop | symbol of Gunsight Pass | along its printed name"
+  },
+  "homeowners": {
+   "polylines": [
+    26,
+    226,
+    227,
+    293
+   ],
+   "confidence": "high",
+   "mapName": "HOMEOWNERS",
+   "note": "checked on a crop | symbol of Homeowners | end of Homeowners | along its printed name"
+  },
+  "little-lizzy": {
+   "polylines": [
+    48,
+    201,
+    205,
+    286
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE LIZZY",
+   "note": "along Little Lizzy | end of Little Lizzy | along its printed name"
+  },
+  "little-queen": {
+   "polylines": [
+    113,
+    114,
+    297
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE QUEEN",
+   "note": "end of Little Queen | along its printed name"
+  },
+  "mary-jo": {
+   "polylines": [
+    187
+   ],
+   "confidence": "high",
+   "mapName": "MARY JO",
+   "note": "end of Mary Jo"
+  },
+  "north-pass": {
+   "polylines": [
+    27,
+    228,
+    298
+   ],
+   "confidence": "high",
+   "mapName": "NORTH PASS",
+   "note": "end of North Pass | symbol of North Pass | along its printed name"
+  },
+  "panions-run": {
+   "polylines": [
+    31,
+    32,
+    301
+   ],
+   "confidence": "high",
+   "mapName": "PANION'S RUN",
+   "note": "symbol of Panion's Run | end of Panion's Run | along its printed name"
+  },
+  "prospector": {
+   "polylines": [
+    34,
+    35,
+    299
+   ],
+   "confidence": "high",
+   "mapName": "PROSPECTOR",
+   "note": "symbol of Prospector | end of Prospector | along its printed name"
+  },
+  "splains-gulch": {
+   "polylines": [
+    173,
+    185,
+    199,
+    288
+   ],
+   "confidence": "high",
+   "mapName": "SPLAIN'S GULCH",
+   "note": "checked on a crop | end of Splain's Gulch | along its printed name"
+  },
+  "topsy": {
+   "polylines": [
+    186,
+    223,
+    291
+   ],
+   "confidence": "high",
+   "mapName": "TOPSY",
+   "note": "end of Topsy | checked on a crop | along its printed name"
+  },
+  "twin-bridges": {
+   "polylines": [
+    110,
+    111,
+    303
+   ],
+   "confidence": "high",
+   "mapName": "TWIN BRIDGES",
+   "note": "symbol of Twin Bridges | end of Twin Bridges | along its printed name"
+  },
+  "augusta": {
+   "polylines": [
+    6,
+    7,
+    283
+   ],
+   "confidence": "high",
+   "mapName": "AUGUSTA",
+   "note": "end of Augusta | symbol of Augusta | along its printed name"
+  },
+  "high-tide": {
+   "polylines": [
+    169,
+    184,
+    284
+   ],
+   "confidence": "high",
+   "mapName": "HIGH TIDE",
+   "note": "symbol of High Tide | end of High Tide | along its printed name"
+  },
+  "rustlers-gulch": {
+   "polylines": [
+    172,
+    216,
+    277
+   ],
+   "confidence": "high",
+   "mapName": "RUSTLER'S GULCH",
+   "note": "end of Rustler's Gulch | symbol of Rustler's Gulch | along its printed name"
+  }
+ }
+}

@@ -5,11 +5,11 @@ overlay on the map, with its name and rating, so you tap the run you just skied 
 works offline on the mountain, installs to a phone's home screen, and can sync your trips between devices with an
 optional account. Live at **[www.myskiruns.app](https://www.myskiruns.app)**.
 
-Thirty-nine resorts so far, 5,737 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
+Forty resorts so far, 5,898 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch,
 Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Vail, Beaver Creek, Breckenridge, Keystone,
-Arapahoe Basin, Copper Mountain, Winter Park, Steamboat, Snowmass, Aspen Mountain, Buttermilk, Telluride, Park City,
-Deer Valley, Snowbasin, Alta, Snowbird, Big Sky, Whitefish Mountain, Jackson Hole, Schweitzer, Palisades Tahoe,
-Northstar, Heavenly, Mammoth Mountain, Big Bear, Mt. Bachelor and Whistler Blackcomb.
+Arapahoe Basin, Copper Mountain, Winter Park, Steamboat, Snowmass, Aspen Mountain, Buttermilk, Telluride,
+Crested Butte, Park City, Deer Valley, Snowbasin, Alta, Snowbird, Big Sky, Whitefish Mountain, Jackson Hole,
+Schweitzer, Palisades Tahoe, Northstar, Heavenly, Mammoth Mountain, Big Bear, Mt. Bachelor and Whistler Blackcomb.
 
 Most of the work in this repository is the **trail-map pipeline**: getting every trail's overlay onto its own
 drawn line, with the right name, on maps that were never made to be machine-read. How it is done, resort by
@@ -87,6 +87,7 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 | Aspen Mountain | Colorado | 129 (121 + 8) | 3 | Snowmass's kind: PDF strokes and casings, names on pills in the run's colour; no trail report | `tools/trailmap/resorts/aspen-mountain/regen.sh` |
 | Buttermilk | Colorado | 44 (43 + 1) | 1 | PDF strokes, names as text on pills in the run's colour (Snowmass's kind) | `tools/trailmap/resorts/buttermilk/regen.sh` |
 | Telluride | Colorado | 138 (120 + 18) | 3 | PDF strokes and outlined names over a 100 dpi painting; the hike-to terrain on two inset images, read on crops | `tools/trailmap/resorts/telluride/regen.sh` |
+| Crested Butte | Colorado | 161 (91 + 70) | 2 | PDF lines as filled outlines, outlined names, over an older export's sharper copy of the painting; the Extremes and the Teocalli Bowls inset as markers | `tools/trailmap/resorts/crested-butte/regen.sh` |
 | Park City Mountain | Utah | 345 (252 + 93) | 1 | PDF strokes, outlined names, a redrawn inset | `tools/trailmap/resorts/park-city/regen.sh` |
 | Deer Valley | Utah | 207 (181 + 26) | 1 | an earlier export's strokes and outlined names on this season's flattened image; checked against the interactive map | `tools/trailmap/resorts/deer-valley/regen.sh` |
 | Snowbasin | Utah | 125 (119 + 6) | 1 | PDF strokes (a few as filled outlines) and text over a painting | `tools/trailmap/resorts/snowbasin/regen.sh` |
@@ -289,12 +290,12 @@ the playbook's [Part 5](docs/trail-map-playbook.md#part-5-what-we-tried-and-what
 
 ## What's left
 
-1. **A person's confirmation** for the thirty-six resorts Claude checked on crops instead of the review page
-   (Sugarbush through Telluride), if wanted: the Trail Check page can be published for any resort ([playbook,
+1. **A person's confirmation** for the thirty-seven resorts Claude checked on crops instead of the review page
+   (Sugarbush through Crested Butte), if wanted: the Trail Check page can be published for any resort ([playbook,
    Part 4](docs/trail-map-playbook.md#auditing-on-crops-or-the-human-review-page)).
 2. **Shared tooling:** a legend file per map feeding the extraction and the readers' prompts; readers run from a
    script instead of an interactive session ([playbook, Part 5](docs/trail-map-playbook.md#scaling-to-many-maps)).
-3. The hover check passes 15,690 of 15,699 points (2026-10-11). The nine misses are points where two trails'
+3. The hover check passes 16,033 of 16,042 points (2026-10-11). The nine misses are points where two trails'
    overlays meet or share a stretch, where either name is right: Killington 2, Stowe 2, Beaver Creek 2, Big Sky's
    Bowl 1, Heavenly 1, Mt. Bachelor 1 (each resort's numbers are in the playbook's Part 3).
 4. Whiteface, Winter Park, Breckenridge, Copper Mountain and Keystone key their decisions by piece id, valid for

@@ -13,7 +13,8 @@ and so are arrowheads (two curved sides and a notch: items c l l c). A blue or g
 line of its length has (two lines drawn as one, an arrowhead merged into its line) is read by its skeleton instead,
 one piece per branch, and so is one that reads wide but whose mean width (twice its area over its perimeter) is a
 line's: lines meeting at a junction, drawn as one outline. A dashed line's dashes (each under --dash pt, one after
-another in one fill, within 3.5 pt) are chained into one piece. A --dark colour's outlines are lines only if at least --dark-min pt long (the names'
+another in one fill, within 3.5 pt) are chained into one piece, but not an --undashed colour's; a --linked colour's
+dashes drawn one fill each, in no order, are joined end to end by where they lie (linked()). A --dark colour's outlines are lines only if at least --dark-min pt long (the names'
 letters are outlines of that colour too); any other line shorter than --min-length is a stray mark. A piece lying
 along a longer piece of its colour (within 0.5 pt) is a copy and is dropped. Pieces are in drawing order, in
 percent of the --clip area (the same format as extract_pdf_vectors.py, so pdf_resort.py reads them alike).
@@ -199,22 +200,100 @@ def chained(segs, dash):
     return out
 
 
+def end_dir(pts, k, back=5.0):
+    """The outward direction (unit vector) of a polyline at its end k (0 or -1), over its last `back` pt (a rounded
+    cap curls the centre line's last pt)."""
+    seq = pts if k == -1 else pts[::-1]
+    e, q, run = seq[-1], seq[-1], 0.0
+    for v in reversed(seq[:-1]):
+        run += math.dist(q, v)
+        q = v
+        if run >= back:
+            break
+    dx, dy = e[0] - q[0], e[1] - q[1]
+    n = math.hypot(dx, dy) or 1e-9
+    return dx / n, dy / n
+
+
+def linked(dashes, gap, cos_min=0.6):
+    """A dashed line drawn one fill per dash (Crested Butte's black runs): dashes, in any drawing order, joined end to
+    end where an end lies within `gap` pt of another dash's end and both point at each other (the cosine of each
+    end's outward direction with the step to the other end at least cos_min); nearest pairs first, no loops.
+    dashes: [(seqno, pts)]; returns [(seqno of the first, pts)]."""
+    ends = [(i, k) for i in range(len(dashes)) for k in (0, -1)]
+    cands = []
+    for x, (i, k) in enumerate(ends):
+        p, u = dashes[i][1][k], end_dir(dashes[i][1], k)
+        for j, m in ends[x + 1:]:
+            if j == i:
+                continue
+            q = dashes[j][1][m]
+            d = math.dist(p, q)
+            if d > gap:
+                continue
+            v = ((q[0] - p[0]) / (d or 1e-9), (q[1] - p[1]) / (d or 1e-9))
+            w = end_dir(dashes[j][1], m)
+            if d < 0.3 or (u[0] * v[0] + u[1] * v[1] >= cos_min and -(w[0] * v[0] + w[1] * v[1]) >= cos_min):
+                cands.append((d, (i, k), (j, m)))
+    root = list(range(len(dashes)))
+
+    def find(i):
+        while root[i] != i:
+            root[i] = root[root[i]]
+            i = root[i]
+        return i
+    nxt, used = {}, set()
+    for d, a, b in sorted(cands):
+        if a in used or b in used or find(a[0]) == find(b[0]):
+            continue
+        used |= {a, b}
+        nxt[a], nxt[b] = b, a
+        root[find(a[0])] = find(b[0])
+    out, seen = [], set()
+    for i in range(len(dashes)):
+        if i in seen or ((i, 0) in nxt and (i, -1) in nxt):
+            continue  # start each chain at a dash with a free end
+        pts, k, cur = [], (0 if (i, 0) not in nxt else -1), i
+        while True:
+            seen.add(cur)
+            c = dashes[cur][1]
+            pts += c if k == 0 else c[::-1]
+            far = (cur, -1 if k == 0 else 0)
+            if far not in nxt:
+                break
+            cur, k = nxt[far]
+        out.append((min(dashes[j][0] for j in seen if find(j) == find(i)), pts))
+    return out
+
+
 def letter_fills(a):
     """The drawing orders of the fills that are letters of the names (--glyphs from pdf_glyphs.py collect, each shape
-    read in --letters as a character other than *): a letter I or a hyphen is an outline as thin as a line."""
+    read in --letters as a character other than *): a letter I or a hyphen is an outline as thin as a line. Also
+    their boxes: a letter drawn twice, first in a run's colour and then over it in another (Crested Butte's Keystone
+    Ridge, green under black), is collected once, as the copy that shows; the one under it is no line either."""
     if not a.glyphs:
-        return set()
+        return set(), {}
     from pdf_glyphs import letter
     table = json.load(open(a.letters))
-    return {g['seq'] for g in json.load(open(a.glyphs))['glyphs'] if letter(table, g) not in (None, '*')}
+    G = [g for g in json.load(open(a.glyphs))['glyphs'] if letter(table, g) not in (None, '*')]
+    boxes = {}
+    for g in G:
+        boxes.setdefault(round(g['rect'][0]), []).append(g['rect'])
+    return {g['seq'] for g in G}, boxes
+
+
+def under_letter(r, boxes):
+    """r is a letter's box (within 0.15 pt: a halo pass draws it again a little off): a copy of that letter."""
+    return any(all(abs(u - v) < 0.15 for u, v in zip(b, (r.x0, r.y0, r.x1, r.y1)))
+               for k in (round(r.x0) - 1, round(r.x0), round(r.x0) + 1) for b in boxes.get(k, ()))
 
 
 def line_outlines(page, a, colours, excludes, clip):
     """Every line: (class, drawing order, centre line in pt, its length)."""
-    lines = []
-    letters = letter_fills(a)
+    lines, dashes = [], {}
+    letters, boxes = letter_fills(a)
     for d in page.get_drawings():
-        if d['seqno'] in letters:
+        if d['seqno'] in letters or (boxes and under_letter(d['rect'], boxes)):
             continue
         f = d.get('fill') if d['type'] == 'f' else None
         k = next((k for k, c in colours.items() if f and max(abs(x - y) for x, y in zip(f, c)) < 0.01), None)
@@ -238,11 +317,19 @@ def line_outlines(page, a, colours, excludes, clip):
                 # branches, so its centre line reads wide; its mean width (twice its area over its perimeter) is a
                 # line's
                 segs += [b for b in skeleton(sp) if length(b) >= 1.5]
-        for ch in chained(segs, a.dash):
+        if k in a.linked and len(segs) == 1 and length(segs[0]) <= a.link_max:
+            dashes.setdefault(k, []).append((d['seqno'], segs[0]))  # a dash of its own: linked below
+            continue
+        for ch in chained(segs, 0 if k in a.undashed else a.dash):
             L = length(ch['pts'])
             if (k in a.dark and L < a.dark_min) or (len(ch['parts']) == 1 and L < a.min_length):
                 continue  # a letter, a lone dash or an arrowhead
             lines.append((k, d['seqno'], ch['pts'], L))
+    for k, ds in dashes.items():
+        for seq, pts in linked(ds, a.link_gap):
+            L = length(pts)
+            if L >= (a.dark_min if k in a.dark else a.min_length):
+                lines.append((k, seq, pts, L))
     return lines
 
 
@@ -259,6 +346,14 @@ def main():
                     help="a class whose outlines are lines only if long (the names' letters are that colour too)")
     ap.add_argument('--dark-min', type=float, default=25.0, help='pt: the shortest line of a --dark class')
     ap.add_argument('--dash', type=float, default=5.0, help='pt: an outline shorter than this may be a dash')
+    ap.add_argument('--undashed', action='append', default=[],
+                    help="a class whose short outlines are never chained into a dashed line (Crested Butte's "
+                         "boundary is dotted in the black runs' colour: each dot is then a stray mark)")
+    ap.add_argument('--linked', action='append', default=[],
+                    help='a class whose dashed lines are drawn one fill per dash, in no order (Crested Butte\'s '
+                         'black runs): its single outlines up to --link-max pt are joined end to end (linked())')
+    ap.add_argument('--link-max', type=float, default=25.0, help='pt: the longest dash of a --linked class')
+    ap.add_argument('--link-gap', type=float, default=6.0, help='pt: the widest gap between two dashes of a line')
     ap.add_argument('--exclude', action='append', default=[],
                     help='x0,y0,x1,y1 pt: drop fills lying wholly inside (a legend, a panel)')
     ap.add_argument('--glyphs', help="pdf_glyphs.py collect's glyphs.json: with --letters, its letters are no lines")
