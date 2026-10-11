@@ -1,0 +1,435 @@
+{
+ "_source": "crystalmountainresort.com's conditions widget feed (mtnpowder, resort 80, through its mtnfeed config v4.mtnfeed.com/resorts/crystal-mountain.json), fetched out of season on 2026-10-11; tools/trailmap/reports/README.md",
+ "trails": [
+  [
+   "After Burn",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Boondoggle",
+   "Lower Mountain",
+   "Black"
+  ],
+  [
+   "Broadway",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Discover Meadow",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Downhill",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Gold Hills",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Little Magoo",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Lower Arwine's",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Lower Chappelle's",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Lower Magoo",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Mr. Magoo",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Queens",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Quicksilver",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Rolling Knolls",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Sideburn",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Snow Garden",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Stump Farm",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Tinkerbell",
+   "Lower Mountain",
+   "Green"
+  ],
+  [
+   "Upper Chappelle's",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Wally's Way",
+   "Lower Mountain",
+   "Blue"
+  ],
+  [
+   "Berry Patch",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Bill's Face",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Blazing Elk",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Buck",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Bull Run",
+   "Frontside",
+   "DoubleBlack"
+  ],
+  [
+   "Deer Fly",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Exterminator",
+   "Frontside",
+   "DoubleBlack"
+  ],
+  [
+   "Gandy's Run",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Green Valley",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Grubstake",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Howeirds",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Huckleberry",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Kelly's Gap Road",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Left Angle Trees",
+   "Frontside",
+   "DoubleBlack"
+  ],
+  [
+   "Little Portillo",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Little Shot",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Lower Ferk's",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Lucky Shot",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Melby's",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Mel's Left",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Mel's Right",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Memorial Forest",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Middle Ferk's",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Pro Course",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Right Angle",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Right Angle Trees",
+   "Frontside",
+   "DoubleBlack"
+  ],
+  [
+   "Sheppard",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Sled Face",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Sluiceway",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Snorting Elk",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Snorting Elk Bowl",
+   "Frontside",
+   "DoubleBlack"
+  ],
+  [
+   "Sunnyside",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "The Doors",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Upper Arwine's",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "Upper Ferk's",
+   "Frontside",
+   "Blue"
+  ],
+  [
+   "West Face",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Willie's Run",
+   "Frontside",
+   "Black"
+  ],
+  [
+   "Bear Pits",
+   "High Campbell",
+   "DoubleBlack"
+  ],
+  [
+   "Campbell Basin",
+   "High Campbell",
+   "DoubleBlack"
+  ],
+  [
+   "Powder Bowl",
+   "High Campbell",
+   "DoubleBlack"
+  ],
+  [
+   "The Throne",
+   "High Campbell",
+   "DoubleBlack"
+  ],
+  [
+   "Brand X",
+   "North",
+   "DoubleBlack"
+  ],
+  [
+   "Bruce's Bowl",
+   "North",
+   "DoubleBlack"
+  ],
+  [
+   "Employee Housing",
+   "North",
+   "DoubleBlack"
+  ],
+  [
+   "Glory Days",
+   "North",
+   "Black"
+  ],
+  [
+   "I-5",
+   "North",
+   "Black"
+  ],
+  [
+   "Lower Brand-X Cliff",
+   "North",
+   "DoubleBlack"
+  ],
+  [
+   "Lower Otto Bahn",
+   "North",
+   "Black"
+  ],
+  [
+   "Morning Glory Bowl",
+   "North",
+   "DoubleBlack"
+  ],
+  [
+   "Niagaras",
+   "North",
+   "DoubleBlack"
+  ],
+  [
+   "Northway",
+   "North",
+   "Black"
+  ],
+  [
+   "O-Meadows",
+   "North",
+   "DoubleBlack"
+  ],
+  [
+   "Paradise",
+   "North",
+   "Black"
+  ],
+  [
+   "Paradise Bowl",
+   "North",
+   "DoubleBlack"
+  ],
+  [
+   "Paradise Trees",
+   "North",
+   "DoubleBlack"
+  ],
+  [
+   "Penny Dawg's",
+   "North",
+   "DoubleBlack"
+  ],
+  [
+   "Pucker's Gulch",
+   "North",
+   "DoubleBlack"
+  ],
+  [
+   "Spook Hill",
+   "North",
+   "Black"
+  ],
+  [
+   "The Nose",
+   "North",
+   "DoubleBlack"
+  ],
+  [
+   "Upper Northway",
+   "North",
+   "Black"
+  ],
+  [
+   "Upper Otto Bahn",
+   "North",
+   "Black"
+  ],
+  [
+   "Whit's End",
+   "North",
+   "Black"
+  ],
+  [
+   "A-Basin",
+   "South",
+   "DoubleBlack"
+  ],
+  [
+   "Silver Basin",
+   "South",
+   "DoubleBlack"
+  ],
+  [
+   "Silver King",
+   "South",
+   "DoubleBlack"
+  ],
+  [
+   "Three Way Peak",
+   "South",
+   "DoubleBlack"
+  ]
+ ]
+}

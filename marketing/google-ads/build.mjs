@@ -550,6 +550,20 @@ const RESORT_ADS = {
     negatives: ['golf', 'tennis', 'bike park', 'mountain bike', 'summer', 'hiking', 'hotel', 'lodging', 'rental',
       'real estate', 'jobs', 'wedding', 'webcam', 'nordic', 'colorado', 'maine', 'oakmont'],
   },
+  'crystal-mountain': {
+    short: 'Crystal',
+    path: 'Crystal',
+    area: 'Northway to Southback',
+    // Crystal Mountain is also Michigan's resort and a mine: only with Washington's names or a map
+    names: ['crystal mountain wa', 'crystal mountain washington', 'crystal mountain resort'],
+    keywords: [
+      ['crystal mountain ski trails', 'phrase'],
+      ['crystal mountain trail map', 'exact'],
+    ],
+    // the gondola's summit restaurant and summer, lodging, the other Crystal Mountains (Michigan, the mine)
+    negatives: ['michigan', 'thompsonville', 'mine', 'summit house', 'summer', 'hiking', 'mountain bike', 'hotel',
+      'lodging', 'rental', 'real estate', 'jobs', 'wedding', 'webcam', 'gondola tickets', 'disc golf'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */
@@ -770,6 +784,9 @@ const PANEL_SITELINKS = {
   ],
   'palisades-tahoe': [
     { panel: 'alpine-front', peak: 'alpine', text: 'Alpine Meadows Trail Map', line: "Alpine's front and back sides" },
+  ],
+  'crystal-mountain': [
+    { panel: 'northway', peak: 'north', text: 'Crystal Northway Map', line: 'Brand-X, Glory Days, Paradise' },
   ],
   'big-bear': [
     { panel: 'bear-mountain', peak: 'bear-mountain', text: 'Bear Mountain Trail Map', line: 'Geronimo, Park Run, Central Park' },

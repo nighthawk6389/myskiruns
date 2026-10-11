@@ -1,0 +1,21 @@
+// Crystal Mountain's 2025-26 trail map (VistaMap's painting), in two panels:
+// the trail map PDF's one page (a vector painting under 1.5 pt run lines,
+// names as text, rounded symbols) and the Northway inset image the
+// trail-maps page shows beside it (the Northway lift's terrain behind the
+// ridge, read on crops: each run's black line routed along the painted one).
+// Names are spelled as the resort's trail report spells them (report.json:
+// the conditions feed, mtnpowder), the runs it doesn't list as the
+// interactive map (resorts-interactive.com) spells them, else as printed;
+// two names are set upside down along their lines (YAWECIULS, Sluiceway;
+// TOHS GIB, Big Shot). Ratings are the printed symbols; three differ from
+// the report and are kept as printed: Berry Patch (a square; the report
+// black), Melby's (two diamonds; black), Sheppard (a diamond; blue). The
+// peaks and basins printed as navy names (Silver King, The Throne, Three Way
+// Peak, A-Basin, Campbell Basin, Silver Basin) take the report's double
+// black. Lines are named by the name printed along them or settled on crops
+// (panels/main/decisions.py), the interactive map's lines settling a few
+// choices. The bowls, faces, chutes, glades and parks printed with no line
+// are markers at their names. Area elevations: each area's highest point
+// printed (Silver King 7,012 ft, Northway Peak 6,776 ft, Silver Queen
+// 7,002 ft), the Lower Mountain's its lifts' tops. x/y/baseY/width are unused
+// layout fields.

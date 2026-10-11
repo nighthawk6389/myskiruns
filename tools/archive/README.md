@@ -146,6 +146,18 @@ sheets and the undecided list came from `telluride/piece_sheet.py` (now `tools/t
 | `crested-butte/dash_fills_view.py` | dash_fills_view.py <pdf> <map.png> <out.png>: every black fill of four or more outlines, coloured, with its drawing number |
 | `crested-butte/cb_joins.py` | cb_joins.py: label pairs within 30 pt whose joined text is (or starts) a report name, and the labels the report doesn't list |
 
+## crystal-mountain
+
+Crystal Mountain's helpers while reading its Northway inset (after `resorts/crystal-mountain/prepare.py`): the inset's
+black ink over a faint copy of it, gridded (`ink_mask.py`: every run's line is black there, so the network of lines
+names.py's points were read from), and the routed lines with their names (`routed_view.py`: each route checked on
+its painted line). What they settled is in `resorts/crystal-mountain/names.py`.
+
+| file | what it did |
+|---|---|
+| `crystal-mountain/ink_mask.py` | ink_mask.py <northway/map.png> <out.png>: the black ink over a faint copy, a grid every 100 px |
+| `crystal-mountain/routed_view.py` | routed_view.py <work/crystal-mountain/northway> <out.png>: the routed lines, coloured and named |
+
 ## deer-valley
 
 Deer Valley's analyses: the October PDF rendered on the November image and diffed (`diff.py`, `clusters.py`,

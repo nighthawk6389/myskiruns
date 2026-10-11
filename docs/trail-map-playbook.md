@@ -1,6 +1,6 @@
 # Trail map playbook: from a resort's map to clickable, named trails
 
-How the app's forty-two resorts got their overlays, written so the next resort (or the next season of one of
+How the app's forty-three resorts got their overlays, written so the next resort (or the next season of one of
 these) can be done the same way, faster. It is for whoever does that work: a person, or Claude in a session like
 the ones that built these.
 
@@ -61,7 +61,7 @@ outlines or only paint, and whether the names are text, outlined glyphs or only 
 
 | the source gives you | route | done this way | start from |
 |---|---|---|---|
-| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Mount Snow (recipe D: one older export's strokes, another's text; rated by the names' colours), Stratton (recipe D: an export five seasons older, its changes read on crops), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
+| trail lines as vector strokes, names as text | `extract_pdf_vectors.py` for the pieces, `pdf_labels.py` for the names; `pdf_resort.py` matches each name to the line it is printed along or at the end of; settle the rest on crops | Whiteface, Winter Park (text with no Unicode map), Breckenridge, Hunter Mountain, Big Sky (three PDFs, three panels), Crystal Mountain (rounded symbols; its Northway inset image a panel read on crops, Telluride's way), Mount Snow (recipe D: one older export's strokes, another's text; rated by the names' colours), Stratton (recipe D: an export five seasons older, its changes read on crops), Snowmass (two panels; rated by the colour of each name's pill, the expert runs' cased lines filled outlines, `pdf_outline_lines.py`), Aspen Mountain (the same kind, three panels), Buttermilk (one panel) and Snowbasin (symbols on the lines; four lines drawn as filled outlines, read along their middle) | Hunter, Big Sky; Snowmass for a map rated by colour |
 | vector strokes, names as outlined glyphs | `extract_pdf_vectors.py`; `pdf_glyphs.py` decodes the names (each glyph shape read once on a contact sheet) | Keystone, Sunday River, Sugarloaf, Smugglers' Notch, Whistler Blackcomb (three panels), Park City, Palisades Tahoe (three PDFs, three panels), Alta (rounded symbols, `pdf_symbols.py --rounded --max-square`), Arapahoe Basin (one page of two paintings, two panels; most runs a name with no line: the stretch along it, `LABEL_LINE`), Telluride (names in the runs' colours, the EX double black; its hike-to terrain on two inset images read on crops, Whitefish's way) | Sunday River, Park City; Alta or Arapahoe Basin for rounded symbols |
 | lines as filled outlines, names as outlined glyphs | rasterise the outlines and thin them to centre lines (Copper Mountain), or read each outline's centre line from its path (`pdf_outline_lines.py`, Heavenly's method); `pdf_glyphs.py` | Copper Mountain, Heavenly (an older export of the current image's artwork), Mt. Bachelor, Northstar (white names haloed in the line's colour: the halo is the colour, and is dropped from the lines; one united outline for the runs that meet, cut at each junction), Crested Butte (dashed black runs a fill per dash, linked; the boundary's dots never chained; its extreme terrain and an inset of numbered runs markers) | Mt. Bachelor; Northstar for united outlines; Crested Butte for dashed lines |
 | vector strokes, names you can't extract | numbered tiles named by parallel AI readers (Part 4) | Stowe, Okemo, Sugarbush | Okemo, Sugarbush |
@@ -366,7 +366,7 @@ What the tools would do, untried:
 
 ## Conventions for the judgment calls
 
-What the forty-two resorts settled, so the next ones come out alike:
+What the forty-three resorts settled, so the next ones come out alike:
 
 - **Names.** As the resort's trail report spells them where it lists the run (the map prints capitals,
   abbreviations, `10TH MTN`, `MID-MTN`); otherwise as printed, typos fixed (Whiteface's "High County Road",
@@ -517,7 +517,7 @@ for a map in several panels, `--panel <id>` (`pdf_resort.py` and the tools built
 | tool | what it does |
 |---|---|
 | `tools/trailmap/find_source.cjs` | `links`: the PDFs, CDN images and map links a resort's page loads (headless Chromium, scrolled for lazy images); `try`: does a guessed URL exist; `dates`: a dated file name tried for every day in a range |
-| `tools/trailmap/fetch_pdf.cjs` | Downloads a PDF from inside its page in headless Chromium, for sites that refuse curl (works out the agent proxy's pin) |
+| `tools/trailmap/fetch_pdf.cjs` | Downloads a PDF (or a map image the page links) from inside its page in headless Chromium, for sites that refuse curl (works out the agent proxy's pin); behind a bot check (Crystal Mountain's), it reloads the page and asks again until the bytes are the file's kind |
 | `tools/trailmap/skimap.py` | skimap.org: `search` for an area, list its `maps` (year, type), `probe` the newest PDFs' content |
 | `tools/trailmap/pdf_inspect.py` | What a PDF holds, page by page: images with their resolution, strokes by colour x width, fills, text by font; renders, and the vector layer alone (`--vec`) |
 | `tools/trailmap/pdf_classes.py` | The most common stroke classes (or fill colours) of a page, each drawn alone on one contact sheet |
@@ -671,6 +671,7 @@ give the same.
 | [Telluride](#telluride) | PDF strokes and outlined names in the runs' colours over a 100 dpi painting; two inset images of the hike-to terrain | `pdf_resort.py`, glyph sheets, every piece on per-piece crops; the insets read on crops (`names.py`, `route_trace.py`) | `regen.sh` | a PDF plus image insets, panels of two kinds |
 | [Crested Butte](#crested-butte) | PDF lines as filled outlines (the black runs dashed, a fill per dash), outlined names, a 72 dpi painting; an inset of numbered runs | `pdf_outline_lines.py` (`--linked`, `--undashed`), the 2022-23 PDF's painting swapped in (`--replace`), glyph sheets, every piece on per-piece crops | `regen.sh` | dashed outlined lines; a painting sharper in an older PDF |
 | [Mount Snow](#mount-snow) | this season's map an image only (its PDF flattened at 72 dpi; the CDN's PNG); a 2023-24 export's strokes, a 2024-25 uphill map's text; an inset | two exports registered on the image (the inset on its own), names rated by their colour (`COLOR_SYMBOL`), the inset's names placed on crops (`EXTRA`) | `regen.sh` | lines and names from two older exports |
+| [Crystal Mountain](#crystal-mountain) | a vector PDF (the painting vector art) of 1.5 pt strokes, text and rounded symbols; the Northway inset image; an interactive map | `pdf_resort.py`, the interactive map's lines settling choices; the inset read on crops (`names.py`, `route_trace.py` on its black ink) | `regen.sh` | a PDF plus one image inset; a site behind a bot check |
 | [Stratton](#stratton) | this season's PDF flattened (one image); the 2020-21 export of the artwork with live strokes, text and fills | registration, the changes since read on crops (`GONE`, `MOVED`, traced lines) | `regen.sh` | an export several seasons older than the map |
 
 ## Killington
@@ -2195,6 +2196,46 @@ Learning Areas) · `tools/trailmap/resorts/stratton/`.
 - **Checked:** every overlay on crops (`overlay_audit.py`, 29 sheets, every cell read; Village Walk, Tink's Link,
   Suntanner, Tyrolienne, Lower Wanderer fixed and read again); `compare.py` against the report; hover 312/312; the
   app check; a rebuild from an empty work folder, byte for byte.
+
+## Crystal Mountain
+
+122 trails (76 + 46) · Washington · two panels: Crystal Mountain (the map), Northway · areas: the report's (Frontside,
+North, High Campbell, South, Lower Mountain) · `tools/trailmap/resorts/crystal-mountain/`.
+
+- **Source:** the 2025-26 winter trail map PDF and the Northway inset on crystalmountainresort.com's trail-maps page,
+  behind an Incapsula bot check: curl gets a 212-byte challenge page, and so does the first in-page fetch;
+  `fetch_pdf.cjs` now reloads the page and asks again until the bytes are the file's kind (the inset, named .jpg,
+  comes as a 1247 x 1105 WebP, skimap.org's map 30456). The PDF's one page is VistaMap's painting as vector art
+  (125,000 drawings), every run a 1.5 pt stroke in green, blue or black, the names FuturaPTCond-Medium 12 pt text (the
+  curved ones also as single letters; JACK'S CUT's J in another font), symbols rounded fills (a double diamond one
+  fill), the peaks' and basins' names navy. The interactive map (resorts-interactive.com 1809) draws the main map's
+  runs only, as a looser drawing (its lines pair with only 501 of 5910 points of the print's). Both files' SHA-256s
+  are checked.
+- **Route (recipe A, plus an image panel):** `prepare.py`: the page at 1.5 px/pt above the partners' band, the 1.5 pt
+  strokes (`extract_pdf_vectors.py`), `pdf_labels.py`, `pdf_symbols.py --rounded` (diamonds and squares up to 14 pt);
+  `pdf_resort.py` with `SYMBOL_REACH` 14, `END_REACH` 10, `ALONG` 6, `ALONG_NEAREST`, `SYMBOL_CENTRE` (the expert
+  terrain's symbols under their names' middles), 13 names in two parts joined, two names set upside down along their
+  lines renamed (YAWECIULS, TOHS GIB), Berry Patch's RIGHT and LEFT branches (`RENAME_AT`), the navy peaks and basins
+  the report lists as runs (`EXTRA`), six symbols out of reach placed (`SYMBOL_OF`). The Northway panel is the inset
+  upscaled 2x, read on crops and on a mask of its black ink (every run's line is black there): each name with its
+  symbol, each line as points (`names.py`) routed along the ink (`route_trace.py`, the points first moved onto the
+  nearest ink), one piece per line (`GROUPED`), Telluride's way.
+- **Rebuild:** `tools/trailmap/resorts/crystal-mountain/regen.sh` (2 min); it checks both files' SHA-256s.
+- **Truth:** the trail report (`report.json`): the conditions widget's mtnpowder feed (resort 80, mtnfeed config
+  `crystal-mountain.json`), fetched out of season on 2026-10-11, 86 rows; every one is printed. Printed but not in it
+  (36: the roads and links, the Campbell Basin and Southback chutes, the parks): spelled as the interactive map
+  spells them (`VICOMAP_NAMES`), else as printed, each given its area by where it is printed (`NOT_IN_REPORT`).
+  Ratings are the printed symbols; Berry Patch (a square), Melby's (two diamonds) and Sheppard (a diamond) differ
+  from the report and are kept. Pixie Trees and Rolling Knolls Chutes (a glade, chutes) print no symbol: black;
+  Gun Tower Ridge and The Airstrip: double black (`DEFAULT_SYMBOL`).
+- **Decisions** (`panels/main/decisions.py`): 34 undecided pieces settled on crops, the interactive map's line where
+  it showed whose a line was (Bull Run, Little Shot, Little Portillo, Employee Housing, Upper Arwine's loop round the
+  Rainier Express base); the Magoos' one line cut at Little and Lower Magoo's squares; Rolling Knolls' tick from
+  Downhill. Not trails: a link with no name, the Otto Bahn traverse on into Northway (named on that panel). The
+  bowls, faces, chutes, glades and parks printed with no line are markers at their names (46).
+- **Checked:** every overlay on crops (`overlay_audit.py`, 26 + 6 sheets, every cell read; Downhill's and Rolling
+  Knolls' pieces fixed and read again); `compare.py` against the report; hover 242/242 and 44/44; the app check; a
+  rebuild from an empty work folder, byte for byte.
 
 # Part 4. Methods in detail
 

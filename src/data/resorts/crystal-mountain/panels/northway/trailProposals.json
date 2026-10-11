@@ -1,0 +1,93 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "brand-x": {
+   "polylines": [
+    7
+   ],
+   "confidence": "high",
+   "mapName": "BRAND X",
+   "note": "its group"
+  },
+  "employee-housing": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "EMPLOYEE HOUSING",
+   "note": "its group"
+  },
+  "glory-days": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "GLORY DAYS",
+   "note": "its group"
+  },
+  "i-5": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "I-5",
+   "note": "its group"
+  },
+  "jeremys-road": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "JEREMY'S ROAD",
+   "note": "its group"
+  },
+  "lower-otto-bahn": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "LOWER OTTO BAHN",
+   "note": "its group"
+  },
+  "northway": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "NORTHWAY",
+   "note": "its group"
+  },
+  "paradise": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "PARADISE",
+   "note": "its group"
+  },
+  "upper-northway": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "UPPER NORTHWAY",
+   "note": "its group"
+  },
+  "upper-otto-bahn": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "UPPER OTTO BAHN",
+   "note": "its group"
+  },
+  "whits-end": {
+   "polylines": [
+    8
+   ],
+   "confidence": "high",
+   "mapName": "WHIT'S END",
+   "note": "its group"
+  }
+ }
+}

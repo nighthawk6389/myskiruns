@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Ski-run tracker for forty-two resorts (React 19 + TS + Vite). The hard part is
+Ski-run tracker for forty-three resorts (React 19 + TS + Vite). The hard part is
 putting a clickable, correctly *named* overlay on each trail of each resort's
 map (`public/maps/<id>.jpg`, or `<id>-<panel>.jpg` for a map in several panels
 such as Vail's). Read `docs/trail-map-playbook.md` before labeling another
@@ -71,7 +71,8 @@ the already-assigned path (that is circular).
   `names.py` read on crops), Big Bear (no PDF: one print's own lines, the others' interactive-map
   lines, its `names.py` read on crops), Arapahoe Basin (one PDF of two paintings), Telluride (a PDF
   and two inset images, their `names.py` read on crops) and Crested Butte (a PDF and its inset of numbered
-  runs; its painting swapped for an older PDF's sharper copy), and Jackson Hole and Snowbird (no vector PDF: their `names.py`
+  runs; its painting swapped for an older PDF's sharper copy), Crystal Mountain (a PDF and its Northway
+  inset image, its `names.py` read on crops), and Jackson Hole and Snowbird (no vector PDF: their `names.py`
   is the map read on crops, as Whitefish's); Heavenly's PDF is an older
   export of its map's artwork, registered on the current image, and Deer
   Valley's an earlier one registered on the later flattened image, and Beaver Creek's 2023 export on this season's

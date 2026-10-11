@@ -1,0 +1,147 @@
+{
+ "reviews": {
+  "northway-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T04:41:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    54.33,
+    21.72
+   ]
+  },
+  "bruces-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T04:41:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    44.91,
+    22.4
+   ]
+  },
+  "morning-glory-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T04:41:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    78.19,
+    25.11
+   ]
+  },
+  "paradise-bowl": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T04:41:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    37.29,
+    27.15
+   ]
+  },
+  "horseshoe-cliffs": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T04:41:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    23.86,
+    30.77
+   ]
+  },
+  "spook-hill": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T04:41:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    16.24,
+    31.22
+   ]
+  },
+  "the-nose": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T04:41:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    40.7,
+    33.94
+   ]
+  },
+  "paradise-trees": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T04:41:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    33.68,
+    35.75
+   ]
+  },
+  "penny-dawgs": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T04:41:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    51.12,
+    38.46
+   ]
+  },
+  "puckers-gulch": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T04:41:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    61.75,
+    41.18
+   ]
+  },
+  "lower-brand-x-cliff": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T04:41:37.000Z",
+   "by": "claude",
+   "labelAt": [
+    71.37,
+    53.17
+   ]
+  }
+ }
+}

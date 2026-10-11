@@ -195,6 +195,10 @@ export const RESORTS: ResortEntry[] = [
     ['Mt. Snow', 'Carinthia', 'Sunbrook', 'North Face', 'West Dover']),
   oneMap('stratton', 'Stratton', 'Vermont', () => import('./data/resorts/stratton/trails'), () => import('./data/resorts/stratton/trailPaths.json'),
     ['Stratton Mountain', 'Stratton Mountain Resort', 'Sun Bowl', 'Bondville']),
+  panels('crystal-mountain', 'Crystal Mountain', 'Washington', () => import('./data/resorts/crystal-mountain/trails'), [
+    { id: 'main', name: 'Crystal Mountain', paths: () => import('./data/resorts/crystal-mountain/panels/main/trailPaths.json') },
+    { id: 'northway', name: 'Northway', paths: () => import('./data/resorts/crystal-mountain/panels/northway/trailPaths.json') },
+  ], ['Crystal Mountain Resort', 'Mt. Rainier Gondola', 'Northway', 'Southback', 'Enumclaw']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];
