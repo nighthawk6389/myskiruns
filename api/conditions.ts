@@ -7,6 +7,8 @@
 // Relative imports in api/ need their .js extension: Vercel runs these files
 // as Node ESM (package.json "type": "module"), which won't resolve bare paths.
 import { DEFAULT_RESORT, handleConditions, type VoteStore } from './_lib/conditions.js';
+import { upstash } from './_lib/redis.js';
+import { recordVote } from './_lib/season.js';
 
 // Killington keeps the hash it had before other resorts were added.
 const hashFor = (resort: string) =>
@@ -47,6 +49,9 @@ export async function GET(req: Request) {
   return handleConditions(req, upstashStore);
 }
 
+// each vote also counts toward the season's tallies (api/_lib/season.ts)
+const redis = upstash();
+
 export async function POST(req: Request) {
-  return handleConditions(req, upstashStore);
+  return handleConditions(req, upstashStore, redis ? (v) => recordVote(redis, v) : undefined);
 }

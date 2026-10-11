@@ -110,6 +110,19 @@
   font-weight: 700;
 }
 
+.trailIcon {
+  width: 20px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+.more {
+  padding: 6px 10px 10px 38px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
 .empty {
   padding: 12px 10px;
   color: var(--text-secondary);

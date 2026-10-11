@@ -41,7 +41,12 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 
 - **Resorts.** Pick a resort with the button in the header: a search over the names, states and other places (it
   finds Heavenly by "nevada" or "lake tahoe"), grouped by state before you type. `?resort=<id>` in the URL opens
-  one; the app remembers the last one on the device. Some maps come in several panels (Vail's Front Side, Back
+  one; the app remembers the last one on the device.
+- **Trails at every resort.** The same search box finds trails by name across all the resorts ("outer limits":
+  Heavenly, Killington, Mt. Hood Meadows, Palisades Tahoe, Stevens Pass, Whistler Blackcomb), each with its rating,
+  resort and state; picking one opens its resort zoomed to the trail, its sheet open (`?resort=<id>&trail=<id>`
+  links there too). The index (`trail-index.json`, about 80 KB compressed) is built with the app and fetched the
+  first time a search is typed (`src/trailSearch.ts`). Some maps come in several panels (Vail's Front Side, Back
   Bowls and Blue Sky Basin; Big Sky's main map and two insets), with a switcher on the map (`?panel=<id>`);
   picking a trail in the list opens the panel it is drawn on.
 - **Trips.** What you ski is logged per trip ("Presidents Day weekend"). Start or pick a trip in the header and
@@ -200,7 +205,7 @@ work/                    git-ignored: downloads and intermediate files of the pi
 | command | what it does |
 |---|---|
 | `npm run dev` / `build` / `preview` | the app: dev server, production build, a local preview of the build |
-| `npm test` | the trip merge and sync rules (random three-device histories), the resort search, recap links (every resort's trail ids hash apart) and link previews |
+| `npm test` | the trip merge and sync rules (random three-device histories), the resort search, recap links (every resort's trail ids hash apart), link previews, the search across resorts and the season tallies |
 | `npm run lint` | ESLint (with `npx tsc -b`, the check before every commit) |
 | `npm run trails:apply -- --resort <id> [--panel <p>]` | proposals + reviews → `trailPaths.json`, the overlays the app draws |
 | `npm run reviews:import -- <export dir> --resort <id>` | the Trail Check page's export → `trailReviews.json` |
@@ -213,6 +218,7 @@ work/                    git-ignored: downloads and intermediate files of the pi
 | `node tools/app_check.cjs <url> --resort <id>` | a resort in the real app: found by the search, every panel loads with overlays, phone layout |
 | `node tools/app_flows.cjs [dist]` | phone flows (tap, mark, undo, summary, panels), two tabs, backups |
 | `node tools/make_og_assets.cjs` | redraw the link previews' fixed pictures (`public/og/`) |
+| `node tools/search_check.cjs <url>` | the search across resorts: a trail's name lists it at every resort, picking one opens its resort on it, `?trail=` links, mark reports sent |
 | `node tools/recap_check.cjs <url> --resort <id>` | "Share your day": both cards drawn (saved to look at), the link copied and opened in a fresh browser, read-only, on a desktop and a phone |
 | `node tools/offline_check.cjs [dist]` | offline: first visit, reload without the server, a deploy, the load-error screen |
 | `node tools/accounts_check.cjs` | accounts: two devices sign in, sync, edit offline, delete (with `scripts/mockSupabase.cjs`) |
@@ -285,6 +291,21 @@ The 👍/👎 votes and tags are shared through `api/conditions.ts`, a Vercel fu
 resort: add Upstash Redis from the Vercel Marketplace and connect it to the project (it sets `KV_REST_API_URL` and
 `KV_REST_API_TOKEN`; `UPSTASH_REDIS_REST_URL` / `_TOKEN` work too). Until then the endpoint answers 503 and the app
 keeps votes on the device (the sheet says so). Votes count for 24 hours; each device sends a random id.
+
+## Season tallies
+
+For rankings of the season's runs across every resort, two anonymous tallies are kept in the same Redis as the trail
+conditions (`api/_lib/season.ts`), each counting once per device, per trail, per day (Mountain time):
+- **votes**: every 👍 / 👎 also counts toward the season (`api/conditions.ts`), where today's conditions keep them
+  only 24 hours; a change of mind the same day moves the count instead of adding one;
+- **run marks**: marking a run skied sends `{resort, trail, device}` to `/api/marks` (undo takes it back the same
+  day), counted by season and by day (the last 15 days kept).
+
+No trip, account or name is stored, and a device's id is kept only two days (to count it once a day). A season runs
+July 1 to June 30. `GET /api/season[?season=2026-27]` ranks them: most loved (at least 5 votes, by the lower bound of
+the Wilson score, so 40 up and 2 down beats 5 up and 0 down), most skied this season, and most skied in the last 7
+days, with ids that the app's trail index names. Nothing in the app shows it yet: a "Top runs" page comes once a
+season's data is enough to fill it.
 
 ## Link previews
 

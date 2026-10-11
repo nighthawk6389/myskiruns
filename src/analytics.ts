@@ -26,6 +26,7 @@ export function startAnalytics() {
 export type EventName =
   | 'Resort opened'
   | 'Run marked'
+  | 'Trail found'
   | 'Trip created'
   | 'Summary opened'
   | 'Share dialog opened'

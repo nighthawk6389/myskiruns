@@ -55,7 +55,10 @@ export function tally(all: Record<string, string>, now: number) {
 /** Each resort's votes live in their own store; null = not configured. */
 export type StoreFor = (resort: string) => VoteStore | null;
 
-export async function handleConditions(req: Request, storeFor: StoreFor): Promise<Response> {
+/** Told of each vote stored (the season's tallies, api/_lib/season.ts); its failure doesn't fail the vote. */
+export type OnVote = (v: { resort: string; trail: string; device: string; vote: number; now: number }) => Promise<void>;
+
+export async function handleConditions(req: Request, storeFor: StoreFor, onVote?: OnVote): Promise<Response> {
   const resort = new URL(req.url).searchParams.get('resort') ?? DEFAULT_RESORT;
   if (!RESORT_ID.test(resort)) return json({ error: 'Bad resort.' }, 400);
   const store = storeFor(resort);
@@ -85,6 +88,11 @@ export async function handleConditions(req: Request, storeFor: StoreFor): Promis
     const field = `${trailId}:${deviceId}`;
     if (vote === 0 && tags.length === 0) await store.remove([field]);
     else await store.set(field, `${vote}:${now}:${[...new Set(tags)].join(',')}`);
+    try {
+      await onVote?.({ resort, trail: trailId, device: deviceId, vote, now });
+    } catch {
+      // the season's tally missed one vote; today's conditions still have it
+    }
 
     const { trails, stale } = tally(await store.getAll(), now);
     if (stale.length) await store.remove(stale);

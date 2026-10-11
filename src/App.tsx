@@ -13,6 +13,7 @@ import { ResortPicker } from './components/ResortPicker/ResortPicker';
 import { RecapView } from './components/RecapView/RecapView';
 import { decodeRecap } from './recap/link';
 import { track } from './analytics';
+import { reportMark } from './marks';
 import styles from './App.module.css';
 
 const RESORT_KEY = 'myskiruns.resort';
@@ -33,6 +34,12 @@ function App() {
   const [resortId, setResortId] = useState(initialResortId);
   // someone's shared day (?recap=), shown read-only until the visitor moves on
   const [recapPayload, setRecapPayload] = useState(() => new URLSearchParams(location.search).get('recap'));
+  // a trail to show once its resort is on screen: picked in the search across
+  // resorts, or ?trail=<id> in the URL (n: picked again, show it again)
+  const [focus, setFocus] = useState<Focus | null>(() => {
+    const trailId = new URLSearchParams(location.search).get('trail');
+    return trailId ? { resortId: initialResortId(), trailId, n: 0 } : null;
+  });
   // the resort on screen: while the next one's data loads, the current one stays
   const shownId = useDeferredValue(resortId);
   const leaveRecap = () => {
@@ -42,10 +49,14 @@ function App() {
     url.searchParams.delete('recap');
     history.replaceState(history.state, '', url);
   };
-  const chooseResort = (id: string) => {
+  const chooseResort = (id: string, trailId?: string) => {
     leaveRecap();
     const next = resortEntry(id).id;
     setResortId(next);
+    if (trailId) {
+      track('Trail found', { resort: next });
+      setFocus((f) => ({ resortId: next, trailId, n: (f?.n ?? 0) + 1 }));
+    }
     try {
       localStorage.setItem(RESORT_KEY, next);
     } catch {
@@ -56,10 +67,22 @@ function App() {
   return (
     <Suspense fallback={<Splash picker={picker}>Loading {resortEntry(shownId).name}…</Splash>}>
       <LoadError key={shownId} resortId={shownId} picker={picker}>
-        <LoadedResort id={shownId} picker={picker} recapPayload={recapPayload} onLeaveRecap={() => chooseResort(shownId)} />
+        <LoadedResort
+          id={shownId}
+          picker={picker}
+          recapPayload={recapPayload}
+          onLeaveRecap={() => chooseResort(shownId)}
+          focus={focus?.resortId === shownId ? focus : null}
+        />
       </LoadError>
     </Suspense>
   );
+}
+
+interface Focus {
+  resortId: string;
+  trailId: string;
+  n: number;
 }
 
 function LoadedResort({
@@ -67,11 +90,13 @@ function LoadedResort({
   picker,
   recapPayload,
   onLeaveRecap,
+  focus,
 }: {
   id: string;
   picker: ReactNode;
   recapPayload: string | null;
   onLeaveRecap: () => void;
+  focus: Focus | null;
 }) {
   const resort = use(loadResort(id));
   const recap = useMemo(
@@ -81,10 +106,18 @@ function LoadedResort({
   if (recap) return <RecapView key={`recap-${resort.id}`} resort={resort} recap={recap} onExit={onLeaveRecap} />;
   // everything below is per resort: remounting resets map view, filters,
   // conditions and the trip in view
-  return <ResortApp key={resort.id} resort={resort} picker={picker} />;
+  return <ResortApp key={resort.id} resort={resort} picker={picker} focus={focus} />;
 }
 
-function Picker({ value, onChange, busy }: { value: string; onChange: (id: string) => void; busy: boolean }) {
+function Picker({
+  value,
+  onChange,
+  busy,
+}: {
+  value: string;
+  onChange: (id: string, trailId?: string) => void;
+  busy: boolean;
+}) {
   if (RESORTS.length < 2) return <h1 className={styles.title}>{resortEntry(value).name} Trail Tracker</h1>;
   return <ResortPicker resorts={RESORTS} value={value} onChange={onChange} busy={busy} />;
 }
@@ -141,7 +174,7 @@ class LoadError extends Component<
   }
 }
 
-function ResortApp({ resort, picker }: { resort: Resort; picker: ReactNode }) {
+function ResortApp({ resort, picker, focus }: { resort: Resort; picker: ReactNode; focus: Focus | null }) {
   const { trails } = resort;
   const {
     trips,
@@ -173,7 +206,9 @@ function ResortApp({ resort, picker }: { resort: Resort; picker: ReactNode }) {
   const conditions = useConditions(resort.id);
   const [summaryOpen, setSummaryOpen] = useState(false);
   const toggle = (id: string) => {
-    if (!skiedTrails.has(id)) track('Run marked', { resort: resort.id });
+    const marking = !skiedTrails.has(id);
+    if (marking) track('Run marked', { resort: resort.id });
+    reportMark(resort.id, id, marking);
     toggleRun(id);
   };
   const createTrip: typeof newTrip = (...args) => {
@@ -186,6 +221,13 @@ function ResortApp({ resort, picker }: { resort: Resort; picker: ReactNode }) {
   };
 
   useEffect(() => track('Resort opened', { resort: resort.id }), [resort.id]);
+
+  // a trail found by the search across resorts: zoom to it and open its sheet
+  const focusTrailId = focus?.trailId;
+  const focusN = focus?.n;
+  useEffect(() => {
+    if (focusTrailId) mapRef.current?.focusTrail(focusTrailId);
+  }, [focusTrailId, focusN]);
 
   const filteredTrailIds = useMemo(
     () => new Set(filteredTrails.map((t) => t.id)),
