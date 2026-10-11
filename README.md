@@ -5,12 +5,12 @@ overlay on the map, with its name and rating, so you tap the run you just skied 
 works offline on the mountain, installs to a phone's home screen, and can sync your trips between devices with an
 optional account. Live at **[www.myskiruns.app](https://www.myskiruns.app)**.
 
-Forty-four resorts so far, 6,312 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch, Mount
+Forty-five resorts so far, 6,399 trails: Killington, Stowe, Okemo, Sugarbush, Jay Peak, Smugglers' Notch, Mount
 Snow, Stratton, Whiteface, Hunter Mountain, Wildcat Mountain, Sunday River, Sugarloaf, Vail, Beaver Creek,
 Breckenridge, Keystone, Arapahoe Basin, Copper Mountain, Winter Park, Steamboat, Snowmass, Aspen Mountain,
-Buttermilk, Telluride, Crested Butte, Park City, Deer Valley, Snowbasin, Alta, Snowbird, Brighton, Big Sky,
-Whitefish Mountain, Jackson Hole, Schweitzer, Palisades Tahoe, Northstar, Heavenly, Mammoth Mountain, Big Bear, Mt.
-Bachelor, Crystal Mountain and Whistler Blackcomb.
+Buttermilk, Telluride, Crested Butte, Park City, Deer Valley, Snowbasin, Alta, Snowbird, Brighton, Solitude, Big
+Sky, Whitefish Mountain, Jackson Hole, Schweitzer, Palisades Tahoe, Northstar, Heavenly, Mammoth Mountain, Big
+Bear, Mt. Bachelor, Crystal Mountain and Whistler Blackcomb.
 
 Most of the work in this repository is the **trail-map pipeline**: getting every trail's overlay onto its own
 drawn line, with the right name, on maps that were never made to be machine-read. How it is done, resort by
@@ -97,6 +97,7 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 | Alta | Utah | 116 (81 + 35) | 1 | PDF strokes, outlined names, rounded symbols; the faces and chutes printed with no line are markers | `tools/trailmap/resorts/alta/regen.sh` |
 | Snowbird | Utah | 180 (155 + 25) | 1 | one image (its PDF the same image): the map read on crops, each line routed along the painted one | `tools/trailmap/resorts/snowbird/regen.sh` |
 | Brighton | Utah | 91 (81 + 10) | 1 | PDF strokes, outlined names in a font of its own; long strokes each carrying a run and the next, cut where the next starts | `tools/trailmap/resorts/brighton/regen.sh` |
+| Solitude | Utah | 87 (61 + 26) | 1 | its PDF one flattened image; its interactive map's SVG as the vector layer (Steamboat's way), the runs rated by their colour | `tools/trailmap/resorts/solitude/regen.sh` |
 | Big Sky | Montana | 323 (290 + 33) | 3 | three PDFs of strokes and text | `tools/trailmap/resorts/big-sky/regen.sh` |
 | Whitefish Mountain | Montana | 113 (76 + 37) | 3 | three small web JPEGs, no PDF: the map read on crops, each line routed along the painted one | `tools/trailmap/resorts/whitefish/regen.sh` |
 | Jackson Hole | Wyoming | 142 (108 + 34) | 1 | one image, no PDF, thin lines blending into the snow: the map read on crops, each line routed along the painted one | `tools/trailmap/resorts/jackson-hole/regen.sh` |
@@ -295,12 +296,12 @@ the playbook's [Part 5](docs/trail-map-playbook.md#part-5-what-we-tried-and-what
 
 ## What's left
 
-1. **A person's confirmation** for the forty-one resorts Claude checked on crops instead of the review page
-   (Sugarbush through Brighton), if wanted: the Trail Check page can be published for any resort ([playbook,
+1. **A person's confirmation** for the forty-two resorts Claude checked on crops instead of the review page
+   (Sugarbush through Solitude), if wanted: the Trail Check page can be published for any resort ([playbook,
    Part 4](docs/trail-map-playbook.md#auditing-on-crops-or-the-human-review-page)).
 2. **Shared tooling:** a legend file per map feeding the extraction and the readers' prompts; readers run from a
    script instead of an interactive session ([playbook, Part 5](docs/trail-map-playbook.md#scaling-to-many-maps)).
-3. The hover check passes 17,125 of 17,134 points (2026-10-11). The nine misses are points where two trails'
+3. The hover check passes 17,334 of 17,343 points (2026-10-11). The nine misses are points where two trails'
    overlays meet or share a stretch, where either name is right: Killington 2, Stowe 2, Beaver Creek 2, Big Sky's
    Bowl 1, Heavenly 1, Mt. Bachelor 1 (each resort's numbers are in the playbook's Part 3).
 4. Whiteface, Winter Park, Breckenridge, Copper Mountain and Keystone key their decisions by piece id, valid for

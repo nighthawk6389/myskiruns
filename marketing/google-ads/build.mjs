@@ -578,6 +578,20 @@ const RESORT_ADS = {
     negatives: ['england', 'uk', 'beach', 'pier', 'michigan', 'colorado', 'massachusetts', 'new york', 'summer',
       'mountain bike', 'hiking', 'lodge', 'real estate', 'jobs', 'wedding', 'solitude'],
   },
+  solitude: {
+    short: 'Solitude',
+    path: 'Solitude',
+    area: 'Honeycomb Canyon',
+    // solitude is also a word (books, songs, quotes): only with the resort's names or a map
+    names: ['solitude mountain resort', 'solitude ski resort', 'solitude utah skiing'],
+    keywords: [
+      ['solitude ski trails', 'phrase'],
+      ['solitude trail map utah', 'exact'],
+    ],
+    // the word's other senses, the Nordic center and the summer, the village's lodging, the canyon's other resort
+    negatives: ['quotes', 'book', 'song', 'lyrics', 'poem', 'meditation', 'nordic', 'snowshoe', 'summer', 'mountain bike',
+      'hiking', 'lodging', 'inn', 'condo', 'real estate', 'jobs', 'wedding', 'brighton'],
+  },
 };
 
 /** Keywords for a resort's names: the first gets the full set. */

@@ -1,0 +1,329 @@
+{
+ "reviews": {
+  "black-bess-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    74.53,
+    8.71
+   ]
+  },
+  "highway-to-heaven": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:06:38.000Z",
+   "by": "claude",
+   "labelAt": [
+    9.33,
+    11.85
+   ]
+  },
+  "honeycomb-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    85.83,
+    14.48
+   ]
+  },
+  "black-bess": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    73.6,
+    14.83
+   ]
+  },
+  "buckeye-junior": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    69.5,
+    16.12
+   ]
+  },
+  "voltaire": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    79.3,
+    17.84
+   ]
+  },
+  "evergreen-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    49.07,
+    20.43
+   ]
+  },
+  "prince-of-wales": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    83.87,
+    22.46
+   ]
+  },
+  "headwall-forest": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    58.43,
+    24.22
+   ]
+  },
+  "cathedral-cirque": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    67.37,
+    28.28
+   ]
+  },
+  "black-forest": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    72.57,
+    28.32
+   ]
+  },
+  "boundary-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    87.83,
+    32.33
+   ]
+  },
+  "scree-slope": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    49.5,
+    33.1
+   ]
+  },
+  "middle-slope": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    66.6,
+    33.75
+   ]
+  },
+  "dead-tree": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    41.73,
+    34.83
+   ]
+  },
+  "memorial-chutes": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    76.87,
+    36.21
+   ]
+  },
+  "parachute": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    63.17,
+    39.09
+   ]
+  },
+  "milk-run": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    63.3,
+    42.37
+   ]
+  },
+  "no-mans-land": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    91.73,
+    44.09
+   ]
+  },
+  "evening-star": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    41.97,
+    45.99
+   ]
+  },
+  "here-be-dragons": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    78.03,
+    46.03
+   ]
+  },
+  "powderhorn-cirque": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    62.47,
+    51.16
+   ]
+  },
+  "crystal-point": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    93.93,
+    54.87
+   ]
+  },
+  "navarone": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    85.63,
+    60.82
+   ]
+  },
+  "queen-bess": {
+   "status": "no-line",
+   "polylines": [],
+   "drawn": [],
+   "mapDifficulty": null,
+   "note": "Named on the map with no line drawn: marker at its name",
+   "at": "2026-10-11T11:05:45.000Z",
+   "by": "claude",
+   "labelAt": [
+    87.7,
+    70.04
+   ]
+  }
+ }
+}

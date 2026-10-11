@@ -201,6 +201,8 @@ export const RESORTS: ResortEntry[] = [
   ], ['Crystal Mountain Resort', 'Mt. Rainier Gondola', 'Northway', 'Southback', 'Enumclaw']),
   oneMap('brighton', 'Brighton', 'Utah', () => import('./data/resorts/brighton/trails'), () => import('./data/resorts/brighton/trailPaths.json'),
     ['Brighton Resort', 'Big Cottonwood Canyon', 'Milly', 'Great Western', 'Salt Lake City']),
+  oneMap('solitude', 'Solitude', 'Utah', () => import('./data/resorts/solitude/trails'), () => import('./data/resorts/solitude/trailPaths.json'),
+    ['Solitude Mountain Resort', 'Big Cottonwood Canyon', 'Honeycomb Canyon', 'Eagle Ridge', 'Salt Lake City']),
 ];
 
 export const DEFAULT_RESORT = RESORTS[0];

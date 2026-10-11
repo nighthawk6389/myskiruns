@@ -1,0 +1,18 @@
+// Solitude Mountain Resort's 2025-26 trail map (solitudemountain.com's PDF:
+// one flattened image of James Niehues's painting, with the Highway to Heaven
+// inset top left). The lines and names are its interactive map's
+// (resorts-interactive.com map 1811), whose SVG is this map's vector layer
+// drawn again, every trail's line, letters and symbol grouped under its name;
+// registered on the image (median 0.44 px to the print's own line ink). The
+// runs print no symbol: each is rated by the colour of its line and name
+// (green, blue, black), the expert areas by the diamond or two printed over
+// their names; Tude Dudes, printed green (the interactive map's letters
+// blue), green as the report has it. Names are spelled as the resort's trail
+// report spells them (report.json); Sundancer, printed once along one line
+// (the report's Upper and Lower), is one trail. The bowls, chutes, faces and
+// glades printed with no line are markers at their names, and so is the
+// Highway to Heaven, printed only in the inset. Not on this map: the Nordic
+// area's cross-country and snowshoe trails, and the report's two terrain
+// parks (Main Street, Upper Tude Dudes), drawn as features with no name.
+// Areas: the report's.
+// x/y/baseY/width are unused layout fields.

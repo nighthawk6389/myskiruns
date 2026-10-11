@@ -1,0 +1,540 @@
+{
+ "_source": "Solitude Mountain Resort's trail report: the conditions widget's mtnpowder feed (resort 65, mtnfeed config solitude.json), fetched out of season on 2026-10-11: name, area, rating (from its icon)",
+ "trails": [
+  [
+   "Dean's Dash",
+   "Moonbeam Area",
+   "Green"
+  ],
+  [
+   "Easy Street",
+   "Moonbeam Area",
+   "Green"
+  ],
+  [
+   "Home Run",
+   "Moonbeam Area",
+   "Blue"
+  ],
+  [
+   "Last Run",
+   "Moonbeam Area",
+   "Blue"
+  ],
+  [
+   "Little Dollie",
+   "Moonbeam Area",
+   "Green"
+  ],
+  [
+   "Same Street",
+   "Moonbeam Area",
+   "Green"
+  ],
+  [
+   "Tude Dudes",
+   "Moonbeam Area",
+   "Green"
+  ],
+  [
+   "Upper Tude Dudes Terrain Park",
+   "Moonbeam Area",
+   "Green"
+  ],
+  [
+   "Abba's Alley",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Blue Spruce",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Challenger",
+   "Eagle Ridge",
+   "Black"
+  ],
+  [
+   "Concord",
+   "Eagle Ridge",
+   "Black"
+  ],
+  [
+   "Diamond Lane",
+   "Eagle Ridge",
+   "Black"
+  ],
+  [
+   "Eagle Ridge",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Fleet Street",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Fluid Drive",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Gary's Glade",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Grumble Lower",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Grumble Upper",
+   "Eagle Ridge",
+   "Black"
+  ],
+  [
+   "Hal's Hollow",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Inspiration Lower",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Inspiration Upper",
+   "Eagle Ridge",
+   "Black"
+  ],
+  [
+   "Main Street",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Main Street Terrain Park",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Olympia",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Paradise",
+   "Eagle Ridge",
+   "Black"
+  ],
+  [
+   "Paradise Lost",
+   "Eagle Ridge",
+   "Black"
+  ],
+  [
+   "Post Card",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Rhapsody",
+   "Eagle Ridge",
+   "Black"
+  ],
+  [
+   "Rumble Lower",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Rumble Upper",
+   "Eagle Ridge",
+   "Black"
+  ],
+  [
+   "Serenity Lower",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Serenity Upper",
+   "Eagle Ridge",
+   "Black"
+  ],
+  [
+   "Shady Lane",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Stumble Lower",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Stumble Upper",
+   "Eagle Ridge",
+   "Black"
+  ],
+  [
+   "Sundancer Lower",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Sundancer Upper",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Sunshine Bowl",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "TBD",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Vertigo",
+   "Eagle Ridge",
+   "Black"
+  ],
+  [
+   "Wall Street",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Wanderer",
+   "Eagle Ridge",
+   "Blue"
+  ],
+  [
+   "Alta Bird",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Back Door",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Broadway",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Cathedral Cirque",
+   "Solitude Canyon",
+   "DoubleBlack"
+  ],
+  [
+   "Corner Chute",
+   "Solitude Canyon",
+   "Black"
+  ],
+  [
+   "Dynamite",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Front Door",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Headwall Forest",
+   "Solitude Canyon",
+   "DoubleBlack"
+  ],
+  [
+   "Liberty",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Middle Slope",
+   "Solitude Canyon",
+   "DoubleBlack"
+  ],
+  [
+   "Milk Run",
+   "Solitude Canyon",
+   "DoubleBlack"
+  ],
+  [
+   "Mine",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "North Star",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Parachute",
+   "Solitude Canyon",
+   "DoubleBlack"
+  ],
+  [
+   "Polaris",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Powderhorn Cirque",
+   "Solitude Canyon",
+   "Black"
+  ],
+  [
+   "Roller Coaster",
+   "Solitude Canyon",
+   "Black"
+  ],
+  [
+   "Scree Slope",
+   "Solitude Canyon",
+   "Black"
+  ],
+  [
+   "Sensation",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Shaft",
+   "Solitude Canyon",
+   "Black"
+  ],
+  [
+   "SolBright",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "South Star",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Summit Access East",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Summit Access West",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Timberline",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Zip-A-Dee",
+   "Solitude Canyon",
+   "Blue"
+  ],
+  [
+   "Black Bess",
+   "Honeycomb Canyon",
+   "Black"
+  ],
+  [
+   "Black Forest",
+   "Honeycomb Canyon",
+   "Black"
+  ],
+  [
+   "Boundary Chutes",
+   "Honeycomb Canyon",
+   "Black"
+  ],
+  [
+   "Buckeye Junior",
+   "Honeycomb Canyon",
+   "Black"
+  ],
+  [
+   "Crystal Point",
+   "Honeycomb Canyon",
+   "DoubleBlack"
+  ],
+  [
+   "Here Be Dragons",
+   "Honeycomb Canyon",
+   "DoubleBlack"
+  ],
+  [
+   "Honeycomb Return",
+   "Honeycomb Canyon",
+   "Blue"
+  ],
+  [
+   "Memorial Chutes",
+   "Honeycomb Canyon",
+   "Black"
+  ],
+  [
+   "Navarone",
+   "Honeycomb Canyon",
+   "DoubleBlack"
+  ],
+  [
+   "No Man's Land",
+   "Honeycomb Canyon",
+   "DoubleBlack"
+  ],
+  [
+   "Prince of Wales",
+   "Honeycomb Canyon",
+   "Black"
+  ],
+  [
+   "Queen Bess",
+   "Honeycomb Canyon",
+   "DoubleBlack"
+  ],
+  [
+   "Voltaire",
+   "Honeycomb Canyon",
+   "Black"
+  ],
+  [
+   "Woodlawn",
+   "Honeycomb Canyon",
+   "Black"
+  ],
+  [
+   "Barrett's Glade",
+   "Evergreen Peak",
+   "DoubleBlack"
+  ],
+  [
+   "Dead Tree",
+   "Evergreen Peak",
+   "DoubleBlack"
+  ],
+  [
+   "Evening Star",
+   "Evergreen Peak",
+   "Black"
+  ],
+  [
+   "Evergreen Chutes",
+   "Evergreen Peak",
+   "DoubleBlack"
+  ],
+  [
+   "Highway to Heaven",
+   "Highway to Heaven",
+   "DoubleBlack"
+  ],
+  [
+   "Black Bess Chutes",
+   "Fantasy Ridge",
+   "DoubleBlack"
+  ],
+  [
+   "Honeycomb Chutes",
+   "Fantasy Ridge",
+   "DoubleBlack"
+  ],
+  [
+   "Big Redman",
+   "Nordic",
+   "Blue"
+  ],
+  [
+   "Bypass",
+   "Nordic",
+   "Blue"
+  ],
+  [
+   "Cabin Fever",
+   "Nordic",
+   "Blue"
+  ],
+  [
+   "Cabin Loop",
+   "Nordic",
+   "Snowshoe"
+  ],
+  [
+   "Camp Loop",
+   "Nordic",
+   "Blue"
+  ],
+  [
+   "Cornucopia",
+   "Nordic",
+   "Blue"
+  ],
+  [
+   "Creek Bottom",
+   "Nordic",
+   "Snowshoe"
+  ],
+  [
+   "Evergreen",
+   "Nordic",
+   "Green"
+  ],
+  [
+   "Lake Flat",
+   "Nordic",
+   "Green"
+  ],
+  [
+   "Little Redman",
+   "Nordic",
+   "Green"
+  ],
+  [
+   "Mid Redman",
+   "Nordic",
+   "Green"
+  ],
+  [
+   "New Sensation",
+   "Nordic",
+   "Blue"
+  ],
+  [
+   "Redman Loop",
+   "Nordic",
+   "Snowshoe"
+  ],
+  [
+   "Silver Lake",
+   "Nordic",
+   "Green"
+  ],
+  [
+   "Silver Lake Loop",
+   "Nordic",
+   "Snowshoe"
+  ],
+  [
+   "Solitude Street",
+   "Nordic",
+   "Green"
+  ],
+  [
+   "Solitude Trail",
+   "Nordic",
+   "Snowshoe"
+  ]
+ ]
+}

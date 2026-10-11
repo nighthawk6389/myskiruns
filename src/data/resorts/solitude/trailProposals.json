@@ -1,0 +1,512 @@
+{
+ "_note": "Per-trail line proposals from reading numbered map tiles. Reviews in trailReviews.json override these.",
+ "trails": {
+  "honeycomb-return": {
+   "polylines": [
+    17,
+    18,
+    71
+   ],
+   "confidence": "high",
+   "mapName": "HONEYCOMB RETURN",
+   "note": "its group | along its printed name"
+  },
+  "woodlawn": {
+   "polylines": [
+    0
+   ],
+   "confidence": "high",
+   "mapName": "WOODLAWN",
+   "note": "its group"
+  },
+  "alta-bird": {
+   "polylines": [
+    44
+   ],
+   "confidence": "high",
+   "mapName": "ALTA BIRD",
+   "note": "its group"
+  },
+  "back-door": {
+   "polylines": [
+    58
+   ],
+   "confidence": "high",
+   "mapName": "BACK DOOR",
+   "note": "its group"
+  },
+  "broadway": {
+   "polylines": [
+    65
+   ],
+   "confidence": "high",
+   "mapName": "BROADWAY",
+   "note": "its group"
+  },
+  "corner-chute": {
+   "polylines": [
+    1
+   ],
+   "confidence": "high",
+   "mapName": "CORNER CHUTE",
+   "note": "its group"
+  },
+  "dynamite": {
+   "polylines": [
+    59,
+    60,
+    61,
+    62,
+    63
+   ],
+   "confidence": "high",
+   "mapName": "DYNAMITE",
+   "note": "its group"
+  },
+  "front-door": {
+   "polylines": [
+    57
+   ],
+   "confidence": "high",
+   "mapName": "FRONT DOOR",
+   "note": "its group"
+  },
+  "liberty": {
+   "polylines": [
+    56
+   ],
+   "confidence": "high",
+   "mapName": "LIBERTY",
+   "note": "its group"
+  },
+  "mine": {
+   "polylines": [
+    64
+   ],
+   "confidence": "high",
+   "mapName": "MINE",
+   "note": "its group"
+  },
+  "north-star": {
+   "polylines": [
+    50
+   ],
+   "confidence": "high",
+   "mapName": "NORTH STAR",
+   "note": "its group"
+  },
+  "polaris": {
+   "polylines": [
+    47
+   ],
+   "confidence": "high",
+   "mapName": "POLARIS",
+   "note": "its group"
+  },
+  "roller-coaster": {
+   "polylines": [
+    16
+   ],
+   "confidence": "high",
+   "mapName": "ROLLER COASTER",
+   "note": "its group"
+  },
+  "sensation": {
+   "polylines": [
+    49
+   ],
+   "confidence": "high",
+   "mapName": "SENSATION",
+   "note": "its group"
+  },
+  "shaft": {
+   "polylines": [
+    2
+   ],
+   "confidence": "high",
+   "mapName": "SHAFT",
+   "note": "its group"
+  },
+  "solbright": {
+   "polylines": [
+    52,
+    53
+   ],
+   "confidence": "high",
+   "mapName": "SOLBRIGHT",
+   "note": "its group"
+  },
+  "south-star": {
+   "polylines": [
+    48
+   ],
+   "confidence": "high",
+   "mapName": "SOUTH STAR",
+   "note": "its group"
+  },
+  "summit-access-east": {
+   "polylines": [
+    55
+   ],
+   "confidence": "high",
+   "mapName": "SUMMIT ACCESS EAST",
+   "note": "its group"
+  },
+  "summit-access-west": {
+   "polylines": [
+    43
+   ],
+   "confidence": "high",
+   "mapName": "SUMMIT ACCESS WEST",
+   "note": "its group"
+  },
+  "timberline": {
+   "polylines": [
+    51
+   ],
+   "confidence": "high",
+   "mapName": "TIMBERLINE",
+   "note": "its group"
+  },
+  "zip-a-dee": {
+   "polylines": [
+    54
+   ],
+   "confidence": "high",
+   "mapName": "ZIP-A-DEE",
+   "note": "its group"
+  },
+  "barretts-glade": {
+   "noLine": true,
+   "label": [
+    43.6,
+    27.72
+   ],
+   "confidence": "high"
+  },
+  "abbas-alley": {
+   "polylines": [
+    38
+   ],
+   "confidence": "high",
+   "mapName": "ABBA'S ALLEY",
+   "note": "its group"
+  },
+  "blue-spruce": {
+   "polylines": [
+    46
+   ],
+   "confidence": "high",
+   "mapName": "BLUE SPRUCE",
+   "note": "its group"
+  },
+  "challenger": {
+   "polylines": [
+    12
+   ],
+   "confidence": "high",
+   "mapName": "CHALLENGER",
+   "note": "its group"
+  },
+  "concord": {
+   "polylines": [
+    3
+   ],
+   "confidence": "high",
+   "mapName": "CONCORD",
+   "note": "its group"
+  },
+  "diamond-lane": {
+   "polylines": [
+    7,
+    8
+   ],
+   "confidence": "high",
+   "mapName": "DIAMOND LANE",
+   "note": "its group"
+  },
+  "eagle-ridge": {
+   "polylines": [
+    19
+   ],
+   "confidence": "high",
+   "mapName": "EAGLE RIDGE",
+   "note": "its group"
+  },
+  "fleet-street": {
+   "polylines": [
+    42
+   ],
+   "confidence": "high",
+   "mapName": "FLEET STREET",
+   "note": "its group"
+  },
+  "fluid-drive": {
+   "polylines": [
+    40
+   ],
+   "confidence": "high",
+   "mapName": "FLUID DRIVE",
+   "note": "its group"
+  },
+  "garys-glade": {
+   "polylines": [
+    37
+   ],
+   "confidence": "high",
+   "mapName": "GARY'S GLADE",
+   "note": "its group"
+  },
+  "grumble-lower": {
+   "polylines": [
+    22
+   ],
+   "confidence": "high",
+   "mapName": "GRUMBLE LOWER",
+   "note": "its group"
+  },
+  "grumble-upper": {
+   "polylines": [
+    14
+   ],
+   "confidence": "high",
+   "mapName": "GRUMBLE UPPER",
+   "note": "its group"
+  },
+  "hals-hollow": {
+   "polylines": [
+    27
+   ],
+   "confidence": "high",
+   "mapName": "HAL'S HOLLOW",
+   "note": "its group"
+  },
+  "inspiration-lower": {
+   "polylines": [
+    24
+   ],
+   "confidence": "high",
+   "mapName": "INSPIRATION LOWER",
+   "note": "its group"
+  },
+  "inspiration-upper": {
+   "polylines": [
+    10
+   ],
+   "confidence": "high",
+   "mapName": "INSPIRATION UPPER",
+   "note": "its group"
+  },
+  "main-street": {
+   "polylines": [
+    41
+   ],
+   "confidence": "high",
+   "mapName": "MAIN STREET",
+   "note": "its group"
+  },
+  "olympia": {
+   "polylines": [
+    36
+   ],
+   "confidence": "high",
+   "mapName": "OLYMPIA",
+   "note": "its group"
+  },
+  "paradise": {
+   "polylines": [
+    4
+   ],
+   "confidence": "high",
+   "mapName": "PARADISE",
+   "note": "its group"
+  },
+  "paradise-lost": {
+   "polylines": [
+    6
+   ],
+   "confidence": "high",
+   "mapName": "PARADISE LOST",
+   "note": "its group"
+  },
+  "post-card": {
+   "polylines": [
+    28,
+    29
+   ],
+   "confidence": "high",
+   "mapName": "POST CARD",
+   "note": "its group"
+  },
+  "rhapsody": {
+   "polylines": [
+    9
+   ],
+   "confidence": "high",
+   "mapName": "RHAPSODY",
+   "note": "its group"
+  },
+  "rumble-lower": {
+   "polylines": [
+    23
+   ],
+   "confidence": "high",
+   "mapName": "RUMBLE LOWER",
+   "note": "its group"
+  },
+  "rumble-upper": {
+   "polylines": [
+    15
+   ],
+   "confidence": "high",
+   "mapName": "RUMBLE UPPER",
+   "note": "its group"
+  },
+  "serenity-lower": {
+   "polylines": [
+    20
+   ],
+   "confidence": "high",
+   "mapName": "SERENITY LOWER",
+   "note": "its group"
+  },
+  "serenity-upper": {
+   "polylines": [
+    13
+   ],
+   "confidence": "high",
+   "mapName": "SERENITY UPPER",
+   "note": "its group"
+  },
+  "shady-lane": {
+   "polylines": [
+    30
+   ],
+   "confidence": "high",
+   "mapName": "SHADY LANE",
+   "note": "its group"
+  },
+  "stumble-lower": {
+   "polylines": [
+    21
+   ],
+   "confidence": "high",
+   "mapName": "STUMBLE LOWER",
+   "note": "its group"
+  },
+  "stumble-upper": {
+   "polylines": [
+    11
+   ],
+   "confidence": "high",
+   "mapName": "STUMBLE UPPER",
+   "note": "its group"
+  },
+  "sundancer": {
+   "polylines": [
+    26
+   ],
+   "confidence": "high",
+   "mapName": "SUNDANCER",
+   "note": "its group"
+  },
+  "sunshine-bowl": {
+   "polylines": [
+    35
+   ],
+   "confidence": "high",
+   "mapName": "SUNSHINE BOWL",
+   "note": "its group"
+  },
+  "tbd": {
+   "polylines": [
+    45
+   ],
+   "confidence": "high",
+   "mapName": "TBD",
+   "note": "its group"
+  },
+  "vertigo": {
+   "polylines": [
+    5
+   ],
+   "confidence": "high",
+   "mapName": "VERTIGO",
+   "note": "its group"
+  },
+  "wall-street": {
+   "polylines": [
+    39
+   ],
+   "confidence": "high",
+   "mapName": "WALL STREET",
+   "note": "its group"
+  },
+  "wanderer": {
+   "polylines": [
+    25
+   ],
+   "confidence": "high",
+   "mapName": "WANDERER",
+   "note": "its group"
+  },
+  "deans-dash": {
+   "polylines": [
+    70
+   ],
+   "confidence": "high",
+   "mapName": "DEAN'S DASH",
+   "note": "its group"
+  },
+  "easy-street": {
+   "polylines": [
+    67
+   ],
+   "confidence": "high",
+   "mapName": "EASY STREET",
+   "note": "its group"
+  },
+  "home-run": {
+   "polylines": [
+    33,
+    34
+   ],
+   "confidence": "high",
+   "mapName": "HOME RUN",
+   "note": "its group"
+  },
+  "last-run": {
+   "polylines": [
+    31
+   ],
+   "confidence": "high",
+   "mapName": "LAST RUN",
+   "note": "its group"
+  },
+  "little-dollie": {
+   "polylines": [
+    68
+   ],
+   "confidence": "high",
+   "mapName": "LITTLE DOLLIE",
+   "note": "its group"
+  },
+  "same-street": {
+   "polylines": [
+    66
+   ],
+   "confidence": "high",
+   "mapName": "SAME STREET",
+   "note": "its group"
+  },
+  "tude-dudes": {
+   "polylines": [
+    32,
+    69
+   ],
+   "confidence": "high",
+   "mapName": "TUDE DUDES",
+   "note": "its group"
+  }
+ }
+}
