@@ -7,17 +7,19 @@ import { accountEnv, handleAccount } from './api/_lib/account'
 import { handleConditions, memoryStores } from './api/_lib/conditions'
 import { memoryRedis } from './api/_lib/redis'
 import { handleMarks, handleSeason, recordVote } from './api/_lib/season'
+import { handleReport, handleReports } from './api/_lib/reports'
+import { indexPage, pagePath, resortPage, robots, sitemap } from './scripts/landingPages'
 
-// `vite` / `vite preview` serve /api/conditions, /api/marks and /api/season from memory so the shared
+// `vite` / `vite preview` serve /api/conditions, /api/marks, /api/season and /api/report(s) from memory so the shared
 // conditions votes and season tallies work locally, and /api/account against the Supabase project
 // in .env.local or the shell (api/_lib/account.ts); on Vercel, api/*.ts serve
 // them.
 function localApi(env: Record<string, string | undefined>): Connect.NextHandleFunction {
   const stores = memoryStores()
   const redis = memoryRedis()
-  const routes = ['conditions', 'account', 'marks', 'season'] as const
+  const routes = ['conditions', 'account', 'marks', 'season', 'report', 'reports'] as const
   return (req, res, next) => {
-    const route = routes.find((r) => req.url?.startsWith(`/api/${r}`))
+    const route = routes.find((r) => new RegExp(`^/api/${r}(?:[/?]|$)`).test(req.url ?? ''))
     if (!route) return next()
     const chunks: Buffer[] = []
     req.on('data', (c: Buffer) => chunks.push(c))
@@ -34,7 +36,11 @@ function localApi(env: Record<string, string | undefined>): Connect.NextHandleFu
             ? await handleMarks(request, redis)
             : route === 'season'
               ? await handleSeason(request, redis)
-              : await handleAccount(request, accountEnv(env))
+              : route === 'report'
+                ? await handleReport(request, redis)
+                : route === 'reports'
+                  ? await handleReports(request, redis, env.REPORTS_TOKEN)
+                  : await handleAccount(request, accountEnv(env))
       res.statusCode = response.status
       res.setHeader('content-type', 'application/json')
       res.end(await response.text())
@@ -76,7 +82,8 @@ interface ResortData {
   id: string
   name: string
   region: string
-  trails: { id: string; name: string; difficulty: string }[]
+  peaks: { id: string; name: string; elevation: number }[]
+  trails: { id: string; name: string; difficulty: string; peak: string; isGlade?: boolean; isTerrainPark?: boolean }[]
   panels: { id: string; name: string; map: string; file: string }[]
 }
 
@@ -94,8 +101,9 @@ async function readResorts(root: string): Promise<ResortData[]> {
     const block = src.slice(m.index, entries[i + 1]?.index ?? src.length)
     const dir = join(root, 'src/data/resorts', id)
     const code = (await transformWithEsbuild(readFileSync(join(dir, 'trails.ts'), 'utf8'), 'trails.ts', { loader: 'ts', format: 'esm' })).code
-    const { trails } = (await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`)) as {
+    const { trails, peaks } = (await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`)) as {
       trails: ResortData['trails']
+      peaks: ResortData['peaks']
     }
     const panels =
       kind === 'panels'
@@ -106,7 +114,7 @@ async function readResorts(root: string): Promise<ResortData[]> {
             file: join(dir, 'panels', p[1], 'trailPaths.json'),
           }))
         : [{ id: 'map', name: 'Trail map', map: `/maps/${id}.jpg`, file: join(dir, 'trailPaths.json') }]
-    out.push({ id, name: unq(m[3], m[4]), region: unq(m[5], m[6]), trails, panels })
+    out.push({ id, name: unq(m[3], m[4]), region: unq(m[5], m[6]), peaks, trails, panels })
   }
   return out
 }
@@ -119,7 +127,8 @@ const trailIndex = (resorts: ResortData[]) =>
     trails: resorts.flatMap((r, i) => r.trails.map((t) => [i, t.id, t.name, t.difficulty])),
   })
 
-// Writes, for each resort in src/resorts.ts, dist/preview/<id>.json: its name,
+// Writes, for each resort in src/resorts.ts, its landing page (dist/<id>-trail-map/, with dist/trail-maps/,
+// sitemap.xml and robots.txt: scripts/landingPages.ts) and dist/preview/<id>.json: its name,
 // its trails' ids and ratings, and each map panel's image and overlays. The
 // link-preview functions (api/preview.ts, api/og.ts) read it to title a shared
 // link and draw its picture, without loading the app's own bundles. And
@@ -157,6 +166,16 @@ function previewData(): Plugin {
         writeFileSync(join(out, `${r.id}.json`), JSON.stringify(data))
       }
       writeFileSync(join(outDir, 'trail-index.json'), trailIndex(resorts))
+      // the landing pages (scripts/landingPages.ts), the sitemap and robots.txt
+      for (const r of resorts) {
+        const dir = join(outDir, pagePath(r.id))
+        mkdirSync(dir, { recursive: true })
+        writeFileSync(join(dir, 'index.html'), resortPage(r, resorts))
+      }
+      mkdirSync(join(outDir, 'trail-maps'), { recursive: true })
+      writeFileSync(join(outDir, 'trail-maps', 'index.html'), indexPage(resorts))
+      writeFileSync(join(outDir, 'sitemap.xml'), sitemap(resorts, new Date().toISOString().slice(0, 10)))
+      writeFileSync(join(outDir, 'robots.txt'), robots())
     },
   }
 }

@@ -39,6 +39,10 @@ http.createServer((req, res) => {
   const u = new URL(req.url, 'http://x');
   if (u.pathname.startsWith('/api/')) { res.writeHead(503, { 'content-type': 'application/json' }); res.end('{}'); console.log(`${req.method} ${u.pathname} 503 0`); return; }
   let file = path.join(root, decodeURIComponent(u.pathname));
+  // a folder serves its index.html, as Vercel does (the landing pages, /<id>-trail-map/); else the app's page
+  if (file.startsWith(root + path.sep) && fs.existsSync(file) && fs.statSync(file).isDirectory() && fs.existsSync(path.join(file, 'index.html'))) {
+    file = path.join(file, 'index.html');
+  }
   if (!file.startsWith(root + path.sep) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) file = path.join(root, 'index.html');
   const body = fs.readFileSync(file);
   const etag = '"' + crypto.createHash('sha1').update(body).digest('hex') + '"';

@@ -1,9 +1,14 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Trail } from '../../types';
 import { DIFFICULTY_ICONS, DIFFICULTY_LABELS, DIFFICULTY_UI_COLORS } from '../../types';
 import type { Conditions } from '../../hooks/useConditions';
 import { CONDITION_TAGS, MAX_TAGS, topTags } from '../../conditionTags';
+import type { ReportKind } from '../../reports';
+import { ReportForm } from './ReportForm';
 import styles from './ImageMap.module.css';
+
+/** the report form for a trail missing from the map, not one in the list */
+const MISSING = '\u0000missing';
 
 export interface SheetTrail {
   trail: Trail;
@@ -21,6 +26,8 @@ interface TrailSheetProps {
   conditions: Conditions;
   /** a shared day: the trail's name and rating only */
   readOnly?: boolean;
+  /** sends "Something wrong?" for a trail (null: one missing from the map here) */
+  onReport?: (trailId: string | null, kind: ReportKind, note: string) => Promise<boolean>;
 }
 
 /** Bottom sheet listing the trails under a tap, nearest first, each with a
@@ -34,7 +41,16 @@ export function TrailSheet({
   onClose,
   conditions,
   readOnly = false,
+  onReport,
 }: TrailSheetProps) {
+  // the trail whose report form is open, or MISSING for the sheet's own,
+  // until another tap lists other trails
+  const shown = candidates.map((c) => c.trail.id).join(' ');
+  const [open, setOpen] = useState<{ shown: string; id: string } | null>(null);
+  const reporting = open?.shown === shown ? open.id : null;
+  const setReporting = (id: string | null) => setOpen(id === null ? null : { shown, id });
+  const canReport = !readOnly && !!onReport;
+
   // On touch screens the tap that opened the sheet is followed by a synthetic
   // click at the same spot; ignore input briefly so it can't hit a button.
   const armed = useRef(false);
@@ -142,9 +158,34 @@ export function TrailSheet({
                 })}
               </div>
             )}
+            {canReport &&
+              (reporting === trail.id ? (
+                <ReportForm
+                  subject={trail.name}
+                  onSend={(kind, note) => onReport(trail.id, kind, note)}
+                  onClose={() => setReporting(null)}
+                />
+              ) : (
+                <button className={styles.reportLink} onClick={() => armed.current && setReporting(trail.id)}>
+                  Something wrong with {candidates.length > 1 ? 'this trail' : trail.name}?
+                </button>
+              ))}
           </div>
         );
       })}
+      {canReport &&
+        (reporting === MISSING ? (
+          <ReportForm
+            subject="a trail missing from the map"
+            missing
+            onSend={(kind, note) => onReport(null, kind, note)}
+            onClose={() => setReporting(null)}
+          />
+        ) : (
+          <button className={`${styles.reportLink} ${styles.reportMissing}`} onClick={() => armed.current && setReporting(MISSING)}>
+            A trail here is missing from the map?
+          </button>
+        ))}
       {!readOnly && conditions.mode === 'local' && (
         <div className={styles.sheetFootnote}>Condition votes are saved on this device only; sharing isn't set up yet.</div>
       )}

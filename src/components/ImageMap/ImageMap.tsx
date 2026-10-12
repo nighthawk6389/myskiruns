@@ -6,6 +6,7 @@ import type { Resort, TrailPath as Overlay } from '../../resorts';
 import { TrailPath } from './TrailPath';
 import { TrailHotspot } from './TrailHotspot';
 import { TrailSheet, type SheetTrail } from './TrailSheet';
+import { reportProblem } from '../../reports';
 import type { Conditions } from '../../hooks/useConditions';
 import { topTags } from '../../conditionTags';
 import styles from './ImageMap.module.css';
@@ -191,6 +192,8 @@ export function ImageMap({
   const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
   const [showLines, setShowLines] = useState(false);
   const [sheet, setSheet] = useState<SheetTrail[] | null>(null);
+  // where the sheet was opened, percent of the map image (null: from the list or a search)
+  const tapAt = useRef<{ x: number; y: number } | null>(null);
   const [toast, setToast] = useState<{ trail: Trail; skied: boolean } | null>(null);
 
   // a resort drawn on several panels (Vail) shows one at a time
@@ -403,6 +406,7 @@ export function ImageMap({
     pointers.current.delete(e.pointerId);
     if (pointers.current.size > 0 || gesture.current.moved > TAP_SLOP) return;
     const p = local(e);
+    tapAt.current = fitW ? { x: ((p.x - cv.tx) / (cv.k * fitW)) * 100, y: ((p.y - cv.ty) / (cv.k * fitH)) * 100 } : null;
     const hits = pick(p.x, p.y, e.pointerType === 'mouse' ? PICK_RADIUS_MOUSE : PICK_RADIUS_TOUCH);
     setSheet(hits.length ? hits : null);
     onHoverTrail(hits[0]?.trail.id ?? null);
@@ -433,6 +437,7 @@ export function ImageMap({
     const trail = trailById.get(id);
     if (!trail) return;
     onHoverTrail(id);
+    tapAt.current = null;
     setSheet([{ trail, distance: 0 }]);
     // several panels: show the trail where it is drawn (this panel if it is,
     // else the panel of its area, else any), zooming once that one has loaded
@@ -740,6 +745,17 @@ export function ImageMap({
           onHover={onHoverTrail}
           conditions={conditions}
           readOnly={readOnly}
+          onReport={(trailId, kind, note) =>
+            reportProblem({
+              resort: resort.id,
+              panel: panel.id,
+              trailId,
+              kind,
+              note,
+              x: tapAt.current && Math.round(tapAt.current.x * 100) / 100,
+              y: tapAt.current && Math.round(tapAt.current.y * 100) / 100,
+            })
+          }
           onClose={() => {
             setSheet(null);
             onHoverTrail(null);

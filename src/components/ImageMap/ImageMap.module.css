@@ -235,6 +235,8 @@ svg.overlay {
   padding: 8px 8px 10px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
   z-index: 20;
+  max-height: calc(100% - 24px);
+  overflow-y: auto;
 }
 
 .sheetHeader {
@@ -389,6 +391,101 @@ svg.overlay {
   background: rgba(239, 68, 68, 0.15);
 }
 
+.reportLink {
+  flex-basis: 100%;
+  align-self: flex-start;
+  padding: 2px 0;
+  border: 0;
+  background: none;
+  color: var(--text-muted);
+  font-size: 12px;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.reportLink:hover {
+  color: var(--text-secondary);
+}
+
+.reportMissing {
+  display: block;
+  padding: 6px 8px 0;
+}
+
+.report {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.reportKinds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.reportNote {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 16px; /* under 16px, iOS zooms in on focus */
+}
+
+.reportActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.reportCancel,
+.reportSend {
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.reportCancel {
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-secondary);
+}
+
+.report[role='status'] .reportCancel {
+  align-self: flex-end;
+}
+
+.reportSend {
+  border: 0;
+  background: var(--gold);
+  color: #1e1b0f;
+}
+
+.reportSend:disabled {
+  opacity: 0.45;
+}
+
+.reportError {
+  margin-right: auto;
+  color: #fecaca;
+  font-size: 12px;
+}
+
 .sheetFootnote {
   padding: 6px 8px 0;
   font-size: 11px;
@@ -427,6 +524,7 @@ svg.overlay {
     width: 100%;
     border-radius: 16px 16px 0 0;
     padding-bottom: max(10px, env(safe-area-inset-bottom));
+    max-height: 80dvh;
   }
 
   .toast {

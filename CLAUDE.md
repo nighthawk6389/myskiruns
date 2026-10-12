@@ -113,7 +113,7 @@ the already-assigned path (that is circular).
 ## In this sandbox
 - Playwright: load it from `$(npm root -g)/playwright` (`PLAYWRIGHT_PATH` for
   `hover_check.cjs`). Browser checks: `tools/trailmap/hover_all.sh` (every
-  resort), `tools/app_check.cjs`, `tools/app_flows.cjs`, `tools/recap_check.cjs`, `tools/search_check.cjs` and
+  resort), `tools/app_check.cjs`, `tools/app_flows.cjs`, `tools/recap_check.cjs`, `tools/search_check.cjs`, `tools/report_check.cjs` and
   `tools/offline_check.cjs`, against a build served by `tools/serve_dist.cjs`.
   Chromium through the agent proxy needs
   `--ignore-certificate-errors-spki-list=<pin of the proxy CA>`: the playbook,

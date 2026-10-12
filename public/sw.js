@@ -61,6 +61,10 @@ self.addEventListener('fetch', (event) => {
   // Vercel's own (the analytics script and its counts) stays Vercel's to cache
   if (url.pathname.startsWith('/_vercel/')) return;
 
+  // the resorts' landing pages (/<id>-trail-map/, /trail-maps/) are plain pages: the network's, and never
+  // stored as the app's page below
+  if (req.mode === 'navigate' && url.pathname !== '/' && url.pathname !== '/index.html') return;
+
   if (req.mode === 'navigate') {
     event.respondWith(
       fetch(req)

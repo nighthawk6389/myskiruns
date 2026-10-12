@@ -58,6 +58,9 @@ fonttools`) and Node; the browser checks use Playwright (in the Claude Code sand
 - **Trail conditions (👍 / 👎).** In a trail's sheet, rate today's conditions and pick up to three tags (groomed,
   powder, moguls, icy, ...); votes are shared with everyone for 24 hours, and the list opens with "Good conditions
   today". No account is involved: each device sends a random id, one vote per trail.
+- **Something wrong?** Each trail in the sheet has a "Something wrong with ...?" link: wrong name, wrong line on
+  the map, wrong difficulty or something else, with an optional note; the sheet also has "A trail here is missing
+  from the map?". The report goes to `/api/report` for review (below).
 - **Trip summary:** trails skied, new trails, days, the difficulty mix, progress by area and a day-by-day log;
   "Share as text" uses the phone's share sheet.
 - **Share your day.** From the trip summary: a picture of the day, as a story (1080 x 1920) or a square post
@@ -183,10 +186,13 @@ src/                     the app (React 19 + TypeScript + Vite)
   resortSearch.ts        the picker's search; offline.ts: when to start the service worker
   detection/             Killington's original line detector's ground truth (docs/killington.md)
 public/                  the map images (maps/), the service worker (sw.js), icons, manifest
-api/                     Vercel functions: conditions votes (conditions.ts), account deletion (account.ts)
+api/                     Vercel functions: conditions votes, season tallies, problem reports, link previews,
+                         account deletion
+middleware.ts            sends link-preview bots to api/preview.ts
 supabase/migrations/     the accounts table
 tests/                   npm test: trip merge and sync, resort search
-scripts/                 Node pipeline scripts: trails:apply, reviews:import, Killington's detector and OCR
+scripts/                 Node pipeline scripts: trails:apply, reviews:import, Killington's detector and OCR;
+                         landingPages.ts, the resorts' search landing pages (written by the build)
 tools/
   trailmap/              the trail-map pipeline (Python and Node): extraction, matching, checks
     resorts/<id>/        each resort's rebuild: regen.sh, its map's reading, its decisions
@@ -205,7 +211,7 @@ work/                    git-ignored: downloads and intermediate files of the pi
 | command | what it does |
 |---|---|
 | `npm run dev` / `build` / `preview` | the app: dev server, production build, a local preview of the build |
-| `npm test` | the trip merge and sync rules (random three-device histories), the resort search, recap links (every resort's trail ids hash apart), link previews, the search across resorts and the season tallies |
+| `npm test` | the trip merge and sync rules (random three-device histories), the resort search, recap links (every resort's trail ids hash apart), link previews, the search across resorts, the season tallies, problem reports and the landing pages |
 | `npm run lint` | ESLint (with `npx tsc -b`, the check before every commit) |
 | `npm run trails:apply -- --resort <id> [--panel <p>]` | proposals + reviews → `trailPaths.json`, the overlays the app draws |
 | `npm run reviews:import -- <export dir> --resort <id>` | the Trail Check page's export → `trailReviews.json` |
@@ -219,6 +225,7 @@ work/                    git-ignored: downloads and intermediate files of the pi
 | `node tools/app_flows.cjs [dist]` | phone flows (tap, mark, undo, summary, panels), two tabs, backups |
 | `node tools/make_og_assets.cjs` | redraw the link previews' fixed pictures (`public/og/`) |
 | `node tools/search_check.cjs <url>` | the search across resorts: a trail's name lists it at every resort, picking one opens its resort on it, `?trail=` links, mark reports sent |
+| `node tools/report_check.cjs <url> [--resort <id>]` | "Something wrong?": a report sent from a tapped trail (with where the tap was), a missing trail, a failed send, a `?trail=` link, on a desktop and a phone |
 | `node tools/recap_check.cjs <url> --resort <id>` | "Share your day": both cards drawn (saved to look at), the link copied and opened in a fresh browser, read-only, on a desktop and a phone |
 | `node tools/offline_check.cjs [dist]` | offline: first visit, reload without the server, a deploy, the load-error screen |
 | `node tools/accounts_check.cjs` | accounts: two devices sign in, sync, edit offline, delete (with `scripts/mockSupabase.cjs`) |
@@ -307,6 +314,34 @@ the Wilson score, so 40 up and 2 down beats 5 up and 0 down), most skied this se
 days, with ids that the app's trail index names. Nothing in the app shows it yet: a "Top runs" page comes once a
 season's data is enough to fill it.
 
+## Problem reports
+
+"Something wrong?" in a trail's sheet posts `{resort, panel, trailId, kind, note, x, y}` to `/api/report`
+(`api/_lib/reports.ts`): `kind` is `name`, `line`, `rating`, `missing` (no trail) or `other`, `x`/`y` where the
+skier tapped (percent of the map image; none when the sheet came from the list or a link). They are kept, newest
+first, in a Redis list in the same store as the trail conditions (the newest 5,000). The device's id only caps a
+device at 20 reports a day and is not kept with the report.
+
+To read them, set `REPORTS_TOKEN` in Vercel (Settings → Environment Variables, 16 characters or more, e.g.
+`openssl rand -hex 24`) and redeploy; until then `/api/reports` answers 404. Then:
+
+```
+curl -H "Authorization: Bearer $REPORTS_TOKEN" 'https://www.myskiruns.app/api/reports?resort=stowe&limit=100'
+```
+
+To act on one, open `/?resort=<id>&panel=<panel>&trail=<trailId>` and fix the resort's data the way the playbook
+says (its section in Part 3); `x`/`y` place a missing trail on the map.
+
+## Search landing pages
+
+The app itself is one page, so for search engines the build also writes a plain page per resort,
+`/<id>-trail-map/` ("Stowe Trail Map: All 125 Runs"): the runs by area with their ratings, each linking into the app
+on that trail, the difficulty mix, a link to open the map, and the other resorts by state. `/trail-maps/` lists every
+resort, and `sitemap.xml` and `robots.txt` list them all (`scripts/landingPages.ts`, called from `vite.config.ts`).
+Their picture is the resort's link-preview image (`/api/og?resort=<id>`). After the first deploy, submit
+`https://www.myskiruns.app/sitemap.xml` in Google Search Console (Sitemaps). The service worker leaves these pages
+to the network.
+
 ## Link previews
 
 A link to the app pasted into iMessage, WhatsApp, Slack, Discord and the like shows a title, a line of text and a
@@ -324,7 +359,7 @@ picture and the badge in a map picture's corner). To see what a service will sho
 ## Analytics
 
 Vercel Web Analytics counts page views, with no cookies (so no consent banner), and a few events (`src/analytics.ts`):
-Resort opened, Run marked, Trip created, Summary opened, Share dialog opened, Recap shared (how: image, image saved,
+Resort opened, Run marked, Trail found, Problem reported, Trip created, Summary opened, Share dialog opened, Recap shared (how: image, image saved,
 link, link copied, text), Recap viewed, Recap: track your own. A shared day's link has its trip taken out of the URL
 before it is counted. Only builds made on Vercel send anything, so local builds and the browser checks don't.
 
@@ -336,7 +371,7 @@ show on every plan; the custom events show on Vercel's Pro plan (on Hobby they a
 Vercel builds the app (`npm run build`) on every push and serves `dist/` with `api/*.ts` as functions; pushes to
 `main` go to production (www.myskiruns.app). `api/` runs as Node ESM (`"type": "module"`), so its relative imports
 need explicit `.js` extensions, or every request fails with a 500; `npx vercel build` reports a missing one as
-TS2835. Environment variables: the accounts' and the conditions store's, above. Nothing else to do for a new
+TS2835. Environment variables: the accounts', the conditions store's and `REPORTS_TOKEN`, above. Nothing else to do for a new
 resort: the service worker's precache list and version are filled in by the build. Push `main` on its own and check
 that a Production deployment came for the commit (`gh api 'repos/nighthawk6389/myskiruns/deployments?sha=<sha>'`
 lists each with its environment) before pushing the same commit to other branches: Arapahoe Basin's commit, pushed

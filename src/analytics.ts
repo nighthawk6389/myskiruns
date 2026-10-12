@@ -27,6 +27,7 @@ export type EventName =
   | 'Resort opened'
   | 'Run marked'
   | 'Trail found'
+  | 'Problem reported'
   | 'Trip created'
   | 'Summary opened'
   | 'Share dialog opened'

@@ -32,11 +32,12 @@ export function upstash(env: Record<string, string | undefined> = process.env): 
   };
 }
 
-/** In memory: GET, SET (EX, NX), DEL, EXPIRE, HINCRBY, HGETALL, SADD, SMEMBERS. */
+/** In memory: GET, SET (EX, NX), DEL, EXPIRE, INCR, HINCRBY, HGETALL, SADD, SMEMBERS, LPUSH, LTRIM, LRANGE. */
 export function memoryRedis(now: () => number = Date.now): Redis {
   const strings = new Map<string, { v: string; until: number }>();
   const hashes = new Map<string, Map<string, number>>();
   const sets = new Map<string, Set<string>>();
+  const lists = new Map<string, string[]>();
   const expiry = new Map<string, number>();
   const alive = (k: string) => {
     const t = expiry.get(k);
@@ -44,6 +45,7 @@ export function memoryRedis(now: () => number = Date.now): Redis {
       strings.delete(k);
       hashes.delete(k);
       sets.delete(k);
+      lists.delete(k);
       expiry.delete(k);
     }
     const s = strings.get(k);
@@ -63,12 +65,34 @@ export function memoryRedis(now: () => number = Date.now): Redis {
         return 'OK';
       }
       case 'DEL': {
-        const had = strings.delete(key) || hashes.delete(key) || sets.delete(key);
+        const had = strings.delete(key) || hashes.delete(key) || sets.delete(key) || lists.delete(key);
         return had ? 1 : 0;
       }
       case 'EXPIRE':
         expiry.set(key, now() + Number(a[0]) * 1000);
         return 1;
+      case 'INCR': {
+        const v = Number(strings.get(key)?.v ?? 0) + 1;
+        strings.set(key, { v: String(v), until: strings.get(key)?.until ?? Infinity });
+        return v;
+      }
+      case 'LPUSH': {
+        const l = lists.get(key) ?? [];
+        lists.set(key, l);
+        l.unshift(...a.reverse());
+        return l.length;
+      }
+      case 'LTRIM': {
+        const l = lists.get(key) ?? [];
+        const [start, stop] = a.map(Number);
+        lists.set(key, l.slice(start, stop < 0 ? l.length + stop + 1 : stop + 1));
+        return 'OK';
+      }
+      case 'LRANGE': {
+        const l = lists.get(key) ?? [];
+        const [start, stop] = a.map(Number);
+        return l.slice(start, stop < 0 ? l.length + stop + 1 : stop + 1);
+      }
       case 'HINCRBY': {
         const h = hashes.get(key) ?? new Map<string, number>();
         hashes.set(key, h);
